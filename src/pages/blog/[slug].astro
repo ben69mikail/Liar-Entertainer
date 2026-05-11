@@ -5,6 +5,7 @@ import GoogleReviews from '../../components/GoogleReviews.astro';
 import BlogFooter from '../../components/BlogFooter.astro';
 import postsData from '../../data/posts.json';
 import { generateHeroWithOverlay } from '../../utils/heroOverlay';
+import { generateStoryImage } from '../../utils/storyOverlay';
 import { catToSlug } from '../../utils/allPosts';
 
 type WPPost = { slug: string };
@@ -40,6 +41,13 @@ const heroAbsolute = heroDisplayUrl?.startsWith('/')
   ? `https://liar-entertainer.com${heroDisplayUrl}`
   : heroDisplayUrl;
 const ogImage = heroAbsolute ?? entry.data.heroImage ?? undefined;
+
+// Story-Image fuer FB/IG Photo Stories (build-time via sharp, 1080x1920 9:16).
+// Wird vom n8n Story-Repost-Workflow als story_image_url verwendet.
+// Awaited damit Datei beim Build sicher geschrieben ist (Side-Effect).
+if (entry.data.heroImage) {
+  await generateStoryImage(entry.data.heroImage, entry.data.title, slug);
+}
 
 // Article schema.org structured data (matching style of legacy blog posts)
 const articleSchema = {
