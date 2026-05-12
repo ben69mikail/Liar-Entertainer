@@ -8,13 +8,32 @@
  * Cache: skip wenn File bereits existiert (Astro-Build-Cache friendly).
  */
 import sharp from 'sharp';
-import { mkdir, writeFile, access } from 'node:fs/promises';
+import { mkdir, writeFile, access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const OUT_DIR = path.resolve('./public/hero-generated');
+const LOCAL_DOMAIN_PREFIX = 'https://liar-entertainer.com/';
 const W = 1200;
 const H = 630;
 const PADDING_X = 56;
+
+// Lädt das Cover lokal aus public/ wenn URL auf eigene Domain zeigt,
+// sonst via HTTP. Beim First-Deploy ist das Cover noch nicht auf IONOS,
+// daher würde ein reiner fetch() 404 zurückgeben.
+async function loadCover(coverUrl: string): Promise<Buffer> {
+  if (coverUrl.startsWith(LOCAL_DOMAIN_PREFIX)) {
+    const rel = coverUrl.slice(LOCAL_DOMAIN_PREFIX.length);
+    const localPath = path.resolve('./public', rel);
+    try {
+      return await readFile(localPath);
+    } catch {
+      // local miss → fall back to HTTP
+    }
+  }
+  const res = await fetch(coverUrl);
+  if (!res.ok) throw new Error(`fetch ${res.status} ${coverUrl}`);
+  return Buffer.from(await res.arrayBuffer());
+}
 
 function svgEscape(s: string): string {
   return s
@@ -133,12 +152,7 @@ export async function generateHeroWithOverlay(
 
   try {
     await mkdir(OUT_DIR, { recursive: true });
-    const res = await fetch(coverUrl);
-    if (!res.ok) {
-      console.warn(`[heroOverlay] fetch fail ${res.status} for ${coverUrl}, fallback to original URL`);
-      return coverUrl;
-    }
-    const coverBuf = Buffer.from(await res.arrayBuffer());
+    const coverBuf = await loadCover(coverUrl);
 
     const resized = await sharp(coverBuf)
       .resize(W, H, { fit: 'cover', position: 'center' })
