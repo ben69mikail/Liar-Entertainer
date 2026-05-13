@@ -24,7 +24,16 @@ jobs:
           cache: 'npm'
 
       - name: Install Poppins font (für sharp/librsvg SVG-Text-Rendering im Hero/Story-Overlay)
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fonts-poppins fontconfig && sudo fc-cache -f
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fontconfig
+          sudo mkdir -p /usr/share/fonts/truetype/poppins
+          for weight in Regular Medium SemiBold Bold ExtraBold; do
+            sudo curl -fsSL "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-${weight}.ttf" \
+              -o "/usr/share/fonts/truetype/poppins/Poppins-${weight}.ttf"
+          done
+          sudo fc-cache -fv
+          fc-list | grep -i poppins | head -3
 
       - name: Install dependencies
         run: npm ci
