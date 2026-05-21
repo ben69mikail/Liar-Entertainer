@@ -120,6 +120,22 @@ const personSchema = {
   },
   "url": "https://liar-entertainer.com"
 };
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
+  "description": "Clown Zauberer LIAR zeigt seine Zaubershow und Clownshow für Kinder in NRW. Kindergeburtstag ab 150€ – professionell, lustig und unvergesslich.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2023-01-01",
+  "duration": "PT3M",
+  "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
+  "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Clown Zauberer LIAR",
+    "url": "https://liar-entertainer.com"
+  }
+};
 ---
 
 <BaseLayout
@@ -128,7 +144,7 @@ const personSchema = {
   keywords="Clown Kindergeburtstag NRW, Zauberer Kindergeburtstag, Clown Zauberer NRW, Zaubershow Kinder, Kinderzauberer NRW, Clown buchen NRW, Kindergeburtstag Zauberer"
   canonical="https://liar-entertainer.com/"
   ogImage={ogImage}
-  structuredData={[faqSchema, personSchema]}
+  structuredData={[faqSchema, personSchema, videoSchema]}
   heroPreload={heroOptimized.src}
 >
 
