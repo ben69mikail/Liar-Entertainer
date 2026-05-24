@@ -102,9 +102,9 @@ const videoSchema = {
   "@type": "VideoObject",
   "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
   "description": "Clown Zauberer LIAR zeigt seine Zaubershow und Clownshow für Kinder in NRW. Kindergeburtstag ab 150€ – professionell, lustig und unvergesslich.",
-  "thumbnailUrl": "https://i.ytimg.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
-  "uploadDate": "2023-01-01",
-  "duration": "PT3M",
+  "thumbnailUrl": "https://img.youtube.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2018-02-04",
+  "duration": "PT2M30S",
   "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
   "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
   "publisher": {
@@ -114,7 +114,7 @@ const videoSchema = {
   }
 };
 
-const structuredData = [serviceSchema, faqSchema];
+const structuredData = [serviceSchema, faqSchema, videoSchema];
 ---
 
 <BaseLayout
@@ -131,7 +131,7 @@ const structuredData = [serviceSchema, faqSchema];
     <Image
       src={heroImg}
       alt="Kindergeburtstag mit Clown Zauberer NRW"
-      class="absolute inset-0 w-full const structuredData = [serviceSchema, faqSchema, videoSchema];t-position: 55% 26%"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: 55% 26%"
       widths={[400, 800, 1200, 1600]}
       sizes="100vw"
       loading="eager"
