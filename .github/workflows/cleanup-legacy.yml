@@ -1,0 +1,68 @@
+name: Legacy Cleanup (manual)
+
+# Manueller Workflow zum Aufraeumen alter WordPress-Reste und Backup-Dateien
+# im IONOS-Webspace. Nutzt die existierenden IONOS_SFTP_*-Secrets.
+#
+# Modi:
+#   list    - Nur Inventur (read-only, keine Aenderungen)
+#   backup  - Backup erstellen, NICHT loeschen
+#   execute - Backup + Loeschen (irreversibel im Webspace)
+#
+# Das Backup-Archiv wird als Workflow-Artifact 90 Tage lang aufbewahrt.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Cleanup-Modus'
+        required: true
+        default: 'list'
+        type: choice
+        options:
+          - list
+          - backup
+          - execute
+      legacy_paths:
+        description: 'Komma-getrennte Pfade (leer = Default-Scope aus cleanup_legacy.py)'
+        required: false
+        default: ''
+        type: string
+
+concurrency:
+  group: cleanup-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install paramiko
+        run: pip install paramiko
+
+      - name: Run cleanup script
+        env:
+          IONOS_SFTP_HOST: ${{ secrets.IONOS_SFTP_HOST }}
+          IONOS_SFTP_USER: ${{ secrets.IONOS_SFTP_USER }}
+          IONOS_SFTP_PASS: ${{ secrets.IONOS_SFTP_PASS }}
+          IONOS_SFTP_REMOTE: ${{ secrets.IONOS_SFTP_REMOTE }}
+          CLEANUP_MODE: ${{ inputs.mode }}
+          LEGACY_PATHS: ${{ inputs.legacy_paths }}
+        run: python cleanup_legacy.py
+
+      - name: Upload backup archive
+        if: inputs.mode != 'list'
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-backup-${{ github.run_id }}
+          path: legacy-backup-*.tar.gz
+          if-no-files-found: warn
+          retention-days: 90
