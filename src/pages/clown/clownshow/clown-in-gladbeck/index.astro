@@ -2,11 +2,23 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../../assets/images/clown/clownshow-hero.jpg';
+import _clownIntroAsset from '../../../../assets/images/clown/clown-zauberer-gladbeck.jpg';
+import _gal1Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-1.jpg';
+import _gal2Asset from '../../../../assets/images/galerie/buehnen-zauberei.jpg';
+import _gal3Asset from '../../../../assets/images/clown/glitzer-tattoos.jpg';
+import _gal4Asset from '../../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _gal5Asset from '../../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _gal6Asset from '../../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
+import _gal7Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-16.jpg';
+import _gal8Asset from '../../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
+import _gal9Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-2.jpg';
+import _clownShowAsset from '../../../../assets/images/clown/clown-bei-clownshow.jpg';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
 
 const seoTitle = "Clown Gladbeck | TOP Bewertungen | Jetzt buchen";
 const seoDescription = "Clown in Gladbeck — Heimatstadt von LIAR! ✓ Keine Fahrtkosten ✓ 400+ Bewertungen ✓ Für Kindergeburtstag & Events ✓ Zaubershow ab 150€ ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-Ruhrgebiet.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -108,7 +120,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Clown.jpg"
+            src={_clownIntroAsset.src}
             alt="Clownshow in Gladbeck"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -216,8 +228,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Fotogalerie-Clown-Zauberer-16.jpg" alt="Clown LIAR bei interaktiver Show mit Kindern in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg" alt="Clown bei Clownshow" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal7Asset.src} alt="Clown LIAR bei interaktiver Show mit Kindern in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_clownShowAsset.src} alt="Clown bei Clownshow" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

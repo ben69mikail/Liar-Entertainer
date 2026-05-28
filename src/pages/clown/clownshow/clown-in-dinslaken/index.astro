@@ -2,11 +2,23 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../../assets/images/clown/clownshow-hero.jpg';
+import _clownIntroAsset from '../../../../assets/images/clown/clown-zauberer-gladbeck.jpg';
+import _gal1Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-1.jpg';
+import _gal2Asset from '../../../../assets/images/galerie/buehnen-zauberei.jpg';
+import _gal3Asset from '../../../../assets/images/clown/glitzer-tattoos.jpg';
+import _gal4Asset from '../../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _gal5Asset from '../../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _gal6Asset from '../../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
+import _gal7Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-16.jpg';
+import _gal8Asset from '../../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
+import _gal9Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-2.jpg';
+import _clownShowAsset from '../../../../assets/images/clown/clown-bei-clownshow.jpg';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
 
 const seoTitle = "Clown Dinslaken | TOP Bewertungen | Jetzt buchen";
 const seoDescription = "Clown in Dinslaken für Ihre Feier ✓ Clown Zauberer LIAR ✓ 400+ Top-Bewertungen ✓ Lustige Clownshow ✓ Auch in Duisburg & Oberhausen ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-Ruhrgebiet.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -108,7 +120,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Clown.jpg"
+            src={_clownIntroAsset.src}
             alt="Clownshow in Dinslaken"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -156,7 +168,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Glitzer Tattoos -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Glitzer-Tattoos-.jpg" alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
+          <img src={_gal3Asset.src} alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
           <h4 class="font-bold text-[#1f2025] text-lg mb-3">GLITZER TATTOOS ✨💫</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Hautverträglich, völlig ungefährlich und blitzschnell aufgebracht: Glitzer Tattoo ist eine wunderbare Attraktion bei jeder Art von Feier! Die schimmernden Kunstwerke werden mit hochwertigen, dermatologisch geprüften Produkten erstellt und sind selbst für sehr empfindliche Haut bestens geeignet.</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Nach dem Aufbringen der glitzernden Designs springen auf dem gesamten Veranstaltungsgelände – oder auch im gemütlichen Wohnzimmer – freudestrahlende Kinder und begeisterte Eltern umher, die stolz ihre funkelnden Tattoos präsentieren. Die Familien sind durchweg bezaubert, denn Glitzer Tattoos faszinieren wirklich Groß und Klein in jedem Alter!</p>
@@ -164,7 +176,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <!-- Zaubershow -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-2.jpg" alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
+          <img src={_gal2Asset.src} alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
           <h4 class="font-bold text-[#1f2025] text-lg mb-3">ZAUBERSHOW 🎩🪄</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Der Clown entwickelt spielend leicht eine besondere Verbindung zu den Kindern, während der Zauberer sie mit seinen verblüffenden Illusionen zum Staunen bringt! Mädchen wie Jungs erleben gemeinsam eine hochwertige und humorvoll inszenierte Kombination aus unterhaltsamer Clownerie und erstaunlicher Zauberkunst.</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">In dieser interaktiven Show verwandle ich die Zuschauer konsequent in wichtige Mitwirkende und binde sie herzlich ins Geschehen ein. Kinder werden auf die Bühne eingeladen, dürfen bei magischen Tricks assistieren und erleben Zaubermomente aus nächster Nähe. So sind sie aktiv in die Vorstellung integriert und stehen absolut im Mittelpunkt des gesamten Geschehens!</p>
@@ -172,7 +184,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <!-- Ballonmodellage -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Fruehlingsfest-Kray-Kinderzauberer.jpg" alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
+          <img src={_gal1Asset.src} alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
           <h4 class="font-bold text-[#1f2025] text-lg mb-3">BALLONMODELLAGE 🎈🎨</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Egal ob auf dem festlichen Kindergeburtstag, beim lebhaften Straßenfest, im vertrauten Kindergarten oder in der heimischen Schule – kunstvolle Ballonfiguren sind ausnahmslos immer ein absolutes Highlight und sorgen für pure Freude und leuchtende Kinderaugen! 😊</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Jedes Kind darf sich seine ganz persönliche, individuelle Wunschfigur aussuchen und diese dann stolz mit nach Hause nehmen: Ob der klassische vierbeinige Ballonhund, das imposante Schwert für tapfere Ritter, zauberhafte Prinzessinnen-Blumen oder ausgefallene Kreationen wie langhalsige Giraffen, bunte Papageien, niedliche Teddybären oder sogar komplexe Motorräder – der kreativen Fantasie sind kaum Grenzen gesetzt!</p>
@@ -232,11 +244,11 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Glitzer-Tattoos-.jpg" alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-2.jpg" alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Fruehlingsfest-Kray-Kinderzauberer.jpg" alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Fotogalerie-Clown-Zauberer-16.jpg" alt="Show mit lachenden Kinder in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg" alt="Lustiges Gesicht von Clown Zauberer LIAR in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal3Asset.src} alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal2Asset.src} alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal1Asset.src} alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal7Asset.src} alt="Show mit lachenden Kinder in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_clownShowAsset.src} alt="Lustiges Gesicht von Clown Zauberer LIAR in Dinslaken" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

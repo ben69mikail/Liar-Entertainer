@@ -3,10 +3,14 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _zauberNrwImgAsset from '../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
 
 const seoTitle = "Kinderzauberer Haltern | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Haltern am See buchen ✓ Zaubershow ab 150€ ✓ 400+ Bewertungen ✓ Clown LIAR ✓ Auch in Dorsten & Marl ✓ Jetzt unverbindlich anfragen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Haltern-3.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -109,7 +113,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://mlwwlszqtwuz.i.optimole.com/w:200/h:300/q:mauto/f:avif/https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-Kindergarten-Essen.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Haltern am See"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -157,7 +161,7 @@ const structuredData = [serviceSchema, faqSchema];
           </div>
         </div>
         <div class="flex justify-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Haltern-1.jpg" alt="Zaubershow mit dem Kinderzauberer in Haltern am See" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_showImgAsset.src} alt="Zaubershow mit dem Kinderzauberer in Haltern am See" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
       </div>
     </div>
@@ -206,7 +210,7 @@ const structuredData = [serviceSchema, faqSchema];
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Kindergeburtstag in Haltern am See mit Lachgarantie! 🎂🎈</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div class="flex justify-center md:order-1">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-NRW.jpg" alt="Kindergeburtstag mit dem Kinderzauberer in Haltern am See" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_zauberNrwImgAsset.src} alt="Kindergeburtstag mit dem Kinderzauberer in Haltern am See" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
         <div class="md:order-2">
           <p class="text-[#374151] mb-4 leading-relaxed">Die wenigsten Eltern in Haltern am See wissen, dass sie einen Clown Zauberer völlig unkompliziert für private Feiern nach Hause einladen können! Doch genau das ist möglich: Einen Kinderzauberer in Haltern am See zu buchen ist kinderleicht – er ist die ideale Lösung zur Animation beim Kindergeburtstag.</p>

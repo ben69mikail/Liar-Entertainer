@@ -3,10 +3,14 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _kgImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
 
 const seoTitle = "Kinderzauberer Herne | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Herne für Kindergeburtstag & Feste ✓ Clown LIAR ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Bochum & Gelsenkirchen ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Herne-3.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -112,7 +116,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Herne-2.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Herne"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -175,7 +179,7 @@ const structuredData = [serviceSchema, faqSchema];
           </div>
         </div>
         <div class="flex justify-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Herne-1.jpg" alt="Zaubershow mit dem Kinderzauberer in Herne" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_showImgAsset.src} alt="Zaubershow mit dem Kinderzauberer in Herne" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
       </div>
     </div>
@@ -229,7 +233,7 @@ const structuredData = [serviceSchema, faqSchema];
           <a href="/kindergeburtstag/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors">Kindergeburtstag – Preise</a>
         </div>
         <div class="flex justify-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kindergeburtstag-mit-Kinderzauberer.jpg" alt="Kindergeburtstag mit dem Kinderzauberer in Herne" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_kgImgAsset.src} alt="Kindergeburtstag mit dem Kinderzauberer in Herne" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
       </div>
     </div>

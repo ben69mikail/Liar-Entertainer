@@ -3,10 +3,14 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _kgImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
 
 const seoTitle = "Kinderzauberer Datteln | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Datteln buchen ✓ Lustige Zaubershow für Kinder ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Waltrop & Recklinghausen ✓ Jetzt anfragen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Datteln-2.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -102,7 +106,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div class="flex justify-center">
         <img
-          src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Dateln-1.jpg"
+          src={_roundImgAsset.src}
           alt="Kinderzauberer in Datteln"
           class="rounded-full object-cover object-[20%]"
           style="width: 320px; height: 320px;"
@@ -153,7 +157,7 @@ const structuredData = [serviceSchema, faqSchema];
         <p class="text-[#374151] mb-4 leading-relaxed">Diese interaktive Show ist altersgerecht abgestimmt und macht jede Veranstaltung in Datteln zum Highlight. Diese bunte und zauberhafte Show ist optimal auf die jeweilige Altersklasse abgestimmt. Die Kinder wirken aktiv mit, werden selbst zum Zauberer 🎩 und erleben erstaunliche Momente, die unglaublich wirken. Für die kleinen Zuschauer wird diese Clown- und Zaubershow zu einem unvergesslichen Erlebnis.</p>
       </div>
       <div>
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Datteln-2.jpg" alt="Zaubershow in Datteln" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+        <img src={_showImgAsset.src} alt="Zaubershow in Datteln" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
       </div>
     </div>
   </section>
@@ -207,7 +211,7 @@ const structuredData = [serviceSchema, faqSchema];
         </a>
       </div>
       <div>
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Datteln-3-1.jpg" alt="Kindergeburtstag mit Kinderzauberer in Datteln" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+        <img src={_kgImgAsset.src} alt="Kindergeburtstag mit Kinderzauberer in Datteln" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
       </div>
     </div>
   </section>

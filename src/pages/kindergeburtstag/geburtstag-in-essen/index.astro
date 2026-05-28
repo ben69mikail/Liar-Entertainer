@@ -2,11 +2,14 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
+import _introImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _showImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = "Kindergeburtstag Essen | Zaubershow ab 150€";
 const seoDescription = "Kindergeburtstag in Essen feiern mit Clown LIAR ✓ Zaubershow ab 150€ ✓ Ballonmodellage & Glitzer-Tattoos ✓ 400+ Bewertungen ✓ Auch in Mülheim & Bochum!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -129,7 +132,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag-mit-dem-Clown-768x1024.jpg"
+            src={_introImgAsset.src}
             alt="Kindergeburtstag in Essen mit Clown Zauberer"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -218,7 +221,7 @@ const structuredData = [serviceSchema, faqSchema];
         <h3 class="font-bold text-lg text-[#1f2025] mb-3 mt-8 md:mt-0">Was Sie NICHT bekommen</h3>
         <p class="text-[#374151] leading-relaxed">Keine falschen Versprechungen. Kein Hokuspokus. Keine überzogenen Erwartungen. Sondern: Ehrliche 40 Minuten Entertainment, die funktionieren. Versprochen.</p>
         <img
-          src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-mit-Clown-Zauberer.jpg"
+          src={_showImgAsset.src}
           alt="Zaubershow mit Clown Zauberer in Essen"
           class="rounded-xl w-full shadow-sm mt-6"
           loading="lazy"

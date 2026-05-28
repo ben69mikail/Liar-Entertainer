@@ -2,11 +2,17 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
+import _introImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _showImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _gal1Asset from '../../../assets/images/galerie/fotogalerie-clown-zauberer-1.jpg';
+import _gal2Asset from '../../../assets/images/galerie/buehnen-zauberei.jpg';
+import _gal3Asset from '../../../assets/images/clown/glitzer-tattoos.jpg';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = "Kindergeburtstag Moers | Zaubershow ab 150€";
 const seoDescription = "Kindergeburtstag in Moers feiern! Clown LIAR ✓ Zaubershow ab 150€ ✓ Glitzer-Tattoos ✓ 400+ Top-Bewertungen ✓ Auch in Duisburg & Dinslaken ✓ Buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -105,7 +111,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag-mit-dem-Clown-768x1024.jpg"
+            src={_introImgAsset.src}
             alt="Kindergeburtstag in Moers"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -207,9 +213,9 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Fruehlingsfest-Kray-Kinderzauberer.jpg" alt="Ballonmodellage für Kindergeburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Glitzer-Tattoos-.jpg" alt="Glitzer Tattoos für Kinder auf Geburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-2.jpg" alt="Zaubershow für Kindergeburtstag in Moers NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal1Asset.src} alt="Ballonmodellage für Kindergeburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal3Asset.src} alt="Glitzer Tattoos für Kinder auf Geburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal2Asset.src} alt="Zaubershow für Kindergeburtstag in Moers NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

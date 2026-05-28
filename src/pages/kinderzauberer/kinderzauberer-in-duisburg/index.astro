@@ -3,10 +3,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
 
 const seoTitle = "Kinderzauberer Duisburg | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Duisburg für Kinder-Events & Geburtstag ✓ Clown LIAR ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Oberhausen & Dinslaken ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duisburg-1.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -116,7 +119,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duisburg-3.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Duisburg"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -177,7 +180,7 @@ const structuredData = [serviceSchema, faqSchema];
           </div>
         </div>
         <div class="flex justify-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duisburg-2.jpg" alt="Kindergeburtstag in Duisburg mit Kinderzauberer" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_showImgAsset.src} alt="Kindergeburtstag in Duisburg mit Kinderzauberer" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
       </div>
     </div>

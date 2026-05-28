@@ -3,10 +3,16 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _ballonImgAsset from '../../../assets/images/clown/glitzer-tattoos.jpg';
+import _clownKgImgAsset from '../../../assets/images/galerie/fotogalerie-clown-zauberer-2.jpg';
+import _zauberNrwImgAsset from '../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
 
 const seoTitle = "Kinderzauberer Marl | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Marl für Ihren Kindergeburtstag ✓ Clown LIAR ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Dorsten & Recklinghausen ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Marl-3.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -115,7 +121,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex flex-col items-center gap-4">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Marl-2.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Marl"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -180,7 +186,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Marl-1.jpg"
+            src={_showImgAsset.src}
             alt="Kinderzauberer in Marl bei einem Auftritt"
             class="rounded-xl w-full object-cover object-top shadow-sm"
             loading="lazy"
@@ -249,9 +255,9 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Ballonmodellage-e1692870125222.jpg" alt="Ballonmodellage beim Kinderzauberer in Marl" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg" alt="Witziger Kinderzauberer mit Clownerie" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-NRW.jpg" alt="Entspannter Kindergeburtstag mit professionellem Kinderzauberer" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_ballonImgAsset.src} alt="Ballonmodellage beim Kinderzauberer in Marl" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_clownKgImgAsset.src} alt="Witziger Kinderzauberer mit Clownerie" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_zauberNrwImgAsset.src} alt="Entspannter Kindergeburtstag mit professionellem Kinderzauberer" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

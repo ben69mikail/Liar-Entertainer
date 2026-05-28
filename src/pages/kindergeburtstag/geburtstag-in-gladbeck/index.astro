@@ -2,11 +2,19 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
+import _introImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _showImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _gal5Asset from '../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _gal6Asset from '../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
+import _gal8Asset from '../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
+import _gal9Asset from '../../../assets/images/galerie/fotogalerie-clown-zauberer-2.jpg';
+import _clownerieAsset from '../../../assets/images/home/clownerie-und-zauberei.jpg';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = "Kindergeburtstag Gladbeck | Zaubershow ab 150€";
 const seoDescription = "Kindergeburtstag in Gladbeck — Heimatstadt von Clown LIAR! ✓ Zaubershow ab 150€ ✓ Keine Fahrtkosten ✓ 400+ Bewertungen ✓ Ballonmodellage ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -113,7 +121,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag-mit-dem-Clown-768x1024.jpg"
+            src={_introImgAsset.src}
             alt="Geburtstag in Gladbeck mit dem Clown aus Ihrer Stadt"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -315,11 +323,11 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl text-center mb-8">Mehr Fotos und Videos vom Clown Zauberer in der Galerie</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-mit-Clown-Zauberer.jpg" alt="Auftritt Zaubershow mit Clown Zauberer Herten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kosten-Preis-Clown-NRW.jpg" alt="Geburtstag in Gladbeck - Clown Zauberer LIAR im Einsatz in NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubervorfuehrung-auf-dem-Weihnachtsmarkt-Dortmund.jpg" alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg" alt="CLown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-NRW.jpg" alt="TOP Zaubervorführung in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_showImgAsset.src} alt="Auftritt Zaubershow mit Clown Zauberer Herten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal5Asset.src} alt="Geburtstag in Gladbeck - Clown Zauberer LIAR im Einsatz in NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal6Asset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal9Asset.src} alt="CLown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>
@@ -331,21 +339,21 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg" alt="Clown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <img src={_gal9Asset.src} alt="Clown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Große und kleine Bühne</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Ob Schulfeier, Weihnachtsfeier, Hochzeit, Fest, oder Kommunion sowie Kindergärten oder Schulen sorge ich für staunende und lachende Gesichter. Auch im Wohnzimmer für den Kindergeburtstag!</p>
         </div>
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Clownerie-und-ZAuberei.jpg" alt="Aufnahme Clownerie und Zauberei bei einem Geburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <img src={_clownerieAsset.src} alt="Aufnahme Clownerie und Zauberei bei einem Geburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Einfach und unkompliziert</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Mit wenig Aufwand und fast ohne Vorbereitungszeit komme ich vorbei...und lege mit meinem Programm los: lachende Kinder, ausgelassene Stimmung und entspannte Eltern!</p>
         </div>
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-NRW.jpg" alt="TOP Zaubervorführung in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Sehen und mit fiebern</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Die Kinder werden immer wieder mit eingebunden und pendeln die ganze Zeit zwischen Lachen und Staunen...und mein bester Trick funktioniert immer: den Kindern ein Lächeln ins Gesicht zu zaubern.</p>

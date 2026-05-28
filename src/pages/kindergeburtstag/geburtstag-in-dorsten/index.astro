@@ -2,11 +2,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
+import _introImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _showImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _gal5Asset from '../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _gal6Asset from '../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = "Kindergeburtstag Dorsten | Zaubershow ab 150€";
 const seoDescription = "Kindergeburtstag in Dorsten mit Clown LIAR ✓ Zaubershow ab 150€ ✓ Glitzer-Tattoos ✓ 400+ Top-Bewertungen ✓ Auch in Marl & Haltern ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -120,7 +125,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag-mit-dem-Clown-768x1024.jpg"
+            src={_introImgAsset.src}
             alt="Kindergeburtstag in Dorsten mit Clown Zauberer"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -294,9 +299,9 @@ const structuredData = [serviceSchema, faqSchema];
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-2">Live-Beweis gefällig?</h2>
       <p class="text-[#374151] text-center mb-10 leading-relaxed">In meiner Online-Galerie sehen Sie echte Fotos und Videos von echten Kindergeburtstagen in Dorsten. Keine gestellten Werbebilder. Echte Reaktionen, echte Emotionen. Klicken Sie rein – es lohnt sich!</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-mit-Clown-Zauberer.jpg" alt="Auftritt Zaubershow mit Clown Zauberer in Dorsten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kosten-Preis-Clown-NRW.jpg" alt="Clown Zauberer für Kindergeburtstag im Einsatz in NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubervorfuehrung-auf-dem-Weihnachtsmarkt-Dortmund.jpg" alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_showImgAsset.src} alt="Auftritt Zaubershow mit Clown Zauberer in Dorsten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal5Asset.src} alt="Clown Zauberer für Kindergeburtstag im Einsatz in NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal6Asset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

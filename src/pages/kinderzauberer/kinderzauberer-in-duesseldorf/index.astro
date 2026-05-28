@@ -3,10 +3,18 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _kgImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _zauberImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _kostenImgAsset from '../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _weihnachtImgAsset from '../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
+import _zauberShowImgAsset from '../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
 
 const seoTitle = "Kinderzauberer Düsseldorf | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Düsseldorf buchen ✓ Lustige Zaubershow für Kindergeburtstag ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Duisburg & Mülheim ✓ Anfragen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duesseldorf-1.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -108,7 +116,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duesseldorf-3.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Düsseldorf"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -161,7 +169,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] mb-4 leading-relaxed">Die Show für Kinder ist maßgeschneidert auf jede Altersgruppe und vereint Clownerie mit Zauberkunst – wobei die Interaktion mit den Kindern absolute Priorität hat (niemals die Tricks selbst!). Die jungen Zuschauer erleben einen fortwährenden Wechsel zwischen herzhaftem Lachen und fassungslosem Staunen. Diese Dynamik sorgt für Eindrücke, die noch sehr lange nachwirken. Der gemeinsame Spaß steht für Clown Zauberer LIAR im Vordergrund, wobei die Kinder stets die Stars sind: jubelnde Kinder, mitreißende Energie und entspannte Eltern! 🎉</p>
         </div>
         <div class="flex justify-center">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duesseldorf-2.jpg" alt="Zaubershow für Kinder in Düsseldorf" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_showImgAsset.src} alt="Zaubershow für Kinder in Düsseldorf" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
       </div>
     </div>
@@ -209,7 +217,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div class="flex justify-center md:order-1">
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Duesseldorf-1.jpg" alt="Kindergeburtstag in Düsseldorf mit Kinderzauberer" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
+          <img src={_kgImgAsset.src} alt="Kindergeburtstag in Düsseldorf mit Kinderzauberer" class="rounded-xl w-full max-w-md object-cover object-top shadow-sm" style="max-height:400px;max-width:28rem" loading="lazy" />
         </div>
         <div class="md:order-2">
           <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl mb-6">Kindergeburtstag in Düsseldorf – Garantiert stressfrei für Eltern! 🎂🎈</h2>
@@ -262,10 +270,10 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-gray-50 py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow.jpg" alt="Staunende Kinder bei einer Zaubershow mit Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-mit-Clown-Zauberer.jpg" alt="Auftritt Zaubershow mit Clown und Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kosten-Preis-Clown-NRW.jpg" alt="Kinderzauberer in Düsseldorf im Einsatz auf einer Kinderfeier" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubervorfuehrung-auf-dem-Weihnachtsmarkt-Dortmund.jpg" alt="Zaubervorführung auf dem Weihnachtsmarkt mit dem Kinderzauberer" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_zauberShowImgAsset.src} alt="Staunende Kinder bei einer Zaubershow mit Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_zauberImgAsset.src} alt="Auftritt Zaubershow mit Clown und Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_kostenImgAsset.src} alt="Kinderzauberer in Düsseldorf im Einsatz auf einer Kinderfeier" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_weihnachtImgAsset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt mit dem Kinderzauberer" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

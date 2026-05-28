@@ -3,10 +3,17 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
+import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
+import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
+import _showImgAsset from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
+import _kgImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _zauberImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
+import _kostenImgAsset from '../../../assets/images/clown/kosten-preis-clown-nrw.jpg';
+import _weihnachtImgAsset from '../../../assets/images/zauberer/zaubervorfuehrung-weihnachtsmarkt-dortmund.jpg';
 
 const seoTitle = "Kinderzauberer Dortmund | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Dortmund für Kindergeburtstag & Events ✓ Clown LIAR ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Bochum & Herne ✓ Jetzt buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Dortmund-1.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -113,7 +120,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Dortmund-3.jpg"
+            src={_roundImgAsset.src}
             alt="Kinderzauberer in Dortmund"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
@@ -163,7 +170,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] mb-4 leading-relaxed">Meine bunte und energiegeladene Performance ist perfekt auf verschiedene Altersgruppen zugeschnitten. Die Kinder werden zu Protagonisten der Show, verwandeln sich in Zauberhelfer 🎩 und sind Teil verblüffender Illusionen, die ihre Vorstellungskraft übersteigen.</p>
         </div>
         <div>
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kinderzauberer-in-Dortmund-2-1.jpg" alt="Zaubershow mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+          <img src={_showImgAsset.src} alt="Zaubershow mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
         </div>
       </div>
     </div>
@@ -217,7 +224,7 @@ const structuredData = [serviceSchema, faqSchema];
           <a href="/kindergeburtstag/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors mt-4">Kindergeburtstag – Preise</a>
         </div>
         <div>
-          <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kindergeburtstag-mit-Kinderzauberer.jpg" alt="Kindergeburtstag mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+          <img src={_kgImgAsset.src} alt="Kindergeburtstag mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
         </div>
       </div>
     </div>
@@ -260,9 +267,9 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubershow-mit-Clown-Zauberer.jpg" alt="Auftritt in einer Schule: Zaubershow mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Kosten-Preis-Clown-NRW.jpg" alt="Clown Zauberer LIAR im Einsatz in NRW bei Karneval in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src="https://liar-entertainer.com/wp-content/uploads/2023/08/Zaubervorfuehrung-auf-dem-Weihnachtsmarkt-Dortmund.jpg" alt="Zaubervorführung auf dem Weihnachtsmarkt Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_zauberImgAsset.src} alt="Auftritt in einer Schule: Zaubershow mit Kinderzauberer in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_kostenImgAsset.src} alt="Clown Zauberer LIAR im Einsatz in NRW bei Karneval in Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_weihnachtImgAsset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt Dortmund" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>

@@ -2,11 +2,14 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
+import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
+import _introImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-mit-kinderzauberer.jpg';
+import _showImgAsset from '../../../assets/images/zauberer/zaubershow-mit-clown-zauberer.jpg';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = "Kindergeburtstag Wesel | Zaubershow ab 150€";
 const seoDescription = "Kindergeburtstag in Wesel mit Clown Zauberer LIAR ✓ Zaubershow ab 150€ ✓ 400+ Bewertungen ✓ Auch in Dinslaken & Moers ✓ Jetzt unverbindlich buchen!";
-const heroImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag.jpg';
+const heroImg = _heroImgAsset.src;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -105,7 +108,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div class="flex justify-center">
           <img
-            src="https://liar-entertainer.com/wp-content/uploads/2023/08/Geburtstag-mit-dem-Clown-768x1024.jpg"
+            src={_introImgAsset.src}
             alt="Kindergeburtstag in Wesel"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
