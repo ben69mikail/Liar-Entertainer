@@ -227,7 +227,7 @@ const videoSchema = {
           <Image
             src={portraitImg}
             alt="Clown Zauberer LIAR bringt Kinder auf dem Geburtstag zum Lachen"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width:320px;height:320px;"
             loading="lazy"
             width={320}
@@ -266,7 +266,7 @@ const videoSchema = {
           <Image
             src={michaelImg}
             alt="Foto von Michael Prescler – Clown Zauberer LIAR"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width:280px;height:280px;"
             loading="lazy"
             width={280}
@@ -290,17 +290,17 @@ const videoSchema = {
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -342,7 +342,7 @@ const videoSchema = {
           <Image
             src={clownerieImg}
             alt="Clownerie und Zauberei auf einem Kindergeburtstag in NRW"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width:260px;height:260px;"
             loading="lazy"
             width={260}
@@ -389,7 +389,7 @@ const videoSchema = {
             <Image
               src={zaubershowImg}
               alt="Clown Zauberer LIAR verzaubert Kinder bei einer Zaubershow in NRW"
-              class="rounded-full object-cover object-[20%] mx-auto hover:opacity-90 transition-opacity"
+              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
               style="width:220px;height:220px;"
               loading="lazy"
               width={220}
@@ -420,7 +420,7 @@ const videoSchema = {
             <Image
               src={ballonImg}
               alt="Clown LIAR formt Ballontiere bei Ballonmodellage auf Kindergeburtstag"
-              class="rounded-full object-cover object-[20%] mx-auto hover:opacity-90 transition-opacity"
+              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
               style="width:220px;height:220px;"
               loading="lazy"
               width={220}
@@ -450,7 +450,7 @@ const videoSchema = {
             <Image
               src={glitzerImg}
               alt="Glitzer Tattoos von Clown Zauberer LIAR auf einem Kinderfest in NRW"
-              class="rounded-full object-cover object-[20%] mx-auto hover:opacity-90 transition-opacity"
+              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
               style="width:220px;height:220px;"
               loading="lazy"
               width={220}
@@ -519,7 +519,7 @@ const videoSchema = {
           <Image
             src={karteImg}
             alt="Einsatzgebiet Clown Zauberer und Kinderzauberer LIAR in NRW – Karte"
-            class="w-full rounded"
+            class="w-full rounded-xl shadow-md img-hover-zoom"
             loading="lazy"
             widths={[400, 600]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -587,43 +587,43 @@ const videoSchema = {
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-center text-2xl font-extrabold mb-8">Häufig gestellte Fragen</h2>
       <div class="space-y-4">
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Was kostet ein Clown für Kindergeburtstag?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Eine professionelle Clown-Show von LIAR beginnt ab 150€. Der genaue Preis hängt von der gewünschten Leistung, Dauer und Anfahrt ab.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">In welchen Städten ist Clown LIAR buchbar?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Clown LIAR ist in ganz NRW buchbar, insbesondere in Gladbeck, Oberhausen, Essen, Gelsenkirchen, Dortmund, Bochum, Duisburg und weiteren Städten.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Wie lange dauert eine Clown Zaubershow?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Standard-Zaubershow dauert ca. 40 Minuten und ist speziell auf Kinder von 3-12 Jahren zugeschnitten.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Ist Clown LIAR ein "gruseliger" Clown?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Nein! Clown LIAR tritt bewusst ohne Schminke, ohne rote Nase und ohne "komische Haare" auf. Sein Clown-Charakter ist freundlich, bunt und einladend. Selbst schüchterne Kinder tauen schnell auf.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Kann ich Clown LIAR auch für Erwachsenen-Events buchen?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ja! Neben Kindergeburtstagen bietet Clown Zauberer LIAR auch Close-up Zauberei für Hochzeiten, Firmenfeiern und Gala-Events an. Die Tischzauberei funktioniert ohne Bühne direkt an den Tischen Ihrer Gäste.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Wie weit im Voraus sollte ich buchen?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Eine Anfrage mindestens 2-4 Wochen im Voraus wird empfohlen, besonders an Wochenenden. Kurzfristige Buchungen sind aber oft auch möglich – einfach unter 0172-1517578 anrufen!</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Brauche ich eine Bühne oder spezielle Technik?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Nein! Es werden nur 2×2 Meter Platz benötigt. Die Show funktioniert im Wohnzimmer, Garten, Turnhalle oder auf einer Bühne. Alles Nötige wird mitgebracht.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Für welches Alter ist die Show geeignet?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Shows sind für Kinder von 3 bis 12 Jahren konzipiert. Das Programm wird immer an die Altersgruppe angepasst: einfacher und kürzer für Kindergartenkinder, anspruchsvoller für Grundschulkinder.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Was passiert bei schlechtem Wetter (Outdoor-Event)?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Show ist flexibel und funktioniert drinnen wie draußen. Falls ein Outdoor-Event wegen Regen ins Haus verlegt werden muss, ist das kein Problem – es werden nur 2×2 Meter Platz benötigt.</p>
         </details>
-        <details class="bg-[#f9fafb] rounded-xl p-4 group">
+        <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Hat Clown LIAR eine Versicherung und ein Führungszeugnis?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ja, Clown Zauberer LIAR ist vollständig haftpflichtversichert und verfügt über ein aktuelles polizeiliches Führungszeugnis, das auf Anfrage vorgelegt wird.</p>
         </details>

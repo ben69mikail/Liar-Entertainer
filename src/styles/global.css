@@ -1135,3 +1135,89 @@ body {
   transition: transform 0.2s ease;
 }
 .nav-link-wp:hover::after { transform: scaleX(1); }
+
+/* ============================================
+   VISUELLE VERBESSERUNGEN — Animationen & Schatten
+   ============================================ */
+
+/* ── Scroll-Fade-In ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.animate-fade-in.delay-100 { animation-delay: 0.1s; }
+.animate-fade-in.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in.delay-300 { animation-delay: 0.3s; }
+
+/* IntersectionObserver-basiert: Klasse .is-visible auslösen */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-100 { transition-delay: 0.1s; }
+.reveal.delay-200 { transition-delay: 0.2s; }
+.reveal.delay-300 { transition-delay: 0.3s; }
+
+/* ── Bild-Hover-Zoom ────────────────────────────────────── */
+.img-hover-zoom {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+.img-hover-zoom:hover {
+  transform: scale(1.045);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Runde Portrait-Bilder: Zoom + leichter Ring */
+.portrait-zoom {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+.portrait-zoom:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 24px rgba(215, 57, 62, 0.25);
+}
+
+/* ── Karten-Hover-Schatten ──────────────────────────────── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ── FAQ-Hover ──────────────────────────────────────────── */
+details.faq-item {
+  transition: box-shadow 0.25s ease;
+}
+details.faq-item:hover {
+  box-shadow: 0 4px 16px rgba(59, 85, 213, 0.13);
+}
+details.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+
+/* ── Statistik-Karten-Pulse (einmalig beim Laden) ────────── */
+@keyframes statPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.stat-card-pulse:hover {
+  animation: statPulse 0.4s ease-in-out;
+}
+
+/* Reveal-Script (inline, einmalig einbinden) */
