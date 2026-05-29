@@ -156,20 +156,43 @@ const videoSchema = {
   </style>
 
   <!-- ═══════════════════════════════════════
-       HERO IMAGE – full width, no overlay
+       HERO IMAGE – framed with info badges
   ════════════════════════════════════════ -->
-  <section class="w-full overflow-hidden">
-    <Image
-      src={heroImg}
-      alt="Clown Zauberer LIAR bei einer Zaubershow"
-      class="w-full object-cover"
-      style="max-height:720px; width:100%; object-position:52% 0%;"
-      loading="eager"
-      fetchpriority="high"
-      widths={[600, 900, 1200]}
-      sizes="100vw"
-      quality={70}
-    />
+  <section class="bg-white pt-8 pb-4">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <!-- Framed image wrapper -->
+      <div class="relative rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.13)]" style="background:#f4f6fb;">
+        <Image
+          src={heroImg}
+          alt="Clown Zauberer LIAR bei einer Zaubershow"
+          class="w-full object-cover"
+          style="max-height:560px; width:100%; object-position:52% 15%;"
+          loading="eager"
+          fetchpriority="high"
+          widths={[600, 900, 1200]}
+          sizes="(max-width:768px) 100vw, 960px"
+          quality={75}
+        />
+        <!-- Dark gradient overlay at bottom for badge readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent pointer-events-none"></div>
+
+        <!-- Info badge pills — bottom left -->
+        <div class="absolute bottom-5 left-5 flex flex-col sm:flex-row flex-wrap gap-2 z-10">
+          <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#1f2025] text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full shadow-md">
+            <span class="text-[#ffb546]">★★★★★</span>
+            354+ Google-Bewertungen
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#1f2025] text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full shadow-md">
+            <span class="text-[#d7393e]">🎩</span>
+            Seit 2009
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#1f2025] text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full shadow-md">
+            <span class="text-[#3b55d5]">✓</span>
+            15 Jahre Erfahrung
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════

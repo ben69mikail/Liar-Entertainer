@@ -1221,3 +1221,81 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 }
 
 /* Reveal-Script (inline, einmalig einbinden) */
+
+/* ============================================
+   GLOBALE SCHATTEN & TIEFE — Design Enhancement
+   ============================================ */
+
+/* ── Globale Karten-Schatten (alle bg-white rounded-xl / shadow-sm Karten) ── */
+/* Leichter aber spürbarer Schatten für alle weißen Karten auf der Seite */
+.bg-white.rounded-xl,
+.bg-white.rounded-2xl {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+}
+.bg-white.rounded-xl:hover,
+.bg-white.rounded-2xl:hover {
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.11);
+  transition: box-shadow 0.25s ease;
+}
+
+/* ── Feature-Karten: stärkerer Schatten ── */
+.bg-white.rounded-xl.p-6,
+.bg-white.rounded-xl.p-8 {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Section-Hintergründe: sanftes Wechseln zwischen weiß und sehr hellgrau ── */
+/* Für alle geraden Sections (die nicht explizit bg-white oder farbig sind) */
+section:not([class*="bg-["]):not([style*="background"]):nth-of-type(even) {
+  background-color: #f8f9fc;
+}
+
+/* ── Utility-Klassen für manuelle Schatten-Abstufungen ── */
+.shadow-card {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+}
+.shadow-card-hover:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s ease;
+}
+.shadow-deep {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.13);
+}
+.shadow-subtle {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Preis-Karten: stärkere Tiefe mit Border-top Akzent ── */
+/* Tailwind border-t-4 + bg-white + rounded-xl Kombination */
+.border-t-4.bg-white.rounded-xl {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.border-t-4.bg-white.rounded-xl:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+}
+
+/* ── Bild-Container: Framed look überall ── */
+.rounded-2xl img {
+  border-radius: inherit;
+}
+
+/* ── GoogleReviews und ähnliche Karten ── */
+.shadow-sm {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* ── Body-Hintergrund: ganz leichter Off-White Ton für mehr Tiefe ── */
+/* Nur außerhalb von Sections/Cards, damit Sections heller wirken */
+body {
+  background: #f4f5f7;
+}
+/* Sections und Cards selbst bleiben weiß */
+section, .bg-white, footer, header, nav {
+  background-color: #ffffff;
+}
+/* Colored sections: override */
+section[style*="background-color"], section[class*="bg-["] {
+  background-color: unset;
+}
