@@ -112,7 +112,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Kindergeburtstag in Herten"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -152,7 +152,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -164,7 +164,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
           <p class="text-[#374151] text-sm">Direkt ab der ersten Minute nimmt die Show die kleinen Gäste mit auf eine fantasievolle Reise!</p>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Luftballonmodellage</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -176,7 +176,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
           <p class="text-[#374151] text-sm">Ob Schwerter, Hunde oder Blumen – die Kinder staunen, wenn aus einem Ballon ihre Wunschfigur entsteht!</p>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Glitzer-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -226,17 +226,17 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -374,7 +374,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Herten"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -405,8 +405,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Herten buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kinderzauberer/kinderzauberer-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Herten</a>
-      <a href="/clown/clownshow/clown-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Herten</a>
+      <a href="/kinderzauberer/kinderzauberer-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Herten</a>
+      <a href="/clown/clownshow/clown-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Herten</a>
     </div>
   </div>
 </section>

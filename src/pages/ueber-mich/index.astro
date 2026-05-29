@@ -91,7 +91,7 @@ const personSchema = {
           <Image
             src={clownImg}
             alt="Über mich als Clown"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 420px;"
             loading="eager"
             widths={[400, 700]}
@@ -149,7 +149,7 @@ const personSchema = {
           <Image
             src={clownZaubererImg}
             alt="Über mich als Clown Zauberer"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 380px; height: 470px;"
             loading="lazy"
             widths={[400, 700]}
@@ -166,7 +166,7 @@ const personSchema = {
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-8">Was kann man bei mir buchen?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -180,7 +180,7 @@ const personSchema = {
         </div>
 
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Luftballonmodellage</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm">
@@ -191,7 +191,7 @@ const personSchema = {
         </div>
 
         <!-- Glitzer Tattoos -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Glitzer-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm">
@@ -276,7 +276,7 @@ const personSchema = {
           <Image
             src={karteImg}
             alt="Wohnort Clown Zauberer LIAR"
-            class="w-full rounded-xl shadow-lg"
+            class="w-full rounded-xl shadow-lg img-hover-zoom"
             loading="lazy"
             widths={[400, 600]}
             sizes="(max-width: 1024px) 100vw, 50vw"

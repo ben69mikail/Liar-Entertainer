@@ -118,7 +118,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_roundImgAsset.src}
             alt="Kinderzauberer in Herten"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -173,15 +173,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-8">Die Show in Herten – Was Sie erwartet! 🎭</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Lustige Zaubershow mit interaktivem Charakter 🪄</h3>
           <p class="text-[#374151] leading-relaxed">Die Performance vereint meisterhafte Illusionen mit herzlicher Comedy – und der Clou: Die Kinder agieren nicht nur mit, sie gestalten aktiv mit! Sie entscheiden, wohin die Reise geht, werden zu Zauber-Partnern und erschaffen gemeinsam magische Momente. Jeder wird gesehen, jeder darf glänzen!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Spontan &amp; flexibel 👍</h3>
           <p class="text-[#374151] leading-relaxed">Ohne langes Setup oder komplizierte Technik komme ich und lege direkt los. Egal ob drinnen 🏠 oder draußen 🌳, ob 10 oder 100 Kinder – die Show passt sich an. Das Motto: maximale Freude bei minimalem Stress für Sie!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Emotionale Achterbahn garantiert 🎢</h3>
           <p class="text-[#374151] leading-relaxed">Die Kinder durchleben ein Wechselbad der Gefühle: Sie kichern, staunen, jubeln, raten mit… und mein bestes Kunststück? Jedem Kind ein echtes Lächeln zu entlocken, das von innen kommt! 😊</p>
         </div>
@@ -221,17 +221,17 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -381,7 +381,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kinderzauberer Herten"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -412,8 +412,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Herten buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🎂 Kindergeburtstag in Herten</a>
-      <a href="/clown/clownshow/clown-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Herten</a>
+      <a href="/kindergeburtstag/geburtstag-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Herten</a>
+      <a href="/clown/clownshow/clown-in-herten/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Herten</a>
     </div>
   </div>
 </section>

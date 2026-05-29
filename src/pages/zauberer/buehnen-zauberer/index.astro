@@ -106,7 +106,7 @@ const faqSchema = {
             ))}
           </ul>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">📊 Eckdaten der Show</h3>
           <dl class="space-y-3 text-sm">
             {[
@@ -146,7 +146,7 @@ const faqSchema = {
           { title: 'Interaktiv & Einbindend', text: 'Ihr Publikum wird Teil der Show. Ausgewählte Gäste werden auf die Bühne geholt und erleben die Magie aus nächster Nähe.' },
           { title: 'Flexibel & Anpassbar', text: 'Elegant für Galas, humorvoll für Betriebsfeiern, zurückhaltend für feierliche Anlässe.' },
         ].map(item => (
-          <div class="bg-white rounded-lg p-5 shadow-sm">
+          <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
             <h4 class="font-bold text-[#1f2025] mb-2">{item.title}</h4>
             <p class="text-[#374151] text-sm" set:html={item.text} />
           </div>
@@ -161,11 +161,11 @@ const faqSchema = {
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Weitere Fotos und Videos finden Sie in meiner <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={feuerImg} alt="Zaubertrick mit Feuer" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={standUpImg} alt="Stand up Zauberei" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenZaubereiImg} alt="Bühnenzauberer" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenGelsenkirchenImg} alt="Bühnen Show Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenEssenImg} alt="Stand Up bei einer Firmenfeier mit Assistentin aus dem Publikum" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={feuerImg} alt="Zaubertrick mit Feuer" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={standUpImg} alt="Stand up Zauberei" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenZaubereiImg} alt="Bühnenzauberer" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenGelsenkirchenImg} alt="Bühnen Show Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenEssenImg} alt="Stand Up bei einer Firmenfeier mit Assistentin aus dem Publikum" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
       </div>
     </div>
   </section>
@@ -183,7 +183,7 @@ const faqSchema = {
       <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10">Warum Bühnenzauberer LIAR?</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map(f => (
-          <div class="bg-white/10 rounded-xl p-5">
+          <div class="bg-white/10 rounded-xl p-5 card-hover">
             <p class="text-2xl mb-2">{f.icon}</p>
             <h3 class="font-bold mb-2">{f.title}</h3>
             <p class="text-white text-sm leading-relaxed">{f.text}</p>

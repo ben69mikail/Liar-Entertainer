@@ -79,7 +79,7 @@ const ablauf = [
             <li class="flex items-center gap-3"><span class="text-[#d7393e] font-bold">✓</span> Kein Platzbedarf – Ich komme zu den Tischen</li>
           </ul>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">📊 Eckdaten</h3>
           <dl class="space-y-3 text-sm">
             {[
@@ -114,7 +114,7 @@ const ablauf = [
           { icon: '🔄', title: 'Flexibel & Organisch', text: 'Keine feste Show zu fester Zeit. Ich bewege mich während Ihres Events zwischen den Gruppen und füge mich organisch in den Ablauf ein.' },
           { icon: '🇫🇷', title: 'Französischer Charme', text: 'Als gebürtiger Franzose bringe ich eine besondere Note – charmant, eloquent und mit einer Prise Pariser Flair.' },
         ].map((item, i) => (
-          <div class={`bg-white rounded-xl p-6 shadow-sm border-t-4 ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
+          <div class={`bg-white rounded-xl p-6 shadow-sm border-t-4 card-hover ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
             <p class="text-3xl mb-3">{item.icon}</p>
             <h3 class="font-bold text-[#1f2025] mb-2">{item.title}</h3>
             <p class="text-[#374151] text-sm leading-relaxed">{item.text}</p>
@@ -130,7 +130,7 @@ const ablauf = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎭 Typischer Ablauf</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {ablauf.map(step => (
-          <div class="flex gap-4 items-start bg-gray-50 rounded-xl p-6">
+          <div class="flex gap-4 items-start bg-gray-50 rounded-xl p-6 card-hover">
             <div class="w-10 h-10 rounded-full bg-[#d7393e] text-white font-bold flex items-center justify-center flex-shrink-0">
               {step.step}
             </div>
@@ -150,11 +150,11 @@ const ablauf = [
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Noch mehr Eindrücke gibt es in der <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={tischMuelheimImg} alt="Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={tischNrwImg} alt="Tisch Zauberer NRW" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDortmundImg} alt="Close Up Zauberei Dortmund" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpMuelheimImg} alt="Close Up Zauberei Mülheim" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDuesseldorfImg} alt="Close Up Zauberei bei Firmenevent in Düsseldorf" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={tischMuelheimImg} alt="Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={tischNrwImg} alt="Tisch Zauberer NRW" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpDortmundImg} alt="Close Up Zauberei Dortmund" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpMuelheimImg} alt="Close Up Zauberei Mülheim" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpDuesseldorfImg} alt="Close Up Zauberei bei Firmenevent in Düsseldorf" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
       </div>
     </div>
   </section>
@@ -171,7 +171,7 @@ const ablauf = [
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10">Wann Close-up wählen?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white/10 rounded-xl p-8">
+        <div class="bg-white/10 rounded-xl p-8 card-hover">
           <h3 class="font-bold text-xl mb-4 text-[#ffb546]">✅ Perfekt für Close-up Zauberei:</h3>
           <ul class="space-y-2 text-white text-sm">
             {['Hochzeiten (DER Klassiker!)', 'Empfänge (Sekt, Cocktail)', 'Dinner-Events (Gala, Business)', 'Gäste sitzen/stehen in Gruppen', 'Kein fixes Showprogramm gewünscht', 'Intimate, persönliche Atmosphäre', 'Flexibilität wichtig', 'Events über mehrere Stunden'].map(i => (
@@ -179,7 +179,7 @@ const ablauf = [
             ))}
           </ul>
         </div>
-        <div class="bg-white/10 rounded-xl p-8">
+        <div class="bg-white/10 rounded-xl p-8 card-hover">
           <h3 class="font-bold text-xl mb-4 text-[#ffb546]">✅ Perfekt für Bühnenshow:</h3>
           <ul class="space-y-2 text-white text-sm">
             {['Betriebsfeiern mit Programm', 'Galas mit Show-Teil', 'Große Geburtstage (50+)', 'Alle sollen gleichzeitig unterhalten werden', 'Fester Programmpunkt gewünscht', 'Show-Charakter', 'Bühne vorhanden', '10–150 Gäste'].map(i => (
@@ -234,7 +234,7 @@ const ablauf = [
           <h3 class="font-bold text-[#1f2025] mb-2">🌍 Überregional & International</h3>
           <p class="text-[#374151] text-sm">Deutschland: Gesamtes Bundesgebiet<br />International: Frankreich, Belgien, Niederlande, Österreich, Schweiz</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">📞 Direkt anfragen</h3>
           <div class="space-y-3 text-[#374151]">
             <p>📱 Telefon & WhatsApp: <a href="tel:+491721517578" class="text-[#d7393e] hover:underline font-semibold">0172-1517578</a></p>

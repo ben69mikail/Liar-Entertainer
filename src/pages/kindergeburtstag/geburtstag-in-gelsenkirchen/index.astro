@@ -141,7 +141,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Kindergeburtstag in Gelsenkirchen mit Clown Zauberer"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -163,17 +163,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -278,7 +278,7 @@ const structuredData = [serviceSchema, faqSchema];
       <p class="text-[#374151] text-center mb-10">Transparent &amp; fair</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎭 Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-1">150 €</p>
           <p class="text-[#374151] text-xs mb-4">Festpreis</p>
@@ -293,7 +293,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Die Zaubershow ist zum Festpreis buchbar – unabhängig vom Wochentag. Samstag kostet genauso viel wie Mittwoch!</p>
         </div>
         <!-- Fahrtkosten + Ballonmodellage -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🚗 Fahrtkosten Gelsenkirchen</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-1">Nur 10-20 €</p>
           <p class="text-[#374151] text-xs mb-4">0,40 €/km ab Gladbeck</p>
@@ -308,7 +308,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Ihr Vorteil in Gelsenkirchen: Durch die Nähe zu Gladbeck zahlen Sie deutlich weniger Fahrtkosten als Familien in weiter entfernten Städten!</p>
         </div>
         <!-- Extras -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Optionale Extras</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">ab + 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -415,21 +415,21 @@ const structuredData = [serviceSchema, faqSchema];
         Sie möchten einen unvergesslichen Kindergeburtstag in Gelsenkirchen feiern? Perfekt! Kontaktieren Sie mich völlig unverbindlich:
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
           <div class="text-2xl mb-2">📱</div>
           <h3 class="font-bold text-[#1f2025] mb-2">WhatsApp</h3>
           <p class="text-[#374151] text-sm mb-2">Schnellste Variante</p>
           <a href="https://wa.me/491721517578" class="text-[#d7393e] font-bold hover:underline">0172-1517578</a>
           <p class="text-[#374151] text-xs mt-2">Kurz schreiben: „Geburtstag in Gelsenkirchen, [Datum], [Stadtteil], ca. [X] Kinder"</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
           <div class="text-2xl mb-2">☎️</div>
           <h3 class="font-bold text-[#1f2025] mb-2">Telefonisch</h3>
           <p class="text-[#374151] text-sm mb-2">Täglich 9-20 Uhr</p>
           <a href="tel:+491721517578" class="text-[#d7393e] font-bold hover:underline">0172-1517578</a>
           <p class="text-[#374151] text-xs mt-2">Einfach anrufen und wir besprechen alles direkt am Telefon!</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="bg-gray-50 rounded-xl p-6 text-center card-hover">
           <div class="text-2xl mb-2">✉️</div>
           <h3 class="font-bold text-[#1f2025] mb-2">Per E-Mail</h3>
           <p class="text-[#374151] text-sm mb-2">Antwort in 24 Std.</p>
@@ -437,7 +437,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
       </div>
 
-      <div class="bg-gray-50 rounded-xl p-6">
+      <div class="bg-gray-50 rounded-xl p-6 card-hover">
         <h3 class="font-bold text-[#1f2025] mb-4">📝 Diese Infos helfen mir bei der Planung:</h3>
         <ul class="space-y-2 text-[#374151] text-sm">
           <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Gewünschtes Datum &amp; Uhrzeit</li>
@@ -473,7 +473,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Gelsenkirchen"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -504,8 +504,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Gelsenkirchen buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kinderzauberer/kinderzauberer-in-gelsenkirchen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Gelsenkirchen</a>
-      <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Gelsenkirchen</a>
+      <a href="/kinderzauberer/kinderzauberer-in-gelsenkirchen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Gelsenkirchen</a>
+      <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Gelsenkirchen</a>
     </div>
   </div>
 </section>

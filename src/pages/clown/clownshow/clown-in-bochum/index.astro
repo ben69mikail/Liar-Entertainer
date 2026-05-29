@@ -122,7 +122,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_clownIntroAsset.src}
             alt="Clownshow in Bochum"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -189,17 +189,17 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -219,11 +219,11 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_gal7Asset.src} alt="Staunende Kinder bei dem Auftritt von Clown in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow auf einer Bühne für den Clown" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal1Asset.src} alt="Clown in Bochum mit Ballonmodellage" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="So sehen Glitzer Tattoos aus beim Zauberer LIAR in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_clownShowAsset.src} alt="Clown in Bochum bei Clownshow" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
+        <img src={_gal7Asset.src} alt="Staunende Kinder bei dem Auftritt von Clown in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
+        <img src={_gal2Asset.src} alt="Zaubershow auf einer Bühne für den Clown" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
+        <img src={_gal1Asset.src} alt="Clown in Bochum mit Ballonmodellage" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
+        <img src={_gal3Asset.src} alt="So sehen Glitzer Tattoos aus beim Zauberer LIAR in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
+        <img src={_clownShowAsset.src} alt="Clown in Bochum bei Clownshow" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
       </div>
     </div>
   </section>
@@ -363,7 +363,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Clownshow Bochum"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -394,8 +394,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Bochum buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-bochum/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🎂 Kindergeburtstag in Bochum</a>
-      <a href="/kinderzauberer/kinderzauberer-in-bochum/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Bochum</a>
+      <a href="/kindergeburtstag/geburtstag-in-bochum/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Bochum</a>
+      <a href="/kinderzauberer/kinderzauberer-in-bochum/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Bochum</a>
     </div>
   </div>
 </section>

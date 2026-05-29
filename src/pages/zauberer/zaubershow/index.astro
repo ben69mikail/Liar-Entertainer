@@ -140,7 +140,7 @@ const whyUs = [
           <Image
             src={staunendeKinderImg}
             alt="Staunende Kinder bei einer Zaubershow in NRW"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="eager"
             fetchpriority="high"
@@ -186,7 +186,7 @@ const whyUs = [
       <h2 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">⭐ Die 5 Säulen meiner Zaubershow:</h2>
       <div class="space-y-6">
         {pillars.map((pillar) => (
-          <div class="bg-white rounded-xl p-7 flex gap-5 items-start">
+          <div class="bg-white rounded-xl p-7 flex gap-5 items-start card-hover">
             <span class="text-3xl flex-shrink-0">{pillar.num}</span>
             <div>
               <h3 class="font-bold text-[#1f2025] text-lg mb-2">{pillar.title}</h3>
@@ -253,7 +253,7 @@ const whyUs = [
           { initials: 'TA', color: '#2196f3', name: 'Thorsten Andres', date: 'vor 2 Monaten', text: 'Was ein geiler Typ! Mit viel Witz, Charme und Humor im Herzen ❤️' },
           { initials: 'NK', color: '#ff9800', name: 'Nina Keller', date: 'vor 2 Monaten', text: 'Mit unglaublich viel Charme und Humor begeistert Michael die kleinen UND die großen Zuschauer. Ganz große Klasse 🤩' },
         ].map(review => (
-          <div class="bg-gray-50 rounded-xl shadow-sm p-5 flex flex-col gap-3">
+          <div class="bg-gray-50 rounded-xl shadow-sm p-5 flex flex-col gap-3 card-hover">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={`background-color: ${review.color};`}>
                 {review.initials}
@@ -329,7 +329,7 @@ const whyUs = [
           <Image
             src={karteImg}
             alt="Einsatzgebiet Zaubershow in NRW – Karte mit Standort Gladbeck"
-            class="rounded-xl shadow-sm w-full max-w-md"
+            class="rounded-xl shadow-sm w-full max-w-md img-hover-zoom"
             loading="lazy"
             widths={[400, 800]}
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -356,15 +356,15 @@ const whyUs = [
       <div class="mb-8">
         <h3 class="font-bold text-lg mb-4">✅ So einfach geht's:</h3>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-          <div class="bg-white/10 rounded-lg p-4">
+          <div class="bg-white/10 rounded-lg p-4 card-hover">
             <p class="font-bold mb-2">1️⃣ Anfrage stellen</p>
             <p class="text-gray-300 text-sm">Anrufen oder E-Mail schreiben</p>
           </div>
-          <div class="bg-white/10 rounded-lg p-4">
+          <div class="bg-white/10 rounded-lg p-4 card-hover">
             <p class="font-bold mb-2">2️⃣ Termin & Details</p>
             <p class="text-gray-300 text-sm">Unverbindliches Angebot erhalten</p>
           </div>
-          <div class="bg-white/10 rounded-lg p-4">
+          <div class="bg-white/10 rounded-lg p-4 card-hover">
             <p class="font-bold mb-2">3️⃣ Buchen & freuen!</p>
             <p class="text-gray-300 text-sm">💡 Je früher Sie anfragen, desto größer die Chance auf Ihren Wunschtermin!</p>
           </div>

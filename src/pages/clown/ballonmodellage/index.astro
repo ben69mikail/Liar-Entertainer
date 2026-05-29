@@ -115,7 +115,7 @@ const einsatzgebiet = [
           <Image
             src={ballonmodellage2Img}
             alt="Herzballon für ein Kind bei Ballonmodellage"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -166,7 +166,7 @@ const einsatzgebiet = [
         <h3 class="font-bold text-[#1f2025] text-xl mb-4 text-center">Für welche Anlässe eignet sich Ballonmodellage?</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
           {anlaesse.map((a) => (
-            <div class="bg-white rounded-lg p-3 flex items-center gap-2 shadow-sm">
+            <div class="bg-white rounded-lg p-3 flex items-center gap-2 shadow-sm card-hover">
               <span class="text-[#d7393e] flex-shrink-0">✓</span>
               <span class="text-[#374151] text-sm">{a}</span>
             </div>
@@ -183,7 +183,7 @@ const einsatzgebiet = [
       <p class="text-center text-[#374151] mb-8">Das Ballonrepertoire – Von Hund bis Marienkäfer</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {figuren.map((cat) => (
-          <div class="bg-gray-50 rounded-xl p-6">
+          <div class="bg-gray-50 rounded-xl p-6 card-hover">
             <h3 class="font-bold text-[#1f2025] mb-4">{cat.title}</h3>
             <ul class="space-y-2">
               {cat.items.map((item) => (
@@ -268,9 +268,9 @@ const einsatzgebiet = [
         Foto- und Videogalerie sind eine bereichernde und erfüllende Erfahrung: wir öffnen uns eine Welt der Emotionen! Sie regen uns an, unser Verständnis für die Welt und die Menschen um uns herum zu vertiefen. Fotos und Videos haben die Kraft, Emotionen in uns hervorzurufen und erzeugen eine emotionale Verbindung. Eine Galerie kann uns dazu bringen, uns mit den dargestellten Momenten und Geschichten zu verbinden…oder einfach spontane Eindrücke festzuhalten! Viel Spaß bei Stöbern!
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Image src={zaubershowMitClownImg} alt="Auftritt Zaubershow mit Clown Zauberer" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
-        <Image src={zaubervorfuehrungWeihnachtsmarktImg} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
-        <Image src={kostenPreisClownImg} alt="Kosten Preis Clown NRW" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
+        <Image src={zaubershowMitClownImg} alt="Auftritt Zaubershow mit Clown Zauberer" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
+        <Image src={zaubervorfuehrungWeihnachtsmarktImg} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
+        <Image src={kostenPreisClownImg} alt="Kosten Preis Clown NRW" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(min-width: 768px) 33vw, 100vw" />
       </div>
     </div>
   </section>
@@ -297,7 +297,7 @@ const einsatzgebiet = [
           <Image
             src={clownZaubererGladbeckImg}
             alt="Ballonmodellage mit Clown LIAR – Einsatzgebiet"
-            class="w-full rounded-xl shadow-sm"
+            class="w-full rounded-xl shadow-sm img-hover-zoom"
             loading="lazy"
             widths={[400, 800]}
             sizes="(min-width: 768px) 50vw, 100vw"

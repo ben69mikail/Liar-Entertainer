@@ -142,7 +142,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Lachende Kinder auf einem Geburtstag in Datteln mit dem Clown"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -164,17 +164,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -202,15 +202,15 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div>
           <div class="space-y-4">
-            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
               <h3 class="font-bold text-[#1f2025] mb-2">Problem gelöst: Ungleiche Interessenlagen</h3>
               <p class="text-[#374151] text-sm leading-relaxed">Egal ob 4 oder 10 Jahre, schüchtern oder wild – meine Show fängt JEDES Kind ab. Die Magie liegt darin, dass ich verschiedene Ebenen anspreche: Die Kleinen lieben die bunten Tricks, die Größeren die Raffinesse dahinter.</p>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
               <h3 class="font-bold text-[#1f2025] mb-2">Problem gelöst: Eltern-Stress</h3>
               <p class="text-[#374151] text-sm leading-relaxed">40 Minuten, in denen Sie nichts tun müssen. Kein Anleiten, kein Schlichten, kein „Jetzt macht mal mit!". Ich übernehme. Sie atmen durch.</p>
             </div>
-            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
               <h3 class="font-bold text-[#1f2025] mb-2">Problem gelöst: Langeweile</h3>
               <p class="text-[#374151] text-sm leading-relaxed">Bei mir gibt es keine toten Momente. Von Sekunde eins bis zum Schlussapplaus: Action, Lachen, Staunen. Die Kinder sind so gefesselt, dass Sie die Stecknadel fallen hören könnten.</p>
             </div>
@@ -271,7 +271,7 @@ const structuredData = [serviceSchema, faqSchema];
       <p class="text-[#374151] text-center mb-10">Die ehrliche Preisliste – Ich mag keine versteckten Kosten. Deshalb hier alles transparent:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Basis-Paket: Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -284,7 +284,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
         </div>
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Zusatz-Option: Ballontiere</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -296,7 +296,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
         </div>
         <!-- Glitzer Tattoos -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Zusatz-Option: Glitzer-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -450,7 +450,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Datteln"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -481,8 +481,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Datteln buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kinderzauberer/kinderzauberer-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Datteln</a>
-      <a href="/clown/clownshow/clown-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Datteln</a>
+      <a href="/kinderzauberer/kinderzauberer-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Datteln</a>
+      <a href="/clown/clownshow/clown-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Datteln</a>
     </div>
   </div>
 </section>

@@ -118,7 +118,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_roundImgAsset.src}
             alt="Kinderzauberer in Düsseldorf"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -186,17 +186,17 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -235,15 +235,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">DAS KOMPLETT-PAKET</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">ZAUBERSHOW 🎭</h3>
           <p class="text-[#374151] leading-relaxed">Der Clown schafft die perfekte Verbindung zu den Kindern und der Zauberer verzaubert sie mit verblüffenden Illusionen! Mädchen und Jungen erleben eine erstklassige und humorvolle Verschmelzung aus Clownerie und Zauberkunst, bei der ich jeden Zuschauer zum aktiven Teilnehmer mache. So werden sie unmittelbar in die Show eingebunden… und stehen selbst im Mittelpunkt des Geschehens!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">BALLONMODELLAGE 🎈</h3>
           <p class="text-[#374151] leading-relaxed">Ob beim Kindergeburtstag, auf großen Festivals, in Kindergärten oder Schulen: Ballonfiguren sind garantiert ein absoluter Publikumsliebling und zaubern strahlende Gesichter! Jedes Kind erhält seine persönliche Wunschfigur zum Mitnehmen und kann tagelang damit spielen. Schnell und meisterhaft geformt begeistern diese bunten Kunstwerke nicht nur die Kleinsten, sondern auch die Erwachsenen! 🦒🐶🗡️</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">GLITZER-TATTOOS ✨</h3>
           <p class="text-[#374151] leading-relaxed">Hautfreundlich, völlig ungefährlich und im Handumdrehen aufgetragen: Glitzer-Tattoos sind eine spektakuläre Attraktion auf jeder Feier! Ob auf dem Veranstaltungsgelände oder gemütlich im Wohnzimmer – überall sieht man begeisterte Kinder und zufriedene Eltern. Die schimmernden Hautkunstwerke verzaubern Jung und Alt gleichermaßen und sorgen für leuchtende Kinderaugen! 💫</p>
         </div>
@@ -392,7 +392,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kinderzauberer Düsseldorf"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -423,8 +423,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Düsseldorf buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-duesseldorf/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🎂 Kindergeburtstag in Düsseldorf</a>
-      <a href="/clown/clownshow/clown-in-duesseldorf/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Düsseldorf</a>
+      <a href="/kindergeburtstag/geburtstag-in-duesseldorf/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Düsseldorf</a>
+      <a href="/clown/clownshow/clown-in-duesseldorf/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Düsseldorf</a>
     </div>
   </div>
 </section>

@@ -120,7 +120,7 @@ const ablauf = [
           <Image
             src={walkActFestEssenImg}
             alt="Fest Essen Walk Act"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -171,7 +171,7 @@ const ablauf = [
           <Image
             src={ballonmodellage2Img}
             alt="Herzballon bei Ballonmodellage"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -189,7 +189,7 @@ const ablauf = [
         <p class="text-2xl font-bold text-[#1f2025]">⭐⭐⭐⭐⭐ Google Bewertungen</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:#e91e63;">SJ</div>
             <div>
@@ -200,7 +200,7 @@ const ablauf = [
           <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
           <p class="text-[#374151] text-sm">In jeder Hinsicht wirklich empfehlenswert!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:#009688;">TA</div>
             <div>
@@ -211,7 +211,7 @@ const ablauf = [
           <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
           <p class="text-[#374151] text-sm">Was ein geiler Typ! Witz, Charme und Humor im Herzen ❤️</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:#3b55d5;">NK</div>
             <div>
@@ -234,7 +234,7 @@ const ablauf = [
           <Image
             src={walkActStadtfestImg}
             alt="Walk Act Stadtfest"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -307,7 +307,7 @@ const ablauf = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center uppercase tracking-wider mb-10">Ablauf eines Walk Acts</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {ablauf.map((step, i) => (
-          <div class="bg-gray-50 rounded-xl p-6 flex gap-4 items-start">
+          <div class="bg-gray-50 rounded-xl p-6 flex gap-4 items-start card-hover">
             <div class="w-10 h-10 rounded-full bg-[#d7393e] text-white font-bold flex items-center justify-center flex-shrink-0">
               {i + 1}
             </div>

@@ -123,7 +123,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_clownIntroAsset.src}
             alt="Clownshow in Haltern am See"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -163,15 +163,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">📍 Ihre Location in Haltern – Meine Show</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🏠 Perfekt für alle Räumlichkeiten</h3>
           <p class="text-[#374151] leading-relaxed">Zuhause: Wohnzimmer, Keller, Garten (nur 2×2m nötig!) 📐Gemeindehäuser: Kirchen, Pfarrheime, BegegnungszentrenOutdoor: Halterner Stausee 🌊, Parks, GärtenSchulen & Kitas: Alle städtischen und privaten Einrichtungen 🏫</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🌍 Auch über Haltern hinaus buchbar</h3>
           <p class="text-[#374151] leading-relaxed">Regelmäßig im Einsatz: Reken • Dülmen • Coesfeld • Marl • Dorsten • Recklinghausen</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">⭐ Vertrauen Sie auf Qualität</h3>
           <p class="text-[#374151] leading-relaxed mb-3">💯 Ihre Vorteile mit mir:</p>
           <ul class="space-y-2 text-[#374151] text-sm">
@@ -196,17 +196,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -350,7 +350,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Clownshow Haltern am See"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -381,8 +381,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Haltern am See buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🎂 Kindergeburtstag in Haltern am See</a>
-      <a href="/kinderzauberer/kinderzauberer-in-haltern/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Haltern am See</a>
+      <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Haltern am See</a>
+      <a href="/kinderzauberer/kinderzauberer-in-haltern/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Haltern am See</a>
     </div>
   </div>
 </section>

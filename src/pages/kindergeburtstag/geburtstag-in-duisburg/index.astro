@@ -142,7 +142,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Kindergeburtstag in Duisburg mit Clown Zauberer"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -159,15 +159,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-8">So läuft die Show praktisch ab</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎭 Vor der Show</h3>
           <p class="text-[#374151] leading-relaxed">Ich komme, parke, trage meine Sachen rein. Die Kinder werden neugierig und bevor die Show anfängt passieren erstaunliche Dinge. Die Spannung steigt!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">✨ Die Show</h3>
           <p class="text-[#374151] leading-relaxed">Volle Action. Ich habe die Aufmerksamkeit aller Kinder. Sie können zuschauen, Fotos machen oder in der Küche letzte Handgriffe erledigen.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎉 Nach der Show</h3>
           <p class="text-[#374151] leading-relaxed">Ich packe zusammen, verabschiede mich. Die Kinder sind zufrieden, aber nicht überdreht. Perfekter Zeitpunkt für Kuchen!</p>
         </div>
@@ -226,15 +226,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-8">Was Sie über meine Show wissen sollten</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎩 Das Konzept</h3>
           <p class="text-[#374151] leading-relaxed">40 Minuten interaktive Zaubershow. Die Kinder sind keine Zuschauer – sie sind Akteure. Sie lernen Tricks, führen sie vor, ernten Applaus. Ihr Kind ist der Hauptstar. Alle anderen sind wichtige Nebenrollen.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">✨ Die Atmosphäre</h3>
           <p class="text-[#374151] leading-relaxed">Keine laute Disco-Musik. Keine Hektik. Keine Überforderung. Sondern: Fokussierte Aufmerksamkeit, echtes Staunen, herzliches Lachen. Kinder und Eltern genießen gemeinsam.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🌟 Das Ergebnis</h3>
           <p class="text-[#374151] leading-relaxed">Nach der Show: Zufriedene Kinder, die noch stundenlang über die Tricks reden. Entspannte Eltern, die den Tag tatsächlich genossen haben. Und Ihr Kind fühlt sich wie ein Star.</p>
         </div>
@@ -252,17 +252,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -283,7 +283,7 @@ const structuredData = [serviceSchema, faqSchema];
       <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-4">Preise für Duisburg – transparent und fair</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
         <!-- Standard-Paket -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Standard-Paket</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -296,7 +296,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Enthalten: Komplette Show mit allen Materialien. Sie stellen nur den Platz!</p>
         </div>
         <!-- Extra-Ballons -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Extra-Ballons</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -309,7 +309,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Die Kinder nehmen sie mit nach Hause und spielen tagelang damit.</p>
         </div>
         <!-- Extra-Tattoos -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Extra-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -426,7 +426,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Duisburg"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -463,8 +463,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Duisburg buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kinderzauberer/kinderzauberer-in-duisburg/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Duisburg</a>
-      <a href="/clown/clownshow/clown-in-duisburg/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Duisburg</a>
+      <a href="/kinderzauberer/kinderzauberer-in-duisburg/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Duisburg</a>
+      <a href="/clown/clownshow/clown-in-duisburg/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Duisburg</a>
     </div>
   </div>
 </section>

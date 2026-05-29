@@ -123,7 +123,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Geburtstag in Gladbeck mit dem Clown aus Ihrer Stadt"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -181,7 +181,7 @@ const structuredData = [serviceSchema, faqSchema];
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <!-- Zaubershow -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎭 Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-1">150 €</p>
           <p class="text-[#374151] text-xs mb-4">Festpreis</p>
@@ -197,7 +197,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#3b55d5] font-bold text-sm">🚗 Fahrtkosten für Gladbeck: 0 €</p>
         </div>
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Ballonmodellage</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-1">+ 20 €</p>
           <p class="text-[#374151] text-xs mb-4">Ca. 15 Min., 1 Ballon pro Kind</p>
@@ -210,7 +210,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Ballonfiguren sind auf jedem Gladbecker Kindergeburtstag der Hit! Jedes Kind bekommt sein individuelles Wunschtier – geformt in wenigen Minuten direkt vor seinen Augen.</p>
         </div>
         <!-- Glitzer Tattoos -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Glitzer-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-1">+ 40 €</p>
           <p class="text-[#374151] text-xs mb-4">Ca. 30 Min., 1 Tattoo pro Kind</p>
@@ -372,17 +372,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -419,7 +419,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Gladbeck"
-            class="rounded-xl w-full h-auto shadow-sm"
+            class="rounded-xl w-full h-auto shadow-sm img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -554,7 +554,7 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Gladbeck buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/clown/clownshow/clown-in-gladbeck/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Gladbeck</a>
+      <a href="/clown/clownshow/clown-in-gladbeck/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Gladbeck</a>
     </div>
   </div>
 </section>

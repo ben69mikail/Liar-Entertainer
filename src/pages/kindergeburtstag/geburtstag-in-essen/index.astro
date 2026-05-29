@@ -134,7 +134,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Kindergeburtstag in Essen mit Clown Zauberer"
-            class="rounded-full object-cover object-[20%]"
+            class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
           />
@@ -152,15 +152,15 @@ const structuredData = [serviceSchema, faqSchema];
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Warum Essen perfekt ist für Kindergeburtstage zu Hause</h2>
       <p class="text-[#374151] text-center mb-10 leading-relaxed">Essen ist anders als andere Großstädte. Hier kennt man sich, hier ist man bodenständig, hier zählt Authentizität. Genau das macht meine Show aus:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Ruhrpott-Mentalität trifft auf Showqualität</h3>
           <p class="text-[#374151] leading-relaxed">Kein aufgesetztes Getue. Kein übertriebenes Theater. Sondern: Ehrliche Unterhaltung mit Herz. Ich bin so, wie die Menschen im Ruhrgebiet sind – direkt, sympathisch, verlässlich.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Grüne Stadt, kurze Wege</h3>
           <p class="text-[#374151] leading-relaxed">Essen hat über 50 Stadtteile, aber alle sind gut erreichbar. Von Gladbeck aus bin ich in 20-30 Minuten bei Ihnen – egal ob Kettwig im Süden oder Karnap im Norden.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Vielfalt, die verbindet</h3>
           <p class="text-[#374151] leading-relaxed">Essen ist bunt. Verschiedene Kulturen, verschiedene Lebensstile. Meine Show funktioniert überall – vom Hochhaus in Katernberg bis zur Villa in Bredeney. Weil Kinder überall gleich sind: Sie wollen Spaß, Staunen, Lachen.</p>
         </div>
@@ -178,17 +178,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#d7393e] py-10 text-center">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">400</div>
         <div class="text-white text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-white">110.000</div>
         <div class="text-white text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6">
+      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-white">15</div>
         <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
@@ -223,7 +223,7 @@ const structuredData = [serviceSchema, faqSchema];
         <img
           src={_showImgAsset.src}
           alt="Zaubershow mit Clown Zauberer in Essen"
-          class="rounded-xl w-full shadow-sm mt-6"
+          class="rounded-xl w-full shadow-sm mt-6 img-hover-zoom"
           loading="lazy"
         />
       </div>
@@ -237,7 +237,7 @@ const structuredData = [serviceSchema, faqSchema];
       <p class="text-[#374151] text-center mb-10">Ich weiß, dass Kindergeburtstage ins Geld gehen können. Deshalb halte ich meine Preise fair und transparent:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Basis-Show -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Basis: Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -250,7 +250,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Das Geburtstagskind steht immer im Mittelpunkt!</p>
         </div>
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Extra Ballons</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -263,7 +263,7 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] text-sm">Die nehmen sie mit nach Hause und spielen tagelang damit. Lohnt sich!</p>
         </div>
         <!-- Glitzer-Tattoos -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Extra Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -277,7 +277,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
       </div>
       <!-- Anfahrt-Hinweis -->
-      <div class="bg-gray-50 rounded-xl p-6 mt-6 text-center">
+      <div class="bg-gray-50 rounded-xl p-6 mt-6 text-center card-hover">
         <p class="text-[#374151] text-sm"><strong>Anfahrt:</strong> Ca. 15-30 € – Von Gladbeck nach Essen sind's etwa 20-30 km. Bei 0,40 € pro Kilometer bleiben die Fahrtkosten überschaubar. Ehrliche Rechnung, keine Überraschungen.</p>
       </div>
       <!-- CTA -->
@@ -294,23 +294,23 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Praktische Tipps für Ihren Kindergeburtstag in Essen</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">🕐 Bester Zeitpunkt</h3>
           <p class="text-[#374151] leading-relaxed">Nachmittags zwischen 14-16 Uhr. Kinder sind ausgeschlafen, aber noch nicht müde.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">📋 Ablauf-Tipp</h3>
           <p class="text-[#374151] leading-relaxed">Show → Kuchen → Geschenke auspacken. In dieser Reihenfolge klappt's am besten.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">👧 Anzahl Kinder</h3>
           <p class="text-[#374151] leading-relaxed">6-12 ist optimal. Weniger geht auch, mehr wird unübersichtlich.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">🌤️ Wetter-Plan</h3>
           <p class="text-[#374151] leading-relaxed">Show funktioniert drinnen UND draußen. Bei unsicherem Wetter: Drinnen als Standard.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">👶 Geschwister</h3>
           <p class="text-[#374151] leading-relaxed">Dürfen natürlich mitschauen! Auch kleinere oder größere Geschwister sind willkommen.</p>
         </div>
@@ -414,7 +414,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Essen"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -447,8 +447,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Essen buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kinderzauberer/kinderzauberer-in-essen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Kinderzauberer in Essen</a>
-      <a href="/clown/clownshow/clown-in-essen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clown in Essen</a>
+      <a href="/kinderzauberer/kinderzauberer-in-essen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Essen</a>
+      <a href="/clown/clownshow/clown-in-essen/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Essen</a>
     </div>
   </div>
 </section>

@@ -97,7 +97,7 @@ const motive = [
           <Image
             src={glitzerTattoosImg}
             alt="Glitzer Tattoos für Kindergeburtstag & Events in NRW"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -133,7 +133,7 @@ const motive = [
           <Image
             src={fotogalerieClown10Img}
             alt="Glitzer Tattoo bei Clown LIAR"
-            class="rounded-full object-cover shadow-lg"
+            class="rounded-full object-cover shadow-lg portrait-zoom"
             style="width: 340px; height: 340px;"
             loading="lazy"
             widths={[400, 800]}
@@ -191,7 +191,7 @@ const motive = [
       <p class="text-center text-[#374151] mb-8">Unsere Motivauswahl ist riesig! Jedes Kind darf sich sein Lieblingsmotiv aussuchen.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {motive.map((cat) => (
-          <div class="bg-gray-50 rounded-xl p-6">
+          <div class="bg-gray-50 rounded-xl p-6 card-hover">
             <h3 class="font-bold text-[#1f2025] mb-4">{cat.title}</h3>
             <div class="flex flex-wrap gap-2">
               {cat.items.map((item) => (

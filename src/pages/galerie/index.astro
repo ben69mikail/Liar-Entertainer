@@ -179,7 +179,7 @@ const referenzen = [
       <h2 class="text-[#1f2025] font-bold text-2xl text-center mb-6">📸 Fotos</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         {photoImages.map((img, i) => (
-          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg">
+          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg card-hover">
             <Image
               src={img.src}
               alt={img.alt}
@@ -201,7 +201,7 @@ const referenzen = [
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         {presseImages.map((img) => (
-          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg">
+          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg card-hover">
             <Image
               src={img.src}
               alt={img.alt}
@@ -234,7 +234,7 @@ const referenzen = [
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {referenzen.map((ref) => (
-          <div class="bg-white/70 rounded-lg px-4 py-3 text-center">
+          <div class="bg-white/70 rounded-lg px-4 py-3 text-center card-hover">
             <p class="font-semibold text-[#1f2025] text-sm">{ref.name}</p>
             {ref.detail && (
               <p class="text-[#6b7280] text-xs mt-1">({ref.detail})</p>

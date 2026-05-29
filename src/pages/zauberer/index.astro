@@ -155,7 +155,7 @@ const whyUs = [
       <p class="text-center text-[#374151] mb-12">Tauchen Sie ein in die faszinierende Welt der Magie und buchen Sie den Zauberer aus Frankreich. Ob <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline">Zaubershow</a> für Kinder oder elegante <a href="/clown/clownshow/" class="text-[#d7393e] hover:underline">Clownshow</a> – lassen Sie sich von niveauvoller Kunst und unvergleichlichem Charme verzaubern.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {formats.map((format) => (
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col">
+          <div class="bg-white rounded-xl overflow-hidden flex flex-col card-hover">
             {format.img && <Image src={format.img} alt={format.imgAlt} class="w-full h-52 object-cover object-top" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 100vw, 33vw" />}
             <div class="p-7 flex flex-col flex-1">
             <div class="text-4xl mb-4">{format.icon}</div>
@@ -201,7 +201,7 @@ const whyUs = [
       <h2 class="text-center font-bold text-2xl sm:text-3xl mb-10">🎯 Das macht mich aus</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {whyUs.map((item) => (
-          <div class="bg-white/15 rounded-xl p-5">
+          <div class="bg-white/15 rounded-xl p-5 stat-card-pulse">
             <p class="font-bold mb-1">✓ {item.title}</p>
             <p class="text-red-100 text-sm">{item.desc}</p>
           </div>
@@ -258,7 +258,7 @@ const whyUs = [
           <Image
             src={karteImg}
             alt="Einsatzgebiet Zauberer LIAR für Kindergeburtstag und Events in NRW – Karte"
-            class="rounded-lg w-full h-auto"
+            class="rounded-lg w-full h-auto img-hover-zoom"
             loading="lazy"
             widths={[400, 800]}
             sizes="(max-width: 768px) 100vw, 50vw"

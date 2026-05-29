@@ -86,7 +86,7 @@ const paedagogisch = [
             Das Beste? Für Sie als Erzieher bedeutet es minimalen Aufwand bei maximalem Erfolg. Ich bringe alles mit, benötige keine Vorbereitung und nur 2×2 Meter Platz. Ich biete auch spezielle Shows für <a href="/zauberer/zaubershow/schule/" class="text-[#d7393e] hover:underline">Grundschulen</a> sowie auf <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-[#d7393e] hover:underline">Straßen- und Sommerfesten</a> an.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">⭐ Das macht meine Show kindergartengerecht:</h3>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2"><span class="text-[#d7393e] font-bold">🎯</span> <span class="text-[#374151]"><strong>Altersgerecht für 3–6 Jahre:</strong> Einfache Tricks, kurze Geschichten, viel Bewegung</span></li>
@@ -108,7 +108,7 @@ const paedagogisch = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎉 Perfekt für diese Anlässe in Kindergarten & Kita</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {anlaesse.map((a, i) => (
-          <div class={`bg-white rounded-xl p-6 shadow-sm border-t-4 ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
+          <div class={`bg-white rounded-xl p-6 shadow-sm border-t-4 card-hover ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
             <p class="text-3xl mb-3">{a.icon}</p>
             <h3 class="font-bold text-[#1f2025] mb-2">{a.title}</h3>
             <p class="text-[#374151] text-sm leading-relaxed">{a.text}</p>
@@ -127,17 +127,17 @@ const paedagogisch = [
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-transparent border border-white/30 rounded-xl p-6">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -173,10 +173,10 @@ const paedagogisch = [
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-8">📸 Eindrücke</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Image src={kitaEssenImg} alt="Lachende Kinder bei Kinderzauberer Kindergarten Essen" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={geburtstagKitaImg} alt="Kinder lachen im Kindergarten bei LIARs Zaubershow" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={galerieImg2} alt="Zaubershow für Kindergarten" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={kindergartenGelsenkirchenImg} alt="Kinderzauberer Kindergarten Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
+        <Image src={kitaEssenImg} alt="Lachende Kinder bei Kinderzauberer Kindergarten Essen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
+        <Image src={geburtstagKitaImg} alt="Kinder lachen im Kindergarten bei LIARs Zaubershow" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
+        <Image src={galerieImg2} alt="Zaubershow für Kindergarten" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
+        <Image src={kindergartenGelsenkirchenImg} alt="Kinderzauberer Kindergarten Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
       </div>
     </div>
   </section>
@@ -186,7 +186,7 @@ const paedagogisch = [
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">📋 Praktische Details für Kitas</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">📐 Platzbedarf & Räume</h3>
           <p class="text-[#374151] text-sm mb-3">Minimaler Platzbedarf: <strong>2×2 Meter</strong> (ideal 3×3 Meter)</p>
           <p class="font-semibold text-[#1f2025] text-sm mb-2">Geeignete Räume:</p>
@@ -197,7 +197,7 @@ const paedagogisch = [
             <li>✓ Außenbereich (überdacht)</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">👶 Gruppengrößen</h3>
           <ul class="text-[#374151] text-sm space-y-2">
             <li><strong>Ideal: 20–60 Kinder</strong><br />Perfekte Größe für intensive Interaktion</li>
@@ -206,7 +206,7 @@ const paedagogisch = [
             <li><strong>Kleine Gruppen: 10–20 Kinder</strong><br />Auch buchbar!</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546]">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">⏱️ Showdauer</h3>
           <ul class="text-[#374151] text-sm space-y-2">
             <li><strong>Kurze Show: 25–30 Min.</strong><br />Für jüngere Kinder (3–4 Jahre)</li>
@@ -282,7 +282,7 @@ const paedagogisch = [
           <Image
             src={karteImg}
             alt="Wohnort Clown Zauberer LIAR"
-            class="rounded-xl shadow-sm w-full max-w-md"
+            class="rounded-xl shadow-sm w-full max-w-md img-hover-zoom"
             loading="lazy"
             widths={[400, 800]}
             sizes="(max-width: 768px) 100vw, 50vw"
