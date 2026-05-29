@@ -71,7 +71,7 @@ const menuItems = [
   </div>
 
   <!-- Row 2: Navigation -->
-  <nav id="main-nav" class="bg-white border-t border-b border-gray-200 transition-all duration-300 w-full z-50">
+  <nav id="main-nav" class="bg-white border-t border-b border-gray-200 transition-shadow duration-300">
     <div class="max-w-6xl mx-auto px-4">
 
       <!-- Desktop Navigation -->
@@ -251,13 +251,11 @@ const menuItems = [
     const headerHeight = header?.offsetHeight || 200;
     if (window.scrollY > headerHeight - 56 && !isSticky) {
       isSticky = true;
-      nav?.classList.add('fixed', 'top-0', 'left-0', 'right-0');
-      nav?.setAttribute('style', 'box-shadow: 0 2px 16px rgba(0,0,0,0.10); background: rgba(255,255,255,0.97); backdrop-filter: blur(8px);');
+      nav?.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'shadow-md');
       spacer?.classList.remove('hidden');
     } else if (window.scrollY <= headerHeight - 56 && isSticky) {
       isSticky = false;
-      nav?.classList.remove('fixed', 'top-0', 'left-0', 'right-0');
-      nav?.setAttribute('style', '');
+      nav?.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'shadow-md');
       spacer?.classList.add('hidden');
     }
   }
