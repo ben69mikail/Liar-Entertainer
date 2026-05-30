@@ -31,6 +31,32 @@ const serviceSchema = {
   }
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Was kostet eine Zaubershow für Kinder in NRW?', acceptedAnswer: { '@type': 'Answer', text: 'Die Zaubershow kostet ab 150€ für ca. 40 Minuten. Fahrtkosten werden mit 0,40€/km (Hin- und Rückfahrt) ab Gladbeck berechnet.' } },
+    { '@type': 'Question', name: 'Für welche Altersgruppe ist die Zaubershow geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Die Zaubershow ist ab 4 Jahren geeignet. Sie wird altersgerecht angepasst – für Kindergartenkinder einfacher, für Grundschulkinder anspruchsvoller.' } },
+    { '@type': 'Question', name: 'Wie lange dauert die Zaubershow?', acceptedAnswer: { '@type': 'Answer', text: 'Die Zaubershow dauert ca. 40 Minuten. Mit Ballonmodellage (+20€, ca. 15 Min.) und Glitzer Tattoos (+40€, ca. 30 Min.) verlängert sich das Programm auf bis zu 90 Minuten.' } },
+    { '@type': 'Question', name: 'Wie weit fährt Clown Zauberer LIAR für Auftritte?', acceptedAnswer: { '@type': 'Answer', text: 'LIAR ist in ganz NRW buchbar – Ruhrgebiet, Rheinland, Münsterland und darüber hinaus. Auf Anfrage auch deutschlandweit sowie in Belgien, Niederlande, Frankreich, Österreich und der Schweiz.' } },
+  ],
+};
+
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
+  "description": "Clown Zauberer LIAR zeigt seine Zaubershow für Kinder in NRW. Ab 150€ – professionell, lustig und unvergesslich.",
+  "thumbnailUrl": "https://img.youtube.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2018-02-04",
+  "duration": "PT2M30S",
+  "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
+  "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
+  "publisher": { "@type": "Organization", "name": "Clown Zauberer LIAR", "url": "https://liar-entertainer.com" }
+};
+
+const structuredData = [serviceSchema, faqSchema, videoSchema];
+
 const pillars = [
   {
     num: '1️⃣',
@@ -75,7 +101,7 @@ const whyUs = [
   description={seoDescription}
   keywords="Zaubershow Kinder NRW, Zaubershow buchen, Kindershow Zauberer, Zaubershow Kindergeburtstag, interaktive Zaubershow"
   canonical="https://liar-entertainer.com/zauberer/zaubershow/"
-  structuredData={serviceSchema}
+  structuredData={structuredData}
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Zauberer', url: '/zauberer/' }, { name: 'Zaubershow', url: '/zauberer/zaubershow/' }]}
 >
 
