@@ -36,6 +36,14 @@ RedirectMatch 301 ^/wp-includes(.*)$ /
 RedirectMatch 301 ^/wp-trackback\.php(.*)$ /
 RedirectMatch 301 ^/wp-comments-post\.php(.*)$ /
 
+# -- WordPress-Legacy: wp-content → 410 Gone --
+# wp-content Pfade sind seit Legacy-Cleanup 22.05.2026 nicht mehr erreichbar
+RewriteRule ^wp-content/.*$ - [R=410,L]
+
+# -- WordPress-Legacy: index.php → Startseite --
+RewriteRule ^index\.php/?$ / [R=301,L]
+RewriteRule ^index\.php/(.*)$ /$1 [R=301,L]
+
 # -- RSS/Atom Feeds → Blog --
 RedirectMatch 301 ^/feed/?$ /blog/
 RedirectMatch 301 ^/rss/?$ /blog/
