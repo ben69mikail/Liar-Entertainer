@@ -214,35 +214,21 @@ const whyUs = [
     </div>
   </section>
 
-  <!-- Wave: white → red -->
-  <div style="overflow:hidden;line-height:0;background:#f9fafb;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/>
-    </svg>
-  </div>
-
-  <!-- Red: Why LIAR -->
-  <section class="bg-[#d7393e] py-14 text-white">
+  <!-- Pastel Red: Why LIAR (REDESIGN: wave + solid red → pastel red with dark text + bordered cards) -->
+  <section class="py-14 bg-[#fdf2f2]">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-center font-bold text-sm uppercase tracking-widest text-red-100 mb-2">WARUM ZAUBERER LIAR?</p>
-      <h2 class="text-center font-bold text-2xl sm:text-3xl mb-10">🎯 Das macht mich aus</h2>
+      <p class="text-center font-bold text-sm uppercase tracking-widest text-[#595959] mb-2">WARUM ZAUBERER LIAR?</p>
+      <h2 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">🎯 Das macht mich aus</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {whyUs.map((item) => (
-          <div class="bg-white/15 rounded-xl p-5 stat-card-pulse">
-            <p class="font-bold mb-1">✓ {item.title}</p>
-            <p class="text-red-100 text-sm">{item.desc}</p>
+          <div class="bg-white rounded-xl p-5 border border-[#f0c4c4] shadow-sm">
+            <p class="font-bold mb-1 text-[#1f2025]">✓ {item.title}</p>
+            <p class="text-[#374151] text-sm">{item.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
-
-  <!-- Wave: red → white -->
-  <div style="overflow:hidden;line-height:0;background:#d7393e;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- Booking Process -->
   <section class="bg-white py-14">

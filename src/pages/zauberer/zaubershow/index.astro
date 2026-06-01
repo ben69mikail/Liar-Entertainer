@@ -155,26 +155,26 @@ const whyUs = [
 
   <GoogleReviews />
 
-  <!-- Was macht meine Zaubershow einzigartig? – Bild links, Text + Liste rechts -->
+  <!-- Was macht meine Zaubershow einzigartig? -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">🎪 Was macht meine Zaubershow einzigartig?</h2>
       <hr class="border-[#1f2025] border-2 mx-auto mb-10 w-1/2" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        <!-- Rundes Bild links -->
+        <!-- Bild links mit Schatten + abgerundeten Ecken -->
         <div class="flex justify-center">
           <Image
             src={staunendeKinderImg}
             alt="Staunende Kinder bei einer Zaubershow in NRW"
-            class="rounded-full object-cover shadow-lg portrait-zoom"
-            style="width: 340px; height: 340px;"
+            class="rounded-2xl object-cover portrait-zoom"
+            style="width: 340px; height: 340px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="eager"
             fetchpriority="high"
             widths={[400, 700]}
             sizes="340px"
           />
         </div>
-        <!-- Text + Perfekt für rechts -->
+        <!-- Text rechts -->
         <div>
           <p class="text-[#374151] leading-relaxed mb-6">
             In über 15 Jahren als Clown Zauberer und Kinderzauberer im Ruhrgebiet und ganz NRW habe ich eine Zaubershow entwickelt, die anders ist als klassische Zaubervorführungen. Hier geht es nicht um einen Zauberer auf der Bühne, der Tricks vorführt, während Kinder brav zuschauen. Nein – hier werden die Kinder selbst zu Zauberern! 🎩 Ob <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a>, Kita-Fest oder Schulveranstaltung – die Zaubershow passt sich jedem Anlass an. Entdecken Sie auch meine speziellen Angebote für <a href="/zauberer/zaubershow/kindergarten-kita/" class="text-[#d7393e] hover:underline">Kindergärten und Kitas</a>, <a href="/zauberer/zaubershow/schule/" class="text-[#d7393e] hover:underline">Schulveranstaltungen</a> und <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-[#d7393e] hover:underline">Straßen- und Sommerfeste</a>.
@@ -224,41 +224,27 @@ const whyUs = [
     </div>
   </section>
 
-  <!-- Wave: white → blue -->
-  <div style="overflow:hidden;line-height:0;background:#f9fafb;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- Blue: Why LIAR -->
-  <section class="bg-[#3b55d5] py-14 text-white">
+  <!-- Why LIAR (pastel blue) -->
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="font-bold text-2xl sm:text-3xl mb-8">🎪 Warum LIAR als Ihr Zauber-Entertainer?</h2>
+      <h2 class="font-bold text-2xl sm:text-3xl mb-8 text-[#1f2025]">🎪 Warum LIAR als Ihr Zauber-Entertainer?</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
         {whyUs.map((reason) => (
           <div class="flex items-start gap-3">
-            <span class="text-[#ffb546] font-bold mt-0.5">✅</span>
-            <p class="text-white text-sm leading-relaxed">{reason}</p>
+            <span class="text-[#d7393e] font-bold mt-0.5">✅</span>
+            <p class="text-[#374151] text-sm leading-relaxed">{reason}</p>
           </div>
         ))}
       </div>
       <div class="mt-10">
-        <p class="text-white mb-6 text-lg leading-relaxed">
-          ✨ Eine Zaubershow ist mehr als Unterhaltung – es ist ein Erlebnis, das Kinder noch lange begleitet. Die Erinnerung an strahlende Augen, herzliches Lachen und ehrfürchtiges Staunen bleibt. Lassen Sie uns gemeinsam solche Momente schaffen! Sehen Sie sich auch mein spezielles Angebot für <a href="/zauberer/zaubershow/kindergarten-kita/" class="text-white hover:underline font-semibold">Kindergärten und Kitas</a>, für <a href="/zauberer/zaubershow/schule/" class="text-white hover:underline font-semibold">Schulveranstaltungen</a> oder für <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-white hover:underline font-semibold">Straßen- und Sommerfeste</a> an.
+        <p class="text-[#374151] mb-6 text-lg leading-relaxed">
+          ✨ Eine Zaubershow ist mehr als Unterhaltung – es ist ein Erlebnis, das Kinder noch lange begleitet. Die Erinnerung an strahlende Augen, herzliches Lachen und ehrfürchtiges Staunen bleibt. Lassen Sie uns gemeinsam solche Momente schaffen! Sehen Sie sich auch mein spezielles Angebot für <a href="/zauberer/zaubershow/kindergarten-kita/" class="text-[#d7393e] hover:underline font-semibold">Kindergärten und Kitas</a>, für <a href="/zauberer/zaubershow/schule/" class="text-[#d7393e] hover:underline font-semibold">Schulveranstaltungen</a> oder für <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-[#d7393e] hover:underline font-semibold">Straßen- und Sommerfeste</a> an.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Wave: blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
-
-  <!-- Google Reviews -->
+  <!-- Google Reviews inline -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-8">
@@ -303,17 +289,10 @@ const whyUs = [
     </div>
   </section>
 
-  <!-- Wave: white → blue (YouTube) -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- YouTube Video -->
-  <section class="bg-[#3b55d5] py-12">
+  <!-- YouTube Video (pastel blue) -->
+  <section class="py-12 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-white font-bold text-2xl sm:text-3xl text-center mb-8">🎬 Die Zaubershow in Aktion</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-8">🎬 Die Zaubershow in Aktion</h2>
       <div class="relative w-full" style="padding-bottom: 56.25%;">
         <iframe
           src="https://www.youtube.com/embed/Cop0SqRIX4Y"
@@ -326,13 +305,6 @@ const whyUs = [
       </div>
     </div>
   </section>
-
-  <!-- Wave: blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
@@ -355,7 +327,8 @@ const whyUs = [
           <Image
             src={karteImg}
             alt="Einsatzgebiet Zaubershow in NRW – Karte mit Standort Gladbeck"
-            class="rounded-xl shadow-sm w-full max-w-md img-hover-zoom"
+            class="rounded-2xl shadow-sm w-full max-w-md img-hover-zoom"
+            style="box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             widths={[400, 800]}
             sizes="(max-width: 768px) 100vw, 50vw"

@@ -227,8 +227,8 @@ const videoSchema = {
           <Image
             src={portraitImg}
             alt="Clown Zauberer LIAR bringt Kinder auf dem Geburtstag zum Lachen"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width:320px;height:320px;"
+            class="rounded-2xl object-cover object-[20%] portrait-zoom"
+            style="width:320px;height:320px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             width={320}
             height={320}
@@ -266,8 +266,8 @@ const videoSchema = {
           <Image
             src={michaelImg}
             alt="Foto von Michael Prescler – Clown Zauberer LIAR"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width:280px;height:280px;"
+            class="rounded-2xl object-cover object-[20%] portrait-zoom"
+            style="width:280px;height:280px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             width={280}
             height={280}
@@ -279,41 +279,29 @@ const videoSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════
-       WAVE → RED STATS SECTION
+       STATS SECTION (pastel red)
   ════════════════════════════════════════ -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/>
-    </svg>
-  </div>
-
-  <section class="bg-[#d7393e] py-10 text-white text-center">
+  <section class="py-10 bg-[#fdf2f2] border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold">400</div>
-          <div class="text-sm mt-1">Shows im Jahr</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold">110.000</div>
-          <div class="text-sm mt-1">Lachende Kinder</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white/15 rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold">15</div>
-          <div class="text-sm mt-1">Jahre Erfahrung</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
     </div>
   </section>
-
-  <div style="overflow:hidden;line-height:0;background:#d7393e;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- ═══════════════════════════════════════
        QUALIFIKATIONEN + WAS MICH AUSZEICHNET
@@ -342,8 +330,8 @@ const videoSchema = {
           <Image
             src={clownerieImg}
             alt="Clownerie und Zauberei auf einem Kindergeburtstag in NRW"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width:260px;height:260px;"
+            class="rounded-2xl object-cover object-[20%] portrait-zoom"
+            style="width:260px;height:260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             width={260}
             height={260}
@@ -365,113 +353,104 @@ const videoSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════
-       WAVE → BLUE SERVICES SECTION
+       DAS BIETET CLOWN ZAUBERER LIAR (pastel blue)
   ════════════════════════════════════════ -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- ═══════════════════════════════════════
-       DAS BIETET CLOWN ZAUBERER LIAR
-  ════════════════════════════════════════ -->
-  <section class="bg-[#3b55d5] pt-6 pb-14">
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-white font-extrabold text-2xl sm:text-3xl text-center mb-12">
+      <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl text-center mb-12">
         Das bietet Clown Zauberer Liar für Ihr Event
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
 
         <!-- Zaubershow -->
-        <div class="text-center text-white">
+        <div class="text-center text-[#1f2025]">
           <a href="/zauberer/zaubershow/">
             <Image
               src={zaubershowImg}
               alt="Clown Zauberer LIAR verzaubert Kinder bei einer Zaubershow in NRW"
-              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px;"
+              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
+              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
               loading="lazy"
               width={220}
               height={220}
             />
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide">ZAUBERSHOW</h3>
-          <p class="text-white/90 text-sm leading-relaxed mb-3">
+          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">ZAUBERSHOW</h3>
+          <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Clown trifft Zauberer – Die magischste Show in NRW! Wenn der Clown zum Zauberer wird,
             passieren unglaubliche Dinge! Meine Zaubershow ist speziell für Kinder konzipiert und
             verbindet Comedy mit verblüffender Magie.
           </p>
-          <div class="text-white/80 text-sm space-y-1.5 text-left">
+          <div class="text-[#374151] text-sm space-y-1.5 text-left">
             <p>✅ <strong>Interaktive Zaubertricks</strong> – Kinder werden zu Co-Zauberern und erleben Magie hautnah</p>
             <p>✅ <strong>Altersgerechte Magie</strong> – Von einfachen Tricks für die Kleinen bis zu verblüffenden Illusionen für ältere Kinder</p>
             <p>✅ <strong>Comedy-Magie</strong> – Der Clown zaubert nicht perfekt – und genau das macht es so lustig!</p>
             <p>✅ <strong>Große Finale</strong> – Ein spektakulärer Abschlusszauber, den niemand vergisst</p>
           </div>
-          <p class="text-white/90 text-xs mt-3"><strong>Dauer:</strong> ca. 40 Minuten</p>
-          <a href="/zauberer/zaubershow/" class="inline-block mt-4 text-white hover:underline text-sm font-semibold">
+          <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> ca. 40 Minuten</p>
+          <a href="/zauberer/zaubershow/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
 
         <!-- Ballonmodellage -->
-        <div class="text-center text-white">
+        <div class="text-center text-[#1f2025]">
           <a href="/clown/ballonmodellage/">
             <Image
               src={ballonImg}
               alt="Clown LIAR formt Ballontiere bei Ballonmodellage auf Kindergeburtstag"
-              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px;"
+              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
+              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
               loading="lazy"
               width={220}
               height={220}
             />
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide">BALLONMODELLAGE</h3>
-          <p class="text-white/90 text-sm leading-relaxed mb-3">
+          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">BALLONMODELLAGE</h3>
+          <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Bunte Ballontiere vom Clown – Jedes Kind bekommt sein Wunschtier! Welches Kind liebt
             nicht Ballontiere? Als erfahrener Clown und Ballonkünstler forme ich im Handumdrehen
             die schönsten Figuren:
           </p>
-          <div class="text-white/80 text-sm space-y-1.5 text-left">
+          <div class="text-[#374151] text-sm space-y-1.5 text-left">
             <p>✅ Klassiker: Hund, Katze, Herz, Schwert, Blume</p>
             <p>✅ Spezial-Figuren: Wikinger Helm, Dinosaurier, Kronen, Marienkäfer</p>
             <p>✅ Individuelle Wünsche werden erfüllt!</p>
           </div>
-          <p class="text-white/90 text-xs mt-3"><strong>Dauer:</strong> Je nach Kinderzahl (ca. 1-2 Minuten pro Figur)</p>
-          <a href="/clown/ballonmodellage/" class="inline-block mt-4 text-white hover:underline text-sm font-semibold">
+          <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Je nach Kinderzahl (ca. 1-2 Minuten pro Figur)</p>
+          <a href="/clown/ballonmodellage/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
 
         <!-- Glitzer Tattoos -->
-        <div class="text-center text-white">
+        <div class="text-center text-[#1f2025]">
           <a href="/clown/glitzer-tattoo/">
             <Image
               src={glitzerImg}
               alt="Glitzer Tattoos von Clown Zauberer LIAR auf einem Kinderfest in NRW"
-              class="rounded-full object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px;"
+              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
+              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
               loading="lazy"
               width={220}
               height={220}
             />
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide">GLITZER TATTOOS</h3>
-          <p class="text-white/90 text-sm leading-relaxed mb-3">
+          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">GLITZER TATTOOS</h3>
+          <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Funkel-Glamour vom Clown – Temporäre Tattoos mit WOW-Effekt! Glitzer Tattoos sind
             der Hit auf jeder Party! Als Clown bringe ich eine große Auswahl an glitzernden
             Motiven mit, die Kinderaugen leuchten lassen:
           </p>
-          <div class="text-white/80 text-sm space-y-1.5 text-left">
+          <div class="text-[#374151] text-sm space-y-1.5 text-left">
             <p>✅ <strong>Hautverträglich &amp; sicher</strong> – Dermatologisch getestet, keine Allergene</p>
             <p>✅ <strong>Riesige Motivauswahl</strong></p>
             <p>✅ <strong>Schnell &amp; sauber</strong> – In 2-3 Minuten fertig, kein Rumschmieren</p>
             <p>✅ <strong>Hält mehrere Tage</strong> – Wasserfest und wischfest</p>
             <p>✅ <strong>Für Jungs &amp; Mädchen</strong> – Superhelden, Tiere, Blumen, Sterne u.v.m.</p>
           </div>
-          <p class="text-white/90 text-xs mt-3"><strong>Dauer:</strong> Ca. 2-3 Minuten pro Tattoo</p>
-          <a href="/clown/glitzer-tattoo/" class="inline-block mt-4 text-white hover:underline text-sm font-semibold">
+          <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Ca. 2-3 Minuten pro Tattoo</p>
+          <a href="/clown/glitzer-tattoo/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
@@ -479,12 +458,6 @@ const videoSchema = {
       </div>
     </div>
   </section>
-
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- ═══════════════════════════════════════
        EINSATZGEBIET
@@ -530,17 +503,11 @@ const videoSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════
-       SCHNELLE EINDRÜCKE
+       SCHNELLE EINDRÜCKE (pastel blue)
   ════════════════════════════════════════ -->
-  <!-- Wave oben (weiß → blau) -->
-  <div style="overflow:hidden;line-height:0;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-  <section class="py-14 bg-[#3b55d5]">
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-white font-extrabold text-xl uppercase tracking-widest mb-6">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
       <!-- YouTube Video -->
@@ -554,15 +521,15 @@ const videoSchema = {
           loading="lazy"
         ></iframe>
       </div>
-      <p class="text-white leading-relaxed mb-8">
+      <p class="text-[#374151] leading-relaxed mb-8">
         Foto- und Videogalerien sind eine bereichernde und erfüllende Erfahrung: wir öffnen uns
         eine Welt der Emotionen! Sie regen uns an, unser Verständnis für die Welt und die Menschen
         um uns herum zu vertiefen. Fotos und Videos haben die Kraft, Emotionen in uns hervorzurufen
         und erzeugen eine emotionale Verbindung und eine Galerie kann uns dazu bringen, uns mit den
         dargestellten Momenten und Geschichten zu verbinden…oder einfach spontane Eindrücke
-        festzuhalten! Viel Spaß beim Stöbern! Schauen Sie auch in meinem <a href="/blog/" class="text-white hover:underline font-semibold">Blog</a> vorbei, wo ich regelmäßig über aktuelle Auftritte und Neuigkeiten berichte.
+        festzuhalten! Viel Spaß beim Stöbern! Schauen Sie auch in meinem <a href="/blog/" class="text-[#3b55d5] hover:underline font-semibold">Blog</a> vorbei, wo ich regelmäßig über aktuelle Auftritte und Neuigkeiten berichte.
       </p>
-      <h3 class="text-white font-bold text-xl mb-6">
+      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
       <a
@@ -573,12 +540,6 @@ const videoSchema = {
       </a>
     </div>
   </section>
-  <!-- Wave unten (blau → weiß) -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- ═══════════════════════════════════════
        FAQ SECTION

@@ -170,13 +170,13 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
             <li>💰 Transparente Preise ab 150€</li>
           </ul>
         </div>
-        <!-- Right: Circular Image -->
+        <!-- Right: Photo -->
         <div class="flex justify-center">
           <Image
             src={kinderzaubererImg}
             alt="Kinderzauberer verzaubert Kinder auf einem Kindergeburtstag in NRW"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
+            class="rounded-2xl object-cover object-[20%] portrait-zoom"
+            style="width: 320px; height: 320px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             widths={[320, 640]}
             sizes="320px"
             loading="lazy"
@@ -186,41 +186,27 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Wave: white → blue -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- Blue: Zaubershow Section -->
-  <section class="bg-[#3b55d5] py-14 text-white text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4">VOLLTREFFER</p>
-      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-6">✨ Zaubershow für Geburtstag – mit Herz &amp; Humor</h2>
-      <p class="text-white leading-relaxed mb-4">
-        Meine <strong class="text-white">Zaubershow</strong> ist speziell auf Kinder abgestimmt:<br />
+  <!-- Zaubershow Section (pastel blue) -->
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <p class="text-[#3b55d5] font-bold text-sm uppercase tracking-widest mb-4">VOLLTREFFER</p>
+      <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-6">✨ Zaubershow für Geburtstag – mit Herz &amp; Humor</h2>
+      <p class="text-[#374151] leading-relaxed mb-4">
+        Meine <strong class="text-[#1f2025]">Zaubershow</strong> ist speziell auf Kinder abgestimmt:<br />
         lebendig, interaktiv und voller Überraschungen.
       </p>
-      <p class="text-white leading-relaxed mb-4">
+      <p class="text-[#374151] leading-relaxed mb-4">
         Die Kinder dürfen mitzaubern, lachen, staunen – und manchmal selbst zur kleinen Zauberin oder zum Zauberer werden.
       </p>
-      <p class="text-white leading-relaxed mb-4">
-        Dabei achte ich besonders auf <strong class="text-white">Respekt, Empathie und ein liebevolles Miteinander</strong>.<br />
+      <p class="text-[#374151] leading-relaxed mb-4">
+        Dabei achte ich besonders auf <strong class="text-[#1f2025]">Respekt, Empathie und ein liebevolles Miteinander</strong>.<br />
         Kein Kind wird bloßgestellt – jedes Kind wird Teil einer positiven, fröhlichen Erfahrung.
       </p>
-      <p class="text-white leading-relaxed">
+      <p class="text-[#374151] leading-relaxed">
         Egal ob im Wohnzimmer, Garten oder im Gemeindesaal – meine Show passt sich flexibel an jede Umgebung an und sorgt garantiert für strahlende Gesichter.
       </p>
     </div>
   </section>
-
-  <!-- Wave: blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- Die Preise -->
   <section class="bg-white py-14">
@@ -369,16 +355,10 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Video Sektion -->
-  <!-- Wave oben (weiß → blau) -->
-  <div style="overflow:hidden;line-height:0;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-  <section class="py-14 bg-[#3b55d5]">
+  <!-- Video Sektion (pastel blue) -->
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-white font-extrabold text-xl uppercase tracking-widest mb-6">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
@@ -391,7 +371,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
           loading="lazy"
         ></iframe>
       </div>
-      <h3 class="text-white font-bold text-xl mb-6">
+      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
       <a
@@ -402,14 +382,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       </a>
     </div>
   </section>
-  <!-- Wave unten (blau → weiß) -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
-
-
 
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">

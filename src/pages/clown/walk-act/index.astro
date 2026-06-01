@@ -120,8 +120,8 @@ const ablauf = [
           <Image
             src={walkActFestEssenImg}
             alt="Fest Essen Walk Act"
-            class="rounded-full object-cover shadow-lg portrait-zoom"
-            style="width: 340px; height: 340px;"
+            class="rounded-2xl object-cover shadow-lg portrait-zoom"
+            style="width: 340px; height: 340px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             widths={[400, 800]}
             sizes="340px"
@@ -171,8 +171,8 @@ const ablauf = [
           <Image
             src={ballonmodellage2Img}
             alt="Herzballon bei Ballonmodellage"
-            class="rounded-full object-cover shadow-lg portrait-zoom"
-            style="width: 340px; height: 340px;"
+            class="rounded-2xl object-cover shadow-lg portrait-zoom"
+            style="width: 340px; height: 340px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             widths={[400, 800]}
             sizes="340px"
@@ -234,8 +234,8 @@ const ablauf = [
           <Image
             src={walkActStadtfestImg}
             alt="Walk Act Stadtfest"
-            class="rounded-full object-cover shadow-lg portrait-zoom"
-            style="width: 340px; height: 340px;"
+            class="rounded-2xl object-cover shadow-lg portrait-zoom"
+            style="width: 340px; height: 340px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
             loading="lazy"
             widths={[400, 800]}
             sizes="340px"
@@ -257,35 +257,28 @@ const ablauf = [
     </div>
   </section>
 
-  <!-- Wave: white → blue -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- IDEAL FÜR + VORTEILE (blue bg) -->
-  <section class="bg-[#3b55d5] py-14 text-white">
+  <!-- IDEAL FÜR + VORTEILE (pastel bg) -->
+  <section class="bg-[#eff4ff] border-y border-[#c5d3f7] py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
-          <h2 class="font-bold text-2xl sm:text-3xl mb-6 uppercase tracking-wider">Ideal für</h2>
+          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl mb-6 uppercase tracking-wider">Ideal für</h2>
           <ul class="space-y-3">
             {idealFuer.map((item) => (
               <li class="flex items-start gap-3">
-                <span class="text-[#ffb546] mt-1 flex-shrink-0">●</span>
-                <p class="text-white"><strong class="text-white">{item.bold}</strong>{item.rest}</p>
+                <span class="text-[#d7393e] mt-1 flex-shrink-0">●</span>
+                <p class="text-[#374151]"><strong class="text-[#1f2025]">{item.bold}</strong>{item.rest}</p>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 class="font-bold text-2xl sm:text-3xl mb-6 uppercase tracking-wider">Ihre Vorteile</h2>
+          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl mb-6 uppercase tracking-wider">Ihre Vorteile</h2>
           <ol class="space-y-3">
             {['Keine Bühne oder Technik erforderlich ✅', 'Direkte Interaktion mit Gästen oder Kunden ✅', 'Flexibel einsetzbar, indoor & outdoor ✅', 'In ganz NRW buchbar (z. B. Köln, Düsseldorf, Essen, Dortmund) ✅', 'Professioneller Auftritt mit künstlerischer Qualität ✅'].map((v, i) => (
               <li class="flex items-start gap-3">
-                <span class="text-[#ffb546] font-bold flex-shrink-0">{i + 1}.</span>
-                <p class="text-white">{v}</p>
+                <span class="text-[#d7393e] font-bold flex-shrink-0">{i + 1}.</span>
+                <p class="text-[#374151]">{v}</p>
               </li>
             ))}
           </ol>
@@ -293,13 +286,6 @@ const ablauf = [
       </div>
     </div>
   </section>
-
-  <!-- Wave: blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- ABLAUF -->
   <section class="bg-white py-14">
@@ -321,16 +307,10 @@ const ablauf = [
     </div>
   </section>
 
-  <!-- Video Sektion -->
-  <!-- Wave oben (weiß → blau) -->
-  <div style="overflow:hidden;line-height:0;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-  <section class="py-14 bg-[#3b55d5]">
+  <!-- Video Sektion (pastel bg) -->
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-white font-extrabold text-xl uppercase tracking-widest mb-6">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
@@ -343,23 +323,17 @@ const ablauf = [
           loading="lazy"
         ></iframe>
       </div>
-      <h3 class="text-white font-bold text-xl mb-6">
+      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
       <a
         href="/galerie/"
-        class="inline-block bg-[#f5a623] hover:bg-[#e69420] text-[#1f2025] font-bold px-10 py-4 rounded-full text-base transition-colors"
+        class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-10 py-4 rounded-full text-base transition-colors"
       >
         Zur Foto- und Videogalerie
       </a>
     </div>
   </section>
-  <!-- Wave unten (blau → weiß) -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- CTA Booking -->
   <section class="bg-white py-12 border-t border-gray-100">

@@ -131,7 +131,7 @@ const referenzen = [
   canonical="https://liar-entertainer.com/galerie/"
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Galerie', url: '/galerie/' }]}
 >
-  <section class="py-12 bg-[#f4f4f4]">
+  <section class="py-12 bg-white">
     <div class="max-w-[960px] mx-auto px-4">
       <h1 class="text-[#1f2025] font-extrabold text-3xl text-center mb-3">Fotos – Videos – Presse Referenzen</h1>
       <p class="text-[#595959] text-center mb-10">
@@ -218,15 +218,8 @@ const referenzen = [
     </div>
   </section>
 
-  <!-- Wave Trenner -->
-  <div class="relative">
-    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height: 40px;">
-      <path d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H0Z" fill="#c9d7f0"/>
-    </svg>
-  </div>
-
   <!-- Referenzen -->
-  <section class="bg-[#c9d7f0] py-14">
+  <section class="bg-[#eff4ff] border-y border-[#c5d3f7] py-14">
     <div class="max-w-[960px] mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl text-center mb-3">⭐ Referenzen</h2>
       <p class="text-[#374151] text-center leading-relaxed mb-10">
@@ -234,7 +227,7 @@ const referenzen = [
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {referenzen.map((ref) => (
-          <div class="bg-white/70 rounded-lg px-4 py-3 text-center card-hover">
+          <div class="bg-white rounded-lg border border-[#c5d3f7] shadow-sm px-4 py-3 text-center card-hover">
             <p class="font-semibold text-[#1f2025] text-sm">{ref.name}</p>
             {ref.detail && (
               <p class="text-[#6b7280] text-xs mt-1">({ref.detail})</p>
@@ -246,15 +239,8 @@ const referenzen = [
     </div>
   </section>
 
-  <!-- Wave Trenner zurück -->
-  <div class="relative">
-    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block" preserveAspectRatio="none" style="height: 40px;">
-      <path d="M0 0L60 10C120 20 240 40 360 45C480 50 600 40 720 35C840 30 960 30 1080 35C1200 40 1320 50 1380 55L1440 60V0H0Z" fill="#c9d7f0"/>
-    </svg>
-  </div>
-
   <!-- CTA -->
-  <section class="bg-[#f4f4f4] py-12">
+  <section class="bg-white py-12">
     <div class="max-w-[960px] mx-auto px-4 text-center">
       <p class="text-[#374151] mb-4">Möchten Sie Clown Zauberer LIAR für Ihr Event buchen?</p>
       <a

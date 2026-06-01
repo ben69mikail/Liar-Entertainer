@@ -159,45 +159,31 @@ const ablauf = [
     </div>
   </section>
 
-  <!-- Wave white → blue -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-
-  <!-- Wann Close-up? (blue) -->
-  <section class="bg-[#3b55d5] py-14 text-white">
+  <!-- Wann Close-up? (pastel blue) -->
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10">Wann Close-up wählen?</h2>
+      <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10 text-[#1f2025]">Wann Close-up wählen?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white/10 rounded-xl p-8 card-hover">
-          <h3 class="font-bold text-xl mb-4 text-[#ffb546]">✅ Perfekt für Close-up Zauberei:</h3>
-          <ul class="space-y-2 text-white text-sm">
+        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover">
+          <h3 class="font-bold text-xl mb-4 text-[#d7393e]">✅ Perfekt für Close-up Zauberei:</h3>
+          <ul class="space-y-2 text-[#374151] text-sm">
             {['Hochzeiten (DER Klassiker!)', 'Empfänge (Sekt, Cocktail)', 'Dinner-Events (Gala, Business)', 'Gäste sitzen/stehen in Gruppen', 'Kein fixes Showprogramm gewünscht', 'Intimate, persönliche Atmosphäre', 'Flexibilität wichtig', 'Events über mehrere Stunden'].map(i => (
-              <li class="flex items-center gap-2"><span class="text-[#ffb546]">✓</span>{i}</li>
+              <li class="flex items-center gap-2"><span class="text-[#d7393e]">✓</span>{i}</li>
             ))}
           </ul>
         </div>
-        <div class="bg-white/10 rounded-xl p-8 card-hover">
-          <h3 class="font-bold text-xl mb-4 text-[#ffb546]">✅ Perfekt für Bühnenshow:</h3>
-          <ul class="space-y-2 text-white text-sm">
+        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover">
+          <h3 class="font-bold text-xl mb-4 text-[#d7393e]">✅ Perfekt für Bühnenshow:</h3>
+          <ul class="space-y-2 text-[#374151] text-sm">
             {['Betriebsfeiern mit Programm', 'Galas mit Show-Teil', 'Große Geburtstage (50+)', 'Alle sollen gleichzeitig unterhalten werden', 'Fester Programmpunkt gewünscht', 'Show-Charakter', 'Bühne vorhanden', '10–150 Gäste'].map(i => (
-              <li class="flex items-center gap-2"><span class="text-[#ffb546]">✓</span>{i}</li>
+              <li class="flex items-center gap-2"><span class="text-[#d7393e]">✓</span>{i}</li>
             ))}
           </ul>
-          <p class="text-white text-sm mt-4 italic">💡 Tipp: Bei vielen Events ist auch eine Kombination möglich! Bühnenshow (30 Min.) + Close-up während Dinner (2h)</p>
+          <p class="text-[#374151] text-sm mt-4 italic">💡 Tipp: Bei vielen Events ist auch eine Kombination möglich! Bühnenshow (30 Min.) + Close-up während Dinner (2h)</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Wave blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- Buchungsprozess -->
   <section class="bg-white py-14">
