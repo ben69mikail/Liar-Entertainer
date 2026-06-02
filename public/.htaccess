@@ -16,9 +16,12 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
 # ── Trailing Slash (Astro output) ───────────────────────────
 # Wenn URL ohne trailing slash, auf /index.html weiterleiten
+# Asset-Dateiendungen ausgeschlossen, damit alte WP-Datei-URLs (z.B. wp-content/...jpg)
+# keinen 301-Slash-Hop vor dem 410 Gone bekommen (Autopilot 2026-06-02).
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|mjs|json|xml|txt|pdf|woff|woff2|ttf|eot|map|webmanifest)$ [NC]
 RewriteRule ^(.+)$ /$1/ [R=301,L]
 
 # ── WordPress → Astro Weiterleitungen ──────────────────────
@@ -388,6 +391,24 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/(blog|kindergeburtstag|kinderzauberer|zauberer|clown|preise|galerie|kontakt|ueber-mich|impressum|datenschutz|agb|sitemap) [NC]
 RewriteRule ^([a-z0-9-]{20,})/?$ /blog/ [R=301,L]
+
+# ============================================================
+# CITY-SEITEN → 410 GONE (LIAR Autopilot 2026-06-02)
+# Alte WordPress-Stadt-URLs /zauberer/<stadt>/ und /clown/<stadt>/
+# (z.B. /zauberer/bochum/, /clown/essen/) existieren nicht mehr als
+# Astro-Seiten und lieferten bisher 404. 410 Gone beschleunigt die
+# Google-Deindexierung gegenüber 404.
+# Steht bewusst NACH allen MUSTER-301-Regeln: jede legitime Weiterleitung
+# (z.B. /clown/kindergeburtstag/, /clown/zauberer/...) feuert zuerst.
+# Die Whitelist listet nur ECHTE Astro-Seiten-Roots als Sicherheitsnetz,
+# damit eine reale Seite niemals fälschlich 410 wird.
+# ============================================================
+# Whitelist: echte Astro-Unterseiten unangetastet lassen (kein Statuswechsel)
+RewriteRule ^zauberer/(buehnen-zauberer|tisch-zauberer|zaubershow|kinderzauberer)(/.*)?$ - [L]
+RewriteRule ^clown/(ballonmodellage|clownshow|glitzer-tattoo|karneval|walk-act)(/.*)?$ - [L]
+# Einsegmentige /zauberer/<stadt>/ und /clown/<stadt>/ → 410 Gone
+RewriteRule ^zauberer/[a-z][a-z0-9-]+/?$ - [R=410,L]
+RewriteRule ^clown/[a-z][a-z0-9-]+/?$ - [R=410,L]
 
 # ── Reviews API Cache-Schutz ──────────────────────────────
 <Files "reviews-cache.json">
