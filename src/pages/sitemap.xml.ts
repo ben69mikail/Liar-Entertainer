@@ -11,6 +11,13 @@ type WPItem = {
 const allItems = [...(pagesData as WPItem[]), ...(postsData as WPItem[])];
 const SITE = 'https://liar-entertainer.com';
 
+// Pfade, die per 301 weiterleiten und NICHT in die Sitemap gehoeren.
+// (GSC-Fehler "Seite mit Weiterleitung" – Ziel-URLs sind bereits gelistet.)
+const REDIRECTING_PATHS = new Set<string>([
+  '/clown/clown-zauberer/',            // -> /clown/clownshow/
+  '/zauberer/zaubershow/karneval/',    // -> /clown/karneval/
+]);
+
 // Hero images for image sitemap (main pages)
 const pageImages: Record<string, { loc: string; title: string }[]> = {
   '/': [
@@ -75,6 +82,7 @@ export const GET: APIRoute = () => {
       const url = new URL(item.link);
       const path = url.pathname.endsWith('/') ? url.pathname : url.pathname + '/';
       if (path === '/') continue;
+      if (REDIRECTING_PATHS.has(path)) continue; // 301-Weiterleitung: nicht in Sitemap
       const loc = `${SITE}${path}`;
       if (seenLocs.has(loc)) continue;
       seenLocs.add(loc);
