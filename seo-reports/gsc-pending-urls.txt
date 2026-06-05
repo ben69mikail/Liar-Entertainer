@@ -1,0 +1,26 @@
+﻿# GSC Pending URLs — Manuelle Indexierung beantragen
+# Erstellt: 2026-06-05 (Autopilot)
+
+## TIER 1 — Kernseiten
+https://liar-entertainer.com/
+https://liar-entertainer.com/zauberer/
+https://liar-entertainer.com/clown/clownshow/
+https://liar-entertainer.com/kindergeburtstag/
+https://liar-entertainer.com/kinderzauberer/
+https://liar-entertainer.com/ueber-mich/
+https://liar-entertainer.com/preise/
+https://liar-entertainer.com/kontakt/
+https://liar-entertainer.com/galerie/
+https://liar-entertainer.com/blog/
+
+## TIER 2 — Leistungsseiten
+https://liar-entertainer.com/zauberer/zaubershow/
+https://liar-entertainer.com/zauberer/buehnen-zauberer/
+https://liar-entertainer.com/zauberer/tisch-zauberer/
+https://liar-entertainer.com/zauberer/zaubershow/kindergarten-kita/
+https://liar-entertainer.com/zauberer/zaubershow/schule/
+https://liar-entertainer.com/zauberer/zaubershow/strassen-sommer-fest/
+https://liar-entertainer.com/clown/ballonmodellage/
+https://liar-entertainer.com/clown/glitzer-tattoo/
+https://liar-entertainer.com/clown/karneval/
+https://liar-entertainer.com/clown/walk-act/
