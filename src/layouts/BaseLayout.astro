@@ -206,16 +206,14 @@ const localBusinessSchema = {
       />
     </noscript>
 
-    {/* Google Analytics — DEAKTIVIERT bis echte Mess-ID eingetragen wird.
-        Wenn du eine GA4 Mess-ID hast (G-XXXXXXX), entkommentiere folgenden Block:
-        <script async src="https://www.googletagmanager.com/gtag/js?id=DEINE-ID"></script>
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'DEINE-ID');
-        </script>
-    */}
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWNLWCWDXS"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MWNLWCWDXS');
+    </script>
 
     <!-- Structured Data: LocalBusiness (global) -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
