@@ -102,7 +102,8 @@ RedirectMatch 301 ^/sample-page/?$ /
 RedirectMatch 301 ^/hello-world/?$ /blog/
 
 # -- Elternseiten-Weiterleitungen (haben keine eigene index.html) --
-RedirectMatch 301 ^/clown/?$ /clown/clown-zauberer/
+# /clown/ direkt → /clown/clownshow/ (1 Hop, behebt GSC Umleitungsfehler - Autopilot 2026-06-06)
+RedirectMatch 301 ^/clown/?$ /clown/clownshow/
 
 # -- Sicherheit: wp-content/uploads weiterhin erreichbar (Bilder) --
 # Bilder liegen noch auf dem alten Server, daher kein Redirect nötig
