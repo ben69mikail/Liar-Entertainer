@@ -1922,16 +1922,16 @@ const schemas = [
 
     {/* Service-Links für Blog-Posts */}
     {isBlogPost && (
-      <section class="py-10 bg-[#f9fafb]">
+      <section class="py-10 bg-[#eff4ff] border-y border-[#c5d3f7]">
         <div class="max-w-3xl mx-auto px-4 text-center">
-          <p class="text-[#595959] font-bold text-sm uppercase tracking-widest mb-4">Unsere Leistungen</p>
+          <p class="text-[#3b55d5] font-bold text-sm uppercase tracking-widest mb-4">Unsere Leistungen</p>
           <div class="flex flex-wrap justify-center gap-3">
-            <a href="/clown/clownshow/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🤡 Clownshow</a>
-            <a href="/zauberer/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎩 Zauberer</a>
-            <a href="/kinderzauberer/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#d7393e] hover:underline font-medium text-sm">✨ Kinderzauberer</a>
-            <a href="/kindergeburtstag/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">🎂 Kindergeburtstag</a>
-            <a href="/zauberer/zaubershow/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#d7393e] hover:underline font-medium text-sm">🪄 Zaubershow</a>
-            <a href="/galerie/" class="bg-white px-5 py-3 rounded-lg shadow-sm text-[#3b55d5] hover:underline font-medium text-sm">📸 Galerie</a>
+            <a href="/clown/clownshow/" class="bg-white px-5 py-3 rounded-lg border border-[#f0c4c4] text-[#d7393e] hover:underline font-medium text-sm">🤡 Clownshow</a>
+            <a href="/zauberer/" class="bg-white px-5 py-3 rounded-lg border border-[#c5d3f7] text-[#3b55d5] hover:underline font-medium text-sm">🎩 Zauberer</a>
+            <a href="/kinderzauberer/" class="bg-white px-5 py-3 rounded-lg border border-[#f0c4c4] text-[#d7393e] hover:underline font-medium text-sm">✨ Kinderzauberer</a>
+            <a href="/kindergeburtstag/" class="bg-white px-5 py-3 rounded-lg border border-[#c5d3f7] text-[#3b55d5] hover:underline font-medium text-sm">🎂 Kindergeburtstag</a>
+            <a href="/zauberer/zaubershow/" class="bg-white px-5 py-3 rounded-lg border border-[#f0c4c4] text-[#d7393e] hover:underline font-medium text-sm">🪄 Zaubershow</a>
+            <a href="/galerie/" class="bg-white px-5 py-3 rounded-lg border border-[#c5d3f7] text-[#3b55d5] hover:underline font-medium text-sm">📸 Galerie</a>
           </div>
         </div>
       </section>
@@ -1942,7 +1942,7 @@ const schemas = [
 
     {/* CTA-Sektion im Referenz-Stil */}
     {isCityPage ? (
-      <section class="bg-gray-50 py-14">
+      <section class="bg-[#fdf2f2] border-y border-[#f0c4c4] py-14">
         <div class="max-w-3xl mx-auto px-4 text-center">
           <p class="font-bold text-[#d7393e] text-sm uppercase tracking-widest mb-2">EINFACH KONTAKT AUFNEHMEN</p>
           <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl mb-6">{cityName ? `Clown Zauberer buchen in ${displayCity}` : 'Jetzt buchen'}</h2>
@@ -1957,7 +1957,7 @@ const schemas = [
     ) : (
       <section class="pb-12 bg-white">
         <div class="max-w-[750px] mx-auto px-4">
-          <div class="mt-10 bg-[#f4f4f4] rounded-lg p-8 text-center">
+          <div class="mt-10 bg-[#fdf2f2] border border-[#f0c4c4] rounded-2xl p-8 text-center">
             <h2 class="text-[#1f2025] font-bold text-xl mb-3">Jetzt buchen</h2>
             <p class="text-[#595959] mb-5">Unvergessliche Unterhaltung für Ihr Event – einfach und unverbindlich anfragen!</p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
@@ -1971,7 +1971,7 @@ const schemas = [
 
     {/* Kontakt-Info-Zeile */}
     {isCityPage && (
-      <section class="bg-white py-10 border-t border-gray-100">
+      <section class="bg-white py-10 border-t border-[#f0c4c4]">
         <div class="max-w-3xl mx-auto px-4 text-center">
           <p class="font-bold text-[#1f2025] text-lg mb-2">Clown Zauberer LIAR</p>
           <p class="text-[#374151] mb-2">Anschrift : Beethovenstr. 15, 45966 Gladbeck</p>
@@ -2001,7 +2001,7 @@ const schemas = [
       </div>
     </section>
     <GoogleReviews />
-    <section class="bg-white py-10 border-t border-gray-100">
+    <section class="bg-[#fdf2f2] border-y border-[#f0c4c4] py-10">
       <div class="max-w-3xl mx-auto px-4 text-center">
         <h2 class="text-[#1f2025] font-bold text-xl mb-3">{isCityPage && cityName ? `Clown Zauberer buchen in ${cityName}` : 'Jetzt buchen'}</h2>
         <p class="text-[#595959] mb-5">Unvergessliche Unterhaltung für Ihr Event – einfach und unverbindlich anfragen!</p>
