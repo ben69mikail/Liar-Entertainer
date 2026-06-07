@@ -1240,33 +1240,46 @@ const schemas = [
             }
           }
           if (statsEl) {
-            // Ersetze die gesamte Stats-Section durch einen sauberen Pastel-Banner (kein Wave)
+            // Ersetze die gesamte Stats-Section durch einen sauberen Banner
+            // (wie auf den Menü-Seiten: roter Hintergrund + Wave oben/unten + 3 Stat-Karten)
             const alignfullParent = statsEl.closest('.alignfull') || statsEl.closest('section') || statsEl;
 
-            // Stats-Banner (Pastel — kein Wave)
+            // Wave SVG oben (weiß → rot)
+            const waveTop = document.createElement('div');
+            waveTop.style.cssText = 'overflow:hidden;line-height:0;background:white;display:block;';
+            waveTop.innerHTML = '<svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/></svg>';
+
+            // Stats-Banner
             const banner = document.createElement('div');
-            banner.style.cssText = 'background:#fdf2f2;padding:2.5rem 1rem;text-align:center;';
+            banner.style.cssText = 'background:#d7393e;padding:2rem 1rem;text-align:center;';
             banner.innerHTML = `
               <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:900px;margin:0 auto;">
-                <div style="background:white;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+                <div style="background:rgba(255,255,255,0.15);border-radius:1rem;padding:1.5rem;">
                   <div style="font-size:2rem;">🪄</div>
-                  <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">400</div>
-                  <div style="font-size:0.9rem;color:#374151;">Shows im Jahr</div>
+                  <div style="font-size:2.5rem;font-weight:800;color:white;">400</div>
+                  <div style="font-size:0.9rem;color:white;">Shows im Jahr</div>
                 </div>
-                <div style="background:white;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+                <div style="background:rgba(255,255,255,0.15);border-radius:1rem;padding:1.5rem;">
                   <div style="font-size:2rem;">😊</div>
-                  <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">110.000</div>
-                  <div style="font-size:0.9rem;color:#374151;">Lachende Kinder</div>
+                  <div style="font-size:2.5rem;font-weight:800;color:white;">110.000</div>
+                  <div style="font-size:0.9rem;color:white;">Lachende Kinder</div>
                 </div>
-                <div style="background:white;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+                <div style="background:rgba(255,255,255,0.15);border-radius:1rem;padding:1.5rem;">
                   <div style="font-size:2rem;">🪄</div>
-                  <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">15</div>
-                  <div style="font-size:0.9rem;color:#374151;">Jahre Erfahrung</div>
+                  <div style="font-size:2.5rem;font-weight:800;color:white;">15</div>
+                  <div style="font-size:0.9rem;color:white;">Jahre Erfahrung</div>
                 </div>
               </div>`;
 
+            // Wave SVG unten (rot → weiß)
+            const waveBottom = document.createElement('div');
+            waveBottom.style.cssText = 'overflow:hidden;line-height:0;background:#d7393e;display:block;';
+            waveBottom.innerHTML = '<svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/></svg>';
+
             // Einfügen und altes Element ersetzen
+            alignfullParent.parentElement.insertBefore(waveTop, alignfullParent);
             alignfullParent.parentElement.insertBefore(banner, alignfullParent);
+            alignfullParent.parentElement.insertBefore(waveBottom, alignfullParent);
             alignfullParent.remove();
           }
 
@@ -1864,24 +1877,29 @@ const schemas = [
             });
           }
 
-          // === 4. Farbige Sektionen auf Pastel umstellen (kein Wave) ===
+          // === 4. SVG-Waves für die verbleibenden farbigen Sektionen ===
+          const waveColors = { red: '#d7393e', blue: '#3b55d5', dark: '#1f2025' };
           coloredSections.slice(0, 2).forEach(({ el, color }) => {
-            // Entferne eventuell vorhandene Wave-Divs
+            if (el.closest('[class*="stats-banner"]')) return;
+            // Entferne existierende Waves (WordPress-Klassen UND dynamisch erstellte)
             el.querySelectorAll('.top, .bottom').forEach(w => w.remove());
+            // Entferne auch dynamisch erstellte Wave-Divs (haben SVG mit viewBox 1440)
             for (const child of [...el.children]) {
               if (child.querySelector && child.querySelector('svg[viewBox*="1440"]') && child.children.length === 1) {
                 child.remove();
               }
             }
-            // Pastel-Farben statt voller Farbe
-            const pastel = color === 'red' ? '#fdf2f2' : color === 'blue' ? '#eff4ff' : '#f4f4f4';
-            el.style.setProperty('background', pastel, 'important');
-            // Text auf dunkel umstellen
-            el.querySelectorAll('h2, h3, h4, p, span, strong, li').forEach(t => {
-              if (getComputedStyle(t).color === 'rgb(255, 255, 255)') {
-                t.style.setProperty('color', '#1f2025', 'important');
-              }
-            });
+            const fill = waveColors[color] || '#3b55d5';
+            // Wave oben
+            const wTop = document.createElement('div');
+            wTop.style.cssText = 'overflow:hidden;line-height:0;margin-bottom:-1px;';
+            wTop.innerHTML = '<svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="' + fill + '"/></svg>';
+            el.insertBefore(wTop, el.firstChild);
+            // Wave unten
+            const wBot = document.createElement('div');
+            wBot.style.cssText = 'overflow:hidden;line-height:0;margin-top:-1px;';
+            wBot.innerHTML = '<svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/></svg>';
+            el.appendChild(wBot);
           });
 
           // === 5. Preis-Karten: Immer 3 Spalten ===

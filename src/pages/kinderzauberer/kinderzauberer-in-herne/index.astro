@@ -130,30 +130,42 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Google Reviews -->
   <GoogleReviews />
 
-  <section class="bg-[#eff4ff] py-14">
+  <!-- Wave: white → blue -->
+  <div style="overflow:hidden;line-height:0;background:white;display:block;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
+    </svg>
+  </div>
+  <section class="bg-[#3b55d5] py-14 text-white">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">HERNE</p>
       <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum LIAR als Kinderzauberer in Herne buchen?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white/10 rounded-xl p-6">
           <h3 class="text-white font-bold text-lg mb-2">⭐ Langjährige Erfahrung</h3>
-          <p class="text-[#374151] leading-relaxed">Langjährige Erfahrung mit Kinderveranstaltungen aller Art – von Kindergeburtstagen bis zu Großevents.</p>
+          <p class="text-white leading-relaxed">Langjährige Erfahrung mit Kinderveranstaltungen aller Art – von Kindergeburtstagen bis zu Großevents.</p>
         </div>
         <div class="bg-white/10 rounded-xl p-6">
           <h3 class="text-white font-bold text-lg mb-2">💬 TOP-Bewertungen</h3>
-          <p class="text-[#374151] leading-relaxed">TOP-Bewertungen von zufriedenen Eltern aus Herne und ganz NRW bestätigen die Qualität der Show.</p>
+          <p class="text-white leading-relaxed">TOP-Bewertungen von zufriedenen Eltern aus Herne und ganz NRW bestätigen die Qualität der Show.</p>
         </div>
         <div class="bg-white/10 rounded-xl p-6">
           <h3 class="text-white font-bold text-lg mb-2">🎯 Flexible Showkonzepte</h3>
-          <p class="text-[#374151] leading-relaxed">Flexible Showkonzepte, individuell auf Ihr Event zugeschnitten – ob klein oder groß.</p>
+          <p class="text-white leading-relaxed">Flexible Showkonzepte, individuell auf Ihr Event zugeschnitten – ob klein oder groß.</p>
         </div>
         <div class="bg-white/10 rounded-xl p-6">
           <h3 class="text-white font-bold text-lg mb-2">💰 Transparente Festpreise</h3>
-          <p class="text-[#374151] leading-relaxed">Transparente Festpreise ohne versteckte Kosten. Persönliche Beratung und unkomplizierte Buchung.</p>
+          <p class="text-white leading-relaxed">Transparente Festpreise ohne versteckte Kosten. Persönliche Beratung und unkomplizierte Buchung.</p>
         </div>
       </div>
     </div>
   </section>
+  <!-- Wave: blue → white -->
+  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
+    </svg>
+  </div>
 
   <!-- Zaubershow in Herne – Magie zum Mitmachen! 🎩 -->
   <section class="bg-white py-14">
@@ -173,22 +185,28 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  <!-- Wave: white → red (Stats) -->
+  <div style="overflow:hidden;line-height:0;background:white;display:block;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/>
+    </svg>
+  </div>
 
   <!-- Stats Banner -->
   <section class="bg-[#d7393e] py-10 text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">400</div>
           <div class="text-sm mt-1">Shows im Jahr</div>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">😊</div>
           <div class="text-4xl font-extrabold">110.000</div>
           <div class="text-sm mt-1">Lachende Kinder</div>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold">15</div>
           <div class="text-sm mt-1">Jahre Erfahrung</div>
@@ -197,6 +215,12 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  <!-- Wave: red → white -->
+  <div style="overflow:hidden;line-height:0;background:#d7393e;display:block;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
+    </svg>
+  </div>
 
   <!-- Kindergeburtstag in Herne mit Lachgarantie! 🎂🎈 -->
   <section class="bg-white py-14">
@@ -286,9 +310,15 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Video Sektion -->
-  <section class="py-14 bg-[#eff4ff]">
+  <!-- Wave oben (weiß → blau) -->
+  <div style="overflow:hidden;line-height:0;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
+    </svg>
+  </div>
+  <section class="py-14 bg-[#3b55d5]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
+      <h2 class="text-white font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
@@ -301,17 +331,23 @@ const structuredData = [serviceSchema, faqSchema];
           loading="lazy"
         ></iframe>
       </div>
-      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
+      <h3 class="text-white font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
       <a
         href="/galerie/"
-        class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-10 py-4 rounded transition-colors"
+        class="inline-block bg-[#f5a623] hover:bg-[#e69420] text-[#1f2025] font-bold px-10 py-4 rounded-full text-base transition-colors"
       >
         Zur Foto- und Videogalerie
       </a>
     </div>
   </section>
+  <!-- Wave unten (blau → weiß) -->
+  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
+    </svg>
+  </div>
 
 
 
