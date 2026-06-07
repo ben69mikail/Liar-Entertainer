@@ -440,4 +440,13 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       const isOpen = !answer?.classList.contains('hidden');
       if (isOpen) {
         answer?.classList.add('hidden');
-        chevron?.classList.remov
+        chevron?.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer?.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
