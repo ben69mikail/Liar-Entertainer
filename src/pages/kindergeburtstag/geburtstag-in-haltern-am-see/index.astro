@@ -112,6 +112,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Kindergeburtstag in Haltern am See – Wo Natur auf Magie trifft</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Die perfekte Bedingungen für den Geburtstag in Haltern am See : die Stadt ist bekannt für ihre wunderschöne Natur, die Seenlandschaft und familienfreundliche Atmosphäre. Der perfekte Ort für einen unvergesslichen Kindergeburtstag! Als Clown Zauberer aus dem nahen Gladbeck bringe ich Entertainment zu Ihnen – ob in Lippramsdorf, Sythen, Flaesheim oder direkt am See.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">✓ Schnelle Anfahrt aus Gladbeck (ca. 20 Minuten)</p>
@@ -136,7 +137,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">HALTERN AM SEE</p>
-      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Haltern am See perfekt für Kindergeburtstage ist?</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
+          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Haltern am See perfekt für Kindergeburtstage ist?</h2>
       <p class="text-[#374151] leading-relaxed mb-4">Haltern am See bietet ideale Bedingungen für unvergessliche Kindergeburtstage:</p>
       <p class="text-[#374151] leading-relaxed mb-4">🌲 <strong>Naturnahe Feiern</strong>: Viele Familien kombinieren meine Show mit Outdoor-Aktivitäten – vormittags Spielplatz oder Walderkundung, nachmittags Zaubershow!</p>
       <p class="text-[#374151] leading-relaxed mb-4">🏞️ <strong>Garten-Partys</strong>: Die großzügigen Grundstücke in Lippramsdorf, Sythen und Flaesheim sind perfekt für Geburtstage mit Garten-Show.</p>
@@ -147,7 +149,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
+          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
@@ -197,7 +200,8 @@ const structuredData = [serviceSchema, faqSchema];
 <!-- Zaubershow für naturbegeisterte Halterner Kinder -->
   <section class="bg-white py-14">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Zaubershow für naturbegeisterte Halterner Kinder</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
+          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Zaubershow für naturbegeisterte Halterner Kinder</h2>
       <p class="text-[#374151] mb-4 leading-relaxed">Kinder in Haltern am See wachsen naturverbunden auf. Das spiegelt sich auch in meiner Show wider:</p>
       <h3 class="font-bold text-lg text-[#1f2025] mb-3">40 Minuten Zaubershow mit:</h3>
       <ul class="space-y-2 text-[#374151] mb-6">
@@ -364,7 +368,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -424,17 +429,4 @@ const structuredData = [serviceSchema, faqSchema];
   document.querySelectorAll('.faq-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
-      const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !answer?.classList.contains('hidden');
-      if (isOpen) {
-        answer?.classList.add('hidden');
-        chevron?.classList.remove('rotate-180');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer?.classList.remove('hidden');
-        chevron?.classList.add('rotate-180');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
+      const chevron = btn.querySelector('

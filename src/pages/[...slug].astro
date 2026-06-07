@@ -441,7 +441,8 @@ if (_processedScraped && pageSlug === 'geburtstag-in-gelsenkirchen') {
     const sectionEndIdx = sectionEndMatch ? priceH2Idx + sectionEndMatch.index! : priceH2Idx + 5000;
 
     const newPriceSection = `
-      <h2 class="wp-block-heading has-text-align-center" style="color:#fff">PREISE FÜR GELSENKIRCHEN</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="wp-block-heading has-text-align-center" style="color:#fff">PREISE FÜR GELSENKIRCHEN</h2>
       <div class="price-grid">
         <div class="price-card">
           <h3>🎭 Zaubershow: 150 €</h3>
@@ -1419,7 +1420,8 @@ const schemas = [
             section.style.cssText = 'background: #f9fafb; padding: 1rem 0;';
             section.innerHTML = `
               <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem;">
-                <h2 style="color: #d7393e; text-align: center; font-weight: 800; margin-bottom: 1.5rem;">Einsatzgebiet</h2>
+                <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 style="color: #d7393e; text-align: center; font-weight: 800; margin-bottom: 1.5rem;">Einsatzgebiet</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
                   <div>${einsatzText}</div>
                   <div style="text-align: center;"><img src="/images/karte-einsatzgebiet.jpg" alt="Karte Einsatzgebiet ${typ} ${city}" style="max-width: 100%; border-radius: 0.5rem; max-height: 350px;" loading="lazy" /></div>
@@ -1917,6 +1919,7 @@ const schemas = [
       <section class="bg-[#fdf2f2] border-y border-[#f0c4c4] py-14">
         <div class="max-w-3xl mx-auto px-4 text-center">
           <p class="font-bold text-[#d7393e] text-sm uppercase tracking-widest mb-2">EINFACH KONTAKT AUFNEHMEN</p>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
           <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl mb-6">{cityName ? `Clown Zauberer buchen in ${displayCity}` : 'Jetzt buchen'}</h2>
           <p class="text-[#374151] mb-6 text-sm leading-relaxed max-w-xl mx-auto">
             Sie können mir Ihre Anfrage unverbindlich senden. Ihre Angaben werden selbstverständlich absolut vertraulich behandelt und nicht weitergegeben. Je mehr Angaben ich von Ihnen bekomme, desto besser kann ich Sie beraten. Sie können auch einfach unter 0172-1517578 anrufen oder über WhatsApp schreiben.
@@ -1930,7 +1933,8 @@ const schemas = [
       <section class="pb-12 bg-white">
         <div class="max-w-[750px] mx-auto px-4">
           <div class="mt-10 bg-[#fdf2f2] border border-[#f0c4c4] rounded-2xl p-8 text-center">
-            <h2 class="text-[#1f2025] font-bold text-xl mb-3">Jetzt buchen</h2>
+            <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
+          <h2 class="text-[#1f2025] font-bold text-xl mb-3">Jetzt buchen</h2>
             <p class="text-[#595959] mb-5">Unvergessliche Unterhaltung für Ihr Event – einfach und unverbindlich anfragen!</p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="/kontakt/" class="inline-flex items-center justify-center gap-2 bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors">Kontakt aufnehmen</a>
@@ -1975,7 +1979,8 @@ const schemas = [
     <GoogleReviews />
     <section class="bg-[#fdf2f2] border-y border-[#f0c4c4] py-10">
       <div class="max-w-3xl mx-auto px-4 text-center">
-        <h2 class="text-[#1f2025] font-bold text-xl mb-3">{isCityPage && cityName ? `Clown Zauberer buchen in ${cityName}` : 'Jetzt buchen'}</h2>
+        <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
+          <h2 class="text-[#1f2025] font-bold text-xl mb-3">{isCityPage && cityName ? `Clown Zauberer buchen in ${cityName}` : 'Jetzt buchen'}</h2>
         <p class="text-[#595959] mb-5">Unvergessliche Unterhaltung für Ihr Event – einfach und unverbindlich anfragen!</p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/kontakt/" class="inline-flex items-center justify-center gap-2 bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors">Kontakt aufnehmen</a>
@@ -1987,3 +1992,4 @@ const schemas = [
 )}
 
 </BaseLayout>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

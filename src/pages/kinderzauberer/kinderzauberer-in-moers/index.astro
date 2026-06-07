@@ -113,6 +113,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Komplett-Paket für Kinderunterhaltung in Moers</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Was mich als Kinderzauberer in Moers auszeichnet, ist meine Vielseitigkeit. Während viele Entertainer sich auf eine Sache spezialisieren, biete ich Ihnen drei bewährte Attraktionen aus einer Hand – perfekt abgestimmt auf Ihre Veranstaltung in Moers, ob im Schlosspark, beim Stadtfest oder im privaten Rahmen</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Meine Zaubershow ist weit mehr als eine Aneinanderreihung von Tricks. Es ist ein interaktives Erlebnis, bei dem die Kinder zu Hauptdarstellern werden. Die perfekte Kombination aus verblüffender Zauberkunst und herzerfrischender Clownerie macht jede Show zu einem Highlight.</p>
@@ -147,7 +148,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">MOERS</p>
-      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Veranstalter in Moers mir vertrauen</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
+          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Veranstalter in Moers mir vertrauen</h2>
       <p class="text-[#374151] leading-relaxed mb-4">Mit über 15 Jahren Erfahrung als Kinderzauberer habe ich mir einen exzellenten Ruf im Rheinland erarbeitet. Viele Organisatoren, Schulen und Privatpersonen in Moers buchen mich wiederholt – das größte Kompliment für meine Arbeit.</p>
       <p class="text-[#374151] leading-relaxed mb-4">✓ Professionalität: Pünktlich, zuverlässig, top ausgestattet</p>
       <p class="text-[#374151] leading-relaxed mb-4">✓ Flexibilität: Anpassung an Ihre Bedürfnisse und örtlichen Gegebenheiten</p>
@@ -162,7 +164,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Geburtstag mit LACH-Garantie! -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Geburtstag mit LACH-Garantie!</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Geburtstag mit LACH-Garantie!</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Die perfekte Mischung</h3>
@@ -192,7 +195,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Vielfältige Einsatzmöglichkeiten in Moers -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Vielfältige Einsatzmöglichkeiten in Moers</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Vielfältige Einsatzmöglichkeiten in Moers</h2>
       <p class="text-[#374151] mb-6 leading-relaxed text-center">Als professioneller Kinderzauberer bin ich in ganz Moers und Umgebung für unterschiedlichste Veranstaltungen im Einsatz. Meine Flexibilität und Erfahrung machen mich zum idealen Partner für jeden Anlass.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
         <div>
@@ -356,7 +360,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet: Kinderzauberer in Moers und Umgebung</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet: Kinderzauberer in Moers und Umgebung</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -415,17 +420,4 @@ const structuredData = [serviceSchema, faqSchema];
   document.querySelectorAll('.faq-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
-      const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !answer?.classList.contains('hidden');
-      if (isOpen) {
-        answer?.classList.add('hidden');
-        chevron?.classList.remove('rotate-180');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer?.classList.remove('hidden');
-        chevron?.classList.add('rotate-180');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
+      const chevron = btn.querySelector('.faq-chev

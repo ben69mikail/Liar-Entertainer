@@ -66,7 +66,8 @@ const paedagogisch = [
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative flex items-center justify-center" style="min-height: 600px;">
       <div class="text-center px-6">
-        <h2 class="text-white font-bold leading-tight mb-4" style="font-size: clamp(1.6rem, 4vw, 3rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
+        <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
+          <h2 class="text-white font-bold leading-tight mb-4" style="font-size: clamp(1.6rem, 4vw, 3rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
           🎪 Zaubershow für Kindergarten &amp; Kita –<br />Wo Lernen auf Magie trifft!
         </h2>
         <p class="text-white/90 text-lg font-medium">Pädagogisch wertvoll. Altersgerecht. Unvergesslich.</p>
@@ -105,7 +106,8 @@ const paedagogisch = [
   <!-- Anlässe -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎉 Perfekt für diese Anlässe in Kindergarten & Kita</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎉 Perfekt für diese Anlässe in Kindergarten & Kita</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {anlaesse.map((a, i) => (
           <div class={`bg-white rounded-xl p-6 shadow-sm border-t-4 card-hover ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
@@ -144,7 +146,8 @@ const paedagogisch = [
   <!-- Pädagogischer Mehrwert -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-2">🎯 Pädagogischer Mehrwert</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-2">🎯 Pädagogischer Mehrwert</h2>
       <p class="text-center text-[#374151] mb-10">Was Kinder bei der Zaubershow lernen:</p>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         {paedagogisch.map(p => (
@@ -161,7 +164,8 @@ const paedagogisch = [
   <!-- Gallery: Eindrücke -->
   <section class="bg-white py-12">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-8">📸 Eindrücke</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-8">📸 Eindrücke</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <Image src={kitaEssenImg} alt="Lachende Kinder bei Kinderzauberer Kindergarten Essen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
         <Image src={geburtstagKitaImg} alt="Kinder lachen im Kindergarten bei LIARs Zaubershow" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
@@ -174,7 +178,8 @@ const paedagogisch = [
   <!-- Praktische Details -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">📋 Praktische Details für Kitas</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">TIPPS</p>
+          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">📋 Praktische Details für Kitas</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] mb-4">📐 Platzbedarf & Räume</h3>
@@ -242,7 +247,8 @@ const paedagogisch = [
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-8">Zaubershow für Kindergärten in ganz NRW</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-8">Zaubershow für Kindergärten in ganz NRW</h2>
       <p class="text-[#374151] text-center mb-8">Als erfahrener Kinderzauberer bin ich in ganz Nordrhein-Westfalen für Kindergärten und Kitas buchbar.</p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
@@ -273,7 +279,8 @@ const paedagogisch = [
   <!-- CTA -->
   <section class="bg-[#1f2025] py-14 text-white text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="font-bold text-2xl sm:text-3xl mb-4">🎪 Jetzt anfragen für Ihren Kindergarten!</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">HÄUFIGE FRAGEN</p>
+          <h2 class="font-bold text-2xl sm:text-3xl mb-4">🎪 Jetzt anfragen für Ihren Kindergarten!</h2>
       <p class="text-gray-300 mb-6">Ob Sommerfest, Abschiedsfeier oder Projektwoche – lassen Sie uns gemeinsam ein unvergessliches Erlebnis für Ihre Kinder schaffen! Ich trete auch bei <a href="/zauberer/zaubershow/schule/" class="text-white hover:underline font-semibold">Schulveranstaltungen</a> und <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-white hover:underline font-semibold">Straßen- und Sommerfesten</a> auf.</p>
       <div class="space-y-2 text-gray-300 mb-8">
         <p>📱 Telefon &amp; WhatsApp: <a href="tel:+491721517578" class="text-white hover:underline font-semibold">0172-1517578</a></p>

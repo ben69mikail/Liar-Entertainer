@@ -129,6 +129,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Geburtstag in Dinslaken: Wo Lachen und Staunen zusammentreffen</h2>
           <h3 class="font-bold text-lg text-[#1f2025] mb-4">Ihr Entertainer für Kindergeburtstage in Dinslaken und Umgebung</h3>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -159,6 +160,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
           <h2 class="text-[#1f2025] font-bold text-2xl mb-4">Warum Eltern in Dinslaken meine Show wählen</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">
             Seien wir ehrlich: Es gibt viele Möglichkeiten, einen Kindergeburtstag zu gestalten. Indoorspielplatz, Schwimmbad, selbst organisierte Spiele zu Hause. Aber jede Option hat ihre Tücken: hohe Kosten, logistischer Aufwand, oder das Risiko, dass die Hälfte der Kinder das Interesse verliert.
@@ -188,7 +190,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-4">DINSLAKEN</p>
-      <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-6">Meine Show: Mehr als nur Tricks</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
+          <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-6">Meine Show: Mehr als nur Tricks</h2>
       <p class="text-[#374151] leading-relaxed mb-6">
         Lassen Sie mich Ihnen erzählen, was bei meiner Show wirklich passiert. Es geht nicht nur um Zaubertricks (obwohl die natürlich spektakulär sind). Es geht um Momente:
       </p>
@@ -217,7 +220,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Was kostet eine Show in Dinslaken?</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
+          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Was kostet eine Show in Dinslaken?</h2>
       <p class="text-[#374151] text-center mb-10 max-w-2xl mx-auto">Keine versteckten Preise, keine Überraschungen beim Bezahlen. Hier die klare Übersicht:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
@@ -362,7 +366,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Auch unterwegs in Ihrer Region</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Auch unterwegs in Ihrer Region</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -423,17 +428,4 @@ const structuredData = [serviceSchema, faqSchema];
   document.querySelectorAll('.faq-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
-      const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !answer?.classList.contains('hidden');
-      if (isOpen) {
-        answer?.classList.add('hidden');
-        chevron?.classList.remove('rotate-180');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer?.classList.remove('hidden');
-        chevron?.classList.add('rotate-180');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
+      const chevron = btn.querySelector('.

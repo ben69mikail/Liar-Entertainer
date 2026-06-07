@@ -129,6 +129,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Geburtstag in Datteln: Wenn Kinderträume wahr werden</h2>
           <h3 class="font-bold text-lg text-[#1f2025] mb-4">Magische Momente für Ihren Kindergeburtstag in Datteln</h3>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -182,6 +183,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
           <h2 class="text-[#1f2025] font-bold text-2xl mb-4">Die Herausforderung kennen wir alle</h2>
           <p class="text-[#374151] mb-6 leading-relaxed">
             Einen Kindergeburtstag zu planen bedeutet oft: Stress, Chaos und die Sorge, ob auch wirklich alle Kinder Spaß haben. Wird es zu laut? Zu wild? Langweilen sich manche? Und was mache ich, wenn die Spiele nach 10 Minuten niemanden mehr interessieren?
@@ -213,7 +215,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-4">DATTELN</p>
-      <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-6">Wie funktioniert meine Zaubershow?</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
+          <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-6">Wie funktioniert meine Zaubershow?</h2>
       <p class="text-[#374151] leading-relaxed mb-8">
         Lassen Sie mich transparent sein: Es gibt keine echte Magie (sorry!). Aber es gibt die Kunst, Kinder so zu begeistern, dass sie GLAUBEN, Magie erlebt zu haben. Und genau das ist meine Spezialität.
       </p>
@@ -243,7 +246,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-4">Was kostet der Spaß?</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
+          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-4">Was kostet der Spaß?</h2>
       <p class="text-[#374151] text-center mb-10">Die ehrliche Preisliste – Ich mag keine versteckten Kosten. Deshalb hier alles transparent:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
@@ -296,7 +300,8 @@ const structuredData = [serviceSchema, faqSchema];
 <!-- Buchungsprozess -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-4">Bereit für den besten Kindergeburtstag in Datteln?</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">JETZT ANFRAGEN</p>
+          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-4">Bereit für den besten Kindergeburtstag in Datteln?</h2>
       <p class="text-[#374151] text-center mb-10">Der Buchungsprozess ist simpel:</p>
       <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
         <div class="text-center">
@@ -397,7 +402,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet rund um Datteln</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet rund um Datteln</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -457,17 +463,4 @@ const structuredData = [serviceSchema, faqSchema];
   document.querySelectorAll('.faq-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
-      const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !answer?.classList.contains('hidden');
-      if (isOpen) {
-        answer?.classList.add('hidden');
-        chevron?.classList.remove('rotate-180');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer?.classList.remove('hidden');
-        chevron?.classList.add('rotate-180');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
+      co

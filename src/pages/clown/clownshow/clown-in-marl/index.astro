@@ -114,6 +114,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
+          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Ihr Clown für Marl – Von der Skulpturenmeile bis zum Chemiepark</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Willkommen in Marl 🎨 – der Stadt der Kunst und Familie! Sie suchen einen Clown für Kindergeburtstag 🎂, Stadteilfest oder Firmenfeier? Mit über 4000 Auftritten im Ruhrgebiet bringe ich kreative Kinderunterhaltung ✨ in Ihre Stadt – von der berühmten Skulpturenmeile bis in Ihr Wohnzimmer!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">🏘️ Alle Stadtteile: Hüls • Drewer • Sinsen • Polsum • Brassert • Marl-Mitte • Alt-Marl • Hamm</p>
@@ -138,7 +139,8 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">MARL</p>
-      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">🎨 Kreativität trifft auf Kinderunterhaltung in Marl</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
+          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">🎨 Kreativität trifft auf Kinderunterhaltung in Marl</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
@@ -191,7 +193,8 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Clown in Marl und Umgebung</h2>
+      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
+          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Clown in Marl und Umgebung</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <h3 class="font-bold text-[#1f2025] mb-3">Stadtteile in Marl</h3>
@@ -338,15 +341,4 @@ const structuredData = [serviceSchema, faqSchema];
       const answer = btn.nextElementSibling as HTMLElement;
       const chevron = btn.querySelector('.faq-chevron');
       const isOpen = !answer?.classList.contains('hidden');
-      if (isOpen) {
-        answer?.classList.add('hidden');
-        chevron?.classList.remove('rotate-180');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        answer?.classList.remove('hidden');
-        chevron?.classList.add('rotate-180');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
+      if (
