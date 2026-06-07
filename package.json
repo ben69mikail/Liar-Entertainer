@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev --port 4321",
     "generate-overlays": "node --import tsx scripts/generate-overlays.mjs",
-    "prebuild": "npm run generate-overlays && node --input-type=commonjs -e \"require('fs').cpSync('src/assets/images/home/clown-zauberer-hero.jpg','public/images/og-startseite.jpg')\"",
+    "prebuild": "npm run generate-overlays && node --input-type=commonjs -e \"const fs=require('fs');const src='src/assets/images/home/clown-zauberer-hero.jpg';const dst='public/images/og-startseite.jpg';try{fs.unlinkSync(dst)}catch(e){}fs.copyFileSync(src,dst)\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
