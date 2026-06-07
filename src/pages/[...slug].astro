@@ -1526,8 +1526,8 @@ const schemas = [
               const nrwSection = nrwH.closest('.alignfull, section') || nrwH.parentElement;
               const banner = document.createElement('div');
               banner.className = 'bochum-stats-banner-new';
-              banner.style.cssText = 'width:100vw;margin-left:calc(-50vw + 50%);margin-top:0;margin-bottom:0;overflow:hidden;';
-              banner.innerHTML = `<div style="line-height:0;overflow:hidden;"><svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="display:block;width:100%;height:25px;"><path d="M0,40 C360,0 1080,0 1440,40 L1440,40 L0,40 Z" fill="#d7393e"/></svg></div><div style="background:#d7393e;padding:2rem 0;text-align:center;color:#fff;"><div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;max-width:900px;margin:0 auto;"><div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;"><div style="font-size:2rem;">🪄</div><div style="font-size:2.5rem;font-weight:800;color:#ffb546;">400</div><div style="font-size:0.9rem;">Shows im Jahr</div></div><div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;"><div style="font-size:2rem;">😊</div><div style="font-size:2.5rem;font-weight:800;color:#ffb546;">110.000</div><div style="font-size:0.9rem;">Lachende Kinder</div></div><div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;"><div style="font-size:2rem;">🪄</div><div style="font-size:2.5rem;font-weight:800;color:#ffb546;">15</div><div style="font-size:0.9rem;">Jahre Erfahrung</div></div></div></div><div style="line-height:0;overflow:hidden;"><svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="display:block;width:100%;height:25px;"><path d="M0,0 C360,40 1080,40 1440,0 L1440,0 L0,0 Z" fill="#d7393e"/></svg></div>`;
+              banner.style.cssText = 'margin-top:1.5rem;margin-bottom:1.5rem;';
+              banner.innerHTML = `<div style="background:#fdf2f2;border-radius:16px;padding:2rem 1rem;text-align:center;"><div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;max-width:900px;margin:0 auto;"><div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);"><div style="font-size:2rem;">🪄</div><div style="font-size:2.5rem;font-weight:800;color:#d7393e;">400</div><div style="font-size:0.9rem;color:#374151;">Shows im Jahr</div></div><div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);"><div style="font-size:2rem;">😊</div><div style="font-size:2.5rem;font-weight:800;color:#d7393e;">110.000</div><div style="font-size:0.9rem;color:#374151;">Lachende Kinder</div></div><div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);"><div style="font-size:2rem;">🌟</div><div style="font-size:2.5rem;font-weight:800;color:#d7393e;">15</div><div style="font-size:0.9rem;color:#374151;">Jahre Erfahrung</div></div></div></div>`;
               nrwSection.parentElement.insertBefore(banner, nrwSection);
             }
           }
@@ -1691,36 +1691,26 @@ const schemas = [
 
                   const banner = document.createElement('div');
                   banner.className = 'bottrop-stats-banner-new';
-                  banner.style.cssText = 'width:100vw;margin-left:calc(-50vw + 50%);margin-top:0;margin-bottom:0;overflow:hidden;';
+                  banner.style.cssText = 'margin-top:1.5rem;margin-bottom:1.5rem;';
                   banner.innerHTML = `
-                    <div style="line-height:0;overflow:hidden;">
-                      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="display:block;width:100%;height:25px;">
-                        <path d="M0,40 C360,0 1080,0 1440,40 L1440,40 L0,40 Z" fill="#d7393e"/>
-                      </svg>
-                    </div>
-                    <div style="background:#d7393e;padding:2rem 0;text-align:center;color:#fff;">
+                    <div style="background:#fdf2f2;border-radius:16px;padding:2rem 1rem;text-align:center;">
                       <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;max-width:900px;margin:0 auto;">
-                        <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;">
+                        <div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
                           <div style="font-size:2rem;">🪄</div>
-                          <div style="font-size:2.5rem;font-weight:800;color:#ffb546;">400</div>
-                          <div style="font-size:0.9rem;">Shows im Jahr</div>
+                          <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">400</div>
+                          <div style="font-size:0.9rem;color:#374151;">Shows im Jahr</div>
                         </div>
-                        <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;">
+                        <div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
                           <div style="font-size:2rem;">😊</div>
-                          <div style="font-size:2.5rem;font-weight:800;color:#ffb546;">110.000</div>
-                          <div style="font-size:0.9rem;">Lachende Kinder</div>
+                          <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">110.000</div>
+                          <div style="font-size:0.9rem;color:#374151;">Lachende Kinder</div>
                         </div>
-                        <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem 2rem;min-width:180px;">
-                          <div style="font-size:2rem;">🪄</div>
-                          <div style="font-size:2.5rem;font-weight:800;color:#ffb546;">15</div>
-                          <div style="font-size:0.9rem;">Jahre Erfahrung</div>
+                        <div style="background:#fff;border-radius:12px;padding:1.5rem 2rem;min-width:160px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+                          <div style="font-size:2rem;">🌟</div>
+                          <div style="font-size:2.5rem;font-weight:800;color:#d7393e;">15</div>
+                          <div style="font-size:0.9rem;color:#374151;">Jahre Erfahrung</div>
                         </div>
                       </div>
-                    </div>
-                    <div style="line-height:0;overflow:hidden;">
-                      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style="display:block;width:100%;height:25px;">
-                        <path d="M0,0 C360,40 1080,40 1440,0 L1440,0 L0,0 Z" fill="#d7393e"/>
-                      </svg>
                     </div>`;
                   vorteileSection.parentElement.insertBefore(banner, vorteileSection);
                 }
