@@ -104,7 +104,6 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎈 Meine Show – magisch, herzlich, interaktiv</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Die Kinder werden nicht nur zuschauen, sondern selbst Teil der Show. Ich zaubere und bringe alle zum Lachen – und natürlich darf das Geburtstagskind im Mittelpunkt stehen.Die Auftritte in Moers sind speziell auf Familienfeste zugeschnitten, bei denen eine unkomplizierte Organisation wichtig ist: Ich bringe alles mit, was benötigt wird.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Je nach Alter und Gruppengröße kann das Programm ergänzt werden:</p>
@@ -129,8 +128,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">MOERS</p>
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
-          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">WARUM CLOWN ZAUBERER LIAR FÜR MOERS?</h2>
+      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">WARUM CLOWN ZAUBERER LIAR FÜR MOERS?</h2>
       <p class="text-[#374151] leading-relaxed mb-4">Sie wohnen in Moers oder Umgebung und planen einen unvergesslichen Kindergeburtstag? Dann sind Sie bei mir genau richtig!</p>
       <p class="text-[#374151] leading-relaxed mb-4">Ihre Vorteile für Kindergeburtstag in Moers:</p>
       <p class="text-[#374151] leading-relaxed mb-4">✅ <strong>Kurze Anfahrt aus Gladbeck</strong> Nur 30km und 30Minuten Fahrzeit – ich bin pünktlich und zuverlässig!</p>
@@ -141,8 +139,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
-          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
+      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
@@ -192,8 +189,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Zaubershow für Geburtstag in Moers – Lachen & Staunen garantiert! -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-4xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
-          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Zaubershow für Geburtstag in Moers – Lachen & Staunen garantiert!</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Zaubershow für Geburtstag in Moers – Lachen & Staunen garantiert!</h2>
       <p class="text-[#374151] mb-4 leading-relaxed">Ob in Moers-Mitte, Asberg oder Repelen – meine Zaubershow ist speziell auf Kinder von 4-12 Jahren abgestimmt und bringt Kinderaugen zum Leuchten!</p>
       <p class="text-[#374151] mb-4 leading-relaxed">Verblüffende Zaubertricks, bei denen Kinder mitzaubern.</p>
       <p class="text-[#374151] mb-4 leading-relaxed">Lustige Sketche und Comedy-Momente.</p>
@@ -324,8 +320,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
-          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet</h2>
+      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -390,4 +385,16 @@ const structuredData = [serviceSchema, faqSchema];
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
       const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !a
+      const isOpen = !answer?.classList.contains('hidden');
+      if (isOpen) {
+        answer?.classList.add('hidden');
+        chevron?.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer?.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

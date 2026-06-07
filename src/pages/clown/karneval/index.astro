@@ -75,8 +75,7 @@ const besonderheiten = [
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative flex items-center justify-center" style="min-height: 600px;">
       <div class="text-center px-6">
-        <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
-          <h2 class="text-white font-bold leading-tight mb-4" style="font-size: clamp(1.6rem, 4vw, 3rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
+        <h2 class="text-white font-bold leading-tight mb-4" style="font-size: clamp(1.6rem, 4vw, 3rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
           🎊 Karneval Zauberer in NRW –<br />Jecke Zaubershow für die fünfte Jahreszeit!
         </h2>
         <p class="text-white/90 text-lg font-medium">Alaaf &amp; Helau! Magie trifft Karnevalsfreude</p>
@@ -119,8 +118,7 @@ const besonderheiten = [
   <!-- Warum Zauberei & Karneval -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
-          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎪 Warum eine Zaubershow perfekt zu Karneval passt</h2>
+      <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎪 Warum eine Zaubershow perfekt zu Karneval passt</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {besonderheiten.map((b, i) => (
           <div class={`bg-white rounded-xl p-6 shadow-sm text-center border-t-4 card-hover ${['border-[#d7393e]','border-[#3b55d5]','border-[#ffb546]'][i % 3]}`}>
@@ -163,8 +161,7 @@ const besonderheiten = [
   <!-- Anlässe -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">DIE SHOW</p>
-          <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎭 Karnevals-Zaubershow für jeden Anlass</h2>
+      <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎭 Karnevals-Zaubershow für jeden Anlass</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {anlaesse.map(a => (
           <div class="bg-gray-50 rounded-xl p-8 shadow-sm card-hover">
@@ -223,7 +220,6 @@ const besonderheiten = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
           <h2 class="text-[#d7393e] font-bold text-2xl mb-6">📍 Einsatzgebiet Karneval</h2>
           <p class="text-[#374151] text-sm leading-relaxed mb-4">
             Für Karneval bin ich in folgenden Städten NRWs unterwegs:
@@ -257,10 +253,16 @@ const besonderheiten = [
   <!-- CTA -->
   <section class="bg-white py-12 border-t border-gray-100">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
-          <h2 class="font-bold text-[#1f2025] text-xl mb-4">Jetzt Karneval-Zauberer buchen!</h2>
+      <h2 class="font-bold text-[#1f2025] text-xl mb-4">Jetzt Karneval-Zauberer buchen!</h2>
       <p class="text-[#374151] mb-4">Ob Kinderkarneval, Vereinssitzung oder Karnevalsfeier – machen Sie Ihre Veranstaltung mit einer jecken Zaubershow unvergesslich!</p>
       <p class="text-[#374151] mb-6 text-sm leading-relaxed max-w-xl mx-auto">
         Sie können mir Ihre Anfrage unverbindlich senden. Ihre Angaben werden selbstverständlich absolut vertraulich behandelt und nicht weitergegeben. Je mehr Angaben ich von Ihnen bekomme, desto besser kann ich Sie beraten. Sie können auch einfach unter 0172-1517578 anrufen oder über WhatsApp schreiben. Ich helfe Ihnen gerne weiter.
       </p>
-      <p class="text-[#d7393e] font-semibold text-sm mb-6">Karnevalstermine sind schnell ausgebuch
+      <p class="text-[#d7393e] font-semibold text-sm mb-6">Karnevalstermine sind schnell ausgebucht – idealerweise schon im Herbst anfragen!</p>
+      <a href="/kontakt/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors">
+        Kontaktformular
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

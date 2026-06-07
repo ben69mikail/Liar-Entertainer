@@ -101,7 +101,6 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Kreativen Geburtstag in Marl erleben – Die Kunststadt feiert!</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Die wenigsten Eltern wissen, dass man einen Clown Zauberer für einen Kindergeburtstag in Marl nach Hause einladen kann. Doch es ist leicht und unkompliziert – und passt perfekt zu einer Stadt, die Kunst und Kultur großschreibt!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Marl ist bekannt für sein Skulpturenmuseum Glaskasten und über 100 Kunstwerke im öffentlichen Raum. Warum also nicht auch den Kindergeburtstag kreativ gestalten?</p>
@@ -126,8 +125,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">MARL</p>
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
-          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Marl perfekt für kreative Kindergeburtstage ist?</h2>
+      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Marl perfekt für kreative Kindergeburtstage ist?</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
@@ -149,8 +147,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
-          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
+      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
@@ -200,8 +197,7 @@ const structuredData = [serviceSchema, faqSchema];
 <!-- Kontakt & Buchung für Geburtstag in Marl -->
   <section class="bg-white py-14">
     <div class="max-w-4xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
-          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Kontakt & Buchung für Geburtstag in Marl</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">Kontakt & Buchung für Geburtstag in Marl</h2>
       <p class="text-[#374151] mb-4 leading-relaxed"><strong>Jetzt Ihren kreativen Geburtstag in Marl buchen!</strong></p>
       <p class="text-[#374151] mb-4 leading-relaxed">Sie können mir Ihre Anfrage für einen Kindergeburtstag in Marl unverbindlich senden. Ihre Angaben werden selbstverständlich absolut vertraulich behandelt und nicht weitergegeben. Je mehr Angaben ich von Ihnen bekomme, desto besser kann ich Sie beraten.</p>
       <p class="text-[#374151] mb-4 leading-relaxed">📱 <strong>SCHNELLSTE VARIANTE: WhatsApp</strong> <strong>0172-1517578</strong> Kurz schreiben: „Geburtstag Marl, [Stadtteil], [Datum], ca. [X] Kinder" → Antwort innerhalb von 2 Stunden!</p>
@@ -321,8 +317,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
-          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet über Marl hinaus</h2>
+      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Einsatzgebiet über Marl hinaus</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -389,4 +384,16 @@ const structuredData = [serviceSchema, faqSchema];
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
       const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !an
+      const isOpen = !answer?.classList.contains('hidden');
+      if (isOpen) {
+        answer?.classList.add('hidden');
+        chevron?.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer?.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

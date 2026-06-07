@@ -109,7 +109,6 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Professionelles Entertainment für anspruchsvolle Familien bei dem Geburtstag in Düsseldorf</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">
             Geburtstag in Düsseldorf – die Landeshauptstadt bietet Ihnen unzählige Möglichkeiten. Vom Aquazoo über den Wildpark bis zum Rheinturm. Doch manchmal suchen Eltern etwas Besonderes: Eine Show, die professionell ist, persönlich bleibt und gleichzeitig eine Tradition pflegt, die seit Generationen Kinder begeistert.
@@ -169,8 +168,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">DÜSSELDORF</p>
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
-          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Familien in Düsseldorf auf meine Show setzen</h2>
+      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">Warum Familien in Düsseldorf auf meine Show setzen</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h3 class="text-white font-bold text-lg mb-2">🎭 Tradition meets Moderne</h3>
@@ -200,8 +198,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">PREISE</p>
-          <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-2">Das Leistungspaket</h2>
+      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-2">Das Leistungspaket</h2>
       <p class="text-center text-[#595959] mb-10">Was Sie erwarten dürfen</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
@@ -258,8 +255,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Was mich auszeichnet -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
-          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Was mich auszeichnet: Die Details</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Was mich auszeichnet: Die Details</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
           <p class="font-bold text-[#1f2025] mb-2">Materialqualität</p>
@@ -368,8 +364,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
-          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Auch in der Region Düsseldorf unterwegs</h2>
+      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Auch in der Region Düsseldorf unterwegs</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -401,8 +396,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- CTA / Termin sichern -->
   <section class="bg-white py-10 border-t border-gray-100">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
-          <h2 class="font-bold text-[#1f2025] text-2xl mb-4">Jetzt Ihren Termin in Düsseldorf sichern</h2>
+      <h2 class="font-bold text-[#1f2025] text-2xl mb-4">Jetzt Ihren Termin in Düsseldorf sichern</h2>
       <p class="text-[#374151] mb-4 leading-relaxed">
         Düsseldorf ist groß. Die Nachfrage ist hoch. Besonders an Wochenenden und in den Schulferien sind Termine schnell vergeben.
       </p>
@@ -437,4 +431,17 @@ const structuredData = [serviceSchema, faqSchema];
   document.querySelectorAll('.faq-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
-      const chevron = btn.querySel
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = !answer?.classList.contains('hidden');
+      if (isOpen) {
+        answer?.classList.add('hidden');
+        chevron?.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer?.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

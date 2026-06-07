@@ -113,7 +113,6 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">BUCHUNG</p>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Buchen Sie jetzt den Clown in Herne!</h2>
           <p class="text-[#374151] mb-4 leading-relaxed">Warten Sie nicht länger und buchen Sie den Clown in Herne 🎪: Bereits von Anfang an entfaltet sich eine atemberaubende, humorvolle und magische Vorstellung, die das Publikum auf jedem Kindergeburtstag 🎂 in Staunen und Freude versetzt ✨.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">So geschieht es, dass viel schneller als erwartet aus den Zuschauern selbst kleine Zauberer werden 🪄. Die jungen Gäste erleben eine fröhliche und erstklassige Unterhaltung 🎉, bei der ich die kleinen Zuschauer in das Geschehen einbeziehe und zu aktiven Teilnehmern der Show mache 👦👧. Dadurch werden die Kinder auf spielerische Weise in die Vorstellung integriert und ich sorge damit für eine unvergessliche Zeit 💫.</p>
@@ -138,8 +137,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#eff4ff] py-14">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">HERNE</p>
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">ÜBER MICH</p>
-          <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">✨ Warum Familien in Herne meinen Service lieben</h2>
+      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">✨ Warum Familien in Herne meinen Service lieben</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
@@ -157,8 +155,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- 🪄 ZAUBERSHOW – Wenn Kinderträume wahr werden -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-4xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
-          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">🪄 ZAUBERSHOW – Wenn Kinderträume wahr werden</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">🪄 ZAUBERSHOW – Wenn Kinderträume wahr werden</h2>
       <p class="text-[#374151] mb-4 leading-relaxed">Der Clown findet den besten Draht zu den Kindern 💚 und der Zauberer überrascht sie! Mädchen und Jungs erleben eine erstklassige und witzige Mischung aus Clownerie 🤡 und Zauberei 🪄, bei der ich die Zuschauer zu Mitwirkenden mache und einbeziehe, so dass sie aktiv in die Show integriert sind… und im Mittelpunkt stehen ⭐.</p>
     </div>
   </section>
@@ -189,8 +186,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- 🎈 BALLONMODELLAGE – Kunstwerke zum Mitnehmen -->
   <section class="bg-white py-14">
     <div class="max-w-4xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">MEHR ERFAHREN</p>
-          <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">🎈 BALLONMODELLAGE – Kunstwerke zum Mitnehmen</h2>
+      <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-6">🎈 BALLONMODELLAGE – Kunstwerke zum Mitnehmen</h2>
       <p class="text-[#374151] mb-4 leading-relaxed">Egal ob auf dem Kindergeburtstag in Herne 🎂 oder auf dem Fest sowie im Kindergarten 🏫 oder in der Schule: Ballonfiguren sind immer ein Highlight und sorgen für Freude 😊. Jedes Kind kann seine Wunschfigur mit nach Hause nehmen 🏠 und tagelang Spaß daran haben. Schnell und präzise geformt ✋ begeistern sie nicht nur Kinder, sondern auch Erwachsene!</p>
     </div>
   </section>
@@ -295,8 +291,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <p class="text-[#d7393e] text-[11px] font-extrabold tracking-[0.15em] uppercase mb-2 text-center">EINSATZGEBIET</p>
-          <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Nicht nur in Herne unterwegs</h2>
+      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Nicht nur in Herne unterwegs</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <h3 class="font-bold text-[#1f2025] mb-3">Alle Herner Stadtteile werden bedient</h3>
@@ -363,4 +358,16 @@ const structuredData = [serviceSchema, faqSchema];
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling as HTMLElement;
       const chevron = btn.querySelector('.faq-chevron');
-      const isOpen = !answer?.classList.contains('
+      const isOpen = !answer?.classList.contains('hidden');
+      if (isOpen) {
+        answer?.classList.add('hidden');
+        chevron?.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer?.classList.remove('hidden');
+        chevron?.classList.add('rotate-180');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
