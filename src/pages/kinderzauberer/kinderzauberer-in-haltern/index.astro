@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
+import aktionImg from '../../../assets/images/clown/clown-bei-clownshow.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
@@ -345,7 +345,7 @@ const structuredData = [serviceSchema, faqSchema];
         </div>
         <div>
           <Image
-            src={karteImg}
+            src={aktionImg}
             alt="Karte Einsatzgebiet Kinderzauberer Haltern am See"
             class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
@@ -378,8 +378,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Haltern am See buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Haltern am See</a>
-      <a href="/clown/clownshow/clown-in-haltern/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🤡 Clown in Haltern am See</a>
+      <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="bg-[#d7393e] hover:bg-[#b62e32] text-white rounded-lg px-5 py-3 font-bold text-sm transition-colors">🎂 Kindergeburtstag in Haltern am See</a>
+      <a href="/clown/clownshow/clown-in-haltern/" class="bg-[#d7393e] hover:bg-[#b62e32] text-white rounded-lg px-5 py-3 font-bold text-sm transition-colors">🤡 Clown in Haltern am See</a>
     </div>
   </div>
 </section>
