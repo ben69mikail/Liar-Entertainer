@@ -988,6 +988,11 @@ const schemas = [
         (function() {
         if (!document.querySelector('.city-page')) return;
 
+        // === Bug 4 Fix: WordPress-Buttons sichtbar machen ===
+        const _btnStyle = document.createElement('style');
+        _btnStyle.textContent = '.city-page .wp-block-button__link,.city-page .wp-element-button{display:inline-block!important;background-color:#d7393e!important;color:#fff!important;padding:0.75rem 1.5rem!important;border-radius:0.375rem!important;font-weight:700!important;text-decoration:none!important;cursor:pointer!important;border:none!important;font-size:1rem!important}';
+        document.head.appendChild(_btnStyle);
+
         document.addEventListener('DOMContentLoaded', () => {
           /* ============================================================
              DESIGN SYSTEM ENFORCEMENT
@@ -1393,8 +1398,72 @@ const schemas = [
             });
           }
 
-          // === Fix 5: Einsatzgebiet-Sektion vereinheitlichen ===
-          // Suche nach Einsatzgebiet/Auch unterwegs Heading
+          // === Fix 5: Google Maps iframes + Bilder ersetzen (KORREKT: iframe nicht img!) ===
+          // Google Maps werden als <iframe src="https://maps.google.com/..."> eingebettet
+          // Der alte Code suchte fälschlicherweise nach img.src.includes('karte') → funktionierte NIE
+          
+          const clownActionImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg';
+          const kinderLachenImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg';
+
+          function replaceIframeWithImg(iframe, imgSrc, altText) {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.alt = altText;
+            img.loading = 'lazy';
+            img.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 420px; height: auto; display: block;';
+            iframe.parentNode.replaceChild(img, iframe);
+          }
+
+          // Alle Google Maps iframes auf der Seite finden und ersetzen
+          const cityPageEl = document.querySelector('.city-page');
+          if (cityPageEl) {
+            const allIframes = cityPageEl.querySelectorAll('iframe[src*="google.com/maps"], iframe[src*="maps.google"], iframe[src*="google.com/maps/embed"]');
+            
+            allIframes.forEach(iframe => {
+              // Kontext bestimmen: Galerie oder Text-Sektion?
+              const parentSection = iframe.closest('section, .alignfull, .has-2-columns, .has-1-columns, .wp-block-columns');
+              const sectionText = parentSection ? (parentSection.textContent || '') : '';
+              
+              // Ist es eine echte Einsatzgebiet-Sektion?
+              const isGenuineEinsatzgebiet = parentSection && (
+                /Gladbeck|Gelsenkirchen|Oberhausen|Bottrop|Essen|Duisburg|Bochum|Recklinghausen|Dortmund|NRW|Ruhrgebiet|Umkreis|Kilometer|Fahrtkosten|Haupteinsatzgebiet|Einsatzradius/i.test(sectionText) ||
+                /Einsatzgebiet|Auch unterwegs|Regional|Einsatzgebiete/i.test(sectionText)
+              );
+              
+              if (isGenuineEinsatzgebiet) {
+                // Echte Einsatzgebiet-Sektion → Karte behalten (nicht ersetzen)
+                return;
+              }
+              
+              // Ist die Map in einer Galerie-Sektion?
+              const inGallery = iframe.closest('.wp-block-gallery, .gallery, [class*="galerie"], [class*="gallery"]') ||
+                (parentSection && parentSection.querySelectorAll('img').length >= 2);
+              
+              if (inGallery) {
+                // Bug 2: Karte in Galerie → Kinder-lachen-Bild
+                replaceIframeWithImg(iframe, kinderLachenImg, 'Kinder lachen bei der Clown Zaubershow von LIAR');
+              } else {
+                // Bug 3: Karte in Text-Sektion → Clown-Aktion-Bild
+                replaceIframeWithImg(iframe, clownActionImg, 'Clown Zauberer LIAR bei der Show in Aktion');
+              }
+            });
+
+            // Auch img-Elemente mit Karte im Dateinamen ersetzen (Fallback)
+            cityPageEl.querySelectorAll('img[src*="karte"], img[src*="map"], img[src*="landkarte"]').forEach(img => {
+              const parentSec = img.closest('section, .alignfull, .has-2-columns, .has-1-columns');
+              const secText = parentSec ? (parentSec.textContent || '') : '';
+              const isEinsatz = /Einsatzgebiet|Auch unterwegs|Haupteinsatzgebiet|Einsatzgebiete/i.test(secText);
+              if (!isEinsatz) {
+                const inGal = img.closest('.wp-block-gallery, .gallery') ||
+                  (parentSec && parentSec.querySelectorAll('img').length >= 2);
+                img.src = inGal ? kinderLachenImg : clownActionImg;
+                img.alt = inGal ? 'Kinder lachen bei der Clown Zaubershow' : 'Clown Zauberer LIAR in Aktion';
+                img.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 420px; height: auto;';
+              }
+            });
+          }
+
+          // === Fix 5b: Einsatzgebiet-Sektion Heading-basiert prüfen ===
           const einsatzHeadings = Array.from(document.querySelectorAll('h2, h3')).filter(h =>
             /Einsatzgebiet|Auch unterwegs|Regional|Einsatzgebiete/i.test(h.textContent));
 
@@ -1404,46 +1473,59 @@ const schemas = [
 
             const is2Col = section.classList.contains('has-2-columns');
 
-            // Prüfe ob der Abschnitt WIRKLICH über das Einsatzgebiet spricht
-            // (Städtenamen oder Reichweiten-Keywords im Text der Sektion)
-            const sectionText = section.textContent || '';
-            const isGenuineEinsatzgebiet =
-              /Gladbeck|Gelsenkirchen|Oberhausen|Bottrop|Essen|Duisburg|Bochum|Recklinghausen|Dortmund|NRW|Ruhrgebiet|Umkreis|km|Kilometer|Fahrtkosten|anfahrt|region|städten|städte/i.test(sectionText) ||
-              /Haupteinsatzgebiet|Einsatzradius|buchbar|anfragen|Raum\s+\w+/i.test(sectionText);
-
-            // Foto-URLs für Nicht-Einsatzgebiet-Sektionen
-            // Clown in Aktion (für Text-Sektionen die keine Einsatzgebiets-Info sind)
-            const clownActionImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg';
-            // Kinder lachen (für Galerie-Sektionen wo fälschlicherweise die Karte war)
-            const kinderLachenImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg';
-
-            // Ersetze ALLE vorhandenen Bilder in der Einsatzgebiet-Sektion
             const existingImgs = section.querySelectorAll('img');
-            existingImgs.forEach(img => {
-              // Bug 2 Fix: Wenn Bild in einer Galerie-Sektion ist → Kinder-lachen statt Karte
-              const inGallery = img.closest('.wp-block-gallery, .gallery, [class*="galerie"], [class*="gallery"], .wp-block-image + .wp-block-image') ||
-                (section.querySelectorAll('img').length > 1 && img !== section.querySelector('img:first-of-type'));
 
-              if (!isGenuineEinsatzgebiet) {
-                // Bug 3 Fix: Kein Einsatzgebiet-Text → Clown-Aktions-Foto statt Karte
-                if (img.src.includes('karte')) {
-                  img.src = clownActionImg;
-                  img.alt = 'Clown Zauberer LIAR bei der Show in Aktion';
-                  img.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 400px; height: auto;';
+            if (existingImgs.length === 0) {
+              // Kein Bild vorhanden: Karten-Bild hinzufügen
+              const imgEl = document.createElement('img');
+              imgEl.src = '/images/karte-einsatzgebiet.jpg';
+              imgEl.alt = 'Karte Einsatzgebiet Clown Zauberer LIAR';
+              imgEl.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 400px; height: auto;';
+              imgEl.loading = 'lazy';
+
+              if (is2Col) {
+                const cols = section.querySelectorAll('.wp-block-themeisle-blocks-advanced-column');
+                if (cols.length >= 2) {
+                  const shorter = cols[0].scrollHeight < cols[1].scrollHeight ? cols[0] : cols[1];
+                  shorter.appendChild(imgEl);
                 }
-                // Andere Bilder in nicht-Einsatzgebiet-Sektionen: unverändert lassen
-              } else if (inGallery) {
-                // Bug 2 Fix: Karte in Galerie-Kontext → Kinder-lachen
-                img.src = kinderLachenImg;
-                img.alt = 'Kinder lachen bei der Clown Zaubershow';
-                img.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 400px; height: auto;';
               } else {
-                // Normaler Fall: echte Einsatzgebiet-Sektion → Karte zeigen
-                img.src = '/images/karte-einsatzgebiet.jpg';
-                img.alt = 'Karte Einsatzgebiet Clown Zauberer LIAR';
-                img.style.cssText = 'border-radius: 0.5rem; width: 100%; max-width: 400px; height: auto;';
+                const innerWrap = section.querySelector('.innerblocks-wrap') || section;
+                const col = innerWrap.querySelector('.wp-block-themeisle-blocks-advanced-column');
+                if (col) {
+                  const grid = document.createElement('div');
+                  grid.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;';
+                  const leftCol = document.createElement('div');
+                  while (col.firstChild) leftCol.appendChild(col.firstChild);
+                  const rightCol = document.createElement('div');
+                  rightCol.style.cssText = 'display: flex; justify-content: center; align-items: start;';
+                  rightCol.appendChild(imgEl);
+                  grid.appendChild(leftCol);
+                  grid.appendChild(rightCol);
+                  col.appendChild(grid);
+                }
               }
-            });
+            } else if (!is2Col && existingImgs.length > 0) {
+              // Hat Bild aber keine 2-Spalten → Layout umbauen
+              const innerWrap = section.querySelector('.innerblocks-wrap') || section;
+              const col = innerWrap.querySelector('.wp-block-themeisle-blocks-advanced-column');
+              const existingImg = section.querySelector('img');
+              if (col && existingImg) {
+                const grid = document.createElement('div');
+                grid.style.cssText = 'display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;';
+                const leftCol = document.createElement('div');
+                const rightCol = document.createElement('div');
+                rightCol.style.cssText = 'display: flex; justify-content: center; align-items: start;';
+                const figure = existingImg.closest('figure') || existingImg;
+                rightCol.appendChild(figure.cloneNode(true));
+                figure.remove();
+                while (col.firstChild) leftCol.appendChild(col.firstChild);
+                grid.appendChild(leftCol);
+                grid.appendChild(rightCol);
+                col.appendChild(grid);
+              }
+            }
+          });
 
             if (existingImgs.length === 0) {
               // Kein Bild vorhanden: Karten-Bild hinzufügen
