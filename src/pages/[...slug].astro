@@ -984,8 +984,9 @@ const schemas = [
     </div>
 
     {/* City-Page Design-System Enforcement Script */}
-    {isCityPage && (
-      <script is:inline>
+    <script is:inline>
+        if (!document.querySelector('.city-page')) return;
+
         document.addEventListener('DOMContentLoaded', () => {
           /* ============================================================
              DESIGN SYSTEM ENFORCEMENT
@@ -1897,11 +1898,11 @@ const schemas = [
           //  übernimmt Waves + Spacing korrekt mit max-2-Sektionen-Limit)
         });
       </script>
-    )}
 
     {/* NEUES Design-System Script — überschreibt alle vorherigen Fixes */}
-    {isCityPage && (
-      <script is:inline>
+    <script is:inline>
+        if (!document.querySelector('.city-page')) return;
+
         window.addEventListener('load', () => {
           const cp = document.querySelector('.city-page');
           if (!cp) return;
@@ -2022,7 +2023,6 @@ const schemas = [
           });
         });
       </script>
-    )}
 
     {/* Service-Links für Blog-Posts */}
     {isBlogPost && (
