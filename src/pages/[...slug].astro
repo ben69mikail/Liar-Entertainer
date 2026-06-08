@@ -985,6 +985,7 @@ const schemas = [
 
     {/* City-Page Design-System Enforcement Script */}
     <script is:inline>
+        (function() {
         if (!document.querySelector('.city-page')) return;
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -1897,10 +1898,12 @@ const schemas = [
           // (Fix WAVES und Fix FINAL entfernt — das NEUES Design-System Script unten
           //  übernimmt Waves + Spacing korrekt mit max-2-Sektionen-Limit)
         });
+        })();
       </script>
 
     {/* NEUES Design-System Script — überschreibt alle vorherigen Fixes */}
     <script is:inline>
+        (function() {
         if (!document.querySelector('.city-page')) return;
 
         window.addEventListener('load', () => {
@@ -2022,6 +2025,7 @@ const schemas = [
             o.style.cssText = 'max-height:0;overflow:hidden;padding:0;';
           });
         });
+        })();
       </script>
 
     {/* Service-Links für Blog-Posts */}
