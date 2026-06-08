@@ -87,8 +87,10 @@ RewriteCond %{QUERY_STRING} ^page_id=[0-9]+$
 RewriteRule ^$ /? [R=301,L]
 
 # -- WordPress-Anhang-Seiten (attachment pages) → 410 Gone --
-# Attachment pages have no content value; 410 tells Google to drop them faster than 301
-RewriteRule ^attachment/.* - [G,L]
+# 410 (statt 301) sagt Google: kein Inhalt mehr, sofort deindexieren.
+# Gilt für /attachment/ direkt unter Root und alle Unterpfade.
+RewriteRule ^attachment/.* - [R=410,L]
+RewriteRule ^(.+)/attachment/[^/]+/?$ - [R=410,L]
 
 # -- Alte Attachment-URLs mit Bild-Slug (z.B. /kinderzauberer-bild-1/) --
 # Diese geben 410 Gone zurück, damit Google sie aus dem Index entfernt
@@ -369,9 +371,6 @@ RewriteRule ^zauberer/kinderzauberer/?$ /kinderzauberer/ [R=301,L]
 RewriteRule ^zauberer/kinderzauberer/kinderzauberer-in-([^/]+)/?$ /kinderzauberer/kinderzauberer-in-$1/ [R=301,L]
 RewriteRule ^zauberer/kinderzauberer/(.+)$ /kinderzauberer/ [R=301,L]
 
-# Attachment-URLs global (nicht nur /blog/): */attachment/* → Parent-Seite
-RewriteRule ^(.+)/attachment/[^/]+/?$ /$1/ [R=301,L]
-
 # Einzelfälle — alte WP-Paths ohne Entsprechung
 RewriteRule ^kinderschminken/?$ /clown/glitzer-tattoo/ [R=301,L]
 RewriteRule ^ballonkuenstler/?$ /clown/ballonmodellage/ [R=301,L]
@@ -410,6 +409,16 @@ RewriteRule ^clown/(ballonmodellage|clownshow|glitzer-tattoo|karneval|walk-act)(
 # Einsegmentige /zauberer/<stadt>/ und /clown/<stadt>/ → 410 Gone
 RewriteRule ^zauberer/[a-z][a-z0-9-]+/?$ - [R=410,L]
 RewriteRule ^clown/[a-z][a-z0-9-]+/?$ - [R=410,L]
+
+# ============================================================
+# KINDERGEBURTSTAG LEGACY REDIRECT-KETTEN → 410 GONE
+# /kindergeburtstag/geburtstag-in-*/ URLs sind Legacy-WordPress-Seiten
+# die in GSC als Umleitungsfehler auftauchen (Redirect-Chain oder
+# gebrochenes Redirect-Ziel). 410 löst die 5 GSC-Umleitungsfehler.
+# Steht NACH dem Trailing-Slash-Redirect damit kein Endlos-Loop entsteht.
+# Autopilot 2026-06-08
+# ============================================================
+RewriteRule ^kindergeburtstag/geburtstag-in-[a-z][a-z0-9-]+/?$ - [R=410,L]
 
 # ── Reviews API Cache-Schutz ──────────────────────────────
 <Files "reviews-cache.json">
