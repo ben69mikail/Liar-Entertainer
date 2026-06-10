@@ -411,14 +411,14 @@ RewriteRule ^zauberer/[a-z][a-z0-9-]+/?$ - [R=410,L]
 RewriteRule ^clown/[a-z][a-z0-9-]+/?$ - [R=410,L]
 
 # ============================================================
-# KINDERGEBURTSTAG LEGACY REDIRECT-KETTEN → 410 GONE
-# /kindergeburtstag/geburtstag-in-*/ URLs sind Legacy-WordPress-Seiten
-# die in GSC als Umleitungsfehler auftauchen (Redirect-Chain oder
-# gebrochenes Redirect-Ziel). 410 löst die 5 GSC-Umleitungsfehler.
-# Steht NACH dem Trailing-Slash-Redirect damit kein Endlos-Loop entsteht.
-# Autopilot 2026-06-08
+# KINDERGEBURTSTAG CITY-SEITEN — ECHTE ASTRO-SEITEN (kein 410!)
+# Die /kindergeburtstag/geburtstag-in-*/ Seiten sind LIVE existierende
+# Astro-Seiten (Top-Traffic: Dortmund, Duesseldorf, Essen ...).
+# Die fruehere 410-Regel (Autopilot 2026-06-08) war ein FEHLER und hat
+# den staerksten Seiten-Cluster deindexiert. Entfernt 2026-06-10.
+# Falls je einzelne Legacy-Geburtstags-URLs deindexiert werden sollen,
+# nur die EXAKTEN alten Slugs auflisten — niemals das ganze Muster.
 # ============================================================
-RewriteRule ^kindergeburtstag/geburtstag-in-[a-z][a-z0-9-]+/?$ - [R=410,L]
 
 # ── Reviews API Cache-Schutz ──────────────────────────────
 <Files "reviews-cache.json">
