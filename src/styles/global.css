@@ -1173,6 +1173,37 @@ body {
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* ── Typografie-Politur ─────────────────────────────────── */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* ── Sichtbarer Tastatur-Fokus (Markenblau) ─────────────── */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #3b55d5;
+  outline-offset: 2px;
+}
+
+/* ── Hero-Badges: sanfte Lade-Choreografie (CSS-only) ───── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-badge {
+    transition: opacity 500ms var(--ease-out-strong), transform 500ms var(--ease-out-strong);
+  }
+  .hero-badge:nth-child(2) { transition-delay: 70ms; }
+  .hero-badge:nth-child(3) { transition-delay: 140ms; }
+  @starting-style {
+    .hero-badge {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}
+
 /* ── Bild-Hover-Zoom (dezent, schnell — Hover passiert oft) ── */
 .img-hover-zoom {
   transition: transform 200ms var(--ease-out-strong), box-shadow 200ms var(--ease-out-strong);
