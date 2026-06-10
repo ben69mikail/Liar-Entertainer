@@ -18,25 +18,12 @@ const REDIRECTING_PATHS = new Set<string>([
   '/zauberer/zaubershow/karneval/',    // -> /clown/karneval/
 ]);
 
-// Hero images for image sitemap (main pages)
+// Hero images for image sitemap.
+// WICHTIG: Nur Bilder mit stabiler, oeffentlich erreichbarer URL eintragen.
+// Die alten /wp-content/...-Pfade gaben HTTP 410 (Gone) zurueck und wurden entfernt.
 const pageImages: Record<string, { loc: string; title: string }[]> = {
   '/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2024/01/Clown-Zauberer-LIAR-2.jpg', title: 'Clown Zauberer LIAR bei einer Zaubershow in NRW' },
-  ],
-  '/kindergeburtstag/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2023/08/kindergeburtstag-clown-zauberer-nrw.jpg', title: 'Kindergeburtstag mit Clown Zauberer in NRW' },
-  ],
-  '/kinderzauberer/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2023/08/kinderzauberer-nrw.jpg', title: 'Kinderzauberer NRW – Zaubershow für Kinder' },
-  ],
-  '/clown/clownshow/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2023/08/clownshow-nrw.jpg', title: 'Clownshow NRW – Clown für Kindergeburtstag' },
-  ],
-  '/zauberer/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2023/08/zauberer-nrw.jpg', title: 'Zauberer NRW für Kindergeburtstag und Events' },
-  ],
-  '/zauberer/zaubershow/': [
-    { loc: 'https://liar-entertainer.com/wp-content/uploads/2023/08/zaubershow-nrw.jpg', title: 'Zaubershow für Kinder in NRW' },
+    { loc: 'https://liar-entertainer.com/images/og-startseite.jpg', title: 'Clown Zauberer LIAR bei einer Zaubershow in NRW' },
   ],
 };
 
@@ -50,7 +37,7 @@ export const GET: APIRoute = () => {
 
   // Handcrafted static pages (not in WP data)
   const staticPages = [
-    { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'daily', lastmod: '2026-03-28' },
+    { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
     { loc: `${SITE}/kindergeburtstag/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-04-06' },
     { loc: `${SITE}/kinderzauberer/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
     { loc: `${SITE}/preise/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-04-06' },
