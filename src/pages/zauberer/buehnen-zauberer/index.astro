@@ -43,6 +43,29 @@ const faqSchema = {
     },
   })),
 };
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Bühnenzauberer NRW – Stand-up Comedy-Zauberei",
+  "serviceType": "Bühnenzauberei / Stand-up Zauberei",
+  "description": "Professionelle Bühnenzauberei und Stand-up Comedy-Zauberei für Firmenfeiern, Galas und Events in NRW. 20–45 Minuten für 10–150 Personen, auch auf Französisch.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Clown Zauberer LIAR",
+    "telephone": "+491721517578",
+    "url": "https://liar-entertainer.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Beethovenstr. 15",
+      "postalCode": "45966",
+      "addressLocality": "Gladbeck",
+      "addressCountry": "DE"
+    }
+  },
+  "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" },
+  "url": "https://liar-entertainer.com/zauberer/buehnen-zauberer/"
+};
 ---
 
 <BaseLayout
@@ -50,7 +73,7 @@ const faqSchema = {
   description={seoDescription}
   keywords="Bühnenzauberer NRW, Stand-up Zauberer, Bühnenzauberei buchen, Gala Zauberer, Bühnenzauberer Firmenfeier"
   canonical="https://liar-entertainer.com/zauberer/buehnen-zauberer/"
-  structuredData={faqSchema}
+  structuredData={[serviceSchema, faqSchema]}
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Zauberer', url: '/zauberer/' }, { name: 'Bühnen Zauberer', url: '/zauberer/buehnen-zauberer/' }]}
 >
 
@@ -62,7 +85,7 @@ const faqSchema = {
         <a href="/zauberer/" class="hover:text-[#d7393e]">Zauberer</a> »
         <span>Bühnen Zauberer</span>
       </p>
-      <h1 class="font-black text-[#1f2025] text-3xl sm:text-5xl mb-6">Bühnen Zauberer</h1>
+      <h1 class="font-black text-[#1f2025] text-3xl sm:text-5xl mb-6">Bühnenzauberer NRW für Firmenfeiern &amp; Galas</h1>
     </div>
   </section>
 
@@ -71,6 +94,7 @@ const faqSchema = {
     <Image
       src={heroImg}
       alt="Bühnenzauberer NRW – Professionelle Stand-up Zauberei"
+      title="Bühnenzauberer LIAR – Stand-up Zauberei in NRW"
       class="absolute inset-0 w-full h-full object-cover object-top"
       style="object-position: 47% 40%"
       loading="eager"
@@ -161,11 +185,11 @@ const faqSchema = {
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Weitere Fotos und Videos finden Sie in meiner <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={feuerImg} alt="Zaubertrick mit Feuer" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={standUpImg} alt="Stand up Zauberei" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenZaubereiImg} alt="Bühnenzauberer" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenGelsenkirchenImg} alt="Bühnen Show Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenEssenImg} alt="Stand Up bei einer Firmenfeier mit Assistentin aus dem Publikum" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={feuerImg} alt="Bühnenzauberer LIAR mit einem Feuer-Zaubertrick auf der Bühne" title="Bühnenzauberei mit Feuer – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={standUpImg} alt="Stand-up Zauberei vor Publikum in NRW" title="Stand-up Zauberei – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenZaubereiImg} alt="Bühnenzauberer LIAR bei einer Show" title="Bühnenzauberer LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenGelsenkirchenImg} alt="Bühnenshow von Zauberer LIAR in Gelsenkirchen" title="Bühnenzauberei Gelsenkirchen – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={buehnenEssenImg} alt="Stand-up bei einer Firmenfeier in Essen mit Assistentin aus dem Publikum" title="Bühnenzauberer Firmenfeier Essen – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
       </div>
     </div>
   </section>
