@@ -115,14 +115,16 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden" style="min-height: 576px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 576px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Kinderzauberer NRW – Zaubershow für Kinder"
       class="absolute inset-0 w-full h-full object-cover object-top"
       style="object-position: 46% 70%"
       widths={[480, 768, 1200, 1600]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
       loading="eager"
       fetchpriority="high"
     />
@@ -131,6 +133,8 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       <h2 class="text-white font-bold text-center px-6 leading-tight" style="font-size: clamp(1.8rem, 4.5vw, 3.2rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
         Kinderzauberer in NRW –<br />Zaubershow für unvergessliche Momente
       </h2>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -152,7 +156,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Pastel Blue section: YouTube Video (REDESIGN: wave + solid blue → pastel blue) -->
   <section class="py-12 bg-[#eff4ff]">
     <div class="max-w-4xl mx-auto px-4">
       <div class="relative w-full" style="padding-bottom: 56.25%;">
@@ -276,7 +279,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- Google Reviews -->
   <GoogleReviews />
 
-  <!-- Pastel Red Stats Banner (REDESIGN: wave + solid red → pastel red with white cards) -->
   <section class="py-12 bg-[#fdf2f2]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

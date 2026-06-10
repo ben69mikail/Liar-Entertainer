@@ -71,7 +71,9 @@ const einsatzgebiet = [
   </section>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden" style="min-height: 600px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={ballonmodellage1Img}
       alt="Ballonmodellage NRW – Bunte Ballonfiguren für Kinder"
@@ -80,7 +82,7 @@ const einsatzgebiet = [
       loading="eager"
       fetchpriority="high"
       widths={[600, 900, 1200]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-black/45"></div>
     <div class="relative flex items-center justify-center" style="min-height: 600px;">
@@ -90,6 +92,8 @@ const einsatzgebiet = [
         </h2>
         <p class="text-white/90 text-lg font-medium">Individuelle Wunschfiguren für jedes Kind!</p>
       </div>
+    </div>
+  </div>
     </div>
   </section>
 

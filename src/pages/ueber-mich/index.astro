@@ -60,7 +60,9 @@ const personSchema = {
   </section>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden" style="min-height: 600px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Über mich – Clown Zauberer LIAR aus Gladbeck"
@@ -69,7 +71,7 @@ const personSchema = {
       loading="eager"
       fetchpriority="high"
       widths={[600, 900, 1200]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-black/45"></div>
     <div class="relative flex items-center justify-center" style="min-height: 600px;">
@@ -79,6 +81,8 @@ const personSchema = {
         </h2>
         <p class="text-white/90 text-lg font-medium">15+ Jahre Magie, Lachen &amp; unvergessliche Momente</p>
       </div>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -204,7 +208,6 @@ const personSchema = {
     </div>
   </section>
 
-  <!-- Video Sektion — pastellblau statt Vollblau, kein Wave -->
   <section class="py-14 bg-[#eff4ff]">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
@@ -232,7 +235,6 @@ const personSchema = {
     </div>
   </section>
 
-  <!-- Einsatzgebiet — pastellrot statt Vollrot, kein Wave -->
   <section class="py-14 bg-[#fdf2f2]">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-8">📍 Regional und deutschlandweit – Wo findet man mich?</h2>
@@ -265,7 +267,6 @@ const personSchema = {
     </div>
   </section>
 
-  <!-- CTA — dunkel, kein Wave davor -->
   <section class="bg-[#1f2025] py-14 text-white text-center">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="font-bold text-2xl sm:text-3xl mb-4">📞 Einfach Kontakt aufnehmen</h2>

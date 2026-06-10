@@ -115,7 +115,9 @@ const videoSchema = {
 >
 
   <!-- Hero -->
-  <section class="relative overflow-hidden" style="min-height: 440px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 440px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Preise und Pakete – Clown Zauberer LIAR für Kindergeburtstag"
@@ -124,7 +126,7 @@ const videoSchema = {
       loading="eager"
       fetchpriority="high"
       widths={[400, 800, 1200]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-black/45"></div>
     <div class="relative flex items-end justify-center pb-12 pt-28" style="min-height: 440px;">
@@ -132,6 +134,8 @@ const videoSchema = {
         <h1 class="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-4 drop-shadow-lg">Preise & Pakete – Transparent und fair</h1>
         <p class="text-gray-200 text-lg drop-shadow">Bei Clown Zauberer LIAR gibt es keine versteckten Kosten. Alle Kindergeburtstag-Preise sind fest kalkuliert. Für Firmenfeiern, Stadtfeste und andere Events wird ein individuelles Angebot erstellt.</p>
       </div>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -185,7 +189,7 @@ const videoSchema = {
         </div>
         <!-- Komplett-Paket -->
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] relative card-hover">
-          <span class="absolute -top-3 right-4 bg-[#ffb546] text-white text-xs font-bold px-3 py-1 rounded-full">Beliebteste</span>
+          <span class="absolute -top-3 right-4 bg-[#ffb546] text-[#1f2025] text-xs font-bold px-3 py-1 rounded-full">Beliebteste</span>
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Komplett-Paket</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">210 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -329,7 +333,6 @@ const videoSchema = {
     </div>
   </section>
 
-  <!-- Was ist im Preis enthalten? — pastellblau statt Vollblau, kein Wave -->
   <section class="py-14 bg-[#eff4ff]">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl mb-4 text-center">Was ist im Preis enthalten?</h2>

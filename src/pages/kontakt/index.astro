@@ -13,7 +13,9 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Kontakt', url: '/kontakt/' }]}
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden" style="min-height: 540px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 540px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImage}
       alt="Kontakt Clown Zauberer LIAR"
@@ -22,7 +24,7 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
       loading="eager"
       fetchpriority="high"
       widths={[400, 800, 1200]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="relative flex items-end justify-center pb-12 pt-28" style="min-height: 540px;">
@@ -30,6 +32,8 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
         <h1 class="text-white font-extrabold text-3xl sm:text-4xl mb-3 drop-shadow-lg">Einfach und unverbindlich kontaktieren</h1>
         <p class="text-gray-100 text-base drop-shadow">Stellen Sie Ihre Anfrage – wir melden uns innerhalb von 24 Stunden!</p>
       </div>
+    </div>
+  </div>
     </div>
   </section>
 

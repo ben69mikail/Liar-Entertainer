@@ -79,7 +79,9 @@ const structuredData = [serviceSchema, faqSchema];
 >
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden" style="min-height: 600px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 20%;`}></div>
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative flex flex-col items-center justify-center text-center px-6" style="min-height: 600px;">
@@ -92,6 +94,8 @@ const structuredData = [serviceSchema, faqSchema];
       <p class="text-gray-200 text-base leading-relaxed max-w-xl mx-auto">
         Clownshow und Unterhaltung in Herne – Spaß, Lachen und gute Laune für Groß und Klein!
       </p>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -134,35 +138,23 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Google Reviews -->
   <GoogleReviews />
 
-  <!-- Wave: white → blue -->
-  <div style="overflow:hidden;line-height:0;background:white;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-  <section class="bg-[#3b55d5] py-14 text-white">
+  <section class="bg-[#eff4ff] py-14 border-y border-[#c5d3f7]">
     <div class="max-w-5xl mx-auto px-4">
-      <p class="text-[#ffb546] font-bold text-sm uppercase tracking-widest mb-4 text-center">HERNE</p>
-      <h2 class="text-white font-bold text-3xl sm:text-4xl mb-10 text-center">✨ Warum Familien in Herne meinen Service lieben</h2>
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-4 text-center">HERNE</p>
+      <h2 class="text-[#1f2025] font-bold text-3xl sm:text-4xl mb-10 text-center">✨ Warum Familien in Herne meinen Service lieben</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-white font-bold text-lg mb-2">💯 Ihre Vorteile auf einen Blick</h3>
-          <p class="text-white leading-relaxed mb-6">✅ Über 4000 Auftritte Erfahrung 🎪✅ Pädagogisch wertvolle Shows 📚✅ Minimaler Aufwand für Sie – maximaler Spaß für die Kinder 😄✅ Alle Herner Stadtteile – von Wanne-Eickel bis Sodingen 📍✅ Pünktlichkeit garantiert ⏰✅ Faire, transparente Preise ohne versteckte Kosten 💶</p>
+          <h3 class="text-[#1f2025] font-bold text-lg mb-2">💯 Ihre Vorteile auf einen Blick</h3>
+          <p class="text-[#1f2025] leading-relaxed mb-6">✅ Über 4000 Auftritte Erfahrung 🎪✅ Pädagogisch wertvolle Shows 📚✅ Minimaler Aufwand für Sie – maximaler Spaß für die Kinder 😄✅ Alle Herner Stadtteile – von Wanne-Eickel bis Sodingen 📍✅ Pünktlichkeit garantiert ⏰✅ Faire, transparente Preise ohne versteckte Kosten 💶</p>
         </div>
         <div>
-          <h3 class="text-white font-bold text-lg mb-2">🏙️ Lokale Verwurzelung im Ruhrgebiet</h3>
-          <p class="text-white leading-relaxed mb-6">Als Künstler aus dem Ruhrgebiet 🏭 kenne ich die Mentalität der Herner Familien: bodenständig, herzlich und mit viel Humor ❤️! Genau diese Werte bringe ich in jede Show ein – ohne Schnickschnack, aber mit viel Herz 💚 und Professionalität.</p>
+          <h3 class="text-[#1f2025] font-bold text-lg mb-2">🏙️ Lokale Verwurzelung im Ruhrgebiet</h3>
+          <p class="text-[#1f2025] leading-relaxed mb-6">Als Künstler aus dem Ruhrgebiet 🏭 kenne ich die Mentalität der Herner Familien: bodenständig, herzlich und mit viel Humor ❤️! Genau diese Werte bringe ich in jede Show ein – ohne Schnickschnack, aber mit viel Herz 💚 und Professionalität.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- Wave: blue → white -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- 🪄 ZAUBERSHOW – Wenn Kinderträume wahr werden -->
   <section class="bg-gray-50 py-14">
@@ -172,40 +164,28 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
-  <!-- Wave: white → red (Stats) -->
-  <div style="overflow:hidden;line-height:0;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/>
-    </svg>
-  </div>
 
   <!-- Stats Banner -->
-  <section class="w-full bg-[#d7393e] py-10 text-white text-center">
+  <section class="w-full bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
-        <div class="text-4xl font-extrabold text-white">400</div>
-        <div class="text-white text-sm mt-1">Shows im Jahr</div>
+        <div class="text-4xl font-extrabold text-[#1f2025]">400</div>
+        <div class="text-[#1f2025] text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">😊</div>
-        <div class="text-4xl font-extrabold text-white">110.000</div>
-        <div class="text-white text-sm mt-1">Lachende Kinder</div>
+        <div class="text-4xl font-extrabold text-[#1f2025]">110.000</div>
+        <div class="text-[#1f2025] text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-transparent border border-white/30 rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
         <div class="text-3xl mb-2">🪄</div>
-        <div class="text-4xl font-extrabold text-white">15</div>
-        <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
+        <div class="text-4xl font-extrabold text-[#1f2025]">15</div>
+        <div class="text-[#1f2025] text-sm mt-1">Jahre Erfahrung</div>
       </div>
     </div>
   </section>
 
-  <!-- Wave: red → white -->
-  <div style="overflow:hidden;line-height:0;background:#d7393e;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
   <!-- 🎈 BALLONMODELLAGE – Kunstwerke zum Mitnehmen -->
   <section class="bg-white py-14">
@@ -283,15 +263,9 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Video Sektion -->
-  <!-- Wave oben (weiß → blau) -->
-  <div style="overflow:hidden;line-height:0;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#3b55d5"/>
-    </svg>
-  </div>
-  <section class="py-14 bg-[#3b55d5]">
+  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-white font-extrabold text-xl uppercase tracking-widest mb-6">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
@@ -304,7 +278,7 @@ const structuredData = [serviceSchema, faqSchema];
           loading="lazy"
         ></iframe>
       </div>
-      <h3 class="text-white font-bold text-xl mb-6">
+      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
       <a
@@ -315,12 +289,6 @@ const structuredData = [serviceSchema, faqSchema];
       </a>
     </div>
   </section>
-  <!-- Wave unten (blau → weiß) -->
-  <div style="overflow:hidden;line-height:0;background:#3b55d5;display:block;">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-      <path d="M0,60 Q720,0 1440,60 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
 
 
 

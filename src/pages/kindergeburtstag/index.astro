@@ -127,13 +127,15 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
 >
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden" style="min-height: 600px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Kindergeburtstag mit Clown Zauberer NRW"
       class="absolute inset-0 w-full h-full object-cover" style="object-position: 55% 26%"
       widths={[400, 800, 1200, 1600]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
       loading="eager"
       fetchpriority="high"
     />
@@ -142,6 +144,8 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       <h1 class="text-white font-bold text-center px-6 leading-tight" style="font-size: clamp(2rem, 5vw, 3.5rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
         Zauberer für Kindergeburtstag in NRW<br />mit Clown & Lachgarantie
       </h1>
+    </div>
+  </div>
     </div>
   </section>
 

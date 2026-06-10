@@ -115,7 +115,9 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden" style="min-height: 570px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 570px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Clown Zauberer LIAR – Clownshow NRW mit Top-Bewertungen"
@@ -124,13 +126,15 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       loading="eager"
       fetchpriority="high"
       widths={[600, 900, 1400]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-[#1f2025]/45"></div>
     <div class="relative flex items-center justify-center" style="min-height: 570px;">
       <h2 class="text-white font-bold text-center px-6 leading-tight" style="font-size: clamp(1.6rem, 4vw, 3rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
         Clownshow in NRW – Lachen,<br />Spaß und lustige Unterhaltung für Kinder
       </h2>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -192,7 +196,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Stats Banner — pastel red, no waves -->
   <section class="py-10 bg-[#fdf2f2] border-y border-[#f0c4c4] text-center">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -316,7 +319,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Blue Description — pastel blue, no waves -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7] text-center">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl mb-6">Die WITZIGSTE Clownshow NRW mit TOP BEWERTUNGEN!</h2>
@@ -361,7 +363,6 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
-  <!-- Video Sektion — pastel blue, no waves -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">

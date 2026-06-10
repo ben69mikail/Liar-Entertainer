@@ -121,5 +121,40 @@ check(`Jede Sektion hat zentrierten Container (ohne: ${noContainer.length})`, no
 check('Galerie-Teaser hat Pastell-Hintergrund', /SCHNELLE EINDRÜCKE[\s\S]{0,400}/.test(indexSrc) && /bg-\[#eff4ff\][^"]*"[^]*?SCHNELLE EINDRÜCKE/.test(indexSrc));
 
 // ──────────────────────────────────────────────
+// 7. SITEWIDE: keine Waves, keine Vollfarb-Sektionen, Hero-Karten, Header
+// ──────────────────────────────────────────────
+console.log('\n[7] Sitewide Pastell + Header');
+import { readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+
+function walkAstro(dir, out = []) {
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name);
+    if (statSync(p).isDirectory()) walkAstro(p, out);
+    else if (name.endsWith('.astro')) out.push(p);
+  }
+  return out;
+}
+const pagesDir = new URL('../src/pages', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
+const pageFiles = walkAstro(pagesDir);
+check(`Seiten gefunden (${pageFiles.length})`, pageFiles.length > 80);
+
+let withWaves = [], withFullColor = [], with100vw = [];
+for (const f of pageFiles) {
+  const src = readFileSync(f, 'utf8');
+  if (src.includes('Q720,60')) withWaves.push(f);
+  if (/<section class="[^"]*bg-\[#(3b55d5|d7393e)\]/.test(src)) withFullColor.push(f);
+  if (src.includes('sizes="100vw"')) with100vw.push(f);
+}
+check(`Keine Wave-SVGs mehr in Seiten (noch: ${withWaves.length})`, withWaves.length === 0);
+check(`Keine Vollfarb-Sektionen mehr (noch: ${withFullColor.length})`, withFullColor.length === 0);
+check(`Kein sizes="100vw" mehr (noch: ${with100vw.length})`, with100vw.length === 0);
+
+const headerSrc = readFileSync(new URL('../src/components/Header.astro', import.meta.url), 'utf8');
+check('Sticky-Nav bekommt z-50 (Inhalte nicht mehr über Menü)', /classList\.add\('fixed'[^)]*'z-50'/.test(headerSrc));
+check('Desktop-Nav ab 900px sichtbar', headerSrc.includes('min-[900px]:flex'));
+check('Hamburger ab 900px versteckt', headerSrc.includes('min-[900px]:hidden'));
+
+// ──────────────────────────────────────────────
 console.log(`\nErgebnis: ${passed} bestanden, ${failed} fehlgeschlagen`);
 process.exit(failed > 0 ? 1 : 0);

@@ -135,7 +135,9 @@ const whyUs = [
   </section>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden" style="min-height: 600px;">
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
       src={heroImg}
       alt="Zauberer NRW für Kindergeburtstag und Hochzeit – TOP Bewertet"
@@ -144,7 +146,7 @@ const whyUs = [
       loading="eager"
       fetchpriority="high"
       widths={[600, 900, 1200]}
-      sizes="100vw"
+      sizes="(max-width: 1152px) 100vw, 1120px"
     />
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="relative flex items-center justify-center" style="min-height: 600px;">
@@ -155,6 +157,8 @@ const whyUs = [
         <p class="text-white/90 text-base mb-2">Über 300 begeisterte 5-Sterne-Bewertungen auf Google</p>
         <p class="text-white/80 text-sm">Professionelle Zauberkunst mit französischem Charme</p>
       </div>
+    </div>
+  </div>
     </div>
   </section>
 
@@ -214,7 +218,6 @@ const whyUs = [
     </div>
   </section>
 
-  <!-- Pastel Red: Why LIAR (REDESIGN: wave + solid red → pastel red with dark text + bordered cards) -->
   <section class="py-14 bg-[#fdf2f2]">
     <div class="max-w-6xl mx-auto px-4">
       <p class="text-center font-bold text-sm uppercase tracking-widest text-[#595959] mb-2">WARUM ZAUBERER LIAR?</p>
