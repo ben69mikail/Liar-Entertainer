@@ -1221,3 +1221,23 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 }
 
 /* Reveal-Script (inline, einmalig einbinden) */
+
+/* ============================================
+   HEADER-FIXES (2026-06-11)
+   1. Menue liegt IMMER ueber dem Seiteninhalt — Bilder/Videos mit
+      transform (portrait-zoom, img-hover-zoom) erzeugen eigene
+      Stacking-Contexts und glitten beim Scrollen ueber die Sticky-Nav.
+   2. Hamburger-Button erscheint nie auf Desktop (>= 900px) —
+      unabhaengig von Tailwind-Klassengenerierung.
+   ============================================ */
+#site-header { position: relative; z-index: 200; }
+#main-nav { z-index: 200; }
+
+@media (min-width: 900px) {
+  #nav-burger-row { display: none !important; }
+  #mobile-menu { display: none !important; }
+  #nav-desktop-row { display: flex !important; }
+}
+@media (max-width: 899.98px) {
+  #nav-desktop-row { display: none !important; }
+}

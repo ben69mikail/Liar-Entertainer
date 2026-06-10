@@ -75,7 +75,7 @@ const menuItems = [
     <div class="max-w-6xl mx-auto px-4">
 
       <!-- Desktop Navigation (ab 900px, kompakt bis xl) -->
-      <div class="hidden min-[900px]:flex items-center justify-center gap-0 h-14">
+      <div id="nav-desktop-row" class="hidden min-[900px]:flex items-center justify-center gap-0 h-14">
         {menuItems.map((item) => (
           item.children ? (
             <div class="relative h-full flex items-center nav-dropdown-wrap">
@@ -120,7 +120,7 @@ const menuItems = [
       </div>
 
       <!-- Mobile: Hamburger Button (nur unter 900px) -->
-      <div class="min-[900px]:hidden flex items-center justify-end h-12">
+      <div id="nav-burger-row" class="min-[900px]:hidden flex items-center justify-end h-12">
         <button
           id="mobile-menu-btn"
           class="text-[#1f2025] p-2"

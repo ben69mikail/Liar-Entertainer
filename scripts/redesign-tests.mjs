@@ -156,5 +156,15 @@ check('Desktop-Nav ab 900px sichtbar', headerSrc.includes('min-[900px]:flex'));
 check('Hamburger ab 900px versteckt', headerSrc.includes('min-[900px]:hidden'));
 
 // ──────────────────────────────────────────────
+// 8. HEADER-HARDENING: CSS-Regeln unabhängig von JS/Tailwind
+// ──────────────────────────────────────────────
+console.log('\n[8] Header-Hardening (global.css)');
+const globalCss = readFileSync(new URL('../src/styles/global.css', import.meta.url), 'utf8');
+check('#site-header hat position:relative + z-index', /#site-header\s*\{\s*position:\s*relative;\s*z-index:\s*\d+/.test(globalCss));
+check('#nav-burger-row ab 900px hart versteckt (!important)', /#nav-burger-row\s*\{\s*display:\s*none\s*!important/.test(globalCss));
+check('#nav-desktop-row ab 900px hart sichtbar', /#nav-desktop-row\s*\{\s*display:\s*flex\s*!important/.test(globalCss));
+check('Header.astro: nav-burger-row ID gesetzt', headerSrc.includes('id="nav-burger-row"') || readFileSync(new URL('../src/components/Header.astro', import.meta.url), 'utf8').includes('id="nav-burger-row"'));
+
+// ──────────────────────────────────────────────
 console.log(`\nErgebnis: ${passed} bestanden, ${failed} fehlgeschlagen`);
 process.exit(failed > 0 ? 1 : 0);
