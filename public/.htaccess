@@ -14,6 +14,10 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
+# ── WordPress-Legacy: index.php → Startseite ───────────────
+# MUSS vor dem Trailing-Slash-Redirect stehen (sonst /index.php → /index.php/). Autopilot 2026-06-10.
+RewriteRule ^index\.php(/.*)?$ / [R=301,L]
+
 # ── Trailing Slash (Astro output) ───────────────────────────
 # Wenn URL ohne trailing slash, auf /index.html weiterleiten
 # Asset-Dateiendungen ausgeschlossen, damit alte WP-Datei-URLs (z.B. wp-content/...jpg)
@@ -21,7 +25,7 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !/$
-RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|mjs|json|xml|txt|pdf|woff|woff2|ttf|eot|map|webmanifest)$ [NC]
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|mjs|json|xml|txt|pdf|woff|woff2|ttf|eot|map|webmanifest|html|php)$ [NC]
 RewriteRule ^(.+)$ /$1/ [R=301,L]
 
 # ── WordPress → Astro Weiterleitungen ──────────────────────
@@ -43,9 +47,10 @@ RedirectMatch 301 ^/wp-comments-post\.php(.*)$ /
 # wp-content Pfade sind seit Legacy-Cleanup 22.05.2026 nicht mehr erreichbar
 RewriteRule ^wp-content/.*$ - [R=410,L]
 
-# -- WordPress-Legacy: index.php → Startseite --
-RewriteRule ^index\.php/?$ / [R=301,L]
-RewriteRule ^index\.php/(.*)$ /$1 [R=301,L]
+# -- Fremde WP-Sektion /sport/ → 410 Gone (Autopilot 2026-06-10) --
+# /sport/lokalsport/... war nie Teil dieser Seite; 410 deindexiert schnell.
+RewriteRule ^sport(/.*)?$ - [R=410,L]
+
 
 # -- RSS/Atom Feeds → Blog --
 RedirectMatch 301 ^/feed/?$ /blog/
@@ -68,7 +73,7 @@ RedirectMatch 301 ^/author/(.*)$ /
 # -- Kategorie- und Tag-Seiten → passende Hauptseiten --
 RedirectMatch 301 ^/category/kindergeburtstag(.*)$ /kindergeburtstag/
 RedirectMatch 301 ^/category/zaubershow(.*)$ /zauberer/zaubershow/
-RedirectMatch 301 ^/category/clown(.*)$ /clown/clown-zauberer/
+RedirectMatch 301 ^/category/clown(.*)$ /clown/clownshow/
 RedirectMatch 301 ^/category/(.*)$ /blog/
 RedirectMatch 301 ^/tag/(.*)$ /blog/
 RedirectMatch 301 ^/schlagwort/(.*)$ /blog/
@@ -107,16 +112,13 @@ RedirectMatch 301 ^/hello-world/?$ /blog/
 # /clown/ direkt → /clown/clownshow/ (1 Hop, behebt GSC Umleitungsfehler - Autopilot 2026-06-06)
 RedirectMatch 301 ^/clown/?$ /clown/clownshow/
 
-# -- Sicherheit: wp-content/uploads weiterhin erreichbar (Bilder) --
-# Bilder liegen noch auf dem alten Server, daher kein Redirect nötig
-# Falls Bilder lokal gehostet werden, hier Redirect einrichten
-
 # ============================================================
 # ALTE WORDPRESS URL-STRUKTUREN → NEUE ASTRO-URLS (301)
 # Basierend auf Google Search Console 404-Analyse
 # ============================================================
 
 # --- MUSTER 1: /content/... → Entferne /content/ Prefix ---
+RewriteRule ^content/?$ / [R=301,L]
 RewriteRule ^content/kinderzauberer/?$ /kinderzauberer/ [R=301,L]
 RewriteRule ^content/zauberer/tisch-zauberer/?$ /zauberer/tisch-zauberer/ [R=301,L]
 RewriteRule ^content/zauberer/kinderzauberer/?$ /kinderzauberer/ [R=301,L]
@@ -126,6 +128,10 @@ RewriteRule ^content/glitzer-tattoos/?$ /clown/glitzer-tattoo/ [R=301,L]
 RewriteRule ^content/preise-fuer-clown-oder-kinderzauberer/?$ /preise/ [R=301,L]
 RewriteRule ^content/index\.php$ / [R=301,L]
 RewriteRule ^content/(.+)$ /blog/ [R=301,L]
+
+# -- Legacy 'was-kostet'-Artikel: alte Pfade direkt auf echten Blog-Artikel (Autopilot 2026-06-10) --
+RewriteRule ^clown/kindergeburtstag/was-kostet-ein-clown-fuer-ein-kindergeburtstag/?$ /blog/was-kostet-ein-clown-fuer-ein-kindergeburtstag/ [R=301,L]
+RewriteRule ^kindergeburtstag/was-kostet-ein-clown-fuer-ein-kindergeburtstag/?$ /blog/was-kostet-ein-clown-fuer-ein-kindergeburtstag/ [R=301,L]
 
 # --- MUSTER 2: /clown/kindergeburtstag/... → /kindergeburtstag/... ---
 RewriteRule ^clown/kindergeburtstag/?$ /kindergeburtstag/ [R=301,L]
