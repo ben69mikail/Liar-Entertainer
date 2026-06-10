@@ -188,29 +188,42 @@ const videoSchema = {
   </style>
 
   <!-- ═══════════════════════════════════════
-       HERO IMAGE – full width, no overlay
+       HERO – gerundete Bild-Karte im Container + Pill-Badges
   ════════════════════════════════════════ -->
-  <section class="w-full overflow-hidden">
-    <Image
-      src={heroImg}
-      alt="Clown Zauberer LIAR bei einer Zaubershow"
-      class="w-full object-cover"
-      style="max-height:720px; width:100%; object-position:52% 0%;"
-      loading="eager"
-      fetchpriority="high"
-      widths={[600, 900, 1200]}
-      sizes="100vw"
-      quality={70}
-    />
+  <section class="bg-white pt-6 sm:pt-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-3 mb-5">
+        <span class="inline-flex items-center gap-1.5 bg-[#fdf2f2] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#f0c4c4]">
+          <span class="text-[#e69420]">★★★★★</span> 400+ Google-Rezensionen
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-[#eff4ff] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#c5d3f7]">
+          🎩 15 Jahre Erfahrung
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-[#fdf2f2] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#f0c4c4]">
+          🪄 Interaktive Zaubershow
+        </span>
+      </div>
+      <Image
+        src={heroImg}
+        alt="Clown Zauberer LIAR bei einer Zaubershow"
+        class="w-full object-cover rounded-3xl"
+        style="max-height:620px; width:100%; object-position:52% 0%; box-shadow: 0 12px 32px rgba(0,0,0,0.14);"
+        loading="eager"
+        fetchpriority="high"
+        widths={[600, 900, 1200]}
+        sizes="(max-width: 1152px) 100vw, 1120px"
+        quality={70}
+      />
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════
        INTRO – H1 + lead paragraph (centered)
   ════════════════════════════════════════ -->
-  <section class="py-14 bg-white">
+  <section class="py-14 md:py-20 bg-white">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <h1 class="text-[#1f2025] font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-tight mb-8">
-        Clown Zauberer in NRW – Zaubershow & Kindergeburtstag
+        <span class="text-[#d7393e]">Clown Zauberer</span> in NRW – Zaubershow & Kindergeburtstag
       </h1>
       <p class="text-[#374151] text-[17px] sm:text-lg leading-relaxed">
         Sie suchen einen Clown, der Kinderaugen zum Leuchten bringt? Clown Zauberer Liar sorgt seit
@@ -220,13 +233,18 @@ const videoSchema = {
         <a href="/zauberer/" class="text-[#d7393e] hover:underline font-semibold">Zauberei</a>
         mit Interaktion — jede Veranstaltung wird zum Highlight!
       </p>
+      <div class="mt-8">
+        <a href="/kontakt/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-10 py-4 rounded-full text-base transition-colors">
+          Jetzt unverbindlich anfragen
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
        WAS MACHT CLOWN LIAR SO BESONDERS?
   ════════════════════════════════════════ -->
-  <section class="py-10 bg-white">
+  <section class="py-14 bg-white">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#d7393e] font-extrabold text-2xl sm:text-3xl mb-8">
         Was macht Clown Liar so besonders?
@@ -276,8 +294,9 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        LERNEN SIE CLOWN LIAR KENNEN
   ════════════════════════════════════════ -->
-  <section class="py-12 bg-white">
+  <section class="py-14 bg-white">
     <div class="max-w-5xl mx-auto px-4">
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Über mich</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl mb-8">
         Lernen Sie Clown Liar kennen – Ihr Entertainer mit Herz &amp; Humor
       </h2>
@@ -313,7 +332,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        STATS SECTION (pastel red)
   ════════════════════════════════════════ -->
-  <section class="py-10 bg-[#fdf2f2] border-y border-[#f0c4c4]">
+  <section class="py-14 bg-[#fdf2f2] border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
@@ -338,7 +357,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        QUALIFIKATIONEN + WAS MICH AUSZEICHNET
   ════════════════════════════════════════ -->
-  <section class="pt-4 pb-12 bg-white">
+  <section class="pt-14 pb-14 bg-white">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
@@ -387,15 +406,16 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        DAS BIETET CLOWN ZAUBERER LIAR (pastel blue)
   ════════════════════════════════════════ -->
-  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
+  <section class="py-14 md:py-20 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-6xl mx-auto px-4">
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-1">Programme</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl text-center mb-12">
         Das bietet Clown Zauberer Liar für Ihr Event
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
 
         <!-- Zaubershow -->
-        <div class="text-center text-[#1f2025]">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
           <a href="/zauberer/zaubershow/">
             <Image
               src={zaubershowImg}
@@ -420,13 +440,13 @@ const videoSchema = {
             <p>✅ <strong>Große Finale</strong> – Ein spektakulärer Abschlusszauber, den niemand vergisst</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> ca. 40 Minuten</p>
-          <a href="/zauberer/zaubershow/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
+          <a href="/zauberer/zaubershow/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
 
         <!-- Ballonmodellage -->
-        <div class="text-center text-[#1f2025]">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
           <a href="/clown/ballonmodellage/">
             <Image
               src={ballonImg}
@@ -450,13 +470,13 @@ const videoSchema = {
             <p>✅ Individuelle Wünsche werden erfüllt!</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Je nach Kinderzahl (ca. 1-2 Minuten pro Figur)</p>
-          <a href="/clown/ballonmodellage/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
+          <a href="/clown/ballonmodellage/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
 
         <!-- Glitzer Tattoos -->
-        <div class="text-center text-[#1f2025]">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
           <a href="/clown/glitzer-tattoo/">
             <Image
               src={glitzerImg}
@@ -482,7 +502,7 @@ const videoSchema = {
             <p>✅ <strong>Für Jungs &amp; Mädchen</strong> – Superhelden, Tiere, Blumen, Sterne u.v.m.</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Ca. 2-3 Minuten pro Tattoo</p>
-          <a href="/clown/glitzer-tattoo/" class="inline-block mt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
+          <a href="/clown/glitzer-tattoo/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
         </div>
@@ -494,7 +514,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        EINSATZGEBIET
   ════════════════════════════════════════ -->
-  <section class="pt-4 pb-14 bg-white">
+  <section class="pt-14 pb-14 bg-white">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Einsatzgebiet</p>
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase mb-6">REGIONAL UND DEUTSCHLANDWEIT</h2>
@@ -537,8 +557,9 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        SCHNELLE EINDRÜCKE (pastel blue)
   ════════════════════════════════════════ -->
-  <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
+  <section class="py-14 md:py-20 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Galerie</p>
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
@@ -576,8 +597,9 @@ const videoSchema = {
   <!-- ═══════════════════════════════════════
        FAQ SECTION
   ════════════════════════════════════════ -->
-  <section class="py-14 bg-white">
+  <section class="py-14 md:py-20 bg-white">
     <div class="max-w-3xl mx-auto px-4">
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-1">FAQ</p>
       <h2 class="text-center text-2xl font-extrabold mb-8">Häufig gestellte Fragen</h2>
       <div class="space-y-4">
         <details class="bg-[#f9fafb] rounded-xl p-4 group faq-item">
