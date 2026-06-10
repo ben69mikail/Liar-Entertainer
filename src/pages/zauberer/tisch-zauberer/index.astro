@@ -12,6 +12,60 @@ import closeUpDuesseldorfImg from '../../../assets/images/zauberer/close-up-zaub
 const seoTitle = 'Tischzauberer NRW | Close-up Magie | LIAR';
 const seoDescription = 'Tisch Zauberer LIAR in NRW ✓ Close-up Magie für Hochzeit, Firmenevent & Geburtstag ✓ 400+ Top-Bewertungen ✓ Elegant & niveauvoll ✓ Jetzt unverbindlich anfragen!';
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Tischzauberer & Close-up Zauberei NRW",
+  "serviceType": "Tischzauberei / Close-up Magie",
+  "description": "Professionelle Tischzauberei und Close-up Magie für Hochzeiten, Firmenevents und Empfänge in ganz NRW. Magie direkt an den Tischen Ihrer Gäste.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Clown Zauberer LIAR",
+    "telephone": "+491721517578",
+    "url": "https://liar-entertainer.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Beethovenstr. 15",
+      "postalCode": "45966",
+      "addressLocality": "Gladbeck",
+      "addressCountry": "DE"
+    }
+  },
+  "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" },
+  "url": "https://liar-entertainer.com/zauberer/tisch-zauberer/"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist Tischzauberei (Close-up Zauberei)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tischzauberei ist Zauberkunst in ihrer intimsten Form: Karten, Münzen und Alltagsgegenstände verwandeln sich direkt vor den Augen der Gäste – in Griffweite, persönlich und ohne Bühne. Ideal für Hochzeiten, Empfänge und Dinner-Events." }
+    },
+    {
+      "@type": "Question",
+      "name": "Braucht die Tischzauberei eine Bühne oder Technik?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nein. Tischzauberer LIAR kommt direkt zu den Tischen Ihrer Gäste – kein Platzbedarf, keine Bühne, kein Mikrofon. Die Zauberei fügt sich organisch in den Ablauf Ihres Events ein." }
+    },
+    {
+      "@type": "Question",
+      "name": "Für welche Events eignet sich Close-up Zauberei?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Besonders für Hochzeiten, Sekt- und Cocktail-Empfänge, Dinner- und Gala-Events sowie Firmenfeiern, bei denen die Gäste in Gruppen sitzen oder stehen. Auch eine Kombination mit einer Bühnenshow ist möglich." }
+    },
+    {
+      "@type": "Question",
+      "name": "In welchen Städten ist Tischzauberer LIAR buchbar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hauptsächlich in ganz NRW (u. a. Essen, Düsseldorf, Dortmund, Köln, Duisburg, Mülheim, Gladbeck) sowie deutschlandweit und international in Frankreich, Belgien, den Niederlanden, Österreich und der Schweiz." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert der Einsatz eines Tischzauberers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Der Einsatz ist flexibel über 2–4 Stunden buchbar. Pro Tischgruppe (3–8 Personen) zeigt LIAR ca. 5–10 Minuten Zauberkunst und wechselt dann zur nächsten Gruppe." }
+    }
+  ]
+};
 const ablauf = [
   { step: '1', title: 'Ankommen bei der Gruppe', text: 'Mit einem charmanten „Darf ich Ihnen etwas Magisches zeigen?" stelle ich mich vor.' },
   { step: '2', title: '5-10 Minuten Zauberkunst', text: 'Eine Abfolge verblüffender Tricks – Karten, Münzen, Mentalmagie. Alles direkt vor ihren Augen.' },
@@ -26,6 +80,7 @@ const ablauf = [
   keywords="Tischzauberer NRW, Close-up Zauberer, Tischzauberei Hochzeit, Close-up Zauberei buchen, Tischzauberer Event"
   canonical="https://liar-entertainer.com/zauberer/tisch-zauberer/"
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Zauberer', url: '/zauberer/' }, { name: 'Tisch Zauberer', url: '/zauberer/tisch-zauberer/' }]}
+  structuredData={[serviceSchema, faqSchema]}
 >
 
   <!-- Page Title -->
@@ -36,7 +91,7 @@ const ablauf = [
         <a href="/zauberer/" class="hover:text-[#d7393e]">Zauberer</a> »
         <span>Tisch Zauberer</span>
       </p>
-      <h1 class="font-black text-[#1f2025] text-3xl sm:text-5xl mb-6">Tisch Zauberer</h1>
+      <h1 class="font-black text-[#1f2025] text-3xl sm:text-5xl mb-6">Tischzauberer NRW – Close-up Magie für Hochzeit &amp; Event</h1>
     </div>
   </section>
 
@@ -45,6 +100,7 @@ const ablauf = [
     <Image
       src={heroImg}
       alt="Tischzauberer NRW – Close-up Zauberei für Hochzeiten & Events"
+      title="Tischzauberer LIAR – Close-up Zauberei in NRW"
       class="absolute inset-0 w-full h-full object-cover object-top"
       style="object-position: 99% 61%"
       loading="eager"
@@ -150,11 +206,11 @@ const ablauf = [
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Noch mehr Eindrücke gibt es in der <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={tischMuelheimImg} alt="Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={tischNrwImg} alt="Tisch Zauberer NRW" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDortmundImg} alt="Close Up Zauberei Dortmund" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpMuelheimImg} alt="Close Up Zauberei Mülheim" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDuesseldorfImg} alt="Close Up Zauberei bei Firmenevent in Düsseldorf" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={tischMuelheimImg} alt="Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR" title="Tischzauberer Mülheim – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={tischNrwImg} alt="Tisch Zauberer NRW bei einem Event" title="Tischzauberer NRW – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpDortmundImg} alt="Close-up Zauberei in Dortmund mit Karten und Münzen" title="Close-up Zauberei Dortmund – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpMuelheimImg} alt="Close-up Zauberei in Mülheim für Gäste am Tisch" title="Close-up Zauberei Mülheim – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
+        <Image src={closeUpDuesseldorfImg} alt="Close-up Zauberei bei Firmenevent in Düsseldorf" title="Close-up Zauberei Düsseldorf – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
       </div>
     </div>
   </section>
