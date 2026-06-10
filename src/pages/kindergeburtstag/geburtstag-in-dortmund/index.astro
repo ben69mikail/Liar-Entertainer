@@ -88,7 +88,16 @@ const structuredData = [serviceSchema, faqSchema];
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden" style="min-height: 600px;">
-    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 20%;`}></div>
+    <img
+      src={heroImg}
+      alt="Kindergeburtstag in Dortmund mit Clown Zauberer LIAR – Zaubershow für Kinder"
+      title="Kindergeburtstag Dortmund mit Clown Zauberer LIAR"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center 20%;"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative flex flex-col items-center justify-center text-center px-6" style="min-height: 600px;">
       <div class="inline-flex items-center gap-2 bg-white/20 text-white rounded-full px-4 py-1.5 text-sm font-medium mb-4 backdrop-blur-sm">
@@ -133,6 +142,7 @@ const structuredData = [serviceSchema, faqSchema];
           <img
             src={_introImgAsset.src}
             alt="Kindergeburtstag in Dortmund mit Clown Zauberer"
+            title="Kinderzauberer LIAR auf einem Kindergeburtstag in Dortmund"
             class="rounded-full object-cover object-[20%] portrait-zoom"
             style="width: 320px; height: 320px;"
             loading="lazy"
@@ -435,6 +445,7 @@ const structuredData = [serviceSchema, faqSchema];
           <Image
             src={karteImg}
             alt="Karte Einsatzgebiet Kindergeburtstag Dortmund"
+            title="Einsatzgebiet Clown Zauberer LIAR rund um Dortmund"
             class="rounded-lg w-full h-auto img-hover-zoom"
             widths={[400, 600, 800]}
             sizes="(max-width: 1024px) 100vw, 50vw"
