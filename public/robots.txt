@@ -6,6 +6,16 @@ Disallow: /404
 Disallow: /*/attachment/*
 Disallow: /attachment/*
 
+# WordPress-Legacy-Flaechen (kein Crawl-Budget verschwenden)
+Disallow: /feed/
+Disallow: /*/feed/
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /*?replytocom=
+
 # AI Search Crawlers
 User-agent: GPTBot
 Allow: /
