@@ -334,7 +334,7 @@ const videoSchema = {
   ════════════════════════════════════════ -->
   <section class="py-14 bg-[#fdf2f2] border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-reveal-group>
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
           <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
@@ -412,7 +412,7 @@ const videoSchema = {
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl text-center mb-12">
         Das bietet Clown Zauberer Liar für Ihr Event
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" data-reveal-group>
 
         <!-- Zaubershow -->
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
@@ -662,5 +662,37 @@ const videoSchema = {
     </div>
   </section>
 
+  <script>
+    // Scroll-Reveal mit Stagger für Karten-Grids (progressive enhancement:
+    // Styles werden erst per JS gesetzt — ohne JS bleibt alles sichtbar).
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      const EASE = 'cubic-bezier(0.23, 1, 0.32, 1)';
+      const groups = document.querySelectorAll('[data-reveal-group]');
+      const items: HTMLElement[] = [];
+      groups.forEach((group) => {
+        Array.from(group.children).forEach((child, i) => {
+          const el = child as HTMLElement;
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(14px)';
+          el.style.transition = `opacity 450ms ${EASE} ${i * 60}ms, transform 450ms ${EASE} ${i * 60}ms`;
+          items.push(el);
+        });
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target as HTMLElement;
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+              io.unobserve(el);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -60px 0px' }
+      );
+      items.forEach((el) => io.observe(el));
+    }
+  </script>
 
 </BaseLayout>
