@@ -33,6 +33,11 @@ const isoDate = entry.data.publishDate.toISOString();
 const canonical = `https://liar-entertainer.com/blog/${slug}/`;
 const desc = entry.data.description ?? entry.data.title;
 
+// SEO-Title: nutzt optionales seoTitle-Frontmatter (<=60 Zeichen) fuer den
+// <title>-Tag, sonst Standard-Fallback. Die sichtbare H1/Artikel-Ueberschrift
+// (entry.data.title) bleibt davon unberuehrt.
+const pageTitle = entry.data.seoTitle ?? `${entry.data.title} | Clown Zauberer LIAR`;
+
 // Hero-Image mit Title-Overlay (build-time via sharp, OG-Image-Standard 1200x630)
 const heroDisplayUrl = entry.data.heroImage
   ? await generateHeroWithOverlay(entry.data.heroImage, entry.data.title, slug)
@@ -68,7 +73,7 @@ const articleSchema = {
 ---
 
 <BaseLayout
-  title={`${entry.data.title} | Clown Zauberer LIAR`}
+  title={pageTitle}
   description={desc}
   canonical={canonical}
   ogImage={ogImage}
