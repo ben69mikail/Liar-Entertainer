@@ -1,5 +1,6 @@
 ---
 title: "Muttertag & Familiengeburtstag kombinieren – was zusammen funktioniert 🌸🎂"
+seoTitle: "Muttertag & Kindergeburtstag kombinieren | LIAR"
 description: "Muttertag und Kindergeburtstag kombinieren – so gelingt die Doppelfeier entspannt, mit Ideen fuer Ablauf, Deko und Unterhaltung fuer alle Generationen."
 publishDate: 2026-05-04
 heroImage: "https://liar-entertainer.com/blog-images/muttertag-familiengeburtstag-kombinieren/cover.jpg"

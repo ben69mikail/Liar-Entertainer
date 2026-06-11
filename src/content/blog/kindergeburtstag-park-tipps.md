@@ -1,5 +1,6 @@
 ---
 title: "Kindergeburtstag im Park: Was muss man beachten? 🎈🏞️"
+seoTitle: "Kindergeburtstag im Park: Profi-Tipps NRW | LIAR"
 description: "Kindergeburtstag im Park in NRW planen — praktische Tipps zu Location, Spielen, Verpflegung, Wetter und Programm vom Profi mit 15+ Jahren Erfahrung."
 publishDate: 2026-05-21
 heroImage: "https://liar-entertainer.com/blog-images/kindergeburtstag-park-tipps/cover.jpg"

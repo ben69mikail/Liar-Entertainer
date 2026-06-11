@@ -1,5 +1,6 @@
 ---
 title: "Kindergeburtstag bei Hitze: Outdoor-Programme die wirklich funktionieren ☀️🎈"
+seoTitle: "Kindergeburtstag bei Hitze: Outdoor-Ideen | LIAR"
 description: "Kindergeburtstag bei Hitze im Garten oder Park feiern - praktische Outdoor-Ideen, Schattenplanung und Programme die auch bei 30 Grad funktionieren."
 publishDate: 2026-05-11
 heroImage: "https://liar-entertainer.com/blog-images/kindergeburtstag-hitze-outdoor-programm/cover.jpg"

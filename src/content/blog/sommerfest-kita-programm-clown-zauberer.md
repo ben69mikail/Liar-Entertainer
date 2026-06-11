@@ -1,5 +1,6 @@
 ---
 title: "Sommerfest in der Kita planen: Programm-Ideen mit Clown und Zauberer 🎪☀️"
+seoTitle: "Sommerfest Kita: Clown & Zauberer-Programm | LIAR"
 description: "Sommerfest Kita planen leicht gemacht - Programm-Ideen, Spielestationen und Tipps fuer Clown und Zauberer fuer Kinder von 3-6 Jahren."
 publishDate: 2026-05-14
 heroImage: "https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/cover.jpg"
