@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { getCollection } from 'astro:content';
 import pagesData from '../data/pages.json';
 import postsData from '../data/posts.json';
 
@@ -27,7 +28,7 @@ const pageImages: Record<string, { loc: string; title: string }[]> = {
   ],
 };
 
-export const GET: APIRoute = () => {
+export const GET: APIRoute = async () => {
   const now = new Date().toISOString().split('T')[0];
 
   const urls: { loc: string; lastmod: string; priority: string; changefreq: string; images?: { loc: string; title: string }[] }[] = [];
@@ -84,6 +85,26 @@ export const GET: APIRoute = () => {
     } catch {
       // skip
     }
+  }
+
+  // Astro Content Collection "blog": jeder veroeffentlichte Artikel automatisch.
+  // Dedup-Logik identisch zu src/pages/blog/[slug].astro getStaticPaths(),
+  // damit Legacy-WP-Posts (in posts.json) nicht doppelt erscheinen.
+  const wpSlugs = new Set((postsData as { slug?: string }[]).map((p) => p.slug).filter(Boolean));
+  const blogEntries = await getCollection('blog');
+  for (const entry of blogEntries) {
+    if (entry.data.draft) continue;
+    const slug = String(entry.id);
+    if (wpSlugs.has(slug)) continue;
+    const loc = `${SITE}/blog/${slug}/`;
+    if (seenLocs.has(loc)) continue;
+    seenLocs.add(loc);
+
+    const lastmod = entry.data.publishDate
+      ? new Date(entry.data.publishDate).toISOString().split('T')[0]
+      : now;
+
+    urls.push({ loc, lastmod, priority: '0.7', changefreq: 'monthly' });
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
