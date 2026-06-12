@@ -3,28 +3,24 @@
   "started": "2026-06-12",
   "current_wave": 5,
   "domain_strategie": {
-    "zweitdomain": "zauberer-liar.de (im Aufbau, existiert/200, eigene Sitemap)",
-    "geplante_aufteilung": "liar-entertainer.com = Clown/Clown-Zauberer/Kindergeburtstag/Unterhaltung (Markenkern, Platz1 fuer 'clown liar'). zauberer-liar.de = reiner Zauberer/Kinderzauberer/Zaubershow + Staedte.",
-    "migration_status": "GEPLANT, NICHT BEGONNEN. Inhaber-Entscheidung 2026-06-12: ZUERST alles auf liar-entertainer.com verbessern (inkl. /zauberer/*, /kinderzauberer/* - normal weiteroptimieren, NICHT einfrieren). Redirects spaeter.",
-    "redirect_regel": "KEINE 301 auf zauberer-liar.de durch den Autopilot - NIEMALS eigenmaechtig. Nur der Inhaber stoesst das an, pro Stadt, erst wenn die Zielseite auf zauberer-liar.de live, indexierbar und mindestens gleichwertig ist (sonst Ranking-Verlust). Reihenfolge: neue Seite bauen -> pruefen -> DANN 301, Stadt fuer Stadt.",
-    "warnung": "liar-entertainer.com hat 18 kinderzauberer-in-* + mehrere zauberer/* Seiten, die bereits ranken/indexiert sind. Voreilige 301 auf schwaechere neue Domain verbrennt Autoritaet. Es ist eine Domain-Migration, KEINE klassische Kannibalisierung (verschiedene Domains)."
+    "zweitdomain": "zauberer-liar.de (existiert/200, eigene Sitemap)",
+    "empfehlung_2026_06_12": "NICHT in zwei Domains aufteilen. Inhaber-Motiv war SEO-Annahme (getrennte Domain = besseres Ranking) - das ist ein Irrtum: eine starke Domain schlaegt zwei schwache (Autoritaet wird sonst verduennt, doppelter Pflegeaufwand, rankende Seiten gingen verloren). Exact-Match-Domains sind seit Jahren kein Rankingfaktor mehr. EMPFOHLEN: zauberer-liar.de als komplette 301-Weiterleitung auf liar-entertainer.com/zauberer/ (sichert Name + buendelt Linkkraft), und den /zauberer//kinderzauberer/-Bereich AUF liar-entertainer.com ausbauen (statt Energie in 2. Domain).",
+    "einziger_valider_grund_fuer_2_domains": "Image-Trennung: wenn der Zauberer als eigene, serioesere Marke (Firmenevents/Galas/Hochzeiten) bewusst vom verspielten Clown-Image getrennt werden soll. Das ist eine Marken-, KEINE SEO-Entscheidung. Dann 2 Domains vertretbar, aber mit Monaten Aufbauzeit + mehr Pflege.",
+    "entscheidung_status": "OFFEN beim Inhaber. Bis zur Entscheidung: liar-entertainer.com inkl. /zauberer/* /kinderzauberer/* normal weiteroptimieren (Welle 4).",
+    "redirect_regel": "Autopilot setzt NIEMALS eigenmaechtig 301/Canonical auf ODER von zauberer-liar.de. Jede Domain-Aenderung nur auf explizites Inhaber-Signal."
   },
   "wave_progress": {
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
-    "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht (Route-Kollision weg).",
-    "welle_5_gsc_fehler": "AKTUELL/PRIORITAER - 'Gecrawlt - zurzeit nicht indexiert' (402 URLs, ~67% /attachment/ -> 410, Rest /tag//category//Legacy -> 301). KERNFIX: robots.txt Disallow fuer /attachment//category//tag/ entfernt (Commit 1376073, LIVE). GSC-Validierung am 2026-06-12 gestartet. NAECHSTE LAEUFE: Validierungsfortschritt beobachten, NICHT hektisch weiter pushen (Deindexierung dauert Wochen).",
-    "welle_4_laufend": "NACH Welle 5 - PRIORISIERT nach GSC-Leistung: zuerst High-Impression/Low-CTR-Seiten (z.B. 'zauberer kindergeburtstag' 1354 Impr/16 Klicks, 'zauberer fuer kindergeburtstag' 849/8). Title/Description schaerfen + interne Verlinkung + FAQ-Schema. Dann uebrige City-/Service-Seiten."
+    "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
+    "welle_5_gsc_fehler": "AKTUELL/PRIORITAER - 'Gecrawlt - zurzeit nicht indexiert' (402 URLs). KERNFIX: robots.txt Disallow /attachment//category//tag/ entfernt (Commit 1376073, LIVE). GSC-Validierung am 2026-06-12 gestartet. NAECHSTE LAEUFE: Fortschritt beobachten, nicht hektisch pushen (dauert Wochen).",
+    "welle_4_laufend": "NACH Welle 5 - PRIORISIERT nach GSC-Leistung: zuerst High-Impression/Low-CTR (z.B. 'zauberer kindergeburtstag' 1354/16, 'zauberer fuer kindergeburtstag' 849/8). Title/Description + interne Links + FAQ-Schema. Dann City-/Service-Seiten. /zauberer//kinderzauberer/ mitoptimieren (eine-Domain-Strategie empfohlen)."
   },
   "gsc_leistung_2026_06_12": {
-    "zeitraum": "3 Monate",
-    "klicks": 1820,
-    "impressionen": 82400,
-    "ctr": "2.2%",
-    "durchschnittsposition": 10.8,
+    "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum liegt bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10 (unten Seite1/Seite2), kaum Klicks -> Title/CTR + Position verbessern."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10, kaum Klicks -> Title/CTR + Position verbessern."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -33,28 +29,30 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 6,
+  "commits_today": 7,
   "last_run_date": "2026-06-12",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
     "2026-06-12 GSC: sitemap.xml neu eingereicht; 6 Blog-Artikel zur Indexierung beantragt",
     "2026-06-12 Welle 5 GESTARTET: robots.txt-Fix (Commit 1376073) live, GSC-Validierung gestartet",
-    "2026-06-12 GSC-Leistung analysiert + Domain-Strategie (zauberer-liar.de Migration spaeter) festgehalten"
+    "2026-06-12 GSC-Leistung analysiert; Domain-Strategie geklaert -> Empfehlung EINE Domain (zauberer-liar.de als 301), Aufbau auf Hauptdomain"
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
   "self_improvements": [
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site (curl) pruefen, nie nur dist/.",
     "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung.",
-    "Datei-Loeschungen + GSC-Bedienung gehen per Claude-in-Chrome (Inhaber eingeloggt). GSC: nach Eingabe id= der inspect-URL pruefen; Renderer-Screenshots koennen haengen -> find/get_page_text nutzen.",
-    "WICHTIG GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf! Blockierte URLs koennen NICHT deindexiert werden.",
-    "GSC-Ausgangswerte 2026-06-05/12 fuer Review-Vergleich: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Seite mit Weiterleitung' 163; 404: 302. Leistung: 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
-    "DOMAIN-MIGRATION zauberer-liar.de: NIE eigenmaechtig 301 setzen. Erst Zielseite fertig, dann pro Stadt, nur auf Inhaber-Signal. Verschiedene Domains = Migration, keine Kannibalisierung."
+    "Datei-Loeschungen + GSC-Bedienung gehen per Claude-in-Chrome (Inhaber eingeloggt). GSC: nach Eingabe id= der inspect-URL pruefen; Screenshots koennen haengen -> find/get_page_text.",
+    "GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf -> blockierte URLs koennen nicht deindexiert werden.",
+    "GSC-Ausgangswerte fuer Review: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
+    "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen, NICHT in zauberer-liar.de aufteilen (Autoritaets-Verduennung). Zweitdomain hoechstens als 301-Weiterleitung. Aufteilung nur bei bewusster Image-/Markentrennung (Geschaeftsentscheidung). Autopilot aendert Domains NIE eigenmaechtig."
   ],
-  "todos_fuer_michael": [],
+  "todos_fuer_michael": [
+    "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand, SEO-Aufbau ab 0). Bei Entscheidung Bescheid geben -> Umsetzung."
+  ],
   "log": [
-    "2026-06-12 Setup + Lauf 2 (GSC) + Lauf 3 (danke.astro) + Lauf 4 (Welle 5 / robots.txt-Fix + GSC-Validierung).",
-    "2026-06-12 Lauf 5: GSC-Leistung analysiert (Markensuchen Platz1 ausgereizt; echte Chance = generische kindergeburtstag/zaubershow-Keywords mit hohen Impressionen + Position ~10). Welle 4 entsprechend priorisiert (High-Impr/Low-CTR zuerst). Domain-Strategie zauberer-liar.de dokumentiert: Migration kommt SPAETER, nur vom Inhaber angestossen, pro Stadt nach Fertigstellung der Zielseite; Autopilot leitet NIE eigenmaechtig um. Bis dahin liar-entertainer.com inkl. Zauberer-Seiten normal weiteroptimieren."
+    "2026-06-12 Setup + Lauf 2 (GSC) + Lauf 3 (danke.astro) + Lauf 4 (Welle 5 robots.txt-Fix + Validierung) + Lauf 5 (GSC-Leistung + Domain-Strategie spaeter).",
+    "2026-06-12 Lauf 6: Domain-Frage vertieft. Inhaber-Motiv = SEO-Annahme + zauberer-liar.de existiert. KLARE EMPFEHLUNG: NICHT aufteilen - eine starke Domain > zwei schwache; zauberer-liar.de als 301 auf liar-entertainer.com/zauberer/, Aufbau auf Hauptdomain. Aufteilung nur bei bewusster Image-Trennung. Entscheidung beim Inhaber offen (in todos_fuer_michael). Autopilot aendert Domains nie eigenmaechtig."
   ]
 }
