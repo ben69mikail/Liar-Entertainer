@@ -3,9 +3,9 @@
   "started": "2026-06-12",
   "current_wave": 4,
   "wave_progress": {
-    "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58, 2026-06-11) - 6 Blog-Artikel in sitemap.xml, 118 URLs, keine clown-in-Duplikate",
+    "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58, 2026-06-11) - 6 Blog-Artikel in sitemap.xml, 118 URLs. GSC-Resubmit am 2026-06-12 erledigt.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965, 2026-06-11) - seoTitle <=60 Zeichen fuer alle 6 Content-Collection-Artikel",
-    "welle_3_breadcrumb_danke": "TEILWEISE - Breadcrumb-Schema bereits flaechendeckend live (25/25 Stichprobe). OFFEN: danke-Route-Duplikat (danke.astro + danke/index.astro) - Loeschung via GitHub-MCP nicht moeglich -> To-Do fuer Michael.",
+    "welle_3_breadcrumb_danke": "TEILWEISE - Breadcrumb-Schema bereits flaechendeckend live (25/25 Stichprobe). OFFEN: danke-Route-Duplikat (danke.astro + danke/index.astro) - Loeschung braucht git-Push-Token, in Cowork-Sandbox NICHT verfuegbar -> manuell durch Michael.",
     "welle_4_laufend": "IN_ARBEIT - interne Stadt-Verlinkung, FAQPage-Ausweitung, KI-Eroeffnungsabsaetze, speakable, sameAs, Galerie-Alt"
   },
   "config": {
@@ -15,26 +15,29 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 1,
+  "commits_today": 2,
   "last_run_date": "2026-06-12",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config (github-mcp-only / im-repo / vollauto-mit-limits) festgelegt",
     "Welle 1 live verifiziert (sitemap.xml: 118 URLs, 6/6 Blog-Artikel)",
     "Welle 2 erledigt (seoTitle-Commits 2026-06-11)",
-    "Welle 3: Breadcrumb-Schema bereits live auf 25/25 Stichprobenseiten; danke-Duplikat bleibt manuelles To-Do"
+    "Welle 3: Breadcrumb-Schema bereits live auf 25/25 Stichprobenseiten; danke-Duplikat bleibt manuelles To-Do",
+    "2026-06-12 GSC (per Browser): sitemap.xml neu eingereicht; alle 6 Blog-Artikel per URL-Pruefung zur Indexierung beantragt (alle Status 'Gefunden - zurzeit nicht indexiert' -> Crawling-Warteschlange)"
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
   "self_improvements": [
     "Sandbox-Build emittiert keine set:html-ld+json-Scripts -> Schema-Verifikation IMMER gegen Live-Site (curl), nie nur gegen dist/.",
     "Masterplan-Annahmen gegen Live-Ist pruefen, bevor Code geaendert wird.",
-    "Loeschungen (z.B. danke.astro) sind via GitHub-MCP nicht moeglich -> als To-Do fuer Michael sammeln statt zu raten."
+    "Loeschungen (z.B. danke.astro) sind via GitHub-MCP nicht moeglich UND PAT ist in Cowork-Sandbox nicht verfuegbar -> als To-Do fuer Michael sammeln.",
+    "GSC hat keinen Connector, ist aber per Claude-in-Chrome bedienbar (eingeloggt): Sitemap-Resubmit + URL-Pruefung/Indexierung funktionieren. Renderer-Screenshots koennen haengen -> find/get_page_text + Element-Referenzen nutzen.",
+    "GSC-Datenpunkt 2026-06-12: 134 indexierte / 885 nicht indexierte Seiten (fuer Review-Vergleich)."
   ],
   "todos_fuer_michael": [
-    "GSC: sitemap.xml neu einreichen + 6 Blog-Artikel zur Indexierung",
-    "GitHub: src/pages/kontakt/danke.astro loeschen (tote Route-Dublette)"
+    "GitHub: src/pages/kontakt/danke.astro loeschen (tote Route-Dublette; Astro 5.18 warnt bereits vor Hard-Error). Link: https://github.com/ben69mikail/Liar-Entertainer/blob/main/src/pages/kontakt/danke.astro -> Papierkorb -> Commit."
   ],
   "log": [
-    "2026-06-12 Setup: Eigenstaendiger Betrieb eingerichtet. State ins Repo (.seo-autopilot/state.json), Config gesetzt. Welle 1+2 verifiziert/erledigt. Welle 3 groesstenteils bereits live. Start Welle 4 im naechsten Schritt/Lauf. Commit 1/5."
+    "2026-06-12 Setup: Eigenstaendiger Betrieb eingerichtet. State ins Repo, Config gesetzt. Welle 1+2 verifiziert/erledigt. Welle 3 groesstenteils live. Commit 1.",
+    "2026-06-12 Lauf 2: GSC per Browser erledigt (Sitemap-Resubmit + 6 Artikel zur Indexierung). danke.astro bleibt offen (kein PAT in Sandbox). State-Update Commit 2."
   ]
 }
