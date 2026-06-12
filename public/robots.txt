@@ -3,15 +3,18 @@ Allow: /
 
 Disallow: /kontakt/danke/
 Disallow: /404
-Disallow: /*/attachment/*
-Disallow: /attachment/*
 
-# WordPress-Legacy-Flaechen (kein Crawl-Budget verschwenden)
+# WordPress-Legacy-Flaechen: NICHT mehr per Disallow blockieren!
+# /attachment/ liefert 410 Gone, /category/ + /tag/ liefern 301 auf Hauptseiten
+# (siehe public/.htaccess). Google MUSS diese crawlen duerfen, um den 410/301
+# zu sehen und die toten Legacy-URLs zu deindexieren. Ein Disallow wuerde die
+# Deindexierung verhindern (URLs blieben dauerhaft im GSC-Report haengen).
+# Crawl-Budget ist bei ~118 echten Seiten unkritisch.
+
+# Reine Crawl-Fallen ohne 410/301-Behandlung weiterhin blockieren:
 Disallow: /feed/
 Disallow: /*/feed/
 Disallow: /author/
-Disallow: /category/
-Disallow: /tag/
 Disallow: /*?s=
 Disallow: /*?p=
 Disallow: /*?replytocom=
