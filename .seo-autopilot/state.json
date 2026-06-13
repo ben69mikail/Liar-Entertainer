@@ -13,14 +13,14 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "AKTUELL/PRIORITAER - 'Gecrawlt - zurzeit nicht indexiert' (402 URLs). KERNFIX: robots.txt Disallow /attachment//category//tag/ entfernt (Commit 1376073, LIVE). GSC-Validierung am 2026-06-12 gestartet. NAECHSTE LAEUFE: Fortschritt beobachten, nicht hektisch pushen (dauert Wochen).",
-    "welle_4_laufend": "NACH Welle 5 - PRIORISIERT nach GSC-Leistung: zuerst High-Impression/Low-CTR (z.B. 'zauberer kindergeburtstag' 1354/16, 'zauberer fuer kindergeburtstag' 849/8). Title/Description + interne Links + FAQ-Schema. Dann City-/Service-Seiten. /zauberer//kinderzauberer/ mitoptimieren (eine-Domain-Strategie empfohlen)."
+    "welle_5_gsc_fehler": "AKTUELL/PRIORITAER - WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200 /clown/clownshow/, robots.txt gibt /attachment//category//tag/ frei. ALLES SAUBER. Re-Crawl/Deindexierung dauert Wochen -> nicht hektisch pushen, GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig, im Autorun nicht moeglich).",
+    "welle_4_laufend": "GROSSTEILS BEREITS UMGESETZT. 2026-06-13 verifiziert: (1) Top-CTR-Seiten 'zauberer kindergeburtstag' (/kindergeburtstag/) + 'zaubershow fuer kinder' (/zauberer/zaubershow/) haben bereits optimierte Title+Description+FAQPage+Service+VideoObject-Schema. (2) Interne City-Cross-Verlinkung EXISTIERT bereits auf 55 City-Seiten als 'Weitere Services in {Stadt}'-Block (106 Links, 0 tote, build-verifiziert). Geplante Massnahme war schon da -> redundanter Edit verworfen, kein Commit. OFFEN/optional: speakable-Schema, sameAs (GBP/golocal/Social) in Organization/Person-Schema, Galerie-Alt-Texte, antwortfertige KI-Eroeffnungsabsaetze."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10, kaum Klicks -> Title/CTR + Position verbessern."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10, kaum Klicks -> Title/CTR + Position verbessern. ANMERKUNG 2026-06-13: Title/Desc/FAQ dieser Seiten sind bereits optimiert -> Hebel jetzt eher Positionsverbesserung (Content-Tiefe, interne Links, Backlinks) statt CTR."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -29,30 +29,38 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 7,
-  "last_run_date": "2026-06-12",
+  "commits_today": 1,
+  "last_run_date": "2026-06-13",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
     "2026-06-12 GSC: sitemap.xml neu eingereicht; 6 Blog-Artikel zur Indexierung beantragt",
     "2026-06-12 Welle 5 GESTARTET: robots.txt-Fix (Commit 1376073) live, GSC-Validierung gestartet",
-    "2026-06-12 GSC-Leistung analysiert; Domain-Strategie geklaert -> Empfehlung EINE Domain (zauberer-liar.de als 301), Aufbau auf Hauptdomain"
+    "2026-06-12 GSC-Leistung analysiert; Domain-Strategie geklaert -> Empfehlung EINE Domain (zauberer-liar.de als 301), Aufbau auf Hauptdomain",
+    "2026-06-13 Welle 5 Live-Stichprobe: 410/301/200 + robots.txt alle sauber (curl-verifiziert). Wartephase bestaetigt.",
+    "2026-06-13 Welle 4 Audit: Top-CTR-Seiten bereits voll optimiert; City-Cross-Linking bereits site-weit vorhanden (55 Seiten/106 Links/0 tote, build-getestet). Kein Code-Commit noetig - redundanter Edit verworfen."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
   "self_improvements": [
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site (curl) pruefen, nie nur dist/.",
-    "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung.",
-    "Datei-Loeschungen + GSC-Bedienung gehen per Claude-in-Chrome (Inhaber eingeloggt). GSC: nach Eingabe id= der inspect-URL pruefen; Screenshots koennen haengen -> find/get_page_text.",
+    "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung. BESTAETIGT 2026-06-13: geplantes City-Cross-Linking existierte bereits -> haette ohne Pruefung Duplikat erzeugt. IMMER erst pruefen ob Massnahme schon umgesetzt ist.",
+    "WICHTIG (2026-06-13): City-Seiten sind EIGENE Dateien unter src/pages/clown/clownshow/clown-in-*/index.astro, /kinderzauberer/kinderzauberer-in-*/, /kindergeburtstag/geburtstag-in-*/ - NICHT [...slug].astro. [...slug].astro faengt nur WP-Scraped-Legacy-Slugs ab. Aenderungen an City-Seiten direkt in deren index.astro, nicht in [...slug].astro.",
+    "City-Slug-Asymmetrie: Geburtstag nutzt 'haltern-am-see', Clown/Kinderzauberer nutzen 'haltern'. kinderzauberer-in-gladbeck existiert NICHT (clown+geburtstag schon). clown-in-moers existiert NICHT (geburtstag+kinderzauberer schon). waltrop/wesel/xanten/castrop-rauxel nur als geburtstag-in-*. Bei Cross-Links/Sitemap immer Existenz pruefen.",
+    "Datei-Loeschungen + GSC-Bedienung gehen per Claude-in-Chrome (Inhaber eingeloggt). GSC: nach Eingabe id= der inspect-URL pruefen; Screenshots koennen haengen -> find/get_page_text. Im AUTORUN ohne Owner-Login kein GSC-Zugriff -> nur curl/Repo-basierte Arbeit moeglich.",
     "GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf -> blockierte URLs koennen nicht deindexiert werden.",
     "GSC-Ausgangswerte fuer Review: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
-    "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen, NICHT in zauberer-liar.de aufteilen (Autoritaets-Verduennung). Zweitdomain hoechstens als 301-Weiterleitung. Aufteilung nur bei bewusster Image-/Markentrennung (Geschaeftsentscheidung). Autopilot aendert Domains NIE eigenmaechtig."
+    "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar' (kann von frueherem nobody-Lauf gesperrt sein -> EACCES). Workaround fuer Build-Test: cacheDir per sed temporaer auf eigenes /tmp/vc-* umbiegen (nur im Klon, nie committen).",
+    "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen, NICHT in zauberer-liar.de aufteilen (Autoritaets-Verduennung). Zweitdomain hoechstens als 301-Weiterleitung. Aufteilung nur bei bewusster Image-/Markentrennung (Geschaeftsentscheidung). Autopilot aendert Domains NIE eigenmaechtig.",
+    "Naechste echte Welle-4-Hebel (Repo-basiert, ohne GSC): speakable-Schema auf Top-Seiten, sameAs-Array (GBP/golocal/Social-Profile) in Organization/Person-Schema, antwortfertige Eroeffnungsabsaetze fuer KI-Suche, Galerie-Alt-Texte. Position (nicht CTR) ist der Hebel bei den High-Impression-Keywords."
   ],
   "todos_fuer_michael": [
-    "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand, SEO-Aufbau ab 0). Bei Entscheidung Bescheid geben -> Umsetzung."
+    "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand, SEO-Aufbau ab 0). Bei Entscheidung Bescheid geben -> Umsetzung.",
+    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter den Ausgangswert 402? Status der am 12.06. gestarteten Validierung? Kurz Bescheid geben, dann kann der Autopilot Welle 5 abschliessen und auf Welle 4 wechseln."
   ],
   "log": [
     "2026-06-12 Setup + Lauf 2 (GSC) + Lauf 3 (danke.astro) + Lauf 4 (Welle 5 robots.txt-Fix + Validierung) + Lauf 5 (GSC-Leistung + Domain-Strategie spaeter).",
-    "2026-06-12 Lauf 6: Domain-Frage vertieft. Inhaber-Motiv = SEO-Annahme + zauberer-liar.de existiert. KLARE EMPFEHLUNG: NICHT aufteilen - eine starke Domain > zwei schwache; zauberer-liar.de als 301 auf liar-entertainer.com/zauberer/, Aufbau auf Hauptdomain. Aufteilung nur bei bewusster Image-Trennung. Entscheidung beim Inhaber offen (in todos_fuer_michael). Autopilot aendert Domains nie eigenmaechtig."
+    "2026-06-12 Lauf 6: Domain-Frage vertieft. Inhaber-Motiv = SEO-Annahme + zauberer-liar.de existiert. KLARE EMPFEHLUNG: NICHT aufteilen - eine starke Domain > zwei schwache; zauberer-liar.de als 301 auf liar-entertainer.com/zauberer/, Aufbau auf Hauptdomain. Aufteilung nur bei bewusster Image-Trennung. Entscheidung beim Inhaber offen (in todos_fuer_michael). Autopilot aendert Domains nie eigenmaechtig.",
+    "2026-06-13 Lauf 7: Repo-Guard OK (kein Fremdcommit <90min, letzter Commit 12.06.). commits_today auf 0 zurueckgesetzt. Welle 5 Live-Stichprobe per curl: /attachment/ 410, /tag/ 301->200/blog/, /category/clown 301->200/clown/clownshow/, robots.txt gibt frei - ALLES SAUBER, Wartephase. Welle 4 Audit: Top-CTR-Seiten (kindergeburtstag, zaubershow) bereits voll optimiert (Title/Desc/FAQPage); City-Cross-Linking bereits site-weit (55 Seiten/106 Links/0 tote, lokal build-verifiziert mit 151 Seiten). Geplanter Cross-Link-Edit war REDUNDANT -> verworfen, kein inhaltlicher Commit. Nur State-Commit. GSC-Beobachtung + Domain-Entscheidung bleiben Owner-To-Dos."
   ]
 }
