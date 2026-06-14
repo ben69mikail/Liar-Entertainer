@@ -1,7 +1,7 @@
 {
   "_doc": "Gedaechtnis des SEO-Wellen-Autopiloten. Wird bei jedem Lauf gelesen und am Ende aktualisiert (per GitHub-MCP create_or_update_file auf diesen Pfad, sha mitgeben).",
   "started": "2026-06-12",
-  "current_wave": 5,
+  "current_wave": 4,
   "domain_strategie": {
     "zweitdomain": "zauberer-liar.de (existiert/200, eigene Sitemap)",
     "empfehlung_2026_06_12": "NICHT in zwei Domains aufteilen. Inhaber-Motiv war SEO-Annahme (getrennte Domain = besseres Ranking) - das ist ein Irrtum: eine starke Domain schlaegt zwei schwache (Autoritaet wird sonst verduennt, doppelter Pflegeaufwand, rankende Seiten gingen verloren). Exact-Match-Domains sind seit Jahren kein Rankingfaktor mehr. EMPFOHLEN: zauberer-liar.de als komplette 301-Weiterleitung auf liar-entertainer.com/zauberer/ (sichert Name + buendelt Linkkraft), und den /zauberer//kinderzauberer/-Bereich AUF liar-entertainer.com ausbauen (statt Energie in 2. Domain).",
@@ -13,14 +13,14 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "AKTUELL/PRIORITAER - WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200 /clown/clownshow/, robots.txt gibt /attachment//category//tag/ frei. ALLES SAUBER. Re-Crawl/Deindexierung dauert Wochen -> nicht hektisch pushen, GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig, im Autorun nicht moeglich).",
-    "welle_4_laufend": "GROSSTEILS BEREITS UMGESETZT. 2026-06-13 verifiziert: (1) Top-CTR-Seiten 'zauberer kindergeburtstag' (/kindergeburtstag/) + 'zaubershow fuer kinder' (/zauberer/zaubershow/) haben bereits optimierte Title+Description+FAQPage+Service+VideoObject-Schema. (2) Interne City-Cross-Verlinkung EXISTIERT bereits auf 55 City-Seiten als 'Weitere Services in {Stadt}'-Block (106 Links, 0 tote, build-verifiziert). Geplante Massnahme war schon da -> redundanter Edit verworfen, kein Commit. OFFEN/optional: speakable-Schema, sameAs (GBP/golocal/Social) in Organization/Person-Schema, Galerie-Alt-Texte, antwortfertige KI-Eroeffnungsabsaetze."
+    "welle_5_gsc_fehler": "WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200 /clown/clownshow/, robots.txt gibt /attachment//category//tag/ frei. ALLES SAUBER. Re-Crawl/Deindexierung dauert Wochen -> nicht hektisch pushen, GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig, im Autorun nicht moeglich). Owner-To-Do bleibt: Zaehler 'Gecrawlt-nicht-indexiert' (Ausgang 402) pruefen.",
+    "welle_4_laufend": "AKTIV. 2026-06-14 (Commit b12dd4c): LocalBusiness-Schema in BaseLayout.astro um sameAs (3 verifizierte Profile: Facebook clownzaubererliar, Instagram clown_zauberer_liar, Google Maps Place Gladbeck - alle live 200 geprueft) + speakable (SpeakableSpecification auf h1/.hero) erweitert. Site-weit. Lokal build-verifiziert (JSON-LD rendert korrekt in dist-HTML). LIVE-PROPAGATION am Laufende noch ausstehend (Deploy >10min, ungewoehnlich lang) -> naechster Lauf per curl bestaetigen, dass sameAs/speakable live ist. 2026-06-13 Audit-Stand bleibt: Top-CTR-Seiten (kindergeburtstag, zaubershow) bereits voll optimiert; City-Cross-Linking site-weit (55 Seiten/106 Links/0 tote). OFFEN/optional: sameAs/speakable auch in Person-/Service-Schema einzelner Top-Seiten, antwortfertige KI-Eroeffnungsabsaetze, Galerie-Alt-Texte, Content-Tiefe/interne Links zur Positionsverbesserung der High-Impression-Keywords."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10, kaum Klicks -> Title/CTR + Position verbessern. ANMERKUNG 2026-06-13: Title/Desc/FAQ dieser Seiten sind bereits optimiert -> Hebel jetzt eher Positionsverbesserung (Content-Tiefe, interne Links, Backlinks) statt CTR."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords: viele Impressionen, Position ~10, kaum Klicks -> Title/CTR + Position verbessern. ANMERKUNG 2026-06-13: Title/Desc/FAQ dieser Seiten sind bereits optimiert -> Hebel jetzt eher Positionsverbesserung (Content-Tiefe, interne Links, Backlinks) statt CTR. ANMERKUNG 2026-06-14: sameAs/speakable site-weit ergaenzt (Entity-/KI-Suche-Staerkung)."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -30,7 +30,7 @@
     "repo_guard_fremdcommit_minuten": 90
   },
   "commits_today": 1,
-  "last_run_date": "2026-06-13",
+  "last_run_date": "2026-06-14",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
@@ -38,7 +38,8 @@
     "2026-06-12 Welle 5 GESTARTET: robots.txt-Fix (Commit 1376073) live, GSC-Validierung gestartet",
     "2026-06-12 GSC-Leistung analysiert; Domain-Strategie geklaert -> Empfehlung EINE Domain (zauberer-liar.de als 301), Aufbau auf Hauptdomain",
     "2026-06-13 Welle 5 Live-Stichprobe: 410/301/200 + robots.txt alle sauber (curl-verifiziert). Wartephase bestaetigt.",
-    "2026-06-13 Welle 4 Audit: Top-CTR-Seiten bereits voll optimiert; City-Cross-Linking bereits site-weit vorhanden (55 Seiten/106 Links/0 tote, build-getestet). Kein Code-Commit noetig - redundanter Edit verworfen."
+    "2026-06-13 Welle 4 Audit: Top-CTR-Seiten bereits voll optimiert; City-Cross-Linking bereits site-weit vorhanden (55 Seiten/106 Links/0 tote, build-getestet). Kein Code-Commit noetig - redundanter Edit verworfen.",
+    "2026-06-14 Welle 4: LocalBusiness-Schema (BaseLayout) um sameAs (3 verifizierte Profile) + speakable erweitert. Commit b12dd4c. Build lokal verifiziert (sameAs+SpeakableSpecification rendern in dist-HTML). Live-Propagation am Laufende noch ausstehend -> naechster Lauf bestaetigt."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
@@ -51,16 +52,21 @@
     "GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf -> blockierte URLs koennen nicht deindexiert werden.",
     "GSC-Ausgangswerte fuer Review: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
     "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar' (kann von frueherem nobody-Lauf gesperrt sein -> EACCES). Workaround fuer Build-Test: cacheDir per sed temporaer auf eigenes /tmp/vc-* umbiegen (nur im Klon, nie committen).",
+    "Sandbox-Build 2026-06-14: 'npm ci' kann partiell fehlschlagen (node_modules unvollstaendig, tsx fehlt fuer prebuild) -> stattdessen 'npm install' verwenden. Disk /tmp ist nur ~9.6G und kann beim full astro build mit ENOSPC abbrechen NACHDEM Seiten schon generiert wurden -> Edit-Validierung trotzdem moeglich: in bereits geschriebenem dist/*.html per grep pruefen ob JSON-LD korrekt rendert. node_modules+dist nach Test loeschen, um Platz freizugeben.",
+    "Sandbox-Klon-Dateien liegen unter /tmp (nicht in connected folder) -> Read-Tool kann sie nicht lesen. Zum Lesen via Read-Tool: Datei nach outputs/ kopieren (cp /tmp/... /sessions/.../mnt/outputs/).",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen, NICHT in zauberer-liar.de aufteilen (Autoritaets-Verduennung). Zweitdomain hoechstens als 301-Weiterleitung. Aufteilung nur bei bewusster Image-/Markentrennung (Geschaeftsentscheidung). Autopilot aendert Domains NIE eigenmaechtig.",
-    "Naechste echte Welle-4-Hebel (Repo-basiert, ohne GSC): speakable-Schema auf Top-Seiten, sameAs-Array (GBP/golocal/Social-Profile) in Organization/Person-Schema, antwortfertige Eroeffnungsabsaetze fuer KI-Suche, Galerie-Alt-Texte. Position (nicht CTR) ist der Hebel bei den High-Impression-Keywords."
+    "Welle-4-Hebel umgesetzt 2026-06-14: sameAs+speakable site-weit. NUR verifizierte (live-200) Profil-URLs in sameAs - kein erfundener YouTube-Kanal (im Repo nur fremde Embed-Videos). Naechste echte Hebel: Content-Tiefe/interne Links zur Positionsverbesserung der High-Impression-Keywords, antwortfertige KI-Eroeffnungsabsaetze, Galerie-Alt-Texte.",
+    "Deploy-Timing 2026-06-14: GitHub Actions -> IONOS SFTP-Deploy kann >10min dauern (an diesem Tag war nach 10min noch alte Schema-Version live). Im Autorun nicht endlos pollen - Commit+lokale Build-Verifikation reicht; Live-Verify auf naechsten Lauf verschieben wenn Propagation zu lang."
   ],
   "todos_fuer_michael": [
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand, SEO-Aufbau ab 0). Bei Entscheidung Bescheid geben -> Umsetzung.",
-    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter den Ausgangswert 402? Status der am 12.06. gestarteten Validierung? Kurz Bescheid geben, dann kann der Autopilot Welle 5 abschliessen und auf Welle 4 wechseln."
+    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter den Ausgangswert 402? Status der am 12.06. gestarteten Validierung? Kurz Bescheid geben, dann kann der Autopilot Welle 5 abschliessen.",
+    "Optional: Falls weitere offizielle Profile existieren (z.B. eigener YouTube-Kanal, golocal, eventpeppers, TikTok), kurz die URLs nennen -> werden ins sameAs-Schema aufgenommen (staerkt Entity-Erkennung bei Google + KI-Suche)."
   ],
   "log": [
     "2026-06-12 Setup + Lauf 2 (GSC) + Lauf 3 (danke.astro) + Lauf 4 (Welle 5 robots.txt-Fix + Validierung) + Lauf 5 (GSC-Leistung + Domain-Strategie spaeter).",
     "2026-06-12 Lauf 6: Domain-Frage vertieft. Inhaber-Motiv = SEO-Annahme + zauberer-liar.de existiert. KLARE EMPFEHLUNG: NICHT aufteilen - eine starke Domain > zwei schwache; zauberer-liar.de als 301 auf liar-entertainer.com/zauberer/, Aufbau auf Hauptdomain. Aufteilung nur bei bewusster Image-Trennung. Entscheidung beim Inhaber offen (in todos_fuer_michael). Autopilot aendert Domains nie eigenmaechtig.",
-    "2026-06-13 Lauf 7: Repo-Guard OK (kein Fremdcommit <90min, letzter Commit 12.06.). commits_today auf 0 zurueckgesetzt. Welle 5 Live-Stichprobe per curl: /attachment/ 410, /tag/ 301->200/blog/, /category/clown 301->200/clown/clownshow/, robots.txt gibt frei - ALLES SAUBER, Wartephase. Welle 4 Audit: Top-CTR-Seiten (kindergeburtstag, zaubershow) bereits voll optimiert (Title/Desc/FAQPage); City-Cross-Linking bereits site-weit (55 Seiten/106 Links/0 tote, lokal build-verifiziert mit 151 Seiten). Geplanter Cross-Link-Edit war REDUNDANT -> verworfen, kein inhaltlicher Commit. Nur State-Commit. GSC-Beobachtung + Domain-Entscheidung bleiben Owner-To-Dos."
+    "2026-06-13 Lauf 7: Repo-Guard OK. Welle 5 Live-Stichprobe per curl: alles sauber, Wartephase. Welle 4 Audit: Top-CTR-Seiten + City-Cross-Linking bereits umgesetzt -> redundanter Edit verworfen, nur State-Commit.",
+    "2026-06-14 Lauf 8: Repo-Guard OK (letzter Commit 2026-06-13 04:43, eigener Autopilot, kein Fremdcommit <90min). commits_today auf 0 zurueckgesetzt (neuer Tag). Review nicht faellig (19.06.). Welle 5 weiter Wartephase (kein Owner-Login im Autorun -> kein GSC). Welle 4: konkreter Repo-Hebel umgesetzt - LocalBusiness-Schema (BaseLayout.astro, site-weit) um sameAs (Facebook/Instagram/Google-Maps, alle live-200 verifiziert) + speakable erweitert. Lokal build-verifiziert (JSON-LD rendert korrekt in dist/*.html; Build brach erst danach mit ENOSPC ab = Disk, kein Code-Fehler). Push Commit b12dd4c via GitHub-MCP. Live-Propagation nach 10min noch nicht sichtbar (Deploy ungewoehnlich langsam) -> Live-Verify auf naechsten Lauf verschoben. current_wave=4."
   ]
 }
