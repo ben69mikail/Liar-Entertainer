@@ -1,0 +1,5 @@
+Redeploy-Trigger-Log
+====================
+2026-06-17 13:34Z - IONOS_SFTP_REMOTE vom Inhaber korrigiert.
+Dieser Commit erzwingt einen frischen deploy.yml-Run, damit der Upload
+das richtige Docroot erreicht und der seit 12.06. blockierte Deploy live geht.
