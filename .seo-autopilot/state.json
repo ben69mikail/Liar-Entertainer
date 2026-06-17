@@ -3,12 +3,10 @@
   "started": "2026-06-12",
   "current_wave": 4,
   "BLOCKER_DEPLOY": {
-    "status": "AKTIV-KRITISCH (seit 12.06., diagnostiziert 16.06., re-verifiziert 17.06.)",
-    "befund": "GitHub-Actions-Deploys (deploy.yml) #78-#84 melden ALLE conclusion=success, inkl. Step 9 'Deploy to IONOS via SFTP'. Build laeuft, SFTP-Upload nach /LIARastro meldet 0 Fehler. TROTZDEM liefert liar-entertainer.com weiter den Build vom 12.06.",
-    "beweis": "Alle Live-Dateien (Startseite, robots.txt, sitemap.xml) haben last-modified 'Fri, 12 Jun 2026 12:10:4x' - innerhalb weniger Sekunden = EIN Upload-Vorgang = Abschluss von Run #77 (sha 51dd96b, 12.06. 12:09:58Z). Live-Schema = LocalBusiness OHNE sameAs/speakable (alter Build). Server: Apache, KEIN CDN dazwischen (kein via/cf-/x-cache-Header). 17.06.: erneut bestaetigt - Startseite 12 Jun 12:10:48, robots 12:10:47, sitemap 12:10:44; Schema weiter nur LocalBusiness; Runs #81-#84 success.",
-    "ausgeschlossen": "(1) Code-Fehler: Quelle+Build verifiziert korrekt. (2) Build-Fehler: Actions=success. (3) Alt-Repo-Ueberschreibung: liar-entertainer-blog letzter Run 30.05., deployt nicht. (4) CDN-Cache: max-age 1h laengst abgelaufen, kein CDN.",
-    "ursache_wahrscheinlich": "Upload-Zielverzeichnis (IONOS_SFTP_REMOTE = /LIARastro) ist NICHT (mehr) das Docroot, das die Domain liar-entertainer.com ausliefert. Vermutlich am 12.06. im IONOS-Panel Webspace-/Domain-Docroot-Zuordnung geaendert ODER falsches Remote-Secret. Erfolgreicher SFTP-Upload in falschen Pfad = unsichtbar.",
-    "autopilot_kann_NICHT_loesen": "Behebung erfordert IONOS-Panel-Zugriff (Domain->Docroot-Zuordnung) oder GitHub-Secret-Korrektur (IONOS_SFTP_REMOTE). Beides nur Inhaber. JEDER inhaltliche Commit landet bis dahin im falschen Verzeichnis = wirkungslos. -> Bis Behebung KEINE Code-Commits, nur diagnostizieren/dokumentieren."
+    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; Redeploy (Commit 1960795 -> Run #86 success) schlaegt live durch. Ab jetzt gilt wieder: 1 Push = 1 Live-Deploy.",
+    "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build (alle Live-Dateien last-modified 'Fri, 12 Jun 2026 12:10:4x'), obwohl Actions-Runs #78-#85 alle conclusion=success meldeten. Ursache: SFTP-Upload-Ziel (IONOS_SFTP_REMOTE) != ausgeliefertes Domain-Docroot. KEIN Code-/Build-Fehler.",
+    "behebung": "2026-06-17: Inhaber hat IONOS_SFTP_REMOTE auf das korrekte Docroot angepasst. Autopilot pushte Redeploy-Trigger (.seo-autopilot/redeploy-trigger.txt, Commit 1960795) -> deploy.yml Run #86 (alle Steps success inkl. SFTP). Live-Verify danach: Startseite/robots/sitemap last-modified 'Wed, 17 Jun 2026 13:36'; Live-Schema enthaelt sameAs + speakable + Person -> alle aufgestauten Welle-4-Commits live.",
+    "lehre": "Bei Verdacht Deploy-Stau: nicht nur Actions-conclusion, sondern Live-last-modified pruefen. success != live, wenn Upload-Ziel != Docroot."
   },
   "domain_strategie": {
     "zweitdomain": "zauberer-liar.de (existiert/200, eigene Sitemap)",
@@ -21,14 +19,14 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "WARTEPHASE. KERNFIX live (Commit 1376073, in Build vom 12.06. enthalten). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200, robots.txt frei. ALLES SAUBER (im aktuell ausgelieferten 12.06.-Build). Re-Crawl/Deindexierung dauert Wochen. GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig). Owner-To-Do: Zaehler 'Gecrawlt-nicht-indexiert' (Ausgang 402) pruefen.",
-    "welle_4_laufend": "BLOCKIERT durch BLOCKER_DEPLOY. Alle Welle-4-Verbesserungen (sameAs/speakable Commit b12dd4c 14.06.; speakable-Selector-Fix 3409ca3 + hero-subtitle be06246 15.06.) sind im Repo + werden von Actions 'erfolgreich' deployt, gehen aber NICHT live, weil der SFTP-Upload das falsche/nicht-ausgelieferte Docroot trifft (siehe BLOCKER_DEPLOY). Sobald der Inhaber den Deploy-Pfad fixt, werden ALLE bisherigen Commits in einem Rutsch live (kein Nachpushen noetig - sie sitzen alle in main). 2026-06-13 Audit-Stand: Top-CTR-Seiten optimiert, City-Cross-Linking site-weit (55 Seiten/106 Links/0 tote). OFFEN nach Deploy-Fix: antwortfertige KI-Eroeffnungsabsaetze weiterer Top-Seiten, Galerie-Alt-Texte, Content-Tiefe."
+    "welle_5_gsc_fehler": "WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200, robots.txt frei. Re-Crawl/Deindexierung dauert Wochen. GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig). Owner-To-Do: Zaehler 'Gecrawlt-nicht-indexiert' (Ausgang 402) pruefen.",
+    "welle_4_laufend": "ENTSPERRT 2026-06-17 (Deploy-Blocker geloest). Bisher live verifiziert: sameAs (FB/IG/GoogleMaps) + speakable (h1 + .hero-subtitle) + Person-Schema (Michael Prescler). Top-CTR-Seiten + City-Cross-Linking site-weit (55 Seiten/106 Links/0 tote) bereits committed/live. OFFEN als naechste Welle-4-Schritte: antwortfertige KI-Eroeffnungsabsaetze weiterer Top-Seiten (zauberer-kindergeburtstag etc.), Galerie-Alt-Texte, Content-Tiefe. Title/Desc/FAQ der High-Impression-Keywords pruefen ob live wirksam."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Title/Desc/FAQ bereits optimiert (im 12.06.-Build live). Weitere Hebel (sameAs/speakable/Content-Tiefe) liegen committed bereit, koennen aber erst wirken NACH Deploy-Fix."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Title/Desc/FAQ + sameAs/speakable jetzt (ab 17.06.) live wirksam."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -37,7 +35,7 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 0,
+  "commits_today": 2,
   "last_run_date": "2026-06-17",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
@@ -49,8 +47,9 @@
     "2026-06-13 Welle 4 Audit: Cross-Linking bereits site-weit vorhanden. Kein Commit noetig.",
     "2026-06-14 Welle 4: sameAs + speakable in BaseLayout (Commit b12dd4c). Build verifiziert.",
     "2026-06-15 Welle 4: Deploy-Stau VERMUTET; Speakable-Selector-Fix (3409ca3) + hero-subtitle (be06246) gepusht um Redeploy zu erzwingen.",
-    "2026-06-16 Lauf 10: DEPLOY-STAU DIAGNOSTIZIERT (Durchbruch). Actions-Runs #78-#83 alle conclusion=success inkl. SFTP-Step, ABER Live = Build vom 12.06. (alle Dateien last-modified 12 Jun 12:10:4x = Run #77). Alt-Repo liar-entertainer-blog: letzter Run 30.05. -> deployt nicht. deploy_ionos.py geprueft: laedt nach /LIARastro, meldet success bei 0 Fehlern. FAZIT: erfolgreicher SFTP-Upload trifft falsches/nicht-ausgeliefertes Docroot -> Infra-Problem (IONOS Domain->Docroot oder Secret IONOS_SFTP_REMOTE), nur Inhaber loesbar. KEIN inhaltlicher Commit gesetzt. Praezise Handlungsanweisung in todos_fuer_michael.",
-    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter AKTIV. Repo-Guard OK (letzter Commit 16.06. 04:38, eigener Autopilot). Review nicht faellig (19.06.). Live-Verify: Startseite 12 Jun 12:10:48 / robots 12:10:47 / sitemap 12:10:44 - kein wirksamer Deploy seit 12.06. Live-Schema weiter nur LocalBusiness OHNE sameAs/speakable. Actions-Runs #81-#84 alle success (auch #84 vom 16.06.), nichts live. KEIN inhaltlicher Commit (waere unsichtbar). Welle 5 Wartephase, Welle 4 blockiert."
+    "2026-06-16 Lauf 10: DEPLOY-STAU DIAGNOSTIZIERT. Runs #78-#83 success, Live aber 12.06.-Build. Ursache: SFTP-Ziel != Docroot. KEIN inhaltlicher Commit. Anleitung in todos_fuer_michael.",
+    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv (Live noch 12.06., Runs #81-#84 success). KEIN inhaltlicher Commit. State/Log committed.",
+    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Inhaber hat IONOS_SFTP_REMOTE korrigiert. Autopilot pushte Redeploy-Trigger (Commit 1960795) -> Run #86 (alle Steps success inkl. SFTP). Live-Verify: last-modified jetzt 17 Jun 13:36; Schema enthaelt sameAs+speakable+Person. ALLE aufgestauten Welle-4-Commits live. Welle 4 entsperrt."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
@@ -66,25 +65,26 @@
     "Sandbox-Build: 'npm install' statt 'npm ci'. Build laeuft sauber (EXIT0, 151 Seiten). Build ist NICHT der Blocker.",
     "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Loesung: Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen.",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig.",
-    "DEPLOY-VERIFIKATION (verschaerft 2026-06-16): Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. WICHTIG: GitHub-Actions conclusion=success bedeutet NICHT, dass es live ist! Der SFTP-Deploy-Step kann 'success' melden (Upload in /LIARastro ok, 0 Fehler), waehrend die Domain ein ANDERES Docroot ausliefert. Beweis-Methode: Wenn ALLE Live-Dateien dasselbe last-modified-Datum tragen = letzter wirksamer Deploy; Actions-Runs danach mit success aber ohne Live-Aenderung = Upload-Ziel != Docroot. Pruefkette: 1) Actions-Run-conclusion (api/.../actions/runs), 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad, nicht Code.",
+    "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. GitHub-Actions conclusion=success bedeutet NICHT, dass es live ist! Der SFTP-Deploy-Step kann success melden, waehrend die Domain ein anderes Docroot ausliefert. Beweis: wenn ALLE Live-Dateien dasselbe last-modified tragen = letzter wirksamer Deploy. Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad, nicht Code.",
     "Actions-Run-Status ist OHNE Auth abrufbar (oeffentliches Repo): api.github.com/repos/OWNER/REPO/actions/workflows/deploy.yml/runs + /actions/runs/<id>/jobs fuer Step-Conclusions.",
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
-    "Bei aktivem Deploy-Blocker im Autorun KEINE inhaltlichen Commits setzen - sie landen unsichtbar im falschen Docroot und verbrennen nur das Commit-Limit. Pro Lauf nur: Blocker re-verifizieren (last-modified + Actions), Status dokumentieren, State committen. So bleibt das State-/Log-Commit der einzige Push."
+    "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - ein neuer Push/Run muss her. Trigger per No-Op-Commit auf .seo-autopilot/redeploy-trigger.txt (beruehrt keinen Code). Deploy-Step #9 (SFTP-Upload aller ~150 Seiten) dauert mehrere Minuten - nicht voreilig als haengend werten."
   ],
   "todos_fuer_michael": [
-    "ALLERHOECHSTE PRIORITAET - DEPLOY GEHT INS LEERE (seit 12.06., am 16.+17.06. erneut bestaetigt): Die Website liar-entertainer.com liefert seit dem 12.06. unveraendert den alten Stand aus. Ursache ist KEIN Code-Fehler und KEIN fehlgeschlagener Build - im Gegenteil: Unter github.com/ben69mikail/Liar-Entertainer -> Actions zeigen die Deploys der letzten Tage alle GRUEN/erfolgreich (auch der SFTP-Upload-Schritt). Das Problem: Der Upload landet erfolgreich im Verzeichnis /LIARastro, ABER die Domain liefert dieses Verzeichnis NICHT (mehr) aus. Beweis: Jede einzelne Live-Datei (Startseite, robots.txt, sitemap.xml) traegt das Aenderungsdatum 'Fri, 12 Jun 2026 12:10' - das war der letzte Deploy, der wirklich ankam. SO BEHEBEN: (1) Im IONOS-Kundenpanel pruefen, auf welchen Webspace-Ordner (Docroot) die Domain liar-entertainer.com aktuell zeigt - und ob das noch /LIARastro ist. Wenn die Domain inzwischen auf einen anderen Ordner zeigt (z.B. nach einer Umstellung am 12.06.), entweder die Domain wieder auf /LIARastro zeigen lassen ODER (2) in GitHub das Repository-Secret IONOS_SFTP_REMOTE auf den Ordner aendern, den die Domain tatsaechlich ausliefert. Danach in GitHub -> Actions -> 'Build & Deploy to IONOS' einmal manuell starten (Run workflow). Sobald das passt, gehen ALLE Verbesserungen der letzten Tage (sameAs/speakable fuer Google-Wissensgraph + KI-Suche) auf einen Schlag live - sie liegen alle fertig im Code.",
-    "Empfehlung zur Absicherung: Das ALTE Repository 'liar-entertainer-blog' existiert noch und hat einen identischen Deploy-Workflow mit denselben IONOS-Zugangsdaten. Es deployt derzeit zwar nicht (letzter Lauf 30.05.), ist aber ein Risiko - falls dort versehentlich ein Push passiert, koennte es die Live-Site mit altem Stand ueberschreiben. Empfehlung: in github.com/ben69mikail/liar-entertainer-blog -> Settings -> Actions die Workflows deaktivieren ODER das Repo archivieren.",
+    "ERLEDIGT 17.06.: Deploy-Blocker behoben (IONOS_SFTP_REMOTE korrigiert). Live deployt wieder normal - alle aufgestauten Verbesserungen (sameAs/speakable fuer Google-Wissensgraph + KI-Suche) sind jetzt live. Danke!",
+    "Absicherung (weiter offen): Das ALTE Repo 'liar-entertainer-blog' hat einen identischen Deploy-Workflow mit denselben IONOS-Zugangsdaten (letzter Lauf 30.05.). Risiko: ein versehentlicher Push dort koennte die Live-Site mit altem Stand ueberschreiben. Empfehlung: in github.com/ben69mikail/liar-entertainer-blog -> Settings -> Actions deaktivieren ODER Repo archivieren.",
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand). Bei Entscheidung Bescheid geben.",
-    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter Ausgangswert 402? Status der am 12.06. gestarteten Validierung? (Hinweis: Solange der Deploy-Blocker besteht, kommen keine NEUEN Verbesserungen an - die robots.txt/Redirect-Fixes vom 12.06. sind aber live und wirken.)",
-    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen (gehen live, sobald Deploy-Pfad gefixt ist)."
+    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter Ausgangswert 402? Status der am 12.06. gestarteten Validierung? Jetzt wo der Deploy wieder laeuft, kommen auch neue Verbesserungen wieder an.",
+    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen (gehen jetzt sofort live)."
   ],
   "log": [
     "2026-06-12 Setup + Laeufe 2-6: GSC-Resubmit, danke.astro, Welle-5 robots.txt-Fix, GSC-Leistung, Domain-Strategie.",
     "2026-06-13 Lauf 7: Repo-Guard OK. Welle 5 live sauber. Welle 4 Audit: Cross-Linking vorhanden.",
     "2026-06-14 Lauf 8: Welle 4 - sameAs+speakable in BaseLayout (Commit b12dd4c).",
     "2026-06-15 Lauf 9: Deploy-Stau VERMUTET. Selector-Fix 3409ca3 + hero-subtitle be06246 gepusht.",
-    "2026-06-16 Lauf 10: Repo-Guard OK. Review nicht faellig. Welle 5 Wartephase. DURCHBRUCH bei Deploy-Diagnose: Actions-Runs #78-#83 alle success (auch SFTP-Step), Live aber unveraendert seit 12.06. (last-modified 12 Jun 12:10:4x = Run #77 51dd96b). Alt-Repo deployt nicht. FAZIT: SFTP-Upload trifft falsches Docroot -> Infra-Problem, nur Inhaber loesbar. KEIN inhaltlicher Commit. Anleitung in todos_fuer_michael.",
-    "2026-06-17 Lauf 11: Repo-Guard OK (letzter Commit 16.06. 04:38, eigener Autopilot; kein Fremdcommit; neuer Tag -> commits_today=0). Review nicht faellig (19.06.). Deploy-Blocker RE-VERIFIZIERT, weiter aktiv: curl -sI -L zeigt Startseite last-modified 'Fri, 12 Jun 2026 12:10:48', robots 12:10:47, sitemap 12:10:44 = unveraendert seit 12.06. Live-Schema weiter nur LocalBusiness OHNE sameAs/speakable. deploy.yml-Runs #81-#84 alle conclusion=success (auch #84 b3e4537 vom 16.06.), aber nichts propagiert. Infra-Blocker (IONOS Docroot / IONOS_SFTP_REMOTE) unveraendert, nur Inhaber loesbar. KEIN inhaltlicher Commit gesetzt (waere unsichtbar geblieben + haette Commit-Limit verbrannt). Nur State-/Log-Commit. Welle 5 Wartephase, Welle 4 blockiert. current_wave=4."
+    "2026-06-16 Lauf 10: DURCHBRUCH Deploy-Diagnose: Runs #78-#83 success, Live aber 12.06.-Build. SFTP-Ziel != Docroot. KEIN inhaltlicher Commit. Anleitung in todos_fuer_michael.",
+    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv (Live 12 Jun 12:10, Runs #81-#84 success). KEIN inhaltlicher Commit. Nur State/Log-Commit.",
+    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Inhaber meldete IONOS_SFTP_REMOTE angepasst. Live-Check: noch 12.06. (Secret-Change deployt nicht von selbst). Autopilot pushte Redeploy-Trigger .seo-autopilot/redeploy-trigger.txt (Commit 1960795) -> deploy.yml Run #86: alle Steps success inkl. Step 9 SFTP-Upload. Live-Verify danach: Startseite/robots/sitemap last-modified 'Wed, 17 Jun 2026 13:36' (statt eingefroren 12.06.). Live-Schema enthaelt jetzt sameAs (FB/IG/GoogleMaps), speakable (h1 + .hero-subtitle beide im DOM verifiziert) und Person (Michael Prescler). ALLE seit 12.06. aufgestauten Welle-4-Commits (b12dd4c/3409ca3/be06246) in einem Rutsch live. Welle 4 ENTSPERRT. commits_today=2 (Redeploy-Trigger + dieser State-Commit)."
   ]
 }
