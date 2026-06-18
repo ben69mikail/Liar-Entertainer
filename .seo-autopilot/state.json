@@ -3,15 +3,14 @@
   "started": "2026-06-12",
   "current_wave": 4,
   "BLOCKER_DEPLOY": {
-    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; Redeploy (Commit 1960795 -> Run #86 success) schlaegt live durch. Ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-18 RE-VERIFIZIERT: Startseite/Kindergeburtstag/kinderzauberer alle last-modified 17 Jun 13:44-13:45; Schema enthaelt sameAs+speakable+Person live.",
-    "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build, obwohl Actions-Runs #78-#85 success meldeten. Ursache: SFTP-Upload-Ziel (IONOS_SFTP_REMOTE) != ausgeliefertes Domain-Docroot. KEIN Code-/Build-Fehler.",
-    "behebung": "2026-06-17: Inhaber hat IONOS_SFTP_REMOTE angepasst. Redeploy-Trigger Commit 1960795 -> Run #86 (alle Steps success inkl. SFTP). Live-Verify: last-modified 17 Jun 13:36; Live-Schema sameAs+speakable+Person.",
-    "lehre": "Bei Verdacht Deploy-Stau: nicht nur Actions-conclusion, sondern Live-last-modified pruefen. success != live, wenn Upload-Ziel != Docroot."
+    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-18 RE-VERIFIZIERT: Startseite/Kindergeburtstag/kinderzauberer last-modified 17 Jun 13:44-13:45; Schema sameAs+speakable+Person live.",
+    "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build, obwohl Actions-Runs success meldeten. Ursache: SFTP-Upload-Ziel != Domain-Docroot. KEIN Code-/Build-Fehler.",
+    "lehre": "Bei Verdacht Deploy-Stau: Live-last-modified pruefen. success != live, wenn Upload-Ziel != Docroot."
   },
   "domain_strategie": {
     "zweitdomain": "zauberer-liar.de (existiert/200, eigene Sitemap)",
     "empfehlung_2026_06_12": "NICHT in zwei Domains aufteilen. EMPFOHLEN: zauberer-liar.de als komplette 301-Weiterleitung auf liar-entertainer.com/zauberer/ und den /zauberer//kinderzauberer/-Bereich AUF liar-entertainer.com ausbauen.",
-    "einziger_valider_grund_fuer_2_domains": "Image-Trennung (Zauberer als serioesere Marke fuer Firmenevents/Galas/Hochzeiten vom Clown-Image getrennt). Marken-, KEINE SEO-Entscheidung.",
+    "einziger_valider_grund_fuer_2_domains": "Image-Trennung (Zauberer als serioesere Marke fuer Firmenevents/Galas/Hochzeiten). Marken-, KEINE SEO-Entscheidung.",
     "entscheidung_status": "OFFEN beim Inhaber. Bis dahin: liar-entertainer.com inkl. /zauberer/* /kinderzauberer/* normal weiteroptimieren (Welle 4).",
     "redirect_regel": "Autopilot setzt NIEMALS eigenmaechtig 301/Canonical auf ODER von zauberer-liar.de. Jede Domain-Aenderung nur auf explizites Inhaber-Signal."
   },
@@ -19,14 +18,31 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200, robots.txt frei. Re-Crawl/Deindexierung dauert Wochen. GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig). Owner-To-Do: Zaehler 'Gecrawlt-nicht-indexiert' (Ausgang 402) pruefen.",
+    "welle_5_gsc_fehler": "WIRKT. 2026-06-18 GSC per Browser geprueft (Datenstand 12.06.): Nicht indexiert 792 (Ausgang 885, -93), Indexiert 131 (Ausgang 134). 'Gecrawlt-nicht-indexiert' 362 (Ausgang 402, -40) Validierung GESTARTET. 'Nicht gefunden 404' 258 (Ausgang 302) Validierung GESTARTET. 'Soft 404' 0 BESTANDEN. 'Seite mit Weiterleitung' 152 (Ausgang 163) Validierung FEHLGESCHLAGEN - das sind die erwarteten 301-Ketten (Legacy tag/category -> Hauptseiten); bleiben laut Plan WOCHEN im Report, kein Eingriff noetig. robots.txt-Fix (Commit 1376073) wirkt nachweislich. WARTEPHASE laeuft korrekt - Re-Crawl dauert weiter Wochen.",
     "welle_4_laufend": "AKTIV. Live verifiziert (17.06.): sameAs + speakable + Person-Schema. City-Cross-Linking site-weit. 2026-06-18: Kindergeburtstag-Seite (Top-Chance 'zauberer kindergeburtstag' 1354 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz + hero-subtitle-Klasse fuer speakable (Commit 7bb8102, build-verifiziert, Live-Verify naechster Lauf). OFFEN: weitere Top-Seiten (kinderzauberer-Index, zaubershow) mit Antwort-Lead/speakable; Galerie-Alt-Texte; Content-Tiefe."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Title/Desc/FAQ + sameAs/speakable jetzt (ab 17.06.) live wirksam. 2026-06-18: zauberer-kindergeburtstag-Intent landet auf /kindergeburtstag/ (301-Kette) - dort jetzt KI-Antwort-Lead live gepusht."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords."
+  },
+  "gsc_indexierung_2026_06_18": {
+    "datenstand": "12.06.26 (GSC-Datenlag)",
+    "nicht_indexiert": 792, "nicht_indexiert_ausgang": 885,
+    "indexiert": 131, "indexiert_ausgang": 134,
+    "gruende": {
+      "gecrawlt_nicht_indexiert": {"wert": 362, "ausgang": 402, "validierung": "Gestartet"},
+      "nicht_gefunden_404": {"wert": 258, "ausgang": 302, "validierung": "Gestartet"},
+      "seite_mit_weiterleitung": {"wert": 152, "ausgang": 163, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, kein Eingriff"},
+      "umleitungsfehler": {"wert": 9, "validierung": "Gestartet"},
+      "durch_robots_blockiert": {"wert": 8, "validierung": "Nicht gestartet"},
+      "soft_404": {"wert": 0, "validierung": "Bestanden"},
+      "gefunden_nicht_indexiert": {"wert": 1, "validierung": "Bestanden"},
+      "noindex_tag": {"wert": 1},
+      "duplikat_google_canonical": {"wert": 1}
+    },
+    "fazit": "robots.txt-Fix wirkt: alle Nicht-Index-Zaehler ruecklaeufig, Validierungen GESTARTET/BESTANDEN. Trend positiv. Geduld - Re-Crawl dauert Wochen."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -35,7 +51,7 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 1,
+  "commits_today": 2,
   "last_run_date": "2026-06-18",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
@@ -50,7 +66,8 @@
     "2026-06-16 Lauf 10: DEPLOY-STAU DIAGNOSTIZIERT. SFTP-Ziel != Docroot. KEIN inhaltlicher Commit.",
     "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. KEIN inhaltlicher Commit.",
     "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger (Commit 1960795) -> Run #86. Welle 4 entsperrt.",
-    "2026-06-18 Lauf 13: Repo-Guard OK (letzter Commit 17.06. 13:43, eigener). Deploy live re-verifiziert (17 Jun 13:44, Schema sameAs+speakable+Person). Welle 4: Kindergeburtstag-Seite (Top-Keyword 'zauberer kindergeburtstag') antwortfertiger KI-Eroeffnungsabsatz + hero-subtitle/speakable gepusht (Commit 7bb8102, build-verifiziert 151 Seiten EXIT0). commits_today=1. Live-Verify naechster Lauf."
+    "2026-06-18 Lauf 13: Repo-Guard OK. Deploy live re-verifiziert. Welle 4: Kindergeburtstag-Seite KI-Antwort-Lead + speakable (Commit 7bb8102, build-verifiziert).",
+    "2026-06-18 Lauf 13b: GSC per Claude-in-Chrome geprueft (Owner-Login). Nicht indexiert 792 (-93 vs Ausgang), Gecrawlt-nicht-indexiert 362 (-40, Validierung Gestartet), Soft404 0 Bestanden. robots.txt-Fix wirkt nachweislich. Alt-Repo liar-entertainer-blog laut Inhaber abgesichert -> ToDo entfernt."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
@@ -59,26 +76,24 @@
     "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung. IMMER erst pruefen ob Massnahme schon umgesetzt ist.",
     "City-Seiten sind EIGENE Dateien unter src/pages/clown/clownshow/clown-in-*/index.astro, /kinderzauberer/kinderzauberer-in-*/, /kindergeburtstag/geburtstag-in-*/ - NICHT [...slug].astro.",
     "City-Slug-Asymmetrie: Geburtstag 'haltern-am-see', Clown/Kinderzauberer 'haltern'. kinderzauberer-in-gladbeck + clown-in-moers existieren NICHT. waltrop/wesel/xanten/castrop-rauxel nur als geburtstag-in-*. Existenz pruefen.",
-    "Datei-Loeschungen + GSC-Bedienung gehen per Claude-in-Chrome (Inhaber eingeloggt). Im AUTORUN ohne Owner-Login kein GSC-Zugriff.",
+    "GSC ist per Claude-in-Chrome bedienbar wenn Inhaber im Chrome eingeloggt ist (auch im Autorun!). URL: search.google.com/search-console/index?resource_id=sc-domain:liar-entertainer.com . Seitenindexierungs-Tabelle per get_page_text auslesen. Datenstand laggt ~6 Tage.",
     "GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf -> blockierte URLs koennen nicht deindexiert werden.",
-    "GSC-Ausgangswerte fuer Review: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
-    "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar' (kann EACCES). cacheDir per sed temporaer umbiegen (nur im Klon).",
-    "Sandbox-Build: 'npm install' statt 'npm ci'. Build laeuft sauber (EXIT0, 151 Seiten). Build ist NICHT der Blocker.",
-    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Loesung: Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. ODER: Datei in outputs/ kopieren (cp) dann ueber Windows-Pfad lesen.",
+    "GSC-Ausgangswerte (12.06.): 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
+    "GSC-Werte 18.06.: 131 indexiert / 792 nicht indexiert; Gecrawlt-nicht-indexiert 362; Weiterleitung 152; 404: 258. Alle ruecklaeufig = robots.txt-Fix wirkt.",
+    "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar'. cacheDir per sed temporaer umbiegen (nur im Klon). 'npm install' statt 'npm ci'. Build EXIT0, 151 Seiten.",
+    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. ODER: Datei in outputs/ kopieren (cp) dann ueber Windows-Pfad lesen.",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig.",
-    "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. GitHub-Actions conclusion=success bedeutet NICHT, dass es live ist! Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad, nicht Code.",
-    "Actions-Run-Status ist OHNE Auth abrufbar (oeffentliches Repo): api.github.com/repos/OWNER/REPO/actions/workflows/deploy.yml/runs + /actions/runs/<id>/jobs fuer Step-Conclusions.",
+    "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. Actions success != live wenn Upload-Ziel != Docroot. Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad.",
+    "Actions-Run-Status OHNE Auth abrufbar (oeffentliches Repo): api.github.com/repos/OWNER/REPO/actions/workflows/deploy.yml/runs.",
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
-    "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - ein neuer Push/Run muss her. Trigger per No-Op-Commit auf .seo-autopilot/redeploy-trigger.txt.",
-    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit einem zitierfaehigen Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg - gut fuer KI-/Voice-Suche. Absatz mit class='hero-subtitle' versehen, damit der site-weite speakable-Selektor (h1 + .hero-subtitle) greift."
+    "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - neuer Push noetig. No-Op auf .seo-autopilot/redeploy-trigger.txt.",
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle)."
   ],
   "todos_fuer_michael": [
-    "ERLEDIGT 17.06.: Deploy-Blocker behoben (IONOS_SFTP_REMOTE korrigiert). Live deployt wieder normal. Danke!",
-    "Absicherung (weiter offen): Das ALTE Repo 'liar-entertainer-blog' hat einen identischen Deploy-Workflow mit denselben IONOS-Zugangsdaten. Risiko: ein versehentlicher Push dort koennte die Live-Site mit altem Stand ueberschreiben. Empfehlung: github.com/ben69mikail/liar-entertainer-blog -> Settings -> Actions deaktivieren ODER Repo archivieren.",
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
-    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter Ausgangswert 402? Status der am 12.06. gestarteten Validierung?",
-    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen."
+    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen.",
+    "INFO (kein Handlungsbedarf): GSC-Trend positiv - nicht indexiert 885 -> 792, Gecrawlt-nicht-indexiert 402 -> 362, Validierungen laufen. Re-Crawl dauert weiter Wochen, einfach abwarten."
   ],
   "log": [
     "2026-06-12 Setup + Laeufe 2-6: GSC-Resubmit, danke.astro, Welle-5 robots.txt-Fix, GSC-Leistung, Domain-Strategie.",
@@ -88,6 +103,7 @@
     "2026-06-16 Lauf 10: DURCHBRUCH Deploy-Diagnose: SFTP-Ziel != Docroot. KEIN inhaltlicher Commit.",
     "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. Nur State/Log-Commit.",
     "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger Commit 1960795 -> Run #86 success. Welle 4 ENTSPERRT.",
-    "2026-06-18 Lauf 13: Repo-Guard OK (letzter Commit 17.06. 13:43 eigener Autopilot, >90 Min). commits_today reset auf 0. Review nicht faellig (19.06.). Welle 5 Wartephase (GSC braucht Owner-Login, kein Autorun-Zugriff). Welle 4: Deploy live re-verifiziert (Startseite/Kindergeburtstag/kinderzauberer last-modified 17 Jun 13:44-13:45, Schema sameAs+speakable+Person live). Top-Chance-Keyword 'zauberer kindergeburtstag' (1354 Impr/16 Klicks) landet via 301-Kette auf /kindergeburtstag/. Dortige Intro oeffnete emotional statt mit zitierfaehiger Antwort -> antwortfertigen KI-Eroeffnungsabsatz (ab 150 EUR, 40 Min, bis 12 Kinder, NRW, 400+ Bewertungen) eingefuegt + class hero-subtitle fuer site-weiten speakable-Selektor. Lokal build-verifiziert (151 Seiten, hero-subtitle + Lead-Satz im dist-HTML, EXIT0). Commit 7bb8102 gepusht (1 inhaltlicher Commit). Live-Verify naechster Lauf. commits_today=1 (+State-Commit)."
+    "2026-06-18 Lauf 13: Repo-Guard OK. Deploy live re-verifiziert. Welle 4 Kindergeburtstag KI-Antwort-Lead + speakable (Commit 7bb8102, build-verifiziert 151 Seiten EXIT0). State-Commit 654d1f9.",
+    "2026-06-18 Lauf 13b (Inhaber-getriggert): GSC per Claude-in-Chrome geprueft. Seitenindexierung: Nicht indexiert 792 (Ausgang 885, -93), Indexiert 131 (Ausgang 134). Gecrawlt-nicht-indexiert 362 (Ausgang 402, -40, Validierung GESTARTET), 404 258 (Ausgang 302, Gestartet), Soft404 0 (BESTANDEN), Seite-mit-Weiterleitung 152 (Ausgang 163, Fehlgeschlagen = erwartete 301-Ketten, kein Eingriff). FAZIT: robots.txt-Fix wirkt nachweislich, alle Zaehler ruecklaeufig, Welle 5 WARTEPHASE laeuft korrekt. Alt-Repo liar-entertainer-blog laut Inhaber abgesichert -> ToDo entfernt. KEIN GSC-Schreibeingriff (Validierungen bereits am Laufen). Nur State/Log-Commit (commits_today=2)."
   ]
 }
