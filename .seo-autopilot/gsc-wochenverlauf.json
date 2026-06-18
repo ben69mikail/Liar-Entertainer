@@ -1,0 +1,41 @@
+{
+  "_doc": "Wochenverlaufslog des liar-gsc-wochen-check (Donnerstags). Array von Wochen-Snapshots. Indexierungswerte laggen ~6 Tage (Datenstand != Pruefdatum). Leistungswerte laggen ~2 Tage.",
+  "snapshots": [
+    {
+      "pruefdatum": "2026-06-18",
+      "lauf": "Wochen-Check #1 (Erstanlage)",
+      "indexierung": {
+        "datenstand": "2026-06-12",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "noindex_tag": { "wert": 1 },
+          "duplikat_google_canonical": { "wert": 1 },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
+        }
+      },
+      "leistung": {
+        "datenstand": "2026-06-16",
+        "zeitraum": "3 Monate",
+        "klicks": 1840,
+        "impressionen": 81100,
+        "ctr": "2.3%",
+        "durchschnittsposition": 11.0,
+        "top_chancen_high_impr_low_ctr": [
+          "zauberer kindergeburtstag: 1353 Impr/17 Klicks (Seite bereits optimiert 18.06.)",
+          "clown kindergeburtstag: 383/10",
+          "clown fuer kindergeburtstag: 376/11",
+          "zaubershow fuer kinder: 332/8 -> THIS RUN optimiert"
+        ]
+      },
+      "trend_bewertung": "Indexierung: Datenlag NICHT weitergerueckt (Werte 1:1 wie 18.06.-Stand, Datenstand bleibt 12.06.) -> keine echte WoW-Veraenderung messbar, Validierungen laufen unveraendert weiter. Leistung: leicht positiv (Klicks +20, CTR +0.1pp ggue. 12.06.-Stand). Keine neue Auffaelligkeit, kein 4xx/5xx-Anstieg.",
+      "massnahme": "Trend flach bei Indexierung + klare Hochimpact-Chance: Zaubershow-Seite (/zauberer/zaubershow/, Keyword 'zaubershow fuer kinder' 332 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz (Wer/Wo/Preis/Dauer/Alter) + class=hero-subtitle fuer site-weiten speakable-Selektor. Build lokal verifiziert (151 Seiten, EXIT0, hero-subtitle+Lead+speakable im dist-HTML). Commit 6fbb14f -> Live-Deploy ausgeloest. Live-Verify naechster Lauf."
+    }
+  ]
+}
