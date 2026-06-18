@@ -18,8 +18,15 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "WIRKT. 2026-06-18 GSC per Browser geprueft (Datenstand 12.06.): Nicht indexiert 792 (Ausgang 885, -93), Indexiert 131 (Ausgang 134). 'Gecrawlt-nicht-indexiert' 362 (Ausgang 402, -40) Validierung GESTARTET. 'Nicht gefunden 404' 258 (Ausgang 302) Validierung GESTARTET. 'Soft 404' 0 BESTANDEN. 'Seite mit Weiterleitung' 152 (Ausgang 163) Validierung FEHLGESCHLAGEN - das sind die erwarteten 301-Ketten (Legacy tag/category -> Hauptseiten); bleiben laut Plan WOCHEN im Report, kein Eingriff noetig. robots.txt-Fix (Commit 1376073) wirkt nachweislich. WARTEPHASE laeuft korrekt - Re-Crawl dauert weiter Wochen.",
-    "welle_4_laufend": "AKTIV. Live verifiziert (17.06.): sameAs + speakable + Person-Schema. City-Cross-Linking site-weit. 2026-06-18: Kindergeburtstag-Seite (Top-Chance 'zauberer kindergeburtstag' 1354 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz + hero-subtitle-Klasse fuer speakable (Commit 7bb8102, build-verifiziert, Live-Verify naechster Lauf). OFFEN: weitere Top-Seiten (kinderzauberer-Index, zaubershow) mit Antwort-Lead/speakable; Galerie-Alt-Texte; Content-Tiefe."
+    "welle_5_gsc_fehler": "WIRKT. 2026-06-18 GSC per Browser geprueft (Datenstand 12.06.): Nicht indexiert 792 (Ausgang 885, -93), Indexiert 131 (Ausgang 134). 'Gecrawlt-nicht-indexiert' 362 (Ausgang 402, -40) Validierung GESTARTET. 'Nicht gefunden 404' 258 (Ausgang 302) Validierung GESTARTET. 'Soft 404' 0 BESTANDEN. 'Seite mit Weiterleitung' 152 (Ausgang 163) Validierung FEHLGESCHLAGEN - das sind die erwarteten 301-Ketten (Legacy tag/category -> Hauptseiten); bleiben laut Plan WOCHEN im Report, kein Eingriff noetig. robots.txt-Fix (Commit 1376073) wirkt nachweislich. WARTEPHASE laeuft korrekt - Re-Crawl dauert weiter Wochen. WOCHEN-CHECK 2026-06-18: Indexierungs-Datenlag NICHT weitergerueckt (Werte 1:1 wie 18.06.-Stand, Datenstand bleibt 12.06.).",
+    "welle_4_laufend": "AKTIV. Live verifiziert (17.06.): sameAs + speakable + Person-Schema. City-Cross-Linking site-weit. 2026-06-18: Kindergeburtstag-Seite KI-Eroeffnungsabsatz + hero-subtitle/speakable (Commit 7bb8102). 2026-06-18 WOCHEN-CHECK: Zaubershow-Seite (/zauberer/zaubershow/, Top-Chance 'zaubershow fuer kinder' 332 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz (ab 150 EUR, 40 Min, ab 4 J., NRW, 400+ Bew.) + hero-subtitle fuer speakable (Commit 6fbb14f, build-verifiziert 151 Seiten EXIT0, hero-subtitle+Lead+speakable im dist, Live-Verify naechster Lauf). OFFEN: kinderzauberer-Index mit Antwort-Lead/speakable; clown-kindergeburtstag/clown-fuer-kindergeburtstag-Seiten; Galerie-Alt-Texte; Content-Tiefe."
+  },
+  "gsc_leistung_2026_06_18": {
+    "datenstand": "16.06.26", "zeitraum": "3 Monate", "klicks": 1840, "impressionen": 81100, "ctr": "2.3%", "durchschnittsposition": 11.0,
+    "vergleich_12_06": "Klicks 1820->1840 (+20), CTR 2.2->2.3% (+0.1pp), Impr 82400->81100, Pos 10.8->11.0. Leicht positiv.",
+    "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
+    "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1353 Impr/17 Klicks (optimiert 18.06.)", "clown kindergeburtstag: 383/10", "clown fuer kindergeburtstag: 376/11", "zaubershow fuer kinder: 332/8 (optimiert Wochen-Check 18.06.)"],
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Top-Chancen werden sukzessive mit KI-Antwort-Lead+speakable bearbeitet."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
@@ -28,7 +35,7 @@
     "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords."
   },
   "gsc_indexierung_2026_06_18": {
-    "datenstand": "12.06.26 (GSC-Datenlag)",
+    "datenstand": "12.06.26 (GSC-Datenlag, beim Wochen-Check 18.06. weiterhin 12.06.)",
     "nicht_indexiert": 792, "nicht_indexiert_ausgang": 885,
     "indexiert": 131, "indexiert_ausgang": 134,
     "gruende": {
@@ -42,16 +49,17 @@
       "noindex_tag": {"wert": 1},
       "duplikat_google_canonical": {"wert": 1}
     },
-    "fazit": "robots.txt-Fix wirkt: alle Nicht-Index-Zaehler ruecklaeufig, Validierungen GESTARTET/BESTANDEN. Trend positiv. Geduld - Re-Crawl dauert Wochen."
+    "fazit": "robots.txt-Fix wirkt: alle Nicht-Index-Zaehler ruecklaeufig, Validierungen GESTARTET/BESTANDEN. Trend positiv. Geduld - Re-Crawl dauert Wochen. Wochen-Check 18.06.: Datenlag noch nicht weitergerueckt, keine neue WoW-Veraenderung messbar."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
     "state_speicher": "im-repo (.seo-autopilot/state.json)",
+    "wochenverlauf_speicher": "im-repo (.seo-autopilot/gsc-wochenverlauf.json) - vom liar-gsc-wochen-check (Do) gepflegt",
     "autonomie": "vollauto-mit-limits",
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 2,
+  "commits_today": 4,
   "last_run_date": "2026-06-18",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
@@ -67,7 +75,8 @@
     "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. KEIN inhaltlicher Commit.",
     "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger (Commit 1960795) -> Run #86. Welle 4 entsperrt.",
     "2026-06-18 Lauf 13: Repo-Guard OK. Deploy live re-verifiziert. Welle 4: Kindergeburtstag-Seite KI-Antwort-Lead + speakable (Commit 7bb8102, build-verifiziert).",
-    "2026-06-18 Lauf 13b: GSC per Claude-in-Chrome geprueft (Owner-Login). Nicht indexiert 792 (-93 vs Ausgang), Gecrawlt-nicht-indexiert 362 (-40, Validierung Gestartet), Soft404 0 Bestanden. robots.txt-Fix wirkt nachweislich. Alt-Repo liar-entertainer-blog laut Inhaber abgesichert -> ToDo entfernt."
+    "2026-06-18 Lauf 13b: GSC per Claude-in-Chrome geprueft (Owner-Login). Nicht indexiert 792 (-93 vs Ausgang), Gecrawlt-nicht-indexiert 362 (-40, Validierung Gestartet), Soft404 0 Bestanden. robots.txt-Fix wirkt nachweislich. Alt-Repo liar-entertainer-blog laut Inhaber abgesichert -> ToDo entfernt.",
+    "2026-06-18 WOCHEN-CHECK (liar-gsc-wochen-check): Repo-Guard OK (letzter Commit 083a276 eigener Autopilot). GSC Indexierung per Chrome: Datenlag NICHT weitergerueckt (Werte 1:1 wie 18.06.-Stand, Datenstand 12.06.) -> keine echte WoW-Veraenderung. Leistung (Datenstand 16.06.) leicht positiv: Klicks 1820->1840, CTR 2.2->2.3%. Keine neue Auffaelligkeit. Hochimpact-Massnahme: Zaubershow-Seite (zaubershow fuer kinder 332 Impr) KI-Antwort-Lead + hero-subtitle/speakable (Commit 6fbb14f, build-verifiziert 151 Seiten EXIT0). gsc-wochenverlauf.json angelegt (Commit 361606d). commits_today=4 (unter Limit 5)."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
@@ -79,7 +88,8 @@
     "GSC ist per Claude-in-Chrome bedienbar wenn Inhaber im Chrome eingeloggt ist (auch im Autorun!). URL: search.google.com/search-console/index?resource_id=sc-domain:liar-entertainer.com . Seitenindexierungs-Tabelle per get_page_text auslesen. Datenstand laggt ~6 Tage.",
     "GSC-Logik: noindex/410/301 + robots.txt-Disallow heben sich auf -> blockierte URLs koennen nicht deindexiert werden.",
     "GSC-Ausgangswerte (12.06.): 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
-    "GSC-Werte 18.06.: 131 indexiert / 792 nicht indexiert; Gecrawlt-nicht-indexiert 362; Weiterleitung 152; 404: 258. Alle ruecklaeufig = robots.txt-Fix wirkt.",
+    "GSC-Werte 18.06.: 131 indexiert / 792 nicht indexiert; Gecrawlt-nicht-indexiert 362; Weiterleitung 152; 404: 258. Alle ruecklaeufig = robots.txt-Fix wirkt. Wochen-Check 18.06. identisch (Datenlag steht).",
+    "GSC-DATENLAG kann mehrere Tage STEHEN bleiben: am 18.06. (Tageslauf UND Wochen-Check) war der Indexierungs-Datenstand beide Male der 12.06. Bei identischen Werten = kein Datenfortschritt, NICHT als 'Trend gestoppt' fehldeuten. Leistungsbericht laggt weniger (~2 Tage) und zeigt eher Bewegung.",
     "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar'. cacheDir per sed temporaer umbiegen (nur im Klon). 'npm install' statt 'npm ci'. Build EXIT0, 151 Seiten.",
     "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. ODER: Datei in outputs/ kopieren (cp) dann ueber Windows-Pfad lesen.",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig.",
@@ -88,7 +98,8 @@
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
     "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - neuer Push noetig. No-Op auf .seo-autopilot/redeploy-trigger.txt.",
-    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle)."
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). Bisher umgesetzt: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f). NAECHSTE: kinderzauberer-Index.",
+    "ZAUBERSHOW-SEITE liegt unter src/pages/zauberer/zaubershow/index.astro (NICHT eigenes /zaubershow/ Top-Level). Keyword 'zaubershow fuer kinder' landet dort. Hat bereits Service+FAQPage+VideoObject-Schema."
   ],
   "todos_fuer_michael": [
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
@@ -104,6 +115,7 @@
     "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. Nur State/Log-Commit.",
     "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger Commit 1960795 -> Run #86 success. Welle 4 ENTSPERRT.",
     "2026-06-18 Lauf 13: Repo-Guard OK. Deploy live re-verifiziert. Welle 4 Kindergeburtstag KI-Antwort-Lead + speakable (Commit 7bb8102, build-verifiziert 151 Seiten EXIT0). State-Commit 654d1f9.",
-    "2026-06-18 Lauf 13b (Inhaber-getriggert): GSC per Claude-in-Chrome geprueft. Seitenindexierung: Nicht indexiert 792 (Ausgang 885, -93), Indexiert 131 (Ausgang 134). Gecrawlt-nicht-indexiert 362 (Ausgang 402, -40, Validierung GESTARTET), 404 258 (Ausgang 302, Gestartet), Soft404 0 (BESTANDEN), Seite-mit-Weiterleitung 152 (Ausgang 163, Fehlgeschlagen = erwartete 301-Ketten, kein Eingriff). FAZIT: robots.txt-Fix wirkt nachweislich, alle Zaehler ruecklaeufig, Welle 5 WARTEPHASE laeuft korrekt. Alt-Repo liar-entertainer-blog laut Inhaber abgesichert -> ToDo entfernt. KEIN GSC-Schreibeingriff (Validierungen bereits am Laufen). Nur State/Log-Commit (commits_today=2)."
+    "2026-06-18 Lauf 13b (Inhaber-getriggert): GSC per Claude-in-Chrome geprueft. Seitenindexierung: Nicht indexiert 792 (-93), Indexiert 131. Gecrawlt-nicht-indexiert 362 (-40, Gestartet), 404 258 (Gestartet), Soft404 0 (Bestanden), Weiterleitung 152 (Fehlgeschlagen = erwartete 301-Ketten). robots.txt-Fix wirkt. Nur State/Log-Commit (083a276).",
+    "2026-06-18 WOCHEN-CHECK (liar-gsc-wochen-check, Donnerstag): Repo-Guard OK. GSC Indexierung: Datenlag NICHT weitergerueckt (Werte 1:1 wie 18.06., Datenstand 12.06.) -> keine echte WoW-Veraenderung. Leistung (Datenstand 16.06.) leicht positiv: Klicks 1820->1840, CTR 2.2->2.3%, Impr 82400->81100, Pos 10.8->11.0. Keine neue Auffaelligkeit/4xx-Anstieg. Top-Chance 'zaubershow fuer kinder' (332 Impr): Zaubershow-Seite (/zauberer/zaubershow/) bekam antwortfertigen KI-Eroeffnungsabsatz + hero-subtitle/speakable (Commit 6fbb14f, build-verifiziert 151 Seiten EXIT0). gsc-wochenverlauf.json angelegt (Commit 361606d). commits_today=4."
   ]
 }
