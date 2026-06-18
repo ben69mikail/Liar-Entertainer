@@ -3,16 +3,16 @@
   "started": "2026-06-12",
   "current_wave": 4,
   "BLOCKER_DEPLOY": {
-    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; Redeploy (Commit 1960795 -> Run #86 success) schlaegt live durch. Ab jetzt gilt wieder: 1 Push = 1 Live-Deploy.",
-    "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build (alle Live-Dateien last-modified 'Fri, 12 Jun 2026 12:10:4x'), obwohl Actions-Runs #78-#85 alle conclusion=success meldeten. Ursache: SFTP-Upload-Ziel (IONOS_SFTP_REMOTE) != ausgeliefertes Domain-Docroot. KEIN Code-/Build-Fehler.",
-    "behebung": "2026-06-17: Inhaber hat IONOS_SFTP_REMOTE auf das korrekte Docroot angepasst. Autopilot pushte Redeploy-Trigger (.seo-autopilot/redeploy-trigger.txt, Commit 1960795) -> deploy.yml Run #86 (alle Steps success inkl. SFTP). Live-Verify danach: Startseite/robots/sitemap last-modified 'Wed, 17 Jun 2026 13:36'; Live-Schema enthaelt sameAs + speakable + Person -> alle aufgestauten Welle-4-Commits live.",
+    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; Redeploy (Commit 1960795 -> Run #86 success) schlaegt live durch. Ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-18 RE-VERIFIZIERT: Startseite/Kindergeburtstag/kinderzauberer alle last-modified 17 Jun 13:44-13:45; Schema enthaelt sameAs+speakable+Person live.",
+    "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build, obwohl Actions-Runs #78-#85 success meldeten. Ursache: SFTP-Upload-Ziel (IONOS_SFTP_REMOTE) != ausgeliefertes Domain-Docroot. KEIN Code-/Build-Fehler.",
+    "behebung": "2026-06-17: Inhaber hat IONOS_SFTP_REMOTE angepasst. Redeploy-Trigger Commit 1960795 -> Run #86 (alle Steps success inkl. SFTP). Live-Verify: last-modified 17 Jun 13:36; Live-Schema sameAs+speakable+Person.",
     "lehre": "Bei Verdacht Deploy-Stau: nicht nur Actions-conclusion, sondern Live-last-modified pruefen. success != live, wenn Upload-Ziel != Docroot."
   },
   "domain_strategie": {
     "zweitdomain": "zauberer-liar.de (existiert/200, eigene Sitemap)",
-    "empfehlung_2026_06_12": "NICHT in zwei Domains aufteilen. Inhaber-Motiv war SEO-Annahme (getrennte Domain = besseres Ranking) - das ist ein Irrtum: eine starke Domain schlaegt zwei schwache (Autoritaet wird sonst verduennt, doppelter Pflegeaufwand, rankende Seiten gingen verloren). Exact-Match-Domains sind seit Jahren kein Rankingfaktor mehr. EMPFOHLEN: zauberer-liar.de als komplette 301-Weiterleitung auf liar-entertainer.com/zauberer/ (sichert Name + buendelt Linkkraft), und den /zauberer//kinderzauberer/-Bereich AUF liar-entertainer.com ausbauen (statt Energie in 2. Domain).",
-    "einziger_valider_grund_fuer_2_domains": "Image-Trennung: wenn der Zauberer als eigene, serioesere Marke (Firmenevents/Galas/Hochzeiten) bewusst vom verspielten Clown-Image getrennt werden soll. Das ist eine Marken-, KEINE SEO-Entscheidung. Dann 2 Domains vertretbar, aber mit Monaten Aufbauzeit + mehr Pflege.",
-    "entscheidung_status": "OFFEN beim Inhaber. Bis zur Entscheidung: liar-entertainer.com inkl. /zauberer/* /kinderzauberer/* normal weiteroptimieren (Welle 4).",
+    "empfehlung_2026_06_12": "NICHT in zwei Domains aufteilen. EMPFOHLEN: zauberer-liar.de als komplette 301-Weiterleitung auf liar-entertainer.com/zauberer/ und den /zauberer//kinderzauberer/-Bereich AUF liar-entertainer.com ausbauen.",
+    "einziger_valider_grund_fuer_2_domains": "Image-Trennung (Zauberer als serioesere Marke fuer Firmenevents/Galas/Hochzeiten vom Clown-Image getrennt). Marken-, KEINE SEO-Entscheidung.",
+    "entscheidung_status": "OFFEN beim Inhaber. Bis dahin: liar-entertainer.com inkl. /zauberer/* /kinderzauberer/* normal weiteroptimieren (Welle 4).",
     "redirect_regel": "Autopilot setzt NIEMALS eigenmaechtig 301/Canonical auf ODER von zauberer-liar.de. Jede Domain-Aenderung nur auf explizites Inhaber-Signal."
   },
   "wave_progress": {
@@ -20,13 +20,13 @@
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
     "welle_5_gsc_fehler": "WARTEPHASE. KERNFIX live (Commit 1376073). 2026-06-13 Live-Stichprobe verifiziert: /attachment/ -> 410, /tag/clown/ -> 301 -> 200 /blog/, /category/clown/ -> 301 -> 200, robots.txt frei. Re-Crawl/Deindexierung dauert Wochen. GSC-Fortschritt per Claude-in-Chrome beobachten (Owner-Login noetig). Owner-To-Do: Zaehler 'Gecrawlt-nicht-indexiert' (Ausgang 402) pruefen.",
-    "welle_4_laufend": "ENTSPERRT 2026-06-17 (Deploy-Blocker geloest). Bisher live verifiziert: sameAs (FB/IG/GoogleMaps) + speakable (h1 + .hero-subtitle) + Person-Schema (Michael Prescler). Top-CTR-Seiten + City-Cross-Linking site-weit (55 Seiten/106 Links/0 tote) bereits committed/live. OFFEN als naechste Welle-4-Schritte: antwortfertige KI-Eroeffnungsabsaetze weiterer Top-Seiten (zauberer-kindergeburtstag etc.), Galerie-Alt-Texte, Content-Tiefe. Title/Desc/FAQ der High-Impression-Keywords pruefen ob live wirksam."
+    "welle_4_laufend": "AKTIV. Live verifiziert (17.06.): sameAs + speakable + Person-Schema. City-Cross-Linking site-weit. 2026-06-18: Kindergeburtstag-Seite (Top-Chance 'zauberer kindergeburtstag' 1354 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz + hero-subtitle-Klasse fuer speakable (Commit 7bb8102, build-verifiziert, Live-Verify naechster Lauf). OFFEN: weitere Top-Seiten (kinderzauberer-Index, zaubershow) mit Antwort-Lead/speakable; Galerie-Alt-Texte; Content-Tiefe."
   },
   "gsc_leistung_2026_06_12": {
     "zeitraum": "3 Monate", "klicks": 1820, "impressionen": 82400, "ctr": "2.2%", "durchschnittsposition": 10.8,
     "marken-keywords_top1": ["clown zauberer liar", "clown liar", "zauberer liar"],
     "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/16 Klicks", "zauberer fuer kindergeburtstag: 849/8", "clown kindergeburtstag: 381/9", "zaubershow fuer kinder: 311/9", "clown fuer kindergeburtstag: 378/10"],
-    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Title/Desc/FAQ + sameAs/speakable jetzt (ab 17.06.) live wirksam."
+    "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Title/Desc/FAQ + sameAs/speakable jetzt (ab 17.06.) live wirksam. 2026-06-18: zauberer-kindergeburtstag-Intent landet auf /kindergeburtstag/ (301-Kette) - dort jetzt KI-Antwort-Lead live gepusht."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -35,8 +35,8 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 2,
-  "last_run_date": "2026-06-17",
+  "commits_today": 1,
+  "last_run_date": "2026-06-18",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
@@ -46,10 +46,11 @@
     "2026-06-13 Welle 5 Live-Stichprobe: 410/301/200 + robots.txt sauber (curl-verifiziert).",
     "2026-06-13 Welle 4 Audit: Cross-Linking bereits site-weit vorhanden. Kein Commit noetig.",
     "2026-06-14 Welle 4: sameAs + speakable in BaseLayout (Commit b12dd4c). Build verifiziert.",
-    "2026-06-15 Welle 4: Deploy-Stau VERMUTET; Speakable-Selector-Fix (3409ca3) + hero-subtitle (be06246) gepusht um Redeploy zu erzwingen.",
-    "2026-06-16 Lauf 10: DEPLOY-STAU DIAGNOSTIZIERT. Runs #78-#83 success, Live aber 12.06.-Build. Ursache: SFTP-Ziel != Docroot. KEIN inhaltlicher Commit. Anleitung in todos_fuer_michael.",
-    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv (Live noch 12.06., Runs #81-#84 success). KEIN inhaltlicher Commit. State/Log committed.",
-    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Inhaber hat IONOS_SFTP_REMOTE korrigiert. Autopilot pushte Redeploy-Trigger (Commit 1960795) -> Run #86 (alle Steps success inkl. SFTP). Live-Verify: last-modified jetzt 17 Jun 13:36; Schema enthaelt sameAs+speakable+Person. ALLE aufgestauten Welle-4-Commits live. Welle 4 entsperrt."
+    "2026-06-15 Welle 4: Deploy-Stau VERMUTET; Speakable-Selector-Fix (3409ca3) + hero-subtitle (be06246) gepusht.",
+    "2026-06-16 Lauf 10: DEPLOY-STAU DIAGNOSTIZIERT. SFTP-Ziel != Docroot. KEIN inhaltlicher Commit.",
+    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. KEIN inhaltlicher Commit.",
+    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger (Commit 1960795) -> Run #86. Welle 4 entsperrt.",
+    "2026-06-18 Lauf 13: Repo-Guard OK (letzter Commit 17.06. 13:43, eigener). Deploy live re-verifiziert (17 Jun 13:44, Schema sameAs+speakable+Person). Welle 4: Kindergeburtstag-Seite (Top-Keyword 'zauberer kindergeburtstag') antwortfertiger KI-Eroeffnungsabsatz + hero-subtitle/speakable gepusht (Commit 7bb8102, build-verifiziert 151 Seiten EXIT0). commits_today=1. Live-Verify naechster Lauf."
   ],
   "review_due_date": "2026-06-19",
   "review_done": false,
@@ -63,28 +64,30 @@
     "GSC-Ausgangswerte fuer Review: 134 indexiert / 885 nicht indexiert; 'Gecrawlt-nicht-indexiert' 402; 'Weiterleitung' 163; 404: 302. Leistung 1820 Klicks/82400 Impr/CTR2.2%/Pos10.8.",
     "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar' (kann EACCES). cacheDir per sed temporaer umbiegen (nur im Klon).",
     "Sandbox-Build: 'npm install' statt 'npm ci'. Build laeuft sauber (EXIT0, 151 Seiten). Build ist NICHT der Blocker.",
-    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Loesung: Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen.",
+    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Loesung: Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. ODER: Datei in outputs/ kopieren (cp) dann ueber Windows-Pfad lesen.",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig.",
-    "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. GitHub-Actions conclusion=success bedeutet NICHT, dass es live ist! Der SFTP-Deploy-Step kann success melden, waehrend die Domain ein anderes Docroot ausliefert. Beweis: wenn ALLE Live-Dateien dasselbe last-modified tragen = letzter wirksamer Deploy. Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad, nicht Code.",
+    "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. GitHub-Actions conclusion=success bedeutet NICHT, dass es live ist! Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad, nicht Code.",
     "Actions-Run-Status ist OHNE Auth abrufbar (oeffentliches Repo): api.github.com/repos/OWNER/REPO/actions/workflows/deploy.yml/runs + /actions/runs/<id>/jobs fuer Step-Conclusions.",
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
-    "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - ein neuer Push/Run muss her. Trigger per No-Op-Commit auf .seo-autopilot/redeploy-trigger.txt (beruehrt keinen Code). Deploy-Step #9 (SFTP-Upload aller ~150 Seiten) dauert mehrere Minuten - nicht voreilig als haengend werten."
+    "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - ein neuer Push/Run muss her. Trigger per No-Op-Commit auf .seo-autopilot/redeploy-trigger.txt.",
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit einem zitierfaehigen Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg - gut fuer KI-/Voice-Suche. Absatz mit class='hero-subtitle' versehen, damit der site-weite speakable-Selektor (h1 + .hero-subtitle) greift."
   ],
   "todos_fuer_michael": [
-    "ERLEDIGT 17.06.: Deploy-Blocker behoben (IONOS_SFTP_REMOTE korrigiert). Live deployt wieder normal - alle aufgestauten Verbesserungen (sameAs/speakable fuer Google-Wissensgraph + KI-Suche) sind jetzt live. Danke!",
-    "Absicherung (weiter offen): Das ALTE Repo 'liar-entertainer-blog' hat einen identischen Deploy-Workflow mit denselben IONOS-Zugangsdaten (letzter Lauf 30.05.). Risiko: ein versehentlicher Push dort koennte die Live-Site mit altem Stand ueberschreiben. Empfehlung: in github.com/ben69mikail/liar-entertainer-blog -> Settings -> Actions deaktivieren ODER Repo archivieren.",
-    "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/, Zauberer-Bereich auf Hauptdomain ausbauen; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 eigenstaendigen Domains (mehr Aufwand). Bei Entscheidung Bescheid geben.",
-    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter Ausgangswert 402? Status der am 12.06. gestarteten Validierung? Jetzt wo der Deploy wieder laeuft, kommen auch neue Verbesserungen wieder an.",
-    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen (gehen jetzt sofort live)."
+    "ERLEDIGT 17.06.: Deploy-Blocker behoben (IONOS_SFTP_REMOTE korrigiert). Live deployt wieder normal. Danke!",
+    "Absicherung (weiter offen): Das ALTE Repo 'liar-entertainer-blog' hat einen identischen Deploy-Workflow mit denselben IONOS-Zugangsdaten. Risiko: ein versehentlicher Push dort koennte die Live-Site mit altem Stand ueberschreiben. Empfehlung: github.com/ben69mikail/liar-entertainer-blog -> Settings -> Actions deaktivieren ODER Repo archivieren.",
+    "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
+    "GSC-Fortschritt pruefen (nur du, eingeloggt): Search Console -> Seiten -> 'Gecrawlt - zurzeit nicht indexiert'. Faellt die Zahl unter Ausgangswert 402? Status der am 12.06. gestarteten Validierung?",
+    "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen."
   ],
   "log": [
     "2026-06-12 Setup + Laeufe 2-6: GSC-Resubmit, danke.astro, Welle-5 robots.txt-Fix, GSC-Leistung, Domain-Strategie.",
     "2026-06-13 Lauf 7: Repo-Guard OK. Welle 5 live sauber. Welle 4 Audit: Cross-Linking vorhanden.",
     "2026-06-14 Lauf 8: Welle 4 - sameAs+speakable in BaseLayout (Commit b12dd4c).",
     "2026-06-15 Lauf 9: Deploy-Stau VERMUTET. Selector-Fix 3409ca3 + hero-subtitle be06246 gepusht.",
-    "2026-06-16 Lauf 10: DURCHBRUCH Deploy-Diagnose: Runs #78-#83 success, Live aber 12.06.-Build. SFTP-Ziel != Docroot. KEIN inhaltlicher Commit. Anleitung in todos_fuer_michael.",
-    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv (Live 12 Jun 12:10, Runs #81-#84 success). KEIN inhaltlicher Commit. Nur State/Log-Commit.",
-    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Inhaber meldete IONOS_SFTP_REMOTE angepasst. Live-Check: noch 12.06. (Secret-Change deployt nicht von selbst). Autopilot pushte Redeploy-Trigger .seo-autopilot/redeploy-trigger.txt (Commit 1960795) -> deploy.yml Run #86: alle Steps success inkl. Step 9 SFTP-Upload. Live-Verify danach: Startseite/robots/sitemap last-modified 'Wed, 17 Jun 2026 13:36' (statt eingefroren 12.06.). Live-Schema enthaelt jetzt sameAs (FB/IG/GoogleMaps), speakable (h1 + .hero-subtitle beide im DOM verifiziert) und Person (Michael Prescler). ALLE seit 12.06. aufgestauten Welle-4-Commits (b12dd4c/3409ca3/be06246) in einem Rutsch live. Welle 4 ENTSPERRT. commits_today=2 (Redeploy-Trigger + dieser State-Commit)."
+    "2026-06-16 Lauf 10: DURCHBRUCH Deploy-Diagnose: SFTP-Ziel != Docroot. KEIN inhaltlicher Commit.",
+    "2026-06-17 Lauf 11: Deploy-Blocker re-verifiziert, weiter aktiv. Nur State/Log-Commit.",
+    "2026-06-17 Lauf 12: DEPLOY-BLOCKER GELOEST. Redeploy-Trigger Commit 1960795 -> Run #86 success. Welle 4 ENTSPERRT.",
+    "2026-06-18 Lauf 13: Repo-Guard OK (letzter Commit 17.06. 13:43 eigener Autopilot, >90 Min). commits_today reset auf 0. Review nicht faellig (19.06.). Welle 5 Wartephase (GSC braucht Owner-Login, kein Autorun-Zugriff). Welle 4: Deploy live re-verifiziert (Startseite/Kindergeburtstag/kinderzauberer last-modified 17 Jun 13:44-13:45, Schema sameAs+speakable+Person live). Top-Chance-Keyword 'zauberer kindergeburtstag' (1354 Impr/16 Klicks) landet via 301-Kette auf /kindergeburtstag/. Dortige Intro oeffnete emotional statt mit zitierfaehiger Antwort -> antwortfertigen KI-Eroeffnungsabsatz (ab 150 EUR, 40 Min, bis 12 Kinder, NRW, 400+ Bewertungen) eingefuegt + class hero-subtitle fuer site-weiten speakable-Selektor. Lokal build-verifiziert (151 Seiten, hero-subtitle + Lead-Satz im dist-HTML, EXIT0). Commit 7bb8102 gepusht (1 inhaltlicher Commit). Live-Verify naechster Lauf. commits_today=1 (+State-Commit)."
   ]
 }
