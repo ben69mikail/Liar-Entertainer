@@ -234,7 +234,7 @@ const videoSchema = {
             src={slide.src}
             alt={slide.alt}
             class:list={["hero-slide", { "is-active": i === 0 }]}
-            loading={i === 0 ? "eager" : "lazy"}
+            loading="eager"
             fetchpriority={i === 0 ? "high" : "auto"}
             widths={[600, 900, 1200]}
             sizes="(max-width: 1152px) 100vw, 1120px"
