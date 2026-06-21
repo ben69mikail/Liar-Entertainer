@@ -4,7 +4,18 @@ import GoogleReviews from '../components/GoogleReviews.astro';
 import { Image, getImage } from 'astro:assets';
 
 import heroImg from '../assets/images/home/clown-zauberer-hero.jpg';
+import heroSlide2 from '../assets/images/Slider/kinderzauberer-hero.jpg';
+import heroSlide3 from '../assets/images/Slider/zaubershow-hero.jpg';
+import heroSlide4 from '../assets/images/Slider/kindergeburtstag-hero.jpg';
+import heroSlide5 from '../assets/images/Slider/zaubershow-mit-clown-zauberer-liar.jpg';
 const heroOptimized = await getImage({ src: heroImg, width: 1200, format: 'webp' });
+const heroSlides = [
+  { src: heroImg, alt: 'Clown Zauberer LIAR bei einer Zaubershow' },
+  { src: heroSlide2, alt: 'Kinderzauberer LIAR begeistert Kinder aus nächster Nähe' },
+  { src: heroSlide3, alt: 'Zaubershow von LIAR vor großem Kinderpublikum' },
+  { src: heroSlide4, alt: 'Clown Zauberer LIAR beim Kindergeburtstag in der Kita' },
+  { src: heroSlide5, alt: 'LIAR bei einer Open-Air-Zaubershow für Kinder' },
+];
 import portraitImg from '../assets/images/home/clown-zauberer-liar-portrait.jpg';
 import michaelImg from '../assets/images/home/michael-prescler-portrait.jpg';
 import clownerieImg from '../assets/images/home/clownerie-und-zauberei.jpg';
@@ -189,8 +200,22 @@ const videoSchema = {
 
   <!-- ═══════════════════════════════════════
        HERO – gerundete Bild-Karte im Container + Pill-Badges
+       (umschlossen von .hero-stage für ruhige Pastell-Blobs)
   ════════════════════════════════════════ -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <div class="hero-stage relative overflow-hidden">
+    <div class="hero-blobs" aria-hidden="true">
+      <span class="blob blob-red"></span>
+      <span class="blob blob-blue"></span>
+      <span class="blob blob-gold"></span>
+    </div>
+    <div class="hero-sparkles" aria-hidden="true">
+      <span class="spark" style="top:10%; left:7%;">✦</span>
+      <span class="spark" style="top:5%; left:40%;">✧</span>
+      <span class="spark" style="top:14%; right:9%;">✦</span>
+      <span class="spark" style="top:60%; left:5%;">✧</span>
+      <span class="spark" style="top:66%; right:7%;">✦</span>
+    </div>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-wrap justify-center gap-3 mb-5">
         <span class="hero-badge inline-flex items-center gap-1.5 bg-[#fdf2f2] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#f0c4c4]">
@@ -203,24 +228,60 @@ const videoSchema = {
           🪄 Interaktive Zaubershow
         </span>
       </div>
-      <Image
-        src={heroImg}
-        alt="Clown Zauberer LIAR bei einer Zaubershow"
-        class="w-full object-cover rounded-3xl"
-        style="max-height:620px; width:100%; object-position:52% 0%; box-shadow: 0 12px 32px rgba(0,0,0,0.14);"
-        loading="eager"
-        fetchpriority="high"
-        widths={[600, 900, 1200]}
-        sizes="(max-width: 1152px) 100vw, 1120px"
-        quality={70}
-      />
+      <div class="hero-slider" role="region" aria-roledescription="Bildergalerie" aria-label="Eindrücke von LIARs Shows">
+        {heroSlides.map((slide, i) => (
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            class:list={["hero-slide", { "is-active": i === 0 }]}
+            loading={i === 0 ? "eager" : "lazy"}
+            fetchpriority={i === 0 ? "high" : "auto"}
+            widths={[600, 900, 1200]}
+            sizes="(max-width: 1152px) 100vw, 1120px"
+            quality={70}
+          />
+        ))}
+        <div class="hero-dots">
+          {heroSlides.map((_, i) => (
+            <button type="button" class:list={["hero-dot", { "is-active": i === 0 }]} data-i={i} aria-label={`Bild ${i + 1} anzeigen`}></button>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
+  <script is:inline>
+    (function () {
+      var root = document.querySelector('.hero-slider');
+      if (!root) return;
+      var slides = root.querySelectorAll('.hero-slide');
+      var dots = root.querySelectorAll('.hero-dot');
+      if (slides.length < 2) return;
+      var i = 0, timer = null;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function show(n) {
+        i = (n + slides.length) % slides.length;
+        slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); });
+        dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+      }
+      function next() { show(i + 1); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function start() { if (reduce) return; stop(); timer = setInterval(next, 3000); }
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () { show(parseInt(d.dataset.i, 10)); start(); });
+      });
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+      start();
+    })();
+  </script>
 
   <!-- ═══════════════════════════════════════
        INTRO – H1 + lead paragraph (centered)
   ════════════════════════════════════════ -->
-  <section class="py-14 md:py-20 bg-white">
+  <section class="py-14 md:py-20">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <h1 class="text-[#1f2025] font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-tight mb-8">
         <span class="text-[#d7393e]">Clown Zauberer</span> in NRW – Zaubershow & Kindergeburtstag
@@ -240,6 +301,7 @@ const videoSchema = {
       </div>
     </div>
   </section>
+  </div>
 
   <!-- ═══════════════════════════════════════
        WAS MACHT CLOWN LIAR SO BESONDERS?
