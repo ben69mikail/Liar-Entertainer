@@ -7,10 +7,20 @@ import _heroImgAsset from '../../../assets/images/kinderzauberer/kinderzauberer-
 import _roundImgAsset from '../../../assets/images/kinderzauberer/zaubershow-mit-clown-zauberer-liar.jpg';
 import _showImgAsset from '../../../assets/images/clown/clown-bei-clownshow.jpg';
 import _galleryImgAsset from '../../../assets/images/zauberer/zaubershow-staunende-kinder.jpg';
+import HeroStage from '../../../components/HeroStage.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
+import CountUp from '../../../components/CountUp.astro';
+import WaveDivider from '../../../components/WaveDivider.astro';
 
 const seoTitle = "Kinderzauberer Essen | TOP Bewertet | Buchen";
 const seoDescription = "Kinderzauberer in Essen buchen ✓ Zaubershow für Kindergeburtstag & Kita ✓ 400+ Bewertungen ✓ Ab 150€ ✓ Auch in Mülheim & Bochum ✓ Jetzt anfragen!";
 const heroImg = _heroImgAsset.src;
+const citySlides = [
+  { src: _heroImgAsset, alt: 'Kinderzauberer LIAR bei einer Zaubershow in Essen' },
+  { src: _roundImgAsset, alt: 'Zaubershow mit Clown Zauberer LIAR in Essen' },
+  { src: _showImgAsset, alt: 'Clownshow für Kinder in Essen' },
+  { src: _galleryImgAsset, alt: 'Staunende Kinder bei der Zaubershow in Essen' },
+];
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -71,8 +81,10 @@ const structuredData = [serviceSchema, faqSchema];
   structuredData={structuredData}
 >
 
+  <!-- Hero + Breadcrumb + Intro: Pastell-Hero-Stage -->
+  <HeroStage blobOpacity={0.45}>
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 60%;`}></div>
@@ -93,7 +105,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Breadcrumb -->
-  <section class="bg-white pt-4 pb-0">
+  <section class="pt-4 pb-0">
     <div class="max-w-6xl mx-auto px-4">
       <nav class="text-sm text-[#595959]">
         <a href="/" class="text-[#d7393e] hover:underline">Clown</a>
@@ -106,7 +118,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -126,10 +138,12 @@ const structuredData = [serviceSchema, faqSchema];
       </div>
     </div>
   </section>
+  </HeroStage>
 
   <!-- Google Reviews -->
   <GoogleReviews />
 
+  <WaveDivider color="#eff4ff" />
   <section class="bg-[#eff4ff] py-14 border-y border-[#c5d3f7]">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-4 text-center">ESSEN</p>
@@ -164,19 +178,19 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
@@ -272,6 +286,15 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Essen</h2>
+      <HeroSlider slides={citySlides} class="reveal" />
+    </div>
+  </section>
+
+  <WaveDivider color="#eff4ff" />
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">

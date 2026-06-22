@@ -1226,7 +1226,7 @@ summary:focus-visible {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   filter: blur(60px);
-  opacity: 0.86;
+  opacity: var(--blob-opacity, 0.86);
   will-change: transform;
 }
 .hero-blobs .blob-red {
@@ -1370,6 +1370,18 @@ summary:focus-visible {
 .hero-dot.is-active { background: #fff; transform: scale(1.25); }
 @media (max-width: 640px) { .hero-slider { aspect-ratio: 4 / 3; } }
 @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
+
+/* ── Wellen-Divider: sanft driftende SVG-Welle zwischen Sektionen ── */
+.wave-divider { line-height: 0; overflow: hidden; }
+.wave-divider svg { display: block; width: 130%; height: 48px; margin-left: -15%; }
+.wave-divider.wave-flip { transform: scaleY(-1); }
+@media (prefers-reduced-motion: no-preference) {
+  .wave-divider svg { animation: waveDrift 16s ease-in-out infinite alternate; will-change: transform; }
+}
+@keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-7%); } }
+
+/* ── CountUp: stabile Ziffernbreite (kein Springen beim Hochzählen) ── */
+.countup-num { font-variant-numeric: tabular-nums; }
 
 /* ── Bild-Hover-Zoom (dezent, schnell — Hover passiert oft) ── */
 .img-hover-zoom {
