@@ -1,5 +1,6 @@
 ﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
 import HeroStage from '../../../components/HeroStage.astro';
 import CountUp from '../../../components/CountUp.astro';
 import aktionImg from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
@@ -62,6 +63,14 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
+const _gallerySlides = [
+  { src: aktionImg, alt: 'Moers – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _heroImgAsset, alt: 'Moers – Eindruck 2 mit Clown Zauberer LIAR' },
+  { src: _roundImgAsset, alt: 'Moers – Eindruck 3 mit Clown Zauberer LIAR' },
+  { src: _showImgAsset, alt: 'Moers – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _kgImgAsset, alt: 'Moers – Eindruck 5 mit Clown Zauberer LIAR' },
+];
+
 ---
 
 <BaseLayout
@@ -328,6 +337,14 @@ const structuredData = [serviceSchema, faqSchema];
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Moers</h2>
+      <HeroSlider slides={_gallerySlides} class="reveal" />
     </div>
   </section>
 

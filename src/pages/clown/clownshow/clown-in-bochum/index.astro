@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../../components/HeroSlider.astro';
 import HeroStage from '../../../../components/HeroStage.astro';
 import CountUp from '../../../../components/CountUp.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
@@ -70,6 +71,14 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
+const _gallerySlides = [
+  { src: _heroImgAsset, alt: 'Bochum – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _clownIntroAsset, alt: 'Bochum – Eindruck 2 mit Clown Zauberer LIAR' },
+  { src: _gal1Asset, alt: 'Bochum – Eindruck 3 mit Clown Zauberer LIAR' },
+  { src: _gal2Asset, alt: 'Bochum – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _gal3Asset, alt: 'Bochum – Eindruck 5 mit Clown Zauberer LIAR' },
+];
+
 ---
 
 <BaseLayout
@@ -264,6 +273,14 @@ const structuredData = [serviceSchema, faqSchema];
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Bochum</h2>
+      <HeroSlider slides={_gallerySlides} class="reveal" />
     </div>
   </section>
 

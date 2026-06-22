@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
 import HeroStage from '../../../components/HeroStage.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
@@ -76,6 +77,12 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
+const _gallerySlides = [
+  { src: _heroImgAsset, alt: 'Gelsenkirchen – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _introImgAsset, alt: 'Gelsenkirchen – Eindruck 2 mit Clown Zauberer LIAR' },
+  { src: _showImgAsset, alt: 'Gelsenkirchen – Eindruck 3 mit Clown Zauberer LIAR' },
+];
+
 ---
 
 <BaseLayout
@@ -312,6 +319,14 @@ const structuredData = [serviceSchema, faqSchema];
       </div>
     </div>
   </section>
+  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Gelsenkirchen</h2>
+      <HeroSlider slides={_gallerySlides} class="reveal" />
+    </div>
+  </section>
+
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">

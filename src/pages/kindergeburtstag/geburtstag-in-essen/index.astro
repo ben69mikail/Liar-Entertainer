@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
 import HeroStage from '../../../components/HeroStage.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
@@ -76,6 +77,12 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
+const _gallerySlides = [
+  { src: _heroImgAsset, alt: 'Essen – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _introImgAsset, alt: 'Essen – Eindruck 2 mit Clown Zauberer LIAR' },
+  { src: _showImgAsset, alt: 'Essen – Eindruck 3 mit Clown Zauberer LIAR' },
+];
+
 ---
 
 <BaseLayout
@@ -310,6 +317,14 @@ const structuredData = [serviceSchema, faqSchema];
           <p class="text-[#374151] leading-relaxed">Dürfen natürlich mitschauen! Auch kleinere oder größere Geschwister sind willkommen.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Essen</h2>
+      <HeroSlider slides={_gallerySlides} class="reveal" />
     </div>
   </section>
 
