@@ -4,7 +4,7 @@ import HeroSlider from '../../../../components/HeroSlider.astro';
 import HeroStage from '../../../../components/HeroStage.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
-import _heroImgAsset from '../../../../assets/images/clown/clownshow-hero.jpg';
+import _heroImgAsset from '../../../../assets/images/home/clown-zauberer-hero.jpg';
 import _clownIntroAsset from '../../../../assets/images/clown/clown-zauberer-gladbeck.jpg';
 import _gal1Asset from '../../../../assets/images/galerie/fotogalerie-clown-zauberer-1.jpg';
 import _gal2Asset from '../../../../assets/images/galerie/buehnen-zauberei.jpg';
@@ -72,7 +72,6 @@ const faqSchema = {
 const structuredData = [serviceSchema, faqSchema];
 const _gallerySlides = [
   { src: _heroImgAsset, alt: 'Gladbeck – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _clownIntroAsset, alt: 'Gladbeck – Eindruck 2 mit Clown Zauberer LIAR' },
   { src: _gal1Asset, alt: 'Gladbeck – Eindruck 3 mit Clown Zauberer LIAR' },
   { src: _gal2Asset, alt: 'Gladbeck – Eindruck 4 mit Clown Zauberer LIAR' },
   { src: _gal3Asset, alt: 'Gladbeck – Eindruck 5 mit Clown Zauberer LIAR' },
@@ -135,7 +134,7 @@ const _gallerySlides = [
         </div>
         <div class="flex justify-center">
           <img
-            src={_clownIntroAsset.src}
+            src={_gal1Asset.src}
             alt="Clownshow in Gladbeck"
             class="rounded-full object-cover object-[20%]"
             style="width: 320px; height: 320px;"
