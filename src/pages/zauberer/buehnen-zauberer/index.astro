@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../assets/images/zauberer/buehnen-zauberer-hero.jpg';
@@ -90,7 +91,8 @@ const serviceSchema = {
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -118,7 +120,7 @@ const serviceSchema = {
   </section>
 
   <!-- Intro -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
@@ -134,7 +136,7 @@ const serviceSchema = {
             ))}
           </ul>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">📊 Eckdaten der Show</h3>
           <dl class="space-y-3 text-sm">
             {[
@@ -156,6 +158,7 @@ const serviceSchema = {
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Was erwartet Sie? -->
@@ -174,7 +177,7 @@ const serviceSchema = {
           { title: 'Interaktiv & Einbindend', text: 'Ihr Publikum wird Teil der Show. Ausgewählte Gäste werden auf die Bühne geholt und erleben die Magie aus nächster Nähe.' },
           { title: 'Flexibel & Anpassbar', text: 'Elegant für Galas, humorvoll für Betriebsfeiern, zurückhaltend für feierliche Anlässe.' },
         ].map(item => (
-          <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="bg-white rounded-lg p-5 shadow-sm card-hover reveal">
             <h4 class="font-bold text-[#1f2025] mb-2">{item.title}</h4>
             <p class="text-[#374151] text-sm" set:html={item.text} />
           </div>
@@ -204,7 +207,7 @@ const serviceSchema = {
       <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10 text-[#1f2025]">Warum Bühnenzauberer LIAR?</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map(f => (
-          <div class="bg-white rounded-xl p-5 border border-[#c5d3f7] shadow-sm card-hover">
+          <div class="bg-white rounded-xl p-5 border border-[#c5d3f7] shadow-sm card-hover reveal">
             <p class="text-2xl mb-2">{f.icon}</p>
             <h3 class="font-bold mb-2 text-[#1f2025]">{f.title}</h3>
             <p class="text-[#374151] text-sm leading-relaxed">{f.text}</p>

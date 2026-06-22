@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../../components/HeroStage.astro';
+import CountUp from '../../../../components/CountUp.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import _heroImgAsset from '../../../../assets/images/clown/clownshow-hero.jpg';
@@ -80,7 +82,8 @@ const structuredData = [serviceSchema, faqSchema];
 >
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 20%;`}></div>
@@ -101,7 +104,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Breadcrumb -->
-  <section class="bg-white pt-4 pb-0">
+  <section class="pt-4 pb-0">
     <div class="max-w-6xl mx-auto px-4">
       <nav class="text-sm text-[#595959]">
         <a href="/" class="text-[#d7393e] hover:underline">Clown</a>
@@ -114,7 +117,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -134,6 +137,7 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -156,15 +160,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">" Diese SHOW mit dem Clown in Datteln ist DAS Highlight "</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">✨ Glitzer-Tattoos</h3>
           <p class="text-[#374151] leading-relaxed">Für den besonderen Glanz: Hautverträglich und mit Wow-Effekt – meine Glitzer-Tattoos begeistern Groß und Klein und bleiben gerne noch einige Tage sichtbar.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎭 Showmix: Clown trifft Zauberer</h3>
           <p class="text-[#374151] leading-relaxed">In meiner Show erleben Kinder und Erwachsene nicht nur reine Animation, sondern werden aktiv eingebunden: Ich zaubere und dabei werden alle zu kleinen Mitwirkenden.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎈 Ballonmodellage</h3>
           <p class="text-[#374151] leading-relaxed">Ob Ritterhelm oder Marienkäfer: Ich forme individuelle Ballonfiguren live vor Ort – jedes Kind geht mit seinem Wunsch­tier nach Hause. Ideal als Ergänzung zur Show oder als eigenständiger Programmpunkt.</p>
         </div>
@@ -177,19 +181,19 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
@@ -202,15 +206,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">Witzig und Magisch!</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Der witzigste Clown in Datteln mit TOP BEWERTUNGEN!</h3>
           <p class="text-[#374151] leading-relaxed">Die jungen Gäste erleben eine fröhliche und erstklassige Unterhaltung, bei der ich die kleinen Zuschauer in das Geschehen einbeziehe und zu aktiven Teilnehmern der Show mache. Dadurch werden die Kinder auf spielerische Weise in die Vorstellung integriert und ich sorge damit für eine unvergessliche Zeit.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Was ist ein Clown?</h3>
           <p class="text-[#374151] leading-relaxed">Eine Person, die im Zirkus mit allerlei lustigen Vorführungen zum Lachen reizt ist ein Clown. Gemeint war ursprünglich ein Tölpel, ein dummer Bauer, ein ungeschickter Mensch. Im 16. Jahrhundert gab es in englischen Theatern schon Clowns: Sie traten in den Pausen auf und unterhielten die Zuschauer. Später gab es im Theater und im Zirkus viele unterschiedliche Arten: die einen sind eher lustig, die anderen ernsthafter. Sie bringen die Menschen mal zum Lachen, mal zum Weinen.</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Clown in Datteln? NICHT NUR!</h3>
           <p class="text-[#374151] leading-relaxed">Moderne Clowns sind häufig im Rahmen eines freien Berufes als Künstler selbstständig tätig. Unter anderem gibt es die Klinikclowns, die sich auf das spezielle Arbeitsgebiet im Krankenhaus oder in der Pflege vorbereiten. Bis heute trat ich über 4000mal bei Privatpartys, Firmenveranstaltungen, Vereinsfeiern, Messen, in Theatern, Kindergärten und Grundschulen auf. Nicht nur in Datteln.</p>
         </div>
@@ -381,8 +385,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Datteln buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Datteln</a>
-      <a href="/kinderzauberer/kinderzauberer-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Datteln</a>
+      <a href="/kindergeburtstag/geburtstag-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover reveal">🎂 Kindergeburtstag in Datteln</a>
+      <a href="/kinderzauberer/kinderzauberer-in-datteln/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover reveal">🎩 Kinderzauberer in Datteln</a>
     </div>
   </div>
 </section>

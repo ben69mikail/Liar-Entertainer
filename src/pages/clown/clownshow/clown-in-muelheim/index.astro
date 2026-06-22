@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../../components/HeroStage.astro';
 import karteImg from '../../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import _heroImgAsset from '../../../../assets/images/clown/clownshow-hero.jpg';
@@ -79,7 +80,8 @@ const structuredData = [serviceSchema, faqSchema];
 >
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 20%;`}></div>
@@ -100,7 +102,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Breadcrumb -->
-  <section class="bg-white pt-4 pb-0">
+  <section class="pt-4 pb-0">
     <div class="max-w-6xl mx-auto px-4">
       <nav class="text-sm text-[#595959]">
         <a href="/" class="text-[#d7393e] hover:underline">Clown</a>
@@ -113,7 +115,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -135,6 +137,7 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -157,15 +160,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">🎨 Meine Show-Konzepte für Mülheim</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🎈 Ballonmodellage – Kreative Kunstwerke</h3>
           <p class="text-[#374151] leading-relaxed">Wie die Camera Obscura 📷 Kunst für Erwachsene zeigt, schaffe ich Ballon-Kunstwerke 🎈 für Kinder! Jedes Kind erhält seine individuelle Kreation zum Mitnehmen:</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🪄 Zaubershow – Wissenschaft trifft Magie</h3>
           <p class="text-[#374151] leading-relaxed">🦒 Tiere: Giraffen, Pudel, Bienen, Schmetterlinge⚔️ Action: Schwerter, Laserpistolen, Superhelden👑 Prinzessinnen: Kronen, Zauberstäbe, Herzen🌊 Ruhr-Special: Fische & Wassertiere auf Wunsch!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">✨ Glitzer-Tattoos – Temporäre Körperkunst</h3>
           <p class="text-[#374151] leading-relaxed">Perfekt für Mülheimer Bildungs-Familien 📚: Meine Zaubershows verbinden magische Illusionen 🪄 mit spielerischem Lernen. Kinder werden zu aktiven Forschern und entdecken die Magie hinter den Tricks ✨!</p>
         </div>
@@ -178,19 +181,19 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-10">❓ Häufige Fragen von Mülheimer Eltern</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🚗 Erreichen Sie alle Stadtteile schnell?</h3>
           <p class="text-[#374151] leading-relaxed">Ja! 🚗 Von Saarn über Broich bis Styrum – ich erreiche jeden Stadtteil in 15-25 Minuten ⏰. Kurze Wege = günstigere Preise!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">🌊 Gehen Shows auch draußen am Ruhr-Ufer?</h3>
           <p class="text-[#374151] leading-relaxed">Absolut! 🌊 Die grüne Ruhrstadt ist perfekt für Outdoor-Shows. Bei gutem Wetter spiele ich gerne im Freien – am Fluss, im Park oder Garten 🌳. Bei Regen weiche ich flexibel nach drinnen aus!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">📚 Sind Shows für bildungsaffine Kinder geeignet?</h3>
           <p class="text-[#374151] leading-relaxed">Perfekt! 🧠 Mülheimer Kinder sind oft besonders neugierig und wissbegierig. Meine Shows fördern diese Eigenschaften spielerisch – Staunen und Lernen gehören zusammen! 📚</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">📅 Wie früh sollten wir buchen?</h3>
           <p class="text-[#374151] leading-relaxed">Für Wochenenden 📆 und Sommerferien ☀️: 4-6 Wochen Vorlauf. Unter der Woche oft auch kurzfristiger möglich!</p>
         </div>
@@ -216,17 +219,17 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Stats Banner -->
   <section class="w-full bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-[#1f2025]">400</div>
         <div class="text-[#1f2025] text-sm mt-1">Shows im Jahr</div>
       </div>
-      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
         <div class="text-3xl mb-2">😊</div>
         <div class="text-4xl font-extrabold text-[#1f2025]">110.000</div>
         <div class="text-[#1f2025] text-sm mt-1">Lachende Kinder</div>
       </div>
-      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+      <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
         <div class="text-3xl mb-2">🪄</div>
         <div class="text-4xl font-extrabold text-[#1f2025]">15</div>
         <div class="text-[#1f2025] text-sm mt-1">Jahre Erfahrung</div>
@@ -375,8 +378,8 @@ const structuredData = [serviceSchema, faqSchema];
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="text-[#1f2025] font-bold text-xl mb-4">LIAR in Mülheim buchen</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover">🎂 Kindergeburtstag in Mülheim</a>
-      <a href="/kinderzauberer/kinderzauberer-in-muelheim/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover">🎩 Kinderzauberer in Mülheim</a>
+      <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#d7393e] hover:underline font-medium text-sm card-hover reveal">🎂 Kindergeburtstag in Mülheim</a>
+      <a href="/kinderzauberer/kinderzauberer-in-muelheim/" class="bg-white rounded-lg px-5 py-3 shadow-sm text-[#3b55d5] hover:underline font-medium text-sm card-hover reveal">🎩 Kinderzauberer in Mülheim</a>
     </div>
   </div>
 </section>

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../../components/HeroStage.astro';
+import CountUp from '../../../../components/CountUp.astro';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../../assets/images/zauberer/strassenfest-essen-hero.jpg';
@@ -74,7 +76,8 @@ const festarten = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -101,7 +104,7 @@ const festarten = [
   </section>
 
   <!-- Intro -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
@@ -116,7 +119,7 @@ const festarten = [
             Für Veranstalter bedeutet das: Professionelles, vielseitiges Entertainment aus einer Hand, das sich nahtlos in Ihr Festprogramm einfügt. Ich mache Ihr Fest zum Erlebnis! Informieren Sie sich auch über meine Angebote für <a href="/zauberer/zaubershow/kindergarten-kita/" class="text-[#d7393e] hover:underline">Kita- und Kindergartenfeste</a> oder <a href="/zauberer/zaubershow/schule/" class="text-[#d7393e] hover:underline">Schulveranstaltungen</a>.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">✨ Entertainment-Formate für Ihr Fest</h3>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2"><span class="text-[#d7393e] font-bold">🚶‍♂️</span> <span class="text-[#374151]"><strong>Walk-Act:</strong> Zauberkunst mobil & hautnah – direkt zu den Besuchern</span></li>
@@ -131,6 +134,7 @@ const festarten = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Entertainment Formate -->
@@ -182,17 +186,17 @@ const festarten = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
@@ -206,7 +210,7 @@ const festarten = [
       <p class="text-center text-[#374151] mb-10">Von A wie Altstadtfest bis Z wie Zeltfest</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {festarten.map(f => (
-          <div class="bg-gray-50 rounded-xl p-5 card-hover">
+          <div class="bg-gray-50 rounded-xl p-5 card-hover reveal">
             <p class="text-2xl mb-2">{f.icon}</p>
             <h3 class="font-bold text-[#1f2025] text-sm mb-2">{f.title}</h3>
             <p class="text-[#374151] text-xs mb-1">👥 {f.groesse}</p>
@@ -289,7 +293,7 @@ const festarten = [
           <p class="text-[#374151] text-sm mb-6">Deutschland: Gesamtes Bundesgebiet<br />International: Frankreich, Belgien, Niederlande, Österreich, Schweiz</p>
           <p class="text-[#374151] text-sm italic">💡 <strong>Tipp für Veranstalter:</strong> Beliebte Fest-Termine (Mai bis September, Wochenenden) sind oft Monate im Voraus ausgebucht. Für etablierte Stadtfeste empfehle ich eine Buchung mindestens 3–6 Monate im Voraus!</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">📞 Direkt anfragen</h3>
           <div class="space-y-3 text-[#374151]">
             <p>📱 Telefon & WhatsApp: <a href="tel:+491721517578" class="text-[#d7393e] hover:underline font-semibold">0172-1517578</a></p>

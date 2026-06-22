@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../../components/HeroStage.astro';
+import CountUp from '../../../../components/CountUp.astro';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../../assets/images/zauberer/schule-hero.jpg';
@@ -86,7 +88,8 @@ const praktisch = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -113,7 +116,7 @@ const praktisch = [
   </section>
 
   <!-- Intro -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
@@ -127,7 +130,7 @@ const praktisch = [
             Das Besondere? Meine Show fördert Konzentration, logisches Denken, Selbstvertrauen und soziales Lernen. Für Lehrkräfte und Schulleitung: Minimaler organisatorischer Aufwand bei maximalem pädagogischem und Unterhaltungswert. Für jüngere Kinder empfehle ich mein spezielles Programm für <a href="/zauberer/zaubershow/kindergarten-kita/" class="text-[#d7393e] hover:underline">Kindergärten und Kitas</a>. Ich trete auch regelmäßig auf <a href="/zauberer/zaubershow/strassen-sommer-fest/" class="text-[#d7393e] hover:underline">Straßen- und Sommerfesten</a> auf.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">⭐ Was meine Show für Schulen so besonders macht:</h3>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2"><span class="text-[#d7393e] font-bold">🎯</span> <span class="text-[#374151]"><strong>Altersgerecht für Klassen 1–4:</strong> Einfache Tricks, kurze Geschichten, viel Bewegung</span></li>
@@ -142,6 +145,7 @@ const praktisch = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Altersgruppen -->
@@ -150,13 +154,13 @@ const praktisch = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-4">🌟 Für jede Altersgruppe die richtige Zauberkunst</h2>
       <p class="text-center text-[#374151] mb-10">Von der Grundschule bis zur weiterführenden Schule</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-xl mb-4">🎨 Grundschüler</h3>
           <p class="text-[#374151] leading-relaxed">
             Für jüngere Schüler arbeite ich mit bunten, visuellen Tricks und viel Bewegung: Ringe verschwinden spurlos, Seile zerschneiden sich von selbst wieder zusammen, und plötzlich erscheinen Süßigkeiten aus dem Nichts! Die Show ist lebhaft, interaktiv und perfekt auf die kurze Aufmerksamkeitsspanne abgestimmt.
           </p>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-xl mb-4">🧠 Ältere Schüler</h3>
           <p class="text-[#374151] leading-relaxed">
             Bei älteren Schülern setze ich auf verblüffende Mentalmagie, Kartentricks und interaktive Illusionen, die auch kritische junge Köpfe ins Grübeln bringen. Der Clown schafft dabei die lockere Atmosphäre, während der <a href="/kinderzauberer/" class="text-[#d7393e] hover:underline">Kinderzauberer</a> mit seinen Tricks für Gänsehaut-Momente sorgt.
@@ -187,7 +191,7 @@ const praktisch = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎓 Perfekt für jeden Anlass an Ihrer Schule</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {anlaesse.map(a => (
-          <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover">
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover reveal">
             <p class="text-3xl mb-3">{a.icon}</p>
             <h3 class="font-bold text-[#1f2025] mb-2">{a.title}</h3>
             <p class="text-[#374151] text-sm leading-relaxed mb-4">{a.text}</p>
@@ -209,17 +213,17 @@ const praktisch = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
         <div class="bg-white rounded-xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
@@ -248,7 +252,7 @@ const praktisch = [
       <p class="text-center text-[#374151] mb-10">Organisatorisches für Ihre Schule – Alles auf einen Blick</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Platzbedarf -->
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">📐 Platzbedarf & Räume</h3>
           <p class="text-[#374151] text-sm mb-1">Minimaler Platzbedarf: <strong>2×2 Meter</strong></p>
           <p class="text-[#374151] text-sm mb-3">Ideal für große Veranstaltungen: <strong>4×4 Meter</strong></p>
@@ -263,7 +267,7 @@ const praktisch = [
           </ul>
         </div>
         <!-- Gruppengrößen -->
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">👥 Gruppengrößen</h3>
           <ul class="text-[#374151] text-sm space-y-3">
             <li><strong>Einzelne Klasse: 20–30 Schüler</strong><br />Sehr intime Show, Dauer: 30–40 Min.</li>
@@ -274,7 +278,7 @@ const praktisch = [
           <p class="text-[#374151] text-xs mt-3 italic">💡 Mehrere Shows hintereinander möglich – z. B. erst Klasse 1–3, dann Klasse 2–4</p>
         </div>
         <!-- Showdauer -->
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">⏱️ Showdauer & Technik</h3>
           <p class="text-[#374151] text-sm mb-2"><strong>Standard-Show: ca. 40 Minuten</strong></p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">

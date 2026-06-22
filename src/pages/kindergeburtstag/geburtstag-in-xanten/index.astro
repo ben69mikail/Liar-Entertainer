@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
+import CountUp from '../../../components/CountUp.astro';
 import karteImg from '../../../assets/images/home/clown-zauberer-gladbeck-karte.jpg';
 import { Image } from 'astro:assets';
 import _heroImgAsset from '../../../assets/images/kindergeburtstag/kindergeburtstag-hero.jpg';
@@ -67,7 +69,8 @@ const structuredData = [serviceSchema, faqSchema];
 >
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 20%;`}></div>
@@ -88,7 +91,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Breadcrumb -->
-  <section class="bg-white pt-4 pb-0">
+  <section class="pt-4 pb-0">
     <div class="max-w-6xl mx-auto px-4">
       <nav class="text-sm text-[#595959]">
         <a href="/" class="text-[#d7393e] hover:underline">Clown</a>
@@ -101,7 +104,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -123,6 +126,7 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -145,7 +149,7 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -157,7 +161,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
           <p class="text-[#374151] text-sm">Direkt ab der ersten Minute nimmt die Show die kleinen Gäste mit auf eine fantasievolle Reise!</p>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Luftballonmodellage</h3>
           <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -169,7 +173,7 @@ const structuredData = [serviceSchema, faqSchema];
           </ul>
           <p class="text-[#374151] text-sm">Ob Schwerter, Hunde oder Blumen – die Kinder staunen, wenn aus einem Ballon ihre Wunschfigur entsteht!</p>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Glitzer-Tattoos</h3>
           <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
           <ul class="space-y-2 text-[#374151] text-sm mb-6">
@@ -206,19 +210,19 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>

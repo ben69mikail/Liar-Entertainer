@@ -1,5 +1,7 @@
 ﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
+import CountUp from '../../../components/CountUp.astro';
 import aktionImg from '../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
 import { Image } from 'astro:assets';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
@@ -76,7 +78,8 @@ const structuredData = [serviceSchema, faqSchema];
 >
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url('${heroImg}'); background-position: center 60%;`}></div>
@@ -97,7 +100,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Breadcrumb -->
-  <section class="bg-white pt-4 pb-0">
+  <section class="pt-4 pb-0">
     <div class="max-w-6xl mx-auto px-4">
       <nav class="text-sm text-[#595959]">
         <a href="/" class="text-[#d7393e] hover:underline">Clown</a>
@@ -110,7 +113,7 @@ const structuredData = [serviceSchema, faqSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -134,6 +137,7 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -165,15 +169,15 @@ const structuredData = [serviceSchema, faqSchema];
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl sm:text-3xl text-center mb-8">Die Show in Herten – Was Sie erwartet! 🎭</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Lustige Zaubershow mit interaktivem Charakter 🪄</h3>
           <p class="text-[#374151] leading-relaxed">Die Performance vereint meisterhafte Illusionen mit herzlicher Comedy – und der Clou: Die Kinder agieren nicht nur mit, sie gestalten aktiv mit! Sie entscheiden, wohin die Reise geht, werden zu Zauber-Partnern und erschaffen gemeinsam magische Momente. Jeder wird gesehen, jeder darf glänzen!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Spontan &amp; flexibel 👍</h3>
           <p class="text-[#374151] leading-relaxed">Ohne langes Setup oder komplizierte Technik komme ich und lege direkt los. Egal ob drinnen 🏠 oder draußen 🌳, ob 10 oder 100 Kinder – die Show passt sich an. Das Motto: maximale Freude bei minimalem Stress für Sie!</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Emotionale Achterbahn garantiert 🎢</h3>
           <p class="text-[#374151] leading-relaxed">Die Kinder durchleben ein Wechselbad der Gefühle: Sie kichern, staunen, jubeln, raten mit… und mein bestes Kunststück? Jedem Kind ein echtes Lächeln zu entlocken, das von innen kommt! 😊</p>
         </div>
@@ -207,19 +211,19 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>

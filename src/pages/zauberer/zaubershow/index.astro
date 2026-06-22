@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../assets/images/zauberer/zaubershow-hero.jpg';
@@ -116,7 +117,8 @@ const whyUs = [
   </section>
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -143,7 +145,7 @@ const whyUs = [
   </section>
 
   <!-- Intro Text -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <p class="text-[#374151] text-lg leading-relaxed mb-4">
         Stellen Sie sich vor: Kinderaugen leuchten, kleine Münder stehen vor Staunen offen, plötzlich bricht schallendes Gelächter aus – und im nächsten Moment herrscht wieder ehrfürchtige Stille. Das ist meine Zaubershow! Eine perfekte Symbiose aus verblüffender Zauberei und herzerfrischender Clownerie, die Kinder (und Erwachsene!) gleichermaßen begeistert. Besonders beliebt ist die Show auf dem <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a> – als erfahrener <a href="/kinderzauberer/" class="text-[#d7393e] hover:underline">Kinderzauberer</a> weiß ich genau, wie man kleine Zuschauer begeistert. 🌟
@@ -154,6 +156,7 @@ const whyUs = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Was macht meine Zaubershow einzigartig? -->
@@ -213,7 +216,7 @@ const whyUs = [
       <h2 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">⭐ Die 5 Säulen meiner Zaubershow:</h2>
       <div class="space-y-6">
         {pillars.map((pillar) => (
-          <div class="bg-white rounded-xl p-7 flex gap-5 items-start card-hover">
+          <div class="bg-white rounded-xl p-7 flex gap-5 items-start card-hover reveal">
             <span class="text-3xl flex-shrink-0">{pillar.num}</span>
             <div>
               <h3 class="font-bold text-[#1f2025] text-lg mb-2">{pillar.title}</h3>
@@ -266,7 +269,7 @@ const whyUs = [
           { initials: 'TA', color: '#2196f3', name: 'Thorsten Andres', date: 'vor 2 Monaten', text: 'Was ein geiler Typ! Mit viel Witz, Charme und Humor im Herzen ❤️' },
           { initials: 'NK', color: '#ff9800', name: 'Nina Keller', date: 'vor 2 Monaten', text: 'Mit unglaublich viel Charme und Humor begeistert Michael die kleinen UND die großen Zuschauer. Ganz große Klasse 🤩' },
         ].map(review => (
-          <div class="bg-gray-50 rounded-xl shadow-sm p-5 flex flex-col gap-3 card-hover">
+          <div class="bg-gray-50 rounded-xl shadow-sm p-5 flex flex-col gap-3 card-hover reveal">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={`background-color: ${review.color};`}>
                 {review.initials}
@@ -356,15 +359,15 @@ const whyUs = [
       <div class="mb-8">
         <h3 class="font-bold text-lg mb-4">✅ So einfach geht's:</h3>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-          <div class="bg-white/10 rounded-lg p-4 card-hover">
+          <div class="bg-white/10 rounded-lg p-4 card-hover reveal">
             <p class="font-bold mb-2">1️⃣ Anfrage stellen</p>
             <p class="text-gray-300 text-sm">Anrufen oder E-Mail schreiben</p>
           </div>
-          <div class="bg-white/10 rounded-lg p-4 card-hover">
+          <div class="bg-white/10 rounded-lg p-4 card-hover reveal">
             <p class="font-bold mb-2">2️⃣ Termin & Details</p>
             <p class="text-gray-300 text-sm">Unverbindliches Angebot erhalten</p>
           </div>
-          <div class="bg-white/10 rounded-lg p-4 card-hover">
+          <div class="bg-white/10 rounded-lg p-4 card-hover reveal">
             <p class="font-bold mb-2">3️⃣ Buchen & freuen!</p>
             <p class="text-gray-300 text-sm">💡 Je früher Sie anfragen, desto größer die Chance auf Ihren Wunschtermin!</p>
           </div>

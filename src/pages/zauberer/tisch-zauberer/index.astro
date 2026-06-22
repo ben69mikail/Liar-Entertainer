@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../assets/images/zauberer/tisch-zauberei-hero.jpg';
@@ -96,7 +97,8 @@ const ablauf = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -124,7 +126,7 @@ const ablauf = [
   </section>
 
   <!-- Intro / Eckdaten -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
@@ -139,7 +141,7 @@ const ablauf = [
             <li class="flex items-center gap-3"><span class="text-[#d7393e] font-bold">✓</span> Kein Platzbedarf – Ich komme zu den Tischen</li>
           </ul>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 card-hover">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">📊 Eckdaten</h3>
           <dl class="space-y-3 text-sm">
             {[
@@ -161,6 +163,7 @@ const ablauf = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Was ist Close-up Zauberei? -->
@@ -190,7 +193,7 @@ const ablauf = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎭 Typischer Ablauf</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {ablauf.map(step => (
-          <div class="flex gap-4 items-start bg-gray-50 rounded-xl p-6 card-hover">
+          <div class="flex gap-4 items-start bg-gray-50 rounded-xl p-6 card-hover reveal">
             <div class="w-10 h-10 rounded-full bg-[#d7393e] text-white font-bold flex items-center justify-center flex-shrink-0">
               {step.step}
             </div>
@@ -224,7 +227,7 @@ const ablauf = [
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-2xl sm:text-3xl text-center mb-10 text-[#1f2025]">Wann Close-up wählen?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover">
+        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover reveal">
           <h3 class="font-bold text-xl mb-4 text-[#d7393e]">✅ Perfekt für Close-up Zauberei:</h3>
           <ul class="space-y-2 text-[#374151] text-sm">
             {['Hochzeiten (DER Klassiker!)', 'Empfänge (Sekt, Cocktail)', 'Dinner-Events (Gala, Business)', 'Gäste sitzen/stehen in Gruppen', 'Kein fixes Showprogramm gewünscht', 'Intimate, persönliche Atmosphäre', 'Flexibilität wichtig', 'Events über mehrere Stunden'].map(i => (
@@ -232,7 +235,7 @@ const ablauf = [
             ))}
           </ul>
         </div>
-        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover">
+        <div class="bg-white rounded-xl p-8 border border-[#c5d3f7] shadow-sm card-hover reveal">
           <h3 class="font-bold text-xl mb-4 text-[#d7393e]">✅ Perfekt für Bühnenshow:</h3>
           <ul class="space-y-2 text-[#374151] text-sm">
             {['Betriebsfeiern mit Programm', 'Galas mit Show-Teil', 'Große Geburtstage (50+)', 'Alle sollen gleichzeitig unterhalten werden', 'Fester Programmpunkt gewünscht', 'Show-Charakter', 'Bühne vorhanden', '10–150 Gäste'].map(i => (
@@ -280,7 +283,7 @@ const ablauf = [
           <h3 class="font-bold text-[#1f2025] mb-2">🌍 Überregional & International</h3>
           <p class="text-[#374151] text-sm">Deutschland: Gesamtes Bundesgebiet<br />International: Frankreich, Belgien, Niederlande, Österreich, Schweiz</p>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover">
+        <div class="bg-white rounded-xl p-6 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
           <h3 class="font-bold text-[#1f2025] mb-4">📞 Direkt anfragen</h3>
           <div class="space-y-3 text-[#374151]">
             <p>📱 Telefon & WhatsApp: <a href="tel:+491721517578" class="text-[#d7393e] hover:underline font-semibold">0172-1517578</a></p>

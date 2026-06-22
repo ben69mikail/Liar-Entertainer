@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import ballonmodellage1Img from '../../../assets/images/clown/ballonmodellage-1.jpg';
@@ -71,7 +72,8 @@ const einsatzgebiet = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -98,7 +100,7 @@ const einsatzgebiet = [
   </section>
 
   <!-- Intro -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -130,6 +132,7 @@ const einsatzgebiet = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Was ist Ballonmodellage? -->
@@ -170,7 +173,7 @@ const einsatzgebiet = [
         <h3 class="font-bold text-[#1f2025] text-xl mb-4 text-center">Für welche Anlässe eignet sich Ballonmodellage?</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
           {anlaesse.map((a) => (
-            <div class="bg-white rounded-lg p-3 flex items-center gap-2 shadow-sm card-hover">
+            <div class="bg-white rounded-lg p-3 flex items-center gap-2 shadow-sm card-hover reveal">
               <span class="text-[#d7393e] flex-shrink-0">✓</span>
               <span class="text-[#374151] text-sm">{a}</span>
             </div>
@@ -187,7 +190,7 @@ const einsatzgebiet = [
       <p class="text-center text-[#374151] mb-8">Das Ballonrepertoire – Von Hund bis Marienkäfer</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {figuren.map((cat) => (
-          <div class="bg-gray-50 rounded-xl p-6 card-hover">
+          <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
             <h3 class="font-bold text-[#1f2025] mb-4">{cat.title}</h3>
             <ul class="space-y-2">
               {cat.items.map((item) => (

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroStage from '../../components/HeroStage.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
 import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktformular.jpg';
 ---
@@ -13,7 +14,8 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
   breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Kontakt', url: '/kontakt/' }]}
 >
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 540px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -231,7 +233,7 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
           </div>
 
           <!-- Trust signals -->
-          <div class="mt-8 bg-[#fdf2f2] border border-[#f0c4c4] rounded-lg p-6 card-hover">
+          <div class="mt-8 bg-[#fdf2f2] border border-[#f0c4c4] rounded-lg p-6 card-hover reveal">
             <h3 class="font-bold text-[#1f2025] mb-3">Warum Clown Zauberer LIAR?</h3>
             <ul class="space-y-2 text-sm text-[#374151]">
               {['⭐ Über 400 Bewertungen – durchschnittlich 5/5 Sterne',
@@ -263,6 +265,7 @@ import heroImage from '../../assets/images/general/clown-zauberer-liar-kontaktfo
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- CAPTCHA Script (DSGVO-konform: kein externer Service, keine Cookies) -->

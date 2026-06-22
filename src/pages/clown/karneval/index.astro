@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
+import CountUp from '../../../components/CountUp.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import karnevalHero from '../../../assets/images/clown/karneval-hero-original.jpg';
@@ -61,7 +63,8 @@ const besonderheiten = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -88,7 +91,7 @@ const besonderheiten = [
   </section>
 
   <!-- Intro -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
@@ -117,6 +120,7 @@ const besonderheiten = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Warum Zauberei & Karneval -->
@@ -143,19 +147,19 @@ const besonderheiten = [
   <section class="bg-[#fdf2f2] py-10 text-center border-y border-[#f0c4c4]">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
-        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse">
+        <div class="bg-white border border-[#f0c4c4] shadow-sm rounded-xl p-6 stat-card-pulse reveal">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>
@@ -168,7 +172,7 @@ const besonderheiten = [
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">🎭 Karnevals-Zaubershow für jeden Anlass</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {anlaesse.map(a => (
-          <div class="bg-gray-50 rounded-xl p-8 shadow-sm card-hover">
+          <div class="bg-gray-50 rounded-xl p-8 shadow-sm card-hover reveal">
             <p class="text-3xl mb-3">{a.icon}</p>
             <h3 class="font-bold text-[#1f2025] text-xl mb-3">{a.title}</h3>
             <p class="text-[#374151] text-sm leading-relaxed mb-4">{a.desc}</p>

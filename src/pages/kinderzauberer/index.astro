@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroStage from '../../components/HeroStage.astro';
+import CountUp from '../../components/CountUp.astro';
 import { Image } from 'astro:assets';
 
 import heroImg from '../../assets/images/kinderzauberer/kinderzauberer-hero.jpg';
@@ -115,7 +117,8 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 576px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -139,7 +142,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Intro Text -->
-  <section class="bg-white py-12">
+  <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <p class="hero-subtitle text-[#374151] text-lg leading-relaxed mb-4">
         Kinderzauberer LIAR (Michaël Prescler) ist ein professioneller Kinderzauberer aus Gladbeck und tritt in ganz NRW auf. Er gestaltet eine interaktive Zaubershow für Kindergeburtstage, Schulfeste und Familienfeiern – für Kinder von 3 bis 12 Jahren, ab ca. 25–30 Minuten und buchbar ab 150 €.
@@ -172,7 +175,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- So läuft die Zaubershow ab -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
@@ -212,7 +215,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- 3-Column Info Cards mit abgerundeten Bildern -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Einfach und unkompliziert -->
@@ -276,6 +279,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -284,17 +288,17 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>

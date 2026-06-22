@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
+import CountUp from '../../../components/CountUp.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../../assets/images/clown/clownshow-hero.jpg';
 import clownBeiClownshowImg from '../../../assets/images/clown/clown-bei-clownshow.jpg';
@@ -115,7 +117,8 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 570px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -139,7 +142,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   </section>
 
   <!-- Intro Section -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <p class="text-[#374151] leading-relaxed mb-4">
         Als professioneller Kinderclown und <a href="/kinderzauberer/" class="text-[#d7393e] hover:underline">Kinderzauberer</a> bringe ich seit über 15 Jahren Lachen, Spaß und gute Laune zu Kindergeburtstagen, Kinderfesten und Familienveranstaltungen in ganz Nordrhein-Westfalen. Meine Clownshow ist eine bunte Mischung aus Comedy, Clown-Gags und <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline">Zaubershow</a> – perfekt auf Kinder zwischen 4 und 12 Jahren abgestimmt!
@@ -153,6 +156,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
     </div>
   </section>
 
+  </HeroStage>
   <!-- Google Reviews -->
   <GoogleReviews />
 
@@ -201,17 +205,17 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={400} /></div>
           <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
         </div>
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={110000} /></div>
           <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
         </div>
         <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
           <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
+          <div class="text-4xl font-extrabold text-[#d7393e]"><CountUp value={15} /></div>
           <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
         </div>
       </div>

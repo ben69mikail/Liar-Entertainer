@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroStage from '../../components/HeroStage.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../assets/images/zauberer/zauberer-nrw.png';
@@ -135,7 +136,8 @@ const whyUs = [
   </section>
 
   <!-- Hero Section -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -163,7 +165,7 @@ const whyUs = [
   </section>
 
   <!-- Intro + Formats Overview -->
-  <section class="bg-white py-12">
+  <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <p class="text-[#374151] leading-relaxed mb-4">
         Ob <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a>, Hochzeit oder Firmenevent – als Clown Zauberer LIAR erleben Sie Magie, die begeistert und in Erinnerung bleibt. Als <a href="/kinderzauberer/" class="text-[#d7393e] hover:underline">Kinderzauberer</a> bringe ich Kinderaugen zum Leuchten, als <a href="/zauberer/buehnen-zauberer/" class="text-[#d7393e] hover:underline">Bühnenzauberer</a> fessle ich Ihr Publikum, und als <a href="/zauberer/tisch-zauberer/" class="text-[#d7393e] hover:underline">Tischzauberer</a> verzaubere ich Ihre Gäste aus nächster Nähe.
@@ -176,6 +178,7 @@ const whyUs = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Format Cards -->
@@ -186,7 +189,7 @@ const whyUs = [
       <p class="text-center text-[#374151] mb-12">Tauchen Sie ein in die faszinierende Welt der Magie und buchen Sie den Zauberer aus Frankreich. Ob <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline">Zaubershow</a> für Kinder oder elegante <a href="/clown/clownshow/" class="text-[#d7393e] hover:underline">Clownshow</a> – lassen Sie sich von niveauvoller Kunst und unvergleichlichem Charme verzaubern.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {formats.map((format) => (
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col card-hover">
+          <div class="bg-white rounded-xl overflow-hidden flex flex-col card-hover reveal">
             {format.img && <Image src={format.img} alt={format.imgAlt} class="w-full h-52 object-cover object-top" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 100vw, 33vw" />}
             <div class="p-7 flex flex-col flex-1">
             <div class="text-4xl mb-4">{format.icon}</div>

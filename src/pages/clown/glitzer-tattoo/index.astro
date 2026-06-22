@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
 import glitzerTattooHeroImg from '../../../assets/images/clown/glitzer-tattoo-hero.jpeg';
@@ -54,7 +55,8 @@ const motive = [
   </section>
 
   <!-- Hero -->
-  <section class="bg-white pt-6 sm:pt-8">
+  <HeroStage blobOpacity={0.45}>
+  <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative overflow-hidden rounded-3xl" style="min-height: 600px; box-shadow: 0 12px 32px rgba(0,0,0,0.14);">
     <Image
@@ -81,7 +83,7 @@ const motive = [
   </section>
 
   <!-- Intro / Highlights -->
-  <section class="bg-white py-14">
+  <section class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -112,6 +114,7 @@ const motive = [
     </div>
   </section>
 
+  </HeroStage>
   <GoogleReviews />
 
   <!-- Was sind Glitzer Tattoos? -->
@@ -183,7 +186,7 @@ const motive = [
       <p class="text-center text-[#374151] mb-8">Unsere Motivauswahl ist riesig! Jedes Kind darf sich sein Lieblingsmotiv aussuchen.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {motive.map((cat) => (
-          <div class="bg-gray-50 rounded-xl p-6 card-hover">
+          <div class="bg-gray-50 rounded-xl p-6 card-hover reveal">
             <h3 class="font-bold text-[#1f2025] mb-4">{cat.title}</h3>
             <div class="flex flex-wrap gap-2">
               {cat.items.map((item) => (
