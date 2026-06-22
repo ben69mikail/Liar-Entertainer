@@ -61,12 +61,12 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Moers – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _introImgAsset, alt: 'Moers – Eindruck 2 mit Clown Zauberer LIAR' },
-  { src: _showImgAsset, alt: 'Moers – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Moers – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Moers – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _showImgAsset, alt: 'Moers – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _gal1Asset, alt: 'Ballonmodellage für Kindergeburtstag in Moers' },
+  { src: _gal2Asset, alt: 'Zaubershow für Kindergeburtstag in Moers NRW' },
+  { src: _gal3Asset, alt: 'Glitzer Tattoos für Kinder auf Geburtstag in Moers' },
 ];
 
 ---
@@ -217,11 +217,7 @@ const _gallerySlides = [
 <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_gal1Asset.src} alt="Ballonmodellage für Kindergeburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="Glitzer Tattoos für Kinder auf Geburtstag in Moers" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow für Kindergeburtstag in Moers NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -304,13 +300,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Moers</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

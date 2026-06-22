@@ -69,11 +69,15 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Oberhausen – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Oberhausen – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Oberhausen – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal3Asset, alt: 'Oberhausen – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _gal2Asset, alt: 'Oberhausen – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _gal3Asset, alt: 'Oberhausen – Eindruck 2 mit Clown Zauberer LIAR' },
+  { src: _gal4Asset, alt: 'Oberhausen – Eindruck 3 mit Clown Zauberer LIAR' },
+  { src: _gal5Asset, alt: 'Oberhausen – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _gal6Asset, alt: 'Oberhausen – Eindruck 5 mit Clown Zauberer LIAR' },
+  { src: _gal8Asset, alt: 'Oberhausen – Eindruck 6 mit Clown Zauberer LIAR' },
+  { src: _gal9Asset, alt: 'Oberhausen – Eindruck 7 mit Clown Zauberer LIAR' },
 ];
 
 ---
@@ -283,11 +287,12 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
+
+  <!-- Foto-Galerie (Slider) -->
   <section class="py-14 bg-white">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Oberhausen</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 

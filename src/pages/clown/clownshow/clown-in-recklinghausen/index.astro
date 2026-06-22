@@ -69,11 +69,16 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Recklinghausen – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Recklinghausen – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Recklinghausen – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal3Asset, alt: 'Recklinghausen – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _gal2Asset, alt: 'Zaubershow in Gelsenkirchen auf einer Bühne' },
+  { src: _gal3Asset, alt: 'Glitzer Tattoos für die Kinder in Gelsenkirchen' },
+  { src: _gal4Asset, alt: 'Recklinghausen – Eindruck 3 mit Clown Zauberer LIAR' },
+  { src: _gal5Asset, alt: 'Recklinghausen – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _gal6Asset, alt: 'Recklinghausen – Eindruck 5 mit Clown Zauberer LIAR' },
+  { src: _gal7Asset, alt: 'Zaubershow auf Bühne in Recklinghausen' },
+  { src: _gal8Asset, alt: 'Recklinghausen – Eindruck 7 mit Clown Zauberer LIAR' },
+  { src: _gal9Asset, alt: 'Recklinghausen – Eindruck 8 mit Clown Zauberer LIAR' },
 ];
 
 ---
@@ -180,12 +185,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
-        <img src={_gal7Asset.src} alt="Zaubershow auf Bühne in Recklinghausen" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow in Gelsenkirchen auf einer Bühne" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="Glitzer Tattoos für die Kinder in Gelsenkirchen" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal1Asset.src} alt="Clown in Gelsenkirchen modelliert in Ballons" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -299,13 +299,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Recklinghausen</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

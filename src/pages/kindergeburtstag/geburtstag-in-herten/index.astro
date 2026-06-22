@@ -60,12 +60,11 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Herten – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _introImgAsset, alt: 'Herten – Eindruck 2 mit Clown Zauberer LIAR' },
-  { src: _showImgAsset, alt: 'Herten – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal8Asset, alt: 'Herten – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal9Asset, alt: 'Herten – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _showImgAsset, alt: 'Herten – Eindruck 1 mit Clown Zauberer LIAR' },
+  { src: _gal8Asset, alt: 'TOP Zaubervorführung in Mülheim' },
+  { src: _gal9Asset, alt: 'CLown Kinderzauberer Geburtstag in Herten im Garten' },
 ];
 
 ---
@@ -213,10 +212,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Mülheim" class="rounded-xl shadow-sm w-full object-cover object-top" loading="lazy" style="height:280px" />
-        <img src={_gal9Asset.src} alt="CLown Kinderzauberer Geburtstag in Herten im Garten" class="rounded-xl shadow-sm w-full object-cover object-top" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -299,13 +295,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Herten</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

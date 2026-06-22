@@ -70,11 +70,17 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Duisburg – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Duisburg – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Duisburg – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal3Asset, alt: 'Duisburg – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _gal1Asset, alt: 'Clown in Duisburg' },
+  { src: _gal2Asset, alt: 'Zaubershow auf einer Bühne' },
+  { src: _gal3Asset, alt: 'Wie sehen Glitzer Tattoos aus?' },
+  { src: _gal4Asset, alt: 'Duisburg – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _gal5Asset, alt: 'Duisburg – Eindruck 5 mit Clown Zauberer LIAR' },
+  { src: _gal6Asset, alt: 'Duisburg – Eindruck 6 mit Clown Zauberer LIAR' },
+  { src: _gal8Asset, alt: 'Duisburg – Eindruck 7 mit Clown Zauberer LIAR' },
+  { src: _gal9Asset, alt: 'Duisburg – Eindruck 8 mit Clown Zauberer LIAR' },
+  { src: _clownShowAsset, alt: 'Clown LIAR bei Clownshow in Duisburg' },
 ];
 
 ---
@@ -218,13 +224,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_gal1Asset.src} alt="TOP Clown in Duisburg" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow auf einer Bühne" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal1Asset.src} alt="Clown in Duisburg" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="Wie sehen Glitzer Tattoos aus?" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_clownShowAsset.src} alt="Clown LIAR bei Clownshow in Duisburg" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -283,13 +283,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Duisburg</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

@@ -71,11 +71,17 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Bochum – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Bochum – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Bochum – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal3Asset, alt: 'Bochum – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _gal2Asset, alt: 'Zaubershow auf einer Bühne für den Clown' },
+  { src: _gal3Asset, alt: 'So sehen Glitzer Tattoos aus beim Zauberer LIAR in Bochum' },
+  { src: _gal4Asset, alt: 'Bochum – Eindruck 3 mit Clown Zauberer LIAR' },
+  { src: _gal5Asset, alt: 'Bochum – Eindruck 4 mit Clown Zauberer LIAR' },
+  { src: _gal6Asset, alt: 'Bochum – Eindruck 5 mit Clown Zauberer LIAR' },
+  { src: _gal7Asset, alt: 'Staunende Kinder bei dem Auftritt von Clown in Bochum' },
+  { src: _gal8Asset, alt: 'Bochum – Eindruck 7 mit Clown Zauberer LIAR' },
+  { src: _gal9Asset, alt: 'Bochum – Eindruck 8 mit Clown Zauberer LIAR' },
+  { src: _clownShowAsset, alt: 'Clown in Bochum bei Clownshow' },
 ];
 
 ---
@@ -210,13 +216,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_gal7Asset.src} alt="Staunende Kinder bei dem Auftritt von Clown in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow auf einer Bühne für den Clown" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal1Asset.src} alt="Clown in Bochum mit Ballonmodellage" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="So sehen Glitzer Tattoos aus beim Zauberer LIAR in Bochum" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_clownShowAsset.src} alt="Clown in Bochum bei Clownshow" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -275,13 +275,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Bochum</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

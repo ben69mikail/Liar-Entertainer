@@ -70,6 +70,12 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
+const _pageGallery = [
+  { src: _showImgAsset, alt: 'Auftritt Zaubershow mit Clown Zauberer Herten' },
+  { src: _gal5Asset, alt: 'Geburtstag in Gladbeck - Clown Zauberer LIAR im Einsatz in NRW' },
+  { src: _gal6Asset, alt: 'Zaubervorführung auf dem Weihnachtsmarkt' },
+];
+
 ---
 
 <BaseLayout
@@ -184,13 +190,6 @@ const structuredData = [serviceSchema, faqSchema];
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Gladbeck</h2>
-      <HeroSlider slides={citySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- PREISE FÜR GLADBECK -->
   <section class="bg-[#fdf2f2] py-14 border-y border-[#f0c4c4]">
@@ -323,13 +322,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-bold text-2xl text-center mb-8">Mehr Fotos und Videos vom Clown Zauberer in der Galerie</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_showImgAsset.src} alt="Auftritt Zaubershow mit Clown Zauberer Herten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal5Asset.src} alt="Geburtstag in Gladbeck - Clown Zauberer LIAR im Einsatz in NRW" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal6Asset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal9Asset.src} alt="CLown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Gladbeck" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 

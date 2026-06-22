@@ -67,11 +67,12 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Duesseldorf – Eindruck 2 mit Clown Zauberer LIAR' },
-  { src: _roundImgAsset, alt: 'Duesseldorf – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _showImgAsset, alt: 'Duesseldorf – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _kgImgAsset, alt: 'Duesseldorf – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _zauberImgAsset, alt: 'Auftritt Zaubershow mit Clown und Kinderzauberer in Düsseldorf' },
+  { src: _kostenImgAsset, alt: 'Kinderzauberer in Düsseldorf im Einsatz auf einer Kinderfeier' },
+  { src: _weihnachtImgAsset, alt: 'Zaubervorführung auf dem Weihnachtsmarkt mit dem Kinderzauberer' },
+  { src: _zauberShowImgAsset, alt: 'Staunende Kinder bei einer Zaubershow mit Kinderzauberer in Düsseldorf' },
 ];
 
 ---
@@ -261,12 +262,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
-        <img src={_zauberShowImgAsset.src} alt="Staunende Kinder bei einer Zaubershow mit Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_zauberImgAsset.src} alt="Auftritt Zaubershow mit Clown und Kinderzauberer in Düsseldorf" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_kostenImgAsset.src} alt="Kinderzauberer in Düsseldorf im Einsatz auf einer Kinderfeier" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_weihnachtImgAsset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt mit dem Kinderzauberer" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -325,13 +321,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Duesseldorf</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

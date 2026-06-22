@@ -69,11 +69,16 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Essen – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _gal1Asset, alt: 'Essen – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal2Asset, alt: 'Essen – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal3Asset, alt: 'Essen – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _gal2Asset, alt: 'Zaubershow auf einer Bühne in Essen mit dem Clown' },
+  { src: _gal3Asset, alt: 'TOP Glitzer Tattoos in Essen buchen mit LIAR' },
+  { src: _gal4Asset, alt: 'Auftritt in Essen: Zaubershow mit Clown Zauberer' },
+  { src: _gal5Asset, alt: 'Clown Zauberer LIAR im Einsatz in Essen auf einer Schule' },
+  { src: _gal6Asset, alt: 'Zaubervorführung auf dem Weihnachtsmarkt Dortmund - Nähe Essen' },
+  { src: _gal7Asset, alt: 'Show Clown in Essen' },
+  { src: _gal8Asset, alt: 'TOP Zaubervorführung in Essen' },
+  { src: _gal9Asset, alt: 'CLown Kinderzauberer Geburtstag' },
 ];
 
 ---
@@ -208,17 +213,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_gal1Asset.src} alt="TOP Zaubershow in Essen buchen mit LIAR" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal2Asset.src} alt="Zaubershow auf einer Bühne in Essen mit dem Clown" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal3Asset.src} alt="TOP Glitzer Tattoos in Essen buchen mit LIAR" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal4Asset.src} alt="Auftritt in Essen: Zaubershow mit Clown Zauberer" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal5Asset.src} alt="Clown Zauberer LIAR im Einsatz in Essen auf einer Schule" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal6Asset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt Dortmund - Nähe Essen" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal7Asset.src} alt="Show Clown in Essen" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Essen" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-        <img src={_gal9Asset.src} alt="CLown Kinderzauberer Geburtstag" class="rounded-xl w-full object-cover object-top shadow-sm img-hover-zoom" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -277,13 +272,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Essen</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">

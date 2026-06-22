@@ -62,12 +62,13 @@ const faqSchema = {
 };
 
 const structuredData = [serviceSchema, faqSchema];
-const _gallerySlides = [
-  { src: _heroImgAsset, alt: 'Muelheim – Eindruck 1 mit Clown Zauberer LIAR' },
-  { src: _introImgAsset, alt: 'Muelheim – Eindruck 2 mit Clown Zauberer LIAR' },
-  { src: _showImgAsset, alt: 'Muelheim – Eindruck 3 mit Clown Zauberer LIAR' },
-  { src: _gal6Asset, alt: 'Muelheim – Eindruck 4 mit Clown Zauberer LIAR' },
-  { src: _gal8Asset, alt: 'Muelheim – Eindruck 5 mit Clown Zauberer LIAR' },
+
+const _pageGallery = [
+  { src: _showImgAsset, alt: 'Auftritt Zaubershow mit Clown Zauberer auf Geburtstag in Mülheim' },
+  { src: _gal5Asset, alt: 'Clown Zauberer LIAR im Einsatz in NRW auf einem Kindergeburtstag in Mülheim' },
+  { src: _gal6Asset, alt: 'Zaubervorführung auf dem Weihnachtsmarkt' },
+  { src: _gal8Asset, alt: 'TOP Zaubervorführung für einen Geburtstag in Mülheim' },
+  { src: _gal9Asset, alt: 'CLown Kinderzauberer Geburtstag in Mülheim im Garten' },
 ];
 
 ---
@@ -250,13 +251,7 @@ const _gallerySlides = [
   <!-- Bildergalerie -->
   <section class="bg-white py-14">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src={_showImgAsset.src} alt="Auftritt Zaubershow mit Clown Zauberer auf Geburtstag in Mülheim" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal5Asset.src} alt="Clown Zauberer LIAR im Einsatz in NRW auf einem Kindergeburtstag in Mülheim" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal6Asset.src} alt="Zaubervorführung auf dem Weihnachtsmarkt" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal8Asset.src} alt="TOP Zaubervorführung für einen Geburtstag in Mülheim" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-        <img src={_gal9Asset.src} alt="CLown Kinderzauberer Geburtstag in Mülheim im Garten" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" style="height:280px" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
@@ -339,13 +334,6 @@ const _gallerySlides = [
     </div>
   </section>
 
-  <!-- Foto-Galerie (Slider) aus den Seiten-Bildern -->
-  <section class="py-14 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">Eindrücke aus Muelheim</h2>
-      <HeroSlider slides={_gallerySlides} class="reveal" />
-    </div>
-  </section>
 
   <!-- Video Sektion -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
