@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../../components/HeroSlider.astro';
 import HeroStage from '../../../../components/HeroStage.astro';
 import CountUp from '../../../../components/CountUp.astro';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
@@ -53,6 +54,12 @@ const festarten = [
   { icon: '🏢', title: 'Firmenevent & Betriebsfest (Outdoor)', groesse: '50–2.000 Personen', formate: 'Bühnenshow, Walk-Act, Close-Up beim Empfang' },
   { icon: '☀️', title: 'Store-Opening & Eröffnungsfeier', groesse: '100–1.000 Besucher', formate: 'Walk-Act, Ballonmodellage (Kundenbindung!)' },
 ];
+const _pageGallery = [
+  { src: festBottropImg, alt: 'Walk Act auf einem Straßenfest in Bottrop' },
+  { src: ballonmodellageEssenImg, alt: 'Ballonmodellage beim Walk-Act auf einem Straßenfest' },
+  { src: kostenPreisImg, alt: 'Kosten Preis Clown NRW' },
+];
+
 ---
 
 <BaseLayout
@@ -172,11 +179,7 @@ const festarten = [
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl sm:text-3xl text-center mb-10">📸 Schnelle Eindrücke</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Image src={festBottropImg} alt="Walk Act auf einem Straßenfest in Bottrop" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 100vw, 33vw" />
-        <Image src={ballonmodellageEssenImg} alt="Ballonmodellage beim Walk-Act auf einem Straßenfest" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 100vw, 33vw" />
-        <Image src={kostenPreisImg} alt="Kosten Preis Clown NRW" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 100vw, 33vw" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 

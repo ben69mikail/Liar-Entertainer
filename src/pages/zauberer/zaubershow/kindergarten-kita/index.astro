@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../../components/HeroSlider.astro';
 import HeroStage from '../../../../components/HeroStage.astro';
 import CountUp from '../../../../components/CountUp.astro';
 import GoogleReviews from '../../../../components/GoogleReviews.astro';
@@ -31,6 +32,13 @@ const paedagogisch = [
   { icon: '🤝', title: 'Soziale Kompetenz', text: 'Zusammen helfen, abwechseln, gemeinsam Erfolge feiern' },
   { icon: '🎭', title: 'Emotionale Entwicklung', text: 'Freude, Überraschung, Staunen – ein emotionales Feuerwerk!' },
 ];
+const _pageGallery = [
+  { src: kitaEssenImg, alt: 'Lachende Kinder bei Kinderzauberer Kindergarten Essen' },
+  { src: geburtstagKitaImg, alt: 'Kinder lachen im Kindergarten bei LIARs Zaubershow' },
+  { src: galerieImg2, alt: 'Zaubershow für Kindergarten' },
+  { src: kindergartenGelsenkirchenImg, alt: 'Kinderzauberer Kindergarten Gelsenkirchen' },
+];
+
 ---
 
 <BaseLayout
@@ -170,12 +178,7 @@ const paedagogisch = [
   <section class="bg-white py-12">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-8">📸 Eindrücke</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Image src={kitaEssenImg} alt="Lachende Kinder bei Kinderzauberer Kindergarten Essen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={geburtstagKitaImg} alt="Kinder lachen im Kindergarten bei LIARs Zaubershow" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={galerieImg2} alt="Zaubershow für Kindergarten" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-        <Image src={kindergartenGelsenkirchenImg} alt="Kinderzauberer Kindergarten Gelsenkirchen" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 25vw" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 

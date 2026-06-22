@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
 import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
@@ -67,6 +68,14 @@ const serviceSchema = {
   "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" },
   "url": "https://liar-entertainer.com/zauberer/buehnen-zauberer/"
 };
+const _pageGallery = [
+  { src: feuerImg, alt: 'Bühnenzauberer LIAR mit einem Feuer-Zaubertrick auf der Bühne' },
+  { src: standUpImg, alt: 'Stand-up Zauberei vor Publikum in NRW' },
+  { src: buehnenZaubereiImg, alt: 'Bühnenzauberer LIAR bei einer Show' },
+  { src: buehnenGelsenkirchenImg, alt: 'Bühnenshow von Zauberer LIAR in Gelsenkirchen' },
+  { src: buehnenEssenImg, alt: 'Stand-up bei einer Firmenfeier in Essen mit Assistentin aus dem Publikum' },
+];
+
 ---
 
 <BaseLayout
@@ -191,13 +200,7 @@ const serviceSchema = {
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Weitere Fotos und Videos finden Sie in meiner <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={feuerImg} alt="Bühnenzauberer LIAR mit einem Feuer-Zaubertrick auf der Bühne" title="Bühnenzauberei mit Feuer – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={standUpImg} alt="Stand-up Zauberei vor Publikum in NRW" title="Stand-up Zauberei – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenZaubereiImg} alt="Bühnenzauberer LIAR bei einer Show" title="Bühnenzauberer LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenGelsenkirchenImg} alt="Bühnenshow von Zauberer LIAR in Gelsenkirchen" title="Bühnenzauberei Gelsenkirchen – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={buehnenEssenImg} alt="Stand-up bei einer Firmenfeier in Essen mit Assistentin aus dem Publikum" title="Bühnenzauberer Firmenfeier Essen – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 

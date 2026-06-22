@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSlider from '../../../components/HeroSlider.astro';
 import HeroStage from '../../../components/HeroStage.astro';
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 import { Image } from 'astro:assets';
@@ -73,6 +74,14 @@ const ablauf = [
   { step: '3', title: 'Persönliche Interaktion', text: 'Gäste werden einbezogen, dürfen Karten ziehen, Gegenstände prüfen. Jeder wird Teil der Magie.' },
   { step: '4', title: 'Weiter zur nächsten Gruppe', text: 'Nach 8-10 Minuten ziehe ich weiter. Die Gruppe bleibt staunend zurück – mit Gesprächsstoff für den Rest des Abends.' },
 ];
+const _pageGallery = [
+  { src: tischMuelheimImg, alt: 'Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR' },
+  { src: tischNrwImg, alt: 'Tisch Zauberer NRW bei einem Event' },
+  { src: closeUpDortmundImg, alt: 'Close-up Zauberei in Dortmund mit Karten und Münzen' },
+  { src: closeUpMuelheimImg, alt: 'Close-up Zauberei in Mülheim für Gäste am Tisch' },
+  { src: closeUpDuesseldorfImg, alt: 'Close-up Zauberei bei Firmenevent in Düsseldorf' },
+];
+
 ---
 
 <BaseLayout
@@ -212,13 +221,7 @@ const ablauf = [
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-bold text-[#1f2025] text-2xl text-center mb-4">📸 Schnelle Eindrücke</h2>
       <p class="text-[#374151] text-center mb-8">Noch mehr Eindrücke gibt es in der <a href="/galerie/" class="text-[#d7393e] hover:underline">Foto- und Videogalerie</a>.</p>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <Image src={tischMuelheimImg} alt="Tisch Zauberer Mülheim – die Sparkasse empfängt Zauberkünstler LIAR" title="Tischzauberer Mülheim – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={tischNrwImg} alt="Tisch Zauberer NRW bei einem Event" title="Tischzauberer NRW – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDortmundImg} alt="Close-up Zauberei in Dortmund mit Karten und Münzen" title="Close-up Zauberei Dortmund – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpMuelheimImg} alt="Close-up Zauberei in Mülheim für Gäste am Tisch" title="Close-up Zauberei Mülheim – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-        <Image src={closeUpDuesseldorfImg} alt="Close-up Zauberei bei Firmenevent in Düsseldorf" title="Close-up Zauberei Düsseldorf – LIAR" class="w-full object-cover rounded-xl shadow-sm img-hover-zoom" style="height:280px;object-position:top" loading="lazy" widths={[300, 500]} sizes="(max-width: 768px) 50vw, 20vw" />
-      </div>
+      <HeroSlider slides={_pageGallery} class="reveal" />
     </div>
   </section>
 
