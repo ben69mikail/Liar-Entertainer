@@ -1383,6 +1383,50 @@ summary:focus-visible {
 /* ── CountUp: stabile Ziffernbreite (kein Springen beim Hochzählen) ── */
 .countup-num { font-variant-numeric: tabular-nums; }
 
+/* ── Pastell-Sektionen: weiche Wellenkante oben UND unten, keine Trennlinie ──
+   Greift automatisch auf jede rot- (#fdf2f2) oder blau-pastellene (#eff4ff)
+   Sektion. Wellenfarbe wird per background-color:inherit geerbt -> immer korrekt.
+   Border-Linien entfernt. Sanfte Drift, reduced-motion-safe. */
+:root {
+  --wave-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 38' preserveAspectRatio='none'%3E%3Cpath d='M0,19 C100,38 200,2 300,19 C400,36 500,2 600,19 L600,38 L0,38 Z' fill='%23000'/%3E%3C/svg%3E");
+}
+section[class*="bg-[#fdf2f2]"],
+section[class*="bg-[#eff4ff]"] {
+  position: relative;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+section[class*="bg-[#fdf2f2]"]::before,
+section[class*="bg-[#fdf2f2]"]::after,
+section[class*="bg-[#eff4ff]"]::before,
+section[class*="bg-[#eff4ff]"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 38px;
+  background-color: inherit;
+  pointer-events: none;
+  -webkit-mask: var(--wave-mask) repeat-x 0 0 / 600px 38px;
+          mask: var(--wave-mask) repeat-x 0 0 / 600px 38px;
+}
+section[class*="bg-[#fdf2f2]"]::before,
+section[class*="bg-[#eff4ff]"]::before { bottom: 100%; }
+section[class*="bg-[#fdf2f2]"]::after,
+section[class*="bg-[#eff4ff]"]::after { top: 100%; transform: scaleY(-1); }
+@media (prefers-reduced-motion: no-preference) {
+  section[class*="bg-[#fdf2f2]"]::before,
+  section[class*="bg-[#fdf2f2]"]::after,
+  section[class*="bg-[#eff4ff]"]::before,
+  section[class*="bg-[#eff4ff]"]::after {
+    animation: waveMaskDrift 18s linear infinite;
+  }
+}
+@keyframes waveMaskDrift {
+  from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+  to   { -webkit-mask-position: -600px 0; mask-position: -600px 0; }
+}
+
 /* ── Bild-Hover-Zoom (dezent, schnell — Hover passiert oft) ── */
 .img-hover-zoom {
   transition: transform 200ms var(--ease-out-strong), box-shadow 200ms var(--ease-out-strong);
