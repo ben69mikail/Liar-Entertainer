@@ -3,7 +3,7 @@
   "started": "2026-06-12",
   "current_wave": 4,
   "BLOCKER_DEPLOY": {
-    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-19 RE-VERIFIZIERT: Zaubershow-Seite last-modified 18 Jun 07:49, hero-subtitle+speakable live, 0x Preisangabe. 2026-06-23 RE-VERIFIZIERT: Kinderzauberer-Index live (Lead-Satz im <main>).",
+    "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-24 RE-VERIFIZIERT: Clown-Hub last-modified 23 Jun 06:52, Lead+hero-subtitle live, Preis nur Kindergeburtstag-gekoppelt.",
     "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build, obwohl Actions-Runs success meldeten. Ursache: SFTP-Upload-Ziel != Domain-Docroot. KEIN Code-/Build-Fehler.",
     "lehre": "Bei Verdacht Deploy-Stau: Live-last-modified pruefen. success != live, wenn Upload-Ziel != Docroot."
   },
@@ -19,8 +19,8 @@
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml 118 URLs. GSC-Resubmit 2026-06-12.",
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
-    "welle_5_gsc_fehler": "WIRKT, WARTEPHASE. 2026-06-23 GSC per Browser geprueft: Werte weiter 1:1 wie 18./19./21.06. (Datenstand weiter 12.06.): Nicht indexiert 792, Indexiert 131, Gecrawlt-nicht-indexiert 362 (Gestartet), 404 258 (Gestartet), Weiterleitung 152 (Fehlgeschlagen=erwartete 301-Ketten), Umleitungsfehler 9 (Gestartet), Soft404 0 (Bestanden). Datenlag steht jetzt seit 18.06. ueber 4 Laeufe unveraendert -> kein neuer Datenfortschritt messbar. robots.txt-Fix (1376073) wirkt ggue. Ausgang 12.06. nachweislich. KEIN Eingriff - Re-Crawl dauert Wochen.",
-    "welle_4_laufend": "AKTIV. KI-Antwort-Lead+speakable umgesetzt+LIVE: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f, 2026-06-23 LIVE VERIFIZIERT). 2026-06-23: Clown-Hub (clownshow/index.astro) KI-Antwort-Lead (Wer/Wo/Was/Alter/Dauer/Preis) + hero-subtitle/speakable (Commit 361b4ad, Grammatikfix 52eebb9). Live-Verifikation Clown-Hub vertagt (Deploy in flight). OFFEN: Live-Verifikation Clown-Hub-Lead naechster Lauf; Galerie-Alt-Texte; Content-Tiefe; ggf. weitere High-Impr-Keyword-Seiten."
+    "welle_5_gsc_fehler": "WIRKT, WARTEPHASE. 2026-06-23 GSC zuletzt geprueft: Werte weiter 1:1 (Datenstand 12.06.): Nicht indexiert 792, Indexiert 131, Gecrawlt-nicht-indexiert 362, 404 258, Weiterleitung 152, Umleitungsfehler 9, Soft404 0. Datenlag steht seit 18.06. ueber 5 Laeufe -> kein neuer Datenfortschritt messbar. robots.txt-Fix (1376073) wirkt ggue. Ausgang 12.06. nachweislich. KEIN Eingriff - Re-Crawl dauert Wochen.",
+    "welle_4_laufend": "AKTIV. KI-Antwort-Lead+speakable umgesetzt+LIVE: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad/52eebb9, 2026-06-24 LIVE VERIFIZIERT). 2026-06-24: Ballonmodellage-Hub (clown/ballonmodellage/index.astro) KI-Antwort-Lead (Wer/Was/Wo/Dauer/Anlaesse) + hero-subtitle/speakable, preisfrei policy-konform (Commit b741676, Build gruen 151). Live-Verifikation Ballonmodellage vertagt (Deploy in flight). OFFEN: Live-Verifikation Ballonmodellage-Lead naechster Lauf; Galerie-Alt-Texte; Content-Tiefe; ggf. weitere High-Impr-Keyword-Seiten (Walk-Act, Glitzer-Tattoo Hubs)."
   },
   "gsc_leistung_2026_06_18": {
     "datenstand": "16.06.26", "zeitraum": "3 Monate", "klicks": 1840, "impressionen": 81100, "ctr": "2.3%", "durchschnittsposition": 11.0,
@@ -30,7 +30,7 @@
     "fazit": "Markensuchen ausgereizt (Platz1). Wachstum bei generischen kindergeburtstag/zaubershow-Keywords. Top-Chancen werden sukzessive mit KI-Antwort-Lead+speakable bearbeitet."
   },
   "gsc_indexierung_2026_06_23": {
-    "datenstand": "12.06.26 (GSC-Datenlag steht seit 18.06. ueber 4 Laeufe unveraendert)",
+    "datenstand": "12.06.26 (GSC-Datenlag steht seit 18.06. ueber 5 Laeufe unveraendert)",
     "nicht_indexiert": 792, "indexiert": 131,
     "gruende": {
       "gecrawlt_nicht_indexiert": {"wert": 362, "validierung": "Gestartet"},
@@ -43,7 +43,7 @@
       "duplikat_google_canonical": {"wert": 1},
       "indexiert_obwohl_robots_blockiert": {"wert": 1, "validierung": "Nicht gestartet"}
     },
-    "fazit": "Werte identisch zu 18./19./21.06. = Datenstand weiter 12.06., kein neuer Datenfortschritt. Gegen Ausgang 12.06. weiter klar positiv (nicht indexiert 885->792, gecrawlt-nicht-indexiert 402->362, 404 302->258). Geduld - Re-Crawl dauert Wochen."
+    "fazit": "Werte identisch zu 18./19./21./23.06. = Datenstand weiter 12.06., kein neuer Datenfortschritt. Gegen Ausgang 12.06. weiter klar positiv (nicht indexiert 885->792, gecrawlt-nicht-indexiert 402->362, 404 302->258). Geduld - Re-Crawl dauert Wochen."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome auf github.com",
@@ -53,8 +53,8 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 3,
-  "last_run_date": "2026-06-23",
+  "commits_today": 1,
+  "last_run_date": "2026-06-24",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
@@ -73,17 +73,18 @@
     "2026-06-18 WOCHEN-CHECK: Repo-Guard OK. GSC Datenlag steht (12.06.). Leistung leicht positiv. Zaubershow-Seite KI-Antwort-Lead + speakable (Commit 6fbb14f). gsc-wochenverlauf.json angelegt (Commit 361606d). Preis-Policy-Fix Zaubershow (Commit 060d17e).",
     "2026-06-19 Lauf 14 (SCHRITT R - 7-TAGE-REVIEW): Repo-Guard OK. commits_today reset auf 0. GSC geprueft (Datenlag 12.06., Werte 1:1 wie 18.06.), ggue. Ausgang klar positiv. Welle 4 LIVE VERIFIZIERT: Zaubershow HTTP200, hero-subtitle+speakable, 0x Preisangabe. REVIEW-2026-06-19.md committed. review_done=true, review_due_date=2026-06-26.",
     "2026-06-21 Lauf 15: Repo-Guard OK (letzter Commit f34f413 eigener Review-Commit, >2 Tage). commits_today reset auf 0. Bash/Sandbox diesen Lauf NICHT verfuegbar (VM-Service down) -> build-test+curl entfielen. Welle 5 per Browser geprueft: GSC-Werte 1:1 wie 18.+19.06. (Datenlag 12.06. steht), kein Eingriff. Welle 4: Kinderzauberer-Index KI-Antwort-Lead (Wer/Was/Wo/Alter/Dauer) + hero-subtitle/speakable (Commit 310a43f). Aenderung rein additiv (Text + CSS-Klasse), build-sicher trotz fehlendem Sandbox-Build. Live-Verifikation vertagt (Deploy beim State-Commit noch in flight).",
-    "2026-06-23 Lauf 16: Repo-Guard OK (letzter Commit cf13f53 22.06. 13:31 UTC = Inhaber-Galerie-Arbeit, >90 Min). commits_today reset auf 0. Bash/Sandbox erneut AUSGEFALLEN -> Live-Verifikation per Claude-in-Chrome. KINDERZAUBERER-LEAD (310a43f) LIVE VERIFIZIERT: Lead-Satz im <main>, HTTP200 -> offene_verifikation erledigt. Welle 5 GSC: Werte 1:1 wie Vorlaeufe (Datenlag 12.06. ueber 4 Laeufe), kein Eingriff. Welle 4: Clown-Hub (clown/clownshow/index.astro) KI-Antwort-Lead (Wer/Wo/Was/Alter/Dauer/Preis) + hero-subtitle/speakable (Commit 361b4ad), Grammatikfix (52eebb9). Rein additiv = build-sicher. Live-Verifikation Clown-Hub vertagt (Deploy in flight)."
+    "2026-06-23 Lauf 16: Repo-Guard OK (letzter Commit cf13f53 22.06. 13:31 UTC = Inhaber-Galerie-Arbeit, >90 Min). commits_today reset auf 0. Bash/Sandbox erneut AUSGEFALLEN -> Live-Verifikation per Claude-in-Chrome. KINDERZAUBERER-LEAD (310a43f) LIVE VERIFIZIERT: Lead-Satz im <main>, HTTP200 -> offene_verifikation erledigt. Welle 5 GSC: Werte 1:1 wie Vorlaeufe (Datenlag 12.06. ueber 4 Laeufe), kein Eingriff. Welle 4: Clown-Hub (clown/clownshow/index.astro) KI-Antwort-Lead (Wer/Wo/Was/Alter/Dauer/Preis) + hero-subtitle/speakable (Commit 361b4ad), Grammatikfix (52eebb9). Rein additiv = build-sicher. Live-Verifikation Clown-Hub vertagt (Deploy in flight).",
+    "2026-06-24 Lauf 17: Repo-Guard OK (letzter Commit a1bedf 23.06. 06:50 UTC = eigener State-Commit, >90 Min). commits_today reset auf 0. BASH/SANDBOX WIEDER VERFUEGBAR -> Build-Test + curl-Live-Verifikation moeglich. CLOWN-HUB-LEAD (361b4ad/52eebb9) LIVE VERIFIZIERT: hero-subtitle-Klasse vorhanden, Lead 'Clown LIAR (Michael Prescler) ist ein professioneller Kinderclown...' im <main>, 'Buchbar fuer' (Grammatikfix) live, Preis 'ab 150 EUR' an Kindergeburtstag gekoppelt -> offene_verifikation erledigt. Welle 5 GSC: Wartephase, kein Eingriff. Welle 4: Ballonmodellage-Hub (clown/ballonmodellage/index.astro) KI-Antwort-Lead (Wer/Was/Wo/Dauer/Anlaesse) + hero-subtitle/speakable, preisfrei policy-konform (Commit b741676). Sandbox-Build gruen (151 Seiten), Lead im dist-HTML verifiziert. Live-Verifikation Ballonmodellage vertagt (Deploy in flight)."
   ],
   "review_due_date": "2026-06-26",
   "review_done": true,
   "offene_verifikation": [
-    "2026-06-23 Commit 361b4ad+52eebb9 (Clown-Hub clown/clownshow/index.astro KI-Antwort-Lead + hero-subtitle): naechster Lauf live verifizieren - Lead-Satz 'Clown LIAR (Michael Prescler) ist ein professioneller Kinderclown aus Gladbeck...' im <main> als erster Intro-Absatz, class='hero-subtitle' vorhanden, Seite HTTP200. Beim State-Commit zeigte Live ggf. noch alten Build (Deploy in flight)."
+    "2026-06-24 Commit b741676 (Ballonmodellage clown/ballonmodellage/index.astro KI-Antwort-Lead + hero-subtitle): naechster Lauf live verifizieren - Lead-Satz 'Ballonmodellage bei Clown LIAR (Michael Prescler) bedeutet: Aus langen Modellierballons entstehen in 2-5 Minuten individuelle Wunschfiguren...' als erster Intro-Absatz mit class='hero-subtitle', Seite HTTP200. Beim State-Commit zeigte Live ggf. noch alten Build (Deploy in flight). Sandbox-Build war gruen, Lead im dist-HTML bestaetigt."
   ],
   "self_improvements": [
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site (curl ODER Claude-in-Chrome get_page_text) pruefen, nie nur dist/.",
     "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung. IMMER erst pruefen ob Massnahme schon umgesetzt ist.",
-    "BASH/SANDBOX KANN AUSFALLEN ('VM service not running' / 'Workspace unavailable'). Dann KEIN Sandbox-Build/curl moeglich. Fallback: (1) nur rein additive Text-/CSS-Klassen-Aenderungen committen (build-sicher, kann Astro nicht brechen), (2) Live-Verifikation per Claude-in-Chrome statt curl, (3) bei in-flight-Deploy Verifikation auf naechsten Lauf vertagen und in offene_verifikation eintragen. Bei strukturellen/Schema-/Import-Aenderungen OHNE Build-Test NICHT committen -> todos_fuer_michael. Sandbox war am 21.06. UND 23.06. aus.",
+    "BASH/SANDBOX KANN AUSFALLEN ('VM service not running' / 'Workspace unavailable'). Dann KEIN Sandbox-Build/curl moeglich. Fallback: (1) nur rein additive Text-/CSS-Klassen-Aenderungen committen (build-sicher, kann Astro nicht brechen), (2) Live-Verifikation per Claude-in-Chrome statt curl, (3) bei in-flight-Deploy Verifikation auf naechsten Lauf vertagen und in offene_verifikation eintragen. Bei strukturellen/Schema-/Import-Aenderungen OHNE Build-Test NICHT committen -> todos_fuer_michael. Sandbox war 21.06. UND 23.06. aus, 24.06. WIEDER DA.",
     "City-Seiten sind EIGENE Dateien unter src/pages/clown/clownshow/clown-in-*/index.astro, /kinderzauberer/kinderzauberer-in-*/, /kindergeburtstag/geburtstag-in-*/ - NICHT [...slug].astro.",
     "City-Slug-Asymmetrie: Geburtstag 'haltern-am-see', Clown/Kinderzauberer 'haltern'. kinderzauberer-in-gladbeck + clown-in-moers existieren NICHT. waltrop/wesel/xanten/castrop-rauxel nur als geburtstag-in-*. Existenz pruefen.",
     "GSC ist per Claude-in-Chrome bedienbar wenn Inhaber im Chrome eingeloggt ist (auch im Autorun!). URL: search.google.com/search-console/index?resource_id=sc-domain:liar-entertainer.com . Seitenindexierungs-Tabelle per get_page_text auslesen. Datenstand laggt ~6-9 Tage.",
@@ -92,24 +93,25 @@
     "GSC-Werte 19./21./23.06.: 131 indexiert / 792 nicht indexiert; Gecrawlt-nicht-indexiert 362; Weiterleitung 152; 404: 258; Umleitungsfehler 9. Alle ruecklaeufig ggue. Ausgang = robots.txt-Fix wirkt.",
     "GSC-DATENLAG kann mehrere TAGE/LAEUFE STEHEN bleiben: am 18.+19.+21.+23.06. war der Indexierungs-Datenstand jeweils der 12.06., identische Werte. Bei identischen Werten = kein Datenfortschritt, NICHT als 'Trend gestoppt' fehldeuten - Datenstand-Datum pruefen.",
     "Sandbox-Build: astro.config.mjs hat hardcoded cacheDir '/tmp/vite-cache-liar'. cacheDir per sed temporaer umbiegen (nur im Klon). 'npm install' statt 'npm ci'. Build EXIT0, 151 Seiten.",
-    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen. Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. ODER: Datei in outputs/ kopieren (cp) dann ueber Windows-Pfad lesen.",
+    "Sandbox-Klon liegt unter /tmp -> Read-Tool kann es nicht lesen (Pfad ausserhalb connected folders). Content via GitHub-MCP get_file_contents holen, lokal aendern, via create_or_update_file zurueckpushen. Alternativ: cat im Bash dumpen und Content direkt in create_or_update_file uebernehmen.",
     "DOMAIN-STRATEGIE: SEO-seitig EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig.",
     "DEPLOY-VERIFIKATION: Live-'last-modified' (curl -sI -L) nach jedem Push pruefen. Actions success != live wenn Upload-Ziel != Docroot. Pruefkette: 1) Actions-conclusion, 2) live last-modified, 3) bei Diskrepanz -> Infra/Pfad.",
     "Actions-Run-Status OHNE Auth abrufbar (oeffentliches Repo): api.github.com/repos/OWNER/REPO/actions/workflows/deploy.yml/runs.",
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
     "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - neuer Push noetig. No-Op auf .seo-autopilot/redeploy-trigger.txt.",
-    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). Umgesetzt+LIVE: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f, LIVE verifiziert 23.06.). Clown-Hub (361b4ad, 2026-06-23) committed, Live-Verifikation offen. NAECHSTE: ggf. ballonmodellage/walk-act-Hub oder weitere High-Impr-Keyword-Seiten; Galerie-Alt-Texte.",
-    "PREIS-POLICY (HART, Inhaber): 150 EUR NUR auf Kindergeburtstag-Kontext nennen, NIE auf reinen Zaubershow/Zauberer/anderen Seiten. Kinderzauberer-Index-Lead (310a43f) und Clown-Hub-Lead (361b4ad) nennen 'ab 150 EUR' explizit an 'fuer Kindergeburtstage' gekoppelt - beide haben Service+Offer-Schema mit price 150 und Ziel-Keyword 'clown/zauberer kindergeburtstag', daher policy-konform.",
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). Umgesetzt+LIVE: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad, LIVE verifiziert 24.06.). Ballonmodellage-Hub (b741676, 2026-06-24) committed, Live-Verifikation offen. NAECHSTE: ggf. walk-act/glitzer-tattoo-Hub oder weitere High-Impr-Keyword-Seiten; Galerie-Alt-Texte.",
+    "PREIS-POLICY (HART, Inhaber): 150 EUR NUR auf Kindergeburtstag-Kontext nennen, NIE auf reinen Zaubershow/Zauberer/anderen Seiten. Kinderzauberer-Index-Lead (310a43f) und Clown-Hub-Lead (361b4ad) nennen 'ab 150 EUR' explizit an 'fuer Kindergeburtstage' gekoppelt - beide haben Service+Offer-Schema mit price 150 und Ziel-Keyword 'clown/zauberer kindergeburtstag', daher policy-konform. Ballonmodellage-Lead (b741676) bleibt PREISFREI (Ballonmodellage ist Add-on, kein reiner Kindergeburtstag-Kontext) -> Preis-Verweis nur ueber bestehenden Kindergeburtstag-CTA.",
     "ZAUBERSHOW-SEITE liegt unter src/pages/zauberer/zaubershow/index.astro (NICHT eigenes /zaubershow/ Top-Level). Keyword 'zaubershow fuer kinder' landet dort. Hat Service+FAQPage+VideoObject-Schema (FAQ/Service preisfrei seit 060d17e).",
     "KINDERZAUBERER-INDEX liegt unter src/pages/kinderzauberer/index.astro. Hat Service(Offer 150)+FAQPage+VideoObject-Schema. Ziel-Keyword 'zauberer kindergeburtstag' (1353 Impr). Intro-Section: 1. <p> = hero-subtitle-Lead.",
-    "CLOWN-HUB liegt unter src/pages/clown/clownshow/index.astro. Hat Service(Offer 150)+FAQPage+VideoObject-Schema. Ziel-Keywords 'clown kindergeburtstag' (383 Impr) + 'clown fuer kindergeburtstag' (376 Impr). Intro-Section nach </Hero>: 1. <p class='hero-subtitle'> = Lead. 2026-06-22 hat Inhaber Galerie/Hero-Bilder umgebaut (cf13f53 u.a.).",
+    "CLOWN-HUB liegt unter src/pages/clown/clownshow/index.astro. Hat Service(Offer 150)+FAQPage+VideoObject-Schema. Ziel-Keywords 'clown kindergeburtstag' (383 Impr) + 'clown fuer kindergeburtstag' (376 Impr). Intro-Section nach </Hero>: 1. <p class='hero-subtitle'> = Lead.",
+    "BALLONMODELLAGE-HUB liegt unter src/pages/clown/ballonmodellage/index.astro. Intro-Section nach Hero: 1. <p class='hero-subtitle'> = Lead (seit b741676). Preisfrei. Keyword 'ballonmodellage kindergeburtstag/nrw'.",
     "INHABER ARBEITET PARALLEL am Design: 2026-06-22 fuenf Commits (Motion-System, Foto-Slider auf 57 Stadt-Seiten, Hero-Bild-Tausch, Galerie-Dedup). Bei Datei-Edits IMMER frischen get_file_contents-Stand holen, nie alten Klon verwenden."
   ],
   "todos_fuer_michael": [
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
     "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen.",
-    "INFO (kein Handlungsbedarf): 2026-06-23 war die Build-Sandbox (Bash-VM) erneut ausgefallen. Der Clown-Hub-Lead-Commit (361b4ad + Grammatikfix 52eebb9) ist rein additiv (Text + CSS-Klasse) und damit build-sicher; Live-Verifikation erfolgt naechsten Lauf. Falls die Seite kurzfristig anders aussieht: Deploy-Status pruefen.",
+    "INFO (kein Handlungsbedarf): 2026-06-24 Build-Sandbox WIEDER VERFUEGBAR (war 21.+23.06. aus). Ballonmodellage-Hub-Lead (b741676) ist build-getestet (151 Seiten gruen) und rein additiv. Live-Verifikation naechsten Lauf.",
     "INFO (kein Handlungsbedarf): GSC-Trend ggue. Ausgang weiter klar positiv (nicht indexiert 885->792, Gecrawlt-nicht-indexiert 402->362, 404 302->258). Re-Crawl dauert Wochen, abwarten. Naechster Review 2026-06-26."
   ],
   "log": [
@@ -125,6 +127,7 @@
     "2026-06-18 WOCHEN-CHECK: Repo-Guard OK. GSC Datenlag steht (12.06.). Leistung leicht positiv. Zaubershow KI-Antwort-Lead+speakable (6fbb14f), Preis-Policy-Fix (060d17e), gsc-wochenverlauf.json (361606d).",
     "2026-06-19 Lauf 14 (SCHRITT R - 7-TAGE-REVIEW): Repo-Guard OK. commits_today reset. GSC geprueft (Datenlag 12.06., Werte 1:1 wie 18.06.), ggue. Ausgang klar positiv. Welle 4 LIVE VERIFIZIERT: Zaubershow HTTP200 mit hero-subtitle+speakable, 0x Preis. REVIEW-2026-06-19.md committed. review_due_date=2026-06-26.",
     "2026-06-21 Lauf 15: Repo-Guard OK (f34f413, eigener Commit >2 Tage). commits_today reset. BASH/SANDBOX AUSGEFALLEN -> kein Sandbox-Build/curl. Welle 5 per Browser: GSC-Werte 1:1 wie 18.+19.06. (Datenlag 12.06. steht ueber 3 Laeufe), kein Eingriff. Welle 4: Kinderzauberer-Index KI-Antwort-Lead + hero-subtitle/speakable (Commit 310a43f, rein additiv = build-sicher). Live-Verifikation vertagt (Deploy in flight). State-Commit folgt.",
-    "2026-06-23 Lauf 16: Repo-Guard OK (cf13f53 22.06. = Inhaber-Galerie-Arbeit, >90 Min). commits_today reset. BASH/SANDBOX erneut ausgefallen -> Live-Verifikation per Claude-in-Chrome. Kinderzauberer-Lead (310a43f) LIVE VERIFIZIERT (offene_verifikation erledigt). Welle 5 GSC: Werte 1:1 wie Vorlaeufe (Datenlag 12.06. ueber 4 Laeufe), kein Eingriff. Welle 4: Clown-Hub KI-Antwort-Lead + hero-subtitle (361b4ad), Grammatikfix (52eebb9). Live-Verifikation Clown-Hub vertagt (Deploy in flight). State-Commit folgt."
+    "2026-06-23 Lauf 16: Repo-Guard OK (cf13f53 22.06. = Inhaber-Galerie-Arbeit, >90 Min). commits_today reset. BASH/SANDBOX erneut ausgefallen -> Live-Verifikation per Claude-in-Chrome. Kinderzauberer-Lead (310a43f) LIVE VERIFIZIERT (offene_verifikation erledigt). Welle 5 GSC: Werte 1:1 wie Vorlaeufe (Datenlag 12.06. ueber 4 Laeufe), kein Eingriff. Welle 4: Clown-Hub KI-Antwort-Lead + hero-subtitle (361b4ad), Grammatikfix (52eebb9). Live-Verifikation Clown-Hub vertagt (Deploy in flight). State-Commit a1bedf.",
+    "2026-06-24 Lauf 17: Repo-Guard OK (a1bedf 23.06. eigener State-Commit, >90 Min). commits_today reset. BASH/SANDBOX WIEDER VERFUEGBAR. Clown-Hub-Lead (361b4ad/52eebb9) LIVE VERIFIZIERT per curl (hero-subtitle + Lead-Satz + Grammatikfix + Preis-Kopplung) -> offene_verifikation erledigt. Welle 5 GSC: Wartephase, kein Eingriff. Welle 4: Ballonmodellage-Hub KI-Antwort-Lead + hero-subtitle (Commit b741676, Sandbox-Build gruen 151, Lead im dist verifiziert), preisfrei policy-konform. Live-Verifikation Ballonmodellage vertagt (Deploy in flight). State-Commit folgt."
   ]
 }
