@@ -36,6 +36,45 @@
       },
       "trend_bewertung": "Indexierung: Datenlag NICHT weitergerueckt (Werte 1:1 wie 18.06.-Stand, Datenstand bleibt 12.06.) -> keine echte WoW-Veraenderung messbar, Validierungen laufen unveraendert weiter. Leistung: leicht positiv (Klicks +20, CTR +0.1pp ggue. 12.06.-Stand). Keine neue Auffaelligkeit, kein 4xx/5xx-Anstieg.",
       "massnahme": "Trend flach bei Indexierung + klare Hochimpact-Chance: Zaubershow-Seite (/zauberer/zaubershow/, Keyword 'zaubershow fuer kinder' 332 Impr) bekam antwortfertigen KI-Eroeffnungsabsatz (Wer/Wo/Preis/Dauer/Alter) + class=hero-subtitle fuer site-weiten speakable-Selektor. Build lokal verifiziert (151 Seiten, EXIT0, hero-subtitle+Lead+speakable im dist-HTML). Commit 6fbb14f -> Live-Deploy ausgeloest. Live-Verify naechster Lauf."
+    },
+    {
+      "pruefdatum": "2026-06-25",
+      "lauf": "Wochen-Check #2",
+      "indexierung": {
+        "datenstand": "2026-06-12 (Datenlag steht weiter, 1:1 wie Check #1 ueber 9+ Laeufe)",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" },
+          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
+          "duplikat_google_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
+        }
+      },
+      "leistung": {
+        "datenstand": "~2026-06-23",
+        "zeitraum": "3 Monate",
+        "klicks": 1940,
+        "impressionen": 82200,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.0,
+        "top_chancen_high_impr_low_ctr": [
+          "zauberer kindergeburtstag: 1354 Impr/18 Klicks (war 17 - optimierte Seite zieht an)",
+          "clown kindergeburtstag: 393/12 (war 10 - Clown-Hub zieht an)",
+          "clown fuer kindergeburtstag: 382/11",
+          "zaubershow fuer kinder: 347/8",
+          "clown mieten fuer kindergeburtstag: 165/7",
+          "kindergeburtstag bei hitze: 172/11 (Blog-Artikel zieht saisonal)"
+        ]
+      },
+      "trend_bewertung": "Indexierung: Datenstand laggt unveraendert beim 12.06. (Werte identisch zu Check #1) -> keine echte WoW-Veraenderung messbar; Validierungen laufen weiter, keine neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0. Ggue. Ausgang 12.06. weiter klar positiv (nicht indexiert 885->792, gecrawlt-nicht-indexiert 402->362, 404 302->258). Leistung: klar positiv WoW (Klicks 1840->1940 +100, Impr 81100->82200 +1100, CTR 2.3->2.4% +0.1pp, Pos 11.0 stabil). Bearbeitete High-Impr-Keywords (zauberer/clown kindergeburtstag) ziehen messbar an -> KI-Antwort-Lead-Strategie wirkt.",
+      "massnahme": "KEIN Code-Commit. Trend positiv (Leistung steigt, Indexierung ggue. Ausgang positiv) UND keine Auffaelligkeit -> gemaess Task-Regel nur Wochenverlauf fortgeschrieben. Bestehende KI-Antwort-Lead-Optimierungen (Welle 4) zeigen Wirkung, kein neuer Hochimpact-Eingriff noetig. Glitzer-Tattoo-Live-Verifikation (5e8061f) bleibt Aufgabe des Tagesläufers."
     }
   ]
 }
