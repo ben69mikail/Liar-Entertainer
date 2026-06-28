@@ -20,28 +20,70 @@
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
     "welle_5_gsc_fehler": "WIRKT, WARTEPHASE. GSC-Datenlag steht seit 18.06. ueber 10+ Laeufe beim 12.06.-Datenstand (Nicht indexiert 792, Indexiert 131, Gecrawlt-nicht-indexiert 362, 404 258, Weiterleitung 152). Gegen Ausgang 12.06. klar positiv. KEIN Eingriff - Re-Crawl dauert Wochen.",
-    "welle_4_laufend": "AKTIV. KI-Antwort-Lead+speakable umgesetzt: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad/52eebb9), Ballonmodellage-Hub (b741676), Glitzer-Tattoo-Hub (5e8061f, LIVE 26.06.), Walk-Act-Hub (878a0f1, 2026-06-27, Build gruen 151, dist verifiziert hero-subtitle+0x '150', preisfrei - LIVE-Verifikation OFFEN/vertagt, Deploy in-flight). OFFEN/NAECHSTE: karneval-Hub (src/pages/clown/karneval/) als letzter clown-Unterordner-KI-Antwort-Lead-Kandidat; danach Galerie-Alt-Texte; Content-Tiefe; interne City-Verlinkung."
+    "welle_4_laufend": "AKTIV. KI-Antwort-Lead+speakable umgesetzt auf ALLEN Haupt-Hubs + ALLEN 5 clown-Unterordnern: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad/52eebb9), Ballonmodellage-Hub (b741676), Glitzer-Tattoo-Hub (5e8061f), Walk-Act-Hub (878a0f1, LIVE 28.06. verifiziert), Karneval-Hub (ec73fd2, 2026-06-28, Build gruen 151, dist verifiziert hero-subtitle+Lead+0x Preis, preisfrei - LIVE-Verifikation OFFEN/vertagt, Deploy in-flight). KI-ANTWORT-LEAD-PHASE ABGESCHLOSSEN. NAECHSTE KANDIDATEN: (1) Walk-Act-Hub + Karneval-Hub Schema-Ausbau (Service/FAQPage fehlen dort), (2) Galerie-Alt-Texte, (3) interne City-Verlinkung, (4) Content-Tiefe High-Impr-Keyword-Seiten."
   },
   "gsc_leistung_2026_06_25": {
-    "datenstand": "~23.06.26", "zeitraum": "3 Monate", "klicks": 1940, "impressionen": 82200, "ctr": "2.4%", "durchschnittsposition": 11.0,
+    "datenstand": "~23.06.26",
+    "zeitraum": "3 Monate",
+    "klicks": 1940,
+    "impressionen": 82200,
+    "ctr": "2.4%",
+    "durchschnittsposition": 11.0,
     "vergleich_18_06": "Klicks 1840->1940 (+100), CTR 2.3->2.4% (+0.1pp), Impr 81100->82200 (+1100), Pos 11.0 stabil. Klar positiv WoW.",
-    "marken-keywords_top1": ["clown liar", "clown zauberer liar", "zauberer liar"],
-    "chance_high_impr_low_click": ["zauberer kindergeburtstag: 1354 Impr/18 Klicks", "clown kindergeburtstag: 393/12", "clown fuer kindergeburtstag: 382/11", "zaubershow fuer kinder: 347/8", "clown mieten fuer kindergeburtstag: 165/7"],
+    "marken-keywords_top1": [
+      "clown liar",
+      "clown zauberer liar",
+      "zauberer liar"
+    ],
+    "chance_high_impr_low_click": [
+      "zauberer kindergeburtstag: 1354 Impr/18 Klicks",
+      "clown kindergeburtstag: 393/12",
+      "clown fuer kindergeburtstag: 382/11",
+      "zaubershow fuer kinder: 347/8",
+      "clown mieten fuer kindergeburtstag: 165/7"
+    ],
     "fazit": "Bearbeitete High-Impr-Keywords (zauberer/clown kindergeburtstag) ziehen messbar an -> KI-Antwort-Lead-Strategie wirkt. Markensuchen weiter Platz 1."
   },
   "gsc_indexierung_2026_06_26": {
     "datenstand": "12.06.26 (GSC-Datenlag steht seit 18.06. ueber 10+ Laeufe unveraendert)",
-    "nicht_indexiert": 792, "indexiert": 131,
+    "nicht_indexiert": 792,
+    "indexiert": 131,
     "gruende": {
-      "gecrawlt_nicht_indexiert": {"wert": 362, "validierung": "Gestartet"},
-      "nicht_gefunden_404": {"wert": 258, "validierung": "Gestartet"},
-      "seite_mit_weiterleitung": {"wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, kein Eingriff"},
-      "umleitungsfehler": {"wert": 9, "validierung": "Gestartet"},
-      "durch_robots_blockiert": {"wert": 8, "validierung": "Nicht gestartet"},
-      "soft_404": {"wert": 0, "validierung": "Bestanden"},
-      "noindex_tag": {"wert": 1},
-      "duplikat_google_canonical": {"wert": 1},
-      "indexiert_obwohl_robots_blockiert": {"wert": 1, "validierung": "Nicht gestartet"}
+      "gecrawlt_nicht_indexiert": {
+        "wert": 362,
+        "validierung": "Gestartet"
+      },
+      "nicht_gefunden_404": {
+        "wert": 258,
+        "validierung": "Gestartet"
+      },
+      "seite_mit_weiterleitung": {
+        "wert": 152,
+        "validierung": "Fehlgeschlagen",
+        "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, kein Eingriff"
+      },
+      "umleitungsfehler": {
+        "wert": 9,
+        "validierung": "Gestartet"
+      },
+      "durch_robots_blockiert": {
+        "wert": 8,
+        "validierung": "Nicht gestartet"
+      },
+      "soft_404": {
+        "wert": 0,
+        "validierung": "Bestanden"
+      },
+      "noindex_tag": {
+        "wert": 1
+      },
+      "duplikat_google_canonical": {
+        "wert": 1
+      },
+      "indexiert_obwohl_robots_blockiert": {
+        "wert": 1,
+        "validierung": "Nicht gestartet"
+      }
     },
     "fazit": "Werte identisch zu allen Vorlaeufen seit 18.06. = Datenstand weiter 12.06., kein neuer Datenfortschritt. Gegen Ausgang 12.06. weiter klar positiv. Geduld - Re-Crawl dauert Wochen."
   },
@@ -54,7 +96,7 @@
     "repo_guard_fremdcommit_minuten": 90
   },
   "commits_today": 1,
-  "last_run_date": "2026-06-27",
+  "last_run_date": "2026-06-28",
   "completed_steps": [
     "Setup 2026-06-12: State ins Repo migriert, Config festgelegt",
     "Welle 1 live verifiziert; Welle 2 erledigt; Welle 3 komplett (danke.astro geloescht)",
@@ -78,17 +120,18 @@
     "2026-06-25 Lauf 18: Repo-Guard OK. BASH DA. Ballonmodellage-Lead (b741676) LIVE VERIFIZIERT. Welle 4: Glitzer-Tattoo-Hub KI-Antwort-Lead (Commit 5e8061f, Build gruen, 0x '150'). Live-Verifikation vertagt.",
     "2026-06-25 WOCHEN-CHECK #2: Repo-Guard OK. GSC Datenlag steht (12.06.). Leistung klar positiv WoW. KEIN Code-Commit. gsc-wochenverlauf.json (Commit 2410aad).",
     "2026-06-26 Lauf 19 (SCHRITT R - 7-TAGE-REVIEW): Repo-Guard OK. GLITZER-TATTOO-LEAD (5e8061f) LIVE VERIFIZIERT per curl. Welle 5 GSC 1:1, kein Eingriff. REVIEW-2026-06-26.md committed (61e68e9). walk-act + karneval als naechste Kandidaten. review_done=true, review_due_date=2026-07-03.",
-    "2026-06-27 Lauf 20: Repo-Guard OK (letzter Commit 3bac15b 26.06. 04:37 UTC = eigener State Lauf 19, >90 Min). commits_today reset auf 0 -> 1. BASH/SANDBOX VERFUEGBAR. Welle 5 GSC: Wartephase bestaetigt (Datenlag 12.06. steht 10+ Laeufe, Review gestern), kein Eingriff. Welle 4: Walk-Act-Hub KI-Antwort-Lead + hero-subtitle (Commit 878a0f1, Build gruen 151, dist verifiziert hero-subtitle vorhanden + 0x '150', preisfrei). Live-Verifikation vertagt (Deploy in-flight, Live zeigte beim Push noch 26.06.-Stand)."
+    "2026-06-27 Lauf 20: Repo-Guard OK (letzter Commit 3bac15b 26.06. 04:37 UTC = eigener State Lauf 19, >90 Min). commits_today reset auf 0 -> 1. BASH/SANDBOX VERFUEGBAR. Welle 5 GSC: Wartephase bestaetigt (Datenlag 12.06. steht 10+ Laeufe, Review gestern), kein Eingriff. Welle 4: Walk-Act-Hub KI-Antwort-Lead + hero-subtitle (Commit 878a0f1, Build gruen 151, dist verifiziert hero-subtitle vorhanden + 0x '150', preisfrei). Live-Verifikation vertagt (Deploy in-flight, Live zeigte beim Push noch 26.06.-Stand).",
+    "2026-06-28 Lauf 21: Repo-Guard OK (letzter Commit 3d7a9d5 27.06. 04:42 UTC = eigener State Lauf 20, >90 Min). commits_today reset auf 0 -> 1. BASH/SANDBOX VERFUEGBAR. Walk-Act-Hub-Lead (878a0f1) LIVE VERIFIZIERT per curl (HTTP200, last-modified 27.06., hero-subtitle + Lead-Satz, 0x '150') -> offene_verifikation erledigt. Welle 5 GSC: Wartephase (Datenlag 12.06. steht, Review erst 03.07.), kein Eingriff. Welle 4: Karneval-Hub KI-Antwort-Lead + hero-subtitle (Commit ec73fd2, Build gruen 151, dist verifiziert, preisfrei). Live-Verifikation vertagt (Deploy in-flight). DAMIT ALLE clown-Unterordner + Haupt-Hubs mit KI-Antwort-Lead -> Lead-Phase abgeschlossen."
   ],
   "review_due_date": "2026-07-03",
   "review_done": true,
   "offene_verifikation": [
-    "Walk-Act-Hub-Lead (Commit 878a0f1, 2026-06-27): LIVE-Verifikation ausstehend. Pruefen: curl -sL https://liar-entertainer.com/clown/walk-act/ -> 'Ein Walk Act mit Clown Zauberer LIAR' im <main>, class='hero-subtitle' vorhanden, HTTP200, 0x '150'. Erledigen sobald Deploy durch (naechster Lauf)."
+    "Karneval-Hub-Lead (Commit ec73fd2, 2026-06-28): LIVE-Verifikation ausstehend. Pruefen: curl -sL https://liar-entertainer.com/clown/karneval/ -> 'Eine Karnevals-Zaubershow mit Clown Zauberer LIAR' im <main>, class='hero-subtitle' vorhanden, HTTP200, '150' nur in 'Gruppengroesse 20-150 Kinder'. Erledigen sobald Deploy durch (naechster Lauf)."
   ],
   "self_improvements": [
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site (curl ODER Claude-in-Chrome get_page_text) pruefen, nie nur dist/.",
     "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung. IMMER erst pruefen ob Massnahme schon umgesetzt ist.",
-    "BASH/SANDBOX KANN AUSFALLEN ('VM service not running' / 'Workspace unavailable'). Dann KEIN Sandbox-Build/curl moeglich. Fallback: (1) nur rein additive Text-/CSS-Klassen-Aenderungen committen (build-sicher), (2) Live-Verifikation per Claude-in-Chrome statt curl, (3) bei in-flight-Deploy Verifikation auf naechsten Lauf vertagen und in offene_verifikation eintragen. Sandbox 24.-27.06. verfuegbar.",
+    "BASH/SANDBOX KANN AUSFALLEN ('VM service not running' / 'Workspace unavailable'). Dann KEIN Sandbox-Build/curl moeglich. Fallback: (1) nur rein additive Text-/CSS-Klassen-Aenderungen committen (build-sicher), (2) Live-Verifikation per Claude-in-Chrome statt curl, (3) bei in-flight-Deploy Verifikation auf naechsten Lauf vertagen und in offene_verifikation eintragen. Sandbox 24.-28.06. verfuegbar.",
     "City-Seiten sind EIGENE Dateien unter src/pages/clown/clownshow/clown-in-*/index.astro, /kinderzauberer/kinderzauberer-in-*/, /kindergeburtstag/geburtstag-in-*/ - NICHT [...slug].astro.",
     "City-Slug-Asymmetrie: Geburtstag 'haltern-am-see', Clown/Kinderzauberer 'haltern'. kinderzauberer-in-gladbeck + clown-in-moers existieren NICHT. waltrop/wesel/xanten/castrop-rauxel nur als geburtstag-in-*. Existenz pruefen.",
     "GSC ist per Claude-in-Chrome bedienbar wenn Inhaber im Chrome eingeloggt ist. URL: search.google.com/search-console/index?resource_id=sc-domain:liar-entertainer.com . Seitenindexierungs-Tabelle per get_page_text auslesen. Datenstand laggt mehrere Tage.",
@@ -105,21 +148,22 @@
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
     "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - neuer Push noetig. No-Op auf .seo-autopilot/redeploy-trigger.txt.",
-    "KI-ANTWORT-LEAD: Top-Seiten oeffnen idealerweise mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). Umgesetzt: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad, LIVE 24.06.), Ballonmodellage-Hub (b741676, LIVE 25.06.), Glitzer-Tattoo-Hub (5e8061f, LIVE 26.06.), Walk-Act-Hub (878a0f1, gepusht 27.06., Live-Verifikation offen). NAECHSTE: karneval-Hub (src/pages/clown/karneval/); danach Galerie-Alt-Texte.",
-    "PREIS-POLICY (HART, Inhaber): 150 EUR NUR auf Kindergeburtstag-Kontext nennen, NIE auf reinen Zaubershow/Zauberer/Walk-Act/anderen Seiten. Kinderzauberer-Index-Lead (310a43f) und Clown-Hub-Lead (361b4ad) nennen 'ab 150 EUR' an 'fuer Kindergeburtstage' gekoppelt - policy-konform. Add-on-/Event-Hubs Ballonmodellage (b741676), Glitzer-Tattoo (5e8061f) und Walk-Act (878a0f1) bleiben PREISFREI -> Preis-Verweis nur ueber bestehenden Kindergeburtstag-Link/CTA.",
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer) statt emotionalem Einstieg. Absatz mit class='hero-subtitle' versehen fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). ABGESCHLOSSEN auf allen Haupt-Hubs + allen 5 clown-Unterordnern: Startseite, Kindergeburtstag (7bb8102), Zaubershow (6fbb14f), Kinderzauberer-Index (310a43f), Clown-Hub (361b4ad), Ballonmodellage (b741676), Glitzer-Tattoo (5e8061f), Walk-Act (878a0f1, LIVE 28.06.), Karneval (ec73fd2, gepusht 28.06., Live-Verifikation offen). NAECHSTE OPTIMIERUNGSFELDER: Schema-Ausbau (Walk-Act/Karneval haben keine Service/FAQPage), Galerie-Alt-Texte, City-Verlinkung, Content-Tiefe.",
+    "PREIS-POLICY (HART, Inhaber): 150 EUR NUR auf Kindergeburtstag-Kontext nennen, NIE auf reinen Zaubershow/Zauberer/Walk-Act/anderen Seiten. Kinderzauberer-Index-Lead (310a43f) und Clown-Hub-Lead (361b4ad) nennen 'ab 150 EUR' an 'fuer Kindergeburtstage' gekoppelt - policy-konform. Add-on-/Event-Hubs Ballonmodellage (b741676), Glitzer-Tattoo (5e8061f), Walk-Act (878a0f1) und Karneval (ec73fd2) bleiben PREISFREI -> Preis-Verweis nur ueber bestehenden Kindergeburtstag-Link/CTA.",
     "ZAUBERSHOW-SEITE liegt unter src/pages/zauberer/zaubershow/index.astro. Keyword 'zaubershow fuer kinder'. Service+FAQPage+VideoObject-Schema (FAQ/Service preisfrei seit 060d17e).",
     "KINDERZAUBERER-INDEX liegt unter src/pages/kinderzauberer/index.astro. Service(Offer 150)+FAQPage+VideoObject. Keyword 'zauberer kindergeburtstag' (1354 Impr).",
     "CLOWN-HUB liegt unter src/pages/clown/clownshow/index.astro. Service(Offer 150)+FAQPage+VideoObject. Keywords 'clown kindergeburtstag' + 'clown fuer kindergeburtstag'.",
     "BALLONMODELLAGE-HUB liegt unter src/pages/clown/ballonmodellage/index.astro. Intro 1. <p class='hero-subtitle'> = Lead (b741676, LIVE 25.06.). Preisfrei.",
     "GLITZER-TATTOO-HUB liegt unter src/pages/clown/glitzer-tattoo/index.astro. Intro 1. <p class='hero-subtitle'> = Lead (5e8061f, LIVE 26.06.). Preisfrei.",
-    "WALK-ACT-HUB liegt unter src/pages/clown/walk-act/index.astro. Intro-Section (nach </HeroStage>-Hero, 2. <h2> 'Walk Act Zauberer in NRW'): 1. <p> ist jetzt class='hero-subtitle' KI-Antwort-Lead (878a0f1, gepusht 27.06., Live-Verifikation offen). Preisfrei. Keyword 'walk act nrw'. Keine Schema-Bloecke (Service/FAQ) -> Kandidat fuer spaeteren Schema-Ausbau.",
-    "CLOWN-UNTERORDNER: ballonmodellage(LIVE), clownshow(LIVE), glitzer-tattoo(LIVE), karneval(OFFEN), walk-act(gepusht 27.06.). NUR NOCH karneval ohne KI-Antwort-Lead -> letzter clown-Unterordner-Kandidat. Pfad src/pages/clown/karneval/index.astro (vor Edit get_file_contents holen).",
-    "INHABER ARBEITET PARALLEL am Design. Bei Datei-Edits IMMER frischen get_file_contents-Stand holen, nie alten Klon verwenden."
+    "WALK-ACT-HUB liegt unter src/pages/clown/walk-act/index.astro. Intro 1. <p class='hero-subtitle'> = KI-Antwort-Lead (878a0f1, LIVE 28.06. verifiziert). Preisfrei. Keyword 'walk act nrw'. KEINE Schema-Bloecke (Service/FAQ) -> Kandidat fuer Schema-Ausbau.",
+    "CLOWN-UNTERORDNER alle mit KI-Antwort-Lead: ballonmodellage(LIVE), clownshow(LIVE), glitzer-tattoo(LIVE), walk-act(LIVE 28.06.), karneval(gepusht 28.06., Verifikation offen). Pfade src/pages/clown/<ordner>/index.astro. Lead-Phase fuer clown-Unterordner ABGESCHLOSSEN.",
+    "INHABER ARBEITET PARALLEL am Design. Bei Datei-Edits IMMER frischen get_file_contents-Stand holen, nie alten Klon verwenden.",
+    "KARNEVAL-HUB liegt unter src/pages/clown/karneval/index.astro. Intro 1. <p> ist jetzt class='hero-subtitle' KI-Antwort-Lead (ec73fd2, gepusht 28.06.). Preisfrei (Karneval=Event/Verein, kein Kindergeburtstag). '150' nur in 'Gruppengroesse 20-150 Kinder' - kein Preis. Keyword 'karneval zauberer nrw'. KEINE Schema-Bloecke -> Kandidat fuer Schema-Ausbau."
   ],
   "todos_fuer_michael": [
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
     "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen.",
-    "INFO (kein Handlungsbedarf): 2026-06-27 Walk-Act-Hub mit KI-Antwort-Lead + hero-subtitle/speakable versehen (Commit 878a0f1, preisfrei, Build gruen). Damit haben 4 von 5 clown-Unterordnern (Ballonmodellage, Glitzer-Tattoo, Clown-Hub, Walk-Act) + alle Haupt-Hubs den KI-Antwort-Lead. NUR NOCH Karneval-Hub offen. Naechster Review 2026-07-03."
+    "INFO (kein Handlungsbedarf): 2026-06-28 Karneval-Hub mit KI-Antwort-Lead + hero-subtitle/speakable versehen (Commit ec73fd2, preisfrei, Build gruen). Damit haben ALLE 5 clown-Unterordner (Ballonmodellage, Glitzer-Tattoo, Clownshow, Walk-Act, Karneval) UND alle Haupt-Hubs den KI-Antwort-Lead -> diese Optimierungs-Phase ist abgeschlossen. Naechste Schritte: Schema-Ausbau (Walk-Act/Karneval), Galerie-Alt-Texte, City-Verlinkung. Naechster Review 2026-07-03."
   ],
   "log": [
     "2026-06-12 Setup + Laeufe 2-6: GSC-Resubmit, danke.astro, Welle-5 robots.txt-Fix, GSC-Leistung, Domain-Strategie.",
@@ -139,6 +183,7 @@
     "2026-06-25 Lauf 18: SANDBOX DA. Ballonmodellage-Lead LIVE VERIFIZIERT. Welle 4: Glitzer-Tattoo-Hub Lead (5e8061f, Build gruen, 0x '150'). State-Commit cc7bc68.",
     "2026-06-25 WOCHEN-CHECK #2: GSC Datenlag steht (12.06.), keine Auffaelligkeit. Leistung WoW positiv. KEIN Code-Commit. gsc-wochenverlauf.json (Commit 2410aad). State-Commit 833a311.",
     "2026-06-26 Lauf 19 (SCHRITT R - 7-TAGE-REVIEW): Repo-Guard OK. Glitzer-Tattoo-Lead (5e8061f) LIVE VERIFIZIERT per curl. Welle 5 GSC Datenlag steht (12.06.), kein Eingriff. REVIEW-2026-06-26.md committed (61e68e9). walk-act + karneval als naechste Kandidaten. review_due_date=2026-07-03.",
-    "2026-06-27 Lauf 20: Repo-Guard OK (3bac15b 26.06. 04:37 UTC = eigener State, >90 Min). commits_today reset -> 1. SANDBOX DA. Welle 5 Wartephase bestaetigt (Datenlag 12.06. steht 10+ Laeufe). Welle 4: Walk-Act-Hub KI-Antwort-Lead + hero-subtitle (Commit 878a0f1, Build gruen 151, dist verifiziert, 0x '150', preisfrei). Live-Verifikation vertagt (Deploy in-flight) -> offene_verifikation. NUR NOCH karneval-Hub offen."
+    "2026-06-27 Lauf 20: Repo-Guard OK (3bac15b 26.06. 04:37 UTC = eigener State, >90 Min). commits_today reset -> 1. SANDBOX DA. Welle 5 Wartephase bestaetigt (Datenlag 12.06. steht 10+ Laeufe). Welle 4: Walk-Act-Hub KI-Antwort-Lead + hero-subtitle (Commit 878a0f1, Build gruen 151, dist verifiziert, 0x '150', preisfrei). Live-Verifikation vertagt (Deploy in-flight) -> offene_verifikation. NUR NOCH karneval-Hub offen.",
+    "2026-06-28 Lauf 21: Repo-Guard OK (3d7a9d5 27.06. = eigener State, >90 Min). commits_today reset -> 1. SANDBOX DA. Walk-Act-Lead (878a0f1) LIVE VERIFIZIERT. Welle 5 Wartephase (Datenlag 12.06.). Welle 4: Karneval-Hub KI-Antwort-Lead + hero-subtitle (Commit ec73fd2, Build gruen 151, dist verifiziert, preisfrei). Live-Verifikation vertagt. KI-Antwort-Lead-Phase ABGESCHLOSSEN (alle Hubs+clown-Unterordner)."
   ]
 }
