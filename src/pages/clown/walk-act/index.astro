@@ -11,6 +11,48 @@ import walkActStadtfestImg from '../../../assets/images/clown/walk-act-stadtfest
 const seoTitle = 'Walk Act NRW – Clown | Zauberer | Pantomime | LIAR';
 const seoDescription = 'Walk Act NRW ✓ Clown Zauberer LIAR – mobile Unterhaltung für Stadtfeste, Messen & Firmenfeiern ✓ Interaktiv, charmant & unvergesslich ✓ Jetzt anfragen!';
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Walk Act in NRW – Clown Zauberer LIAR",
+  "description": "Mobiler, interaktiver Walk Act mit Clown Zauberer LIAR in NRW – Close-Up-Zauberei, Pantomime und Comedy für Messen, Stadt- und Straßenfeste, Firmenevents und Empfänge, ganz ohne Bühne.",
+  "url": "https://liar-entertainer.com/clown/walk-act/",
+  "serviceType": ["Walk Act", "Mobile Unterhaltung", "Close-Up-Zauberei"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Clown Zauberer LIAR",
+    "url": "https://liar-entertainer.com",
+    "telephone": "+491721517578"
+  },
+  "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Was ist ein Walk Act?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Walk Act ist eine mobile, interaktive Showform: Clown Zauberer LIAR mischt sich frei unter die Gäste und zaubert direkt vor ihren Augen – ohne Bühne, ohne Technik. Ideal für Messen, Stadt- und Straßenfeste, Firmenevents und Empfänge.' } },
+    { '@type': 'Question', name: 'Wie lange dauert ein Walk Act?', acceptedAnswer: { '@type': 'Answer', text: 'Die Dauer wird flexibel an den Anlass angepasst – von rund 30 Minuten bis zu mehreren Stunden, auch in mehreren Sets über den Tag verteilt.' } },
+    { '@type': 'Question', name: 'Braucht der Walk Act eine Bühne oder Technik?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Der Walk Act benötigt weder Bühne noch Technik. Die Unterhaltung findet mobil mitten im Publikum statt und ist indoor wie outdoor einsetzbar.' } },
+    { '@type': 'Question', name: 'In welchen Städten ist der Walk Act buchbar?', acceptedAnswer: { '@type': 'Answer', text: 'Der Walk Act ist in ganz NRW buchbar, unter anderem in Köln, Düsseldorf, Essen und Dortmund. Auf Anfrage auch überregional.' } },
+  ],
+};
+
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
+  "description": "Clown Zauberer LIAR als Walk Act und Bühnenkünstler in NRW – mobil, interaktiv und unvergesslich.",
+  "thumbnailUrl": "https://img.youtube.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2018-02-04",
+  "duration": "PT2M30S",
+  "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
+  "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
+  "publisher": { "@type": "Organization", "name": "Clown Zauberer LIAR", "url": "https://liar-entertainer.com" }
+};
+
+const structuredData = [serviceSchema, faqSchema, videoSchema];
+
 const highlights = [
   {
     icon: '🎩',
@@ -57,6 +99,8 @@ const ablauf = [
   description={seoDescription}
   keywords="Walk Act NRW, Walk Act buchen, Clown Walk Act, Zauberer Walk Act, Walk Act Straßenfest, Walk Act Firmenevent"
   canonical="https://liar-entertainer.com/clown/walk-act/"
+  structuredData={structuredData}
+  breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Clown', url: '/' }, { name: 'Walk Act', url: '/clown/walk-act/' }]}
 >
 
   <!-- Page Title -->
