@@ -41,6 +41,47 @@ const besonderheiten = [
   { icon: '🎉', title: 'Interaktiv & ausgelassen', text: 'Karneval bedeutet Mitmachen – und das gilt auch für meine Show! Ob Kinder auf der Bühne, Erwachsene als Assistenten oder spontane Gags mit dem Publikum: Jeder wird Teil des närrischen Treibens!' },
   { icon: '⚡', title: 'Flexibel & unkompliziert', text: 'Karnevalsveranstaltungen haben oft enge Zeitpläne. Meine Show fügt sich flexibel ein: Ob 20 Minuten kurz und knackig oder 45 Minuten als Hauptprogramm – ich brauche nur 2×2 Meter Platz und keine aufwendige Technik!' },
 ];
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Karneval Zauberer in NRW – Clown Zauberer LIAR",
+  "description": "Jecke Karnevals-Zaubershow mit Clown Zauberer LIAR in NRW – Bühnen- und Mitmachprogramm für Kinderkarneval, Karnevalssitzungen und Vereinsfeiern, im echten Karnevalskostüm, 20 bis 45 Minuten.",
+  "url": "https://liar-entertainer.com/clown/karneval/",
+  "serviceType": ["Karneval Zaubershow", "Kinderkarneval", "Karnevalssitzung Unterhaltung"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Clown Zauberer LIAR",
+    "url": "https://liar-entertainer.com",
+    "telephone": "+491721517578"
+  },
+  "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Für welche Karnevalsveranstaltungen ist die Zaubershow geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Die Karnevals-Zaubershow von Clown Zauberer LIAR passt zu Kinderkarneval in Kita und Schule, Karnevalssitzungen, Vereinsfeiern, Kostümfesten und Karnevalsgalas in NRW – als Bühnen- und Mitmachprogramm für Kinder wie für gemischtes Publikum.' } },
+    { '@type': 'Question', name: 'Wie lange dauert die Karnevals-Zaubershow?', acceptedAnswer: { '@type': 'Answer', text: 'Die Show dauert flexibel zwischen 20 und 45 Minuten und fügt sich passgenau in enge Karnevals-Zeitpläne ein – ob als kurzer Programmpunkt bei einer Karnevalssitzung oder als Hauptprogramm beim Kinderkarneval.' } },
+    { '@type': 'Question', name: 'Ab welchem Alter ist die Kinderkarneval-Show geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kinderkarneval-Zaubershow ist für Kinder ab 4 Jahren geeignet und begeistert Gruppen von rund 20 bis 150 Kindern. Bei Karnevalssitzungen unterhält sie auch gemischtes Publikum aus Familien und Erwachsenen.' } },
+    { '@type': 'Question', name: 'In welchen Städten ist der Karneval-Zauberer buchbar?', acceptedAnswer: { '@type': 'Answer', text: 'Clown Zauberer LIAR ist zu Karneval in ganz NRW unterwegs, u. a. in Köln, Düsseldorf, Essen, Dortmund, Oberhausen, Gelsenkirchen und Gladbeck. Für besondere Karnevalsveranstaltungen auch bundesweit und international buchbar.' } },
+  ],
+};
+
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
+  "description": "Clown Zauberer LIAR mit jecker Karnevals-Zaubershow und Comedy in NRW – für Kinderkarneval, Karnevalssitzungen und Vereinsfeiern.",
+  "thumbnailUrl": "https://img.youtube.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2018-02-04",
+  "duration": "PT2M30S",
+  "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
+  "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
+  "publisher": { "@type": "Organization", "name": "Clown Zauberer LIAR", "url": "https://liar-entertainer.com" }
+};
+
+const structuredData = [serviceSchema, faqSchema, videoSchema];
 ---
 
 <BaseLayout
@@ -48,6 +89,8 @@ const besonderheiten = [
   description={seoDescription}
   keywords="Karneval Zauberer NRW, Karnevalshow buchen, Kinderkarneval Entertainer, Karnevalssitzung Zauberer, Karneval Clown"
   canonical="https://liar-entertainer.com/clown/karneval/"
+  structuredData={structuredData}
+  breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Clown', url: '/clown/clownshow/' }, { name: 'Karneval', url: '/clown/karneval/' }]}
 >
 
   <!-- Page Title -->
