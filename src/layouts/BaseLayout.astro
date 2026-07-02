@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 
 export interface BreadcrumbItem {
@@ -171,12 +172,8 @@ const localBusinessSchema = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Preconnect: DNS + TCP frühzeitig aufbauen (spart ~100-300ms pro Domain) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect: nur eigene Domain (keine externen Google-Verbindungen, DSGVO) -->
     <link rel="preconnect" href="https://liar-entertainer.com" />
-    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-    <link rel="dns-prefetch" href="https://maps.gstatic.com" />
 
     <!-- Hero Image Preload für LCP-Optimierung -->
     {heroPreload && <link rel="preload" as="image" href={heroPreload} fetchpriority="high" />}
@@ -194,34 +191,22 @@ const localBusinessSchema = {
       *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;background:#fff;color:#1f2025;font-family:Poppins,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.6;overflow-x:hidden!important;overflow-y:auto!important}header{width:100%;z-index:50}img{max-width:100%;height:auto}a{color:inherit;text-decoration:none}.relative{position:relative}.absolute{position:absolute}.inset-0{inset:0}.overflow-hidden{overflow:hidden}.w-full{width:100%}.h-full{height:100%}.object-cover{object-fit:cover}.text-white{color:#fff}.text-center{text-center}.font-extrabold{font-weight:800}.bg-white{background:#fff}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}
     </style>
 
-    <!-- Fonts – async loading for performance (nicht render-blocking) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
+    <!-- Fonts: Google-Fonts-CDN entfernt (DSGVO) – System-Font-Fallback (Poppins falls lokal vorhanden). Selbst-Hosting siehe PR-Hinweis. -->
 
-    <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWNLWCWDXS"></script>
+    <!-- Google Consent Mode v2 – Standard: alles verweigert. GA4 lädt erst nach Einwilligung (CookieConsent-Banner). -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MWNLWCWDXS');
+      window.gtag = gtag;
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
     </script>
 
     <!-- Structured Data: LocalBusiness (global) -->
@@ -247,6 +232,8 @@ const localBusinessSchema = {
       <slot />
     </main>
     <Footer />
+
+    <CookieConsent />
 
     <!-- Minimal JS: sticky nav + mobile menu handled inline in Header -->
 

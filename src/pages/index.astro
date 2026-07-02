@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
+import YouTubeFacade from '../components/YouTubeFacade.astro';
 import { Image, getImage } from 'astro:assets';
 
 import heroImg from '../assets/images/home/clown-zauberer-hero.jpg';
@@ -625,17 +626,12 @@ const videoSchema = {
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
-      <!-- YouTube Video -->
-      <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
-        <iframe
-          src="https://www.youtube.com/embed/Cop0SqRIX4Y"
-          title="Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!"
-          class="absolute inset-0 w-full h-full rounded-lg"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
+      <!-- YouTube – click-to-load (DSGVO): erst bei Klick wird youtube-nocookie geladen -->
+      <YouTubeFacade
+        id="Cop0SqRIX4Y"
+        title="Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!"
+        label="Zaubershow ansehen"
+      />
       <p class="text-[#374151] leading-relaxed mb-8">
         Foto- und Videogalerien sind eine bereichernde und erfüllende Erfahrung: wir öffnen uns
         eine Welt der Emotionen! Sie regen uns an, unser Verständnis für die Welt und die Menschen
