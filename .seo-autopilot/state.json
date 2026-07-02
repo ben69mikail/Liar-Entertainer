@@ -20,7 +20,7 @@
     "welle_2_h1_titles": "DONE (commits 8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro 2026-06-12 geloescht.",
     "welle_5_gsc_fehler": "WIRKT, WARTEPHASE. GSC-Datenlag steht seit 18.06. ueber 10+ Laeufe beim 12.06.-Datenstand (Nicht indexiert 792, Indexiert 131, Gecrawlt-nicht-indexiert 362, 404 258, Weiterleitung 152). Gegen Ausgang 12.06. klar positiv. KEIN Eingriff - Re-Crawl dauert Wochen.",
-    "welle_4_laufend": "AKTIV - PHASE 2 SCHEMA-AUSBAU laeuft. KI-Antwort-Lead-Phase ABGESCHLOSSEN (alle Haupt-Hubs + alle 5 clown-Unterordner). SCHEMA-AUSBAU-FORTSCHRITT: Walk-Act-Hub (Commit 1eaea41) LIVE VERIFIZIERT 01.07.; Karneval-Hub (Commit d73776d) LIVE VERIFIZIERT 02.07. (HTTP200, last-modified 01.07. 11:52, Service+FAQPage 4 Fragen+VideoObject+BreadcrumbList, preisfrei); Ballonmodellage-Hub (Commit 0e641f7, 02.07.) Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs, Build gruen 151, Frontmatter-JS validiert, dist verifiziert, preisfrei - Live-Verifikation OFFEN (Deploy in-flight). NAECHSTER SCHEMA-KANDIDAT: Glitzer-Tattoo-Hub (hat noch kein Service/FAQ/Video-Schema). DANACH: Galerie-Alt-Texte, interne City-Verlinkung, Content-Tiefe High-Impr-Keyword-Seiten."
+    "welle_4_laufend": "AKTIV - PHASE 2 SCHEMA-AUSBAU laeuft. KI-Antwort-Lead-Phase ABGESCHLOSSEN (alle Haupt-Hubs + alle 5 clown-Unterordner). SCHEMA-AUSBAU-FORTSCHRITT: Walk-Act-Hub (Commit 1eaea41) LIVE VERIFIZIERT 01.07.; Karneval-Hub (Commit d73776d) LIVE VERIFIZIERT 02.07. (HTTP200, last-modified 01.07. 11:52, Service+FAQPage 4 Fragen+VideoObject+BreadcrumbList, preisfrei); Ballonmodellage-Hub (Commit 0e641f7) LIVE VERIFIZIERT 02.07. (HTTP200, last-modified 02.07. 04:46, Service+FAQPage 4 Fragen+VideoObject+BreadcrumbList, preisfrei). NAECHSTER SCHEMA-KANDIDAT: Glitzer-Tattoo-Hub (hat noch kein Service/FAQ/Video-Schema). DANACH: Galerie-Alt-Texte, interne City-Verlinkung, Content-Tiefe High-Impr-Keyword-Seiten."
   },
   "gsc_leistung_2026_06_25": {
     "datenstand": "~23.06.26",
@@ -111,9 +111,7 @@
   ],
   "review_due_date": "2026-07-03",
   "review_done": false,
-  "offene_verifikation": [
-    "Ballonmodellage-Schema (Commit 0e641f7, 2026-07-02): LIVE-Verifikation ausstehend. Pruefen: curl -sL https://liar-entertainer.com/clown/ballonmodellage/ -> JSON-LD enthaelt '\"@type\":\"Service\"' (Ballonmodellage NRW), 'FAQPage' mit Frage 'Was ist Ballonmodellage?', 'VideoObject', 'BreadcrumbList'; HTTP200; kein Preis (nur site-weites priceRange '€€' erlaubt, 0x konkreter EUR-Preis im Content). Erledigen sobald Deploy durch (naechster Lauf)."
-  ],
+  "offene_verifikation": [],
   "self_improvements": [
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site (curl ODER Claude-in-Chrome get_page_text) pruefen, nie nur dist/.",
     "Masterplan-/Report-Annahmen gegen Live-Ist pruefen vor Code-Aenderung. IMMER erst pruefen ob Massnahme schon umgesetzt ist.",
@@ -135,22 +133,22 @@
     "curl-Fallstrick: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen.",
     "sleep >40s sprengt Bash-Timeout (45s). Im Autorun NICHT auf Deploy warten/pollen.",
     "REDEPLOY-TRIGGER: Ein Secret-Change allein deployt NICHT neu - neuer Push noetig. No-Op auf .seo-autopilot/redeploy-trigger.txt.",
-    "KI-ANTWORT-LEAD: Top-Seiten oeffnen mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer). Absatz mit class='hero-subtitle' fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). ABGESCHLOSSEN auf allen Haupt-Hubs + allen 5 clown-Unterordnern. SCHEMA-AUSBAU-PHASE laeuft: Walk-Act (1eaea41, LIVE 01.07.), Karneval (d73776d, LIVE 02.07.), Ballonmodellage (0e641f7, Live offen). NAECHSTE: Glitzer-Tattoo Schema, Galerie-Alt-Texte, City-Verlinkung, Content-Tiefe.",
+    "KI-ANTWORT-LEAD: Top-Seiten oeffnen mit zitierfaehigem Antwort-Satz (Wer/Wo/Preis/Dauer). Absatz mit class='hero-subtitle' fuer site-weiten speakable-Selektor (h1 + .hero-subtitle). ABGESCHLOSSEN auf allen Haupt-Hubs + allen 5 clown-Unterordnern. SCHEMA-AUSBAU-PHASE laeuft: Walk-Act (1eaea41, LIVE 01.07.), Karneval (d73776d, LIVE 02.07.), Ballonmodellage (0e641f7, LIVE 02.07.). NAECHSTE: Glitzer-Tattoo Schema, Galerie-Alt-Texte, City-Verlinkung, Content-Tiefe.",
     "PREIS-POLICY (HART, Inhaber): 150 EUR NUR auf Kindergeburtstag-Kontext nennen, NIE auf reinen Zaubershow/Zauberer/Walk-Act/Karneval/Ballonmodellage/Glitzer-Tattoo/anderen Seiten. Kinderzauberer-Index-Lead (310a43f) und Clown-Hub-Lead (361b4ad) nennen 'ab 150 EUR' an 'fuer Kindergeburtstage' gekoppelt - policy-konform. Add-on-/Event-Hubs bleiben PREISFREI. ACHTUNG: '150' kann legitime Gruppengroesse sein ('20 bis 150 Kinder'), site-weites priceRange '€€' im LocalBusiness-Schema ist OK - Policy-Check auf KONKRETE EUR-Preise im Content, nicht nur auf '150'/'€'.",
     "ZAUBERSHOW-SEITE liegt unter src/pages/zauberer/zaubershow/index.astro. VORLAGE/MUSTER fuer Schema-Ausbau: structuredData=[serviceSchema,faqSchema,videoSchema] als Frontmatter-Consts + an BaseLayout structuredData={structuredData} + breadcrumbs={[...]}.",
     "KINDERZAUBERER-INDEX src/pages/kinderzauberer/index.astro. Service(Offer 150)+FAQPage+VideoObject. Keyword 'zauberer kindergeburtstag' (1354 Impr).",
     "CLOWN-HUB src/pages/clown/clownshow/index.astro. Service(Offer 150)+FAQPage+VideoObject. Keywords 'clown kindergeburtstag' + 'clown fuer kindergeburtstag'.",
-    "BALLONMODELLAGE-HUB src/pages/clown/ballonmodellage/index.astro. Intro 1. <p class='hero-subtitle'> = Lead (b741676, LIVE 25.06.). Preisfrei. SCHEMA AUSGEBAUT (Commit 0e641f7, 02.07.): Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs, preisfrei, Live-Verifikation offen.",
+    "BALLONMODELLAGE-HUB src/pages/clown/ballonmodellage/index.astro. Intro 1. <p class='hero-subtitle'> = Lead (b741676, LIVE 25.06.). Preisfrei. SCHEMA AUSGEBAUT (Commit 0e641f7, 02.07.): Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs, preisfrei, LIVE VERIFIZIERT 02.07.",
     "GLITZER-TATTOO-HUB src/pages/clown/glitzer-tattoo/index.astro. Intro 1. <p class='hero-subtitle'> = Lead (5e8061f, LIVE 26.06.). Preisfrei. HAT KEIN Service/FAQPage/Video-Schema -> NAECHSTER Schema-Ausbau-Kandidat.",
     "WALK-ACT-HUB src/pages/clown/walk-act/index.astro. Lead (878a0f1, LIVE 28.06.). Keyword 'walk act nrw'. SCHEMA AUSGEBAUT (Commit 1eaea41): Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs, preisfrei, LIVE VERIFIZIERT 01.07.",
     "KARNEVAL-HUB src/pages/clown/karneval/index.astro. Lead (ec73fd2, LIVE 29.06.). Preisfrei ('150' nur Gruppengroesse). Keyword 'karneval zauberer nrw'. SCHEMA AUSGEBAUT (Commit d73776d): Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs, preisfrei, LIVE VERIFIZIERT 02.07.",
-    "CLOWN-UNTERORDNER alle mit KI-Antwort-Lead. SCHEMA-AUSBAU-STATUS: walk-act DONE+LIVE(1eaea41); karneval DONE+LIVE(d73776d); ballonmodellage DONE(0e641f7, Live offen); glitzer-tattoo OFFEN; clownshow hat bereits Schema.",
+    "CLOWN-UNTERORDNER alle mit KI-Antwort-Lead. SCHEMA-AUSBAU-STATUS: walk-act DONE+LIVE(1eaea41); karneval DONE+LIVE(d73776d); ballonmodellage DONE+LIVE(0e641f7); glitzer-tattoo OFFEN; clownshow hat bereits Schema.",
     "INHABER ARBEITET PARALLEL am Design. Bei Datei-Edits IMMER frischen get_file_contents-Stand holen, nie alten Klon verwenden."
   ],
   "todos_fuer_michael": [
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) bewusste Marken-Trennung Clown vs. Zauberer mit 2 Domains. Bei Entscheidung Bescheid geben.",
     "Optional: Weitere offizielle Profile (eigener YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> werden ins sameAs-Schema aufgenommen.",
-    "INFO (kein Handlungsbedarf): 2026-07-02 Ballonmodellage-Hub hat jetzt strukturierte Daten (Service + FAQPage mit 4 Fragen + VideoObject + Breadcrumbs, Commit 0e641f7) - bisher hatte er keinerlei Schema. Karneval-Schema (d73776d) und Walk-Act-Schema (1eaea41) sind live verifiziert. Letzter Schema-Kandidat: Glitzer-Tattoo-Hub. Naechster Review 2026-07-03."
+    "INFO (kein Handlungsbedarf): 2026-07-02 Ballonmodellage-Hub hat jetzt strukturierte Daten (Service + FAQPage mit 4 Fragen + VideoObject + Breadcrumbs, Commit 0e641f7) - live verifiziert. Karneval-Schema (d73776d) und Walk-Act-Schema (1eaea41) ebenfalls live verifiziert. Letzter Schema-Kandidat: Glitzer-Tattoo-Hub. Naechster Review 2026-07-03."
   ],
   "log": [
     "2026-06-12 bis 2026-06-26: Setup, Welle 1-3, Welle-5 robots.txt-Fix, KI-Antwort-Lead auf Haupt-Hubs + clown-Unterordnern, 2 Reviews (Details in aelteren State-Versionen).",
@@ -158,6 +156,7 @@
     "2026-06-28 Lauf 21: Karneval-Hub KI-Antwort-Lead (ec73fd2). Lead-Phase ABGESCHLOSSEN.",
     "2026-06-29 Lauf 22: Schema-Ausbau-Phase. Walk-Act-Hub Service+FAQPage+VideoObject+Breadcrumbs (1eaea41).",
     "2026-07-01 Lauf 23: Walk-Act-Schema (1eaea41) LIVE VERIFIZIERT. Karneval-Hub Schema (d73776d).",
-    "2026-07-02 Lauf 24: Repo-Guard OK (9ec9630 01.07. 11:49 UTC = eigener State Lauf 23, >90 Min). commits_today reset -> 2 (Ballonmodellage-Schema + State). SANDBOX DA. Karneval-Schema (d73776d) LIVE VERIFIZIERT per curl (HTTP200, last-modified 01.07. 11:52, Service+FAQPage 4 Q+VideoObject+BreadcrumbList, preisfrei - 2x € nur priceRange, '150' nur Gruppengroesse). Welle 5 Wartephase (Datenlag 12.06., Review 03.07. faellig). Welle 4 Schema-Ausbau: Ballonmodellage-Hub Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs (Commit 0e641f7, Build gruen 151, Frontmatter-JS validiert, dist verifiziert, preisfrei) - hatte bisher KEIN Schema. Live-Verifikation vertagt (Deploy in-flight). Naechster + letzter Schema-Kandidat: Glitzer-Tattoo-Hub. Morgen 03.07. Review faellig."
+    "2026-07-02 Lauf 24: Repo-Guard OK (9ec9630 01.07. 11:49 UTC = eigener State Lauf 23, >90 Min). commits_today reset -> 2 (Ballonmodellage-Schema + State). SANDBOX DA. Karneval-Schema (d73776d) LIVE VERIFIZIERT per curl (HTTP200, last-modified 01.07. 11:52, Service+FAQPage 4 Q+VideoObject+BreadcrumbList, preisfrei - 2x € nur priceRange, '150' nur Gruppengroesse). Welle 5 Wartephase (Datenlag 12.06., Review 03.07. faellig). Welle 4 Schema-Ausbau: Ballonmodellage-Hub Service+FAQPage(4 Fragen)+VideoObject+Breadcrumbs (Commit 0e641f7, Build gruen 151, Frontmatter-JS validiert, dist verifiziert, preisfrei) - hatte bisher KEIN Schema. Live-Verifikation vertagt (Deploy in-flight). Naechster + letzter Schema-Kandidat: Glitzer-Tattoo-Hub. Morgen 03.07. Review faellig.",
+    "2026-07-02 Wochen-Check #3 (Do): Repo-Guard OK (letzter Commit 25c335b 02.07. = eigener State Lauf 24). GSC per Browser: Indexierung Datenstand weiter 12.06. (131 idx / 792 nicht idx, alle Gruende 1:1 identisch zu Check #1+#2, Soft-404=0, keine neue Auffaelligkeit). Leistung 3M klar positiv WoW: Klicks 1940->2020, Impr 82200->84000, CTR 2,4% stabil, Pos 11,1. KEIN Code-Commit (Trend positiv + keine Auffaelligkeit -> nur Wochenverlauf). Offene Verifikation erledigt: Ballonmodellage-Schema (0e641f7) LIVE VERIFIZIERT (HTTP200, Service+FAQPage 4 Q+VideoObject+BreadcrumbList, preisfrei). gsc-wochenverlauf.json Snapshot #3 committet."
   ]
 }
