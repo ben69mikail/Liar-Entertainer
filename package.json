@@ -19,7 +19,6 @@
     "tsx": "^4.21.1"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.2.5",
     "sharp": "^0.34.5"
   }
 }
