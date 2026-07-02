@@ -9,15 +9,41 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
-          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
-          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
-          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
-          "soft_404": { "wert": 0, "validierung": "Bestanden" },
-          "noindex_tag": { "wert": 1 },
-          "duplikat_google_canonical": { "wert": 1 },
-          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
+          "gecrawlt_nicht_indexiert": {
+            "wert": 362,
+            "validierung": "Gestartet"
+          },
+          "nicht_gefunden_404": {
+            "wert": 258,
+            "validierung": "Gestartet"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 152,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "durch_robots_blockiert": {
+            "wert": 8,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "noindex_tag": {
+            "wert": 1
+          },
+          "duplikat_google_canonical": {
+            "wert": 1
+          },
+          "indexiert_obwohl_robots_blockiert": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          }
         }
       },
       "leistung": {
@@ -45,16 +71,47 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
-          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
-          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
-          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
-          "soft_404": { "wert": 0, "validierung": "Bestanden" },
-          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" },
-          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
-          "duplikat_google_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
+          "gecrawlt_nicht_indexiert": {
+            "wert": 362,
+            "validierung": "Gestartet"
+          },
+          "nicht_gefunden_404": {
+            "wert": 258,
+            "validierung": "Gestartet"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 152,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "durch_robots_blockiert": {
+            "wert": 8,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          },
+          "noindex_tag": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "duplikat_google_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "indexiert_obwohl_robots_blockiert": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          }
         }
       },
       "leistung": {
@@ -75,6 +132,75 @@
       },
       "trend_bewertung": "Indexierung: Datenstand laggt unveraendert beim 12.06. (Werte identisch zu Check #1) -> keine echte WoW-Veraenderung messbar; Validierungen laufen weiter, keine neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0. Ggue. Ausgang 12.06. weiter klar positiv (nicht indexiert 885->792, gecrawlt-nicht-indexiert 402->362, 404 302->258). Leistung: klar positiv WoW (Klicks 1840->1940 +100, Impr 81100->82200 +1100, CTR 2.3->2.4% +0.1pp, Pos 11.0 stabil). Bearbeitete High-Impr-Keywords (zauberer/clown kindergeburtstag) ziehen messbar an -> KI-Antwort-Lead-Strategie wirkt.",
       "massnahme": "KEIN Code-Commit. Trend positiv (Leistung steigt, Indexierung ggue. Ausgang positiv) UND keine Auffaelligkeit -> gemaess Task-Regel nur Wochenverlauf fortgeschrieben. Bestehende KI-Antwort-Lead-Optimierungen (Welle 4) zeigen Wirkung, kein neuer Hochimpact-Eingriff noetig. Glitzer-Tattoo-Live-Verifikation (5e8061f) bleibt Aufgabe des Tagesläufers."
+    },
+    {
+      "pruefdatum": "2026-07-02",
+      "lauf": "Wochen-Check #3",
+      "indexierung": {
+        "datenstand": "2026-06-12 (Datenlag steht weiter unveraendert, jetzt 3+ Wochen / 20+ Laeufe beim 12.06.)",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": {
+            "wert": 362,
+            "validierung": "Gestartet"
+          },
+          "nicht_gefunden_404": {
+            "wert": 258,
+            "validierung": "Gestartet"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 152,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "durch_robots_blockiert": {
+            "wert": 8,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          },
+          "noindex_tag": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "duplikat_google_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "indexiert_obwohl_robots_blockiert": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          }
+        }
+      },
+      "leistung": {
+        "datenstand": "~2026-07-01 (Aktualisierung vor 5,5 Std)",
+        "zeitraum": "3 Monate",
+        "klicks": 2020,
+        "impressionen": 84000,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.1,
+        "top_chancen_high_impr_low_ctr": [
+          "zauberer kindergeburtstag: 1383 Impr/18 Klicks/CTR 1,3%/Pos 16,2 (groesste ungenutzte Chance - Positionsproblem Seite 2; Seite hat bereits Lead+Schema)",
+          "clown kindergeburtstag: 392/13/3,3%/Pos 11,2",
+          "clown fuer kindergeburtstag: 377/12/3,2%/Pos 6,0",
+          "zaubershow fuer kinder: 360/7/1,9%/Pos 16,0 (optimiert 18.06., Positionsproblem Seite 2)",
+          "kindergeburtstag bei hitze: 397/22/5,5%/Pos 6,2 (Blog-Artikel zieht saisonal Sommer stark an)"
+        ]
+      },
+      "trend_bewertung": "Indexierung: Datenstand laggt weiter unveraendert beim 12.06. (Werte 1:1 identisch zu Check #1+#2 ueber 20+ Laeufe) -> keine echte WoW-Veraenderung messbar; Validierungen laufen weiter, KEINE neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0. Ggue. Ausgang 12.06. (885 nicht indexiert) weiter klar positiv. Leistung: klar positiv WoW (Klicks 1940->2020 +80, Impr 82200->84000 +1800, CTR 2,4% stabil, Pos 11,0->11,1 quasi stabil). Stetiger Aufwaertstrend seit Wochen. Saisoneffekt: 'kindergeburtstag bei hitze'-Blog zieht sommerbedingt stark (172->397 Impr, 11->22 Klicks).",
+      "massnahme": "KEIN Code-Commit (Task-Regel: Trend positiv + keine Auffaelligkeit -> nur Wochenverlauf fortschreiben). Leistungstrend steigt weiter, KI-Antwort-Lead + Schema-Ausbau (Welle 4) wirken. Offene Verifikation nebenbei erledigt: Ballonmodellage-Schema (Commit 0e641f7) LIVE VERIFIZIERT (HTTP200, last-modified 02.07. 04:46, Service+FAQPage 4 Q+VideoObject+BreadcrumbList, 'Was ist Ballonmodellage' live, 0x konkreter EUR-Preis). Der Tagesläufer treibt den Schema-Ausbau planmaessig weiter (letzter Kandidat Glitzer-Tattoo-Hub). Beobachtung fuer kuenftige Laeufe: 'zauberer kindergeburtstag' (1383 Impr, Pos 16,2) ist die groesste ungenutzte Chance, aber ein Positions-/Seite-2-Problem, nicht per einzelnem On-Page-Tweak schnell loesbar (Seite hat bereits Lead+Schema) -> braucht Content-Tiefe/interne Verlinkung, nicht Scope des Wochen-Checks."
     }
   ]
 }
