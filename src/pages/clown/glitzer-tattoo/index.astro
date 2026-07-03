@@ -33,6 +33,48 @@ const motive = [
     items: ['🎃 Halloween (Kürbis, Fledermaus, Geist)', '🎄 Weihnachten (Schneeflocke, Rentier)', '🐰 Ostern (Hase, Ei, Küken)', '⚽ Fußball-EM/WM (Flaggen, Pokale)'],
   },
 ];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Glitzer Tattoos in NRW – Clown Zauberer LIAR",
+  "description": "Glitzer Tattoos mit Clown LIAR in NRW – hautverträgliche, funkelnde Klebe-Tattoos mit über 100 Motiven für Kindergeburtstage, Kita- und Schulfeste, Straßenfeste und Events. In 2 bis 3 Minuten aufgetragen, 4 bis 8 Tage wasser- und wischfest.",
+  "url": "https://liar-entertainer.com/clown/glitzer-tattoo/",
+  "serviceType": ["Glitzer Tattoo", "Glitzer Tattoos Kindergeburtstag", "Kinderschminken Alternative"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Clown Zauberer LIAR",
+    "url": "https://liar-entertainer.com",
+    "telephone": "+491721517578"
+  },
+  "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Was sind Glitzer Tattoos?', acceptedAnswer: { '@type': 'Answer', text: 'Glitzer Tattoos sind temporäre, hautverträgliche Klebe-Tattoos, die mit einem hautfreundlichen Spezialkleber und funkelndem Glitzer aufgetragen werden. Bei Clown LIAR entstehen sie in 2 bis 3 Minuten und lassen Kinderaugen strahlen – der saubere Klassiker als Alternative zum Kinderschminken.' } },
+    { '@type': 'Question', name: 'Wie lange halten Glitzer Tattoos?', acceptedAnswer: { '@type': 'Answer', text: 'Glitzer Tattoos halten 4 bis 8 Tage. Sie sind wasser- und wischfest, schmieren nicht und lassen sich am Ende mit etwas Babyöl rückstandslos wieder entfernen.' } },
+    { '@type': 'Question', name: 'Für welche Anlässe und welches Alter eignen sich Glitzer Tattoos?', acceptedAnswer: { '@type': 'Answer', text: 'Glitzer Tattoos passen zu Kindergeburtstagen, Kita- und Schulfesten, Straßenfesten und Events – für Jungs und Mädchen ab etwa 3 Jahren. Über 100 Motive vom Einhorn bis zum Dino stehen zur Auswahl, ideal als Ergänzung zur Clownshow oder Ballonmodellage.' } },
+    { '@type': 'Question', name: 'Sind Glitzer Tattoos hautverträglich?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Es kommen hautverträgliche, dermatologisch getestete Materialien zum Einsatz, die auch für empfindliche Kinderhaut geeignet sind. Im Gegensatz zum Kinderschminken bleibt alles sauber und schmiert nicht.' } },
+  ],
+};
+
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!",
+  "description": "Clown Zauberer LIAR mit Glitzer Tattoos, Zaubershow und Comedy in NRW – funkelnde Klebe-Tattoos für Kindergeburtstage und Events.",
+  "thumbnailUrl": "https://img.youtube.com/vi/Cop0SqRIX4Y/maxresdefault.jpg",
+  "uploadDate": "2018-02-04",
+  "duration": "PT2M30S",
+  "contentUrl": "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
+  "embedUrl": "https://www.youtube.com/embed/Cop0SqRIX4Y",
+  "publisher": { "@type": "Organization", "name": "Clown Zauberer LIAR", "url": "https://liar-entertainer.com" }
+};
+
+const structuredData = [serviceSchema, faqSchema, videoSchema];
 ---
 
 <BaseLayout
@@ -40,6 +82,8 @@ const motive = [
   description={seoDescription}
   keywords="Glitzer Tattoo Kindergeburtstag, Glitzer Tattoos NRW, Glitzer Tattoo buchen, Kinderschminken Alternative"
   canonical="https://liar-entertainer.com/clown/glitzer-tattoo/"
+  structuredData={structuredData}
+  breadcrumbs={[{ name: 'Startseite', url: '/' }, { name: 'Clown', url: '/clown/clownshow/' }, { name: 'Glitzer Tattoo', url: '/clown/glitzer-tattoo/' }]}
 >
 
   <!-- Page Title -->
