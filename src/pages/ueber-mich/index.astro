@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroStage from '../../components/HeroStage.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
+import YouTubeFacade from '../../components/YouTubeFacade.astro';
 import { Image } from 'astro:assets';
 
 import heroImg from '../../assets/images/ueber-mich/ueber-mich-hero.jpg';
@@ -174,40 +175,26 @@ const personSchema = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
-          <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎩 Zaubershow</h3>
-          <p class="text-[#d7393e] font-bold text-2xl mb-4">150 €</p>
-          <ul class="space-y-2 text-[#374151] text-sm mb-6">
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> 40 Minuten voller Zauber, Lachen und Staunen</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Bis ca. 12 Kinder – Mindestalter: 4 Jahre</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Inkl. Material</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Das Geburtstagskind steht immer im Mittelpunkt</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> zzgl. Fahrtkosten (0,40€/km, Hin- &amp; Rückfahrt) ab Gladbeck</li>
-          </ul>
-          <p class="text-[#374151] text-sm">Direkt ab der ersten Minute nimmt die Show die kleinen Gäste mit auf eine fantasievolle Reise!</p>
+          <h3 class="font-bold text-[#1f2025] text-xl mb-4">🎩 Zaubershow</h3>
+          <p class="text-[#374151] text-sm mb-6">Eine interaktive Zaubershow voller Staunen und Lachen, bei der das Geburtstagskind immer im Mittelpunkt steht.</p>
+          <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline text-sm font-semibold">Mehr zur Zaubershow →</a>
         </div>
 
         <!-- Ballonmodellage -->
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#3b55d5] card-hover reveal">
-          <h3 class="font-bold text-[#1f2025] text-xl mb-2">🎈 Luftballonmodellage</h3>
-          <p class="text-[#3b55d5] font-bold text-2xl mb-4">+ 20 €</p>
-          <ul class="space-y-2 text-[#374151] text-sm">
-            <li class="flex items-start gap-2"><span class="text-[#3b55d5]">✓</span> Für jedes Kind 1 Ballon</li>
-            <li class="flex items-start gap-2"><span class="text-[#3b55d5]">✓</span> Ca. 15 Minuten</li>
-            <li class="flex items-start gap-2"><span class="text-[#3b55d5]">✓</span> Tolle Erinnerung zum Mitnehmen</li>
-          </ul>
+          <h3 class="font-bold text-[#1f2025] text-xl mb-4">🎈 Luftballonmodellage</h3>
+          <p class="text-[#374151] text-sm mb-6">Für jedes Kind entsteht eine eigene Ballonfigur – eine bunte Erinnerung zum Mitnehmen.</p>
+          <a href="/clown/ballonmodellage/" class="text-[#3b55d5] hover:underline text-sm font-semibold">Mehr zur Ballonmodellage →</a>
         </div>
 
         <!-- Glitzer Tattoos -->
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#ffb546] card-hover reveal">
-          <h3 class="font-bold text-[#1f2025] text-xl mb-2">✨ Glitzer-Tattoos</h3>
-          <p class="text-[#d7393e] font-bold text-2xl mb-4">+ 40 €</p>
-          <ul class="space-y-2 text-[#374151] text-sm">
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Für jedes Kind 1 Tattoo</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Ca. 30 Minuten</li>
-            <li class="flex items-start gap-2"><span class="text-[#d7393e]">✓</span> Hautverträglich & langanhaltend</li>
-          </ul>
+          <h3 class="font-bold text-[#1f2025] text-xl mb-4">✨ Glitzer-Tattoos</h3>
+          <p class="text-[#374151] text-sm mb-6">Hautverträgliche und langanhaltende Glitzer-Tattoos, bei denen sich jedes Kind sein Wunschmotiv aussuchen darf.</p>
+          <a href="/clown/glitzer-tattoo/" class="text-[#d7393e] hover:underline text-sm font-semibold">Mehr zu Glitzer-Tattoos →</a>
         </div>
       </div>
+      <p class="text-[#374151] text-center mt-8">Alle Preise und Pakete für den Kindergeburtstag finden Sie auf der Seite <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline font-semibold">Kindergeburtstag</a>.</p>
     </div>
   </section>
 
@@ -216,16 +203,11 @@ const personSchema = {
       <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
         SCHNELLE EINDRÜCKE
       </h2>
-      <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
-        <iframe
-          src="https://www.youtube.com/embed/Cop0SqRIX4Y"
-          title="Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!"
-          class="absolute inset-0 w-full h-full rounded-lg"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
+      <YouTubeFacade
+        id="Cop0SqRIX4Y"
+        title="Clown Zauberer für Geburtstag, Feier, Veranstaltung in NRW : die lustigste Zaubershow im Pott!"
+        label="Zaubershow ansehen"
+      />
       <h3 class="text-[#1f2025] font-bold text-xl mb-6">
         Mehr Fotos und Videos in der Galerie
       </h3>
