@@ -5,7 +5,7 @@ description: "Sommerfest Kita planen leicht gemacht - Programm-Ideen, Spielestat
 publishDate: 2026-05-14
 heroImage: "https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/cover.jpg"
 heroImageAlt: "Sommerfest in der Kita planen: Programm-Ideen mit Clown und Zauberer Cover"
-categories: ["F", "Saisonal", "H", "Leistung"]
+categories: ["Feste", "Saisonal", "Kita", "Leistung"]
 tags: ["sommerfest-kita-planen"]
 author: "Michaël Prescler"
 draft: false
@@ -79,7 +79,6 @@ Eine Vorlese-Decke unter dem Apfelbaum, eine Mini-Disco mit Tanzliedern, eine "S
 
 Ich werde häufig gefragt, warum gerade ein Clown- oder Zauber-Programm so gut zu Kita-Festen passt. Die Antwort ist einfach: weil es alle Altersgruppen gleichzeitig erreicht. Auf einem Sommerfest sind nicht nur die Kita-Kinder anwesend, sondern auch Geschwister von 1 bis 12 Jahren, Eltern, Großeltern. Eine kindgerechte Mitmach-Show ist eines der wenigen Formate, das diese ganze Bandbreite zusammenbringt.
 
-Meine Shows für Kitas sind speziell auf die Aufmerksamkeits
+Meine Shows für Kitas sind speziell auf die Aufmerksamkeitsspanne von 3- bis 6-Jährigen zugeschnitten: rund 30 bis 40 Minuten, viele Mitmach-Momente, große sichtbare Effekte — und ein Tempo, das auch die Jüngsten mitnimmt, ohne sie zu überfordern.
 
 ![IMG-20260319-WA0025.jpg](https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/inline-2.jpg)
-

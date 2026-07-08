@@ -5,7 +5,7 @@ description: "Muttertag und Kindergeburtstag kombinieren – so gelingt die Dopp
 publishDate: 2026-05-04
 heroImage: "https://liar-entertainer.com/blog-images/muttertag-familiengeburtstag-kombinieren/cover.jpg"
 heroImageAlt: "Muttertag & Familiengeburtstag kombinieren - was zusammen funktioniert Cover"
-categories: ["F", "Saisonal", "G", "Probleme"]
+categories: ["Feste", "Saisonal", "Geburtstag", "Probleme"]
 tags: ["muttertag-kindergeburtstag-kombinieren"]
 author: "Michaël Prescler"
 draft: false
@@ -97,4 +97,6 @@ Es gibt Faelle, in denen ich von der Doppelfeier eher abrate:
 
 Grundsaetzlich ab 4 Jahren, wenn das Kind seinen Geburtstag schon bewusst erlebt. Unter 3 Jahren ist der Aufwand einer Doppelfeier meist groesser als der Nutzen – da reicht ein gemeinsamer Kaffeenachmittag.
 
-### Wie viele G
+### Wie viele Gaeste sind fuer eine Doppelfeier realistisch?
+
+Bewaehrt haben sich 10 bis 20 Personen insgesamt, davon 2 bis 6 Kinder. Wird die Runde groesser, kippt die Feier schnell ins Unuebersichtliche – dann lieber trennen oder das Kinderprogramm extern vergeben, damit Mama und Oma wirklich Gaeste sein koennen. So bleibt die Doppelfeier das, was sie sein soll: ein entspannter Tag fuer die ganze Familie.

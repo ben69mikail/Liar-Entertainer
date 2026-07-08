@@ -5,7 +5,7 @@ description: "Zaubershow im Freien planen in NRW – Tipps zu Wetter, Untergrund
 publishDate: 2026-05-19
 heroImage: "https://liar-entertainer.com/blog-images/open-air-zauberei-im-freien/cover.jpg"
 heroImageAlt: "Open-Air-Zauberei: Wie funktioniert eine Zaubershow im Freien? Cover"
-categories: ["F", "Saisonal", "G", "Probleme"]
+categories: ["Feste", "Saisonal", "Zaubershow", "Probleme"]
 tags: ["zaubershow-im-freien"]
 author: "Michaël Prescler"
 draft: false
@@ -87,7 +87,6 @@ Outdoor-Zauberei wirkt auf jedes Alter anders – und ich passe meine Show entsp
 
 ### Die Kleinsten (3-5 Jahre)
 
-Bei Kindergartenkindern setze ich draußen besonders auf große, eindeutige Effekte: bunte Tücher, Plüschtiere, lautmalerische Zaubersprüche. Die Aufmerksamkeitsspanne ist draußen kürzer (Schmetterling > Zauber
+Bei Kindergartenkindern setze ich draußen besonders auf große, eindeutige Effekte: bunte Tücher, Plüschtiere, lautmalerische Zaubersprüche. Die Aufmerksamkeitsspanne ist draußen kürzer (Schmetterling schlägt Zauberer, sobald einer vorbeiflattert) – deshalb halte ich die Show für diese Altersgruppe kompakter und baue besonders viele Mitmach-Momente ein, damit alle Kinder bei der Sache bleiben.
 
 ![Pantomime (12).jpg](https://liar-entertainer.com/blog-images/open-air-zauberei-im-freien/inline-2.jpg)
-
