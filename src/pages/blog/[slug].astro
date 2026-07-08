@@ -54,21 +54,19 @@ if (entry.data.heroImage) {
   await generateStoryImage(entry.data.heroImage, entry.data.title, slug);
 }
 
-// Article schema.org structured data (matching style of legacy blog posts)
+// BlogPosting schema.org structured data — Publisher referenziert das globale
+// LocalBusiness aus BaseLayout via @id (https://liar-entertainer.com/#business)
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
+  '@type': 'BlogPosting',
   headline: entry.data.title,
   description: desc,
-  image: ogImage,
+  ...(ogImage ? { image: ogImage } : {}),
   author: { '@type': 'Person', name: entry.data.author || 'Michaël Prescler' },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Clown Zauberer LIAR',
-    url: 'https://liar-entertainer.com',
-  },
+  publisher: { '@id': 'https://liar-entertainer.com/#business' },
   datePublished: isoDate,
   dateModified: isoDate,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
 };
 ---
 
@@ -77,6 +75,7 @@ const articleSchema = {
   description={desc}
   canonical={canonical}
   ogImage={ogImage}
+  ogType="article"
   heroPreload={heroDisplayUrl}
   structuredData={articleSchema}
 >
