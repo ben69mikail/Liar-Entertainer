@@ -5,7 +5,7 @@ description: "Kindergeburtstag Mai draußen im Ruhrgebiet feiern - Park-Tipps, S
 publishDate: 2026-05-04
 heroImage: "https://liar-entertainer.com/blog-images/kindergeburtstag-mai-outdoor-ruhrgebiet/cover.jpg"
 heroImageAlt: "Kindergeburtstag im Mai - Outdoor-Ideen im Ruhrgebiet Cover"
-categories: ["F", "Saisonal", "E", "Städte"]
+categories: ["Feste", "Saisonal", "Geburtstag", "Städte"]
 tags: ["kindergeburtstag-mai-draußen"]
 author: "Michaël Prescler"
 draft: false
@@ -85,4 +85,4 @@ Bei meinen Buchungen gilt: Eine Zaubershow läuft drinnen genauso gut wie drauß
 
 ## Wie viele Kinder sind für einen Park-Geburtstag sinnvoll? 👧👦
 
-Eine pragmatische Faustregel: Alter des Geburtstagskindes plus 1–2 Kinder. Ein 5-Jähriger also mit 6–7 Freunden, ein 8-Jähriger mit 9–10. Draußen funktioniert
+Eine pragmatische Faustregel: Alter des Geburtstagskindes plus 1–2 Kinder. Ein 5-Jähriger also mit 6–7 Freunden, ein 8-Jähriger mit 9–10. Draußen funktioniert erfahrungsgemäß auch eine etwas größere Runde, weil Platz und Lautstärke im Park kein Problem sind. Wichtig ist nur, dass pro fünf Kinder mindestens eine erwachsene Begleitperson dabei ist und den Überblick behält – dann steht dem entspannten Mai-Geburtstag im Ruhrgebiet nichts mehr im Weg.

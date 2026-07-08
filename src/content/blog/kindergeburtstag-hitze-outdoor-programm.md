@@ -5,7 +5,7 @@ description: "Kindergeburtstag bei Hitze im Garten oder Park feiern - praktische
 publishDate: 2026-05-11
 heroImage: "https://liar-entertainer.com/blog-images/kindergeburtstag-hitze-outdoor-programm/cover.jpg"
 heroImageAlt: "Kindergeburtstag bei Hitze: Outdoor-Programme die wirklich funktionieren Cover"
-categories: ["F", "Saisonal", "G", "Probleme"]
+categories: ["Feste", "Saisonal", "Geburtstag", "Probleme"]
 tags: ["kindergeburtstag-bei-hitze"]
 author: "Michaël Prescler"
 draft: false
@@ -71,7 +71,6 @@ Eine [Clownshow](/clown/clownshow/) findet bei mir grundsätzlich im Schatten st
 
 ### Showdauer an die Hitze anpassen
 
-Ich passe meine Programme im Sommer aktiv an. Statt einer durchgehenden 45-Minuten-Show baue ich bei extremer Hitze gerne zwei kürzere Blöcke ein — 25 Minuten Zaubershow, dann eine Trinkpause, danach 20 Minuten Ballonmodellage oder Mitmachclownerie. So bleiben die Kinder bei der Sache und überhitzen nicht. Sprechen Sie mich bei der Bu
+Ich passe meine Programme im Sommer aktiv an. Statt einer durchgehenden 45-Minuten-Show baue ich bei extremer Hitze gerne zwei kürzere Blöcke ein — 25 Minuten Zaubershow, dann eine Trinkpause, danach 20 Minuten Ballonmodellage oder Mitmachclownerie. So bleiben die Kinder bei der Sache und überhitzen nicht. Sprechen Sie mich bei der Buchung einfach darauf an — gemeinsam finden wir die Show-Variante, die zu Ihrer Feier und zur Wetterlage passt.
 
 ![IMG_20260218_114156_691.jpg](https://liar-entertainer.com/blog-images/kindergeburtstag-hitze-outdoor-programm/inline-2.jpg)
-
