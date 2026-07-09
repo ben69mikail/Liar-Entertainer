@@ -201,6 +201,71 @@
       },
       "trend_bewertung": "Indexierung: Datenstand laggt weiter unveraendert beim 12.06. (Werte 1:1 identisch zu Check #1+#2 ueber 20+ Laeufe) -> keine echte WoW-Veraenderung messbar; Validierungen laufen weiter, KEINE neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0. Ggue. Ausgang 12.06. (885 nicht indexiert) weiter klar positiv. Leistung: klar positiv WoW (Klicks 1940->2020 +80, Impr 82200->84000 +1800, CTR 2,4% stabil, Pos 11,0->11,1 quasi stabil). Stetiger Aufwaertstrend seit Wochen. Saisoneffekt: 'kindergeburtstag bei hitze'-Blog zieht sommerbedingt stark (172->397 Impr, 11->22 Klicks).",
       "massnahme": "KEIN Code-Commit (Task-Regel: Trend positiv + keine Auffaelligkeit -> nur Wochenverlauf fortschreiben). Leistungstrend steigt weiter, KI-Antwort-Lead + Schema-Ausbau (Welle 4) wirken. Offene Verifikation nebenbei erledigt: Ballonmodellage-Schema (Commit 0e641f7) LIVE VERIFIZIERT (HTTP200, last-modified 02.07. 04:46, Service+FAQPage 4 Q+VideoObject+BreadcrumbList, 'Was ist Ballonmodellage' live, 0x konkreter EUR-Preis). Der Tagesläufer treibt den Schema-Ausbau planmaessig weiter (letzter Kandidat Glitzer-Tattoo-Hub). Beobachtung fuer kuenftige Laeufe: 'zauberer kindergeburtstag' (1383 Impr, Pos 16,2) ist die groesste ungenutzte Chance, aber ein Positions-/Seite-2-Problem, nicht per einzelnem On-Page-Tweak schnell loesbar (Seite hat bereits Lead+Schema) -> braucht Content-Tiefe/interne Verlinkung, nicht Scope des Wochen-Checks."
+    },
+    {
+      "pruefdatum": "2026-07-09",
+      "lauf": "Wochen-Check #4",
+      "indexierung": {
+        "datenstand": "NICHT FRISCH GEMESSEN - GSC-Browser (Claude-in-Chrome) im Autorun nicht verbunden (0 Browser). Letzter bekannter Stand (12.06.) wird uebernommen.",
+        "quelle": "carry-forward aus Check #3 / state.json",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": {
+            "wert": 362,
+            "validierung": "Gestartet"
+          },
+          "nicht_gefunden_404": {
+            "wert": 258,
+            "validierung": "Gestartet"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 152,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "durch_robots_blockiert": {
+            "wert": 8,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "noindex_tag": {
+            "wert": 1
+          },
+          "duplikat_google_canonical": {
+            "wert": 1
+          },
+          "indexiert_obwohl_robots_blockiert": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          }
+        }
+      },
+      "leistung": {
+        "datenstand": "NICHT gemessen (Browser nicht verbunden). Letzter Stand Check #3 (~01.07.): 2020 Klicks / 84000 Impr / CTR 2,4% / Pos 11,1.",
+        "quelle": "carry-forward aus Check #3"
+      },
+      "site_health_stichprobe": {
+        "geprueft_per": "curl -sI -L (kein GSC noetig)",
+        "http_status": {
+          "/": "200",
+          "/kinderzauberer/": "200",
+          "/kindergeburtstag/": "200",
+          "/clown/clownshow/": "200",
+          "/zauberer/zaubershow/": "200",
+          "/galerie/": "200"
+        },
+        "neue_4xx_5xx": "keine in der Stichprobe"
+      },
+      "trend_bewertung": "GSC-Live-Auslesung diesen Lauf NICHT moeglich (Autorun ohne Inhaber-Chrome-Login, 0 verbundene Browser) -> keine frische WoW-Messung fuer Indexierung/Leistung. Ersatzweise Site-Health-Stichprobe der 6 Haupt-Hubs: alle HTTP 200, KEINE neue 4xx/5xx-Auffaelligkeit. Kein Trend-Regress erkennbar; letzter gemessener Trend (bis Check #3) war stetig positiv (Klicks 1840->1940->2020 ueber 3 Wochen). Kein Handlungssignal fuer eine autonome Hochimpact-Aenderung, da ohne frische GSC-Leistungsdaten kein neu identifiziertes High-Impr/Low-CTR-Ziel und keine neue Auffaelligkeit vorliegt.",
+      "massnahme": "KEIN Code-Commit (Task-Regel: keine frische Auffaelligkeit + kein neues datengetriebenes Hochimpact-Ziel -> nur Wochenverlauf fortschreiben). NEBENBEI erledigt: offene Verifikation aus Tageslauf 29 abgeschlossen - Galerie-Alt-Texte (commit 1d93906) sind LIVE (https://liar-entertainer.com/galerie/, last-modified 09.07. 04:57 GMT; u.a. 'FC-Schalke-04-Stadion in Gelsenkirchen', 'Ballonmodellage: ein gelber Ballonhund', 'Clown Zauberer LIAR mit seinem Zauberkoffer in der Turnhalle' im DOM). Naechster Wochen-Check 16.07. - dann erneut versuchen GSC per Browser zu lesen; bleibt Browser aus, Datenlag ohnehin ~6 Tage."
     }
   ]
 }
