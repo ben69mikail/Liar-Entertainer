@@ -9,41 +9,15 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": {
-            "wert": 362,
-            "validierung": "Gestartet"
-          },
-          "nicht_gefunden_404": {
-            "wert": 258,
-            "validierung": "Gestartet"
-          },
-          "seite_mit_weiterleitung": {
-            "wert": 152,
-            "validierung": "Fehlgeschlagen",
-            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
-          },
-          "umleitungsfehler": {
-            "wert": 9,
-            "validierung": "Gestartet"
-          },
-          "durch_robots_blockiert": {
-            "wert": 8,
-            "validierung": "Nicht gestartet"
-          },
-          "soft_404": {
-            "wert": 0,
-            "validierung": "Bestanden"
-          },
-          "noindex_tag": {
-            "wert": 1
-          },
-          "duplikat_google_canonical": {
-            "wert": 1
-          },
-          "indexiert_obwohl_robots_blockiert": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          }
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "noindex_tag": { "wert": 1 },
+          "duplikat_google_canonical": { "wert": 1 },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
         }
       },
       "leistung": {
@@ -71,47 +45,16 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": {
-            "wert": 362,
-            "validierung": "Gestartet"
-          },
-          "nicht_gefunden_404": {
-            "wert": 258,
-            "validierung": "Gestartet"
-          },
-          "seite_mit_weiterleitung": {
-            "wert": 152,
-            "validierung": "Fehlgeschlagen",
-            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
-          },
-          "umleitungsfehler": {
-            "wert": 9,
-            "validierung": "Gestartet"
-          },
-          "durch_robots_blockiert": {
-            "wert": 8,
-            "validierung": "Nicht gestartet"
-          },
-          "soft_404": {
-            "wert": 0,
-            "validierung": "Bestanden"
-          },
-          "wegen_4xx_blockiert": {
-            "wert": 0,
-            "validierung": "Nicht zutreffend"
-          },
-          "noindex_tag": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          },
-          "duplikat_google_canonical": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          },
-          "indexiert_obwohl_robots_blockiert": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          }
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" },
+          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
+          "duplikat_google_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
         }
       },
       "leistung": {
@@ -141,47 +84,16 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": {
-            "wert": 362,
-            "validierung": "Gestartet"
-          },
-          "nicht_gefunden_404": {
-            "wert": 258,
-            "validierung": "Gestartet"
-          },
-          "seite_mit_weiterleitung": {
-            "wert": 152,
-            "validierung": "Fehlgeschlagen",
-            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
-          },
-          "umleitungsfehler": {
-            "wert": 9,
-            "validierung": "Gestartet"
-          },
-          "durch_robots_blockiert": {
-            "wert": 8,
-            "validierung": "Nicht gestartet"
-          },
-          "soft_404": {
-            "wert": 0,
-            "validierung": "Bestanden"
-          },
-          "wegen_4xx_blockiert": {
-            "wert": 0,
-            "validierung": "Nicht zutreffend"
-          },
-          "noindex_tag": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          },
-          "duplikat_google_canonical": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          },
-          "indexiert_obwohl_robots_blockiert": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          }
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" },
+          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
+          "duplikat_google_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
         }
       },
       "leistung": {
@@ -211,41 +123,15 @@
         "indexiert": 131,
         "nicht_indexiert": 792,
         "gruende": {
-          "gecrawlt_nicht_indexiert": {
-            "wert": 362,
-            "validierung": "Gestartet"
-          },
-          "nicht_gefunden_404": {
-            "wert": 258,
-            "validierung": "Gestartet"
-          },
-          "seite_mit_weiterleitung": {
-            "wert": 152,
-            "validierung": "Fehlgeschlagen",
-            "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff"
-          },
-          "umleitungsfehler": {
-            "wert": 9,
-            "validierung": "Gestartet"
-          },
-          "durch_robots_blockiert": {
-            "wert": 8,
-            "validierung": "Nicht gestartet"
-          },
-          "soft_404": {
-            "wert": 0,
-            "validierung": "Bestanden"
-          },
-          "noindex_tag": {
-            "wert": 1
-          },
-          "duplikat_google_canonical": {
-            "wert": 1
-          },
-          "indexiert_obwohl_robots_blockiert": {
-            "wert": 1,
-            "validierung": "Nicht gestartet"
-          }
+          "gecrawlt_nicht_indexiert": { "wert": 362, "validierung": "Gestartet" },
+          "nicht_gefunden_404": { "wert": 258, "validierung": "Gestartet" },
+          "seite_mit_weiterleitung": { "wert": 152, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "durch_robots_blockiert": { "wert": 8, "validierung": "Nicht gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "noindex_tag": { "wert": 1 },
+          "duplikat_google_canonical": { "wert": 1 },
+          "indexiert_obwohl_robots_blockiert": { "wert": 1, "validierung": "Nicht gestartet" }
         }
       },
       "leistung": {
@@ -266,6 +152,40 @@
       },
       "trend_bewertung": "GSC-Live-Auslesung diesen Lauf NICHT moeglich (Autorun ohne Inhaber-Chrome-Login, 0 verbundene Browser) -> keine frische WoW-Messung fuer Indexierung/Leistung. Ersatzweise Site-Health-Stichprobe der 6 Haupt-Hubs: alle HTTP 200, KEINE neue 4xx/5xx-Auffaelligkeit. Kein Trend-Regress erkennbar; letzter gemessener Trend (bis Check #3) war stetig positiv (Klicks 1840->1940->2020 ueber 3 Wochen). Kein Handlungssignal fuer eine autonome Hochimpact-Aenderung, da ohne frische GSC-Leistungsdaten kein neu identifiziertes High-Impr/Low-CTR-Ziel und keine neue Auffaelligkeit vorliegt.",
       "massnahme": "KEIN Code-Commit (Task-Regel: keine frische Auffaelligkeit + kein neues datengetriebenes Hochimpact-Ziel -> nur Wochenverlauf fortschreiben). NEBENBEI erledigt: offene Verifikation aus Tageslauf 29 abgeschlossen - Galerie-Alt-Texte (commit 1d93906) sind LIVE (https://liar-entertainer.com/galerie/, last-modified 09.07. 04:57 GMT; u.a. 'FC-Schalke-04-Stadion in Gelsenkirchen', 'Ballonmodellage: ein gelber Ballonhund', 'Clown Zauberer LIAR mit seinem Zauberkoffer in der Turnhalle' im DOM). Naechster Wochen-Check 16.07. - dann erneut versuchen GSC per Browser zu lesen; bleibt Browser aus, Datenlag ohnehin ~6 Tage."
+    },
+    {
+      "pruefdatum": "2026-07-16",
+      "lauf": "Wochen-Check #5",
+      "indexierung": {
+        "datenstand": "2026-07-10 (FRISCH per Claude-in-Chrome gemessen, Browser verbunden; Datenlag laeuft nach dem Bruch am 11.07. planmaessig weiter)",
+        "indexiert": 112,
+        "nicht_indexiert": 546,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": { "wert": 235, "validierung": "Fehlgeschlagen" },
+          "nicht_gefunden_404": { "wert": 190, "validierung": "Fehlgeschlagen" },
+          "seite_mit_weiterleitung": { "wert": 99, "validierung": "Fehlgeschlagen", "bewertung": "erwartete 301-Ketten Legacy->Hauptseiten, planmaessig kein Eingriff" },
+          "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
+          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
+          "soft_404": { "wert": 0, "validierung": "Bestanden" },
+          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+        }
+      },
+      "leistung": {
+        "datenstand": "~2026-07-14 (vor 3,5 Std aktualisiert)",
+        "zeitraum": "3 Monate",
+        "klicks": 2080,
+        "impressionen": 83700,
+        "ctr": "2.5%",
+        "durchschnittsposition": 11.4,
+        "top_chancen_high_impr_low_ctr": [
+          "zauberer kindergeburtstag: 1383 Impr/20 Klicks/CTR 1,4%/Pos 17,0 (groesste ungenutzte Chance, weiter Seite 2 - Offensive noch in Reifephase)",
+          "clown kindergeburtstag: 419/13/CTR 3,1%/Pos 10,6 (Grenze Seite 1/2 - NAECHSTER Kandidat fuer kuenftigen Lauf)",
+          "clown fuer kindergeburtstag: 378/9/CTR 2,4%/Pos 5,9 (bereits Seite 1)",
+          "kindergeburtstag bei hitze: 429/25/CTR 5,8%/Pos 6,0 (saisonal stark, konvertiert bereits gut)"
+        ]
+      },
+      "trend_bewertung": "Indexierung: FRISCH gemessen (Datenstand 10.07.). Alle Legacy-Fehlerklassen weiter deutlich ruecklaeufig ggue. Lauf 31 (11.07., Datenstand ~06.-08.07.): Nicht indexiert 601->546 (-55), Gecrawlt-nicht-indexiert 267->235 (-32), Nicht gefunden 404 207->190 (-17), Seite mit Weiterleitung 104->99 (-5), Indexiert 115->112 (gewollte Legacy-Entruempelung). Ggue. Ausgang 12.06. (885 nicht indexiert): jetzt 546 = -339 gesamt. Welle-5-robots.txt-Fix (1376073) wirkt nachhaltig, Re-Crawl der Legacy-URLs laeuft weiter. KEINE neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0, robots-blockiert/Umleitungsfehler stabil (10/9). Leistung: flach/stabil auf hohem Niveau (Klicks 2090->2080, Impr 83900->83700, CTR 2,5% stabil, Pos 11,3->11,4). Das rollierende 3-Monats-Fenster plateauisiert (aeltere Hoch-Tage fallen aus dem Fenster) - KEIN Regress, weiterhin Bestwerte des Jahres.",
+      "massnahme": "KEIN Code-Commit. Indexierungstrend klar positiv + keine Auffaelligkeit -> Task-Regel: nur Wochenverlauf fortschreiben (kein Mikro-Hygiene-Aktionismus). OFFENE VERIFIKATION GEPRUEFT: 'zauberer kindergeburtstag'-Offensive (f2cc9c7 Content-Tiefe + 58ba5ce interne Anker auf /kinderzauberer/) hat Pos 16,2->16,6->17,0 NICHT auf Seite 1 gehoben. Klicks 18->19->20 ueber 3 Wochen = langsamer organischer Zuwachs, aber Positionsproblem Seite 2 bleibt. Kein neuer On-Page-Hebel fuer diese Seite frei (Lead+Schema+Content-Tiefe+interne Anker bereits gesetzt); Massnahmen erreichen die rollierenden Daten erst jetzt -> weitere Reifezeit noetig, KEIN prematures Nachfassen (Prinzip AUDIT-VOR-EINGRIFF). NAECHSTER KANDIDAT notiert fuer kuenftigen Lauf: 'clown kindergeburtstag' Pos 10,6 (Grenze Seite 1/2, 419 Impr) - braucht vorherige Seiten-/Hebel-Auditierung (welche URL rankt, ist Title/Meta/FAQ schon gesetzt, Kannibalisierung mit /kinderzauberer/ pruefen), nicht ad hoc im Wochen-Check."
     }
   ]
 }
