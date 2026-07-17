@@ -12,6 +12,19 @@ import karteImg from '../../../../assets/images/kinderzauberer/clown-zauberer-gl
 const seoTitle = 'Zaubershow für Schule NRW | TOP Bewertet | LIAR';
 const seoDescription = 'Zaubershow für Ihre Schule in NRW ✓ Clown Zauberer LIAR bringt Kinder zum Lachen & Staunen ✓ 400+ Top-Bewertungen ✓ Für Schulfest & Projekttage ✓ Jetzt anfragen!';
 
+const faqItems = [
+  { q: 'Für welche Klassenstufen ist die Zaubershow geeignet?', a: 'Die Show ist auf Grundschulkinder der Klassen 1 bis 4 abgestimmt und wird altersgerecht angepasst – von der Einschulungsfeier bis zur Karnevalsfeier für die älteren Schüler.' },
+  { q: 'Wie viel Platz wird für die Zaubershow in der Schule benötigt?', a: 'Es genügt eine Fläche von etwa 2×2 Metern; für größere Veranstaltungen sind 4×4 Meter ideal. Die Show funktioniert im Klassenraum, in der Aula oder in der Turnhalle – bei Regen problemlos drinnen.' },
+  { q: 'Wie lange dauert eine Zaubershow für die Schule?', a: 'Die Hauptshow dauert in der Regel rund 40 Minuten. Für Einschulungsfeiern ist auch eine kürzere Variante von etwa 35 Minuten möglich.' },
+  { q: 'Für welche Schul-Anlässe eignet sich die Zaubershow?', a: 'Als zentrales Bühnenprogramm für Schulfeste, Sommerfeste, Einschulungen, Projekttage und Karnevalsfeiern – jeweils passend für die Klassen 1 bis 4.' },
+  { q: 'Seit wann tritt Clown Zauberer LIAR an Schulen auf?', a: 'LIAR steht seit 2009 als professioneller Clown Zauberer auf der Bühne und bringt seither Magie und Staunen in Grundschulen im Ruhrgebiet und in ganz NRW.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+};
+
 const anlaesse = [
   {
     icon: '🎪',
@@ -70,6 +83,7 @@ const praktisch = [
 <BaseLayout
   title={seoTitle}
   description={seoDescription}
+  structuredData={[faqSchema]}
   keywords="Zaubershow Schule, Zauberer Grundschule, Schulshow NRW, Zaubershow Schulfest, Zauberer Einschulung"
   canonical="https://liar-entertainer.com/zauberer/zaubershow/schule/"
 >
@@ -121,7 +135,7 @@ const praktisch = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
           <p class="text-[#374151] leading-relaxed mb-4">
-            Als erfahrener und professioneller Clown Zauberer für Schulen bringe ich seit über 20 Jahren Magie, Staunen und Begeisterung in Grundschulen im Ruhrgebiet. Meine Zaubershow ist speziell auf Schulkinder der Klassen 1 bis 4 abgestimmt – altersgerecht, interaktiv und mit pädagogischem Mehrwert. ✨
+            Als erfahrener und professioneller Clown Zauberer für Schulen bringe ich seit 2009 Magie, Staunen und Begeisterung in Grundschulen im Ruhrgebiet. Meine Zaubershow ist speziell auf Schulkinder der Klassen 1 bis 4 abgestimmt – altersgerecht, interaktiv und mit pädagogischem Mehrwert. ✨
           </p>
           <p class="text-[#374151] leading-relaxed mb-4">
             Ob für Ihr Schulfest, die Einschulungsfeier, Projekttage, Abschlussfeiern der Viertklässler oder als besonderes Highlight im Schuljahr: Meine Zaubershow verwandelt jeden Schultag in ein unvergessliches Erlebnis. Die Schüler werden aktiv eingebunden, erleben Magie hautnah und sind die Stars der Show – nicht die Zaubertricks!
@@ -375,4 +389,22 @@ const praktisch = [
     </div>
   </section>
 
+
+  <!-- FAQ (sichtbar + FAQPage-Schema) -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-center text-2xl font-extrabold text-[#1f2025] mb-8">Häufig gestellte Fragen</h2>
+      <div class="space-y-4">
+        {faqItems.map((i) => (
+          <details class="bg-[#f9fafb] rounded-xl p-5 group">
+            <summary class="font-bold cursor-pointer text-[#1f2025] flex justify-between items-center gap-4">
+              <span>{i.q}</span>
+              <span class="text-[#d7393e] transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">{i.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

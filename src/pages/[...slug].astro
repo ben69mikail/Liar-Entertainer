@@ -552,7 +552,7 @@ if (scrapedContent && scrapedContent.includes('price-grid') && scrapedContent.in
 
 // === Post-stylize: Einheitliche 3-Spalten Preiskarten auf ALLEN Seiten ===
 // Ersetze den Inhalt jedes price-grid durch die 3 Standard-Karten (Zaubershow, Ballonmodellage, Glitzer-Tattoos)
-if (scrapedContent && scrapedContent.includes('price-grid') && _isCitySlug) {
+if (scrapedContent && scrapedContent.includes('price-grid') && pageSlug.startsWith('geburtstag-in-')) {
   const standardPriceCards = `
     <div class="price-card"><h3>🎩 Zaubershow</h3>
       <p class="price-amount">150 €</p>

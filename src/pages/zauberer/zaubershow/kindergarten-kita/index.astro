@@ -13,7 +13,20 @@ import kindergartenGelsenkirchenImg from '../../../../assets/images/zauberer/kin
 import karteImg from '../../../../assets/images/kinderzauberer/clown-zauberer-gladbeck.jpg';
 
 const seoTitle = 'Zaubershow Kindergarten & Kita NRW | LIAR';
-const seoDescription = 'Zaubershow für Kindergarten & Kita in NRW ✓ Kinderzauberer LIAR ✓ Ab 150€ ✓ 400+ Top-Bewertungen ✓ Pädagogisch wertvoll ✓ Jetzt buchen!';
+const seoDescription = 'Zaubershow für Kindergarten & Kita in NRW ✓ Kinderzauberer LIAR ✓ 400+ Top-Bewertungen ✓ Pädagogisch wertvoll ✓ Jetzt buchen!';
+
+const faqItems = [
+  { q: 'Ab welchem Alter ist die Zaubershow für Kita-Kinder geeignet?', a: 'Die Kita-Zaubershow ist speziell auf Kindergartenkinder ab etwa 3 bis 4 Jahren abgestimmt: kurze, klare Zaubereffekte, viel Interaktion und liebevoller Humor ohne Erschrecken.' },
+  { q: 'Wie lange dauert die Zaubershow im Kindergarten?', a: 'Für Kita-Kinder ist eine Showdauer von etwa 30 bis 40 Minuten ideal, damit die Aufmerksamkeitsspanne der Kleinen nicht überfordert wird.' },
+  { q: 'Wie viel Platz braucht LIAR in der Kita?', a: 'Es reicht ein freier Bereich von etwa 2×2 Metern, zum Beispiel im Gruppenraum, Bewegungsraum oder Turnraum. Aufwendige Technik ist nicht nötig.' },
+  { q: 'Ist die Zaubershow pädagogisch wertvoll?', a: 'Ja. Die Show fördert Staunen, Konzentration und gemeinsames Erleben, bezieht die Kinder aktiv ein und stärkt spielerisch das Miteinander in der Gruppe.' },
+  { q: 'Für welche Anlässe in der Kita eignet sich die Zaubershow?', a: 'Für Sommerfest, Abschlussfeier der Vorschulkinder, Laternenfest, Weihnachtsfeier oder einfach als besondere Überraschung im Kita-Alltag.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+};
 
 const anlaesse = [
   { icon: '☀️', title: 'Sommerfeste', text: 'Der Klassiker! Beim Sommerfest ist die Zaubershow oft DAS Highlight. Ob auf der Bühne oder als Walk-Act – ich sorge für strahlende Kinderaugen und zufriedene Eltern.' },
@@ -44,6 +57,7 @@ const _pageGallery = [
 <BaseLayout
   title={seoTitle}
   description={seoDescription}
+  structuredData={[faqSchema]}
   keywords="Zaubershow Kindergarten, Zauberer Kita, Zaubershow Kita NRW, Kindergarten Programm, Sommerfest Kindergarten"
   canonical="https://liar-entertainer.com/zauberer/zaubershow/kindergarten-kita/"
 >
@@ -298,4 +312,22 @@ const _pageGallery = [
     </div>
   </section>
 
+
+  <!-- FAQ (sichtbar + FAQPage-Schema) -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-center text-2xl font-extrabold text-[#1f2025] mb-8">Häufig gestellte Fragen</h2>
+      <div class="space-y-4">
+        {faqItems.map((i) => (
+          <details class="bg-[#f9fafb] rounded-xl p-5 group">
+            <summary class="font-bold cursor-pointer text-[#1f2025] flex justify-between items-center gap-4">
+              <span>{i.q}</span>
+              <span class="text-[#d7393e] transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">{i.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -379,4 +379,22 @@ const whyUs = [
     </div>
   </section>
 
+
+  <!-- FAQ (sichtbar, deckungsgleich mit FAQPage-Schema) -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-center text-2xl font-extrabold text-[#1f2025] mb-8">Häufig gestellte Fragen</h2>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((q) => (
+          <details class="bg-[#f9fafb] rounded-xl p-5 group">
+            <summary class="font-bold cursor-pointer text-[#1f2025] flex justify-between items-center gap-4">
+              <span>{q.name}</span>
+              <span class="text-[#d7393e] transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

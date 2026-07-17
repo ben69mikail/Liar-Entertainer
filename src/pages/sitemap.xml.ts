@@ -54,6 +54,8 @@ export const GET: APIRoute = async () => {
     { loc: `${SITE}/zauberer/zaubershow/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
     { loc: `${SITE}/zauberer/buehnen-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-15' },
     { loc: `${SITE}/zauberer/tisch-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-15' },
+    { loc: `${SITE}/zauberer/hochzeit/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-11' },
+    { loc: `${SITE}/zauberer/firmenfeier/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-11' },
     { loc: `${SITE}/zauberer/zaubershow/kindergarten-kita/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
     { loc: `${SITE}/zauberer/zaubershow/schule/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
     { loc: `${SITE}/zauberer/zaubershow/strassen-sommer-fest/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
