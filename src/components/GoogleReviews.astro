@@ -249,7 +249,7 @@ const { bgColor = 'bg-white' } = Astro.props;
     // Später: API im Hintergrund abfragen, wenn Sektion sichtbar wird
     async function tryUpdateFromApi() {
       try {
-        const res = await fetch('/api/reviews.php');
+        const res = await fetch('/api/reviews.php?v=20260718', { cache: 'no-store' });
         if (!res.ok) return;
         const data = await res.json();
         if (data.reviews && data.reviews.length >= 5) {

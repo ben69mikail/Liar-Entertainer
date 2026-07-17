@@ -8,7 +8,7 @@
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 // 1 Stunde Browser-Cache, 6 Stunden CDN-Cache
-header('Cache-Control: public, max-age=3600, s-maxage=21600');
+header('Cache-Control: public, max-age=600, s-maxage=1800');
 
 // ── Konfiguration laden ──────────────────────────────────
 $configFile = __DIR__ . '/config.php';
