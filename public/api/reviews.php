@@ -42,6 +42,13 @@ if (file_exists(CACHE_FILE)) {
     }
 }
 
+// ── Sprach-Version: bei Umstellung auf Deutsch alten (fremdsprachigen) Pool leeren ──
+if (($cache['lang'] ?? '') !== 'de') {
+    $cache['reviews'] = [];
+    $cache['last_fetch'] = 0;   // erzwingt sofortigen Neu-Abruf auf Deutsch
+    $cache['lang'] = 'de';
+}
+
 // ── Google Places API abrufen wenn Cache abgelaufen ──────
 $now = time();
 if (($now - $cache['last_fetch']) > CACHE_TTL) {
@@ -111,7 +118,7 @@ function fetchGoogleReviews(): ?array {
     $apiKey = GOOGLE_API_KEY;
 
     // Google Places API (New) Endpoint
-    $url = "https://places.googleapis.com/v1/places/{$placeId}";
+    $url = "https://places.googleapis.com/v1/places/{$placeId}?languageCode=de&regionCode=DE";
     $fields = 'reviews,rating,userRatingCount';
 
     $ch = curl_init();
