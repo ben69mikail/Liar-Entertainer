@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Dorsten" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Dorsten" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-dorsten/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Dorsten', url: '/clown/clownshow/clown-in-dorsten/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,7 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Magisch &Witzig! 🤡✨</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Kinder aus Dorsten und der ganzen Region schließen den Clown sofort ins Herz! Warum? Weil ich es verstehe, durch feine Mimik und überraschende Gesten selbst die zurückhaltendsten Gäste zum Schmunzeln zu bringen 😊. Mein Geheimnis? Authentische Tollpatschigkeit, die niemanden bloßstellt, sondern alle einbindet!</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Sie suchen einen Clown in Dorsten? Clown Zauberer LIAR aus Gladbeck zeigt eine lustige Clownshow mit Comedy und Zauberei für Kindergeburtstag, Kita und Familienfest – für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Auch in Marl und Haltern am See schnell vor Ort – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">In über 6.000 Auftritten habe ich gelernt: Jede Veranstaltung ist anders. Privatfeiern haben einen anderen Rhythmus als Firmenfeste, Vereinsjubiläen brauchen andere Energie als Schulaufführungen. Diese Vielseitigkeit macht meine Shows so besonders – ich reagiere auf mein Publikum, statt einfach nur ein Programm abzuspulen! 🎭</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Was passiert bei meinen Shows? Die kleinen Gäste werden zu Hauptdarstellern! Sie helfen nicht nur – sie gestalten mit. Dadurch entsteht eine Dynamik, die jede Vorstellung einzigartig macht. Genau diese Momente bleiben den Kindern in Dorsten besonders lange im Gedächtnis! 🌟</p>
         </div>

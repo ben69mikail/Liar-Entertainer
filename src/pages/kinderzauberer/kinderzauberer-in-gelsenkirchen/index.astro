@@ -29,8 +29,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Gelsenkirchen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Gelsenkirchen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -82,6 +81,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-gelsenkirchen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Gelsenkirchen', url: '/kinderzauberer/kinderzauberer-in-gelsenkirchen/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -125,6 +129,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Der Kinderzauberer in Gelsenkirchen mit den besten Bewertungen! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus dem benachbarten Gladbeck ist in Gelsenkirchen – von Buer bis Schalke – schnell vor Ort. Kinder ab 4 Jahren erleben eine rund 40-minütige Mitmach-Zaubershow, die nur 2×2 Meter Platz benötigt. Mehr als 400 Google-Bewertungen sprechen für den Entertainer aus der Nachbarschaft.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, dem bestbewerteten Kinderzauberer in Gelsenkirchen, transformieren Sie jede Veranstaltung in einen unvergesslichen Tag voller Magie! 🎪 Mit meiner bewährten Zaubershow kreiere ich Erlebnisse, die bei den Kindern nachhaltig verankert bleiben und noch Wochen später für leuchtende Augen sorgen. Jede Show ist ein individuelles Erlebnis, perfekt auf Ihr Event zugeschnitten! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie suchen einen Kinderzauberer in Gelsenkirchen? Als leidenschaftlicher Entertainer für die Kleinsten (ideal beispielsweise für Kindergeburtstage) erlebe ich täglich strahlende Kinderaugen 👀 und verblüffte Gesichter – und genau diese magischen Augenblicke sind mein größter Antrieb! Durch liebevoll ausgedachte Geschichten verwandeln sich alltägliche Gegenstände in mysteriöse Zauberobjekte. Das fasziniert, begeistert und hebt die Laune aller Anwesenden – und genau das zeichnet einen erstklassigen Kinderzauberer aus! 🪄</p>
         </div>

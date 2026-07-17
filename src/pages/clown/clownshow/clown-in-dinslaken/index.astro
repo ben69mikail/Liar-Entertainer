@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Dinslaken" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Dinslaken" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-dinslaken/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Dinslaken', url: '/clown/clownshow/clown-in-dinslaken/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,7 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Buchen Sie den Clown in Dinslaken! 🤡</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Zögern Sie nicht und buchen Sie den Clown mit TOP Bewertungen in Dinslaken! Meine besondere Kunst besteht darin, durch subtile Gesten und ein ausdrucksstarkes Minenspiel jedem Zuschauer – ob groß oder klein – ein herzliches Lächeln ins Gesicht zu zaubern 😊. Dabei gehört es zu meinem Charakter, auch mal wunderbar tollpatschig und liebenswert ungeschickt zu sein – genau das macht die Authentizität meiner Clownfigur aus!</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus Gladbeck bringt seine lustige Clownshow mit Comedy und Zauberei nach Dinslaken – für Kindergeburtstag, Kita-Fest und Stadtfest, geeignet für Kinder ab 4 Jahren und spielbar auf nur 2×2 m Platz. Ebenso schnell in Duisburg und Oberhausen vor Ort – über 400 Google-Bewertungen geben Ihnen Sicherheit.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit meiner vielseitigen Clownshow kreiere ich ein besonderes Erlebnis, das bei Kindern und Familien noch sehr lange positiv in Erinnerung bleiben wird. Ob als mobiler WALK-ACT, der sich charmant durch Ihre Veranstaltung bewegt, oder in wirkungsvoller Kombination mit kunstvoller BALLONMODELLAGE und faszinierender ZAUBEREI – Ihre Veranstaltung oder private Feier (ob Hochzeit, Firmenjubiläum oder Geburtstag) wird dadurch garantiert zu einem besonderen Highlight! 🎉✨</p>
         </div>
         <div class="flex justify-center">

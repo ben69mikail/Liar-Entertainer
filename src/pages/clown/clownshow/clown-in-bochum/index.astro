@@ -36,8 +36,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Bochum" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Bochum" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -93,6 +92,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-bochum/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Bochum', url: '/clown/clownshow/clown-in-bochum/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -136,7 +140,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Buchen Sie den Clown in Bochum! 🤡</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Zögern Sie nicht und buchen Sie den Clown mit TOP Bewertungen in Bochum! Meine Kunst ist es, mit kleinen aber feinen Gesten und ausgeprägtem Mimenspiel auf jedes Gesicht ein Lächeln zu zaubern 😊. Da darf ich selbst natürlich auch mal herrlich tollpatschig sein – denn genau das macht den Charme eines echten Clowns aus!</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Sie suchen einen Clown in Bochum? Clown Zauberer LIAR aus Gladbeck bringt seine lustige Clownshow mit Comedy und Zauberei zu Kindergeburtstag, Kita-Fest und Familienfeier – für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Im Einsatz in ganz Bochum sowie in Herne, Witten und Dortmund – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit meiner Clownshow sorge ich für ein Erlebnis, das bei Kindern und Erwachsenen noch sehr lange in Erinnerung bleiben wird. Ob als unterhaltsamer WALK-ACT durch Ihre Veranstaltung oder in Kombination mit faszinierender BALLONMODELLAGE und verblüffender ZAUBEREI – Ihre Veranstaltung oder private Feier (Hochzeit, Firmenevent oder Geburtstag) wird garantiert zum unvergesslichen Highlight! 🎉</p>
         </div>
         <div class="flex justify-center">

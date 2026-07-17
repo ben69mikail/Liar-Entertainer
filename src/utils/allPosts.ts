@@ -4,6 +4,8 @@
  * Liefert eine kanonische BlogPostSummary fuer Index/Footer/Related-Articles/Categories.
  */
 import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
 import postsData from '../data/posts.json';
 
 export interface BlogPostSummary {
@@ -29,14 +31,43 @@ interface WPPost {
   categories?: { slug: string; name: string }[];
 }
 
-const FALLBACK_IMG =
-  'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-Zauberer-mit-Zaubershow.jpg';
+// Lokales Fallback-Bild (public/images/fallback/ — wp-content liefert 410 Gone)
+const FALLBACK_IMG = '/images/fallback/clown-zauberer.jpg';
 
-function getFirstImage(content: string): string {
-  const m = content.match(
-    /https?:\/\/liar-entertainer\.com\/wp-content\/uploads\/[^\s"'<>)]+\.(jpg|jpeg|png|webp)/i,
-  );
-  return m ? m[0] : FALLBACK_IMG;
+// Kategorie → themenpassendes lokales Fallback-Bild (Reihenfolge = Priorität)
+const CAT_IMG: Array<[RegExp, string]> = [
+  [/geburtstag/i, '/images/fallback/kindergeburtstag.jpg'],
+  [/karneval/i, '/images/fallback/karneval.jpg'],
+  [/zauberei/i, '/images/fallback/zaubershow.jpg'],
+  [/clown/i, '/images/fallback/clownshow.jpg'],
+  [/pantomime/i, '/images/fallback/walk-act.jpg'],
+  [/kultur|termine/i, '/images/fallback/fest.jpg'],
+];
+
+function categoryFallback(categories: string[]): string {
+  const joined = categories.join(' ');
+  for (const [re, img] of CAT_IMG) if (re.test(joined)) return img;
+  return FALLBACK_IMG;
+}
+
+/** Prüft, ob ein lokales Cover-Bild unter public/blog-images/<slug>/cover.jpg existiert. */
+function hasLocalCover(slug: string): boolean {
+  try {
+    return fs.existsSync(
+      path.join(process.cwd(), 'public', 'blog-images', slug, 'cover.jpg'),
+    );
+  } catch {
+    return false;
+  }
+}
+
+function getFirstImage(content: string, categories: string[] = []): string {
+  // wp-content-URLs ignorieren (410 Gone) — nur erreichbare Bild-URLs übernehmen
+  const matches =
+    content.match(/https?:\/\/[^\s"'<>)]+\.(?:jpg|jpeg|png|webp)/gi) || [];
+  const reachable = matches.find((u) => !/wp-content/i.test(u));
+  if (reachable) return reachable;
+  return categoryFallback(categories);
 }
 
 function htmlExcerpt(text: string, max = 160): string {
@@ -60,7 +91,7 @@ export async function getAllBlogPosts(): Promise<BlogPostSummary[]> {
       title: p.title,
       date: new Date(p.date),
       excerpt: htmlExcerpt(p.excerpt || p.content || ''),
-      image: getFirstImage(p.content || ''),
+      image: getFirstImage(p.content || '', cats),
       categories: cats.length ? cats : ['Allgemein'],
       source: 'legacy',
     };
@@ -72,16 +103,21 @@ export async function getAllBlogPosts(): Promise<BlogPostSummary[]> {
     .filter((e) => !e.data.draft)
     .map((e): BlogPostSummary => {
       const slug = String(e.id);
+      const cats = e.data.categories?.length ? e.data.categories : ['Allgemein'];
       return {
         slug,
         href: `/blog/${slug}/`,
         title: e.data.title,
         date: e.data.publishDate,
         excerpt: htmlExcerpt(e.data.description || e.body || ''),
+        // Cover nur verlinken, wenn es lokal existiert — sonst Kategorie-Fallback
+        // (verhindert 404-Thumbnails bei Posts ohne public/blog-images/<slug>/)
         image:
           e.data.heroImage ||
-          `https://liar-entertainer.com/blog-images/${slug}/cover.jpg`,
-        categories: e.data.categories?.length ? e.data.categories : ['Allgemein'],
+          (hasLocalCover(slug)
+            ? `/blog-images/${slug}/cover.jpg`
+            : categoryFallback(cats)),
+        categories: cats,
         source: 'collection',
       };
     });

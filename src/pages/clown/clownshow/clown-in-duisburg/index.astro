@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Duisburg" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Duisburg" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -92,6 +91,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-duisburg/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Duisburg', url: '/clown/clownshow/clown-in-duisburg/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -135,7 +139,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Unterhaltung, die begeistert! 🤡✨</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Denken Sie nicht zu lange nach und und buchen Sie DEN Clown in Duisburg mit TOP Bewertungen.</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Sie suchen einen Clown in Duisburg? Clown Zauberer LIAR aus Gladbeck bringt seine lustige Clownshow mit Comedy und Zauberei zu Kindergeburtstag, Kita-Fest und Stadtteilfest – für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Schnell auch in Oberhausen, Dinslaken und Moers vor Ort – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Meine farbenfroh gestaltete, witzige und zauberhafte Show passt sich perfekt an jede Altersklasse an. Die Kinder wirken aktiv mit, schlüpfen in die Rolle des Zauberers und plötzlich geschehen erstaunliche Dinge, die für sie absolut unglaublich wirken 🎩. Für die kleinen Zuschauer bleibt diese Clown- und Zaubershow immer ein intensives und vor allem ein unvergessliches Erlebnis…</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Was ist mein Erfolgsrezept? Durch feine Gesten und ein ausdrucksstarkes Minenspiel schaffe ich es, auf jedem Gesicht ein ehrliches Lächeln hervorzuzaubern 😊. Dabei gehört zu meinem Charakter auch die sympathische Tollpatschigkeit – denn genau diese menschliche Note schafft die besondere Verbindung zum Publikum!</p>
         </div>

@@ -36,8 +36,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Bottrop" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Bottrop" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -93,6 +92,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-bottrop/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Bottrop', url: '/clown/clownshow/clown-in-bottrop/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -136,7 +140,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Witzig und Magisch! ✨</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Zögern Sie nicht und buchen Sie den Clown mit TOP Bewertungen in Bottrop! Meine Kunst liegt darin, mit kleinen aber wirkungsvollen Gesten und einem ausgeprägten Minenspiel jedem Zuschauer ein breites Lächeln ins Gesicht zu zaubern 😊. Dabei darf ich selbst natürlich auch mal herrlich tollpatschig sein – genau diese authentische Art macht den besonderen Charme meiner Clownerie aus!</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus dem Nachbarort Gladbeck begeistert Bottrop mit einer lustigen Clownshow aus Comedy und Zauberei – ideal für Kindergeburtstag, Kita und Sommerfest, für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Schnell vor Ort in ganz Bottrop sowie in Gladbeck und Oberhausen – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit über 6.000 erfolgreichen Auftritten verfüge ich über einen riesigen Erfahrungsschatz: Privatpartys (Geburtstag, Hochzeit, Taufe), Firmenveranstaltungen und Betriebsfeste, Vereinsfeiern und Jubiläen, Messen und Promotions, Auftritte in Theatern, sowie regelmäßig in Kindergärten, Kitas und Grundschulen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Diese langjährige Bühnenerfahrung garantiert Ihnen professionelles Entertainment, das ankommt – bei Kindern genauso wie bei Erwachsenen! 🎭</p>
         </div>

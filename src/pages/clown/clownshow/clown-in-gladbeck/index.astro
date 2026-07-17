@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Gladbeck" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Gladbeck" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -92,6 +91,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-gladbeck/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Gladbeck', url: '/clown/clownshow/clown-in-gladbeck/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -135,6 +139,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Ihr professioneller Clown für Gladbeck und das Ruhrgebiet</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR ist in Gladbeck zu Hause: Die lustige Clownshow mit Comedy und Zauberei kommt ohne lange Anfahrt zu Ihrem Kindergeburtstag, Kita-Fest oder Sommerfest – für Kinder ab 4 Jahren, auf nur 2×2 m Platz, ob in Rentfort-Nord, Brauck oder Butendorf. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie planen einen Kindergeburtstag in Gladbeck 🎂, ein Sommerfest im Kindergarten oder eine Familienfeier? Als erfahrener Clown und Zauberer sorge ich seit über 6000 Auftritten für strahlende Kinderaugen ✨ – auch in Ihrer Stadt! Ob in Rentfort-Nord, Brauck, Butendorf oder der Gladbecker Innenstadt: Meine interaktive Clownshow kommt zu Ihnen nach Hause oder zu Ihrer Veranstaltung.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">📞 Jetzt unverbindlich anfragen: 0172-1517578</p>
         </div>

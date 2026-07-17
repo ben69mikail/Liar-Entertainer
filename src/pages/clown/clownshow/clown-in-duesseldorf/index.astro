@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Düsseldorf" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Düsseldorf" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-duesseldorf/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Düsseldorf', url: '/clown/clownshow/clown-in-duesseldorf/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,7 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Partner für unvergessliche Feiern! 🎉</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Buchen Sie den Clown mit TOP Bewertungen in Düsseldorf! Mit subtilen Gesten und ausdrucksvoller Mimik bringe ich auf jedem Gesicht ein ehrliches Lächeln zum Vorschein 😊. Dabei gehört zu meinem Charakterprofil auch die charmante Tollpatschigkeit – genau diese authentische Note schafft die besondere Verbindung!</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus Gladbeck kommt für Ihre Feier nach Düsseldorf: eine lustige Clownshow mit Comedy und Zauberei für Kindergeburtstag, Kita und Firmenevent – für Kinder ab 4 Jahren, spielbar auf nur 2×2 m Platz. Auch in Duisburg, Mülheim an der Ruhr und Neuss unterwegs – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Meine Erfolgsbilanz spricht für sich: Bis heute durfte ich über 6.000 Mal auftreten – bei Privatpartys (Geburtstag, Hochzeit, Jubiläen), Firmenveranstaltungen, Vereinsfeiern, Messen, in Theatern sowie regelmäßig in Kindergärten und Grundschulen. Diese umfangreiche Praxiserfahrung garantiert Entertainment, das wirklich funktioniert! 🎭</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Die Kinder erleben dabei lustige und hochwertige Unterhaltung: Sie wirken aktiv mit, schlüpfen selbst in die Zauberrolle und plötzlich geschehen erstaunliche Dinge, die für sie absolut unglaublich wirken ✨. Für die kleinen Zuschauer bleibt diese Clown- und Zaubershow immer ein intensives und vor allem ein unvergessliches Erlebnis…</p>
         </div>

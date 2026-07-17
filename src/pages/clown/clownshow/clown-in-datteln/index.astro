@@ -36,8 +36,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Datteln" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Datteln" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -93,6 +92,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-datteln/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Datteln', url: '/clown/clownshow/clown-in-datteln/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -136,6 +140,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Warum gerade in Datteln?</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus Gladbeck kommt mit seiner lustigen Clownshow – Comedy plus Zauberei – nach Datteln: perfekt für Kindergeburtstag, Kita-Fest und Vereinsfeier, für Kinder ab 4 Jahren und schon auf 2×2 m Platz spielbar. Auch in Waltrop und Recklinghausen unterwegs – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Datteln ist nicht nur für die Schleusenanlage und den Kanal bekannt – hier gibt es zahlreiche charmante Orte für Festivitäten: vom gemütlichen Garten bis zur Aula im Kinderhaus. Meine Shows in Datteln profitieren vom kurzen Anfahrtsweg – somit bleibt der Preis fair, und ich kann flexibel auftreten. 💡Ob im Stadtteil Ö – Osten oder rund um den Kanal-Park: Deine Location wird zur Bühne für Spaß & Magie.</p>
         </div>
         <div class="flex justify-center">

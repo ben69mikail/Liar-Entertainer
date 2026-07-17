@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Haltern am See" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Haltern am See" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -92,6 +91,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-haltern/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Haltern am See', url: '/clown/clownshow/clown-in-haltern/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -135,6 +139,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Ihr Clown für Haltern und alle Ortsteile</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus Gladbeck bringt seine lustige Clownshow mit Comedy und Zauberei nach Haltern am See – für Kindergeburtstag, Kita und Sommerfest, für Kinder ab 4 Jahren und spielbar auf nur 2×2 m: von Haltern-Mitte bis Sythen und Flaesheim, ebenso in Dorsten und Marl. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie suchen einen Clown in Haltern am See für Kindergeburtstag 🎂, Sommerfest oder Familienfeier? Mit über 6000 Auftritten im Ruhrgebiet und Münsterland bringe ich professionelle Kinderunterhaltung ✨ in Ihre Stadt – von der Seenplatte bis nach Sythen!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">🏘️ Alle Stadtteile: Haltern-Mitte • Lippramsdorf • Sythen • Hullern • Flaesheim • Lavesum</p>
           <p class="text-[#374151] mb-4 leading-relaxed">📞 Jetzt buchen: 0172-1517578</p>

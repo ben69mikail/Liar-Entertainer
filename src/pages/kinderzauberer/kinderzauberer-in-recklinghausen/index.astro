@@ -27,8 +27,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Recklinghausen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Recklinghausen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -80,6 +79,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-recklinghausen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Recklinghausen', url: '/kinderzauberer/kinderzauberer-in-recklinghausen/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -123,6 +127,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎪 Warum Recklinghausen meine Zaubershow liebt</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck gestaltet in Recklinghausen, Herten und Marl unvergessliche Kinderfeste: eine interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren, rund 40 Minuten lang und schon auf 2×2 Metern spielbar. Mehr als 400 Google-Bewertungen belegen die langjährige Erfahrung.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Recklinghausen ist anders als andere Ruhrgebietsstädte – und das meine ich positiv! Die Stadt hat Charakter, Kultur und eine starke Gemeinschaft. Diese besondere Atmosphäre spiegelt sich auch in meinen Auftritten wider:🌟 Meine Zaubershow passt zu Recklinghausen, weil:🎭 Kulturelle Vielfalt: Von klassischen Vereinsfesten bis zu modernen Events – ich passe mich an🤝 Gemeinschaftsorientiert: Perfekt für Vereinsfeste, Nachbarschaftsfeiern, Stadtteilveranstaltungen🎪 Tradition & Innovation: Klassische Zauberkunst mit modernen Elementen – wie Recklinghausen selbst⭐ Qualitätsbewusst: Wie die Ruhrfestspiele setze ich auf höchste Qualität👨‍👩‍👧 Familienfreundlich: Unterhaltung, die Generationen verbindet</p>
         </div>
         <div class="flex justify-center">

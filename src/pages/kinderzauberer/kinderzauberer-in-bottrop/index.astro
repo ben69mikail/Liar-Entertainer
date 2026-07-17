@@ -29,8 +29,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Bottrop" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Bottrop" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -74,6 +73,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-bottrop/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Bottrop', url: '/kinderzauberer/kinderzauberer-in-bottrop/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -115,7 +119,7 @@ const structuredData = [serviceSchema, faqSchema];
   <section class="py-14">
     <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
-        <p class="text-[#374151] leading-relaxed">Als erfahrener Zauberer für Kinder erlebe ich täglich glänzende Kinderaugen 👀 und staunende Gesichter – und genau das macht meine Arbeit so besonders. In zauberhaften Geschichten verwandle ich Alltagsgegenstände in magische Requisiten. Das verblüfft, begeistert und sorgt für ausgelassene Stimmung bei Klein und Groß! 🎉</p>
+        <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus dem direkt benachbarten Gladbeck begeistert in Bottrop und Oberhausen mit einer interaktiven Mitmach-Zaubershow für Kinder ab 4 Jahren. Die Show dauert rund 40 Minuten und braucht nur 2×2 Meter Platz – ideal für Wohnzimmer, Kita oder Gartenfest. Über 400 Google-Bewertungen bestätigen die Qualität.</p>
       </div>
       <div class="flex justify-center">
         <img

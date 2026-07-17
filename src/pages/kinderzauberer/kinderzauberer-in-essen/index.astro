@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Essen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Essen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -79,6 +78,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-essen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Essen', url: '/kinderzauberer/kinderzauberer-in-essen/' }
+  ]}
 >
 
   <!-- Hero + Breadcrumb + Intro: Pastell-Hero-Stage -->
@@ -123,6 +127,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Kinderzauberer in Essen mit fantastischer Zaubershow! 🌟</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck steht in ganz Essen auf der Bühne – von Rüttenscheid bis Borbeck. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und braucht lediglich 2×2 Meter Platz. Über 400 Google-Bewertungen belegen die Begeisterung kleiner und großer Gäste.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit dem professionellen Kinderzauberer in Essen erleben die Kinder fantastische und unvergessliche Momente! 🎪 Die Zaubershow vereint verblüffende Zauberei mit herzlicher Clownerie, wobei ausschließlich die Kinder (niemals die technischen Tricks!) die absoluten Hauptdarsteller sind. Die kleinen Gäste werden durchgängig aktiviert und schwanken kontinuierlich zwischen spontanem Gelächter und fassungslosem Staunen. Pure Magie zum Anfassen! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Diese farbenfrohe und humorvolle Show wurde in den vergangenen Jahren kontinuierlich auf Kinderveranstaltungen gebucht und wurde zu einer der beliebtesten in der Region. Warum? Weil hier verblüffende Ereignisse stattfinden, die durch die aktive Beteiligung der Kinder absolut unglaublich erscheinen. Für die jungen Teilnehmer wird diese Zaubershow zu einem unvergesslichen Erlebnis, das noch lange in Erinnerung bleibt! Die nachfolgenden Videos vermitteln Ihnen einen authentischen Eindruck von meiner Arbeit und zeigen, wie meine Zaubershow in Essen Kinderherzen erobert. 🎥</p>
         </div>

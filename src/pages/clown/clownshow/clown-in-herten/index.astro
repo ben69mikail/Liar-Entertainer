@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Herten" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Herten" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-herten/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Herten', url: '/clown/clownshow/clown-in-herten/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,6 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Ihr Clown in Herten</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus dem nahen Gladbeck kommt mit seiner lustigen Clownshow – Comedy und Zauberei kombiniert – nach Herten: für Kindergeburtstag, Kita und Familienfest, für Kinder ab 4 Jahren, auf nur 2×2 m Platz, von Westerholt bis Disteln, ebenso in Recklinghausen und Marl. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Clown in Herten gesucht??? Herzlich willkommen in Herten 🌳 – der grünsten Stadt im Ruhrgebiet! Sie suchen einen Clown für Kindergeburtstag 🎂, Sommerfest oder Familienfest? Mit über 6000 Auftritten bringe ich professionelle Kinderunterhaltung ✨ in Ihre Stadt – vom Schlosspark bis zur Halde Hoheward!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">🏘️ Alle Stadtteile: Disteln • Westerholt • Herten-Süd • Bertlich • Scherlebeck • Langenbochum • Paschenberg</p>
           <p class="text-[#374151] mb-4 leading-relaxed">📞 Direkt buchen: 0172-1517578</p>

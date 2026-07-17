@@ -30,8 +30,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Marl" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Marl" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -81,6 +80,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-marl/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Marl', url: '/kinderzauberer/kinderzauberer-in-marl/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -124,6 +128,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Warum Familien in Marl LIAR als Kinderzauberer wählen?</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck begeistert in Marl – von Hüls bis Brassert – sowie in Recklinghausen und Dorsten. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und benötigt nur 2×2 Meter Platz. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Als professioneller Kinderzauberer in Marl weiß ich genau, was Kinder zum Staunen und Lachen bringt. Bei meinen Shows in Marler Wohnzimmern, Gemeindezentren oder im Freien – etwa im Volkspark oder am Silbersee – erleben die kleinen Gäste pure Magie. Meine Zaubershow ist speziell auf die Bedürfnisse von Kindern zugeschnitten und macht jeden Kindergeburtstag in Marl zu einem besonderen Ereignis.</p>
           <h3 class="font-bold text-[#1f2025] text-lg mb-3">Das macht meine Zaubershow in Marl besonders:</h3>
           <ul class="space-y-2 text-[#374151] text-sm mb-4">

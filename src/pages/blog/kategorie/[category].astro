@@ -36,12 +36,17 @@ function formatDate(d: Date) {
 }
 
 const canonicalSlug = catToSlug(categoryName);
+
+// Dünne Kategorien (<2 Artikel) nicht indexieren — Thin-Content-Schutz.
+// Werthaltige Kategorien stehen in der Sitemap (sitemap.xml.ts, gleiche Schwelle).
+const isThin = posts.length < 2;
 ---
 
 <BaseLayout
   title={`${categoryName} | Blog | Clown Zauberer LIAR`}
   description={`Alle Blog-Artikel zur Kategorie ${categoryName} vom Clown Zauberer LIAR. Berichte, Tipps und Neuigkeiten rund um Kindergeburtstag, Zauberei und Events in NRW.`}
   canonical={`https://liar-entertainer.com/blog/kategorie/${canonicalSlug}/`}
+  noindex={isThin}
 >
   <section class="py-12 bg-[#f4f4f4]">
     <div class="max-w-[960px] mx-auto px-4">

@@ -32,8 +32,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Herten" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Herten" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -85,6 +84,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-herten/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Herten', url: '/kinderzauberer/kinderzauberer-in-herten/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -128,6 +132,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">TOP Kinderzauberer in Herten für Ihr Event! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck ist in Herten, Recklinghausen und Marl regelmäßig gebucht. Kinder ab 4 Jahren erleben rund 40 Minuten interaktive Mitmach-Zauberei, für die schon 2×2 Meter Platz genügen – drinnen wie draußen. Mehr als 400 Google-Bewertungen belegen die Qualität der Show.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Erleben Sie LIAR, den Kinderzauberer in Herten, der jedes Event in ein magisches Abenteuer verwandelt! 🎪 Meine Erlebnis-Show schafft bleibende Eindrücke, die Kinder begeistern und Eltern entspannen lassen. Seit Jahren verzaubere ich kleine und große Gäste in Herten und Umgebung – mit einer Show, die Herzen berührt und Gesichter zum Leuchten bringt! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Auf der Suche nach einem Kinderzauberer in Herten? Als professioneller Kinderentertainer (besonders beliebt für Kindergeburtstage) schaffe ich täglich Momente purer Freude 👀 – wenn Kinder vor Begeisterung quietschen, ihre Augen leuchten und sie voller Stolz von „ihren" Zaubertricks erzählen. Durch spannende Erzählungen werden simple Dinge zu magischen Instrumenten. Das sorgt für Gänsehaut, Begeisterungsstürme und eine Atmosphäre, die man spüren kann – das ist die Kunst eines wahren Kinderzauberers! 🪄</p>
         </div>

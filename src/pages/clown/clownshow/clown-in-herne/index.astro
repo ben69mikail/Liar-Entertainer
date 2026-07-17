@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Herne" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Herne" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-herne/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Herne', url: '/clown/clownshow/clown-in-herne/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,7 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Buchen Sie jetzt den Clown in Herne!</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Warten Sie nicht länger und buchen Sie den Clown in Herne 🎪: Bereits von Anfang an entfaltet sich eine atemberaubende, humorvolle und magische Vorstellung, die das Publikum auf jedem Kindergeburtstag 🎂 in Staunen und Freude versetzt ✨.</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Sie suchen einen Clown in Herne? Clown Zauberer LIAR aus Gladbeck zeigt eine lustige Clownshow mit Comedy und Zauberei für Kindergeburtstag, Kita-Fest und Familienfeier – für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Auch in Bochum und Gelsenkirchen schnell vor Ort – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">So geschieht es, dass viel schneller als erwartet aus den Zuschauern selbst kleine Zauberer werden 🪄. Die jungen Gäste erleben eine fröhliche und erstklassige Unterhaltung 🎉, bei der ich die kleinen Zuschauer in das Geschehen einbeziehe und zu aktiven Teilnehmern der Show mache 👦👧. Dadurch werden die Kinder auf spielerische Weise in die Vorstellung integriert und ich sorge damit für eine unvergessliche Zeit 💫.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Als WALK-ACT 🚶 und/oder in Kombination mit BALLONMODELLAGE 🎈 oder ZAUBEREI wird Ihre Veranstaltung oder private Feier (Hochzeit oder Geburtstag) zu einem Highlight!</p>
         </div>

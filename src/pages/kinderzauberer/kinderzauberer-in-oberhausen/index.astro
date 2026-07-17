@@ -27,8 +27,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Oberhausen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Oberhausen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -72,6 +71,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-oberhausen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Oberhausen', url: '/kinderzauberer/kinderzauberer-in-oberhausen/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -115,6 +119,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] text-2xl font-extrabold mb-4">TOP Kinderzauberer in Oberhausen!</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus dem benachbarten Gladbeck ist in Oberhausen, Duisburg und Bottrop regelmäßig im Einsatz. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und benötigt nur 2×2 Meter Platz. Über 400 Google-Bewertungen sprechen für den Entertainer.</p>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">Erleben Sie LIAR, den Kinderzauberer in Oberhausen – einen französischen Entertainer mit über 350 Top-Bewertungen! Meine einzigartige Mischung aus Clownerie, Zauberei, Ballonmodellage und Glitzer-Tattoos begeistert Kinder von 4 bis 12 Jahren und ihre Familien in ganz NRW.</p>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">Mein bester Trick funktioniert immer: Kindern durch Magie ein Lächeln ins Gesicht zu zaubern! Die Kinder stehen bei mir immer im Mittelpunkt – nicht die Technik. Mit französischem Charme und professionellem Entertainment sorge ich für unvergessliche Momente bei jedem Event in Oberhausen!</p>
           <a href="/zauberer/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors mt-2">

@@ -28,8 +28,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Dorsten" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Dorsten" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -81,6 +80,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-dorsten/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Dorsten', url: '/kinderzauberer/kinderzauberer-in-dorsten/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -124,6 +128,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Kinderzauberer in Dorsten mit TOP Bewertungen! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck verzaubert Kinder ab 4 Jahren in Dorsten, Marl und Haltern am See mit einer rund 40-minütigen Mitmach-Zaubershow, die nur 2×2 Meter Platz benötigt – ob im Wohnzimmer, in der Kita oder im Gemeindesaal. Über 400 Google-Bewertungen belegen Humor, Erfahrung und Zuverlässigkeit.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, Ihrem erfahrenen Kinderzauberer in Dorsten, wird jede Veranstaltung zu einem magischen Highlight! 🎪 Ob Kindergeburtstag, Sommerfest oder Firmenevent – meine spektakuläre Zaubershow verzaubert Kinder zwischen 4 und 12 Jahren und schafft Erinnerungen fürs Leben. ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Auf der Suche nach einem Kinderzauberer in Dorsten? Als professioneller Entertainer für Kinder verzaubere ich täglich die Kleinsten mit funkelnden Augen 👀 und offenen Mündern – und genau diese Begeisterung ist meine größte Motivation! Durch fantasievolle Geschichten werden gewöhnliche Gegenstände zu mystischen Zauberwerkzeugen. Das fasziniert, elektrisiert und bringt alle Anwesenden zum Jubeln! 🎉</p>
         </div>

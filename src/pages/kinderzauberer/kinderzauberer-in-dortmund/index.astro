@@ -31,8 +31,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Dortmund" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Dortmund" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -82,6 +81,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-dortmund/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Dortmund', url: '/kinderzauberer/kinderzauberer-in-dortmund/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -125,6 +129,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Der beliebteste Kinderzauberer in Dortmund! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck ist mit seiner interaktiven Mitmach-Zaubershow regelmäßig in Dortmund, Lünen und Castrop-Rauxel unterwegs. Die Show eignet sich für Kinder ab 4 Jahren, dauert etwa 40 Minuten und kommt mit 2×2 Metern Platz aus. Über 400 Google-Bewertungen sprechen eine klare Sprache.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, dem professionellen Kinderzauberer in Dortmund, verwandeln Sie jedes Event in ein magisches Abenteuer! 🎪 Ob Kindergeburtstag, Schulveranstaltung oder Firmenevent mit Kinderprogramm – meine mitreißende Zaubershow hinterlässt bleibende Eindrücke bei Kindern von 3 bis 12 Jahren.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Das Besondere? Jede Show wird individuell konzipiert und auf Ihr Event abgestimmt! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie planen ein Event in Dortmund und suchen professionelle Unterhaltung für Kinder? Als erfahrener Kinderentertainer erlebe ich immer wieder, wie die Augen der Kleinen vor Begeisterung funkeln 👀 und ihre Gesichter vor Staunen erstarren – diese magischen Momente sind der Grund, warum ich meinen Beruf liebe! Durch spannende Rahmengeschichten werden alltägliche Dinge zu geheimnisvollen Zauberobjekten. Das beeindruckt, elektrisiert und sorgt für eine Atmosphäre purer Freude! 🎉</p>

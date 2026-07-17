@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Gelsenkirchen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Gelsenkirchen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -90,6 +89,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-gelsenkirchen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Gelsenkirchen', url: '/clown/clownshow/clown-in-gelsenkirchen/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -133,7 +137,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Entertainer für Gelsenkirchen! 🎉</h2>
-          <p class="text-[#374151] mb-4 leading-relaxed">Sie suchen professionelles Entertainment für Ihre Feier in Gelsenkirchen? Dann sind Sie hier richtig! Als erfahrener Clown verstehe ich es, durch authentische Mimik und spontane Gesten echte Freude zu wecken 😊.</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus dem benachbarten Gladbeck begeistert Gelsenkirchen mit einer lustigen Clownshow aus Comedy und Zauberei – für Kindergeburtstag, Kita-Fest und Vereinsfeier, für Kinder ab 4 Jahren und auf nur 2×2 m Platz. Kurze Wege auch nach Herten und Herne – mit über 400 Google-Bewertungen.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Meine Stärke? Ich schaffe es, selbst zurückhaltende Gäste zum Mitmachen zu bewegen – ohne Druck, sondern durch sympathische Tollpatschigkeit, die verbindet statt zu distanzieren. So entsteht eine Atmosphäre, in der sich alle wohlfühlen!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit meiner flexiblen Clownshow gestalte ich Ereignisse, an die sich Kinder und Familien noch Jahre später gerne erinnern. Ob als beweglicher WALK-ACT zwischen den Gästen, kombiniert mit kreativer BALLONMODELLAGE oder ergänzt durch verblüffende ZAUBEREI – Ihre Veranstaltung oder private Feier (Hochzeit, Betriebsfest oder Geburtstag) erhält dadurch das gewisse Etwas! 🎭✨</p>
         </div>

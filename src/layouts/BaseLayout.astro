@@ -51,6 +51,12 @@ const canonicalUrl = canonical.startsWith('http')
   ? canonical
   : `https://liar-entertainer.com${canonical}`;
 
+// og:image MUSS absolut sein (Open-Graph-Spec; relative Pfade brechen
+// WhatsApp/Facebook-Previews). Seiten übergeben teils Astro-Asset-Pfade (/_astro/...).
+const ogImageUrl = ogImage.startsWith('http')
+  ? ogImage
+  : `https://liar-entertainer.com${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -65,8 +71,23 @@ const localBusinessSchema = {
     "@type": "PostalAddress",
     "streetAddress": "Beethovenstr. 15",
     "addressLocality": "Gladbeck",
+    "addressRegion": "NW",
     "postalCode": "45966",
     "addressCountry": "DE"
+  },
+  "logo": "https://liar-entertainer.com/images/og-startseite.jpg",
+  "founder": {
+    "@type": "Person",
+    "@id": "https://liar-entertainer.com/#person",
+    "name": "Michaël Prescler",
+    "alternateName": "Clown Zauberer LIAR",
+    "jobTitle": "Clown, Zauberer & Entertainer",
+    "url": "https://liar-entertainer.com/ueber-mich/",
+    "knowsLanguage": ["de", "fr"],
+    "sameAs": [
+      "https://www.facebook.com/clownzaubererliar",
+      "https://www.instagram.com/clown_zauberer_liar/"
+    ]
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -95,7 +116,31 @@ const localBusinessSchema = {
     "https://www.facebook.com/clownzaubererliar",
     "https://www.instagram.com/clown_zauberer_liar/",
     "https://www.google.com/maps/place/Clown+Zauberer+LIAR,+Beethovenstra%C3%9Fe+15,+45966+Gladbeck/data=!4m2!3m1!1s0x47b8eed84b67a41d:0x775f1c8f05280e76"
-  ],
+  ]
+};
+
+// WebSite-Knoten: stärkt den Entity-Graph (KI-Suche / Knowledge Graph)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://liar-entertainer.com/#website",
+  "url": "https://liar-entertainer.com",
+  "name": "Clown Zauberer LIAR",
+  "inLanguage": "de",
+  "publisher": { "@id": "https://liar-entertainer.com/#business" }
+};
+
+// WebPage-Knoten pro Seite: korrekter Träger für speakable
+// (speakable ist nur auf WebPage/Article definiert, nicht auf LocalBusiness)
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
+  "url": canonicalUrl,
+  "name": title,
+  "inLanguage": "de",
+  "isPartOf": { "@id": "https://liar-entertainer.com/#website" },
+  "about": { "@id": "https://liar-entertainer.com/#business" },
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", ".hero-subtitle"]
@@ -127,7 +172,7 @@ const localBusinessSchema = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Clown Zauberer LIAR" />
@@ -136,7 +181,7 @@ const localBusinessSchema = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Preconnect: nur eigene Domain (keine externen Google-Verbindungen, DSGVO) -->
     <link rel="preconnect" href="https://liar-entertainer.com" />
@@ -175,8 +220,10 @@ const localBusinessSchema = {
       });
     </script>
 
-    <!-- Structured Data: LocalBusiness (global) -->
+    <!-- Structured Data: LocalBusiness + WebSite + WebPage (global, @id-verknüpft) -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
 
     <!-- BreadcrumbList structured data -->
     {breadcrumbSchema && (
@@ -202,6 +249,21 @@ const localBusinessSchema = {
     <CookieConsent />
 
     <!-- Minimal JS: sticky nav + mobile menu handled inline in Header -->
+
+    <!-- GA4-Ereignisse: Telefon-/E-Mail-Klicks als Conversion-Signale.
+         Läuft über den gtag-Stub aus dem Head; Daten fließen nur, wenn GA4
+         nach Consent-Opt-in geladen wurde (DSGVO-konform). -->
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+        if (!a || typeof window.gtag !== 'function') return;
+        var isTel = a.getAttribute('href').indexOf('tel:') === 0;
+        window.gtag('event', isTel ? 'phone_click' : 'email_click', {
+          link_url: a.getAttribute('href'),
+          page_location: window.location.href
+        });
+      });
+    </script>
 
     <!-- Scroll-Reveal: IntersectionObserver für .reveal Klasse -->
     <script is:inline>

@@ -32,8 +32,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Düsseldorf" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Düsseldorf" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -84,6 +83,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-duesseldorf/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Düsseldorf', url: '/kinderzauberer/kinderzauberer-in-duesseldorf/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -127,6 +131,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Kinderzauberer in Düsseldorf mit TOP Bewertungen! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck bringt seine Mitmach-Zaubershow für Kinder ab 4 Jahren nach Düsseldorf sowie nach Ratingen und Meerbusch. Rund 40 Minuten Zauberei und Clownerie, spielbar auf nur 2×2 Metern – vom Wohnzimmer bis zur Eventlocation. Mehr als 400 Google-Bewertungen bestätigen die Show-Qualität.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, dem vielseitigen Kinderzauberer in Düsseldorf, wird jede Veranstaltung zu einem außergewöhnlichen Highlight! 🎪 Ob Kindergeburtstag, Firmenfeier mit Kinderprogramm oder Schulveranstaltung – mein umfassendes Entertainment-Angebot begeistert Kinder zwischen 4 und 12 Jahren nachhaltig. Das Besondere? Sie erhalten alles aus einer Hand! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie planen eine Kinderveranstaltung in Düsseldorf und möchten professionelle Unterhaltung? Als vielseitiger Entertainer für die Kleinsten schaffe ich täglich strahlende Kinderaugen 👀 und begeisterte Gesichter – und genau diese puren Glücksmomente treiben mich an! Durch fesselnde Geschichten werden alltägliche Objekte zu rätselhaften Zauberutensilien. Das beeindruckt, überrascht und erzeugt eine Wohlfühlatmosphäre für alle Beteiligten! 🎉</p>
         </div>

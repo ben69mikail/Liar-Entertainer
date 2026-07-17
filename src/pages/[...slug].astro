@@ -28,27 +28,47 @@ function resolveTitle(t: string | undefined, fb: string) {
 }
 
 function getFirstImg(c: string) {
-  const m = c.match(/https?:\/\/liar-entertainer\.com\/wp-content\/uploads\/[^\s"'<>)]+\.(jpg|jpeg|png|webp)/i);
-  return m ? m[0] : null;
+  // wp-content-URLs liefern 410 Gone (Legacy-WP abgeschaltet) → ignorieren.
+  // Nur noch erreichbare (lokale/externe Nicht-WP) Bild-URLs zurückgeben.
+  const matches = c.match(/https?:\/\/[^\s"'<>)]+\.(?:jpg|jpeg|png|webp)/gi) || [];
+  return matches.find((u) => !/wp-content/i.test(u)) ?? null;
 }
 
+// Themenpassende lokale Fallback-Bilder (public/images/fallback/, stabil deploybar).
+// BaseLayout macht relative ogImage-Pfade automatisch absolut.
 const SVC: Record<string, string> = {
-  'kindergeburtstag': 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg',
-  'clown-zauberer': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-Zauberer-mit-Zaubershow.jpg',
-  'zauberer': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Buehnen-Zauberei.jpg',
-  'zaubershow': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Buehnen-Zauberei.jpg',
-  'clownshow': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg',
-  'kinderzauberer': 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg',
-  'ballonmodellage': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Ballonmodellage-1.jpg',
-  'glitzer-tattoo': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Glitzer-tattoo.jpeg',
-  'walk-act': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clownerie-und-Zauberei-in-NRW.jpg',
-  'tisch-zauberer': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Close-Up-Zauberei-Dortmund.jpg',
-  'buehnen-zauberer': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Buehnen-Zauberer-Essen.jpg',
-  'strassen-sommer-fest': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Fest.jpg',
-  'kindergarten-kita': 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg',
-  'karneval': 'https://liar-entertainer.com/wp-content/uploads/2023/08/Karneval-245x300.jpeg',
-  'schule': 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg',
+  'kindergeburtstag': '/images/fallback/kindergeburtstag.jpg',
+  'clown-zauberer': '/images/fallback/clown-zauberer.jpg',
+  'zauberer': '/images/fallback/zaubershow.jpg',
+  'zaubershow': '/images/fallback/zaubershow.jpg',
+  'clownshow': '/images/fallback/clownshow.jpg',
+  'kinderzauberer': '/images/fallback/kindergeburtstag.jpg',
+  'ballonmodellage': '/images/fallback/ballonmodellage.jpg',
+  'glitzer-tattoo': '/images/fallback/glitzer-tattoo.jpg',
+  'walk-act': '/images/fallback/walk-act.jpg',
+  'tisch-zauberer': '/images/fallback/tisch-zauberer.jpg',
+  'buehnen-zauberer': '/images/fallback/buehnen-zauberer.jpg',
+  'strassen-sommer-fest': '/images/fallback/fest.jpg',
+  'kindergarten-kita': '/images/fallback/kindergarten.jpg',
+  'karneval': '/images/fallback/karneval.jpg',
+  'schule': '/images/fallback/schule.jpg',
 };
+
+// Kategorie → Fallback-Bild für Legacy-Blog-Posts (Reihenfolge = Priorität)
+const CAT_IMG: Array<[RegExp, string]> = [
+  [/geburtstag/i, '/images/fallback/kindergeburtstag.jpg'],
+  [/karneval/i, '/images/fallback/karneval.jpg'],
+  [/zauberei/i, '/images/fallback/zaubershow.jpg'],
+  [/clown/i, '/images/fallback/clownshow.jpg'],
+  [/pantomime/i, '/images/fallback/walk-act.jpg'],
+  [/kultur|termine/i, '/images/fallback/fest.jpg'],
+];
+
+function postCategoryImg(cats: { slug: string; name: string }[] | undefined): string | null {
+  const joined = (cats || []).map((c) => c.name).join(' ');
+  for (const [re, img] of CAT_IMG) if (re.test(joined)) return img;
+  return null;
+}
 
 export function getStaticPaths() {
   const pages2 = pagesData as WPItem[];
@@ -511,9 +531,41 @@ if (_processedScraped && pageSlug === 'geburtstag-in-haltern-am-see') {
 
 const _isCitySlug = pageSlug.startsWith('geburtstag-in-') || pageSlug.startsWith('kinderzauberer-in-') || pageSlug.startsWith('clown-in-');
 
+// === Legacy-Blog-Posts: kaputte wp-content-Bilder komplett entfernen ===
+// Die wp-content/uploads-URLs liefern 410 Gone (.htaccess) → Bilder samt
+// <figure>-Wrapper/Captions und Bild-Links aus dem HTML strippen.
+function stripWpImages(html: string): string {
+  let out = html
+    // 1. Bild-Links auf wp-content (Lightbox o.ä.): <a href="...wp-content..."><img ...></a>
+    .replace(/<a[^>]*href="[^"]*wp-content\/uploads[^"]*"[^>]*>\s*(?:<img[^>]*>\s*)+<\/a>/gi, '')
+    // 2. Alle <img>-Tags, die wp-content/uploads referenzieren (src/srcset/data-*, auch Optimole-CDN)
+    .replace(/<img[^>]*wp-content\/uploads[^>]*>/gi, '')
+    // 3. Übrig gebliebene leere Links
+    .replace(/<a[^>]*>(?:\s|&nbsp;)*<\/a>/gi, '');
+  // 4. <figure> ohne verbliebenes Medium (kein img/iframe/video mehr) → samt <figcaption>
+  //    entfernen. Loop für verschachtelte Galerie-Figures.
+  const emptyFigure = /<figure[^>]*>(?:(?!<img|<iframe|<video|<\/figure>)[\s\S])*<\/figure>/gi;
+  let prev: string;
+  do {
+    prev = out;
+    out = out.replace(emptyFigure, '');
+  } while (out !== prev);
+  // 4b. Verwaiste </figure>-Schließtags (äußere Galerie-Figure), wenn keine <figure> mehr offen ist
+  if (!/<figure[\s>]/i.test(out)) out = out.replace(/<\/figure>/gi, '');
+  return out
+    // 5. Leere wp-block-image-Container
+    .replace(/<div[^>]*class="[^"]*wp-block-image[^"]*"[^>]*>(?:\s|&nbsp;)*<\/div>/gi, '')
+    // 6. Leere Absätze, die durch das Strippen entstanden sind
+    .replace(/<p[^>]*>(?:\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, '');
+}
+
 let scrapedContent: string | null = _processedScraped && _isCitySlug
   ? stylizeCityContent(_processedScraped)
   : _processedScraped;
+
+if (scrapedContent && page.type === 'post') {
+  scrapedContent = stripWpImages(scrapedContent);
+}
 
 // === Post-stylize: Doppelte Preissektionen entfernen ===
 // Wenn price-grid existiert UND es noch einen ungestylten "Die Preise"/"ZAUBERSHOW"/"40 Minuten" Block gibt,
@@ -775,7 +827,9 @@ if (scrapedContent) {
   }
 }
 
-const fixedPageContent: string | null = page.content ? fixVideoEmbeds(fixBrokenLinks(page.content)) : null;
+const _fixedRaw: string | null = page.content ? fixVideoEmbeds(fixBrokenLinks(page.content)) : null;
+const fixedPageContent: string | null =
+  _fixedRaw && page.type === 'post' ? stripWpImages(_fixedRaw) : _fixedRaw;
 const seoTitle = resolveTitle(page.meta.rank_math_title, page.title);
 const rawDesc = (
   (page.meta?.rank_math_description || '').trim() ||
@@ -785,7 +839,11 @@ const rawDesc = (
   .replace(/DER französischer/g, 'DER französische')
   .replace(/der französischer/g, 'der französische')
   .replace(/der niveauvoller/g, 'der niveauvolle');
-const heroImg = SVC[pageSlug] ?? getFirstImg(page.content) ?? 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-Zauberer-mit-Zaubershow.jpg';
+const heroImg =
+  SVC[pageSlug] ??
+  getFirstImg(page.content) ??
+  (page.type === 'post' ? postCategoryImg(page.categories) : null) ??
+  '/images/fallback/clown-zauberer.jpg';
 const canonicalUrl = `https://liar-entertainer.com/${slug}/`;
 
 const isCityPage = pageSlug.startsWith('kinderzauberer-in-') || pageSlug.startsWith('geburtstag-in-') || pageSlug.startsWith('clown-in-');
@@ -917,7 +975,7 @@ const pageKeywords = buildKeywords();
 
 const schemas = [
   isCityPage && cityName ? { '@context': 'https://schema.org', '@type': 'Service', name: `Clown Zauberer in ${cityName}`, serviceType: 'Kinderunterhaltung', areaServed: { '@type': 'City', name: cityName }, provider: { '@type': 'LocalBusiness', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com', telephone: '+491721517578' } } : null,
-  isBlogPost ? { '@context': 'https://schema.org', '@type': 'Article', headline: seoTitle, description: rawDesc, image: heroImg, author: { '@type': 'Person', name: 'Clown Zauberer LIAR' }, publisher: { '@type': 'Organization', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com' }, datePublished: page.date, dateModified: page.date } : null,
+  isBlogPost ? { '@context': 'https://schema.org', '@type': 'Article', headline: seoTitle, description: rawDesc, image: heroImg.startsWith('http') ? heroImg : `https://liar-entertainer.com${heroImg}`, author: { '@type': 'Person', name: 'Clown Zauberer LIAR' }, publisher: { '@type': 'Organization', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com' }, datePublished: page.date, dateModified: page.date } : null,
 ].filter(Boolean);
 ---
 
@@ -1374,8 +1432,8 @@ const schemas = [
           // Google Maps werden als <iframe src="https://maps.google.com/..."> eingebettet
           // Der alte Code suchte fälschlicherweise nach img.src.includes('karte') → funktionierte NIE
           
-          const clownActionImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/Clown-bei-Clownshow.jpg';
-          const kinderLachenImg = 'https://liar-entertainer.com/wp-content/uploads/2023/08/CLown-Kinderzauberer-Geburtstag.jpg';
+          const clownActionImg = '/images/fallback/clownshow.jpg';
+          const kinderLachenImg = '/images/fallback/kindergeburtstag.jpg';
 
           function replaceIframeWithImg(iframe, imgSrc, altText) {
             const img = document.createElement('img');

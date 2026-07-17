@@ -28,8 +28,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Moers" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Moers" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -73,6 +72,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-moers/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Moers', url: '/kinderzauberer/kinderzauberer-in-moers/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -113,6 +117,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- Intro Paragraph -->
   <section class="py-10">
     <div class="max-w-4xl mx-auto px-4">
+      <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck tritt in Moers und am linken Niederrhein auf – auch in Krefeld und Kempen. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und braucht nur 2×2 Meter Platz. Über 400 Google-Bewertungen belegen die Begeisterung der Familien.</p>
       <p class="text-[#374151] text-center leading-relaxed"><strong>Sie organisieren ein Stadtfest in Moers, planen ein großes Kinderevent oder möchten Ihrem Kind einen besonderen Geburtstag schenken?</strong> Als erfahrener Kinderzauberer biete ich Ihnen in Moers ein umfassendes Unterhaltungspaket: Von der interaktiven Zaubershow über kunstvolle Ballonmodellage bis hin zu faszinierenden Glitzer-Tattoos. Mit über 15 Jahren Bühnenerfahrung und hunderten erfolgreichen Auftritten im Rheinland bin ich Ihr Partner für unvergessliche Kindererlebnisse.</p>
     </div>
   </section>

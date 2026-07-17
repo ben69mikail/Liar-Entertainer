@@ -35,8 +35,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Marl" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Marl" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -92,6 +91,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-marl/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Marl', url: '/clown/clownshow/clown-in-marl/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -135,6 +139,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎭 Ihr Clown für Marl – Von der Skulpturenmeile bis zum Chemiepark</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus Gladbeck begeistert Marl mit einer lustigen Clownshow aus Comedy und Zauberei – für Kindergeburtstag, Kita-Fest und Firmenfeier, geeignet für Kinder ab 4 Jahren und spielbar auf nur 2×2 m: in Hüls, Sinsen und allen Stadtteilen, auch in Dorsten und Recklinghausen. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Willkommen in Marl 🎨 – der Stadt der Kunst und Familie! Sie suchen einen Clown für Kindergeburtstag 🎂, Stadteilfest oder Firmenfeier? Mit über 6000 Auftritten im Ruhrgebiet bringe ich kreative Kinderunterhaltung ✨ in Ihre Stadt – von der berühmten Skulpturenmeile bis in Ihr Wohnzimmer!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">🏘️ Alle Stadtteile: Hüls • Drewer • Sinsen • Polsum • Brassert • Marl-Mitte • Alt-Marl • Hamm</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Bei der Zaubershow geschieht es, dass viel schneller als erwartet aus den Zuschauern selbst kleine Zauberer werden. Die jungen Gäste erleben eine fröhliche und erstklassige Unterhaltung, bei der ich die kleinen Zuschauer in das Geschehen einbeziehe und zu aktiven Teilnehmern der Show mache. Dadurch werden die Kinder auf spielerische Weise in die Vorstellung integriert und ich sorge damit für eine unvergessliche Zeit.</p>

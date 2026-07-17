@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import pagesData from '../data/pages.json';
 import postsData from '../data/posts.json';
+import { getAllCategories } from '../utils/allPosts';
 
 type WPItem = {
   link: string;
@@ -34,31 +35,31 @@ export const GET: APIRoute = async () => {
   const urls: { loc: string; lastmod: string; priority: string; changefreq: string; images?: { loc: string; title: string }[] }[] = [];
 
   // Homepage
-  urls.push({ loc: `${SITE}/`, lastmod: '2026-04-06', priority: '1.0', changefreq: 'weekly', images: pageImages['/'] });
+  urls.push({ loc: `${SITE}/`, lastmod: '2026-07-17', priority: '1.0', changefreq: 'weekly', images: pageImages['/'] });
 
   // Handcrafted static pages (not in WP data)
   const staticPages = [
-    { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
-    { loc: `${SITE}/kindergeburtstag/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-04-06' },
-    { loc: `${SITE}/kinderzauberer/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
-    { loc: `${SITE}/preise/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-04-06' },
-    { loc: `${SITE}/galerie/`, priority: '0.7', changefreq: 'monthly', lastmod: '2026-03-15' },
-    { loc: `${SITE}/kontakt/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-01-15' },
-    { loc: `${SITE}/ueber-mich/`, priority: '0.7', changefreq: 'monthly', lastmod: '2026-02-10' },
-    { loc: `${SITE}/clown/clownshow/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-04-06' },
-    { loc: `${SITE}/clown/walk-act/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-02-20' },
-    { loc: `${SITE}/clown/ballonmodellage/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-02-20' },
-    { loc: `${SITE}/clown/glitzer-tattoo/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-02-20' },
-    { loc: `${SITE}/clown/karneval/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-02-20' },
-    { loc: `${SITE}/zauberer/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
-    { loc: `${SITE}/zauberer/zaubershow/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-03-28' },
-    { loc: `${SITE}/zauberer/buehnen-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-15' },
-    { loc: `${SITE}/zauberer/tisch-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-15' },
-    { loc: `${SITE}/zauberer/hochzeit/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-11' },
-    { loc: `${SITE}/zauberer/firmenfeier/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-11' },
-    { loc: `${SITE}/zauberer/zaubershow/kindergarten-kita/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
-    { loc: `${SITE}/zauberer/zaubershow/schule/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
-    { loc: `${SITE}/zauberer/zaubershow/strassen-sommer-fest/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
+    { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kindergeburtstag/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kinderzauberer/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/preise/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/galerie/`, priority: '0.7', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kontakt/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/ueber-mich/`, priority: '0.7', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/walk-act/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/ballonmodellage/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/glitzer-tattoo/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/karneval/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/zaubershow/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/buehnen-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/tisch-zauberer/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/hochzeit/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/firmenfeier/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/zaubershow/kindergarten-kita/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/zaubershow/schule/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/zauberer/zaubershow/strassen-sommer-fest/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
   ];
   for (const p of staticPages) {
     const path = p.loc.replace(SITE, '');
@@ -109,6 +110,17 @@ export const GET: APIRoute = async () => {
     urls.push({ loc, lastmod, priority: '0.7', changefreq: 'monthly' });
   }
 
+  // Blog-Kategorien mit >=2 Artikeln (dünnere stehen auf noindex, siehe
+  // src/pages/blog/kategorie/[category].astro — Schwelle synchron halten).
+  const allCategories = await getAllCategories();
+  for (const cat of allCategories) {
+    if (cat.count < 2) continue;
+    const loc = `${SITE}/blog/kategorie/${cat.slug}/`;
+    if (seenLocs.has(loc)) continue;
+    seenLocs.add(loc);
+    urls.push({ loc, lastmod: now, priority: '0.5', changefreq: 'weekly' });
+  }
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -119,9 +131,7 @@ ${urls
   .map(
     (u) => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${u.lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>${
+    <lastmod>${u.lastmod}</lastmod>${
       u.images
         ? u.images.map((img) => `
     <image:image>

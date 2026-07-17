@@ -28,8 +28,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Mülheim" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Mülheim" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -73,6 +72,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-muelheim/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Mülheim an der Ruhr', url: '/kinderzauberer/kinderzauberer-in-muelheim/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -124,6 +128,7 @@ const structuredData = [serviceSchema, faqSchema];
       </div>
       <div>
         <h2 class="text-[#1f2025] font-bold text-2xl mb-4">🎩 Kinderzauberer in Mülheim an der Ruhr</h2>
+        <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck ist in Mülheim an der Ruhr – von Saarn bis Speldorf – schnell zur Stelle. Kinder ab 4 Jahren erleben eine rund 40-minütige Mitmach-Zaubershow, die mit 2×2 Metern Platz auskommt. Über 400 Google-Bewertungen bestätigen die Qualität der Show.</p>
         <p class="text-[#374151] leading-relaxed">🌟 Sie suchen einen Kinderzauberer in Mülheim, der nicht nur zaubern, sondern auch Kinderherzen erobern kann? Als LIAR bringe ich seit über 15 Jahren Magie ins Ruhrgebiet! Ob im heimischen Garten in Saarn, im Ruhrtal-Park, bei der Feier im MüGa-Park oder drinnen im gemütlichen Wohnzimmer – meine Zaubershow verwandelt jeden Ort in Mülheim in eine magische Bühne voller Lachen und Staunen! 🎉</p>
       </div>
     </div>

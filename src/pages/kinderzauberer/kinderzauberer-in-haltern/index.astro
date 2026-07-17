@@ -28,8 +28,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Haltern am See" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Haltern am See" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -73,6 +72,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-haltern/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Haltern am See', url: '/kinderzauberer/kinderzauberer-in-haltern/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -116,6 +120,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Kinderzauberer in Haltern am See mit TOP Bewertungen! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck kommt für Feiern nach Haltern am See sowie nach Marl und Dülmen. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert etwa 40 Minuten und passt mit 2×2 Metern in jedes Wohnzimmer. Über 400 Google-Bewertungen geben Familien Planungssicherheit.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, dem beliebten Kinderzauberer in Haltern am See, verwandeln Sie jede Veranstaltung in einen besonderen Tag voller Magie! 🎪 Mit meiner mitreißenden Zaubershow erschaffe ich Erlebnisse, die bei den Kindern nachhaltig im Gedächtnis verankert bleiben und noch Wochen später für Gesprächsstoff sorgen. Jede Performance wird mit Herzblut auf Ihr Event abgestimmt! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie suchen einen Kinderzauberer in Haltern am See? Als engagierter Entertainer für Kinder (perfekt beispielsweise für Kindergeburtstage) erlebe ich täglich leuchtende Kinderaugen 👀 und begeisterte Gesichter – und genau diese reinen Glücksmomente sind meine größte Freude! Durch liebevoll erdachte Geschichten werden gewöhnliche Alltagsobjekte zu geheimnisvollen Zauberwerkzeugen. Das überrascht, begeistert und hebt die Stimmung aller Beteiligten – und genau das zeichnet einen herausragenden Kinderzauberer aus! 🪄</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Die Zaubershow verbindet faszinierende Zauberei mit sympathischer Clownerie, wobei ausschließlich die Kinder (auf keinen Fall die Zaubertricks!) die absoluten Hauptakteure sind. Die jungen Gäste werden fortlaufend einbezogen und erleben einen kontinuierlichen Wechsel zwischen herzhaftem Lachen 😄 und ungläubigem Staunen. Entertainment, das nachhaltig beeindruckt!</p>

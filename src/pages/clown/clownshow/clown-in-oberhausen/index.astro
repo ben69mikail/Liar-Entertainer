@@ -34,8 +34,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Oberhausen" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Oberhausen" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -89,6 +88,11 @@ const _pageGallery = [
   canonical="https://liar-entertainer.com/clown/clownshow/clown-in-oberhausen/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Clownshow', url: '/clown/clownshow/' },
+    { name: 'Clown in Oberhausen', url: '/clown/clownshow/clown-in-oberhausen/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -132,6 +136,7 @@ const _pageGallery = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">🎪 Ihr Clown für Oberhausen – Von Sterkrade bis zum CentrO</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Clown Zauberer LIAR aus dem Nachbarort Gladbeck ist Ihr Clown für Oberhausen: eine lustige Clownshow mit Comedy und Zauberei für Kindergeburtstag, Kita-Fest und Firmenevent – für Kinder ab 4 Jahren, auf nur 2×2 m Platz, von Sterkrade bis Osterfeld, auch in Bottrop und Gladbeck. Über 400 Google-Bewertungen sprechen für sich.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Willkommen in Oberhausen 🛍️ – der Entertainment-Hauptstadt des Ruhrgebiets! Sie suchen einen Clown für Kindergeburtstag 🎂, Firmenevent oder Stadteilfest? Mit über 6000 Auftritten bringe ich professionelle Kinderunterhaltung ✨ in Ihre Stadt – vom Gasometer bis nach Sterkrade!</p>
           <p class="text-[#374151] mb-4 leading-relaxed">🏘️ Alle Stadtteile: Sterkrade • Osterfeld • Neue Mitte/CentrO • Alstaden • Klosterhardt • Lirich • Eisenheim • Tackenberg</p>
           <p class="text-[#374151] mb-4 leading-relaxed">📞 Direkt buchen: 0172-1517578</p>

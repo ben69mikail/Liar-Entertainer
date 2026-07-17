@@ -28,8 +28,7 @@ const serviceSchema = {
     "url": "https://liar-entertainer.com",
     "telephone": "+491721517578"
   },
-  "areaServed": { "@type": "City", "name": "Herne" },
-  "offers": { "@type": "Offer", "price": "150", "priceCurrency": "EUR" }
+  "areaServed": { "@type": "City", "name": "Herne" }
 };
 const faqSchema = {
   "@context": "https://schema.org",
@@ -73,6 +72,11 @@ const structuredData = [serviceSchema, faqSchema];
   canonical="https://liar-entertainer.com/kinderzauberer/kinderzauberer-in-herne/"
   ogImage={heroImg}
   structuredData={structuredData}
+  breadcrumbs={[
+    { name: 'Startseite', url: '/' },
+    { name: 'Kinderzauberer', url: '/kinderzauberer/' },
+    { name: 'Kinderzauberer in Herne', url: '/kinderzauberer/kinderzauberer-in-herne/' }
+  ]}
 >
 
   <!-- Hero Section -->
@@ -116,6 +120,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Ihr Kinderzauberer in Herne mit TOP Bewertungen! ⭐</h2>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus Gladbeck zaubert in Herne und Wanne-Eickel ebenso wie in Castrop-Rauxel: eine interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren, rund 40 Minuten lang und schon auf 2×2 Metern spielbar. Über 400 Google-Bewertungen bestätigen Humor, Erfahrung und Verlässlichkeit.</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Mit LIAR, dem renommierten Kinderzauberer in Herne, transformieren Sie jede Veranstaltung in einen außergewöhnlichen Tag voller Zauber! 🎪 Mit meiner bewährten Zaubershow kreiere ich Erlebnisse, die sich tief in die Erinnerungen der Kinder einprägen und noch lange für Begeisterung sorgen. Jede Vorstellung wird liebevoll auf Ihr Event zugeschnitten! ✨</p>
           <p class="text-[#374151] mb-4 leading-relaxed">Sie suchen einen Kinderzauberer in Herne? Als begeisterter Entertainer für die Kleinsten (optimal beispielsweise für Kindergeburtstage) genieße ich täglich strahlende Kinderaugen 👀 und verzauberte Gesichter – und genau diese authentischen Glücksmomente sind mein größter Antrieb! Durch kreativ gestaltete Geschichten werden alltägliche Gegenstände zu mystischen Zauberobjekten. Das fasziniert, elektrisiert und hebt die Stimmung aller Anwesenden – und genau das macht einen exzellenten Kinderzauberer aus! 🪄</p>
           <div class="flex flex-wrap gap-3 mt-4">

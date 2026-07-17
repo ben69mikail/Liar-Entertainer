@@ -410,7 +410,7 @@ RewriteRule ^([a-z0-9-]{20,})/?$ /blog/ [R=301,L]
 # damit eine reale Seite niemals fälschlich 410 wird.
 # ============================================================
 # Whitelist: echte Astro-Unterseiten unangetastet lassen (kein Statuswechsel)
-RewriteRule ^zauberer/(buehnen-zauberer|tisch-zauberer|zaubershow|kinderzauberer)(/.*)?$ - [L]
+RewriteRule ^zauberer/(buehnen-zauberer|tisch-zauberer|zaubershow|kinderzauberer|hochzeit|firmenfeier)(/.*)?$ - [L]
 RewriteRule ^clown/(ballonmodellage|clownshow|glitzer-tattoo|karneval|walk-act)(/.*)?$ - [L]
 # Einsegmentige /zauberer/<stadt>/ und /clown/<stadt>/ → 410 Gone
 RewriteRule ^zauberer/[a-z][a-z0-9-]+/?$ - [R=410,L]
