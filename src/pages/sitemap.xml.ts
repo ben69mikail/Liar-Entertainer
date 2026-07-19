@@ -60,6 +60,17 @@ export const GET: APIRoute = async () => {
     { loc: `${SITE}/zauberer/zaubershow/kindergarten-kita/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
     { loc: `${SITE}/zauberer/zaubershow/schule/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
     { loc: `${SITE}/zauberer/zaubershow/strassen-sommer-fest/`, priority: '0.8', changefreq: 'monthly', lastmod: '2026-07-17' },
+    // Neue City-Pages 17.07.2026 (nicht in pages.json, daher hier)
+    { loc: `${SITE}/kinderzauberer/kinderzauberer-in-gladbeck/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kinderzauberer/kinderzauberer-in-castrop-rauxel/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kinderzauberer/kinderzauberer-in-waltrop/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kinderzauberer/kinderzauberer-in-wesel/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/kinderzauberer/kinderzauberer-in-xanten/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/clown-in-moers/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/clown-in-castrop-rauxel/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/clown-in-waltrop/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/clown-in-wesel/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
+    { loc: `${SITE}/clown/clownshow/clown-in-xanten/`, priority: '0.7', changefreq: 'weekly', lastmod: '2026-07-17' },
   ];
   for (const p of staticPages) {
     const path = p.loc.replace(SITE, '');
