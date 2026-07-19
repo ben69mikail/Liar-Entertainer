@@ -9,13 +9,14 @@ import heroSlide2 from '../assets/images/Slider/kinderzauberer-hero.jpg';
 import heroSlide3 from '../assets/images/Slider/zaubershow-hero.jpg';
 import heroSlide4 from '../assets/images/Slider/kindergeburtstag-hero.jpg';
 import heroSlide5 from '../assets/images/Slider/zaubershow-mit-clown-zauberer-liar.jpg';
-const heroOptimized = await getImage({ src: heroImg, width: 1200, format: 'webp' });
+// Sommer-/Outdoor-Motiv zuerst (saisonale Reihenfolge; Weihnachts-Innenraum ans Ende)
+const heroOptimized = await getImage({ src: heroSlide5, width: 1200, format: 'webp' });
 const heroSlides = [
-  { src: heroImg, alt: 'Clown Zauberer LIAR bei einer Zaubershow' },
-  { src: heroSlide2, alt: 'Kinderzauberer LIAR begeistert Kinder aus nächster Nähe' },
-  { src: heroSlide3, alt: 'Zaubershow von LIAR vor großem Kinderpublikum' },
-  { src: heroSlide4, alt: 'Clown Zauberer LIAR beim Kindergeburtstag in der Kita' },
   { src: heroSlide5, alt: 'LIAR bei einer Open-Air-Zaubershow für Kinder' },
+  { src: heroSlide3, alt: 'Zaubershow von LIAR vor großem Kinderpublikum' },
+  { src: heroSlide2, alt: 'Kinderzauberer LIAR begeistert Kinder aus nächster Nähe' },
+  { src: heroSlide4, alt: 'Clown Zauberer LIAR beim Kindergeburtstag in der Kita' },
+  { src: heroImg, alt: 'Clown Zauberer LIAR bei einer Zaubershow' },
 ];
 import portraitImg from '../assets/images/home/clown-zauberer-liar-portrait.jpg';
 import michaelImg from '../assets/images/home/michael-prescler-portrait.jpg';
@@ -242,6 +243,24 @@ const videoSchema = {
             quality={70}
           />
         ))}
+        <!-- Above-the-Fold: Headline + CTA direkt auf dem Hero-Bild -->
+        <div class="hero-overlay">
+          <h1 class="text-white font-extrabold text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-3xl">
+            Clown Zauberer in NRW –<br class="hidden sm:block" /> Zaubershow &amp; Kindergeburtstag
+          </h1>
+          <p class="hidden sm:block text-white/90 text-base lg:text-lg mt-3 max-w-2xl">
+            40 Minuten Mitmach-Magie ab 4 Jahren · nur 2×2 m Platz nötig · 400+ ★★★★★-Google-Bewertungen
+          </p>
+          <div class="flex flex-wrap gap-3 mt-5">
+            <a href="/kontakt/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-7 py-3.5 rounded-full text-base transition-colors shadow-lg">
+              Jetzt unverbindlich anfragen
+            </a>
+            <a href="tel:+491721517578" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white text-[#1f2025] font-bold px-6 py-3.5 rounded-full text-base transition-colors shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d7393e" class="w-5 h-5" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+              0172 1517578
+            </a>
+          </div>
+        </div>
         <div class="hero-dots">
           {heroSlides.map((_, i) => (
             <button type="button" class:list={["hero-dot", { "is-active": i === 0 }]} data-i={i} aria-label={`Bild ${i + 1} anzeigen`}></button>
@@ -250,6 +269,27 @@ const videoSchema = {
       </div>
     </div>
   </section>
+  <style>
+    /* Hero-Overlay: Wertversprechen + CTA im ersten Viewport */
+    .hero-slider { position: relative; }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.25rem 1.25rem 3.25rem;
+      background: linear-gradient(to top, rgba(20, 15, 15, 0.78) 0%, rgba(20, 15, 15, 0.35) 38%, rgba(20, 15, 15, 0) 62%);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+    .hero-overlay a { pointer-events: auto; }
+    .hero-overlay h1 { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+    @media (min-width: 640px) {
+      .hero-overlay { padding: 2rem 2.5rem 3.75rem; }
+    }
+  </style>
   <script is:inline>
     (function () {
       var root = document.querySelector('.hero-slider');
@@ -282,11 +322,11 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        INTRO – H1 + lead paragraph (centered)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h1 class="text-[#1f2025] font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-tight mb-8">
-        <span class="text-[#d7393e]">Clown Zauberer</span> in NRW – Zaubershow & Kindergeburtstag
-      </h1>
+  <section class="py-14 md:py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl leading-tight mb-6">
+        <span class="text-[#d7393e]">Lachen garantiert</span> – bei Ihnen zu Hause, in der Kita oder auf dem Fest
+      </h2>
       <p class="hero-subtitle text-[#374151] text-[17px] sm:text-lg leading-relaxed">
         Sie suchen einen Clown, der Kinderaugen zum Leuchten bringt? Clown Zauberer Liar sorgt seit
         über 15 Jahren für unvergessliche Momente auf <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstagen</a>, Straßenfesten und
@@ -295,7 +335,7 @@ const videoSchema = {
         <a href="/zauberer/" class="text-[#d7393e] hover:underline font-semibold">Zauberei</a>
         mit Interaktion — jede Veranstaltung wird zum Highlight!
       </p>
-      <div class="mt-8">
+      <div class="mt-8 text-center">
         <a href="/kontakt/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-10 py-4 rounded-full text-base transition-colors">
           Jetzt unverbindlich anfragen
         </a>
@@ -320,19 +360,16 @@ const videoSchema = {
             individuell abgestimmt auf Ihr Event und die Altersgruppe. Ob beim <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a> oder auf der großen Bühne.
           </p>
           <p class="text-[#374151] leading-relaxed">
-            <span class="text-lg mr-1">✨</span>
-            <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline font-semibold">Zaubershow</a>
-            : Verblüffende Zaubertricks, bei denen die Kinder aktiv mitmachen und selbst zu
+            <a href="/zauberer/zaubershow/" class="text-[#d7393e] hover:underline font-semibold">Zaubershow</a>:
+            Verblüffende Zaubertricks, bei denen die Kinder aktiv mitmachen und selbst zu
             kleinen Zauberern werden. Staunen und Lachen in perfekter Balance!
           </p>
           <p class="text-[#374151] leading-relaxed">
-            <span class="text-lg mr-1">🎭</span>
-            Walk-Act : Lustige Improvisation, witzige Gags und interaktive Clownerie, die garantiert
+            <strong>Walk-Act:</strong> Lustige Improvisation, witzige Gags und interaktive Clownerie, die garantiert
             für Lacher sorgt. Jeder Pantomime- oder Clown-Auftritt wird auf Ihre Gäste abgestimmt.
           </p>
           <p class="text-[#374151] leading-relaxed">
-            <span class="text-lg mr-1">🎈</span>
-            Extras : Ballonmodellage, Glitzer Tattoos, Close-up… Ihr Clown Zauberer bringt alles
+            <strong>Extras:</strong> Ballonmodellage, Glitzer Tattoos, Close-up… Ihr Clown Zauberer bringt alles
             mit, was Ihr Event unvergesslich macht.
           </p>
         </div>
@@ -395,27 +432,37 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        STATS SECTION (pastel red)
   ════════════════════════════════════ -->
-  <section class="py-14 bg-[#fdf2f2] border-y border-[#f0c4c4]">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-reveal-group>
-        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
-          <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">400</div>
-          <div class="text-sm mt-1 text-[#374151]">Shows im Jahr</div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
-          <div class="text-3xl mb-2">😊</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">110.000</div>
-          <div class="text-sm mt-1 text-[#374151]">Lachende Kinder</div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 text-center border border-[#f0c4c4] shadow-sm">
-          <div class="text-3xl mb-2">🪄</div>
-          <div class="text-4xl font-extrabold text-[#d7393e]">15</div>
-          <div class="text-sm mt-1 text-[#374151]">Jahre Erfahrung</div>
-        </div>
+  <!-- Wave oben: Weiß → Rot -->
+  <div style="overflow:hidden;line-height:0;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;" aria-hidden="true">
+      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="#d7393e"/>
+    </svg>
+  </div>
+  <section class="w-full bg-[#d7393e] py-10 text-center">
+    <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6" data-reveal-group>
+      <div class="bg-white/15 rounded-xl p-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 mx-auto mb-2" aria-hidden="true"><path d="M15 4V2m0 20v-2m5-15 1.5-1.5M18.5 18.5 20 20M20 9h2M2 22 14 10m3-3 3 3-2.5 2.5-3-3L17 7Z"/></svg>
+        <div class="text-4xl font-extrabold text-white">400</div>
+        <div class="text-white text-sm mt-1">Shows im Jahr</div>
+      </div>
+      <div class="bg-white/15 rounded-xl p-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 mx-auto mb-2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2.5 4 2.5 4-2.5 4-2.5M9 9.5h.01M15 9.5h.01"/></svg>
+        <div class="text-4xl font-extrabold text-white">110.000</div>
+        <div class="text-white text-sm mt-1">Lachende Kinder</div>
+      </div>
+      <div class="bg-white/15 rounded-xl p-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 mx-auto mb-2" aria-hidden="true"><path d="m12 2 2.9 6.26L21.5 9.27l-4.75 4.28 1.23 6.72L12 16.9l-5.98 3.37 1.23-6.72L2.5 9.27l6.6-1.01L12 2Z"/></svg>
+        <div class="text-4xl font-extrabold text-white">15</div>
+        <div class="text-white text-sm mt-1">Jahre Erfahrung</div>
       </div>
     </div>
   </section>
+  <!-- Wave unten: Rot → Weiß -->
+  <div style="overflow:hidden;line-height:0;background:#d7393e;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px;" aria-hidden="true">
+      <path d="M0,0 Q720,60 1440,0 L1440,60 L0,60 Z" fill="white"/>
+    </svg>
+  </div>
 
   <!-- ═══════════════════════════════════
        QUALIFIKATIONEN + WAS MICH AUSZEICHNET
@@ -431,10 +478,10 @@ const videoSchema = {
               'über 400 erfolgreiche Auftritte in NRW und deutschlandweit im Jahr',
               'pädagogische Ausbildung',
               'Spezialisiert auf Kinder von 3–12 Jahren',
-              'Versichert und polizeiliches Führungszeugnis(auf Anfrage)',
+              'Versichert und polizeiliches Führungszeugnis (auf Anfrage)',
             ].map((item) => (
               <p class="text-[#374151] leading-relaxed flex items-start gap-2">
-                <span class="text-green-600 flex-shrink-0 mt-0.5">✅</span>
+                <span class="text-[#d7393e] font-bold flex-shrink-0">✓</span>
                 <span>{item}</span>
               </p>
             ))}
@@ -454,10 +501,10 @@ const videoSchema = {
       </div>
 
       <!-- Was mich als Clown auszeichnet -->
-      <div class="mt-14 text-center max-w-2xl mx-auto">
-        <p class="font-bold text-[#1f2025] text-lg mb-4">** Was mich als Clown auszeichnet **</p>
+      <div class="mt-14 max-w-2xl mx-auto">
+        <h3 class="font-extrabold text-[#1f2025] text-xl mb-4 text-center">Was mich als Clown auszeichnet</h3>
         <p class="text-[#374151] leading-relaxed">
-          Ich bin kein „gruseliger" Clown – ganz im Gegenteil : keine Schminke, keine
+          Ich bin kein „gruseliger" Clown – ganz im Gegenteil: keine Schminke, keine
           „komischen Haare" und keine rote Nase! Mein Clown-Charakter ist freundlich,
           trotzdem bunt und lädt Kinder zum Mitmachen ein. Selbst schüchterne Kinder
           tauen schnell auf, wenn Clown Liar die Bühne betritt.
@@ -478,101 +525,121 @@ const videoSchema = {
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" data-reveal-group>
 
         <!-- Zaubershow -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
-          <a href="/zauberer/zaubershow/">
+        <div class="bg-white rounded-2xl shadow-sm border border-[#c5d3f7] flex flex-col h-full overflow-hidden text-[#1f2025]">
+          <a href="/zauberer/zaubershow/" class="program-media block relative">
             <Image
               src={zaubershowImg}
               alt="Clown Zauberer LIAR verzaubert Kinder bei einer Zaubershow in NRW"
-              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
+              class="w-full h-56 object-cover object-[20%]"
               loading="lazy"
-              width={220}
-              height={220}
+              width={600}
+              height={340}
             />
+            <span class="program-title">Zaubershow</span>
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">ZAUBERSHOW</h3>
+          <div class="p-6 flex flex-col flex-1">
           <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Clown trifft Zauberer – Die magischste Show in NRW! Wenn der Clown zum Zauberer wird,
             passieren unglaubliche Dinge! Meine Zaubershow ist speziell für Kinder konzipiert und
             verbindet Comedy mit verblüffender Magie.
           </p>
           <div class="text-[#374151] text-sm space-y-1.5 text-left">
-            <p>✅ <strong>Interaktive Zaubertricks</strong> – Kinder werden zu Co-Zauberern und erleben Magie hautnah</p>
-            <p>✅ <strong>Altersgerechte Magie</strong> – Von einfachen Tricks für die Kleinen bis zu verblüffenden Illusionen für ältere Kinder</p>
-            <p>✅ <strong>Comedy-Magie</strong> – Der Clown zaubert nicht perfekt – und genau das macht es so lustig!</p>
-            <p>✅ <strong>Große Finale</strong> – Ein spektakulärer Abschlusszauber, den niemand vergisst</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Interaktive Zaubertricks</strong> – Kinder werden zu Co-Zauberern und erleben Magie hautnah</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Altersgerechte Magie</strong> – Von einfachen Tricks für die Kleinen bis zu verblüffenden Illusionen für ältere Kinder</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Comedy-Magie</strong> – Der Clown zaubert nicht perfekt – und genau das macht es so lustig!</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Große Finale</strong> – Ein spektakulärer Abschlusszauber, den niemand vergisst</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> ca. 40 Minuten</p>
           <a href="/zauberer/zaubershow/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
+          </div>
         </div>
 
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
-          <a href="/clown/ballonmodellage/">
+        <div class="bg-white rounded-2xl shadow-sm border border-[#c5d3f7] flex flex-col h-full overflow-hidden text-[#1f2025]">
+          <a href="/clown/ballonmodellage/" class="program-media block relative">
             <Image
               src={ballonImg}
               alt="Clown LIAR formt Ballontiere bei Ballonmodellage auf Kindergeburtstag"
-              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
+              class="w-full h-56 object-cover object-[20%]"
               loading="lazy"
-              width={220}
-              height={220}
+              width={600}
+              height={340}
             />
+            <span class="program-title">Ballonmodellage</span>
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">BALLONMODELLAGE</h3>
+          <div class="p-6 flex flex-col flex-1">
           <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Bunte Ballontiere vom Clown – Jedes Kind bekommt sein Wunschtier! Welches Kind liebt
             nicht Ballontiere? Als erfahrener Clown und Ballonkünstler forme ich im Handumdrehen
             die schönsten Figuren:
           </p>
           <div class="text-[#374151] text-sm space-y-1.5 text-left">
-            <p>✅ Klassiker: Hund, Katze, Herz, Schwert, Blume</p>
-            <p>✅ Spezial-Figuren: Wikinger Helm, Dinosaurier, Kronen, Marienkäfer</p>
-            <p>✅ Individuelle Wünsche werden erfüllt!</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> Klassiker: Hund, Katze, Herz, Schwert, Blume</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> Spezial-Figuren: Wikinger Helm, Dinosaurier, Kronen, Marienkäfer</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> Individuelle Wünsche werden erfüllt!</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Je nach Kinderzahl (ca. 1-2 Minuten pro Figur)</p>
           <a href="/clown/ballonmodellage/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
+          </div>
         </div>
 
         <!-- Glitzer Tattoos -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#c5d3f7] flex flex-col h-full text-center text-[#1f2025]">
-          <a href="/clown/glitzer-tattoo/">
+        <div class="bg-white rounded-2xl shadow-sm border border-[#c5d3f7] flex flex-col h-full overflow-hidden text-[#1f2025]">
+          <a href="/clown/glitzer-tattoo/" class="program-media block relative">
             <Image
               src={glitzerImg}
               alt="Glitzer Tattoos von Clown Zauberer LIAR auf einem Kinderfest in NRW"
-              class="rounded-2xl object-cover object-[20%] mx-auto portrait-zoom"
-              style="width:220px;height:220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
+              class="w-full h-56 object-cover object-[20%]"
               loading="lazy"
-              width={220}
-              height={220}
+              width={600}
+              height={340}
             />
+            <span class="program-title">Glitzer Tattoos</span>
           </a>
-          <h3 class="font-extrabold text-xl mt-5 mb-3 tracking-wide text-[#1f2025]">GLITZER TATTOOS</h3>
+          <div class="p-6 flex flex-col flex-1">
           <p class="text-[#374151] text-sm leading-relaxed mb-3">
             Funkel-Glamour vom Clown – Temporäre Tattoos mit WOW-Effekt! Glitzer Tattoos sind
             der Hit auf jeder Party! Als Clown bringe ich eine große Auswahl an glitzernden
             Motiven mit, die Kinderaugen leuchten lassen:
           </p>
           <div class="text-[#374151] text-sm space-y-1.5 text-left">
-            <p>✅ <strong>Hautverträglich &amp; sicher</strong> – Dermatologisch getestet, keine Allergene</p>
-            <p>✅ <strong>Riesige Motivauswahl</strong></p>
-            <p>✅ <strong>Schnell &amp; sauber</strong> – In 2-3 Minuten fertig, kein Rumschmieren</p>
-            <p>✅ <strong>Hält mehrere Tage</strong> – Wasserfest und wischfest</p>
-            <p>✅ <strong>Für Jungs &amp; Mädchen</strong> – Superhelden, Tiere, Blumen, Sterne u.v.m.</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Hautverträglich &amp; sicher</strong> – Dermatologisch getestet, keine Allergene</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Riesige Motivauswahl</strong></p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Schnell &amp; sauber</strong> – In 2-3 Minuten fertig, kein Rumschmieren</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Hält mehrere Tage</strong> – Wasserfest und wischfest</p>
+            <p><span class="text-[#d7393e] font-bold">✓</span> <strong>Für Jungs &amp; Mädchen</strong> – Superhelden, Tiere, Blumen, Sterne u.v.m.</p>
           </div>
           <p class="text-[#374151] text-xs mt-3"><strong>Dauer:</strong> Ca. 2-3 Minuten pro Tattoo</p>
           <a href="/clown/glitzer-tattoo/" class="inline-block mt-auto pt-4 text-[#3b55d5] hover:underline text-sm font-semibold">
             Mehr erfahren →
           </a>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
+  <style>
+    /* Programm-Karten: vollflächiges Bild mit Titel-Overlay + Hover-Zoom */
+    .program-media { overflow: hidden; }
+    .program-media img { transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1); }
+    .program-media:hover img { transform: scale(1.05); }
+    .program-title {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 2.25rem 1.25rem 0.9rem;
+      background: linear-gradient(to top, rgba(20, 15, 15, 0.75), rgba(20, 15, 15, 0));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    }
+  </style>
 
   <!-- ═══════════════════════════════════
        EINSATZGEBIET
@@ -588,7 +655,7 @@ const videoSchema = {
             regelmäßig unterwegs und für Buchungen verfügbar.
           </p>
           <p class="text-[#374151] leading-relaxed mb-3">
-            <strong>Haupteinsatzgebiete :</strong> Oberhausen | Gelsenkirchen | Essen |
+            <strong>Haupteinsatzgebiete:</strong> Oberhausen | Gelsenkirchen | Essen |
             Duisburg | Dorsten | Herten | Herne | Marl | Gladbeck | Mülheim | Dinslaken |
             Dortmund | <a href="/clown/clownshow/clown-in-bochum/" class="text-[#d7393e] hover:underline">Bochum</a>
             | Bottrop | Recklinghausen
@@ -620,10 +687,10 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        SCHNELLE EINDRÜCKE (pastel blue)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20 bg-[#eff4ff] border-y border-[#c5d3f7]">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Galerie</p>
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1 text-center">Galerie</p>
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6 text-center">
         SCHNELLE EINDRÜCKE
       </h2>
       <!-- YouTube – click-to-load (DSGVO): erst bei Klick wird youtube-nocookie geladen -->
@@ -640,15 +707,17 @@ const videoSchema = {
         dargestellten Momenten und Geschichten zu verbinden…oder einfach spontane Eindrücke
         festzuhalten! Viel Spaß beim Stöbern! Schauen Sie auch in meinem <a href="/blog/" class="text-[#3b55d5] hover:underline font-semibold">Blog</a> vorbei, wo ich regelmäßig über aktuelle Auftritte und Neuigkeiten berichte.
       </p>
-      <h3 class="text-[#1f2025] font-bold text-xl mb-6">
+      <h3 class="text-[#1f2025] font-bold text-xl mb-6 text-center">
         Mehr Fotos und Videos in der Galerie
       </h3>
+      <div class="text-center">
       <a
         href="/galerie/"
         class="inline-block bg-[#f5a623] hover:bg-[#e69420] text-[#1f2025] font-bold px-10 py-4 rounded-full text-base transition-colors"
       >
         Zur Foto- und Videogalerie
       </a>
+      </div>
     </div>
   </section>
 

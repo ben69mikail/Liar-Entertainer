@@ -31,3 +31,11 @@ Thumbs.db
 # Backups
 *.bak
 deploy_ionos_old.py
+
+# Lokale Arbeitsdateien
+.agents/
+liar-*.patch
+liar-*-deploy.*
+liar-*deploy.ps1
+liar-*deploy.bat
+skills-lock.json
