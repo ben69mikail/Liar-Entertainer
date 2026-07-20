@@ -4,7 +4,7 @@ import GoogleReviews from '../components/GoogleReviews.astro';
 import YouTubeFacade from '../components/YouTubeFacade.astro';
 import { Image, getImage } from 'astro:assets';
 
-import heroCutout from '../assets/images/home/liar-freisteller.png';
+import heroCutout from '../assets/images/home/liar-freisteller-hero.png';
 const heroOptimized = await getImage({ src: heroCutout, width: 900, format: 'webp' });
 import portraitImg from '../assets/images/home/clown-zauberer-liar-portrait.jpg';
 import michaelImg from '../assets/images/home/michael-prescler-portrait.jpg';
@@ -214,6 +214,26 @@ const videoSchema = {
     @media (max-width: 899px) {
       #main-nav { border-radius: 1.25rem; }
     }
+
+    /* Conferism-Farbwelt (nur Startseite): kräftige ROT/BLAU-Pastelle statt
+       blassem Rosa — deutlich mehr Kontrast + durchgehende Verläufe. */
+    .hero-stage {
+      background:
+        radial-gradient(70% 90% at 8% 0%, rgba(215, 57, 62, 0.22) 0%, rgba(215, 57, 62, 0) 55%),
+        radial-gradient(70% 90% at 92% 0%, rgba(59, 85, 213, 0.24) 0%, rgba(59, 85, 213, 0) 55%),
+        radial-gradient(90% 60% at 50% 108%, rgba(215, 57, 62, 0.14) 0%, rgba(215, 57, 62, 0) 60%),
+        linear-gradient(180deg, #ffffff 0%, #fef6f6 40%, #f3f6ff 75%, #ffffff 100%) !important;
+    }
+    .hero-blobs .blob-red {
+      background: radial-gradient(circle at 35% 35%, rgba(244, 150, 154, 0.85) 0%, rgba(244, 150, 154, 0) 70%) !important;
+    }
+    .hero-blobs .blob-blue {
+      background: radial-gradient(circle at 65% 35%, rgba(150, 172, 244, 0.85) 0%, rgba(150, 172, 244, 0) 70%) !important;
+    }
+    .hero-blobs .blob-gold {
+      background: radial-gradient(circle at 50% 50%, rgba(255, 200, 120, 0.55) 0%, rgba(255, 200, 120, 0) 70%) !important;
+    }
+    .hero-blobs .blob { opacity: 1 !important; filter: blur(70px); }
   </style>
   <style>
     /* Startseite: Content-Texte auf 17px */
@@ -242,13 +262,13 @@ const videoSchema = {
   <section class="pt-6 sm:pt-8">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-wrap justify-center gap-3 mb-5">
-        <span class="hero-badge inline-flex items-center gap-1.5 bg-[#fdf2f2] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#f0c4c4]">
+        <span class="hero-badge inline-flex items-center gap-1.5 bg-white/90 text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-[#f0a9ab] shadow-sm">
           <span class="text-[#e69420]">★★★★★</span> 400+ Google-Rezensionen
         </span>
-        <span class="hero-badge inline-flex items-center gap-1.5 bg-[#eff4ff] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#c5d3f7]">
+        <span class="hero-badge inline-flex items-center gap-1.5 bg-white/90 text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-[#a9bcf0] shadow-sm">
           🎩 15 Jahre Erfahrung
         </span>
-        <span class="hero-badge inline-flex items-center gap-1.5 bg-[#fdf2f2] text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#f0c4c4]">
+        <span class="hero-badge inline-flex items-center gap-1.5 bg-white/90 text-[#1f2025] text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-[#f0a9ab] shadow-sm">
           🪄 Interaktive Zaubershow
         </span>
       </div>
@@ -315,7 +335,7 @@ const videoSchema = {
     }
     .conf-img-wrap { grid-area: img; display: flex; justify-content: center; }
     .conf-img {
-      width: clamp(240px, 34vw, 460px);
+      width: clamp(300px, 44vw, 600px);
       height: auto;
       filter: drop-shadow(0 24px 48px rgba(31, 32, 37, 0.22));
     }
@@ -364,7 +384,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        WAS MACHT CLOWN LIAR SO BESONDERS?
   ════════════════════════════════════ -->
-  <section class="py-14 bg-white">
+  <section class="py-14" style="background: radial-gradient(60% 80% at 100% 20%, rgba(59,85,213,0.10) 0%, rgba(59,85,213,0) 60%), linear-gradient(180deg, #ffffff 0%, #fdf1f1 55%, #ffffff 100%);">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#d7393e] font-extrabold text-3xl sm:text-4xl mb-8 leading-tight">
         Was macht Clown Liar so besonders?
@@ -411,7 +431,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        LERNEN SIE CLOWN LIAR KENNEN
   ════════════════════════════════════ -->
-  <section class="py-14 bg-white">
+  <section class="py-14" style="background: radial-gradient(55% 75% at 0% 60%, rgba(215,57,62,0.09) 0%, rgba(215,57,62,0) 60%), linear-gradient(180deg, #ffffff 0%, #eef3ff 60%, #ffffff 100%);">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Über mich</p>
       <h2 class="text-[#1f2025] font-extrabold text-3xl sm:text-4xl mb-8 leading-tight">
@@ -450,7 +470,7 @@ const videoSchema = {
        STATS SECTION (pastel red)
   ════════════════════════════════════ -->
   <!-- Statistik: schwebende Glas-Karte (Conferism-Stil) auf sanftem Pastell-Verlauf -->
-  <section class="py-14" style="background: linear-gradient(180deg, #ffffff 0%, #fdf2f2 45%, #ffffff 100%);">
+  <section class="py-14" style="background: radial-gradient(50% 90% at 85% 10%, rgba(59,85,213,0.13) 0%, rgba(59,85,213,0) 55%), linear-gradient(180deg, #ffffff 0%, #fbe3e4 50%, #ffffff 100%);">
     <div class="max-w-5xl mx-auto px-4">
       <div class="conf-glass grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-2 text-center" data-reveal-group>
         <div class="px-2 py-2">
@@ -536,7 +556,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        DAS BIETET CLOWN ZAUBERER LIAR (pastel blue)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20" style="background: linear-gradient(180deg, #ffffff 0%, #eff4ff 30%, #eff4ff 70%, #ffffff 100%);">
+  <section class="py-14 md:py-20" style="background: radial-gradient(55% 70% at 5% 15%, rgba(215,57,62,0.11) 0%, rgba(215,57,62,0) 55%), radial-gradient(60% 70% at 95% 85%, rgba(215,57,62,0.09) 0%, rgba(215,57,62,0) 55%), linear-gradient(180deg, #ffffff 0%, #dfe8fc 35%, #dfe8fc 65%, #ffffff 100%);">
     <div class="max-w-6xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-2">Programme</p>
       <h2 class="text-[#1f2025] font-extrabold text-3xl sm:text-5xl text-center mb-12 leading-tight">
@@ -664,7 +684,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        EINSATZGEBIET
   ════════════════════════════════════ -->
-  <section class="pt-14 pb-14 bg-white">
+  <section class="pt-14 pb-14" style="background: radial-gradient(50% 70% at 100% 40%, rgba(59,85,213,0.10) 0%, rgba(59,85,213,0) 55%), linear-gradient(180deg, #ffffff 0%, #fdf3f3 60%, #ffffff 100%);">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Einsatzgebiet</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-4xl uppercase mb-6 leading-tight">REGIONAL UND DEUTSCHLANDWEIT</h2>
@@ -707,7 +727,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        SCHNELLE EINDRÜCKE (pastel blue)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20 bg-white">
+  <section class="py-14 md:py-20" style="background: radial-gradient(55% 75% at 0% 20%, rgba(215,57,62,0.10) 0%, rgba(215,57,62,0) 55%), linear-gradient(180deg, #ffffff 0%, #ecf1fe 55%, #ffffff 100%);">
     <div class="max-w-3xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1 text-center">Galerie</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-4xl uppercase tracking-widest mb-6 text-center leading-tight">
@@ -744,7 +764,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        FAQ SECTION
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20 bg-white">
+  <section class="py-14 md:py-20" style="background: radial-gradient(60% 60% at 100% 0%, rgba(59,85,213,0.08) 0%, rgba(59,85,213,0) 55%), radial-gradient(60% 60% at 0% 100%, rgba(215,57,62,0.08) 0%, rgba(215,57,62,0) 55%), #ffffff;">
     <div class="max-w-3xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-1">FAQ</p>
       <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-8 text-[#1f2025] leading-tight">Häufig gestellte Fragen</h2>
