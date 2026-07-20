@@ -2,6 +2,13 @@
 import { Image } from 'astro:assets';
 import logoImg from '../assets/images/general/logo-clown-nrw.png';
 
+interface Props {
+  /** 'pill' = einstöckige Conferism-Leiste mit Logo in der Nav (nur Startseite) */
+  variant?: 'default' | 'pill';
+}
+const { variant = 'default' } = Astro.props;
+const isPill = variant === 'pill';
+
 const menuItems = [
   {
     label: 'Clown',
@@ -50,11 +57,27 @@ const menuItems = [
   { label: 'Pantomime', href: 'https://pantomime.liar-entertainer.com', external: true },
   { label: 'Kontakt', href: '/kontakt/' },
 ];
+
+// Pill-Variante: kompaktere Leiste — Galerie/Blog/Pantomime unter „Mehr" gruppiert
+const pillMenuItems = [
+  ...menuItems.filter((m) => !['Galerie', 'Blog', 'Pantomime', 'Kontakt'].includes(m.label)),
+  {
+    label: 'Mehr',
+    href: '/galerie/',
+    children: [
+      { label: 'Galerie', href: '/galerie/' },
+      { label: 'Blog', href: '/blog/' },
+      { label: 'Pantomime', href: 'https://pantomime.liar-entertainer.com' },
+    ],
+  },
+  { label: 'Kontakt', href: '/kontakt/' },
+];
+const navItems = isPill ? pillMenuItems : menuItems;
 ---
 
 <header class="w-full z-50" id="site-header">
-  <!-- Row 1: Logo + Site Title + Tagline (identisch mit WordPress) -->
-  <div class="bg-white pt-3 pb-1">
+  <!-- Row 1: Logo + Site Title + Tagline (entfällt in der Pill-Variante) -->
+  <div class:list={["bg-white pt-3 pb-1", { hidden: isPill }]}>
     <div class="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
       <a href="/" aria-label="Startseite Clown Zauberer LIAR" class="logo-magic relative inline-block">
         <Image
@@ -81,7 +104,12 @@ const menuItems = [
 
       <!-- Desktop Navigation (ab 900px, kompakt bis xl) -->
       <div id="nav-desktop-row" class="hidden min-[900px]:flex items-center justify-center gap-0 h-14">
-        {menuItems.map((item) => (
+        {isPill && (
+          <a href="/" aria-label="Startseite Clown Zauberer LIAR" class="flex items-center mr-3 shrink-0">
+            <Image src={logoImg} alt="LOGO Clown Zauberer LIAR" width={90} height={63} class="h-10 w-auto" loading="eager" fetchpriority="high" />
+          </a>
+        )}
+        {navItems.map((item) => (
           item.children ? (
             <div class="relative h-full flex items-center nav-dropdown-wrap">
               <a
@@ -125,7 +153,12 @@ const menuItems = [
       </div>
 
       <!-- Mobile: Hamburger Button (nur unter 900px) -->
-      <div id="nav-burger-row" class="min-[900px]:hidden flex items-center justify-end h-12">
+      <div id="nav-burger-row" class:list={["min-[900px]:hidden flex items-center h-12", isPill ? "justify-between" : "justify-end"]}>
+        {isPill && (
+          <a href="/" aria-label="Startseite Clown Zauberer LIAR" class="flex items-center shrink-0">
+            <Image src={logoImg} alt="LOGO Clown Zauberer LIAR" width={72} height={50} class="h-9 w-auto" loading="eager" />
+          </a>
+        )}
         <button
           id="mobile-menu-btn"
           class="text-[#1f2025] p-2"
@@ -144,7 +177,7 @@ const menuItems = [
 
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden min-[900px]:hidden border-t border-gray-200 py-2 max-h-[70vh] overflow-y-auto bg-white">
-        {menuItems.map((item) => (
+        {navItems.map((item) => (
           item.children ? (
             <div class="mobile-accordion">
               <button

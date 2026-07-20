@@ -21,6 +21,7 @@ export interface Props {
   noindex?: boolean;
   breadcrumbs?: BreadcrumbItem[];
   heroPreload?: string;
+  headerVariant?: 'default' | 'pill';
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   noindex = false,
   breadcrumbs,
   heroPreload,
+  headerVariant = 'default',
 } = Astro.props;
 
 const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
@@ -240,7 +242,7 @@ const webPageSchema = {
     )}
   </head>
   <body>
-    <Header />
+    <Header variant={headerVariant} />
     <main>
       <slot />
     </main>

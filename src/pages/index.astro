@@ -179,6 +179,7 @@ const videoSchema = {
   ogImage={ogImage}
   structuredData={[faqSchema, personSchema, videoSchema]}
   heroPreload={heroOptimized.src}
+  headerVariant="pill"
 >
 
   <style is:global>
@@ -215,14 +216,29 @@ const videoSchema = {
       #main-nav { border-radius: 1.25rem; }
     }
 
-    /* Conferism-Farbwelt (nur Startseite): kräftige ROT/BLAU-Pastelle statt
-       blassem Rosa — deutlich mehr Kontrast + durchgehende Verläufe. */
-    .hero-stage {
+    /* Conferism-Farbwelt (nur Startseite): EINE durchgehende Rot/Blau-Pastell-
+       Leinwand hinter der ganzen Seite — keine sichtbaren Sektionsgrenzen mehr. */
+    .page-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
       background:
-        radial-gradient(70% 90% at 8% 0%, rgba(215, 57, 62, 0.22) 0%, rgba(215, 57, 62, 0) 55%),
-        radial-gradient(70% 90% at 92% 0%, rgba(59, 85, 213, 0.24) 0%, rgba(59, 85, 213, 0) 55%),
-        radial-gradient(90% 60% at 50% 108%, rgba(215, 57, 62, 0.14) 0%, rgba(215, 57, 62, 0) 60%),
-        linear-gradient(180deg, #ffffff 0%, #fef6f6 40%, #f3f6ff 75%, #ffffff 100%) !important;
+        radial-gradient(55% 65% at 6% 4%, rgba(215, 57, 62, 0.20) 0%, rgba(215, 57, 62, 0) 60%),
+        radial-gradient(55% 65% at 94% 8%, rgba(59, 85, 213, 0.22) 0%, rgba(59, 85, 213, 0) 60%),
+        radial-gradient(45% 55% at 100% 55%, rgba(215, 57, 62, 0.13) 0%, rgba(215, 57, 62, 0) 60%),
+        radial-gradient(50% 60% at 0% 70%, rgba(59, 85, 213, 0.14) 0%, rgba(59, 85, 213, 0) 60%),
+        radial-gradient(60% 50% at 50% 100%, rgba(215, 57, 62, 0.10) 0%, rgba(215, 57, 62, 0) 65%),
+        #ffffff;
+    }
+    .hero-stage { background: transparent !important; }
+    /* Footer bleibt als bewusster dunkler Abschluss auf eigener Fläche */
+
+    /* Kästen entschärfen: Borders raus, weiche Schatten — Inhalte schweben */
+    #gr-reviews-grid > div {
+      border: none !important;
+      box-shadow: 0 10px 32px rgba(31, 32, 37, 0.08) !important;
+      background: rgba(255, 255, 255, 0.88) !important;
     }
     .hero-blobs .blob-red {
       background: radial-gradient(circle at 35% 35%, rgba(244, 150, 154, 0.85) 0%, rgba(244, 150, 154, 0) 70%) !important;
@@ -241,6 +257,9 @@ const videoSchema = {
     section li,
     section dd { font-size: 17px; }
   </style>
+
+  <!-- Durchgehende Pastell-Leinwand (fixed, hinter allem) -->
+  <div class="page-canvas" aria-hidden="true"></div>
 
   <!-- ═══════════════════════════════════
        HERO – gerundete Bild-Karte im Container + Pill-Badges
@@ -359,7 +378,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        INTRO – Lead paragraph
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-16">
+  <section class="py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-3xl leading-tight mb-6">
         <span class="text-[#d7393e]">Lachen garantiert</span> – bei Ihnen zu Hause, in der Kita oder auf dem Fest
@@ -384,7 +403,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        WAS MACHT CLOWN LIAR SO BESONDERS?
   ════════════════════════════════════ -->
-  <section class="py-14" style="background: radial-gradient(60% 80% at 100% 20%, rgba(59,85,213,0.10) 0%, rgba(59,85,213,0) 60%), linear-gradient(180deg, #ffffff 0%, #fdf1f1 55%, #ffffff 100%);">
+  <section class="py-20">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-[#d7393e] font-extrabold text-3xl sm:text-4xl mb-8 leading-tight">
         Was macht Clown Liar so besonders?
@@ -426,12 +445,12 @@ const videoSchema = {
   </section>
 
   <!-- Google Reviews (dynamisch) -->
-  <GoogleReviews />
+  <GoogleReviews bgColor="bg-transparent" />
 
   <!-- ═══════════════════════════════════
        LERNEN SIE CLOWN LIAR KENNEN
   ════════════════════════════════════ -->
-  <section class="py-14" style="background: radial-gradient(55% 75% at 0% 60%, rgba(215,57,62,0.09) 0%, rgba(215,57,62,0) 60%), linear-gradient(180deg, #ffffff 0%, #eef3ff 60%, #ffffff 100%);">
+  <section class="py-20">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Über mich</p>
       <h2 class="text-[#1f2025] font-extrabold text-3xl sm:text-4xl mb-8 leading-tight">
@@ -470,7 +489,7 @@ const videoSchema = {
        STATS SECTION (pastel red)
   ════════════════════════════════════ -->
   <!-- Statistik: schwebende Glas-Karte (Conferism-Stil) auf sanftem Pastell-Verlauf -->
-  <section class="py-14" style="background: radial-gradient(50% 90% at 85% 10%, rgba(59,85,213,0.13) 0%, rgba(59,85,213,0) 55%), linear-gradient(180deg, #ffffff 0%, #fbe3e4 50%, #ffffff 100%);">
+  <section class="py-16">
     <div class="max-w-5xl mx-auto px-4">
       <div class="conf-glass grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-2 text-center" data-reveal-group>
         <div class="px-2 py-2">
@@ -507,7 +526,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        QUALIFIKATIONEN + WAS MICH AUSZEICHNET
   ════════════════════════════════════ -->
-  <section class="pt-14 pb-14 bg-white">
+  <section class="pt-16 pb-20">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
@@ -556,7 +575,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        DAS BIETET CLOWN ZAUBERER LIAR (pastel blue)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20" style="background: radial-gradient(55% 70% at 5% 15%, rgba(215,57,62,0.11) 0%, rgba(215,57,62,0) 55%), radial-gradient(60% 70% at 95% 85%, rgba(215,57,62,0.09) 0%, rgba(215,57,62,0) 55%), linear-gradient(180deg, #ffffff 0%, #dfe8fc 35%, #dfe8fc 65%, #ffffff 100%);">
+  <section class="py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-2">Programme</p>
       <h2 class="text-[#1f2025] font-extrabold text-3xl sm:text-5xl text-center mb-12 leading-tight">
@@ -565,7 +584,7 @@ const videoSchema = {
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" data-reveal-group>
 
         <!-- Zaubershow -->
-        <div class="bg-white rounded-3xl shadow-[0_14px_44px_rgba(31,32,37,0.08)] border border-white/70 flex flex-col h-full overflow-hidden text-[#1f2025]">
+        <div class="bg-white rounded-3xl shadow-[0_18px_50px_rgba(31,32,37,0.10)] flex flex-col h-full overflow-hidden text-[#1f2025]">
           <a href="/zauberer/zaubershow/" class="program-media block relative">
             <Image
               src={zaubershowImg}
@@ -597,7 +616,7 @@ const videoSchema = {
         </div>
 
         <!-- Ballonmodellage -->
-        <div class="bg-white rounded-3xl shadow-[0_14px_44px_rgba(31,32,37,0.08)] border border-white/70 flex flex-col h-full overflow-hidden text-[#1f2025]">
+        <div class="bg-white rounded-3xl shadow-[0_18px_50px_rgba(31,32,37,0.10)] flex flex-col h-full overflow-hidden text-[#1f2025]">
           <a href="/clown/ballonmodellage/" class="program-media block relative">
             <Image
               src={ballonImg}
@@ -628,7 +647,7 @@ const videoSchema = {
         </div>
 
         <!-- Glitzer Tattoos -->
-        <div class="bg-white rounded-3xl shadow-[0_14px_44px_rgba(31,32,37,0.08)] border border-white/70 flex flex-col h-full overflow-hidden text-[#1f2025]">
+        <div class="bg-white rounded-3xl shadow-[0_18px_50px_rgba(31,32,37,0.10)] flex flex-col h-full overflow-hidden text-[#1f2025]">
           <a href="/clown/glitzer-tattoo/" class="program-media block relative">
             <Image
               src={glitzerImg}
@@ -684,7 +703,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        EINSATZGEBIET
   ════════════════════════════════════ -->
-  <section class="pt-14 pb-14" style="background: radial-gradient(50% 70% at 100% 40%, rgba(59,85,213,0.10) 0%, rgba(59,85,213,0) 55%), linear-gradient(180deg, #ffffff 0%, #fdf3f3 60%, #ffffff 100%);">
+  <section class="py-20">
     <div class="max-w-5xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1">Einsatzgebiet</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-4xl uppercase mb-6 leading-tight">REGIONAL UND DEUTSCHLANDWEIT</h2>
@@ -727,7 +746,7 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        SCHNELLE EINDRÜCKE (pastel blue)
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20" style="background: radial-gradient(55% 75% at 0% 20%, rgba(215,57,62,0.10) 0%, rgba(215,57,62,0) 55%), linear-gradient(180deg, #ffffff 0%, #ecf1fe 55%, #ffffff 100%);">
+  <section class="py-20 md:py-24">
     <div class="max-w-3xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest mb-1 text-center">Galerie</p>
       <h2 class="text-[#1f2025] font-extrabold text-2xl sm:text-4xl uppercase tracking-widest mb-6 text-center leading-tight">
@@ -764,64 +783,64 @@ const videoSchema = {
   <!-- ═══════════════════════════════════
        FAQ SECTION
   ════════════════════════════════════ -->
-  <section class="py-14 md:py-20" style="background: radial-gradient(60% 60% at 100% 0%, rgba(59,85,213,0.08) 0%, rgba(59,85,213,0) 55%), radial-gradient(60% 60% at 0% 100%, rgba(215,57,62,0.08) 0%, rgba(215,57,62,0) 55%), #ffffff;">
+  <section class="py-20 md:py-24">
     <div class="max-w-3xl mx-auto px-4">
       <p class="text-[#d7393e] font-bold text-sm uppercase tracking-widest text-center mb-1">FAQ</p>
       <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-8 text-[#1f2025] leading-tight">Häufig gestellte Fragen</h2>
       <div class="space-y-4">
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Was kostet ein Clown für Kindergeburtstag?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ich arbeite mit transparenten Festpreisen ohne versteckte Kosten. Alle Pakete und Preise für den Kindergeburtstag finden Sie auf der Seite <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a> – für andere Anlässe erstelle ich Ihnen gern ein individuelles Angebot.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Was kostet ein Zauberer für einen Kindergeburtstag?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ich arbeite mit transparenten Festpreisen ohne versteckte Kosten. Alle Pakete und Preise für den Kindergeburtstag finden Sie auf der Seite <a href="/kindergeburtstag/" class="text-[#d7393e] hover:underline">Kindergeburtstag</a> – für andere Anlässe erstelle ich Ihnen gern ein individuelles Angebot.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Macht Clown LIAR auch eine reine Zaubershow für Kinder?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ja. Neben der Kombination aus Clownerie und Magie bietet LIAR auch eine reine Zaubershow für Kinder an – ideal für Kindergeburtstage, Kitas, Schulen und Sommerfeste. Die Kinder machen aktiv mit und werden selbst zu kleinen Zauberern. Die Show dauert ca. 40 Minuten und ist für Kinder von 3 bis 12 Jahren geeignet.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">In welchen Städten ist Clown LIAR buchbar?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Clown LIAR ist in ganz NRW buchbar, insbesondere in Gladbeck, Oberhausen, Essen, Gelsenkirchen, Dortmund, Bochum, Duisburg und weiteren Städten.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Wie lange dauert eine Clown Zaubershow?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Standard-Zaubershow dauert ca. 40 Minuten und ist speziell auf Kinder von 3-12 Jahren zugeschnitten.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Wie läuft die Buchung von Clown Zauberer LIAR ab?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Buchung ist einfach: Sie senden eine Anfrage über das Kontaktformular oder rufen direkt unter 0172-1517578 an. Nach Abstimmung von Datum, Ort und gewünschter Show erhalten Sie eine verbindliche Bestätigung. Eine Anfrage 2-4 Wochen im Voraus wird empfohlen, kurzfristige Termine sind aber oft möglich.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Ist Clown LIAR ein "gruseliger" Clown?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Nein! Clown LIAR tritt bewusst ohne Schminke, ohne rote Nase und ohne "komische Haare" auf. Sein Clown-Charakter ist freundlich, bunt und einladend. Selbst schüchterne Kinder tauen schnell auf.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Kann ich Clown LIAR auch für Erwachsenen-Events buchen?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ja! Neben Kindergeburtstagen bietet Clown Zauberer LIAR auch Close-up Zauberei für Hochzeiten, Firmenfeiern und Gala-Events an. Die Tischzauberei funktioniert ohne Bühne direkt an den Tischen Ihrer Gäste.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Wie weit im Voraus sollte ich buchen?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Eine Anfrage mindestens 2-4 Wochen im Voraus wird empfohlen, besonders an Wochenenden. Kurzfristige Buchungen sind aber oft auch möglich – einfach unter 0172-1517578 anrufen!</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Brauche ich eine Bühne oder spezielle Technik?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Nein! Es werden nur 2×2 Meter Platz benötigt. Die Show funktioniert im Wohnzimmer, Garten, Turnhalle oder auf einer Bühne. Alles Nötige wird mitgebracht.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Für welches Alter ist die Show geeignet?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Shows sind für Kinder von 3 bis 12 Jahren konzipiert. Das Programm wird immer an die Altersgruppe angepasst: einfacher und kürzer für Kindergartenkinder, anspruchsvoller für Grundschulkinder.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Welche Sprachen spricht Clown Zauberer LIAR?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Clown Zauberer LIAR moderiert seine Shows auf Deutsch und Französisch. Dadurch sind auch zweisprachige Events und internationale Feiern in NRW und im Grenzgebiet problemlos möglich.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Was passiert bei schlechtem Wetter (Outdoor-Event)?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Die Show ist flexibel und funktioniert drinnen wie draußen. Falls ein Outdoor-Event wegen Regen ins Haus verlegt werden muss, ist das kein Problem – es werden nur 2×2 Meter Platz benötigt.</p>
         </details>
-        <details class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm group faq-item">
+        <details class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-[0_8px_28px_rgba(31,32,37,0.07)] group faq-item">
           <summary class="font-bold cursor-pointer text-[#1f2025]">Hat Clown LIAR eine Versicherung und ein Führungszeugnis?</summary>
           <p class="mt-3 text-[#374151] text-[17px] leading-relaxed">Ja, Clown Zauberer LIAR ist vollständig haftpflichtversichert und verfügt über ein aktuelles polizeiliches Führungszeugnis, das auf Anfrage vorgelegt wird.</p>
         </details>
