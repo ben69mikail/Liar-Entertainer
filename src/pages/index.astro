@@ -195,7 +195,7 @@ const videoSchema = {
 
   <style>
     /* Startseite: Content-Texte auf 17px */
-    section p:not([class*="text-xs"]):not([class*="text-sm"]):not([class*="uppercase"]),
+    section p:not([class*="text-xs"]):not([class*="text-sm"]):not([class*="uppercase"]):not(.hero-headline),
     section li,
     section dd { font-size: 17px; }
   </style>
@@ -230,6 +230,12 @@ const videoSchema = {
           🪄 Interaktive Zaubershow
         </span>
       </div>
+      <!-- Mobil: H1 schlicht über der Galerie (Desktop: Headline liegt auf dem Bild) -->
+      <h1 class="sm:hidden text-center mb-5 px-2" style="text-wrap: balance;">
+        <span class="block text-[#1f2025] font-extrabold text-[26px] leading-snug">Clown Zauberer in NRW</span>
+        <span class="sr-only"> – </span>
+        <span class="block mt-1 text-[#d7393e] font-bold text-[17px] tracking-wide">Zaubershow &amp; Kindergeburtstag</span>
+      </h1>
       <div class="hero-slider" role="region" aria-roledescription="Bildergalerie" aria-label="Eindrücke von LIARs Shows">
         {heroSlides.map((slide, i) => (
           <Image
@@ -245,13 +251,13 @@ const videoSchema = {
         ))}
         <!-- Above-the-Fold: Headline + CTA direkt auf dem Hero-Bild -->
         <div class="hero-overlay">
-          <h1 class="text-white font-extrabold text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-3xl">
+          <p class="hero-headline text-white font-extrabold text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-3xl">
             Clown Zauberer in NRW –<br class="hidden sm:block" /> Zaubershow &amp; Kindergeburtstag
-          </h1>
+          </p>
           <p class="hidden sm:block text-white/90 text-base lg:text-lg mt-3 max-w-2xl">
             40 Minuten Mitmach-Magie ab 4 Jahren · nur 2×2 m Platz nötig · 400+ ★★★★★-Google-Bewertungen
           </p>
-          <div class="flex flex-wrap gap-3 mt-5">
+          <div class="hidden sm:flex flex-wrap gap-3 mt-5">
             <a href="/kontakt/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-7 py-3.5 rounded-full text-base transition-colors shadow-lg">
               Jetzt unverbindlich anfragen
             </a>
@@ -285,7 +291,11 @@ const videoSchema = {
       pointer-events: none;
     }
     .hero-overlay a { pointer-events: auto; }
-    .hero-overlay h1 { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+    .hero-overlay .hero-headline { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+    /* Mobil: Overlay komplett aus – Headline steht über der Galerie, keine Buttons im Bild */
+    @media (max-width: 639.98px) {
+      .hero-overlay { display: none; }
+    }
     @media (min-width: 640px) {
       .hero-overlay { padding: 2rem 2.5rem 3.75rem; }
     }
