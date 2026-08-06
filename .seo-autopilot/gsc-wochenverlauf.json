@@ -389,6 +389,77 @@
       },
       "trend_bewertung": "Indexierung: Datenstand 10.07. STEHT WIEDER (Werte 1:1 identisch zu Check #5) -> keine frische WoW-Bewegung messbar; KEINE neue Auffaelligkeit, kein 4xx/5xx-Anstieg, Soft-404 bleibt 0, robots-blockiert/Umleitungsfehler stabil (10/9). Ggue. Ausgang 12.06. (885 nicht indexiert) weiter stark positiv (546 = -339). Legacy-Re-Crawl laeuft weiter. Leistung: leicht ruecklaeufig im rollierenden Fenster (Klicks 2080->2050, Impr 83700->82300, Pos 11,4->11,5), CTR 2,5% stabil = reine Fensterrotation (aeltere Hoch-Tage fallen raus), KEIN Regress, weiter Jahres-Bestniveau. Offene Verifikation zauberer kindergeburtstag: Pos 16,2->16,6->17,0->17,4 driftet minimal schlechter, bleibt Seite 2; Klicks 20->16 (Fenster). On-Page-Hebel ausgereizt -> weiter Reifezeit/externe Signale, KEIN Nachfassen.",
       "massnahme": "KEIN Code-Commit. Kandidat clown kindergeburtstag (Pos 10,4, 420 Impr) AUDITIERT: primaerer Ranker = Startseite (Pos 9,8), die der Inhaber am 19.07. frisch umgebaut hat -> autonome On-Page-Aenderung unangebracht (Konfliktrisiko + heikles Asset), gehoert in Inhaber-Koordination. www/non-www-Split in GSC geprueft und benigne (www 301->non-www verifiziert). Indexierung ohne frische Daten + keine Auffaelligkeit + einzige Hochimpact-Chance nicht sauber autonom adressierbar -> Task-Regel: nur Wochenverlauf fortschreiben (kein Mikro-Hygiene-Aktionismus). Empfehlung fuer Michael notiert (s. state todos)."
+    },
+    {
+      "pruefdatum": "2026-08-06",
+      "lauf": "Wochen-Check #7 (Hinweis: 30.07. kein Wochen-Check-Lauf im Verlaufslog - Luecke; am 30.07. fand aber eine manuelle GSC-Analyse mit dem Inhaber statt, Mobile-Hero-Commit 2e4d677)",
+      "indexierung": {
+        "datenstand": "~2026-07-31 (FRISCH per Claude-in-Chrome gemessen; Datenlag nach 3 Wochen Stillstand beim 10.07. GEBROCHEN, ~6 Tage ueblicher Lag)",
+        "indexiert": 121,
+        "nicht_indexiert": 409,
+        "gruende": {
+          "gecrawlt_nicht_indexiert": {
+            "wert": 116,
+            "validierung": "Fehlgeschlagen"
+          },
+          "nicht_gefunden_404": {
+            "wert": 147,
+            "validierung": "Fehlgeschlagen"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 103,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "99->103 (+4): minimal rauf, erwartete 301-Ketten Legacy->Hauptseiten (inkl. www-Konsolidierung), kein Eingriff"
+          },
+          "durch_robots_blockiert": {
+            "wert": 10,
+            "validierung": "Nicht gestartet"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "gefunden_zurzeit_nicht_indexiert": {
+            "wert": 23,
+            "validierung": "Bestanden",
+            "bewertung": "NEU sichtbar: vermutlich die 10 neuen City-Pages (19.07.) + neue Blogposts warten auf Crawl - normaler Vorgang, kein Eingriff"
+          },
+          "alternative_seite_mit_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          },
+          "noindex_tag": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          }
+        },
+        "summen_check": "147+103+116+10+1+9+23 = 409 = stimmig"
+      },
+      "leistung": {
+        "datenstand": "~2026-08-04",
+        "zeitraum": "3 Monate (05.05.-04.08.)",
+        "klicks": 2040,
+        "impressionen": 84400,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.4,
+        "top_chancen_high_impr_low_ctr": [
+          "zauberer kindergeburtstag: 1380 Impr/16 Klicks/CTR 1,2%/Pos 17,3 (weiter Seite 2, stabil 17,4->17,3)",
+          "clown kindergeburtstag: 416/12/CTR 2,9%/Pos 9,6 (DURCHBRUCH: 10,6->10,4->9,6 = SEITE 1 erreicht!)",
+          "zaubershow fuer kinder: 378/8/CTR 2,1%/Pos 13,8 (deutlich besser: 16,0->13,8)",
+          "kindergeburtstag bei hitze: 462/28/CTR 6,1%/Pos 5,7 (saisonal weiter stark steigend, 25->28 Klicks)",
+          "clown mieten kindergeburtstag in der naehe: 148/10/CTR 6,8%/Pos 4,1"
+        ]
+      },
+      "trend_bewertung": "Indexierung: DATENLAG GEBROCHEN (10.07.->~31.07.), grosser positiver Sprung: Nicht indexiert 546->409 (-137), Indexiert 112->121 (+9, Trendwende nach Legacy-Entruempelung!), Gecrawlt-nicht-indexiert 235->116 (-119, mehr als halbiert), 404 190->147 (-43). Ggue. Ausgang 12.06. (885): jetzt 409 = -476 gesamt. Weiterleitung 99->103 (+4) benigne (www-Konsolidierung). NEU: 'Gefunden - zurzeit nicht indexiert' 23 = neue City-Pages/Blogposts vom 17.-19.07. in der Crawl-Queue (normal). KEINE neue Auffaelligkeit, Soft-404 0, robots/Umleitungsfehler stabil 10/9. Leistung: stabil auf Bestniveau (Klicks 2050->2040, Impr 82300->84400 +2100, CTR 2,5->2,4%, Pos 11,5->11,4). KEYWORD-ERFOLG: 'clown kindergeburtstag' 10,4->9,6 = SEITE 1 ERREICHT (ohne autonomen Eingriff - Inhaber-Arbeiten 17.-19.07. + Mobile-Hero 30.07. wirken). 'zaubershow fuer kinder' 16,0->13,8 verbessert. 'zauberer kindergeburtstag' stabil Seite 2 (17,3).",
+      "massnahme": "KEIN Code-Commit. Task-Regel: Trend klar positiv (Indexierung -137, Keyword-Durchbruch Seite 1) + keine Auffaelligkeit -> nur Wochenverlauf fortschreiben. Die 23 'Gefunden - zurzeit nicht indexiert' (neue City-Pages) NICHT anfassen - Crawl-Queue arbeitet sich ab, Sitemap ist aktuell (1cc984a). clown-kindergeburtstag-Empfehlung an Michael aus #6 bleibt relevant (Pos 9,6 konsolidieren, Potenzial Richtung Top 5), aber kein akuter Handlungsbedarf mehr. zauberer kindergeburtstag: weiter Reifezeit/externe Signale, kein Nachfassen."
     }
   ]
 }
