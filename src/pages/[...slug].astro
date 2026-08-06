@@ -531,6 +531,47 @@ if (_processedScraped && pageSlug === 'geburtstag-in-haltern-am-see') {
 
 const _isCitySlug = pageSlug.startsWith('geburtstag-in-') || pageSlug.startsWith('kinderzauberer-in-') || pageSlug.startsWith('clown-in-');
 
+// === Legacy-H1 entfernen (SEO-Audit 06.08.2026, Massnahme H5) ===
+// Das importierte WordPress-Markup bringt eine eigene <h1 class="title entry-title">
+// mit. Das Template rendert den Titel bereits daruber -> zwei H1 pro Blogpost.
+// Betroffen waren 30 Seiten. Auch der Legacy-Breadcrumb daneben ist doppelt.
+// Jede <h1> aus importiertem WordPress-Markup auf <h2> herabstufen: Das Template
+// rendert die Seiten-H1 bereits selbst, jede weitere ist ein Duplikat (Massnahme H5).
+function demoteLegacyH1(html: string, templateRendersH1: boolean): string {
+  let seen = 0;
+  // Ganze h1-Elemente als Paar ersetzen - getrennte Ersetzung von oeffnendem und
+  // schliessendem Tag erzeugt sonst unbalanciertes Markup.
+  return html.replace(/<h1(\s[^>]*)?>([\s\S]*?)<\/h1>/gi, (_m, attrs, inner) => {
+    seen++;
+    // Rendert das Template selbst eine H1 (Blogpost, Stadtseite), ist JEDE
+    // Legacy-H1 ein Duplikat. Sonst bleibt die erste als Seiten-H1 bestehen.
+    const keepAsH1 = !templateRendersH1 && seen === 1;
+    const tag = keepAsH1 ? 'h1' : 'h2';
+    return `<${tag}${attrs || ''}>${inner}</${tag}>`;
+  });
+}
+
+// Textkorrekturen im importierten Legacy-Markup (SEO-Audit 06.08.2026).
+// Bewusst hier statt in src/data/*.json: die beiden Datendateien sind zusammen
+// ~9,5 MB reiner WordPress-Export und bleiben unveraendert; alle Transformationen
+// leben an einer Stelle in der Render-Pipeline.
+function fixLegacyCopy(html: string): string {
+  return html
+    // H7: Grammatikfehler, erscheint im FAQ-Schema und damit potenziell im SERP
+    .replace(/Was kostet einen Auftritt/g, 'Was kostet ein Auftritt')
+    // K2: verbindliche Bewertungszahl ist 370+ (Vorgabe Michael 06.08.2026)
+    .replace(/400\+\s*(Top-)?Bewertungen/g, (_m, top) => `370+ ${top || ''}Bewertungen`)
+    .replace(/über 400\s*(Google-)?(Top-)?Bewertungen/g, (_m, g, top) => `370+ ${g || ''}${top || ''}Bewertungen`)
+    // M3: nichtssagende Ueberschrift durch eine Frage ersetzen
+    .replace(/Schnelle Eindrücke/gi, 'Wie sieht eine Show von Clown Zauberer LIAR aus?');
+}
+
+function stripLegacyPostHeader(html: string): string {
+  return html
+    .replace(/<small[^>]*class="[^"]*breadcrumbs?[^"]*"[^>]*>[\s\S]*?<\/small>/gi, '')
+    .replace(/<h1[^>]*class="[^"]*entry-title[^"]*"[^>]*>[\s\S]*?<\/h1>/gi, '');
+}
+
 // === Legacy-Blog-Posts: kaputte wp-content-Bilder komplett entfernen ===
 // Die wp-content/uploads-URLs liefern 410 Gone (.htaccess) → Bilder samt
 // <figure>-Wrapper/Captions und Bild-Links aus dem HTML strippen.
@@ -565,6 +606,13 @@ let scrapedContent: string | null = _processedScraped && _isCitySlug
 
 if (scrapedContent && page.type === 'post') {
   scrapedContent = stripWpImages(scrapedContent);
+  scrapedContent = stripLegacyPostHeader(scrapedContent);
+}
+if (scrapedContent) {
+  scrapedContent = fixLegacyCopy(scrapedContent);
+  // isBlogPost/isCityPage sind hier noch nicht initialisiert (Temporal Dead Zone) -
+  // deshalb die bereits verfuegbaren Aequivalente verwenden.
+  scrapedContent = demoteLegacyH1(scrapedContent, page.type === 'post' || _isCitySlug);
 }
 
 // === Post-stylize: Doppelte Preissektionen entfernen ===
@@ -573,7 +621,7 @@ if (scrapedContent && page.type === 'post') {
 if (scrapedContent && scrapedContent.includes('price-grid') && scrapedContent.includes('price-card')) {
   // Pattern: Section mit "Die Preise" + "ZAUBERSHOW" + "40 Minuten" als Text (NICHT in price-card)
   // Entferne die section, die "Die Preise" als Überschrift enthält und KEINE price-card hat
-  // Typisch: <section ...has-1-columns...>...<strong>Die Preise</strong>...<h3>ZAUBERSHOW</h3>...40 Minuten...</section>
+  // Typisch: <section ...has-1-columns...>...<strong>Was kostet ein Zauberer für den Kindergeburtstag?</strong>...<h3>ZAUBERSHOW</h3>...40 Minuten...</section>
   scrapedContent = scrapedContent.replace(
     /<section[^>]*class="[^"]*has-1-columns[^"]*"[^>]*>(?:(?!<\/section>)[\s\S])*?(?:Die Preise|ZAUBERSHOW)(?:(?!<\/section>)[\s\S])*?(?:40 Minuten|Festpreis)(?:(?!<\/section>)[\s\S])*?<\/section>/gi,
     (match) => {
@@ -830,7 +878,46 @@ if (scrapedContent) {
 const _fixedRaw: string | null = page.content ? fixVideoEmbeds(fixBrokenLinks(page.content)) : null;
 const fixedPageContent: string | null =
   _fixedRaw && page.type === 'post' ? stripWpImages(_fixedRaw) : _fixedRaw;
-const seoTitle = resolveTitle(page.meta.rank_math_title, page.title);
+
+// === Title-Normalisierung (SEO-Audit 06.08.2026, Massnahme M6) ===
+// Legacy-Titles aus WordPress: Emojis (werden von Google aus dem SERP entfernt und
+// kosten nur Zeichen), zu lange Titles (>62 Zeichen werden abgeschnitten) und zu
+// kurze Titles (verschenkte Keyword-Flaeche).
+const TITLE_OVERRIDES: Record<string, string> = {
+  'clown-zauberer': 'Clown Zauberer NRW – Zaubershow mit Lachgarantie',
+  'karneval': 'Karneval Zauberer NRW – jecke Zaubershow für die Session',
+  'fruehlings-und-sommerfeste-im-kindergarten-ideen-fuer-unvergessliche-events': 'Sommerfest im Kindergarten: Ideen für tolle Feste',
+  'warum-ein-clown-zauberer-der-perfekte-entertainer-fuer-ihre-karnevalfeier-ist': 'Clown Zauberer für die Karnevalfeier – warum er passt',
+  'tierparkfest-recklinghausen': 'Tierparkfest Recklinghausen: Zaubershow & Familienfest',
+  'magische-unterhaltung-und-zaubershow-in-prerow-ein-unvergesslicher-tag-fuer-die-ganze-familie': 'Zaubershow in Prerow – Familienfest an der Ostsee',
+  '100-jahre-laendlicher-reit-und-fahrverein-gelsenkirchen-ein-fest-fuer-die-ganze-familie': '100 Jahre Reitverein Gelsenkirchen – Fest mit Clown',
+  'warum-ein-clown-zauberer-der-perfekte-entertainer-fuer-ihre-karnevalfeier-ist': 'Clown Zauberer für die Karnevalfeier – warum er passt',
+  'kultur-und-kinderfest-auf-dem-resse-markt-clown-zaubershow-in-gelsenkirchen': 'Kinderfest Resse-Markt: Clown-Zaubershow Gelsenkirchen',
+  'magische-weihnachtsfreude-mit-clown-zauberer-liar-am-hagener-weihnachtsmarkt': 'Weihnachtsmarkt Hagen: Clown Zauberer LIAR live',
+  'ein-zauberhafter-kinderkarneval-bei-den-wittringer-rittern-in-gladbeck': 'Kinderkarneval Gladbeck: Wittringer Ritter & Zauberer',
+  'fruehlings-und-sommerfeste-im-kindergarten-ideen-fuer-unvergessliche-events': 'Sommerfest im Kindergarten: Ideen für tolle Feste',
+  'zaubershow-in-duisburg-midsommarfest': 'Zaubershow Duisburg: IKEA Midsommar mit Clown LIAR',
+  'ikea-duisburg-midsommar-mit-clown-zauberer': 'IKEA Duisburg Midsommar: Zaubershow mit Lachgarantie',
+  'was-ist-ein-clown': 'Was ist ein Clown? Geschichte, Typen & Bedeutung',
+  'kidzival-2024': 'KIDZIVAL 2024 – Clown Zauberer LIAR beim Kinderfest',
+  'zaubershow-im-kindergarten-so-wird-der-besuch-zum-highlight': 'Zaubershow im Kindergarten: so wird sie zum Highlight',
+  '10-tipps-fuer-den-perfekten-kindergeburtstag': '10 Tipps für den perfekten Kindergeburtstag',
+  '5-gruende-warum-zauberei-zum-karneval-gehoert': '5 Gründe, warum Zauberei zum Karneval gehört',
+  'impressum': 'Impressum – Clown Zauberer LIAR aus Gladbeck',
+  'agbs': 'AGB – Clown Zauberer LIAR | Buchungsbedingungen',
+  'datenschutzerklaerung-2': 'Datenschutzerklärung – Clown Zauberer LIAR',
+};
+const EMOJI_RE = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{2B00}-\u{2BFF}]/gu;
+function normalizeTitle(slug: string, title: string): string {
+  // Legacy-Slugs aus WordPress enthalten teils prozent-kodierte Emojis
+  // (z.B. "%f0%9f%8c%b8-fruehlings-und-..."). Fuer den Abgleich normalisieren.
+  const cleanSlug = slug.replace(/%[0-9a-f]{2}/gi, '').replace(/-{2,}/g, '-').replace(/^-|-$/g, '');
+  const override = TITLE_OVERRIDES[slug] ?? TITLE_OVERRIDES[cleanSlug];
+  if (override) return override;
+  return title.replace(EMOJI_RE, '').replace(/\s{2,}/g, ' ').replace(/\s+([?!:.])/g, '$1').trim();
+}
+
+const seoTitle = normalizeTitle(pageSlug, fixLegacyCopy(resolveTitle(page.meta.rank_math_title, page.title)));
 const rawDesc = (
   (page.meta?.rank_math_description || '').trim() ||
   ((page.excerpt || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()) ||
@@ -907,7 +994,7 @@ const originalH1: Record<string, string> = {
   'kinderzauberer-in-herten': 'Kinderzauberer in Herten buchen | Erlebnis-Show für Kinder',
   'kinderzauberer-in-datteln': 'Kinderzauberer in Datteln buchen | Zaubershow für Ihr Event',
   // Clown
-  'clown-in-essen': 'Clown in Essen ⭐ | Shows & Events | TOP bewertet | Magie pur',
+  'clown-in-essen': 'Clown in Essen ⭐ | Shows & Events | Magie pur',
   'clown-in-dortmund': 'Clown in Dortmund – LIAR | Kindergeburtstag & Events',
   'clown-in-duisburg': 'Clown in Duisburg',
   'clown-in-gelsenkirchen': 'TOP Clown in Gelsenkirchen – LIAR | Shows & Zauberkunst',
@@ -975,7 +1062,7 @@ const pageKeywords = buildKeywords();
 
 const schemas = [
   isCityPage && cityName ? { '@context': 'https://schema.org', '@type': 'Service', name: `Clown Zauberer in ${cityName}`, serviceType: 'Kinderunterhaltung', areaServed: { '@type': 'City', name: cityName }, provider: { '@type': 'LocalBusiness', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com', telephone: '+491721517578' } } : null,
-  isBlogPost ? { '@context': 'https://schema.org', '@type': 'Article', headline: seoTitle, description: rawDesc, image: heroImg.startsWith('http') ? heroImg : `https://liar-entertainer.com${heroImg}`, author: { '@type': 'Person', name: 'Clown Zauberer LIAR' }, publisher: { '@type': 'Organization', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com' }, datePublished: page.date, dateModified: page.date } : null,
+  isBlogPost ? { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: seoTitle, description: rawDesc, image: heroImg.startsWith('http') ? heroImg : `https://liar-entertainer.com${heroImg}`, author: { '@type': 'Person', '@id': 'https://liar-entertainer.com/#person', name: 'Michaël Prescler', url: 'https://liar-entertainer.com/ueber-mich/' }, publisher: { '@id': 'https://liar-entertainer.com/#business' }, mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl }, datePublished: page.date, dateModified: page.date } : null,
 ].filter(Boolean);
 ---
 

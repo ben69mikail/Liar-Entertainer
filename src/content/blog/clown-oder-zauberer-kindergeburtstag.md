@@ -1,5 +1,5 @@
 ---
-title: "Clown oder Zauberer für den Kindergeburtstag? Der ehrliche Vergleich 🤡🎩"
+title: "Clown oder Zauberer für den Kindergeburtstag? Der ehrliche Vergleich"
 seoTitle: "Clown oder Zauberer für den Kindergeburtstag? | LIAR"
 description: "Clown oder Zauberer für den Kindergeburtstag? Ehrlicher Vergleich: Stärken, Altersgruppen, Kosten — und warum bei LIAR beides in einer Show steckt."
 publishDate: 2026-07-17

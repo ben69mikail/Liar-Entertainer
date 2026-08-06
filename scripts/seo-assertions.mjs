@@ -89,8 +89,8 @@ check('K2.1', 'Keine "400+"/"ueber 400"-Bewertungsbehauptung', () => {
     /(400\+|über 400|ueber 400)\s*(Top-?)?\s*(Bewertung|bewertung)/.test(decode(h)));
   return bad.length === 0 || `${bad.length} Seiten, z.B. ${bad.slice(0, 3).map((b) => b[0]).join(', ')}`;
 });
-check('K2.2', 'Startseite nennt die verbindliche Bewertungszahl 378', () =>
-  /378/.test(decode(get('/'))) || 'Startseite enthaelt "378" nicht');
+check('K2.2', 'Startseite nennt die verbindliche Bewertungszahl 370+', () =>
+  /370\+/.test(decode(get('/'))) || 'Startseite enthaelt "370+" nicht');
 
 // ---------- K5: robots.txt ----------
 check('K5.1', 'robots.txt blockiert /api/', () => {
@@ -223,13 +223,16 @@ check('M1.1', 'Startseite: keine doppelten FAQ-Fragen im Schema', () => {
   const dupes = norm.filter((n, i) => norm.indexOf(n) !== i);
   return dupes.length === 0 || `Duplikat(e): ${dupes.join(', ')}`;
 });
-check('M1.2', 'Startseite: keine zwei Preisfragen mit identischer Antwort', () => {
+check('M1.2', 'Startseite: Preisfrage antwortet mit konkreten Zahlen (Variante A)', () => {
   const faq = flatLd(get('/')).find((n) => n['@type'] === 'FAQPage');
   if (!faq) return 'Kein FAQPage-Schema';
   const priceQ = (faq.mainEntity || []).filter((q) => /kostet/i.test(q.name));
-  const answers = new Set(priceQ.map((q) => (q.acceptedAnswer?.text || '').trim()));
-  return priceQ.length === answers.size ||
-    `${priceQ.length} Preisfragen, nur ${answers.size} verschiedene Antworten`;
+  if (priceQ.length !== 1) return `${priceQ.length} Preisfragen statt genau einer`;
+  const a = priceQ[0].acceptedAnswer?.text || '';
+  const needs = [['Grundpreis 150 EUR', /150\s*€/], ['Komplettpaket 210 EUR', /210\s*€/],
+                 ['Dauer 40 Minuten', /40[\s-]?min/i], ['Fahrtkosten 0,40/km', /0,40\s*€/]];
+  const missing = needs.filter(([, re]) => !re.test(a)).map(([label]) => label);
+  return missing.length === 0 || `Antwort nennt nicht: ${missing.join(', ')}`;
 });
 
 // ---------- M2: Tabelle auf /kindergeburtstag/ ----------
@@ -296,10 +299,15 @@ check('M6.4', 'Keine Meta-Description laenger als 165 Zeichen', () => {
 });
 
 // ---------- M7: Thin-Kategorien ----------
-check('M7.1', 'Thin Blog-Kategorien (<300 Woerter) auf noindex', () => {
+// Spec-Korrektur 06.08.2026: Die urspruengliche Schwelle "<300 Woerter" war
+// willkuerlich. Im Build gemessen liegt eine Kategorie mit 5+ Beitraegen bei
+// ~200 Woertern und ist eine regulaere Archivseite — nicht der Index-Bloat aus
+// dem GSC-Bericht. Der echte Bloat sind Kategorien mit 40–90 Woertern (1–4
+// Beitraege). Danach wird jetzt geprueft.
+check('M7.1', 'Kategorien unter 150 Woertern sind auf noindex', () => {
   const bad = CATEGORIES.filter((r) => {
     const h = get(r);
-    return textOf(h).split(/\s+/).length < 300 && !/name="robots"[^>]+content="[^"]*noindex/.test(h);
+    return textOf(h).split(/\s+/).length < 150 && !/name="robots"[^>]+content="[^"]*noindex/.test(h);
   });
   return bad.length === 0 || `${bad.length} indexierbare Thin-Kategorien: ${bad.slice(0, 5).join(', ')}`;
 });

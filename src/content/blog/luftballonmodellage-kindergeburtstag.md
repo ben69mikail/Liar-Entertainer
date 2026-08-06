@@ -1,5 +1,5 @@
 ---
-title: "Luftballonmodellage beim Kindergeburtstag: Figuren, Dauer & Kosten 🎈"
+title: "Luftballonmodellage beim Kindergeburtstag: Figuren, Dauer & Kosten"
 seoTitle: "Luftballonmodellage Kindergeburtstag: Kosten & Figuren"
 description: "Luftballonmodellage beim Kindergeburtstag: +20 € zur Zaubershow, 15 Minuten, 1 Figur pro Kind. Beliebte Figuren, Ablauf und Sicherheitshinweise vom Profi."
 publishDate: 2026-07-17
