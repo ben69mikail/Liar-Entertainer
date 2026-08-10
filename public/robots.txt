@@ -12,6 +12,9 @@ Disallow: /404
 # Crawl-Budget ist bei ~118 echten Seiten unkritisch.
 
 # Reine Crawl-Fallen ohne 410/301-Behandlung weiterhin blockieren:
+# JSON-Endpunkte gehoeren nicht in den Index (GSC: gecrawlt - nicht indexiert)
+Disallow: /api/
+
 Disallow: /feed/
 Disallow: /*/feed/
 Disallow: /author/

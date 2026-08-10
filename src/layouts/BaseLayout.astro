@@ -82,11 +82,30 @@ const localBusinessSchema = {
     "name": "Michaël Prescler",
     "alternateName": "Clown Zauberer LIAR",
     "jobTitle": "Clown, Zauberer & Entertainer",
+    "description": "Michaël Prescler, Künstlername LIAR, ist seit 2009 hauptberuflich Clown und Zauberer in Gladbeck (NRW). Er spielt rund 400 Shows pro Jahr und arbeitet auf Deutsch und Französisch.",
     "url": "https://liar-entertainer.com/ueber-mich/",
     "knowsLanguage": ["de", "fr"],
+    "birthPlace": { "@type": "Country", "name": "Frankreich" },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Clown und Zauberer",
+      "occupationLocation": { "@type": "City", "name": "Gladbeck" }
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Erweitertes polizeiliches Führungszeugnis"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Ausbildung zum Animateur (Schauspiel, Tanz, Zauberei, Ballonmodellage)"
+      }
+    ],
     "sameAs": [
       "https://www.facebook.com/clownzaubererliar",
-      "https://www.instagram.com/clown_zauberer_liar/"
+      "https://www.instagram.com/clown_zauberer_liar/",
+      "https://www.linkedin.com/in/michael-prescler-b2308832/",
+      "https://www.youtube.com/watch?v=Cop0SqRIX4Y"
     ]
   },
   "geo": {
@@ -95,6 +114,12 @@ const localBusinessSchema = {
     "longitude": 6.9857
   },
   "priceRange": "€€",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  }],
   "areaServed": [
     {"@type": "City", "name": "Gladbeck"},
     {"@type": "City", "name": "Oberhausen"},
@@ -115,6 +140,8 @@ const localBusinessSchema = {
   "sameAs": [
     "https://www.facebook.com/clownzaubererliar",
     "https://www.instagram.com/clown_zauberer_liar/",
+    "https://www.linkedin.com/in/michael-prescler-b2308832/",
+    "https://www.youtube.com/watch?v=Cop0SqRIX4Y",
     "https://www.google.com/maps/place/Clown+Zauberer+LIAR,+Beethovenstra%C3%9Fe+15,+45966+Gladbeck/data=!4m2!3m1!1s0x47b8eed84b67a41d:0x775f1c8f05280e76"
   ]
 };
@@ -163,7 +190,7 @@ const webPageSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     {keywords && <meta name="keywords" content={keywords} />}
-    {noindex ? <meta name="robots" content="noindex,nofollow" /> : <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
+    {noindex ? <meta name="robots" content="noindex,follow" /> : <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- OpenGraph -->

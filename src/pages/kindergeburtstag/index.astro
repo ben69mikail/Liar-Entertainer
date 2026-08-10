@@ -9,7 +9,7 @@ import HeroStage from '../../components/HeroStage.astro';
 import WaveDivider from '../../components/WaveDivider.astro';
 
 const seoTitle = 'Zauberer Kindergeburtstag NRW | Ab 150€ | Clown LIAR';
-const seoDescription = 'Zauberer für Kindergeburtstag in NRW buchen ✓ Clown Zauberer LIAR ✓ Zaubershow ab 150€ ✓ Ballonmodellage ✓ Glitzer-Tattoos ✓ 400+ Top-Bewertungen ✓ Jetzt buchen!';
+const seoDescription = 'Zauberer für Kindergeburtstag in NRW buchen ✓ Clown Zauberer LIAR ✓ Zaubershow ab 150€ ✓ Ballonmodellage ✓ Glitzer-Tattoos ✓ 370+ Top-Bewertungen ✓ Jetzt buchen!';
 
 const faqItems = [
   {
@@ -162,7 +162,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
           <h2 class="text-[#d7393e] font-bold text-xl mb-4">Clown Zauberer für Kindergeburtstage in NRW</h2>
           <h3 class="font-bold text-lg text-[#1f2025] mb-4">Magische Momente voller Lachen, Staunen und Freude</h3>
           <p class="hero-subtitle text-[#374151] mb-4 leading-relaxed font-medium">
-            Ein Zauberer für den Kindergeburtstag in NRW ist ab 150&nbsp;€ buchbar: Clown Zauberer LIAR (Michaël Prescler) gestaltet eine 40-minütige interaktive Zaubershow für bis zu 12 Kinder, auf Wunsch ergänzt um Ballonmodellage und Glitzer-Tattoos. Buchbar in ganz NRW, mit über 400 Top-Bewertungen.
+            Ein Zauberer für den Kindergeburtstag in NRW ist ab 150&nbsp;€ buchbar: Clown Zauberer LIAR (Michaël Prescler) gestaltet eine 40-minütige interaktive Zaubershow für bis zu 12 Kinder, auf Wunsch ergänzt um Ballonmodellage und Glitzer-Tattoos. Buchbar in ganz NRW, mit 370+ Top-Bewertungen.
           </p>
           <p class="text-[#374151] mb-4 leading-relaxed">
             Ein Kindergeburtstag soll unvergesslich sein – voller Lachen, Spannung und echter Magie.<br />
@@ -223,7 +223,50 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- Die Preise -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Die Preise</h2>
+      <h2 class="text-[#d7393e] font-bold text-3xl sm:text-4xl text-center mb-10">Was kostet ein Zauberer für den Kindergeburtstag?</h2>
+
+      <!-- Paket-Tabelle (SEO-Audit 06.08.2026, Massnahme M2): LLMs uebernehmen Tabellen
+           ueberdurchschnittlich haeufig, weil sie verlustfrei extrahierbar sind. Die
+           Karten darunter bleiben als visuelle Darstellung erhalten. -->
+      <div class="max-w-3xl mx-auto mb-12 overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+          <caption class="sr-only">Pakete und Preise für den Kindergeburtstag mit Clown Zauberer LIAR</caption>
+          <thead class="bg-[#f4f4f4] text-[#1f2025]">
+            <tr>
+              <th scope="col" class="px-4 py-3 font-bold">Paket</th>
+              <th scope="col" class="px-4 py-3 font-bold">Dauer</th>
+              <th scope="col" class="px-4 py-3 font-bold">Preis</th>
+              <th scope="col" class="px-4 py-3 font-bold">Geeignet für</th>
+            </tr>
+          </thead>
+          <tbody class="text-[#374151]">
+            <tr class="border-t border-gray-100">
+              <th scope="row" class="px-4 py-3 font-semibold text-left">Zaubershow</th>
+              <td class="px-4 py-3">40 Minuten</td>
+              <td class="px-4 py-3 font-bold text-[#d7393e]">150 €</td>
+              <td class="px-4 py-3">4–12 Jahre, bis ca. 12 Kinder</td>
+            </tr>
+            <tr class="border-t border-gray-100">
+              <th scope="row" class="px-4 py-3 font-semibold text-left">Zaubershow + Ballonmodellage</th>
+              <td class="px-4 py-3">ca. 55 Minuten</td>
+              <td class="px-4 py-3 font-bold text-[#d7393e]">170 €</td>
+              <td class="px-4 py-3">Jedes Kind bekommt eine Ballonfigur</td>
+            </tr>
+            <tr class="border-t border-gray-100">
+              <th scope="row" class="px-4 py-3 font-semibold text-left">Komplett-Paket inkl. Glitzer-Tattoos</th>
+              <td class="px-4 py-3">ca. 90 Minuten</td>
+              <td class="px-4 py-3 font-bold text-[#d7393e]">210 €</td>
+              <td class="px-4 py-3">Beliebteste Buchung</td>
+            </tr>
+            <tr class="border-t border-gray-100 bg-[#fafafa]">
+              <th scope="row" class="px-4 py-3 font-semibold text-left">Fahrtkosten</th>
+              <td class="px-4 py-3">–</td>
+              <td class="px-4 py-3 font-bold">0,40 €/km</td>
+              <td class="px-4 py-3">Hin- und Rückfahrt ab Gladbeck</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Zaubershow -->
         <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-[#d7393e] card-hover reveal">
@@ -331,7 +374,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- FAQ -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">NOCH FRAGEN?</h2>
+      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Kindergeburtstag mit Zauberer</h2>
       <h3 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">
         Kindergeburtstag organisieren? Hier sind ein paar Antworten für die perfekte Feier
       </h3>
@@ -370,9 +413,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- Video Sektion (pastel blue) -->
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
-        SCHNELLE EINDRÜCKE
-      </h2>
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">Wie sieht eine Show von Clown Zauberer LIAR aus?</h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
         <iframe
           src="https://www.youtube.com/embed/Cop0SqRIX4Y"
@@ -398,7 +439,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- Einsatzgebiet -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">Regional und deutschlandweit</h2>
+      <h2 class="text-[#d7393e] font-bold text-2xl text-center mb-10">In welchen Städten ist Clown Zauberer LIAR buchbar?</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <h3 class="font-bold text-[#1f2025] mb-3">Haupteinsatzgebiet Kindergeburtstag</h3>

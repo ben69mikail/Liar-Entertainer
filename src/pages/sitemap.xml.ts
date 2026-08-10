@@ -121,11 +121,11 @@ export const GET: APIRoute = async () => {
     urls.push({ loc, lastmod, priority: '0.7', changefreq: 'monthly' });
   }
 
-  // Blog-Kategorien mit >=2 Artikeln (dünnere stehen auf noindex, siehe
+  // Blog-Kategorien mit >=5 Artikeln (dünnere stehen auf noindex, siehe
   // src/pages/blog/kategorie/[category].astro — Schwelle synchron halten).
   const allCategories = await getAllCategories();
   for (const cat of allCategories) {
-    if (cat.count < 2) continue;
+    if (cat.count < 5) continue;
     const loc = `${SITE}/blog/kategorie/${cat.slug}/`;
     if (seenLocs.has(loc)) continue;
     seenLocs.add(loc);

@@ -1,8 +1,34 @@
 ---
+import testimonials from '../data/testimonials.json';
+
 interface Props {
   bgColor?: string;
 }
 const { bgColor = 'bg-white' } = Astro.props;
+
+// Serverseitig gerenderte Rezensionen (SEO-Audit 06.08.2026, Massnahme K1):
+// Bisher wurden die Karten ausschliesslich per JS in den DOM geschrieben. Im
+// ausgelieferten HTML stand damit KEIN einziger Rezensionswortlaut — Crawler ohne
+// JS-Ausfuehrung (u.a. die meisten LLM-Bots) sahen nur Skeleton-Platzhalter und
+// konnten nichts ueber LIAR zitieren. Jetzt: echte Seiteninhalte; das Skript
+// ueberschreibt sie danach optional mit frischeren Daten aus /api/reviews.php.
+//
+// BEWUSST OHNE Review-/aggregateRating-Schema: self-serving Reviews auf der eigenen
+// Domain sind nicht sterne-berechtigt; das Markup wurde am 08.07.2026 mit Commit
+// 862f8a8 absichtlich entfernt und bleibt entfernt. Sterne laufen ueber das GBP.
+const AVATAR_COLORS = ['#c2185b', '#7b1fa2', '#1565c0', '#bf360c', '#2e7d32', '#006064', '#c62828', '#3f51b5', '#00695c', '#4e342e'];
+const initialsOf = (name: string) => {
+  const p = name.trim().split(/\s+/);
+  return (p.length >= 2 ? p[0][0] + p[p.length - 1][0] : name.slice(0, 2)).toUpperCase();
+};
+const colorFor = (name: string) => {
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
+};
+type Testimonial = { name: string; rating: number; text: string; when: string };
+const ssrReviews = (testimonials as Testimonial[]).slice(0, 5);
+const REVIEW_COUNT = '370+';
 ---
 
 <section class={`py-14 ${bgColor}`}>
@@ -15,7 +41,7 @@ const { bgColor = 'bg-white' } = Astro.props;
         <span class="stars text-[#fbbc04]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
       </div>
       <p class="text-sm text-gray-500 mb-3">
-        Basierend auf <strong id="gr-review-count">über 400</strong> Bewertungen
+        Basierend auf <strong id="gr-review-count">{REVIEW_COUNT}</strong> Bewertungen
       </p>
       <!-- Google Logo -->
       <div class="flex justify-center">
@@ -30,23 +56,24 @@ const { bgColor = 'bg-white' } = Astro.props;
       </div>
     </div>
 
-    <!-- Review Cards Grid (Skeleton beim Laden) -->
+    <!-- Review Cards Grid — serverseitig gerendert, kein JS noetig -->
     <div id="gr-reviews-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-      {Array.from({ length: 5 }).map(() => (
-        <div class="gr-skeleton bg-white border border-gray-200 rounded-xl p-4 shadow-sm animate-pulse">
+      {ssrReviews.map((r) => (
+        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-full bg-gray-200"></div>
-            <div class="flex-1">
-              <div class="h-3 bg-gray-200 rounded w-24 mb-2"></div>
-              <div class="h-2 bg-gray-200 rounded w-16"></div>
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+              style={`background:${colorFor(r.name)}`}
+            >
+              {initialsOf(r.name)}
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="font-semibold text-sm text-[#1f2025] truncate">{r.name}</p>
+              <p class="text-xs text-gray-500">{r.when}</p>
             </div>
           </div>
-          <div class="h-3 bg-gray-200 rounded w-20 mb-2"></div>
-          <div class="space-y-2">
-            <div class="h-2 bg-gray-200 rounded w-full"></div>
-            <div class="h-2 bg-gray-200 rounded w-full"></div>
-            <div class="h-2 bg-gray-200 rounded w-3/4"></div>
-          </div>
+          <div class="stars text-[#fbbc04] text-sm mb-2">{'★'.repeat(r.rating || 5)}</div>
+          <p class="text-sm text-gray-600 leading-relaxed line-clamp-4" data-review-text>{r.text}</p>
         </div>
       ))}
     </div>
@@ -250,10 +277,8 @@ const { bgColor = 'bg-white' } = Astro.props;
       if (el && count) el.textContent = count.toLocaleString('de-DE');
     }
 
-    // Sofort: Statische Reviews zeigen (kein Netzwerk-Request nötig)
-    function showStaticReviews() {
-      renderGrid(shuffle(ALL_REVIEWS).slice(0, 5));
-    }
+    // Karten sind bereits serverseitig im HTML (siehe Frontmatter, Massnahme K1).
+    // Das Skript ersetzt sie nur noch, wenn die API frischere Daten liefert.
 
     // Später: API im Hintergrund abfragen, wenn Sektion sichtbar wird
     async function tryUpdateFromApi() {
@@ -268,13 +293,6 @@ const { bgColor = 'bg-white' } = Astro.props;
       } catch {
         // Fallback bleibt — statische Reviews sind bereits sichtbar
       }
-    }
-
-    // Sofort statische Reviews zeigen (0ms Wartezeit)
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', showStaticReviews);
-    } else {
-      showStaticReviews();
     }
 
     // API-Update erst wenn Reviews-Sektion im Viewport sichtbar wird

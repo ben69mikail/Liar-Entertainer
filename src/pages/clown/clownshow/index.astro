@@ -12,7 +12,7 @@ import fotogalerieClownZauberer3Img from '../../../assets/images/galerie/fotogal
 import GoogleReviews from '../../../components/GoogleReviews.astro';
 
 const seoTitle = 'Clown für Kindergeburtstag NRW buchen | Clown LIAR';
-const seoDescription = 'Clown für den Kindergeburtstag mieten: lustige Clownshow mit Comedy & Zauberei, Ballonfiguren für jedes Kind ✓ 400+ Top-Bewertungen im Ruhrgebiet & NRW!';
+const seoDescription = 'Clown für den Kindergeburtstag mieten: lustige Clownshow mit Comedy & Zauberei, Ballonfiguren für jedes Kind ✓ 370+ Top-Bewertungen im Ruhrgebiet & NRW!';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -155,6 +155,26 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
 
   </HeroStage>
   <!-- Google Reviews -->
+  <!-- Weitere Anlässe (SEO-Audit 06.08.2026, Massnahme H6): /clown/karneval/ und
+       /clown/walk-act/ hatten 0 bzw. 3 interne Content-Links. -->
+  <section class="py-12 bg-[#f9fafb]" data-related-services>
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-[#1f2025] font-extrabold text-2xl text-center mb-6">
+        Für welche Anlässe kann man Clown LIAR sonst buchen?
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <a href="/clown/karneval/" class="block bg-white border border-gray-200 rounded-xl p-5 hover:border-[#d7393e] transition-colors">
+          <p class="font-bold text-[#1f2025] mb-1">Clown für Karneval &amp; Kindersitzung</p>
+          <p class="text-sm text-[#595959]">Jecke Zaubershow für Kindersitzung, Karnevalsfeier und Rosenmontagsparty in NRW.</p>
+        </a>
+        <a href="/clown/walk-act/" class="block bg-white border border-gray-200 rounded-xl p-5 hover:border-[#d7393e] transition-colors">
+          <p class="font-bold text-[#1f2025] mb-1">Walk-Act für Straßen- und Stadtfest</p>
+          <p class="text-sm text-[#595959]">Clown Zauberer LIAR mitten im Publikum – Ballonfiguren und Magie zum Anfassen.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <GoogleReviews />
 
   <!-- Was ist eine Clownshow? -->
@@ -366,9 +386,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
 
   <section class="py-14 bg-[#eff4ff] border-y border-[#c5d3f7]">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">
-        SCHNELLE EINDRÜCKE
-      </h2>
+      <h2 class="text-[#1f2025] font-extrabold text-xl uppercase tracking-widest mb-6">Wie sieht eine Show von Clown Zauberer LIAR aus?</h2>
       <div class="relative w-full max-w-2xl mx-auto mb-8" style="padding-bottom: 56.25%; position: relative;">
         <iframe
           src="https://www.youtube.com/embed/Cop0SqRIX4Y"
@@ -394,7 +412,7 @@ const structuredData = [serviceSchema, faqSchema, videoSchema];
   <!-- FAQ -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <p class="text-center text-sm font-bold text-[#d7393e] uppercase tracking-widest mb-2">NOCH FRAGEN?</p>
+      <p class="text-center text-sm font-bold text-[#d7393e] uppercase tracking-widest mb-2">Häufige Fragen zum Kindergeburtstag mit Zauberer</p>
       <h2 class="text-center font-black text-[#1f2025] text-2xl sm:text-3xl mb-10 uppercase">Hier sind ein paar Antworten</h2>
       <div class="space-y-3" id="faq-list">
         {faqItems.map((item) => (

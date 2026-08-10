@@ -37,9 +37,14 @@ function formatDate(d: Date) {
 
 const canonicalSlug = catToSlug(categoryName);
 
-// Dünne Kategorien (<2 Artikel) nicht indexieren — Thin-Content-Schutz.
+// Dünne Kategorien (<5 Artikel) nicht indexieren — Thin-Content-Schutz.
+// Schwelle 06.08.2026 von 2 auf 5 angehoben: im Build gemessen erreicht eine
+// Kategorie erst ab ca. 5 Beiträgen über 300 Wörter. Darunter: 40–220 Wörter,
+// 0–1 interne Links — genau der Index-Bloat aus dem GSC-Bericht.
+// TODO (redaktionell): kindergeburtstag, geburtstag, ratgeber und karneval mit
+// einem eigenen Einleitungstext ausbauen und danach wieder auf index setzen.
 // Werthaltige Kategorien stehen in der Sitemap (sitemap.xml.ts, gleiche Schwelle).
-const isThin = posts.length < 2;
+const isThin = posts.length < 5;
 ---
 
 <BaseLayout

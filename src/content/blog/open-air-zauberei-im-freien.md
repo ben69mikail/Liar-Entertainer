@@ -1,5 +1,5 @@
 ---
-title: "Open-Air-Zauberei: Wie funktioniert eine Zaubershow im Freien? 🎩☀️"
+title: "Open-Air-Zauberei: Wie funktioniert eine Zaubershow im Freien?"
 seoTitle: "Zaubershow im Freien: Open-Air-Tipps | LIAR"
 description: "Zaubershow im Freien planen in NRW – Tipps zu Wetter, Untergrund, Sonne und Wind vom erfahrenen Open Air Magier Clown Zauberer LIAR."
 publishDate: 2026-05-19

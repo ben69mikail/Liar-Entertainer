@@ -9,7 +9,8 @@
     "prebuild": "npm run generate-overlays && node --input-type=commonjs -e \"const fs=require('fs');const src='src/assets/images/home/clown-zauberer-hero.jpg';const dst='public/images/og-startseite.jpg';try{fs.unlinkSync(dst)}catch(e){}fs.copyFileSync(src,dst)\"",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:seo": "node scripts/seo-assertions.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
