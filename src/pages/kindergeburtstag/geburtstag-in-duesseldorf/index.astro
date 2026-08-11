@@ -94,7 +94,7 @@ const structuredData = [serviceSchema, faqSchema];
         <span>📍</span> Düsseldorf
       </div>
       <h1 class="text-white font-extrabold text-center leading-tight mb-3" style="font-size: clamp(2rem, 5vw, 3.5rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
-        Geburtstag in Düsseldorf
+        Zauberer für den Kindergeburtstag in Düsseldorf – ab 150 €
       </h1>
       <p class="text-gray-200 text-base leading-relaxed max-w-xl mx-auto">
         Unvergessliche Kindergeburtstage mit Clown Zauberer LIAR – Lachen, Staunen und pure Magie!
@@ -131,13 +131,18 @@ const structuredData = [serviceSchema, faqSchema];
           </p>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_introImgAsset.src}
-            alt="Clown Zauberer begeistert Kinder auf einem Geburtstag in Düsseldorf"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          <figure class="m-0">
+            <Image
+              src={_introImgAsset}
+              alt="Clown Zauberer begeistert Kinder auf einem Geburtstag in Düsseldorf"
+              class="rounded-full object-cover object-[20%] portrait-zoom"
+              style="width: 320px; height: 320px;"
+              loading="lazy"
+              width={640}
+              height={853}
+            />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Kindergeburtstag mit Zaubershow in Düsseldorf</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -381,12 +386,15 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
           <p class="text-[#374151] mb-4 leading-relaxed">
-            Neben Düsseldorf bin ich regelmäßig in: Neuss, Ratingen, Erkrath, Mettmann, Hilden, Meerbusch, Krefeld, <a href="/kindergeburtstag/geburtstag-in-duisburg/" class="text-[#3b55d5] hover:underline">Duisburg</a>, Mönchengladbach und weitere Städte in NRW sowie <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#3b55d5] hover:underline">Oberhausen</a>, <a href="/kindergeburtstag/geburtstag-in-gelsenkirchen/" class="text-[#3b55d5] hover:underline">Gelsenkirchen</a>, <a href="/kindergeburtstag/geburtstag-in-essen/" class="text-[#3b55d5] hover:underline">Essen</a>,
+            Neben Düsseldorf bin ich regelmäßig in: Neuss, Ratingen, Erkrath, Mettmann, Hilden, Meerbusch, Krefeld, Mönchengladbach und weitere Städte in NRW sowie <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#3b55d5] hover:underline">Oberhausen</a>, <a href="/kindergeburtstag/geburtstag-in-gelsenkirchen/" class="text-[#3b55d5] hover:underline">Gelsenkirchen</a>, <a href="/kindergeburtstag/geburtstag-in-essen/" class="text-[#3b55d5] hover:underline">Essen</a>,
             <a href="/kindergeburtstag/geburtstag-in-dinslaken/" class="text-[#d7393e] hover:underline">Dinslaken</a>,
             <a href="/kindergeburtstag/geburtstag-in-dorsten/" class="text-[#d7393e] hover:underline">Dorsten</a>,
             <a href="/kindergeburtstag/geburtstag-in-herten/" class="text-[#3b55d5] hover:underline">Herten</a>, <a href="/kindergeburtstag/geburtstag-in-herne/" class="text-[#3b55d5] hover:underline">Herne</a>, <a href="/kindergeburtstag/geburtstag-in-marl/" class="text-[#3b55d5] hover:underline">Marl</a>,
             <a href="/kindergeburtstag/geburtstag-in-gladbeck/" class="text-[#d7393e] hover:underline">Gladbeck</a>,
-            <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a>, <a href="/kindergeburtstag/geburtstag-in-dortmund/" class="text-[#3b55d5] hover:underline">Dortmund</a>, <a href="/kindergeburtstag/geburtstag-in-moers/" class="text-[#3b55d5] hover:underline">Moers</a>, Krefeld, Reken, <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="text-[#3b55d5] hover:underline">Haltern</a>, <a href="/kindergeburtstag/geburtstag-in-wesel/" class="text-[#3b55d5] hover:underline">Wesel</a>, <a href="/kindergeburtstag/geburtstag-in-recklinghausen/" class="text-[#3b55d5] hover:underline">Recklinghausen</a>, <a href="/kindergeburtstag/geburtstag-in-bochum/" class="text-[#3b55d5] hover:underline">Bochum</a>.
+            <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a>, Krefeld, Reken, <a href="/kindergeburtstag/geburtstag-in-recklinghausen/" class="text-[#3b55d5] hover:underline">Recklinghausen</a>, <a href="/kindergeburtstag/geburtstag-in-bochum/" class="text-[#3b55d5] hover:underline">Bochum</a>.
+          </p>
+          <p class="text-[#374151] mb-4 leading-relaxed" data-fernstaedte>
+            Überregional – mit etwas längerer Anfahrt – bin ich außerdem in Duisburg, Dortmund, Moers, Haltern und Wesel buchbar.
           </p>
           <p class="text-[#374151] leading-relaxed">
             Auf Anfrage bin ich auch außerhalb von NRW buchbar – inklusive Belgien, Frankreich, Österreich und Schweiz!

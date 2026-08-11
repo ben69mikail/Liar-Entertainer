@@ -4,7 +4,7 @@ seoTitle: "Kindergeburtstag im Mai: Outdoor Ruhrgebiet | LIAR"
 description: "Kindergeburtstag Mai draußen im Ruhrgebiet feiern - Park-Tipps, Spielideen und praktische Tipps für entspannte Eltern und glückliche Kinder."
 publishDate: 2026-05-04
 heroImage: "https://liar-entertainer.com/blog-images/kindergeburtstag-mai-outdoor-ruhrgebiet/cover.jpg"
-heroImageAlt: "Kindergeburtstag im Mai - Outdoor-Ideen im Ruhrgebiet Cover"
+heroImageAlt: "Kindergeburtstag im Mai draußen im Ruhrgebiet: Kinder auf der Wiese"
 categories: ["Feste", "Saisonal", "Geburtstag", "Städte"]
 tags: ["kindergeburtstag-mai-draußen"]
 author: "Michaël Prescler"

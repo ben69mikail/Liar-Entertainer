@@ -142,13 +142,10 @@ const _pageGallery = [
           <p class="text-[#374151] mb-4 leading-relaxed">Das Faszinierende dabei? In kürzester Zeit verwandeln sich zurückhaltende Zuschauer in begeisterte kleine Zauberer, die selbst Tricks vorführen möchten. Diese Transformation geschieht viel schneller als die meisten erwarten würden!</p>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_gal7Asset.src}
-            alt="Clownshow in Dortmund"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          <figure class="text-center">
+            <Image src={_gal7Asset} alt="Clownshow in Dortmund" class="rounded-full object-cover object-[20%] portrait-zoom" style="width: 320px; height: 320px;" width={800} height={533} loading="lazy" />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Clownshow beim Familienfest in Dortmund</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -224,7 +221,7 @@ const _pageGallery = [
   <!-- FAQ -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Kindergeburtstag mit Zauberer</h2>
+      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Clown-Auftritt in Dortmund</h2>
       <h3 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">
         Hier sind ein paar Antworten
       </h3>
@@ -315,25 +312,26 @@ const _pageGallery = [
           <h3 class="font-bold text-[#1f2025] mb-3">Ruhrgebiet</h3>
           <p class="text-[#374151] mb-4 leading-relaxed">
             <a href="/clown/clownshow/clown-in-dortmund/" class="text-[#d7393e] hover:underline">Dortmund</a> |
-            <a href="/clown/clownshow/clown-in-bochum/" class="text-[#d7393e] hover:underline">Bochum</a> |
-            <a href="/clown/clownshow/clown-in-oberhausen/" class="text-[#d7393e] hover:underline">Oberhausen</a> |
-            <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="text-[#d7393e] hover:underline">Gelsenkirchen</a> |
-            <a href="/clown/clownshow/clown-in-recklinghausen/" class="text-[#d7393e] hover:underline">Recklinghausen</a> |
-            <a href="/clown/clownshow/clown-in-marl/" class="text-[#d7393e] hover:underline">Marl</a> |
-            <a href="/clown/clownshow/clown-in-duisburg/" class="text-[#d7393e] hover:underline">Duisburg</a> |
-            <a href="/clown/clownshow/clown-in-herten/" class="text-[#d7393e] hover:underline">Herten</a> |
-            <a href="/clown/clownshow/clown-in-dinslaken/" class="text-[#d7393e] hover:underline">Dinslaken</a> |
-            <a href="/clown/clownshow/clown-in-herne/" class="text-[#d7393e] hover:underline">Herne</a> |
+            <a href="/clown/clownshow/clown-in-bochum/" class="text-[#d7393e] hover:underline">Clown in Bochum buchen</a> |
+            <a href="/clown/clownshow/clown-in-oberhausen/" class="text-[#d7393e] hover:underline">Clownshow für Oberhausen</a> |
+            <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="text-[#d7393e] hover:underline">Clown für Kindergeburtstag in Gelsenkirchen</a> |
+            <a href="/clown/clownshow/clown-in-recklinghausen/" class="text-[#d7393e] hover:underline">Clown Recklinghausen buchen</a> |
+            <a href="/clown/clownshow/clown-in-marl/" class="text-[#d7393e] hover:underline">Clownshow in Marl erleben</a> |
+            Duisburg |
+            <a href="/clown/clownshow/clown-in-herten/" class="text-[#d7393e] hover:underline">Clown für Kinderfeste in Herten</a> |
+            <a href="/clown/clownshow/clown-in-dinslaken/" class="text-[#d7393e] hover:underline">Clown in Dinslaken buchen</a> |
+            <a href="/clown/clownshow/clown-in-herne/" class="text-[#d7393e] hover:underline">Clownshow für Herne</a> |
             <a href="/clown/clownshow/clown-in-muelheim/" class="text-[#d7393e] hover:underline">Mülheim an der Ruhr</a> |
-            <a href="/clown/clownshow/clown-in-essen/" class="text-[#d7393e] hover:underline">Essen</a> |
-            <a href="/clown/clownshow/clown-in-gladbeck/" class="text-[#d7393e] hover:underline">Gladbeck</a> (Wohnort) |
-            <a href="/clown/clownshow/clown-in-bottrop/" class="text-[#d7393e] hover:underline">Bottrop</a> |
+            <a href="/clown/clownshow/clown-in-essen/" class="text-[#d7393e] hover:underline">Clown für Kindergeburtstag in Essen</a> |
+            <a href="/clown/clownshow/clown-in-gladbeck/" class="text-[#d7393e] hover:underline">Clown Gladbeck buchen</a> (Wohnort) |
+            <a href="/clown/clownshow/clown-in-bottrop/" class="text-[#d7393e] hover:underline">Clownshow in Bottrop erleben</a> |
             Castrop-Rauxel | Lünen | Witten | Hagen
           </p>
+          <p class="text-[#374151] mb-4 leading-relaxed" data-far-cities>Auch außerhalb dieses Umkreises bin ich unterwegs: Termine in weiter entfernten Städten wie Duisburg, Düsseldorf und Haltern am See lassen sich einrichten – die Anfahrt plane ich dabei einfach mit ein.</p>
           <h3 class="font-bold text-[#1f2025] mb-3">Weitere NRW-Städte</h3>
           <p class="text-[#374151] leading-relaxed">
-            <a href="/clown/clownshow/clown-in-duesseldorf/" class="text-[#d7393e] hover:underline">Düsseldorf</a> |
-            <a href="/clown/clownshow/clown-in-haltern/" class="text-[#d7393e] hover:underline">Haltern am See</a> |
+            Düsseldorf |
+            Haltern am See |
             Moers | Krefeld | Reken | Unna | Kamen
           </p>
         </div>

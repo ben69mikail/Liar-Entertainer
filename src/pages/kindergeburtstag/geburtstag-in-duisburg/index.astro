@@ -114,7 +114,7 @@ const structuredData = [serviceSchema, faqSchema];
         <span>📍</span> Duisburg
       </div>
       <h1 class="text-white font-extrabold text-center leading-tight mb-3" style="font-size: clamp(2rem, 5vw, 3.5rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
-        Geburtstag in Duisburg
+        Kindergeburtstag in Duisburg feiern – Clown & Zauberer ab 150 €
       </h1>
       <p class="text-gray-200 text-base leading-relaxed max-w-xl mx-auto">
         Antworten auf Ihre wichtigsten Fragen
@@ -155,13 +155,18 @@ const structuredData = [serviceSchema, faqSchema];
           </p>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_introImgAsset.src}
-            alt="Kindergeburtstag in Duisburg mit Clown Zauberer"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          <figure class="m-0">
+            <Image
+              src={_introImgAsset}
+              alt="Kindergeburtstag in Duisburg mit Clown Zauberer"
+              class="rounded-full object-cover object-[20%] portrait-zoom"
+              style="width: 320px; height: 320px;"
+              loading="lazy"
+              width={640}
+              height={853}
+            />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Mitmach-Zauberei beim Kindergeburtstag in Duisburg</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -396,7 +401,10 @@ const structuredData = [serviceSchema, faqSchema];
             <li class="flex items-start gap-2"><span class="text-[#d7393e] font-bold">✓</span> Alle weiteren Stadtteile!</li>
           </ul>
           <p class="text-[#374151] mb-4 leading-relaxed">
-            Auch Umland: <a href="/kindergeburtstag/geburtstag-in-moers/" class="text-[#3b55d5] hover:underline">Moers</a>, <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#d7393e] hover:underline">Oberhausen</a>, <a href="/kindergeburtstag/geburtstag-in-dinslaken/" class="text-[#3b55d5] hover:underline">Dinslaken</a>, <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a> – kein Problem!
+            Auch Umland: <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#d7393e] hover:underline">Oberhausen</a>, <a href="/kindergeburtstag/geburtstag-in-dinslaken/" class="text-[#3b55d5] hover:underline">Dinslaken</a>, <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a> – kein Problem!
+          </p>
+          <p class="text-[#374151] mb-4 leading-relaxed" data-fernstaedte>
+            Überregional – mit etwas längerer Anfahrt – bin ich außerdem in Moers buchbar.
           </p>
           <p class="text-[#374151] leading-relaxed">
             Jedoch kann man mich auch überregional und international (Frankreich, Belgien, Österreich, Schweiz) buchen!

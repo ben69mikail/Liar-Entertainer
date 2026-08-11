@@ -141,13 +141,10 @@ const _pageGallery = [
           <p class="text-[#374151] mb-4 leading-relaxed">Mit meiner vielseitigen Clownshow kreiere ich ein besonderes Erlebnis, das bei Kindern und Familien noch sehr lange positiv in Erinnerung bleiben wird. Ob als mobiler WALK-ACT, der sich charmant durch Ihre Veranstaltung bewegt, oder in wirkungsvoller Kombination mit kunstvoller BALLONMODELLAGE und faszinierender ZAUBEREI – Ihre Veranstaltung oder private Feier (ob Hochzeit, Firmenjubiläum oder Geburtstag) wird dadurch garantiert zu einem besonderen Highlight! 🎉✨</p>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_gal1Asset.src}
-            alt="Clownshow in Dinslaken"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          <figure class="text-center">
+            <Image src={_gal1Asset} alt="Clownshow in Dinslaken" class="rounded-full object-cover object-[20%] portrait-zoom" style="width: 320px; height: 320px;" width={736} height={552} loading="lazy" />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Clown Zauberer LIAR beim Kindergeburtstag in Dinslaken</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -179,15 +176,21 @@ const _pageGallery = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Glitzer Tattoos -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src={_gal3Asset.src} alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
-          <h4 class="font-bold text-[#1f2025] text-lg mb-3">GLITZER TATTOOS ✨💫</h4>
+          <figure class="text-center mb-4">
+            <Image src={_gal3Asset} alt="Glitzer Tattoos begeistern Kinder auf dem Geburtstag in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto" width={499} height={499} loading="lazy" />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Glitzer-Tattoo als Zusatzleistung beim Kindergeburtstag in Dinslaken</figcaption>
+          </figure>
+          <h4 class="font-bold text-[#1f2025] text-lg mb-3">Zusatzleistung: Glitzer-Tattoos ✨💫</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Hautverträglich, völlig ungefährlich und blitzschnell aufgebracht: Glitzer Tattoo ist eine wunderbare Attraktion bei jeder Art von Feier! Die schimmernden Kunstwerke werden mit hochwertigen, dermatologisch geprüften Produkten erstellt und sind selbst für sehr empfindliche Haut bestens geeignet.</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Nach dem Aufbringen der glitzernden Designs springen auf dem gesamten Veranstaltungsgelände – oder auch im gemütlichen Wohnzimmer – freudestrahlende Kinder und begeisterte Eltern umher, die stolz ihre funkelnden Tattoos präsentieren. Die Familien sind durchweg bezaubert, denn Glitzer Tattoos faszinieren wirklich Groß und Klein in jedem Alter!</p>
           <p class="text-[#374151] text-sm leading-relaxed">Mit einer beeindruckenden Auswahl an Motiven (von zarten Schmetterlingen über märchenhafte Einhörner bis zu coolen Superhelden-Symbolen) und glänzenden Farben (Gold, Silber, Rot, Blau, Lila, Grün) wird jedes Tattoo zu einem individuellen Kunstwerk. Die Designs halten mehrere Tage, sind wasserfest und lassen sich rückstandslos entfernen. 💎🦋</p>
         </div>
         <!-- Zaubershow -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src={_gal2Asset.src} alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
+          <figure class="text-center mb-4">
+            <Image src={_gal2Asset} alt="Zaubershow auf einer der Bühne in Dinslaken" class="rounded-full w-40 h-40 object-cover mx-auto" width={384} height={384} loading="lazy" />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Zaubershow von Clown Zauberer LIAR auf einer Bühne in Dinslaken</figcaption>
+          </figure>
           <h4 class="font-bold text-[#1f2025] text-lg mb-3">ZAUBERSHOW 🎩🪄</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Der Clown entwickelt spielend leicht eine besondere Verbindung zu den Kindern, während der Zauberer sie mit seinen verblüffenden Illusionen zum Staunen bringt! Mädchen wie Jungs erleben gemeinsam eine hochwertige und humorvoll inszenierte Kombination aus unterhaltsamer Clownerie und erstaunlicher Zauberkunst.</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">In dieser interaktiven Show verwandle ich die Zuschauer konsequent in wichtige Mitwirkende und binde sie herzlich ins Geschehen ein. Kinder werden auf die Bühne eingeladen, dürfen bei magischen Tricks assistieren und erleben Zaubermomente aus nächster Nähe. So sind sie aktiv in die Vorstellung integriert und stehen absolut im Mittelpunkt des gesamten Geschehens!</p>
@@ -195,8 +198,11 @@ const _pageGallery = [
         </div>
         <!-- Ballonmodellage -->
         <div class="bg-white rounded-xl p-6 shadow-sm text-center">
-          <img src={_gal1Asset.src} alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-full w-40 h-40 object-cover mx-auto mb-4" loading="lazy" />
-          <h4 class="font-bold text-[#1f2025] text-lg mb-3">BALLONMODELLAGE 🎈🎨</h4>
+          <figure class="text-center mb-4">
+            <Image src={_gal1Asset} alt="Clown in Dinslaken verschenkt Luftballon bei Walk Act" class="rounded-full w-40 h-40 object-cover mx-auto" width={736} height={552} loading="lazy" />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Ballonfigur als Zusatzleistung beim Walk Act in Dinslaken</figcaption>
+          </figure>
+          <h4 class="font-bold text-[#1f2025] text-lg mb-3">Zusatzleistung: Ballonmodellage 🎈🎨</h4>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Egal ob auf dem festlichen Kindergeburtstag, beim lebhaften Straßenfest, im vertrauten Kindergarten oder in der heimischen Schule – kunstvolle Ballonfiguren sind ausnahmslos immer ein absolutes Highlight und sorgen für pure Freude und leuchtende Kinderaugen! 😊</p>
           <p class="text-[#374151] text-sm leading-relaxed mb-3">Jedes Kind darf sich seine ganz persönliche, individuelle Wunschfigur aussuchen und diese dann stolz mit nach Hause nehmen: Ob der klassische vierbeinige Ballonhund, das imposante Schwert für tapfere Ritter, zauberhafte Prinzessinnen-Blumen oder ausgefallene Kreationen wie langhalsige Giraffen, bunte Papageien, niedliche Teddybären oder sogar komplexe Motorräder – der kreativen Fantasie sind kaum Grenzen gesetzt!</p>
           <p class="text-[#374151] text-sm leading-relaxed">Die selbst gewählten Ballontiere halten problemlos mehrere Tage lang und werden zu greifbaren, bunten Erinnerungsstücken an den besonderen Tag. Schnell und mit routinierter Präzision geformt, begeistern meine Ballonkreationen nicht nur die Kinder, sondern faszinieren regelmäßig auch die staunenden Erwachsenen – denn echte Ballonkunst ist ein beeindruckendes Handwerk! 🎪👏</p>
@@ -249,7 +255,7 @@ const _pageGallery = [
   <!-- FAQ -->
   <section class="bg-gray-50 py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Kindergeburtstag mit Zauberer</h2>
+      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Clown-Auftritt in Dinslaken</h2>
       <h3 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">
         Hier sind ein paar Antworten
       </h3>
@@ -344,26 +350,27 @@ const _pageGallery = [
           </p>
           <h3 class="font-bold text-[#1f2025] mb-3">Ruhrgebiet</h3>
           <p class="text-[#374151] mb-4 leading-relaxed">
-            <a href="/clown/clownshow/clown-in-oberhausen/" class="text-[#d7393e] hover:underline">Oberhausen</a> |
-            <a href="/clown/clownshow/clown-in-duisburg/" class="text-[#d7393e] hover:underline">Duisburg</a> |
-            <a href="/clown/clownshow/clown-in-essen/" class="text-[#d7393e] hover:underline">Essen</a> |
-            <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="text-[#d7393e] hover:underline">Gelsenkirchen</a> |
-            <a href="/clown/clownshow/clown-in-bottrop/" class="text-[#d7393e] hover:underline">Bottrop</a> |
-            <a href="/clown/clownshow/clown-in-dorsten/" class="text-[#d7393e] hover:underline">Dorsten</a> |
-            <a href="/clown/clownshow/clown-in-muelheim/" class="text-[#d7393e] hover:underline">Mülheim</a> |
-            <a href="/clown/clownshow/clown-in-herten/" class="text-[#d7393e] hover:underline">Herten</a> |
-            <a href="/clown/clownshow/clown-in-herne/" class="text-[#d7393e] hover:underline">Herne</a> |
-            <a href="/clown/clownshow/clown-in-marl/" class="text-[#d7393e] hover:underline">Marl</a> |
-            <a href="/clown/clownshow/clown-in-recklinghausen/" class="text-[#d7393e] hover:underline">Recklinghausen</a> |
-            <a href="/clown/clownshow/clown-in-gladbeck/" class="text-[#d7393e] hover:underline">Gladbeck</a> (mein Wohnort) |
-            <a href="/clown/clownshow/clown-in-bochum/" class="text-[#d7393e] hover:underline">Bochum</a> |
-            <a href="/clown/clownshow/clown-in-dortmund/" class="text-[#d7393e] hover:underline">Dortmund</a> |
+            <a href="/clown/clownshow/clown-in-oberhausen/" class="text-[#d7393e] hover:underline">Clownshow in Oberhausen erleben</a> |
+            Duisburg |
+            <a href="/clown/clownshow/clown-in-essen/" class="text-[#d7393e] hover:underline">Clown für Kinderfeste in Essen</a> |
+            <a href="/clown/clownshow/clown-in-gelsenkirchen/" class="text-[#d7393e] hover:underline">Clown in Gelsenkirchen buchen</a> |
+            <a href="/clown/clownshow/clown-in-bottrop/" class="text-[#d7393e] hover:underline">Clownshow für Bottrop</a> |
+            <a href="/clown/clownshow/clown-in-dorsten/" class="text-[#d7393e] hover:underline">Clown für Kindergeburtstag in Dorsten</a> |
+            <a href="/clown/clownshow/clown-in-muelheim/" class="text-[#d7393e] hover:underline">Clown Mülheim buchen</a> |
+            <a href="/clown/clownshow/clown-in-herten/" class="text-[#d7393e] hover:underline">Clownshow in Herten erleben</a> |
+            <a href="/clown/clownshow/clown-in-herne/" class="text-[#d7393e] hover:underline">Clown für Kinderfeste in Herne</a> |
+            <a href="/clown/clownshow/clown-in-marl/" class="text-[#d7393e] hover:underline">Clown in Marl buchen</a> |
+            <a href="/clown/clownshow/clown-in-recklinghausen/" class="text-[#d7393e] hover:underline">Clownshow für Recklinghausen</a> |
+            <a href="/clown/clownshow/clown-in-gladbeck/" class="text-[#d7393e] hover:underline">Clown für Kindergeburtstag in Gladbeck</a> (mein Wohnort) |
+            <a href="/clown/clownshow/clown-in-bochum/" class="text-[#d7393e] hover:underline">Clown Bochum buchen</a> |
+            Dortmund |
             Lünen | Castrop-Rauxel
           </p>
+          <p class="text-[#374151] mb-4 leading-relaxed" data-far-cities>Auch außerhalb dieses Umkreises bin ich unterwegs: Termine in weiter entfernten Städten wie Duisburg, Dortmund und Haltern am See lassen sich einrichten – die Anfahrt plane ich dabei einfach mit ein.</p>
           <h3 class="font-bold text-[#1f2025] mb-3">Münsterland</h3>
           <p class="text-[#374151] leading-relaxed">
-            <a href="/clown/clownshow/clown-in-haltern/" class="text-[#d7393e] hover:underline">Haltern am See</a> |
-            <a href="/clown/clownshow/clown-in-datteln/" class="text-[#d7393e] hover:underline">Datteln</a> |
+            Haltern am See |
+            Datteln |
             Reken | Coesfeld | Münster
           </p>
         </div>

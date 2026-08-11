@@ -4,7 +4,7 @@ seoTitle: "Sommerfest Kita: Clown & Zauberer-Programm | LIAR"
 description: "Sommerfest Kita planen leicht gemacht - Programm-Ideen, Spielestationen und Tipps fuer Clown und Zauberer fuer Kinder von 3-6 Jahren."
 publishDate: 2026-05-14
 heroImage: "https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/cover.jpg"
-heroImageAlt: "Sommerfest in der Kita planen: Programm-Ideen mit Clown und Zauberer Cover"
+heroImageAlt: "Sommerfest in der Kita mit Clown und Zauberer im Garten"
 categories: ["Feste", "Saisonal", "Kita", "Leistung"]
 tags: ["sommerfest-kita-planen"]
 author: "Michaël Prescler"
@@ -81,4 +81,4 @@ Ich werde häufig gefragt, warum gerade ein Clown- oder Zauber-Programm so gut z
 
 Meine Shows für Kitas sind speziell auf die Aufmerksamkeitsspanne von 3- bis 6-Jährigen zugeschnitten: rund 30 bis 40 Minuten, viele Mitmach-Momente, große sichtbare Effekte — und ein Tempo, das auch die Jüngsten mitnimmt, ohne sie zu überfordern.
 
-![IMG-20260319-WA0025.jpg](https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/inline-2.jpg)
+![Mitmach-Zaubershow beim Sommerfest in der Kita vor Kindern und Eltern](https://liar-entertainer.com/blog-images/sommerfest-kita-programm-clown-zauberer/inline-2.jpg)

@@ -105,7 +105,7 @@ const _pageGallery = [
         <span>📍</span> Gladbeck
       </div>
       <h1 class="text-white font-extrabold text-center leading-tight mb-3" style="font-size: clamp(2rem, 5vw, 3.5rem); text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">
-        Geburtstag in Gladbeck
+        Kindergeburtstag in Gladbeck: Mitmach-Zaubershow ab 150 €
       </h1>
       <p class="text-gray-200 text-base leading-relaxed max-w-xl mx-auto">
         Unvergessliche Kindergeburtstage mit Clown Zauberer LIAR – Lachen, Staunen und pure Magie!
@@ -148,13 +148,18 @@ const _pageGallery = [
           <p class="text-[#374151] leading-relaxed">Als echter Gladbecker weiß ich, was Familien hier schätzen: Bodenständiges Entertainment ohne Schnickschnack, verlässliche Absprachen und ein faires Preis-Leistungs-Verhältnis. Genau das bekommen Sie bei mir!</p>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_introImgAsset.src}
-            alt="Geburtstag in Gladbeck mit dem Clown aus Ihrer Stadt"
-            class="rounded-full object-cover object-[20%] portrait-zoom"
-            style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          <figure class="m-0">
+            <Image
+              src={_introImgAsset}
+              alt="Geburtstag in Gladbeck mit dem Clown aus Ihrer Stadt"
+              class="rounded-full object-cover object-[20%] portrait-zoom"
+              style="width: 320px; height: 320px;"
+              loading="lazy"
+              width={640}
+              height={853}
+            />
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Clown Zauberer LIAR beim Kindergeburtstag in Gladbeck</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -337,21 +342,30 @@ const _pageGallery = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src={_gal9Asset.src} alt="Clown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <figure class="m-0">
+              <Image src={_gal9Asset} alt="Clown Kinderzauberer im Garten für einen Kindergeburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" width={320} height={240} />
+              <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Zaubershow im Garten – Kindergeburtstag in Gladbeck</figcaption>
+            </figure>
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Große und kleine Bühne</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Ob Schulfeier, Weihnachtsfeier, Hochzeit, Fest, oder Kommunion sowie Kindergärten oder Schulen sorge ich für staunende und lachende Gesichter. Auch im Wohnzimmer für den Kindergeburtstag!</p>
         </div>
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src={_clownerieAsset.src} alt="Aufnahme Clownerie und Zauberei bei einem Geburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <figure class="m-0">
+              <Image src={_clownerieAsset} alt="Aufnahme Clownerie und Zauberei bei einem Geburtstag in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" width={160} height={160} />
+              <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Clownerie und Zauberei bei einer Feier in Gladbeck</figcaption>
+            </figure>
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Einfach und unkompliziert</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Mit wenig Aufwand und fast ohne Vorbereitungszeit komme ich vorbei...und lege mit meinem Programm los: lachende Kinder, ausgelassene Stimmung und entspannte Eltern!</p>
         </div>
         <div class="text-center">
           <div class="mx-auto mb-4">
-            <img src={_gal8Asset.src} alt="TOP Zaubervorführung in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" />
+            <figure class="m-0">
+              <Image src={_gal8Asset} alt="TOP Zaubervorführung in Gladbeck" class="rounded-full w-40 h-40 object-cover object-[20%] mx-auto shadow-sm" loading="lazy" width={320} height={213} />
+              <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">Staunende Kinder bei der Zaubervorführung in Gladbeck</figcaption>
+            </figure>
           </div>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Sehen und mit fiebern</h3>
           <p class="text-[#374151] text-sm leading-relaxed">Die Kinder werden immer wieder mit eingebunden und pendeln die ganze Zeit zwischen Lachen und Staunen...und mein bester Trick funktioniert immer: den Kindern ein Lächeln ins Gesicht zu zaubern.</p>
@@ -394,7 +408,10 @@ const _pageGallery = [
             Obwohl ich in Gladbeck zu Hause bin, besuche ich auch gerne Kindergeburtstage in den Nachbarstädten:
           </p>
           <p class="text-[#374151] mb-4 leading-relaxed">
-            <a href="/kindergeburtstag/geburtstag-in-dorsten/" class="text-[#3b55d5] hover:underline">Dorsten</a> | <a href="/kindergeburtstag/geburtstag-in-haltern-am-see/" class="text-[#3b55d5] hover:underline">Haltern</a> | <a href="/kindergeburtstag/geburtstag-in-xanten/" class="text-[#3b55d5] hover:underline">Xanten</a> | <a href="/kindergeburtstag/geburtstag-in-dinslaken/" class="text-[#3b55d5] hover:underline">Dinslaken</a> | <a href="/kindergeburtstag/geburtstag-in-gelsenkirchen/" class="text-[#3b55d5] hover:underline">Gelsenkirchen</a> | <a href="/kindergeburtstag/geburtstag-in-marl/" class="text-[#3b55d5] hover:underline">Marl</a> | <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#3b55d5] hover:underline">Oberhausen</a> | <a href="/kindergeburtstag/geburtstag-in-essen/" class="text-[#3b55d5] hover:underline">Essen</a> | <a href="/kindergeburtstag/geburtstag-in-moers/" class="text-[#3b55d5] hover:underline">Moers</a> | <a href="/kindergeburtstag/geburtstag-in-waltrop/" class="text-[#3b55d5] hover:underline">Waltrop</a> | <a href="/kindergeburtstag/geburtstag-in-datteln/" class="text-[#3b55d5] hover:underline">Datteln</a> | <a href="/kindergeburtstag/geburtstag-in-recklinghausen/" class="text-[#3b55d5] hover:underline">Recklinghausen</a> | <a href="/kindergeburtstag/geburtstag-in-herten/" class="text-[#3b55d5] hover:underline">Herten</a> | <a href="/kindergeburtstag/geburtstag-in-bottrop/" class="text-[#3b55d5] hover:underline">Bottrop</a> | <a href="/kindergeburtstag/geburtstag-in-herne/" class="text-[#3b55d5] hover:underline">Herne</a> | <a href="/kindergeburtstag/geburtstag-in-dortmund/" class="text-[#3b55d5] hover:underline">Dortmund</a> | <a href="/kindergeburtstag/geburtstag-in-wesel/" class="text-[#3b55d5] hover:underline">Wesel</a> | <a href="/kindergeburtstag/geburtstag-in-bochum/" class="text-[#3b55d5] hover:underline">Bochum</a> | <a href="/kindergeburtstag/geburtstag-in-duesseldorf/" class="text-[#3b55d5] hover:underline">Düsseldorf</a> | <a href="/kindergeburtstag/geburtstag-in-duisburg/" class="text-[#3b55d5] hover:underline">Duisburg</a> | <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a>
+            <a href="/kindergeburtstag/geburtstag-in-dorsten/" class="text-[#3b55d5] hover:underline">Kindergeburtstag Dorsten feiern</a> | <a href="/kindergeburtstag/geburtstag-in-dinslaken/" class="text-[#3b55d5] hover:underline">Kindergeburtstag Dinslaken buchen</a> | <a href="/kindergeburtstag/geburtstag-in-gelsenkirchen/" class="text-[#3b55d5] hover:underline">Kindergeburtstag in Gelsenkirchen</a> | <a href="/kindergeburtstag/geburtstag-in-marl/" class="text-[#3b55d5] hover:underline">Marl</a> | <a href="/kindergeburtstag/geburtstag-in-oberhausen/" class="text-[#3b55d5] hover:underline">Oberhausen</a> | <a href="/kindergeburtstag/geburtstag-in-essen/" class="text-[#3b55d5] hover:underline">Essen</a> | <a href="/kindergeburtstag/geburtstag-in-recklinghausen/" class="text-[#3b55d5] hover:underline">Recklinghausen</a> | <a href="/kindergeburtstag/geburtstag-in-herten/" class="text-[#3b55d5] hover:underline">Herten</a> | <a href="/kindergeburtstag/geburtstag-in-bottrop/" class="text-[#3b55d5] hover:underline">Bottrop</a> | <a href="/kindergeburtstag/geburtstag-in-herne/" class="text-[#3b55d5] hover:underline">Herne</a> | <a href="/kindergeburtstag/geburtstag-in-bochum/" class="text-[#3b55d5] hover:underline">Bochum</a> | <a href="/kindergeburtstag/geburtstag-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a>
+          </p>
+          <p class="text-[#374151] mb-4 leading-relaxed" data-fernstaedte>
+            Überregional – mit etwas längerer Anfahrt – bin ich außerdem in Haltern, Xanten, Moers, Waltrop, Datteln, Dortmund, Wesel, Düsseldorf und Duisburg buchbar.
           </p>
           <h3 class="font-bold text-[#1f2025] mb-3">Überregional &amp; International</h3>
           <p class="text-[#374151] mb-4 leading-relaxed">
@@ -418,7 +435,7 @@ const _pageGallery = [
   <!-- FAQ -->
   <section class="bg-[#f9fafb] py-14">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zum Kindergeburtstag mit Zauberer</h2>
+      <h2 class="text-center font-bold text-[#1f2025] text-sm uppercase tracking-widest mb-2">Häufige Fragen zur Kindergeburtstagsfeier in Gladbeck</h2>
       <h3 class="text-center font-bold text-[#1f2025] text-2xl sm:text-3xl mb-10">
         Hier sind ein paar Antworten
       </h3>
