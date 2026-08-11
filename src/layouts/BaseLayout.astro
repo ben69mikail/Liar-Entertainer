@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 import '../styles/global.css';
 import '../styles/fonts.css';
 
@@ -313,20 +314,30 @@ const webPageSchema = {
       }
     </style>
 
+    <!-- Floating WhatsApp-Button (nur Mobile, angedockt auf der Naht der CTA-Leiste) -->
+    <WhatsAppButton />
+
     <CookieConsent />
 
     <!-- Minimal JS: sticky nav + mobile menu handled inline in Header -->
 
-    <!-- GA4-Ereignisse: Telefon-/E-Mail-Klicks als Conversion-Signale.
+    <!-- GA4-Ereignisse: Telefon-, E-Mail- und WhatsApp-Klicks als Conversion-Signale.
          Läuft über den gtag-Stub aus dem Head; Daten fließen nur, wenn GA4
          nach Consent-Opt-in geladen wurde (DSGVO-konform). -->
     <script is:inline>
       document.addEventListener('click', function (e) {
-        var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+        var a = e.target && e.target.closest
+          ? e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]')
+          : null;
         if (!a || typeof window.gtag !== 'function') return;
-        var isTel = a.getAttribute('href').indexOf('tel:') === 0;
-        window.gtag('event', isTel ? 'phone_click' : 'email_click', {
-          link_url: a.getAttribute('href'),
+        var href = a.getAttribute('href') || '';
+        var eventName = href.indexOf('tel:') === 0
+          ? 'phone_click'
+          : href.indexOf('mailto:') === 0
+            ? 'email_click'
+            : 'whatsapp_click';
+        window.gtag('event', eventName, {
+          link_url: href,
           page_location: window.location.href
         });
       });
