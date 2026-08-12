@@ -141,22 +141,14 @@ const faqSchema = {
   ]
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Michaël Prescler",
-  "alternateName": "Clown Zauberer LIAR",
-  "jobTitle": "Professioneller Clown & Zauberer",
-  "description": "Professioneller Kinderzauberer und Clown mit über 15 Jahren Erfahrung und pädagogischer Ausbildung in NRW",
-  "knowsAbout": ["Zauberei", "Clownerie", "Kinderunterhaltung", "Ballonmodellage", "Close-up Magie"],
-  "knowsLanguage": ["de", "fr"],
-  "worksFor": {
-    "@type": "LocalBusiness",
-    "name": "Clown Zauberer LIAR",
-    "url": "https://liar-entertainer.com"
-  },
-  "url": "https://liar-entertainer.com"
-};
+// Audit Runde 2, Massnahme A1 (12.08.2026): Hier stand ein ZWEITER Person-Knoten
+// neben dem founder-Knoten aus BaseLayout - ohne @id, ohne sameAs, ohne
+// hasCredential, und mit einem eigenen anonymen worksFor-LocalBusiness statt einer
+// Referenz auf #business. Fuer Maschinen waren das zwei verschiedene Personen, was
+// die Verknuepfung "Michael Prescler = LIAR = Kinderzauberer in Gladbeck"
+// untergraebt - genau die Entitaet, auf die KI-Systeme angewiesen sind.
+// Der Knoten ist entfernt; seine einzige zusaetzliche Information (knowsAbout)
+// steht jetzt im founder-Knoten in BaseLayout.astro.
 const videoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -181,7 +173,7 @@ const videoSchema = {
   keywords="Clown Kindergeburtstag NRW, Zauberer Kindergeburtstag, Clown Zauberer NRW, Zaubershow Kinder, Kinderzauberer NRW, Clown buchen NRW, Kindergeburtstag Zauberer"
   canonical="https://liar-entertainer.com/"
   ogImage={ogImage}
-  structuredData={[faqSchema, personSchema, videoSchema]}
+  structuredData={[faqSchema, videoSchema]}
   heroPreload={heroOptimized.src}
 >
 
