@@ -581,6 +581,9 @@ function stripWpImages(html: string): string {
     .replace(/<a[^>]*href="[^"]*wp-content\/uploads[^"]*"[^>]*>\s*(?:<img[^>]*>\s*)+<\/a>/gi, '')
     // 2. Alle <img>-Tags, die wp-content/uploads referenzieren (src/srcset/data-*, auch Optimole-CDN)
     .replace(/<img[^>]*wp-content\/uploads[^>]*>/gi, '')
+    // 2b. K1 (11.08.2026): auch wp-content/plugins - die WPForms-Lade-Spinner
+    //     (submit-spin.svg) blieben sonst als tote Requests auf zwei Seiten stehen.
+    .replace(/<img[^>]*wp-content\/plugins[^>]*>/gi, '')
     // 3. Übrig gebliebene leere Links
     .replace(/<a[^>]*>(?:\s|&nbsp;)*<\/a>/gi, '');
   // 4. <figure> ohne verbliebenes Medium (kein img/iframe/video mehr) → samt <figcaption>
@@ -604,9 +607,16 @@ let scrapedContent: string | null = _processedScraped && _isCitySlug
   ? stylizeCityContent(_processedScraped)
   : _processedScraped;
 
-if (scrapedContent && page.type === 'post') {
+// SEO-Audit 11.08.2026, Massnahme K1: stripWpImages lief bisher nur fuer
+// page.type === 'post'. /clown/clown-zauberer/ und /zauberer/zaubershow/karneval/
+// sind aber type 'page' und lieferten dadurch 16 wp-content-Bilder aus, die per
+// .htaccess bewusst 410 Gone zurueckgeben - also 16 kaputte Bilder auf zwei Seiten.
+// stripLegacyPostHeader bleibt bewusst auf 'post' beschraenkt (Blog-spezifisch).
+if (scrapedContent) {
   scrapedContent = stripWpImages(scrapedContent);
-  scrapedContent = stripLegacyPostHeader(scrapedContent);
+  if (page.type === 'post') {
+    scrapedContent = stripLegacyPostHeader(scrapedContent);
+  }
 }
 if (scrapedContent) {
   scrapedContent = fixLegacyCopy(scrapedContent);
@@ -877,7 +887,8 @@ if (scrapedContent) {
 
 const _fixedRaw: string | null = page.content ? fixVideoEmbeds(fixBrokenLinks(page.content)) : null;
 const fixedPageContent: string | null =
-  _fixedRaw && page.type === 'post' ? stripWpImages(_fixedRaw) : _fixedRaw;
+  // K1 (11.08.2026): gilt fuer 'post' UND 'page' - siehe Kommentar oben.
+  _fixedRaw ? stripWpImages(_fixedRaw) : _fixedRaw;
 
 // === Title-Normalisierung (SEO-Audit 06.08.2026, Massnahme M6) ===
 // Legacy-Titles aus WordPress: Emojis (werden von Google aus dem SERP entfernt und
@@ -931,7 +942,18 @@ const heroImg =
   getFirstImg(page.content) ??
   (page.type === 'post' ? postCategoryImg(page.categories) : null) ??
   '/images/fallback/clown-zauberer.jpg';
-const canonicalUrl = `https://liar-entertainer.com/${slug}/`;
+// === Canonical-Overrides (SEO-Audit 11.08.2026, Massnahme M4) ===
+// /zauberer/zaubershow/karneval/ (Legacy-WP) und /clown/karneval/ behandeln dasselbe
+// Thema mit derselben Suchintention: gleiche H1 "Karneval", gleicher Einstieg
+// ("Karneval Zauberer in NRW – Jecke Zaubershow fuer die fuenfte Jahreszeit"),
+// 17 von 42 langen Saetzen wortgleich. Statt die schwaechere Dublette intern zu
+// verlinken und damit zu staerken, zeigt sie per Canonical auf die gepflegte
+// Seite /clown/karneval/ (eigene .astro, Answer-Absatz, im Assertion-Set H6).
+const CANONICAL_OVERRIDES: Record<string, string> = {
+  'zauberer/zaubershow/karneval': 'https://liar-entertainer.com/clown/karneval/',
+};
+const canonicalUrl = CANONICAL_OVERRIDES[slug.replace(/^\/|\/$/g, '')]
+  ?? `https://liar-entertainer.com/${slug}/`;
 
 const isCityPage = pageSlug.startsWith('kinderzauberer-in-') || pageSlug.startsWith('geburtstag-in-') || pageSlug.startsWith('clown-in-');
 const cityName = isCityPage ? pageSlug.replace(/^(kinderzauberer-in-|geburtstag-in-|clown-in-)/, '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : null;

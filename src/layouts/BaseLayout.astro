@@ -121,23 +121,35 @@ const localBusinessSchema = {
     "opens": "09:00",
     "closes": "20:00"
   }],
+  // SEO-Audit 11.08.2026, Massnahme H5: areaServed auf den erklaerten Radius
+  // geschaerft. Vorher standen Koeln (~70 km, ohne eigene Landingpage), Duesseldorf
+  // (40 km) und Dortmund (34 km) gleichrangig neben Gladbeck, waehrend Dorsten,
+  // Herten, Marl und Dinslaken (11-17 km, je mit eigener Stadtseite) ganz fehlten.
+  // Der GeoCircle quantifiziert Naehe, was eine reine Staedteliste nicht kann.
+  // Duesseldorf/Dortmund/Duisburg bleiben im Service-Schema ihrer eigenen
+  // Stadtseiten - nur das globale Signal wird praeziser.
   "areaServed": [
+    {
+      "@type": "GeoCircle",
+      "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 51.5658, "longitude": 6.9857},
+      "geoRadius": "20000"
+    },
     {"@type": "City", "name": "Gladbeck"},
+    {"@type": "City", "name": "Bottrop"},
+    {"@type": "City", "name": "Gelsenkirchen"},
+    {"@type": "City", "name": "Dorsten"},
+    {"@type": "City", "name": "Herten"},
     {"@type": "City", "name": "Oberhausen"},
     {"@type": "City", "name": "Essen"},
-    {"@type": "City", "name": "Duisburg"},
-    {"@type": "City", "name": "Gelsenkirchen"},
-    {"@type": "City", "name": "Dortmund"},
-    {"@type": "City", "name": "Bochum"},
-    {"@type": "City", "name": "Düsseldorf"},
-    {"@type": "City", "name": "Köln"},
-    {"@type": "City", "name": "Bottrop"},
-    {"@type": "City", "name": "Mülheim an der Ruhr"},
-    {"@type": "City", "name": "Herne"},
+    {"@type": "City", "name": "Marl"},
     {"@type": "City", "name": "Recklinghausen"},
+    {"@type": "City", "name": "Dinslaken"},
+    {"@type": "City", "name": "Herne"},
+    {"@type": "City", "name": "Mülheim an der Ruhr"},
+    {"@type": "City", "name": "Bochum"},
     {"@type": "State", "name": "Nordrhein-Westfalen"}
   ],
-  "knowsAbout": ["Clownerie", "Zauberei", "Zaubershow", "Clown Zauberer", "Kindergeburtstag"],
+  "knowsAbout": ["Kinderzauberer", "Zaubershow für Kinder", "Kindergeburtstag", "Clownerie", "Zauberei", "Clown Zauberer"],
   "sameAs": [
     "https://www.facebook.com/clownzaubererliar",
     "https://www.instagram.com/clown_zauberer_liar/",

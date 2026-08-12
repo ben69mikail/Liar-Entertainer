@@ -41,47 +41,50 @@ import kitaSpielenMachtSchlau from '../../assets/images/galerie/kita-spielen-mac
 import stadtpicknick20151 from '../../assets/images/galerie/stadtpicknick-2015-1.jpg';
 import stadtpicknick20152 from '../../assets/images/galerie/stadtpicknick-2015-2.jpg';
 
+// Bildunterschriften (SEO-Audit 11.08.2026, Massnahme H6): Die Galerie war eine
+// reine Bilderwand ohne indexierbaren Text. Die Captions benennen Anlass und Ort
+// und verankern den Begriff "Kinderzauberer" auf der Seite.
 const photoImages = [
-  { src: fotogalerieClownZauberer3, alt: 'Zauberer LIAR bei einer Kindershow mit Ballonmodellage in einem Saal' },
-  { src: fotogalerieClownZauberer2, alt: 'Clown LIAR bei einer Kindershow im Freien mit vielen Kindern' },
-  { src: fotogalerieClownZauberer6, alt: 'Zauberer LIAR mit Blick über die Stadt bei Sonnenuntergang vor einem Firmenevent' },
-  { src: fotogalerieClownZauberer4, alt: 'Clown LIAR beim Kinderkarneval mit einem verkleideten Kind auf der Bühne' },
-  { src: fotogalerieClownZauberer5, alt: 'Clown Zauberer LIAR mit seinem Zauberkoffer in der Turnhalle' },
-  { src: fotogalerieClownZauberer1, alt: 'Clown und Zauberer LIAR im FC-Schalke-04-Stadion in Gelsenkirchen vor einem Auftritt' },
-  { src: fotogalerieClownZauberer1b, alt: 'Kinderzauberer LIAR zeigt Zaubertricks bei einem Kindergeburtstag im Garten' },
-  { src: fotogalerieClownZauberer17, alt: 'Clown Zauberer Liar verblüffte die Kids mit Zaubertricks.' },
-  { src: fotogalerieClownZauberer16, alt: 'Kinderkarneval in Capelle' },
-  { src: fotogalerieClownZauberer9, alt: 'Kinderzauberer LIAR mit dem Zauber-Malbuch bei einem Kindergeburtstag' },
-  { src: fotogalerieClownZauberer7, alt: 'Clown LIAR bei einer Bühnenshow auf einem Weihnachtsmarkt vor großem Publikum' },
-  { src: fotogalerieClownZauberer10, alt: 'Zauberer LIAR begeistert Kinder mit einem Zaubertrick beim Kindergeburtstag' },
-  { src: fotogalerieClownZauberer12, alt: 'Clown LIAR bei einem Auftritt vor einer Kita mit bunter Wimpelkette' },
-  { src: fotogalerieClownZauberer13, alt: 'Zauberer LIAR bei einer Zaubershow im Garten zum Kindergeburtstag' },
-  { src: fotogalerieClownZauberer8, alt: 'Kinderzauberer LIAR bei einer Zaubershow für Kinder in einem Saal' },
-  { src: fotogalerieClownZauberer15, alt: 'Zauberer LIAR bei einem Tuch-Zaubertrick im Freien' },
-  { src: fotogalerieClownZauberer14, alt: 'Clown LIAR bei der Ballonmodellage: ein gelber Ballonhund entsteht' },
-  { src: tischZaubererNrw, alt: 'Tisch-Zauberer-NRW' },
-  { src: closeUpZaubereiMuelheim, alt: 'Close-Up-Zauberei-Muelheim' },
-  { src: closeUpZaubereiDortmund, alt: 'Close Up Zauberei Dortmund' },
-  { src: tischZaubererMuelheim, alt: 'Tisch Zauberer Mülheim' },
-  { src: buehnenZaubererEssen, alt: 'Bühnen Zauberer Essen' },
-  { src: buehnenZaubereiGelsenkirchen, alt: 'Bühnen Zauberei Gelsenkirchen' },
-  { src: buehnenZauberei, alt: 'Bühnen Zauberei Oberhausen' },
-  { src: standUpZauberei, alt: 'Stand up Zauberei' },
-  { src: tischZaubererNrwBuehne, alt: 'Bühnen Zauberer NRW' },
-  { src: zaubererFirmenfeier, alt: 'Zauberer Firmenfeier' },
+  { src: fotogalerieClownZauberer3, alt: 'Zauberer LIAR bei einer Kindershow mit Ballonmodellage in einem Saal', caption: 'Kinderzauberer LIAR mit Ballonmodellage bei einer Kindershow im Saal' },
+  { src: fotogalerieClownZauberer2, alt: 'Clown LIAR bei einer Kindershow im Freien mit vielen Kindern', caption: 'Kindershow unter freiem Himmel – Clown Zauberer LIAR mitten im Publikum' },
+  { src: fotogalerieClownZauberer6, alt: 'Zauberer LIAR mit Blick über die Stadt bei Sonnenuntergang vor einem Firmenevent', caption: 'Kurz vor dem Firmenevent: Zauberer LIAR über den Dächern der Stadt' },
+  { src: fotogalerieClownZauberer4, alt: 'Clown LIAR beim Kinderkarneval mit einem verkleideten Kind auf der Bühne', caption: 'Kinderkarneval: ein verkleidetes Kind assistiert auf der Bühne' },
+  { src: fotogalerieClownZauberer5, alt: 'Clown Zauberer LIAR mit seinem Zauberkoffer in der Turnhalle', caption: 'Aufbau in der Turnhalle – der Zauberkoffer von Clown Zauberer LIAR' },
+  { src: fotogalerieClownZauberer1, alt: 'Clown und Zauberer LIAR im FC-Schalke-04-Stadion in Gelsenkirchen vor einem Auftritt', caption: 'Vor dem Auftritt im Stadion in Gelsenkirchen' },
+  { src: fotogalerieClownZauberer1b, alt: 'Kinderzauberer LIAR zeigt Zaubertricks bei einem Kindergeburtstag im Garten', caption: 'Kinderzauberer LIAR bei einem Kindergeburtstag im Garten' },
+  { src: fotogalerieClownZauberer17, alt: 'Clown Zauberer Liar verblüffte die Kids mit Zaubertricks.', caption: 'Kinderzauberer LIAR verblüfft die Kinder mit einem Zaubertrick' },
+  { src: fotogalerieClownZauberer16, alt: 'Kinderkarneval in Capelle', caption: 'Kinderkarneval in Capelle mit Clown Zauberer LIAR' },
+  { src: fotogalerieClownZauberer9, alt: 'Kinderzauberer LIAR mit dem Zauber-Malbuch bei einem Kindergeburtstag', caption: 'Das Zauber-Malbuch – ein Klassiker beim Kindergeburtstag' },
+  { src: fotogalerieClownZauberer7, alt: 'Clown LIAR bei einer Bühnenshow auf einem Weihnachtsmarkt vor großem Publikum', caption: 'Bühnenshow auf einem Weihnachtsmarkt vor großem Publikum' },
+  { src: fotogalerieClownZauberer10, alt: 'Zauberer LIAR begeistert Kinder mit einem Zaubertrick beim Kindergeburtstag', caption: 'Der Moment des Staunens beim Kindergeburtstag' },
+  { src: fotogalerieClownZauberer12, alt: 'Clown LIAR bei einem Auftritt vor einer Kita mit bunter Wimpelkette', caption: 'Auftritt vor einer Kita – Bühne unter bunter Wimpelkette' },
+  { src: fotogalerieClownZauberer13, alt: 'Zauberer LIAR bei einer Zaubershow im Garten zum Kindergeburtstag', caption: 'Zaubershow im Garten zum Kindergeburtstag' },
+  { src: fotogalerieClownZauberer8, alt: 'Kinderzauberer LIAR bei einer Zaubershow für Kinder in einem Saal', caption: 'Kinderzauberer LIAR bei einer Zaubershow im Saal' },
+  { src: fotogalerieClownZauberer15, alt: 'Zauberer LIAR bei einem Tuch-Zaubertrick im Freien', caption: 'Tuch-Zaubertrick unter freiem Himmel' },
+  { src: fotogalerieClownZauberer14, alt: 'Clown LIAR bei der Ballonmodellage: ein gelber Ballonhund entsteht', caption: 'Ballonmodellage: ein gelber Ballonhund entsteht' },
+  { src: tischZaubererNrw, alt: 'Tisch-Zauberer-NRW', caption: 'Tischzauberei direkt am Gästetisch in NRW' },
+  { src: closeUpZaubereiMuelheim, alt: 'Close-Up-Zauberei-Muelheim', caption: 'Close-up-Zauberei in Mülheim an der Ruhr' },
+  { src: closeUpZaubereiDortmund, alt: 'Close Up Zauberei Dortmund', caption: 'Close-up-Zauberei in Dortmund' },
+  { src: tischZaubererMuelheim, alt: 'Tisch Zauberer Mülheim', caption: 'Tischzauberer in Mülheim an der Ruhr' },
+  { src: buehnenZaubererEssen, alt: 'Bühnen Zauberer Essen', caption: 'Bühnenshow auf einer Firmenfeier in Essen' },
+  { src: buehnenZaubereiGelsenkirchen, alt: 'Bühnen Zauberei Gelsenkirchen', caption: 'Bühnenzauberei in Gelsenkirchen' },
+  { src: buehnenZauberei, alt: 'Bühnen Zauberei Oberhausen', caption: 'Bühnenzauberei in Oberhausen' },
+  { src: standUpZauberei, alt: 'Stand up Zauberei', caption: 'Stand-up-Zauberei vor Erwachsenenpublikum' },
+  { src: tischZaubererNrwBuehne, alt: 'Bühnen Zauberer NRW', caption: 'Bühnenzauberer LIAR bei einem Auftritt in NRW' },
+  { src: zaubererFirmenfeier, alt: 'Zauberer Firmenfeier', caption: 'Zauberer LIAR auf einer Firmenfeier' },
 ];
 
 const presseImages = [
-  { src: zaubererGladbeck, alt: 'Zauberer Gladbeck Zeitungsartikel' },
-  { src: weihnachtsmarktKray, alt: 'Weihnachtsmarkt Kray Zeitungsartikel' },
-  { src: wazMagicDinner, alt: 'WAZ Magic Dinner Zeitungsartikel' },
-  { src: stadtspiegelJanuar2012, alt: 'Stadtspiegel Januar 2012' },
-  { src: stadtspiegelJuli2014, alt: 'Stadtspiegel Juli 2014' },
-  { src: zauberhafteWelt, alt: 'Zauberhafte Welt Zeitungsartikel' },
-  { src: bottropBewegDich2013, alt: 'Bottrop Beweg Dich 2013' },
-  { src: kitaSpielenMachtSchlau, alt: 'Kita – Spielen macht schlau' },
-  { src: stadtpicknick20151, alt: 'Stadtpicknick 2015' },
-  { src: stadtpicknick20152, alt: 'Stadtpicknick 2015' },
+  { src: zaubererGladbeck, alt: 'Zauberer Gladbeck Zeitungsartikel', caption: 'Zeitungsbericht über Zauberer LIAR in Gladbeck' },
+  { src: weihnachtsmarktKray, alt: 'Weihnachtsmarkt Kray Zeitungsartikel', caption: 'Presseartikel zum Auftritt auf dem Weihnachtsmarkt in Kray' },
+  { src: wazMagicDinner, alt: 'WAZ Magic Dinner Zeitungsartikel', caption: 'WAZ-Bericht über das Magic Dinner mit Zauberer LIAR' },
+  { src: stadtspiegelJanuar2012, alt: 'Stadtspiegel Januar 2012', caption: 'Stadtspiegel, Januar 2012: Bericht über Clown Zauberer LIAR' },
+  { src: stadtspiegelJuli2014, alt: 'Stadtspiegel Juli 2014', caption: 'Stadtspiegel, Juli 2014: Bericht über Clown Zauberer LIAR' },
+  { src: zauberhafteWelt, alt: 'Zauberhafte Welt Zeitungsartikel', caption: 'Zeitungsartikel „Zauberhafte Welt" über Clown Zauberer LIAR' },
+  { src: bottropBewegDich2013, alt: 'Bottrop Beweg Dich 2013', caption: 'Presseartikel zur Aktion „Bottrop beweg dich" 2013' },
+  { src: kitaSpielenMachtSchlau, alt: 'Kita – Spielen macht schlau', caption: 'Bericht zum Kita-Projekt „Spielen macht schlau"' },
+  { src: stadtpicknick20151, alt: 'Stadtpicknick 2015', caption: 'Stadtpicknick 2015: Zeitungsbericht zum Auftritt' },
+  { src: stadtpicknick20152, alt: 'Stadtpicknick 2015', caption: 'Stadtpicknick 2015: weiterer Presseausschnitt' },
 ];
 
 const referenzen = [
@@ -179,18 +182,21 @@ const referenzen = [
       <h2 class="text-[#1f2025] font-bold text-2xl text-center mb-6">📸 Fotos</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         {photoImages.map((img, i) => (
-          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg card-hover">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              widths={[150, 300, 450]}
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-              loading={i < 4 ? 'eager' : 'lazy'}
-              width={300}
-              height={300}
-            />
-          </div>
+          <figure class="overflow-hidden bg-white rounded-lg border border-gray-100 card-hover">
+            <div class="aspect-square overflow-hidden bg-gray-200">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                widths={[150, 300, 450]}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading={i < 4 ? 'eager' : 'lazy'}
+                width={300}
+                height={300}
+              />
+            </div>
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">{img.caption}</figcaption>
+          </figure>
         ))}
       </div>
 
@@ -201,18 +207,21 @@ const referenzen = [
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         {presseImages.map((img) => (
-          <div class="aspect-square overflow-hidden bg-gray-200 rounded-lg card-hover">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              widths={[150, 300, 450]}
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-              width={300}
-              height={300}
-            />
-          </div>
+          <figure class="overflow-hidden bg-white rounded-lg border border-gray-100 card-hover">
+            <div class="aspect-square overflow-hidden bg-gray-200">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                widths={[150, 300, 450]}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                width={300}
+                height={300}
+              />
+            </div>
+            <figcaption class="px-3 py-1.5 text-sm text-[#374151] bg-white border-t border-gray-100">{img.caption}</figcaption>
+          </figure>
         ))}
       </div>
     </div>

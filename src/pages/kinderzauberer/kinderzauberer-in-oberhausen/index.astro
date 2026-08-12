@@ -119,7 +119,7 @@ const structuredData = [serviceSchema, faqSchema];
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-[#d7393e] text-2xl font-extrabold mb-4">TOP Kinderzauberer in Oberhausen!</h2>
-          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Kinderzauberer LIAR aus dem benachbarten Gladbeck ist in Oberhausen, Duisburg und Bottrop regelmäßig im Einsatz. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und benötigt nur 2×2 Meter Platz. 370+ Google-Bewertungen sprechen für den Entertainer.</p>
+          <p class="hero-subtitle text-[#374151] text-[17px] leading-relaxed mb-4">Sie suchen einen Zauberer für Kinder in Oberhausen? Kinderzauberer LIAR aus dem benachbarten Gladbeck ist in Oberhausen, Duisburg und Bottrop regelmäßig im Einsatz. Die interaktive Mitmach-Zaubershow für Kinder ab 4 Jahren dauert rund 40 Minuten und benötigt nur 2×2 Meter Platz. 370+ Google-Bewertungen sprechen für den Entertainer.</p>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">Erleben Sie LIAR, den Kinderzauberer in Oberhausen – einen französischen Entertainer mit 370+ Top-Bewertungen! Meine einzigartige Mischung aus Clownerie, Zauberei, Ballonmodellage und Glitzer-Tattoos begeistert Kinder von 4 bis 12 Jahren und ihre Familien in ganz NRW.</p>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">Mein bester Trick funktioniert immer: Kindern durch Magie ein Lächeln ins Gesicht zu zaubern! Die Kinder stehen bei mir immer im Mittelpunkt – nicht die Technik. Mit französischem Charme und professionellem Entertainment sorge ich für unvergessliche Momente bei jedem Event in Oberhausen!</p>
           <a href="/zauberer/" class="inline-block bg-[#d7393e] hover:bg-[#b62e32] text-white font-bold px-8 py-3 rounded transition-colors mt-2">
@@ -127,13 +127,12 @@ const structuredData = [serviceSchema, faqSchema];
           </a>
         </div>
         <div class="flex justify-center">
-          <img
-            src={_roundImgAsset.src}
+          <Image
+            src={_roundImgAsset}
             alt="Kinderzauberer in Oberhausen"
             class="rounded-full object-cover object-[20%] shadow-sm portrait-zoom"
             style="width: 320px; height: 320px;"
-            loading="lazy"
-          />
+          loading="lazy" width={600} height={450} />
         </div>
       </div>
     </div>
@@ -156,7 +155,7 @@ const structuredData = [serviceSchema, faqSchema];
           </a>
         </div>
         <div>
-          <img src={_showImgAsset.src} alt="Zaubershow mit Kinderzauberer LIAR bei Event in Oberhausen" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+          <Image src={_showImgAsset} alt="Zaubershow mit Kinderzauberer LIAR bei Event in Oberhausen" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" width={506} height={640} />
         </div>
       </div>
     </div>
@@ -189,7 +188,7 @@ const structuredData = [serviceSchema, faqSchema];
       <h2 class="text-[#1f2025] text-2xl font-extrabold text-center mb-10">Kindergeburtstag in Oberhausen</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <img src={_ballonImgAsset.src} alt="Kindergeburtstag mit Kinderzauberer in Oberhausen" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" />
+          <Image src={_ballonImgAsset} alt="Kindergeburtstag mit Kinderzauberer in Oberhausen" class="rounded-xl w-full object-cover object-top shadow-sm" loading="lazy" width={499} height={499} />
         </div>
         <div>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">Kunstvolle Ballonfiguren in Minutenschnelle! Tiere, Schwerter, Blumen – jedes Kind bekommt seine Wunschfigur. Perfekt für größere Events am Centro oder Stadtfeste. Bis zu 30 Figuren pro Stunde!</p>
@@ -306,7 +305,7 @@ const structuredData = [serviceSchema, faqSchema];
   <!-- FAQ -->
   <section class="py-14 bg-white">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-center text-2xl font-extrabold text-[#1f2025] mb-8">Häufig gestellte Fragen</h2>
+      <h2 class="text-center text-2xl font-extrabold text-[#1f2025] mb-8">Häufige Fragen zum Kinderzauberer in Oberhausen</h2>
       <div class="space-y-3" id="faq-list">
         <div class="faq-item bg-white border border-gray-200 rounded-lg overflow-hidden">
           <button
@@ -389,7 +388,7 @@ const structuredData = [serviceSchema, faqSchema];
           </p>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Direktes Umland</h3>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">
-            <a href="/kinderzauberer/kinderzauberer-in-duisburg/" class="text-[#3b55d5] hover:underline">Duisburg</a> |
+            Duisburg |
             <a href="/kinderzauberer/kinderzauberer-in-essen/" class="text-[#3b55d5] hover:underline">Essen</a> |
             <a href="/kinderzauberer/kinderzauberer-in-bottrop/" class="text-[#3b55d5] hover:underline">Bottrop</a> |
             <a href="/kinderzauberer/kinderzauberer-in-muelheim/" class="text-[#3b55d5] hover:underline">Mülheim</a> |
@@ -400,13 +399,13 @@ const structuredData = [serviceSchema, faqSchema];
             <a href="/kinderzauberer/kinderzauberer-in-gelsenkirchen/" class="text-[#3b55d5] hover:underline">Gelsenkirchen</a> |
             <a href="/kinderzauberer/kinderzauberer-in-bochum/" class="text-[#3b55d5] hover:underline">Bochum</a> |
             <a href="/kinderzauberer/kinderzauberer-in-marl/" class="text-[#3b55d5] hover:underline">Marl</a> |
-            Gladbeck |
-            <a href="/kinderzauberer/kinderzauberer-in-dortmund/" class="text-[#3b55d5] hover:underline">Dortmund</a>
+            <a href="/kinderzauberer/kinderzauberer-in-gladbeck/" class="text-[#3b55d5] hover:underline">Gladbeck</a> |
+            Dortmund
           </p>
           <h3 class="font-bold text-[#1f2025] text-lg mb-2">Rhein-Ruhr</h3>
           <p class="text-[#374151] text-[17px] leading-relaxed mb-4">
-            <a href="/kinderzauberer/kinderzauberer-in-duesseldorf/" class="text-[#3b55d5] hover:underline">Düsseldorf</a> |
-            <a href="/kinderzauberer/kinderzauberer-in-moers/" class="text-[#3b55d5] hover:underline">Moers</a> |
+            Düsseldorf |
+            Moers |
             Krefeld | Köln
           </p>
         </div>

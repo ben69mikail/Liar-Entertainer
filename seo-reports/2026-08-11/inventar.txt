@@ -1,0 +1,130 @@
+Seiten gesamt: 168 (indexierbar 144, noindex 24)
+Bild-Einbindungen: 859 | ohne alt: 0 | alt < 15 Zeichen: 13
+Bilder > 200 KB: 4 | > 500 KB: 1
+jpg/png statt WebP eingebunden: 423
+ohne loading-Attribut: 28
+
+--- Schwach verlinkt (indexierbar, < 3 interne Eingangslinks) ---
+   0  /agbs/
+   0  /clown/clown-zauberer/
+   0  /datenschutzerklaerung-2/
+   0  /impressum/
+   0  /zauberer/zaubershow/karneval/
+   1  /blog/kategorie/allgemein/
+   1  /blog/kategorie/clown-unterhaltung/
+   1  /blog/kategorie/kultur-nrw/
+   1  /blog/kategorie/pantomime-nrw/
+   1  /blog/kategorie/termine/
+   1  /blog/kategorie/zauberei/
+   2  /clown/clownshow/clown-in-castrop-rauxel/
+   2  /clown/clownshow/clown-in-moers/
+   2  /clown/clownshow/clown-in-waltrop/
+   2  /kinderzauberer/kinderzauberer-in-castrop-rauxel/
+   2  /kinderzauberer/kinderzauberer-in-waltrop/
+   2  /kinderzauberer/kinderzauberer-in-wesel/
+   2  /kinderzauberer/kinderzauberer-in-xanten/
+
+--- Duenn (indexierbar, < 350 Woerter) ---
+   205 W  /blog/kategorie/feste/
+   205 W  /blog/kategorie/geburtstag/
+   205 W  /blog/kategorie/saisonal/
+   221 W  /blog/kategorie/pantomime-nrw/
+   326 W  /kontakt/
+
+--- Keyword-Summen (indexierbare Seiten) ---
+  PRIO   kinderzauberer             430  auf 114 Seiten
+  PRIO   clown                     2261  auf 144 Seiten
+  PRIO   kindergeburtstag          1012  auf 140 Seiten
+  PRIO   zauberer fuer kinder        16  auf 14 Seiten
+  PRIO   geburtstag fuer kinder       1  auf 1 Seiten
+  PRIO   zauberer                  1288  auf 144 Seiten
+  ABWERT ballonmodellage            395  auf 86 Seiten
+  ABWERT glitzer tattoo             181  auf 65 Seiten
+
+--- Abwertungs-Begriff in Title oder H1 ---
+  /blog/luftballonmodellage-kindergeburtstag/  ::  Luftballonmodellage Kindergeburtstag: Kosten &amp; Figuren
+  /clown/ballonmodellage/  ::  Ballonkünstler NRW buchen – Ballonmodellage für Kinder
+  /clown/glitzer-tattoo/  ::  Glitzer Tattoos Kindergeburtstag | NRW | Ab 40€ mit Zaubershow
+
+--- Stadtseiten nach Luftlinie zu Gladbeck ---
+    0.6 km | 18 Links |  906 W | /blog/ein-zauberhafter-kinderkarneval-bei-den-wittringer-rittern-in-gladbeck/
+    0.6 km | 32 Links |  773 W | /clown/clownshow/clown-in-gladbeck/
+    0.6 km | 24 Links | 1536 W | /kindergeburtstag/geburtstag-in-gladbeck/
+    0.6 km |  5 Links |  967 W | /kinderzauberer/kinderzauberer-in-gladbeck/
+    6.3 km | 18 Links | 1269 W | /clown/clownshow/clown-in-bottrop/
+    6.3 km | 20 Links | 1565 W | /kindergeburtstag/geburtstag-in-bottrop/
+    6.3 km | 16 Links |  963 W | /kinderzauberer/kinderzauberer-in-bottrop/
+    8.7 km | 21 Links |  908 W | /blog/kultur-und-kinderfest-auf-dem-resse-markt-clown-zaubershow-in-gelsenkirchen/
+    8.7 km | 18 Links |  806 W | /blog/sommerfest-kc-asoria-mit-clown-zauberer-liar-in-gelsenkirchen/
+    8.7 km | 26 Links |  866 W | /clown/clownshow/clown-in-gelsenkirchen/
+    8.7 km | 24 Links | 1464 W | /kindergeburtstag/geburtstag-in-gelsenkirchen/
+    8.7 km | 20 Links | 1067 W | /kinderzauberer/kinderzauberer-in-gelsenkirchen/
+   10.6 km | 19 Links |  774 W | /clown/clownshow/clown-in-dorsten/
+   10.6 km | 20 Links | 1240 W | /kindergeburtstag/geburtstag-in-dorsten/
+   10.6 km | 12 Links | 1102 W | /kinderzauberer/kinderzauberer-in-dorsten/
+   10.9 km | 22 Links |  822 W | /clown/clownshow/clown-in-herten/
+   10.9 km | 18 Links |  995 W | /kindergeburtstag/geburtstag-in-herten/
+   10.9 km | 12 Links | 1179 W | /kinderzauberer/kinderzauberer-in-herten/
+   11.4 km | 23 Links |  803 W | /clown/clownshow/clown-in-oberhausen/
+   11.4 km | 25 Links | 1127 W | /kindergeburtstag/geburtstag-in-oberhausen/
+   11.4 km | 17 Links |  908 W | /kinderzauberer/kinderzauberer-in-oberhausen/
+   12.4 km | 26 Links |  918 W | /clown/clownshow/clown-in-essen/
+   12.4 km | 24 Links | 1339 W | /kindergeburtstag/geburtstag-in-essen/
+   12.4 km | 23 Links | 1027 W | /kinderzauberer/kinderzauberer-in-essen/
+   12.6 km | 21 Links |  838 W | /clown/clownshow/clown-in-marl/
+   12.6 km | 20 Links | 1029 W | /kindergeburtstag/geburtstag-in-marl/
+   12.6 km | 13 Links | 1136 W | /kinderzauberer/kinderzauberer-in-marl/
+   15.6 km | 16 Links |  816 W | /clown/clownshow/clown-in-recklinghausen/
+   15.6 km | 22 Links | 1242 W | /kindergeburtstag/geburtstag-in-recklinghausen/
+   15.6 km | 18 Links |  828 W | /kinderzauberer/kinderzauberer-in-recklinghausen/
+   16.8 km | 19 Links | 1586 W | /clown/clownshow/clown-in-dinslaken/
+   16.8 km | 22 Links | 1514 W | /kindergeburtstag/geburtstag-in-dinslaken/
+   16.8 km | 11 Links |  993 W | /kinderzauberer/kinderzauberer-in-dinslaken/
+   16.9 km | 21 Links |  872 W | /clown/clownshow/clown-in-herne/
+   16.9 km | 21 Links |  882 W | /kindergeburtstag/geburtstag-in-herne/
+   16.9 km | 13 Links | 1014 W | /kinderzauberer/kinderzauberer-in-herne/
+     17 km | 21 Links |  907 W | /clown/clownshow/clown-in-muelheim/
+     17 km | 21 Links | 1194 W | /kindergeburtstag/geburtstag-in-muelheim/
+     17 km | 10 Links |  990 W | /kinderzauberer/kinderzauberer-in-muelheim/
+   18.5 km | 24 Links |  982 W | /clown/clownshow/clown-in-bochum/
+   18.5 km | 23 Links | 1388 W | /kindergeburtstag/geburtstag-in-bochum/
+   18.5 km | 19 Links |  937 W | /kinderzauberer/kinderzauberer-in-bochum/
+   21.3 km | 26 Links |  978 W | /clown/clownshow/clown-in-duisburg/
+   21.3 km | 24 Links | 1505 W | /kindergeburtstag/geburtstag-in-duisburg/
+   21.3 km | 17 Links |  995 W | /kinderzauberer/kinderzauberer-in-duisburg/
+   22.6 km |  2 Links |  864 W | /clown/clownshow/clown-in-castrop-rauxel/
+   22.6 km | 19 Links | 1161 W | /kindergeburtstag/geburtstag-in-castrop-rauxel/
+   22.6 km |  2 Links |  913 W | /kinderzauberer/kinderzauberer-in-castrop-rauxel/
+   23.9 km | 17 Links |  753 W | /clown/clownshow/clown-in-haltern/
+   23.9 km |  7 Links | 1060 W | /kinderzauberer/kinderzauberer-in-haltern/
+   26.5 km | 11 Links |  924 W | /clown/clownshow/clown-in-datteln/
+   26.5 km | 18 Links | 1492 W | /kindergeburtstag/geburtstag-in-datteln/
+   26.5 km |  9 Links |  929 W | /kinderzauberer/kinderzauberer-in-datteln/
+   27.4 km |  3 Links |  863 W | /clown/clownshow/clown-in-wesel/
+   27.4 km | 21 Links | 1127 W | /kindergeburtstag/geburtstag-in-wesel/
+   27.4 km |  2 Links |  921 W | /kinderzauberer/kinderzauberer-in-wesel/
+   27.7 km |  2 Links |  887 W | /clown/clownshow/clown-in-moers/
+   27.7 km | 22 Links |  913 W | /kindergeburtstag/geburtstag-in-moers/
+   27.7 km |  9 Links | 1221 W | /kinderzauberer/kinderzauberer-in-moers/
+     29 km |  2 Links |  862 W | /clown/clownshow/clown-in-waltrop/
+     29 km | 18 Links | 1084 W | /kindergeburtstag/geburtstag-in-waltrop/
+     29 km |  2 Links |  915 W | /kinderzauberer/kinderzauberer-in-waltrop/
+   33.7 km | 15 Links | 1041 W | /blog/zaubershow-in-dortmund/
+   33.7 km | 25 Links |  873 W | /clown/clownshow/clown-in-dortmund/
+   33.7 km | 24 Links | 1379 W | /kindergeburtstag/geburtstag-in-dortmund/
+   33.7 km | 23 Links | 1006 W | /kinderzauberer/kinderzauberer-in-dortmund/
+   40.4 km | 19 Links |  953 W | /clown/clownshow/clown-in-duesseldorf/
+   40.4 km | 20 Links | 1144 W | /kindergeburtstag/geburtstag-in-duesseldorf/
+   40.4 km |  9 Links | 1101 W | /kinderzauberer/kinderzauberer-in-duesseldorf/
+  Ohne Koordinaten: rheinberg-mit-clown-zauberer, freiheit, rheinberg, prerow-ein-unvergesslicher-tag-fuer-die-ganze-familie, duisburg-midsommarfest, xanten, haltern-am-see
+
+--- Title-Laenge ausserhalb 30-60 ---
+   26  /blog/haltern-clown-in-freiheit/  ::  Haltern: Clown in Freiheit
+   26  /blog/pantomime-bei-extraschicht/  ::  Pantomime bei EXTRASCHICHT
+   62  /blog/sommerfest-kc-asoria-mit-clown-zauberer-liar-in-gelsenkirchen/  ::  Sommerfest KC Astoria mit Clown Zauberer LIAR in Gelsenkirchen
+   28  /blog/zaubershow-in-dortmund/  ::  Zaubershow heute in Dortmund
+   29  /clown/clownshow/clown-in-castrop-rauxel/  ::  Clown Castrop-Rauxel | Buchen
+   62  /clown/glitzer-tattoo/  ::  Glitzer Tattoos Kindergeburtstag | NRW | Ab 40€ mit Zaubershow
+   62  /kinderzauberer/kinderzauberer-in-castrop-rauxel/  ::  Zauberer Kindergeburtstag Castrop-Rauxel | Kinderzauberer LIAR
+   61  /kinderzauberer/kinderzauberer-in-gelsenkirchen/  ::  Zauberer Kindergeburtstag Gelsenkirchen | Kinderzauberer LIAR
+   62  /kinderzauberer/kinderzauberer-in-recklinghausen/  ::  Zauberer Kindergeburtstag Recklinghausen | Kinderzauberer LIAR

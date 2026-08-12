@@ -33,6 +33,8 @@ Ein Clown lebt von der Komik des Scheiterns: Dinge fallen um, gehen schief, der 
 
 Ein Clown ist außerdem die richtige Wahl, wenn die Gruppe sehr gemischt ist oder viel Bewegungsdrang hat: Clownerie funktioniert auch, wenn nicht alle Kinder still sitzen. Auf Stadtteilfesten und Feiern in [Gelsenkirchen](/clown/clownshow/clown-in-gelsenkirchen/) erlebe ich regelmäßig, wie die Clownerie auch die Kinder einfängt, die bei einer reinen Zaubershow nach zehn Minuten zappelig würden.
 
+Die stillste Spielart dieser Kunst ist die Pantomime: kein Wort, nur Körpersprache — auf Stadtfesten und Weihnachtsmärkten bin ich oft genau so unterwegs. Eindrücke davon sammle ich in der Kategorie [Pantomime NRW](/blog/kategorie/pantomime-nrw/).
+
 Ein ehrliches Wort zum Thema Clown-Angst: Ja, es gibt Kinder, die Clowns unheimlich finden — meist geht das auf grelle Masken und Gruselclown-Bilder zurück. Ich arbeite deshalb bewusst ohne gruselige Maske und mit dezentem Auftritt: Die Figur ist ein liebenswerter Tollpatsch zum Anfassen, kein geschminktes Fabelwesen. Wenn Sie wissen, dass ein Gastkind empfindlich ist, sagen Sie es mir vorher — ich hole solche Kinder behutsam ab, und in aller Regel lachen genau sie am Ende am lautesten.
 
 ## Wann ist ein Zauberer die bessere Wahl? 🎩

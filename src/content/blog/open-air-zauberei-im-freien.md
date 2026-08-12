@@ -4,7 +4,7 @@ seoTitle: "Zaubershow im Freien: Open-Air-Tipps | LIAR"
 description: "Zaubershow im Freien planen in NRW – Tipps zu Wetter, Untergrund, Sonne und Wind vom erfahrenen Open Air Magier Clown Zauberer LIAR."
 publishDate: 2026-05-19
 heroImage: "https://liar-entertainer.com/blog-images/open-air-zauberei-im-freien/cover.jpg"
-heroImageAlt: "Open-Air-Zauberei: Wie funktioniert eine Zaubershow im Freien? Cover"
+heroImageAlt: "Zaubershow im Freien: Clown Zauberer LIAR zaubert unter freiem Himmel"
 categories: ["Feste", "Saisonal", "Zaubershow", "Probleme"]
 tags: ["zaubershow-im-freien"]
 author: "Michaël Prescler"
@@ -89,4 +89,6 @@ Outdoor-Zauberei wirkt auf jedes Alter anders – und ich passe meine Show entsp
 
 Bei Kindergartenkindern setze ich draußen besonders auf große, eindeutige Effekte: bunte Tücher, Plüschtiere, lautmalerische Zaubersprüche. Die Aufmerksamkeitsspanne ist draußen kürzer (Schmetterling schlägt Zauberer, sobald einer vorbeiflattert) – deshalb halte ich die Show für diese Altersgruppe kompakter und baue besonders viele Mitmach-Momente ein, damit alle Kinder bei der Sache bleiben.
 
-![Pantomime (12).jpg](https://liar-entertainer.com/blog-images/open-air-zauberei-im-freien/inline-2.jpg)
+![Clown Zauberer LIAR als Pantomime bei einem Open-Air-Auftritt](https://liar-entertainer.com/blog-images/open-air-zauberei-im-freien/inline-2.jpg)
+
+Draußen arbeite ich häufig auch ganz ohne Worte: Als [Walk-Act](/clown/walk-act/) und Pantomime bewege ich mich zwischen den Gästen, statt auf einer Bühne zu stehen. Wie das bei Stadtfesten und Weihnachtsmärkten aussieht, zeigen die Berichte in der Kategorie [Pantomime NRW](/blog/kategorie/pantomime-nrw/).
