@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:seo": "node scripts/seo-assertions.mjs"
+    "test:seo": "node scripts/seo-assertions.mjs",
+    "test:struktur": "node scripts/hero-invarianten.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
