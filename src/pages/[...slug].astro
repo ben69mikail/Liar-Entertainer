@@ -1083,7 +1083,7 @@ function buildKeywords(): string {
 const pageKeywords = buildKeywords();
 
 const schemas = [
-  isCityPage && cityName ? { '@context': 'https://schema.org', '@type': 'Service', name: `Clown Zauberer in ${cityName}`, serviceType: 'Kinderunterhaltung', areaServed: { '@type': 'City', name: cityName }, provider: { '@type': 'LocalBusiness', name: 'Clown Zauberer LIAR', url: 'https://liar-entertainer.com', telephone: '+491721517578' } } : null,
+  isCityPage && cityName ? { '@context': 'https://schema.org', '@type': 'Service', name: `Clown Zauberer in ${cityName}`, serviceType: 'Kinderunterhaltung', areaServed: { '@type': 'City', name: cityName }, provider: { "@id": "https://liar-entertainer.com/#business" } } : null,
   isBlogPost ? { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: seoTitle, description: rawDesc, image: heroImg.startsWith('http') ? heroImg : `https://liar-entertainer.com${heroImg}`, author: { '@type': 'Person', '@id': 'https://liar-entertainer.com/#person', name: 'Michaël Prescler', url: 'https://liar-entertainer.com/ueber-mich/' }, publisher: { '@id': 'https://liar-entertainer.com/#business' }, mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl }, datePublished: page.date, dateModified: page.date } : null,
 ].filter(Boolean);
 ---

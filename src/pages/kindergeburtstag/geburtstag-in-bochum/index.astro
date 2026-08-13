@@ -18,12 +18,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Kindergeburtstag mit Clown Zauberer in Bochum',
   description: seoDescription,
-  provider: {
-    '@type': 'LocalBusiness',
-    name: 'Clown Zauberer LIAR',
-    url: 'https://liar-entertainer.com',
-    telephone: '+491721517578',
-  },
+  provider: { "@id": "https://liar-entertainer.com/#business" },
   areaServed: { '@type': 'City', name: 'Bochum' },
   offers: { '@type': 'Offer', price: '150', priceCurrency: 'EUR', description: '40 Minuten Zaubershow' },
 };

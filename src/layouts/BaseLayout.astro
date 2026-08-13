@@ -85,6 +85,11 @@ const localBusinessSchema = {
     "jobTitle": "Clown, Zauberer & Entertainer",
     "description": "Michaël Prescler, Künstlername LIAR, ist seit 2009 hauptberuflich Clown und Zauberer in Gladbeck (NRW). Er spielt rund 400 Shows pro Jahr und arbeitet auf Deutsch und Französisch.",
     "url": "https://liar-entertainer.com/ueber-mich/",
+    // Audit Runde 2, Massnahme A1 (12.08.2026): aus dem entfernten zweiten
+    // Person-Knoten in index.astro hierher gezogen, damit die Information
+    // erhalten bleibt, aber an genau einer Entitaet haengt. Ballonmodellage
+    // bewusst nicht uebernommen (abgewertete Zusatzleistung).
+    "knowsAbout": ["Kinderzauberer", "Zaubershow für Kinder", "Kindergeburtstag", "Clownerie", "Zauberei", "Close-up Magie"],
     "knowsLanguage": ["de", "fr"],
     "birthPlace": { "@type": "Country", "name": "Frankreich" },
     "hasOccupation": {
