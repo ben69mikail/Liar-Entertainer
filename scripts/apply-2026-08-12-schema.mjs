@@ -16,8 +16,11 @@
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('../', import.meta.url).pathname.replace(/\/$/, '');
+// fileURLToPath statt .pathname - siehe hero-invarianten.mjs: unter Windows
+// entstuende sonst "C:\C:\Users\...".
+const ROOT = fileURLToPath(new URL('../', import.meta.url)).replace(/[\\/]+$/, '');
 const PAGES = join(ROOT, 'src', 'pages');
 const BUSINESS_ID = 'https://liar-entertainer.com/#business';
 

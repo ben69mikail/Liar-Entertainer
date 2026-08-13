@@ -10,10 +10,14 @@ import { createServer } from 'node:http';
 import { readFile, mkdir } from 'node:fs/promises';
 import { existsSync, statSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 
-const ROOT = new URL('../dist/', import.meta.url).pathname;
-const SHOTS = new URL('../.fab-shots/', import.meta.url).pathname;
+// fileURLToPath statt .pathname: unter Windows liefert .pathname "/C:/Users/..."
+// mit fuehrendem Slash, woraus "C:\C:\Users\..." wird. Gleiche Falle wie in
+// hero-invarianten.mjs; redesign-tests.mjs umgeht sie mit einem eigenen Regex.
+const ROOT = fileURLToPath(new URL('../dist/', import.meta.url));
+const SHOTS = fileURLToPath(new URL('../.fab-shots/', import.meta.url));
 const PORT = 4399;
 
 const MIME = {

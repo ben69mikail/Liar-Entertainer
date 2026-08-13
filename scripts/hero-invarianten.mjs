@@ -19,8 +19,12 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const DIST = new URL('../dist/', import.meta.url).pathname.replace(/\/$/, '');
+// fileURLToPath statt .pathname: Unter Windows liefert .pathname "/C:/Users/..."
+// mit fuehrendem Slash. Beim Zusammenbauen wird daraus "C:\C:\Users\..." und
+// readdirSync bricht mit ENOENT ab. Unter Linux faellt das nicht auf.
+const DIST = fileURLToPath(new URL('../dist/', import.meta.url)).replace(/[\\/]+$/, '');
 
 const walk = (dir, out = []) => {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
