@@ -2,13 +2,6 @@
   "_doc": "Gedaechtnis des SEO-Wellen-Autopiloten. Wird bei jedem Lauf gelesen und am Ende aktualisiert (per GitHub-MCP create_or_update_file auf diesen Pfad, sha mitgeben).",
   "started": "2026-06-12",
   "current_wave": 4,
-  "NACHTRAG_2026_09_01": {
-    "sachverhalt": "Waehrend Wochen-Check #9 hat der Inhaber um 09:45 UTC den Commit dafcf11 'seo(v7.1): Pantomime-Link direkt auf pantomime-la-france.eu + Referral-Zuordnung' auf main gepusht - exakt zwischen meinem Wochenverlauf-Commit (b2b9c3b, 09:44) und meinem State-Commit (5519695, 09:46).",
-    "inhalt_des_inhaber_commits": "Header-Nav 'Pantomime' zeigt jetzt direkt auf https://www.pantomime-la-france.eu/ statt auf die nur per 301 erreichbare Subdomain pantomime.liar-entertainer.com (kein Redirect-Hop mehr, voller Link-Wert). rel='noopener noreferrer' -> rel='noopener' bei externen Nav-Links (noreferrer unterdrueckte die Referral-Zuordnung in GA4 der Zielseite). Footer 'Hauptseiten': descriptiver Cross-Link 'Pantomime & Walk Act in NRW' ergaenzt.",
-    "korrektur": "Die Repo-Guard-Aussage im Wochenverlauf-Snapshot #9 ('kein Inhaber-Commit seit 15.08.') war zum Pruefzeitpunkt 09:44 korrekt, ist seit 09:45 aber ueberholt. KEIN Konflikt entstanden: der Inhaber hat Layout-/Nav-Dateien angefasst, ich ausschliesslich .seo-autopilot/*.json, und mein Lauf hatte ohnehin KEINEN Code-Commit vorgesehen.",
-    "konsequenz": "Der Inhaber ist ab 01.09. wieder aktiv. Die Regel 'waehrend laufender Inhaber-Arbeit keine autonomen Code-Aenderungen' gilt damit fuer die naechsten Laeufe unveraendert weiter. Naechster Lauf: pruefen, ob dafcf11 sauber deployed ist (Header-Link live auf pantomime-la-france.eu, HTTP 200 ohne Hop) und ob weitere Inhaber-Commits folgten.",
-    "lehre": "REPO-GUARD IST EIN ZEITPUNKT, KEIN ZUSTAND. Bei Laeufen mit mehreren Commits kann ein Fremdcommit dazwischenrutschen. Vor dem LETZTEN Commit eines Laufs den Guard erneut pruefen - genau so wurde dafcf11 hier entdeckt (Parent-sha des eigenen Commits war nicht der erwartete)."
-  },
   "BLOCKER_DEPLOY": {
     "status": "GELOEST 2026-06-17. Inhaber hat IONOS_SFTP_REMOTE korrigiert; ab jetzt gilt wieder: 1 Push = 1 Live-Deploy. 2026-06-26 RE-VERIFIZIERT.",
     "historie": "12.06.-17.06. lieferte liar-entertainer.com eingefroren den 12.06.-Build. Ursache: SFTP-Upload-Ziel != Domain-Docroot. KEIN Code-/Build-Fehler.",
@@ -21,87 +14,94 @@
     "entscheidung_status": "OFFEN beim Inhaber. Bis dahin: liar-entertainer.com inkl. /zauberer/* /kinderzauberer/* normal weiteroptimieren (Welle 4).",
     "migration_status": "NICHT_BEGONNEN",
     "redirect_regel": "Autopilot setzt NIEMALS eigenmaechtig 301/Canonical auf ODER von zauberer-liar.de. Nur auf explizites Inhaber-Signal.",
-    "weitere_domains": "pantomime-la-france.eu = eigene Inhaber-Domain (Pantomime/Walk Act), seit 01.09. direkt aus Header-Nav + Footer verlinkt (dafcf11). Alte Subdomain pantomime.liar-entertainer.com laeuft nur noch per 301. Autopilot fasst auch diese Domain NICHT eigenmaechtig an."
+    "weitere_domains": "pantomime-la-france.eu = eigene Inhaber-Domain (Pantomime/Walk Act), seit 01.09. direkt aus Header-Nav (Desktop + Mobile) und Footer verlinkt (dafcf11). Am 03.09. live verifiziert: 3 Links, rel='noopener' ohne noreferrer, HTTP 200 bei num_redirects=0, alte Subdomain pantomime.liar-entertainer.com 0x im HTML. Autopilot fasst auch diese Domain NICHT eigenmaechtig an."
   },
   "wave_progress": {
     "welle_1_sitemap": "DONE_LIVE_VERIFIED (commit d0d2a58) - sitemap.xml jetzt 142 URLs.",
     "welle_2_h1_titles": "DONE (8f093d4/a33baac/417b965) - seoTitle <=60 Zeichen fuer 6 Artikel",
     "welle_3_breadcrumb_danke": "DONE - Breadcrumb flaechendeckend live; danke.astro geloescht.",
-    "welle_5_gsc_fehler": "WIRKT NACHHALTIG - Stand 01.09. (Datenstand ~26.08.): Nicht indexiert 322 (Ausgang 12.06.: 885 = -563, neuer Bestwert), Gecrawlt-nicht-indexiert 59 (Ausgang 402 = -343), 404 109 (Ausgang 302), Weiterleitung 117 (Bucket-Wanderung, s.u.), Indexiert 123 (dritte Woche in Folge steigend). robots.txt-Fix (1376073) + .htaccess-Legacy-Regeln (3b76735) wirken weiter. Wartephase, kein Eingriff.",
-    "welle_4_laufend": "AKTIV, aber faktisch vom Inhaber ueberholt. M1-M4 alle DONE+LIVE. Wochen-Check #9 (01.09.): 'clown kindergeburtstag' Pos 6,4 (10,6->10,4->9,6->9,1->6,4) = groesster Einzelsprung des Verlaufs, Richtung Top 5. 'zauberer kindergeburtstag' 17,3->16,3 = erste Verbesserung seit Juni, noch Seite 2. Beides OHNE autonomen Eingriff -> die Inhaber-PRs #2-#6 (10.-13.08.) schlagen in Woche 3 nach Merge durch. sameAs weiter blockiert (braucht Inhaber-URLs)."
-  },
-  "gsc_leistung_2026_08_15": {
-    "datenstand": "~2026-08-13",
-    "zeitraum": "3 Monate (14.05.-13.08.)",
-    "klicks": 1970,
-    "impressionen": 83500,
-    "ctr": "2.4%",
-    "durchschnittsposition": 11.4,
-    "vergleich": "Check #7 (06.08.) -> #8 (15.08.): Klicks 2040->1970 (-70), Impr 84400->83500 (-900), CTR 2,4% EXAKT stabil, Pos 11,4 EXAKT stabil = reine Fensterrotation, KEIN Ranking-Regress.",
-    "fazit": "Leistung stabil, Rueckgang rein technisch (Fenster)."
-  },
-  "gsc_indexierung_2026_08_15": {
-    "datenstand": "~2026-08-09",
-    "nicht_indexiert": 349,
-    "indexiert": 122,
-    "gruende": {
-      "nicht_gefunden_404": { "wert": 128, "validierung": "Fehlgeschlagen" },
-      "seite_mit_weiterleitung": { "wert": 99, "validierung": "Fehlgeschlagen" },
-      "gecrawlt_nicht_indexiert": { "wert": 79, "validierung": "Fehlgeschlagen" },
-      "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-      "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-      "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-      "gefunden_zurzeit_nicht_indexiert": { "wert": 23, "validierung": "Bestanden" },
-      "soft_404": { "wert": 0, "validierung": "Bestanden" }
-    },
-    "fazit": "Jede Fehlerklasse faellt oder ist stabil. Keine neue Auffaelligkeit. Kein Eingriff."
+    "welle_5_gsc_fehler": "WIRKT NACHHALTIG - Stand 03.09. (Datenstand weiter ~26.08.): Nicht indexiert 322 (Ausgang 12.06.: 885 = -563, Bestwert), Gecrawlt-nicht-indexiert 59 (Ausgang 402 = -343), 404 109 (Ausgang 302), Weiterleitung 117 (Bucket-Wanderung, Rueckgang noch nicht messbar), Indexiert 123. NEU am 03.09.: Umleitungsfehler-Validierung von 'Gestartet' auf 'BESTANDEN' gewechselt = Validierungsdurchlauf erfolgreich abgeschlossen. robots.txt-Fix (1376073) + .htaccess-Legacy-Regeln (3b76735) wirken weiter. Wartephase, kein Eingriff.",
+    "welle_4_laufend": "AKTIV, aber faktisch vom Inhaber ueberholt. M1-M4 alle DONE+LIVE. Stand #9/#10: 'clown kindergeburtstag' Pos 6,4 (10,6->10,4->9,6->9,1->6,4), 'zauberer kindergeburtstag' 17,3->16,3, beides OHNE autonomen Eingriff. sameAs weiter blockiert (braucht Inhaber-URLs)."
   },
   "gsc_leistung_2026_09_01": {
-    "datenstand": "~2026-08-29/30 (vor 7,5 Std aktualisiert)",
+    "datenstand": "~2026-08-29/30",
     "zeitraum": "3 Monate (30.05.-29.08.)",
     "klicks": 1930,
     "impressionen": 86800,
     "ctr": "2.2%",
     "durchschnittsposition": 11.2,
-    "vergleich": "Check #8 (15.08.) -> #9 (01.09., 17 Tage): Klicks 1970->1930 (-40), Impressionen 83500->86800 (+3300 = HOECHSTWERT des Verlaufs, Ausgang 12.06.: 82400), CTR 2,4->2,2%, Position 11,4->11,2 (VERBESSERT). Der CTR-Rueckgang ist die Rechenfolge des Impressionsanstiegs bei konstanten Klicks - die verbesserte Position belegt, dass es KEIN Ranking-Verlust ist.",
-    "marken_keywords_top1": [
-      "clown zauberer liar (49 Klicks/164 Impr, CTR 29,9%, Pos 1,1)",
-      "clown liar (38/85, CTR 44,7%, Pos 1,1)",
-      "zauberer liar (35/72, CTR 48,6%, Pos 1,0)"
-    ],
+    "vergleich": "Check #8 (15.08.) -> #9 (01.09., 17 Tage): Klicks 1970->1930 (-40), Impressionen 83500->86800 (+3300 = Hoechstwert), CTR 2,4->2,2%, Position 11,4->11,2 (VERBESSERT). CTR-Rueckgang = Rechenfolge des Impressionsanstiegs, kein Ranking-Verlust.",
     "chance_high_impr_low_click": [
-      "zauberer kindergeburtstag: 1352 Impr/16 Klicks/CTR 1,2%/Pos 16,3 (ERSTE Verbesserung seit Juni: 17,3->16,3, Klicks 12->16; noch Seite 2)",
-      "clown kindergeburtstag: 393/14/CTR 3,6%/Pos 6,4 (GROSSER SPRUNG 9,1->6,4, Richtung Top 5, ohne autonomen Eingriff)",
+      "zauberer kindergeburtstag: 1352 Impr/16 Klicks/CTR 1,2%/Pos 16,3 (erste Verbesserung seit Juni: 17,3->16,3)",
+      "clown kindergeburtstag: 393/14/CTR 3,6%/Pos 6,4 (grosser Sprung 9,1->6,4)",
       "clown mieten kindergeburtstag in der naehe: 151/9/CTR 6,0%/Pos 4,1"
     ],
-    "saisonaler_cluster": [
-      "kindergeburtstag bei hitze: 486 Impr/32 Klicks/CTR 6,6%/Pos 5,5 (PLATEAU: 462/28 -> 483/32 -> 486/32)",
-      "kindergeburtstag bei heissem wetter: 214/15/CTR 7,0%/Pos 5,3",
-      "kindergeburtstag bei 30 grad: 106/10/CTR 9,4%/Pos 3,6",
-      "kindergeburtstag heisser tag: 48/9/CTR 18,8%/Pos 5,6"
-    ],
-    "fazit": "Bestes Impressionsniveau des Verlaufs bei verbesserter Position. Zwei Keyword-Spruenge ohne Eingriff. Hitze-Cluster am Plateau - ab September planmaessiger saisonaler Einbruch erwartet, NICHT als Regress werten."
+    "marken_keywords_top1": [
+      "clown zauberer liar (49/164, Pos 1,1)",
+      "clown liar (38/85, Pos 1,1)",
+      "zauberer liar (35/72, Pos 1,0)"
+    ]
   },
   "gsc_indexierung_2026_09_01": {
     "datenstand": "~2026-08-26 (FRISCH, ~6-Tage-Lag laeuft planmaessig)",
     "nicht_indexiert": 322,
     "indexiert": 123,
     "gruende": {
-      "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "99->117 (+18), Validierung zurueckgesetzt. Per curl an 8 Redirect-Klassen geprueft: alle .htaccess-Regeln arbeiten korrekt. = BUCKET-WANDERUNG des Legacy-Re-Crawls (404 -19, Gecrawlt-nicht-indexiert -20 in gleicher Groessenordnung). Erwartung: faellt nach dem Re-Crawl zurueck Richtung 100" },
+      "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "99->117 (+18). Per curl an 8 Redirect-Klassen geprueft: alle .htaccess-Regeln korrekt = BUCKET-WANDERUNG des Legacy-Re-Crawls. Erwartung: faellt nach dem Re-Crawl zurueck Richtung 100" },
       "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
       "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
-      "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden", "bewertung": "23->16 (-7): offene Frage aus #7/#8 positiv beantwortet, Crawl-Queue arbeitet sich ab" },
+      "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden" },
       "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
       "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-      "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet", "bewertung": "0->1, gewollte Ausschlussseite (Startseite ohne noindex, 404-Route liefert 404, /kontakt/danke/ per robots ausgeschlossen)" },
+      "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet", "bewertung": "gewollte Ausschlussseite" },
+      "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
+      "soft_404": { "wert": 0, "validierung": "Bestanden" },
+      "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+    },
+    "vergleich_12_06_ausgang": "Nicht indexiert 885->322 (-563). Bestwert des gesamten Verlaufs."
+  },
+  "gsc_leistung_2026_09_03": {
+    "datenstand": "~2026-08-31",
+    "zeitraum": "3 Monate (01.06.-31.08.)",
+    "klicks": 1920,
+    "impressionen": 87500,
+    "ctr": "2.2%",
+    "durchschnittsposition": 11.2,
+    "vergleich": "Check #9 (01.09.) -> #10 (03.09., 2 Tage): Klicks 1930->1920 (-10), Impressionen 86800->87500 (+700 = ERNEUT neuer Hoechstwert, Ausgang 12.06.: 82400), CTR 2,2% stabil, Position 11,2 stabil. Das 3-Monats-Fenster ist um 2 Tage weitergerueckt (30.05.-29.08. -> 01.06.-31.08.) und die Impressionen steigen trotzdem = Sichtbarkeit waechst weiter.",
+    "top_queries": [
+      "clown zauberer liar: 47 Klicks/149 Impr",
+      "clown liar: 37/87",
+      "kindergeburtstag bei hitze: 32/486",
+      "zauberer liar: 30/66",
+      "zauberer kindergeburtstag: 16/1355",
+      "kindergeburtstag bei heissem wetter: 15/214",
+      "clown kindergeburtstag: 14/394",
+      "clown mieten kindergeburtstag in der naehe: 10/154",
+      "kindergeburtstag bei 30 grad: 10/106",
+      "zauberer fuer kindergeburtstag: 9/705 (NEU in den Top 10)"
+    ],
+    "neue_beobachtung_zauberer_cluster": "'zauberer fuer kindergeburtstag' 705 Impr/9 Klicks/CTR 1,3% taucht erstmals in den Top-10-Queries auf. Zusammen mit 'zauberer kindergeburtstag' (1355/16) = 2060 Impressionen bei 25 Klicks (CTR 1,2%) = groesste ungenutzte Sichtbarkeitsflaeche der Site. Ranker vermutlich /kinderzauberer/. Kandidat Nr. 1 fuer den naechsten Check MIT Positionsdaten.",
+    "hinweis": "Positions-Metrikkachel liess sich in diesem Lauf nicht zuschalten (Klick auf 'Durchschnittliche Position' aenderte die Tabelle nicht). Positionswerte aus #9 bleiben gueltig (2 Tage alt).",
+    "fazit": "Impressionen erneut Hoechstwert bei stabiler Position und CTR. Trend positiv."
+  },
+  "gsc_indexierung_2026_09_03": {
+    "datenstand": "UNVERAENDERT ~2026-08-26 - der GSC-Datenstand ist in den 2 Tagen seit #9 nicht gewandert. Alle 10 Grund-Zeilen bitgleich. Bei ~6 Tagen Lag der Normalfall, NICHT als 'Trend gestoppt' lesen.",
+    "nicht_indexiert": 322,
+    "indexiert": 123,
+    "gruende": {
+      "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "unveraendert - die Rueckgangs-Erwartung aus #9 ist mangels neuem Datenstand noch nicht pruefbar" },
+      "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
+      "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
+      "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden" },
+      "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
+      "umleitungsfehler": { "wert": 9, "validierung": "BESTANDEN", "bewertung": "EINZIGE Veraenderung dieses Laufs: 'Gestartet' -> 'Bestanden'. Der seit Wochen laufende Validierungsdurchlauf ist erfolgreich abgeschlossen, die 9 Umleitungsfehler sind aus Google-Sicht behoben. Positiv, kein Handlungsbedarf, NICHT erneut anstossen." },
+      "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
       "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
       "soft_404": { "wert": 0, "validierung": "Bestanden" },
       "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
     },
     "summen_check": "117+109+59+16+10+9+1+1 = 322 stimmig",
-    "vergleich_check8_15_08": "Nicht indexiert 349->322 (-27), Indexiert 122->123 (+1, 3. Woche in Folge), 404 128->109 (-19), Gecrawlt-nicht-indexiert 79->59 (-20), Gefunden-zurzeit-nicht-indexiert 23->16 (-7), Weiterleitung 99->117 (+18, Bucket-Wanderung).",
-    "vergleich_12_06_ausgang": "Nicht indexiert 885->322 (-563). Neuer Bestwert des gesamten Verlaufs.",
-    "fazit": "Trend klar positiv. Einziger Anstieg (Weiterleitung) live verifiziert und planmaessig. Kein Eingriff."
+    "fazit": "Kein neues Indexierungssignal. Keine Fehlerklasse gestiegen. Ein Validierungslauf erfolgreich abgeschlossen. Kein Eingriff."
   },
   "config": {
     "schreibzugriff": "github-mcp fuer Commits; Loeschen per Claude-in-Chrome",
@@ -111,8 +111,8 @@
     "max_commits_pro_tag": 5,
     "repo_guard_fremdcommit_minuten": 90
   },
-  "commits_today": 3,
-  "last_run_date": "2026-09-01",
+  "commits_today": 2,
+  "last_run_date": "2026-09-03",
   "completed_steps": [
     "Setup 2026-06-12; Welle 1-3 erledigt; Welle-5 robots.txt-Fix (1376073).",
     "2026-06-27 bis 2026-07-02: KI-Antwort-Lead + Schema-Ausbau Add-on-Hubs live.",
@@ -122,65 +122,70 @@
     "2026-07-16 Wochen-Check #5: Nicht indexiert 601->546. Leistung 2080/CTR 2,5%. Kein Code-Commit.",
     "2026-07-23 Wochen-Check #6: Indexierung-Datenlag steht (10.07.). Leistung 2050/82300/CTR 2,5%. clown kindergeburtstag auditiert -> Startseite als Ranker. Kein Code-Commit.",
     "2026-08-06 Wochen-Check #7: Datenlag GEBROCHEN (~31.07.): Nicht indexiert 546->409, Indexiert 112->121, Gecrawlt-nicht-indexiert 235->116, 404 190->147. clown kindergeburtstag Pos 9,6 = SEITE 1. Kein Code-Commit; Wochenverlauf (5d9bcb4) + State.",
-    "2026-08-15 Wochen-Check #8 (Donnerstags-Lauf 13.08. fiel aus, Sa nachgeholt): Repo-Guard OK. Inhaber sehr aktiv 10.-13.08. (PR #2-#6, Build 151->168 Seiten). GSC: Nicht indexiert 409->349, Indexiert 121->122, Gecrawlt-nicht-indexiert 116->79, 404 147->128. Leistung 1970/83500/2,4%/11,4 (Fensterrotation). clown kindergeburtstag Pos 9,1. Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (2dd02b5) + State (244b5e2).",
-    "2026-09-01 Wochen-Check #9 (Laeufe 20.08. + 27.08. ausgefallen, 17-Tage-Luecke zusammengefasst nachgeholt): Repo-Guard beim Start OK - neuester main-Commit war der eigene State-Commit 244b5e2 vom 15.08. Waehrend des Laufs pushte der Inhaber um 09:45 UTC dafcf11 (Pantomime-Link, s. NACHTRAG_2026_09_01) - kein Konflikt, getrennte Dateien. GSC-Indexierung (~26.08.): Nicht indexiert 349->322 (-27, seit Ausgang -563 = Bestwert), Indexiert 122->123 (3. Woche steigend), 404 128->109, Gecrawlt-nicht-indexiert 79->59, Gefunden-zurzeit-nicht-indexiert 23->16 (faellt endlich), Weiterleitung 99->117 (+18). Anstieg NICHT als Annahme abgehakt, sondern per curl an 8 Redirect-Klassen (301/410/200) als planmaessige Bucket-Wanderung verifiziert. Leistung (~29.08.): 1930/86800/2,2%/11,2 - Impressionen HOECHSTWERT, Position verbessert. clown kindergeburtstag 9,1->6,4 (groesster Einzelsprung des Verlaufs), zauberer kindergeburtstag 17,3->16,3 (erste Verbesserung seit Juni). Site-Health 10 URLs alle 200, Sitemap 142 URLs, robots.txt korrekt. KEIN Code-Commit (Trend in allen Kernmetriken positiv, AUDIT-VOR-EINGRIFF). Wochenverlauf (b2b9c3b, inkl. Rotation #1-#6 -> archiv_kompakt) + State (5519695) + Nachtrag. commits_today=3, davon 0 Code-Commits."
+    "2026-08-15 Wochen-Check #8 (nachgeholt): Repo-Guard OK. Inhaber sehr aktiv 10.-13.08. (PR #2-#6, Build 151->168 Seiten). GSC: Nicht indexiert 409->349, Indexiert 121->122, Gecrawlt-nicht-indexiert 116->79, 404 147->128. Leistung 1970/83500/2,4%/11,4 (Fensterrotation). clown kindergeburtstag Pos 9,1. Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (2dd02b5) + State (244b5e2).",
+    "2026-09-01 Wochen-Check #9 (Laeufe 20.08. + 27.08. ausgefallen, 17-Tage-Luecke nachgeholt): Indexierung (~26.08.): Nicht indexiert 349->322 (-27, seit Ausgang -563 = Bestwert), Indexiert 122->123, 404 128->109, Gecrawlt-nicht-indexiert 79->59, Gefunden-zurzeit-nicht-indexiert 23->16, Weiterleitung 99->117 (+18, per curl an 8 Redirect-Klassen als planmaessige Bucket-Wanderung verifiziert). Leistung (~29.08.): 1930/86800/2,2%/11,2 - Impressionen Hoechstwert, Position verbessert. clown kindergeburtstag 9,1->6,4, zauberer kindergeburtstag 17,3->16,3. KEIN Code-Commit. Wochenverlauf (b2b9c3b, Rotation #1-#6) + State (5519695) + Nachtrag (5f6620d) wegen Inhaber-Commit dafcf11 waehrend des Laufs.",
+    "2026-09-03 Wochen-Check #10 (regulaerer Do-Lauf, nur 2 Tage nach dem nachgeholten #9): Repo-Guard OK (neuester main-Commit 5f6620d vom 01.09., eigener Commit; keine weitere Inhaber-Aktivitaet seit dafcf11). GSC-Indexierung UNVERAENDERT (123/322, alle 10 Grund-Zeilen bitgleich) - Datenstand in 2 Tagen nicht gewandert, bei ~6-Tage-Lag erwartbar. EINZIGE Veraenderung: Umleitungsfehler-Validierung 'Gestartet' -> 'BESTANDEN' (9 Seiten) = Validierungsdurchlauf erfolgreich abgeschlossen. Leistung (~31.08.): 1920/87500/2,2%/11,2 - Impressionen ERNEUT neuer Hoechstwert (+700 ggue. #9) bei um 2 Tage weitergerucktem Fenster. NEUE BEOBACHTUNG: 'zauberer fuer kindergeburtstag' erstmals in den Top-10-Queries (705 Impr/9 Klicks/CTR 1,3%); Zauberer-Kindergeburtstag-Cluster gesamt 2060 Impr / 25 Klicks = groesste ungenutzte Flaeche. OFFENE VERIFIKATION ABGEARBEITET: Inhaber-Commit dafcf11 live bestaetigt (3 Pantomime-Links direkt auf www.pantomime-la-france.eu, HTTP 200 num_redirects=0, rel='noopener' ohne noreferrer, alte Subdomain 0x im HTML). Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (c41c645, Rotation #7) + State. commits_today=2, davon 0 Code-Commits."
   ],
   "review_due_date": "2026-07-17",
   "review_done": true,
   "offene_verifikation": [
-    "NEU: Inhaber-Commit dafcf11 (01.09.) live pruefen - Header-Nav 'Pantomime' muss ohne Redirect-Hop direkt auf https://www.pantomime-la-france.eu/ zeigen (HTTP 200), Footer-Link 'Pantomime & Walk Act in NRW' vorhanden, rel='noopener' ohne noreferrer.",
-    "Seite mit Weiterleitung 117 (99->117): naechster Check MUSS pruefen, ob der Zaehler nach dem Legacy-Re-Crawl wieder faellt (Erwartung: zurueck Richtung 100). Faellt er NICHT oder steigt weiter, dann erneut per curl Redirect-Ketten pruefen - dann waere es eine echte Kette/Schleife statt Bucket-Wanderung.",
+    "Seite mit Weiterleitung 117 (99->117): am 03.09. NOCH NICHT pruefbar (Datenstand nicht gewandert). Naechster Check MIT frischem Datenstand MUSS pruefen, ob der Zaehler nach dem Legacy-Re-Crawl faellt (Erwartung: zurueck Richtung 100). Faellt er NICHT oder steigt weiter, dann erneut per curl Redirect-Ketten pruefen - dann waere es eine echte Kette/Schleife statt Bucket-Wanderung.",
+    "NEU 03.09.: Zauberer-Kindergeburtstag-Cluster erheben. 'zauberer fuer kindergeburtstag' (705 Impr/9 Klicks/CTR 1,3%) ist neu in den Top-10-Queries; zusammen mit 'zauberer kindergeburtstag' (1355/16) sind das 2060 Impressionen bei 25 Klicks. Beim naechsten Check die POSITIONSSPALTE erzwingen und pruefen, ob 'zauberer fuer kindergeburtstag' eine eigene, von 16,3 abweichende Position hat. Falls ja UND besser: ein antwortfertiger Absatz / eine FAQ-Frage in genau dieser Formulierung auf /kinderzauberer/ waere der erste sauber begruendbare autonome Hebel seit Wochen.",
     "clown kindergeburtstag: Pos 10,6->10,4->9,6->9,1->6,4. Beobachten ob der Weg in die Top 5 weiterlaeuft. NICHT autonom nachfassen - der Ranker ist die Startseite und verbessert sich von allein.",
-    "zauberer kindergeburtstag: 16,2->16,6->17,0->17,4->17,3->17,3->16,3 = erstmals seit Juni wieder besser. Beobachten ob die Bewegung Richtung Seite 1 haelt. On-Page bleibt ausgereizt, externe Signale bleiben der Haupthebel.",
+    "zauberer kindergeburtstag: 17,3->16,3 = erstmals seit Juni wieder besser. Beobachten ob die Bewegung Richtung Seite 1 haelt. On-Page ausgereizt, externe Signale bleiben der Haupthebel.",
     "Gefunden - zurzeit nicht indexiert 23->16: faellt planmaessig weiter ab. Beobachten bis nahe 0.",
-    "Hitze-Cluster am Plateau (486 Impr): ab September saisonaler Einbruch ERWARTET. NICHT als Regress oder Ranking-Verlust fehldeuten."
+    "Hitze-Cluster am Plateau (486 Impr, am 03.09. unveraendert): der saisonale September-Einbruch hat NOCH NICHT eingesetzt. Wenn er kommt: NICHT als Regress oder Ranking-Verlust fehldeuten.",
+    "ERLEDIGT 03.09.: Inhaber-Commit dafcf11 live verifiziert (Pantomime-Links, kein Redirect-Hop, rel='noopener'). Aus der Liste gestrichen."
   ],
   "self_improvements": [
-    "REPO-GUARD IST EIN ZEITPUNKT, KEIN ZUSTAND (neu 01.09.): bei Laeufen mit mehreren Commits kann ein Fremdcommit dazwischenrutschen. Vor dem LETZTEN Commit den Guard erneut pruefen bzw. den Parent-sha der eigenen Antwort gegen den erwarteten Vorgaenger halten - genau so wurde dafcf11 entdeckt.",
+    "GSC-DATENSTAND VOR TREND-AUSSAGE PRUEFEN (verschaerft 03.09.): bei kurzen Abstaenden zwischen zwei Laeufen (hier 2 Tage bei ~6 Tagen Lag) sind identische Indexierungszahlen der NORMALFALL, kein Stillstand. Erst der Datenstand entscheidet, ob ueberhaupt ein Vergleich moeglich ist. Ohne neues Datensignal ist ein Code-Eingriff per Definition nicht datengetrieben -> kein Commit.",
+    "REPO-GUARD IST EIN ZEITPUNKT, KEIN ZUSTAND: bei Laeufen mit mehreren Commits kann ein Fremdcommit dazwischenrutschen. Vor dem LETZTEN Commit den Guard erneut pruefen bzw. den Parent-sha der eigenen Antwort gegen den erwarteten Vorgaenger halten - so wurde dafcf11 entdeckt.",
+    "VALIDIERUNGSSTATUS IST EINE EIGENE METRIK (neu 03.09.): auch wenn ALLE Zahlen unveraendert sind, kann sich der Validierungsstatus einer Fehlerklasse aendern ('Gestartet' -> 'Bestanden' bei Umleitungsfehler). Immer mitlesen - das ist oft das einzige neue Signal eines Kontrolllaufs.",
     "Schema/robots/Redirect-Wirkung IMMER gegen Live-Site pruefen (curl ODER Claude-in-Chrome DOM). javascript_tool kann JSON-LD direkt aus DOM parsen.",
+    "INHABER-COMMITS LIVE GEGENPRUEFEN statt nur der Commit-Message glauben: curl auf die Startseite + grep auf den geaenderten Selektor/Link, dazu num_redirects der Zielseite. So wurde dafcf11 am 03.09. in einem einzigen Bash-Aufruf vollstaendig verifiziert.",
     "Masterplan-Annahmen gegen Live-Ist pruefen; erst pruefen ob Massnahme schon umgesetzt.",
     "SANDBOX KANN AUSFALLEN. Fallback: keine build-abhaengige Aenderung ohne Build-Test; Live-Verify per Chrome; State per Write->Read->Push.",
     "TAEGLICHE CRON-LAEUFE FALLEN AUS wenn PC/App offline. 20.08. + 27.08. fielen aus (17 Tage) - dann im naechsten Lauf die Luecke ZUSAMMENGEFASST nachholen, nicht ignorieren.",
     "GIT-CLONE-FALLE: immer nach /tmp mit EINDEUTIGEM Namen klonen. Auch /tmp-Dateien mit eindeutigem Namen anlegen.",
     "PUSH-WORKFLOW: Transform per Python (assert count==1), Build-Test, push; danach git hash-object lokal vs. curl raw byte-genau. 1 Massnahme = 1 Commit.",
-    "GROSSE STATE-/VERLAUFSDATEIEN ROTIEREN: gsc-wochenverlauf.json muss beim Schreiben komplett als Volltext im MCP-Call uebergeben werden. Ab ~30 KB wird das teuer und fehleranfaellig. Loesung (01.09. angewandt): aeltere Snapshots zu 'archiv_kompakt' verdichten, nur die letzten 3 vollstaendig halten. Volltext bleibt ueber die Git-Historie abrufbar (letzter Volltext-Stand: 2dd02b5).",
+    "GROSSE STATE-/VERLAUFSDATEIEN ROTIEREN: gsc-wochenverlauf.json und state.json muessen beim Schreiben komplett als Volltext im MCP-Call uebergeben werden. Loesung: aeltere Snapshots zu 'archiv_kompakt' verdichten, nur die letzten 3 vollstaendig halten; im state.json den vorletzten gsc_*-Block rausrotieren, sobald er im Wochenverlauf archiviert ist. Volltext bleibt ueber die Git-Historie abrufbar (#1-#6: 2dd02b5; #7: b2b9c3b; #8-Bloecke im state: 5519695).",
     "City-Seiten sind EIGENE Dateien unter src/pages/.../*-in-*/ - NICHT [...slug].astro.",
     "City-Slug-Asymmetrie: Geburtstag 'haltern-am-see', Clown/Kinderzauberer 'haltern'. Bestand immer vorher pruefen.",
-    "GSC per Chrome: /search-console/index?resource_id=sc-domain:liar-entertainer.com bzw. /performance/search-analytics. IMMER tabs_context am Anfang. Verbunden: 11.07./16.07./23.07./06.08./15.08./01.09.",
+    "GSC per Chrome: /search-console/index?resource_id=sc-domain:liar-entertainer.com bzw. /performance/search-analytics. IMMER tabs_context am Anfang, nach navigate ~4-5 s warten, dann get_page_text. Tab am Ende schliessen. Verbunden: 11.07./16.07./23.07./06.08./15.08./01.09./03.09.",
     "CHROME-EXTENSION KANN MITTEN IM LAUF ABREISSEN ('not connected'). Fix: ~20 s warten, dann tabs_context_mcp{createIfEmpty:true} erneut -> NEUE tabGroup mit NEUER tabId; alte tabId ist tot.",
-    "GSC-LEISTUNGSTABELLE zeigt per Default nur Klicks+Impressionen. CTR und Position ueber die beiden rechten Metrik-Kacheln (ca. x=718 und x=873, y=220) zuschalten - erst dann liefert get_page_text Positionen pro Keyword.",
+    "GSC-LEISTUNGSTABELLE zeigt per Default nur Klicks+Impressionen. CTR und Position ueber die beiden rechten Metrik-Kacheln zuschalten. ACHTUNG (03.09.): der Klick per find->ref auf 'Durchschnittliche Position' hat die Tabelle NICHT umgestellt. Beim naechsten Mal stattdessen per Screenshot die Kachel-Koordinaten bestimmen und mit computer{left_click, coordinate} klicken (frueher funktionierend: ca. x=718 und x=873, y=220).",
     "GSC-Ausgangswerte (12.06.): 134 indexiert / 885 nicht indexiert; Gecrawlt-nicht-indexiert 402; Weiterleitung 163; 404 302. Leistung 1820/82400/2,2%/10,8.",
     "GSC-DATENLAG kann WOCHEN stehen: 18.06.-10.07. am 12.06.-Stand; 16.07.-30.07. am 10.07.-Stand; ab ~31.07. wieder normal (~6 Tage). Bei identischen Werten Datenstand-Datum pruefen, nicht als 'Trend gestoppt' fehldeuten.",
-    "GSC-Indexierung Verlauf (Nicht indexiert): 885(12.06.)->792->601(11.07.)->546(16.07.)->546(23.07., Lag)->409(06.08.)->349(15.08.)->322(01.09.). Indexiert 112->121->122->123.",
-    "GSC-Leistung Verlauf: 12.06.->29.08. Klicks 1820->1930 (Peak 2090); CTR 2,2->2,2% (Peak 2,5%); Impr 82400->86800 (Hoechstwert 29.08.); Pos 10,8->11,2.",
-    "BUCKET-WANDERUNG ERKENNEN (neu 01.09.): steigt EIN Nicht-Index-Grund, waehrend zwei andere in aehnlicher Groessenordnung fallen und die Gesamtsumme sinkt, ist es eine Umsortierung des Re-Crawls, kein neuer Defekt. Trotzdem IMMER per curl gegenpruefen, ob die Redirect-/410-Regeln noch korrekt antworten.",
-    "FENSTERROTATION ERKENNEN: fallen Klicks/Impressionen bei exakt gleicher CTR UND Position = Rotation des 3-Monats-Fensters, kein Regress. UMGEKEHRTER FALL (01.09.): faellt die CTR, waehrend Impressionen steigen und die Position sich VERBESSERT, ist das ebenfalls kein Regress, sondern Rechenfolge.",
+    "GSC-Indexierung Verlauf (Nicht indexiert): 885(12.06.)->792->601(11.07.)->546(16.07.)->546(23.07., Lag)->409(06.08.)->349(15.08.)->322(01.09.)->322(03.09., Datenstand unveraendert). Indexiert 112->121->122->123->123.",
+    "GSC-Leistung Verlauf: 12.06.->31.08. Klicks 1820->1920 (Peak 2090); CTR 2,2->2,2% (Peak 2,5%); Impr 82400->87500 (Hoechstwert 31.08.); Pos 10,8->11,2.",
+    "BUCKET-WANDERUNG ERKENNEN: steigt EIN Nicht-Index-Grund, waehrend zwei andere in aehnlicher Groessenordnung fallen und die Gesamtsumme sinkt, ist es eine Umsortierung des Re-Crawls, kein neuer Defekt. Trotzdem IMMER per curl gegenpruefen, ob die Redirect-/410-Regeln noch korrekt antworten.",
+    "FENSTERROTATION ERKENNEN: fallen Klicks/Impressionen bei exakt gleicher CTR UND Position = Rotation des 3-Monats-Fensters, kein Regress. UMGEKEHRTER FALL: faellt die CTR, waehrend Impressionen steigen und die Position sich verbessert, ist das ebenfalls kein Regress, sondern Rechenfolge.",
     "DOMAIN-STRATEGIE: EINE starke Domain bevorzugen. Autopilot aendert Domains NIE eigenmaechtig - gilt auch fuer pantomime-la-france.eu.",
     "DEPLOY-VERIFIKATION: Live-'last-modified' nach jedem Push. Deploy-Latenz ~3 Min, SFTP sequenziell.",
     "curl: www. gibt 301 -> immer -L. JSON-LD ueber ALLE ld+json-Bloecke pruefen. sleep >40s sprengt Bash-Timeout.",
     "SANDBOX HAT KEINEN GITHUB-TOKEN -> Push NUR ueber GitHub-MCP.",
     "list_commits per MCP sprengt bei perPage>=10 das Token-Limit und landet in einer Datei -> danach mit Grep auf '\"(message|date|sha)\":' filtern statt die Datei zu lesen. perPage=3 passt direkt in die Antwort.",
     "PREIS-POLICY (HART): 150 EUR NUR im Kindergeburtstag-Kontext. site-weites priceRange 'EUR EUR' im LocalBusiness-Schema OK.",
-    "KINDERZAUBERER-INDEX src/pages/kinderzauberer/index.astro: Ziel 'zauberer kindergeburtstag' (Pos 16,3, Seite 2, erstmals wieder in Bewegung). On-Page ausgereizt, braucht externe Signale.",
+    "KINDERZAUBERER-INDEX src/pages/kinderzauberer/index.astro: Ziel 'zauberer kindergeburtstag' (Pos 16,3, Seite 2, in Bewegung). NEU 03.09.: derselbe Ranker bedient vermutlich auch 'zauberer fuer kindergeburtstag' (705 Impr) - Cluster gesamt 2060 Impr bei 25 Klicks, groesste ungenutzte Flaeche der Site.",
     "KINDERGEBURTSTAG-HUB: ACHTUNG potenzielle Kannibalisierung mit /kinderzauberer/ auf 'Zauberer Kindergeburtstag NRW'.",
-    "CLOWN-KINDERGEBURTSTAG: Ranker = STARTSEITE. 01.09.: Pos 6,4 (von 10,6 seit Juli) ohne autonomen Eingriff. Konsolidierung nur in Inhaber-Koordination.",
+    "CLOWN-KINDERGEBURTSTAG: Ranker = STARTSEITE. Stand 01.09.: Pos 6,4 (von 10,6 seit Juli) ohne autonomen Eingriff. Konsolidierung nur in Inhaber-Koordination.",
     "SCHEMA-AUSBAU-STATUS: alle Add-on- + Haupt-Hubs DONE+LIVE. PHASE ABGESCHLOSSEN.",
-    "INHABER ARBEITET PARALLEL UND INTENSIV. Bei Edits IMMER frischen get_file_contents-Stand holen. Inhaber-Arbeiten: 17.-19.07. Batch D+E + DSGVO + Startseiten-Redesign (50124693) + 10 City-Pages; 30.07. Mobile-Hero (2e4d677); 10.-13.08. FUENF PRs (#2-#6); 01.09. dafcf11 (Pantomime-Link v7.1). Build 168 Seiten, Sitemap 142 URLs. Test-Suite 'npm run test:seo' (45 Assertions) vor eigenen Aenderungen laufen lassen.",
-    "SAISONALE CHANCE: 'kindergeburtstag bei hitze'-Cluster hat am 29.08. sein Plateau erreicht (486+214+106+48 Impr). Ab September bricht er saisonal ein - NICHT als Regress fehldeuten. Herbst-/Winter-Pendant waere der Weg, den Effekt zu konservieren.",
-    "AUDIT-VOR-EINGRIFF ZAHLT SICH AUS - dreifach bestaetigt (06.08., 15.08., 01.09.): 'clown kindergeburtstag' lief OHNE jeden autonomen Eingriff von Pos 10,6 auf 6,4.",
+    "INHABER ARBEITET PARALLEL UND INTENSIV. Bei Edits IMMER frischen get_file_contents-Stand holen. Inhaber-Arbeiten: 17.-19.07. Batch D+E + DSGVO + Startseiten-Redesign (50124693) + 10 City-Pages; 30.07. Mobile-Hero (2e4d677); 10.-13.08. FUENF PRs (#2-#6); 01.09. dafcf11 (Pantomime-Link v7.1, am 03.09. live verifiziert). Build 168 Seiten, Sitemap 142 URLs. Test-Suite 'npm run test:seo' (45 Assertions) vor eigenen Aenderungen laufen lassen.",
+    "SAISONALE CHANCE: 'kindergeburtstag bei hitze'-Cluster steht am Plateau (486+214+106+48 Impr, am 03.09. unveraendert). Der September-Einbruch kommt noch - NICHT als Regress fehldeuten. Herbst-/Winter-Pendant waere der Weg, den Effekt zu konservieren.",
+    "AUDIT-VOR-EINGRIFF ZAHLT SICH AUS - vierfach bestaetigt (06.08., 15.08., 01.09., 03.09.): 'clown kindergeburtstag' lief OHNE jeden autonomen Eingriff von Pos 10,6 auf 6,4.",
     "WAEHREND EINER INHABER-UMBAUWELLE KEINE autonomen Code-Commits. Wirkung erst ~2-3 Wochen spaeter in GSC messbar (bestaetigt: PRs 10.-13.08. schlagen erst im Check vom 01.09. sichtbar durch).",
     "GALERIE src/pages/galerie/index.astro: photoImages[]/presseImages[]. 15 Alts gefuellt (1d93906), LIVE.",
     "'Gefunden - zurzeit nicht indexiert' nach neuen Seiten-Batches = normale Crawl-Queue, KEIN Fehler. Bestaetigt: 23 -> 16, arbeitet sich planmaessig ab."
   ],
   "todos_fuer_michael": [
-    "STATUS 01.09. (Wochen-Check #9, holt die ausgefallenen Laeufe vom 20.08. und 27.08. mit nach): DER BESTE STAND SEIT PROJEKTSTART. 1) 'clown kindergeburtstag' ist von Position 9,1 auf 6,4 gesprungen - groesster Einzelsprung im ganzen Verlauf (Juli noch 10,6). Der Weg in die Top 5 ist realistisch. 2) 'zauberer kindergeburtstag' bewegt sich erstmals seit Juni wieder nach oben (17,3 -> 16,3, Klicks 12 -> 16). 3) Impressionen 86.800 = hoechster Wert des gesamten Verlaufs, Durchschnittsposition verbessert auf 11,2. Die CTR sieht mit 2,2% (vorher 2,4%) niedriger aus - KEIN Rueckschritt, sondern Mathematik: du wirst deutlich oefter angezeigt, bei gleicher Klickzahl sinkt dadurch der Prozentwert. 4) Indexierung 322 nicht indexierte Seiten (Start 12.06.: 885) = ebenfalls Bestwert; 'Indexiert' steigt die dritte Woche in Folge. 5) Deine fuenf Merges vom 10.-13.08. wirken genau jetzt sichtbar. Ich habe am Code NICHTS geaendert - alles laeuft in die richtige Richtung.",
-    "Dein Commit dafcf11 vom heutigen Vormittag (Pantomime-Link direkt auf pantomime-la-france.eu) kam waehrend meines Laufs rein - kein Konflikt, ich habe nur die beiden .seo-autopilot-Dateien angefasst. Ich pruefe beim naechsten Lauf, ob der Link live ohne Redirect-Hop sitzt.",
-    "WICHTIG FUER SEPTEMBER: dein Hitze-Cluster ('Kindergeburtstag bei Hitze' & Co., zusammen ~850 Impressionen) hat sein Plateau erreicht und wird jetzt saisonal einbrechen. Fallende Zahlen im September/Oktober sind normal und kein Fehler. Willst du den Effekt konservieren, waere ein Herbst-/Winter-Pendant der naechste sinnvolle Blogartikel ('Kindergeburtstag drinnen bei Regen', 'Kindergeburtstag im Winter', 'Indoor-Kindergeburtstag Ideen'). Sag Bescheid, dann setze ich ihn auf.",
-    "'clown kindergeburtstag' steht jetzt auf Pos 6,4 - fuer die Top 3 waere ein kurzer antwortfertiger Absatz auf der Startseite (Wer/Wo/Dauer/Alter) und/oder staerkere interne Verlinkung des Blogs 'Was kostet ein Clown fuer einen Kindergeburtstag' der naechste Hebel. Autonom fasse ich die Startseite nicht an, solange sie sich von allein verbessert.",
+    "STATUS 03.09. (Wochen-Check #10, Kontrolllauf 2 Tage nach #9): KEINE SCHLECHTEN NACHRICHTEN, und eine gute. 1) Deine Impressionen sind schon wieder gestiegen - 87.500 statt 86.800, erneut der hoechste Wert seit Projektstart (Juni: 82.400). Position bleibt bei 11,2. 2) Die Google-Validierung der 'Umleitungsfehler' ist von 'laeuft' auf 'BESTANDEN' gesprungen - der letzte offene Validierungsdurchlauf ist damit erfolgreich abgeschlossen. 3) Die Indexierungszahlen (123 indexiert / 322 nicht indexiert) sind identisch zu Dienstag - das liegt NUR daran, dass Google seine Daten mit rund 6 Tagen Verzoegerung liefert und seit meinem letzten Blick erst 2 Tage vergangen sind. Kein Stillstand, einfach noch keine neuen Zahlen. Ich habe am Code nichts geaendert.",
+    "Dein Pantomime-Umbau vom 01.09. ist live und sauber: alle drei Links (Desktop-Menue, Handy-Menue, Footer) zeigen jetzt direkt auf www.pantomime-la-france.eu, ohne Umweg ueber die alte Subdomain, und das rel='noopener' ohne 'noreferrer' sitzt - deine Referral-Zuordnung in GA4 der Pantomime-Seite funktioniert also. Punkt abgehakt.",
+    "NEUE CHANCE ENTDECKT: Die Suchanfrage 'Zauberer FUER Kindergeburtstag' taucht erstmals in deinen Top 10 auf - 705 Impressionen, aber nur 9 Klicks. Zusammen mit 'Zauberer Kindergeburtstag' (1.355 Impressionen, 16 Klicks) heisst das: Google zeigt dich bei diesen beiden Suchen 2.060 Mal an, und nur 25 Leute klicken. Das ist die mit Abstand groesste ungenutzte Flaeche deiner Seite. Ich pruefe naechste Woche mit frischen Positionsdaten, ob sich das mit einem kurzen, praezise formulierten Absatz auf /kinderzauberer/ heben laesst - vorher waere es geraten.",
+    "WICHTIG FUER SEPTEMBER: dein Hitze-Cluster ('Kindergeburtstag bei Hitze' & Co., zusammen ~850 Impressionen) steht unveraendert am Plateau, der saisonale Einbruch hat noch nicht eingesetzt. Wenn die Zahlen dort im September/Oktober fallen: normal, kein Fehler. Willst du den Effekt konservieren, waere ein Herbst-/Winter-Pendant der naechste sinnvolle Blogartikel ('Kindergeburtstag drinnen bei Regen', 'Kindergeburtstag im Winter', 'Indoor-Kindergeburtstag Ideen'). Sag Bescheid, dann setze ich ihn auf.",
+    "'clown kindergeburtstag' steht auf Pos 6,4 - fuer die Top 3 waere ein kurzer antwortfertiger Absatz auf der Startseite (Wer/Wo/Dauer/Alter) und/oder staerkere interne Verlinkung des Blogs 'Was kostet ein Clown fuer einen Kindergeburtstag' der naechste Hebel. Autonom fasse ich die Startseite nicht an, solange sie sich von allein verbessert.",
     "Entscheidung Domain-Strategie: (A) EMPFOHLEN - zauberer-liar.de per 301 auf liar-entertainer.com/zauberer/; ODER (B) Marken-Trennung mit 2 Domains. Bei Entscheidung Bescheid geben.",
     "Optional: Weitere offizielle Profile (YouTube-Kanal, golocal, eventpeppers, TikTok)? URLs nennen -> sameAs-Schema (aktuell blockiert Welle-4-sameAs-Ausbau).",
-    "'zauberer kindergeburtstag' (1352 Impressionen) haengt weiter auf Seite 2, bewegt sich aber erstmals wieder nach oben. On-Page ist ausgereizt - externe Signale (Backlinks, Branchenprofile, lokale Presse) bleiben der wirksamste Hebel.",
-    "HINWEIS ZUR AUTOMATIK: die Donnerstags-Laeufe am 20.08. und 27.08. sind ausgefallen (PC/App vermutlich aus). Kein Datenverlust - dieser Lauf hat die Luecke zusammengefasst nachgeholt. Falls das oefter passiert, lohnt ein Blick auf die Cron-/Autostart-Einstellung."
+    "'zauberer kindergeburtstag' (1.355 Impressionen) haengt weiter auf Seite 2, bewegt sich aber erstmals wieder nach oben. On-Page ist ausgereizt - externe Signale (Backlinks, Branchenprofile, lokale Presse) bleiben der wirksamste Hebel."
   ],
   "log": [
     "2026-06-12 bis 2026-06-26: Setup, Welle 1-3, robots.txt-Fix, KI-Antwort-Lead, 2 Reviews.",
@@ -191,10 +196,11 @@
     "2026-07-16 Wochen-Check #5: Nicht indexiert 601->546. Leistung 2080/83700/2,5%/11,4. Wochenverlauf (eb09f29).",
     "2026-07-23 Wochen-Check #6: Datenlag steht (10.07.). Leistung 2050/82300/2,5%/11,5. clown kindergeburtstag auditiert. Wochenverlauf (c7a67d3).",
     "2026-07-30: kein Wochen-Check-Lauf; Inhaber-Session mit GSC-Analyse + Mobile-Hero (2e4d677).",
-    "2026-08-06 Wochen-Check #7: Datenlag GEBROCHEN (~31.07.): Nicht indexiert 546->409, Indexiert 112->121, Gecrawlt-nicht-indexiert 235->116, 404 190->147. Leistung 2040/84400/2,4%/11,4. clown kindergeburtstag Pos 9,6 = SEITE 1. Kein Code-Commit. Wochenverlauf (5d9bcb4).",
+    "2026-08-06 Wochen-Check #7: Datenlag GEBROCHEN (~31.07.): Nicht indexiert 546->409, Indexiert 112->121. Leistung 2040/84400/2,4%/11,4. clown kindergeburtstag Pos 9,6 = SEITE 1. Kein Code-Commit. Wochenverlauf (5d9bcb4).",
     "2026-08-13: kein Wochen-Check-Lauf; Inhaber merged PR #5 und #6.",
-    "2026-08-15 Wochen-Check #8 (nachgeholt): Indexierung (~09.08.): Nicht indexiert 409->349, Indexiert 121->122, Gecrawlt-nicht-indexiert 116->79, 404 147->128, Weiterleitung 103->99. Leistung (~13.08.): 1970/83500/2,4%/11,4 = Fensterrotation. clown kindergeburtstag 9,1. Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (2dd02b5) + State (244b5e2).",
+    "2026-08-15 Wochen-Check #8 (nachgeholt): Indexierung (~09.08.): Nicht indexiert 409->349, Indexiert 121->122. Leistung (~13.08.): 1970/83500/2,4%/11,4 = Fensterrotation. clown kindergeburtstag 9,1. Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (2dd02b5) + State (244b5e2).",
     "2026-08-20 und 2026-08-27: kein Wochen-Check-Lauf (beide Donnerstage ausgefallen, Umgebung offline).",
-    "2026-09-01 Wochen-Check #9 (Di, holt 20.08.+27.08. nach): Repo-Guard beim Start OK (244b5e2 vom 15.08., eigener Commit). Indexierung (~26.08.): Nicht indexiert 349->322 (-27, seit Ausgang 885 = -563 Bestwert), Indexiert 122->123 (3. Woche steigend), 404 128->109 (-19), Gecrawlt-nicht-indexiert 79->59 (-20), Gefunden-zurzeit-nicht-indexiert 23->16 (-7), Weiterleitung 99->117 (+18, Validierung zurueckgesetzt), noindex 0->1, Soft-404 weiter 0. Weiterleitungs-Anstieg per curl an 8 Live-Redirect-Klassen geprueft (/category/clown/ 301, /tag/zauberer/ 301, /attachment/ 410, /feed/ 301, /sport/ 410, /content/ 301, /was-kostet-ein-clown/ 301, /kontakt/danke/ 200) - alle .htaccess-Regeln (3b76735) korrekt => planmaessige Bucket-Wanderung, kein Defekt. Leistung (~29.08.): 1930 Klicks / 86800 Impr (HOECHSTWERT) / CTR 2,2% / Pos 11,2 (verbessert). clown kindergeburtstag 9,1->6,4 (groesster Einzelsprung des Verlaufs), zauberer kindergeburtstag 17,3->16,3 (erste Verbesserung seit Juni), Marken-Keywords weiter Pos 1,0-1,1. Site-Health 10 URLs alle 200, Sitemap 142 URLs, robots.txt korrekt inkl. KI-Crawler-Allows. KEIN Code-Commit. Wochenverlauf (b2b9c3b, Rotation #1-#6 -> archiv_kompakt) + State (5519695) + Nachtrag. WAEHREND DES LAUFS: Inhaber-Commit dafcf11 um 09:45 UTC (Pantomime-Link v7.1) - kein Konflikt, s. NACHTRAG_2026_09_01. commits_today=3, davon 0 Code-Commits."
+    "2026-09-01 Wochen-Check #9 (Di, holt 20.08.+27.08. nach): Indexierung (~26.08.): Nicht indexiert 349->322 (seit Ausgang 885 = -563 Bestwert), Indexiert 122->123, 404 128->109, Gecrawlt-nicht-indexiert 79->59, Gefunden-zurzeit-nicht-indexiert 23->16, Weiterleitung 99->117 (per curl an 8 Live-Redirect-Klassen als planmaessige Bucket-Wanderung verifiziert). Leistung (~29.08.): 1930/86800/2,2%/11,2. clown kindergeburtstag 9,1->6,4, zauberer kindergeburtstag 17,3->16,3. KEIN Code-Commit. Wochenverlauf (b2b9c3b) + State (5519695) + Nachtrag (5f6620d): Inhaber-Commit dafcf11 kam um 09:45 UTC mitten in den Lauf, kein Konflikt.",
+    "2026-09-03 Wochen-Check #10 (regulaerer Do-Lauf, 2 Tage nach #9): Repo-Guard OK (5f6620d vom 01.09., eigener Commit; keine neue Inhaber-Aktivitaet). Indexierung UNVERAENDERT 123/322, alle 10 Grund-Zeilen bitgleich - GSC-Datenstand in 2 Tagen nicht gewandert (bei ~6-Tage-Lag erwartbar, KEIN Trendstillstand). EINZIGE Veraenderung: Umleitungsfehler-Validierung 'Gestartet' -> 'BESTANDEN' (9 Seiten), Validierungsdurchlauf erfolgreich abgeschlossen. Leistung (~31.08., Fenster 01.06.-31.08.): 1920 Klicks / 87500 Impr (ERNEUT Hoechstwert, +700) / CTR 2,2% / Pos 11,2 - Fenster 2 Tage weitergerueckt und Impressionen steigen trotzdem. NEU in den Top-10-Queries: 'zauberer fuer kindergeburtstag' 705 Impr / 9 Klicks / CTR 1,3%; Zauberer-Kindergeburtstag-Cluster gesamt 2060 Impr / 25 Klicks = groesste ungenutzte Flaeche -> als offene Verifikation fuer #11 dokumentiert (Positionsspalte erzwingen). Positionsspalte liess sich in diesem Lauf per find->ref-Klick NICHT zuschalten -> Workaround in self_improvements notiert. Offene Verifikation dafcf11 ABGEARBEITET: 3 Pantomime-Links live direkt auf www.pantomime-la-france.eu, HTTP 200 num_redirects=0, rel='noopener' ohne noreferrer, alte Subdomain 0x im HTML. Site-Health 10 URLs alle 200. KEIN Code-Commit (kein neues Datensignal, Trend positiv, Inhaber wieder aktiv). Wochenverlauf (c41c645, Rotation #7 -> archiv_kompakt) + State. commits_today=2, davon 0 Code-Commits."
   ]
 }
