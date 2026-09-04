@@ -49,9 +49,9 @@ Ein bewaehrtes Muster fuer eine kombinierte Feier mit 6-15 Personen, darunter 2-
 
 **14:30 Uhr** – Kaffee und Geburtstagstorte. Jetzt beginnt der Geburtstagsteil offiziell. Kerzen auspusten, Staendchen singen, kurzer Geschenke-Moment.
 
-**15:00-16:00 Uhr** – Kinderprogramm. Das ist der Zeitpunkt, an dem eine [Zaubershow](/leistungen/zaubershow/) oder eine Clownshow am besten wirkt: Die Kinder sind gegessen, die Erwachsenen haben ihren Kaffee und schauen entspannt zu.
+**15:00-16:00 Uhr** – Kinderprogramm. Das ist der Zeitpunkt, an dem eine [Zaubershow](/zauberer/zaubershow/) oder eine Clownshow am besten wirkt: Die Kinder sind gegessen, die Erwachsenen haben ihren Kaffee und schauen entspannt zu.
 
-**16:15 Uhr** – [Ballonmodellage](/leistungen/ballonmodellage/) oder freies Spiel. Die Erwachsenen haben jetzt Zeit fuer Gespraeche, die Kinder sind beschaeftigt.
+**16:15 Uhr** – [Ballonmodellage](/clown/ballonmodellage/) oder freies Spiel. Die Erwachsenen haben jetzt Zeit fuer Gespraeche, die Kinder sind beschaeftigt.
 
 **ab 17:00 Uhr** – Ausklang, Abendbrot locker, Verabschiedung.
 

@@ -61,7 +61,7 @@ Nach 45 Minuten Rennen brauchen auch sechsjährige Energiebündel eine Pause. Pl
 
 Kurze Antwort: Ja – unter ein paar Bedingungen. Eine Zaubershow im Park funktioniert hervorragend, wenn Sie einen halbwegs ruhigen Platz haben, auf dem sich die Kinder in einem Halbkreis setzen können. Ein schattiger Platz unter Bäumen oder ein Pavillon ist perfekt. Bei vollem Sonnenschein direkt auf die Kinder oder bei starkem Wind wird es schwieriger.
 
-Meine Show ist speziell auf Kinder zwischen 3 und 10 ausgelegt und dauert rund 40 Minuten – genau die richtige Länge für eine Outdoor-Feier, nach der die Kinder wieder frei spielen können. Besonders beliebt im Mai: die [Ballonmodellage](/leistungen/ballonmodellage/) im Anschluss. Jedes Kind bekommt sein individuelles Tier oder Schwert – das funktioniert draußen übrigens genauso gut wie drinnen, solange der Wind nicht zu stark ist.
+Meine Show ist speziell auf Kinder zwischen 3 und 10 ausgelegt und dauert rund 40 Minuten – genau die richtige Länge für eine Outdoor-Feier, nach der die Kinder wieder frei spielen können. Besonders beliebt im Mai: die [Ballonmodellage](/clown/ballonmodellage/) im Anschluss. Jedes Kind bekommt sein individuelles Tier oder Schwert – das funktioniert draußen übrigens genauso gut wie drinnen, solange der Wind nicht zu stark ist.
 
 Wichtig für die Planung: Im Park brauche ich eine Stromversorgung nicht zwingend, aber einen vereinbarten, geschützten Platz. Das klären wir im Vorfeld gemeinsam, damit es vor Ort keine Überraschungen gibt.
 
