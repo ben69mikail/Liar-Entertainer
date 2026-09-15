@@ -41,6 +41,16 @@ jobs:
       - name: Build Astro
         run: npm run build
 
+      - name: Gate — SEO-Assertions (45) gegen dist/
+        run: npm run test:seo
+
+      - name: Gate — Hero-/Struktur-Invarianten (10)
+        run: npm run test:struktur
+
+      - name: Gate — Seitenanzahl (Build darf nicht still schrumpfen)
+        run: |
+          n=$(find dist -name index.html | wc -l); echo "pages=$n"; test "$n" -ge 160
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
