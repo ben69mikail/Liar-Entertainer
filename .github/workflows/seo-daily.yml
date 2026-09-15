@@ -1,0 +1,108 @@
+name: SEO Daily Check
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 06:00 MESZ / 05:00 MEZ
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-daily
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Poppins font (für sharp/librsvg Overlay-Rendering)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends fontconfig
+          sudo mkdir -p /usr/share/fonts/truetype/poppins
+          for weight in Regular Medium SemiBold Bold ExtraBold; do
+            sudo curl -fsSL "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-${weight}.ttf" \
+              -o "/usr/share/fonts/truetype/poppins/Poppins-${weight}.ttf"
+          done
+          sudo fc-cache -f
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Regelwerke
+        id: rules
+        continue-on-error: true
+        run: |
+          set +e
+          {
+            echo "## Regelwerke (Build main)"
+            echo
+            echo '```'
+            npm run test:seo 2>&1 | tail -3; s1=${PIPESTATUS[0]}
+            npm run test:struktur 2>&1 | tail -3; s2=${PIPESTATUS[0]}
+            n=$(find dist -name index.html | wc -l); echo "Seiten gebaut: $n"
+            echo '```'
+          } > /tmp/rules.md
+          [ "$s1" = 0 ] && [ "$s2" = 0 ] && [ "$n" -ge 160 ] || exit 1
+
+      - name: Live-Check
+        id: live
+        continue-on-error: true
+        run: node scripts/daily-seo-check.mjs > /tmp/live.md
+
+      - name: GSC
+        id: gsc
+        continue-on-error: true
+        env:
+          GSC_SA_KEY: ${{ secrets.GSC_SA_KEY }}
+        run: node scripts/gsc-report.mjs > /tmp/gsc.md
+
+      - name: Deploy-Status
+        run: |
+          r=$(curl -s -H "authorization: Bearer ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/runs?per_page=1&branch=main")
+          echo "## Deploy" > /tmp/deploy.md
+          echo "$r" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const r=JSON.parse(s).workflow_runs?.[0];console.log(r?`Letzter Deploy: **${r.conclusion}** (${r.head_sha.slice(0,7)}, ${r.updated_at.slice(0,16)}) — ${r.html_url}`:"Kein Deploy-Run gefunden")})' >> /tmp/deploy.md
+
+      - name: Report zusammenführen
+        run: |
+          d=$(TZ=Europe/Berlin date +%F)
+          f="seo-reports/daily/daily-seo-$d.md"
+          mkdir -p seo-reports/daily
+          st() { [ "$1" = success ] && echo "✅" || echo "❌"; }
+          {
+            echo "# Daily SEO $d"
+            echo
+            echo "$(st ${{ steps.rules.outcome }}) Regelwerke · $(st ${{ steps.live.outcome }}) Live · $(st ${{ steps.gsc.outcome }}) GSC · Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            cat /tmp/deploy.md; echo
+            cat /tmp/rules.md; echo
+            cat /tmp/live.md; echo
+            cat /tmp/gsc.md
+          } > "$f"
+          cat "$f" >> "$GITHUB_STEP_SUMMARY"
+          echo "REPORT=$f" >> "$GITHUB_ENV"
+
+      - name: Report committen
+        run: |
+          git config user.name "seo-daily-bot"
+          git config user.email "seo-daily-bot@users.noreply.github.com"
+          git add seo-reports/daily/
+          git commit -m "[skip ci] report: daily $(TZ=Europe/Berlin date +%F)" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Ergebnis
+        if: steps.rules.outcome == 'failure' || steps.live.outcome == 'failure' || steps.gsc.outcome == 'failure'
+        run: echo "Befunde vorhanden — siehe $REPORT"; exit 1

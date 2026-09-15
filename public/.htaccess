@@ -133,6 +133,15 @@ RewriteRule ^content/(.+)$ /blog/ [R=301,L]
 RewriteRule ^clown/kindergeburtstag/was-kostet-ein-clown-fuer-ein-kindergeburtstag/?$ /blog/was-kostet-ein-clown-fuer-ein-kindergeburtstag/ [R=301,L]
 RewriteRule ^kindergeburtstag/was-kostet-ein-clown-fuer-ein-kindergeburtstag/?$ /blog/was-kostet-ein-clown-fuer-ein-kindergeburtstag/ [R=301,L]
 
+# -- GSC-404-Bereinigung 2026-09-15 (Audit 15.09.) --
+# /zauberer-nrw/ war Ziel der Zweitdomain, existiert nicht als Astro-Seite
+RewriteRule ^zauberer-nrw/?$ /zauberer/ [R=301,L]
+RewriteRule ^zauberer/zauberer-nrw/?$ /zauberer/ [R=301,L]
+# Alter Emoji-Slug (prozentkodiert) des Karneval-Artikels
+RewriteRule ^5-gruende-warum-zauberei-zum-karneval-gehoert /blog/5-gruende-warum-zauberei-zum-karneval-gehoert/ [R=301,L]
+# Abgeschnittener Fremdlink auf den Kosten-Artikel
+RewriteRule ^blog/was-kostet-ein-/?$ /blog/was-kostet-ein-clown-fuer-ein-kindergeburtstag/ [R=301,L]
+
 # --- MUSTER 2: /clown/kindergeburtstag/... → /kindergeburtstag/... ---
 RewriteRule ^clown/kindergeburtstag/?$ /kindergeburtstag/ [R=301,L]
 RewriteRule ^clown/kindergeburtstag/(.+)$ /kindergeburtstag/$1 [R=301,L]
