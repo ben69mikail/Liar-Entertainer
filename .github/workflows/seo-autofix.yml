@@ -1,0 +1,59 @@
+name: SEO Autofix (Claude)
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # 07:00 MESZ, eine Stunde nach dem Daily Check
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: seo-daily
+  cancel-in-progress: false
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Poppins font
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends fontconfig
+          sudo mkdir -p /usr/share/fonts/truetype/poppins
+          for w in Regular Medium SemiBold Bold ExtraBold; do
+            sudo curl -fsSL "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-${w}.ttf" -o "/usr/share/fonts/truetype/poppins/Poppins-${w}.ttf"
+          done
+          sudo fc-cache -f
+
+      - run: npm ci
+
+      - name: Git identity
+        run: |
+          git config user.name "seo-autofix-bot"
+          git config user.email "seo-autofix-bot@users.noreply.github.com"
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Lies zuerst docs/TASK-liar-daily-autofix.md vollständig und halte dich exakt daran.
+            Heutiges Datum (Europe/Berlin): $(TZ=Europe/Berlin date +%F)
+            Heutiger Report: seo-reports/daily/daily-seo-$(TZ=Europe/Berlin date +%F).md
+            Arbeite die Schritte 1–5 ab. Committe auf main nur, was unter „Selbst beheben" steht und nur nach grünem test:seo + test:struktur.
+            Für alles andere: Branch + PR mit `gh pr create`. Am Ende Report-Abschnitt "## Autofix" anhängen und pushen.
+          claude_args: |
+            --max-turns 40
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm ci),Bash(npm run build),Bash(npm run test:*),Bash(node scripts/*),Bash(git:*),Bash(gh pr:*),Bash(curl:*),Bash(find:*),Bash(date:*)"

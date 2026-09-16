@@ -77,6 +77,18 @@ for (const h of HUBS) {
 }
 out.push(`### Index-Status Hub-Seiten\n| Seite | Status | Letztes Crawl |\n|---|---|---|\n` + insp.join('\n'));
 
+// Weitere Properties (nur Summen), sofern das Dienstkonto dort Nutzer ist
+const OTHER = ['sc-domain:zauberer-liar.de', 'sc-domain:pantomime-la-france.eu'];
+const other = [];
+for (const site of OTHER) {
+  try {
+    const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`, { method: 'POST', headers: { authorization: `Bearer ${TOK}`, 'content-type': 'application/json' }, body: JSON.stringify({ ...cur, dimensions: [] }) });
+    const j = await r.json(); const t = (j.rows || [{}])[0] || {};
+    other.push(`| ${site.replace('sc-domain:', '')} | ${j.error ? 'kein Zugriff (Dienstkonto als Nutzer eintragen)' : `${t.clicks ?? 0} Klicks / ${n(t.impressions)} Impr. / Pos ${(t.position || 0).toFixed(1)}`} |`);
+  } catch (e) { other.push(`| ${site} | Fehler ${e.message} |`); }
+}
+out.push(`### Andere Properties (7 T)\n| Property | Werte |\n|---|---|\n` + other.join('\n'));
+
 if (alerts.length) out.unshift(`**GSC-Alarm:**\n` + alerts.map(a => `- ❌ ${a}`).join('\n'));
 console.log(out.join('\n\n'));
 process.exit(alerts.length ? 1 : 0);
