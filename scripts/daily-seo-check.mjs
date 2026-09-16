@@ -39,7 +39,13 @@ function expect(cond, good, bad) { (cond ? ok : findings).push(cond ? good : bad
     ['/attachment/x/', 410], ['/wp-content/uploads/2020/x.jpg', 410],
     ['/zauberer-nrw/', 301], ['/zauberer/zauberer-nrw/', 301], ['/blog/was-kostet-ein-/', 301],
     ['/5-gruende-warum-zauberei-zum-karneval-gehoert-%f0%9f%8e%ad%e2%9c%a8/', 301],
+    ['/tierparkfest-recklinghausen/', 301], ['/clown/coesfeld-empfaengt-clown-zauberer-liar/', 301],
   ];
+  // Alte Root-Slugs muessen auf den Artikel zeigen, nicht auf /blog/
+  for (const p of ['/tierparkfest-recklinghausen/', '/kinderkarneval-mit-clown-zauberer/']) {
+    const r = await head(BASE + p);
+    expect(r.location === BASE + '/blog' + p, `${p} → Artikel`, `${p} leitet nach ${r.location || r.status} statt auf /blog${p}`);
+  }
   for (const [p, want] of cases) {
     const r = await head(BASE + p);
     expect(r.status === want, `${p} → ${want}`, `${p} liefert ${r.status}, erwartet ${want}`);
