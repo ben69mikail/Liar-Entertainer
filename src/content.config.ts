@@ -15,6 +15,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     author: z.string().default('Ben Mikail'),
     draft: z.boolean().default(false),
+    freigabe: z.string().optional(), // 'ja' = Betreiber hat den Entwurf freigegeben, Autofix setzt draft:false
   }),
 });
 
