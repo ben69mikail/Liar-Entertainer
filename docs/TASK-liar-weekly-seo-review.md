@@ -1,74 +1,42 @@
 # Scheduled Task: liar-weekly-seo-review — montags 07:00 (Cowork)
 
-Voraussetzung: Der GitHub-Actions-Workflow `seo-daily.yml` läuft täglich und schreibt `seo-reports/daily/daily-seo-YYYY-MM-DD.md`. Diese Session liest die letzten 7 Reports, bewertet, macht den Blog-Vorschlag und behebt, was der Bot nur melden kann.
+Wöchentliche SEO-Steuerung für https://liar-entertainer.com. Du arbeitest im Repo `ben69mikail/Liar-Entertainer` (main) und mit Chrome (Betreiber ist in GSC, GBP und GitHub eingeloggt). Diese Session hat keine Erinnerung; alles Nötige steht hier und in den drei Dateien unten.
 
-Täglicher SEO- und Regressionscheck für https://liar-entertainer.com. Du arbeitest autonom, darfst Korrekturen selbst live bringen — nur unter den harten Bedingungen unten. Diese Session hat keine Erinnerung an frühere Läufe; alles Nötige steht hier. Vorheriger Report liegt im Repo unter `seo-reports/daily/` — den letzten lesen, bevor du beginnst.
+## Pflichtlektüre zu Beginn (im Repo)
+1. `docs/SEO-STRATEGIE-2026-Q4.md` — was historisch funktioniert hat, was nicht, Plan P1–P4, Zielwerte
+2. `docs/TASK-liar-daily-autofix.md` — was der Tages-Bot selbst ändern darf (nicht doppelt machen)
+3. die letzten 7 Reports `seo-reports/daily/daily-seo-*.md`
 
 ## Kontext
-Astro-Website für Michaël Prescler alias „Clown Zauberer LIAR", Beethovenstr. 15, 45966 Gladbeck. Kinderzauberer, Clown, Zaubershows.
-- Repo: https://github.com/ben69mikail/Liar-Entertainer (öffentlich, Branch `main`)
-- Live: https://liar-entertainer.com — 168 Seiten (142 in Sitemap)
-- **Jeder Push auf `main` deployt sofort live nach IONOS** (GitHub Actions → SFTP). Kein Staging.
-- GSC-Property: `sc-domain:liar-entertainer.com`
-- Zielgruppe: Eltern in NRW (Kindergeburtstag, mobil, unter Zeitdruck) UND Firmen/Kitas/Schulen/Städte (Zaubershow).
-- Prioritätsbegriffe: zauberer, kinderzauberer, clown, kindergeburtstag, zaubershow. Geld-Keyword: `zauberer kindergeburtstag`.
-- Abgewertet: Ballonmodellage, Glitzer-Tattoos — bleiben im Angebot, keine Rankingziele.
-- Lokal: Gladbeck + 20 km (Gladbeck, Bottrop, Gelsenkirchen, Dorsten, Herten, Oberhausen, Essen, Marl, Recklinghausen, Dinslaken, Herne, Mülheim, Bochum). Überregional: zauberer, kinderzauberer, zaubershow, clown.
+Michaël Prescler, „Clown Zauberer LIAR", Beethovenstr. 15, 45966 Gladbeck. Prioritätsbegriffe: zauberer kindergeburtstag, zauberer für kindergeburtstag, kinderzauberer, clown, zaubershow. Kerngebiet Kindergeburtstag: Gladbeck + 20 km (Bottrop, Gelsenkirchen, Dorsten, Herten, Oberhausen, Essen, Marl, Recklinghausen, Dinslaken, Herne, Mülheim, Bochum). Abgewertet: Ballonmodellage, Glitzer-Tattoos. Jeder Push auf main deployt live.
 
-## Ablauf (Reihenfolge einhalten)
+## Ablauf
+### 1. Wochenbilanz (aus den Tagesreports + GSC per Chrome)
+GSC `sc-domain:liar-entertainer.com`, 7 Tage vs. Vorwoche UND 28 Tage vs. Vorjahresmonat (Tabelle in der Strategie). Vier Zeilen: Klicks, Impressionen, CTR, Position. Kommentar nur bei ±15 % Klicks / ±20 % Impressionen. Wenn ein Wert ohne erkennbare Ursache schwankt, sag genau das.
+Zielwerte aus Strategie §3 prüfen; je Kennzahl: auf Kurs / hinter Plan.
 
-### 1. Regelwerke gegen frischen Build
-```
-git clone --depth 1 https://github.com/ben69mikail/Liar-Entertainer.git && cd Liar-Entertainer
-npm ci && npm run build
-npm run test:seo        # muss 45/45
-npm run test:struktur   # muss 10/10
-find dist -name index.html | wc -l   # muss ≥ 160 (Soll 167)
-```
-Rot → Ursache benennen (welche Assertion, welcher Commit seit gestern via `git log --since=1.day`). Fix nur, wenn er eindeutig ist und keine der „Niemals"-Regeln berührt.
+### 2. Prioritäts-Keywords
+`zauberer kindergeburtstag`, `zauberer für kindergeburtstag`, `kinderzauberer`, `clown für kindergeburtstag`, `zauberer weihnachtsfeier`, `zauberer buchen`, `zauberer bottrop`, `zauberer gladbeck`: Position + Klicks + **welche URL rankt** (Reiter Seiten). Wenn eine Nicht-Hub-Seite ein Prioritäts-Keyword übernimmt → Kannibalisierung melden, Vorschlag machen.
+Kernstadt-Seiten (`/kindergeburtstag/geburtstag-in-<stadt>/` für die 13 Kernstädte): Klicks/Position gegen Vorwoche; Seiten mit Positionsverlust > 3 auflisten.
 
-### 2. Deploy-Status
-https://api.github.com/repos/ben69mikail/Liar-Entertainer/actions/runs?per_page=3 — letzter Run `success`? Wenn `failure`: Log lesen, Ursache nennen. Prüfen, ob live-HTML dem letzten main-Commit entspricht (z. B. `<meta name="generator">`/Build-Hash oder eine im Commit geänderte Zeile per curl vergleichen).
+### 3. Indexierung & Fehler
+GSC → Seiten: neue Einträge unter 404, Soft 404, Serverfehler, Umleitungsfehler, „gecrawlt – nicht indexiert" für echte Seiten. Jede neue URL live per curl prüfen. Was der Tages-Bot nicht gefixt hat (siehe Report „Autofix"): selbst beheben (Branch + PR) oder mit Begründung offen lassen. www-Impressionen (Report-Zeile) → Trend Richtung 0 seit GBP-Umstellung 16.09.
 
-### 3. Live-Erreichbarkeit
-- `https://liar-entertainer.com/` 200, `https://www.` und `http://` → 301 einstufig auf https non-www
-- robots.txt, sitemap.xml, llms.txt → 200
-- Stichprobe 10 Sitemap-URLs (Startseite, /kindergeburtstag/, /kinderzauberer/, /zauberer/zaubershow/, /clown/clownshow/, /preise/, /blog/, 3 zufällige Stadtseiten) → 200, Canonical = URL, genau 1 H1, JSON-LD parsebar
-- Legacy: `/category/x/` → 301, `/attachment/x/` → 410
-- Optional wenn PSI-Quota frei: `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://liar-entertainer.com/&strategy=mobile` — LCP, CLS, INP notieren. Quota-Fehler ist kein Befund.
+### 4. Blog (P1 der Strategie)
+- Wenn kein Artikel in den letzten 7 Tagen: nächstes Thema aus `BLOG-REDAKTIONSPLAN-Q4-2026.md` als **Entwurf** in `src/content/blog/<slug>.md` mit `draft: true`, `freigabe: nein` anlegen (900–1.400 Wörter, Ich-Perspektive Michaël, FAQ-Block mit 3 Fragen, Links auf Hub + 1 Kernstadt, keine Preise außer im Kindergeburtstags-Kostenkontext). Branch + PR. Im Bericht: Titel + 3-Zeilen-Zusammenfassung. Der Betreiber setzt `freigabe: ja`, der Tages-Bot veröffentlicht.
+- Artikel der letzten 8 Wochen: Impressionen/Klicks. Unter 100 Impr. nach 8 Wochen → Title/Intro-Vorschlag.
 
-### 4. GSC (per Claude-in-Chrome, Betreiber ist eingeloggt; wenn kein Browser verbunden → Schritt überspringen und im Bericht sagen „GSC nicht geprüft")
-Zeitraum: letzte 7 Tage vs. vorherige 7 Tage.
-- Leistung: Klicks, Impressionen, CTR, Ø-Position — Delta notieren. Erst ab ±15 % Klicks oder ±20 % Impressionen kommentieren; Wochenschwankung ist normal, keine Ursache erfinden.
-- Top-Queries: `zauberer kindergeburtstag`, `kinderzauberer`, `zauberer`, `clown`, `zaubershow`, `zauberer bottrop`, `zauberer gladbeck`, `bühnenzauberer` — Position + Klicks.
-- Seitenindexierung: Anzahl indexiert (Baseline 06.08.: 121; Ziel 145+), neue Fehler in „Nicht indexiert" (404, Umleitungsfehler, Soft 404, Serverfehler). Jede NEUE Fehler-URL ist ein Befund.
-- Kernvitalitäten mobil: „schlecht" muss 0 bleiben.
-- Offene Punkte, deren Status du jedes Mal mitnimmst: K1b CTR-Diagnose (Pos 1–5 / 0 Klicks-Queries), K3 Indexierung haltern/recklinghausen/dorsten, 9 Umleitungsfehler, www-Impressionen.
+### 5. GBP (P2)
+GBP (business.google.com) prüfen: Website-Feld = `https://liar-entertainer.com/` (ohne www). Einen Beitrag der Woche vorschlagen (3–4 Sätze, Stadtbezug aus dem Kerngebiet, Link auf `/kindergeburtstag/` oder den aktuellen Blogartikel). **Erst nach „ok" des Betreibers posten.**
 
-### 5. Blog-Fälligkeit
-Letzten `publishDate` in `src/content/blog/*.md` lesen. Wenn > 7 Tage: nächstes Thema aus dem Redaktionsplan (im Repo `BLOG-REDAKTIONSPLAN-Q4-2026.md`, sonst saisonal passend) als **Vorschlag** mit Titel, 5-Zeilen-Gliederung, Ziel-Query und 3 FAQ-Fragen in den Bericht. **Keinen Artikel schreiben oder committen.** Wenn im Repo ein Artikel mit `draft: true` und Frontmatter `freigabe: ja` liegt → `draft: false` setzen, Publish-Datum = heute, Sitemap prüfen, committen, Deploy abwarten, URL live prüfen.
+### 6. Andere Properties (nur Wache)
+`sc-domain:zauberer-liar.de` und `sc-domain:pantomime-la-france.eu`: Klicks/Impressionen 28 T, neue Fehler unter Seiten. Bis P3 (Konsolidierung zauberer-liar.de) umgesetzt ist: melden, ob die Domain noch Prioritäts-Keywords rankt (`zauberer nrw`, `zauberer gladbeck`, `zaubershow nrw`).
 
-### 6. Selbst beheben darfst du
-- Tote interne Links (404-Ziel) auf das korrekte bestehende Ziel umbiegen
-- `.htaccess`/robots.txt-Fehler, die eine URL fälschlich 404/410/blockiert liefern
-- JSON-LD-Syntaxfehler, fehlendes `alt`, fehlender/falscher Canonical — nur wenn eine Assertion es meldet
-- Blog-Publish nach Freigabe (Schritt 5)
-Bedingungen: max. 2 Commits/Tag; jeder Commit erst nach lokal grünem `test:seo` + `test:struktur`; Commit-Message beginnt mit `fix(seo):` oder `blog:`; nach Deploy die betroffene URL live per curl verifizieren; bei Klickeinbruch > 30 % in GSC oder manueller Maßnahme → READ-ONLY, nur berichten.
+### 7. Bericht
+`seo-reports/weekly/weekly-seo-YYYY-MM-DD.md` ins Repo (Commit `[skip ci] report: weekly …`) und als Chat-Antwort. Struktur: Bilanz (4 Zeilen) · Ziel-Check (Tabelle) · Befunde mit Zahlen und Dringlichkeit · Was ich geändert habe (PR-Links) · Was der Betreiber tun muss (max. 3 Punkte, konkret). Kein Füllmaterial.
 
-## Was du NIEMALS anfasst
-- **Das Design der Startseite.** Betreiber-Entscheidung 12.08.2026. `scripts/hero-invarianten.mjs` sichert die Struktur ab.
-- Menüstruktur, Navigation, Layout
-- Texte umschreiben, kürzen oder ergänzen — außer es behebt direkt einen Regelverstoß
-- Preise, Preistabellen, Offer-Schema. Regel PR.2: Preis-Schema nur auf `/preise/` und `/kindergeburtstag/*`
-- aggregateRating- oder Review-Schema anlegen (Regel K1.2, bewusste Entscheidung)
-- Stadtseiten löschen oder anlegen — Regel R4 fixiert 23/23/23
-- Neue Blogartikel oder Seiten schreiben. Texte im Namen des Betreibers legt er selbst fest. Vorschläge gewünscht.
-- `src/data/pages.json`, `scraped-pages.json` (Legacy-Fixes gehören in `[...slug].astro`)
+## Selbst ändern (immer Branch + PR, nie direkt main)
+Redirects, interne Links, Title/Description von Nicht-Startseiten, Schema-Fehler, Blog-Entwürfe, Sitemap. Vor jedem PR lokal: `npm run build`, `npm run test:seo` (45/45), `npm run test:struktur` (10/10), Seiten ≥ 160.
 
-## Bericht
-Datei `seo-reports/daily/daily-seo-YYYY-MM-DD.md` ins Repo committen (Message `[skip ci] report: daily YYYY-MM-DD`) UND als Chat-Antwort. Kurz.
-Alles in Ordnung → drei Zeilen: Regelwerke grün, Deploy grün, Seite erreichbar (+ GSC-Delta in einer Zeile, wenn geprüft). Kein Füllmaterial.
-Geändert → was, warum, welcher Commit, Deploy durchgelaufen ja/nein, Live-Verifikation.
-Befund ohne Erlaubnis zur Behebung → Zahlen, Dringlichkeit (hoch/mittel/niedrig), ein konkreter Vorschlag.
-Blog überfällig → Themenvorschlag wie in Schritt 5.
-Übertreibe nie. Schwankt ein Wert ohne klare Ursache, sag das. Konntest du etwas nicht prüfen, sag das.
+## Niemals
+Design/Layout/Menü der Startseite (`scripts/hero-invarianten.mjs`) · Texte umschreiben außer bei Regelverstoß · Preise/Offer-Schema außerhalb `/preise/` und `/kindergeburtstag/*` · aggregateRating/Review-Schema · Stadtseiten anlegen/löschen (23/23/23) · Artikel ohne `freigabe: ja` veröffentlichen · `src/data/pages.json`, `scraped-pages.json` · GBP-Beiträge ohne „ok".

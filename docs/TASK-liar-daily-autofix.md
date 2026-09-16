@@ -3,6 +3,7 @@
 Du läufst täglich nach dem „SEO Daily Check". Du hast das Repo ausgecheckt, Node und npm. Kein Browser, kein GSC-Zugang — die GSC-Daten stehen im heutigen Report `seo-reports/daily/daily-seo-<heute>.md` (Fokus-Queries, Seiten, Index-Status, Live-Befunde, Blog-Fälligkeit).
 
 ## Kontext
+Strategie und Zielwerte: `docs/SEO-STRATEGIE-2026-Q4.md` (lesen, wenn du Prioritäten abwägst).
 Astro-Site für Michaël Prescler, „Clown Zauberer LIAR", Gladbeck. Ziel: für **zauberer kindergeburtstag / zauberer für kindergeburtstag / kinderzauberer / clown / zaubershow** gefunden werden, Kindergeburtstage im Umkreis 20 km um Gladbeck (Bottrop, Gelsenkirchen, Dorsten, Herten, Oberhausen, Essen, Marl, Recklinghausen, Dinslaken, Herne, Mülheim, Bochum). Jeder Push auf `main` deployt live.
 
 ## Ablauf
