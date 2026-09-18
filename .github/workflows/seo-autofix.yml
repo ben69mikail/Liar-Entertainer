@@ -55,5 +55,7 @@ jobs:
             Arbeite die Schritte 1–5 ab. Committe auf main nur, was unter „Selbst beheben" steht und nur nach grünem test:seo + test:struktur.
             Für alles andere: Branch + PR mit `gh pr create`. Am Ende Report-Abschnitt "## Autofix" anhängen und pushen.
           claude_args: |
+            --model claude-sonnet-4-5-20250929
+            --fallback-model claude-haiku-4-5-20251001
             --max-turns 40
             --allowedTools "Read,Edit,Write,Glob,Grep,Bash(npm ci),Bash(npm run build),Bash(npm run test:*),Bash(node scripts/*),Bash(git:*),Bash(gh pr:*),Bash(curl:*),Bash(find:*),Bash(date:*)"
