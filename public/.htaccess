@@ -117,6 +117,11 @@ RedirectMatch 301 ^/clown/?$ /clown/clownshow/
 # Basierend auf Google Search Console 404-Analyse
 # ============================================================
 
+# --- GSC-404-Fix 18.09.2026: Legacy-Root-Slug ohne Ziel ---
+# /walk-act/ stand am 14.09. als echte 404 im GSC-Bericht, die Seite existiert
+# unter /clown/walk-act/. Additiv, aendert keine bestehende Regel.
+RewriteRule ^walk-act/?$ /clown/walk-act/ [R=301,L]
+
 # --- MUSTER 1: /content/... → Entferne /content/ Prefix ---
 RewriteRule ^content/?$ / [R=301,L]
 RewriteRule ^content/kinderzauberer/?$ /kinderzauberer/ [R=301,L]
