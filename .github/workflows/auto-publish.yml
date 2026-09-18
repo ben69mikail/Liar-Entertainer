@@ -1,0 +1,67 @@
+name: Auto-Publish Blog
+
+on:
+  schedule:
+    - cron: '30 5 * * *'   # 07:30 MESZ, nach dem Daily Check
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-daily
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Freigegebene Entwürfe veröffentlichen
+        id: pub
+        run: |
+          out=$(node scripts/auto-publish.mjs)
+          echo "$out"
+          echo "result=$out" >> "$GITHUB_OUTPUT"
+          echo "$out" | grep -q '^PUBLISHED=' || exit 0
+          echo "changed=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Poppins-Font (für Blog-Hero-Rendering)
+        if: steps.pub.outputs.changed == 'yes'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends fontconfig
+          sudo mkdir -p /usr/share/fonts/truetype/poppins
+          for w in Regular Medium SemiBold Bold ExtraBold; do
+            sudo curl -fsSL "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-${w}.ttf" -o "/usr/share/fonts/truetype/poppins/Poppins-${w}.ttf"
+          done
+          sudo fc-cache -f
+
+      - name: Build + Tests als Gate
+        if: steps.pub.outputs.changed == 'yes'
+        run: |
+          npm ci
+          npm run build
+          npm run test:seo
+          npm run test:struktur
+          n=$(find dist -name index.html | wc -l); echo "pages=$n"; test "$n" -ge 160
+
+      - name: Committen (löst Deploy aus)
+        if: steps.pub.outputs.changed == 'yes'
+        run: |
+          slug=$(echo "${{ steps.pub.outputs.result }}" | sed 's/^PUBLISHED=//')
+          git config user.name "auto-publish-bot"
+          git config user.email "auto-publish-bot@users.noreply.github.com"
+          git add src/content/blog/
+          git commit -m "blog: veröffentliche $slug"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "Veröffentlicht: $slug" >> "$GITHUB_STEP_SUMMARY"

@@ -1,8 +1,10 @@
 name: SEO Autofix (Claude)
 
+# DEAKTIVIERT 18.09.2026: anthropics/claude-code-action@v1 hat einen Upstream-SDK-Crash
+# (is_error:true, num_turns:1, cost:0 direkt nach Init — GitHub-Issues #914/#1720/#1759).
+# Ersatz: scripts/auto-publish.mjs (auto-publish.yml) + Wochen-Review in Cowork.
+# Nur noch manuell, um bei einem Action-Fix erneut zu testen.
 on:
-  schedule:
-    - cron: '0 5 * * *'   # 07:00 MESZ, eine Stunde nach dem Daily Check
   workflow_dispatch:
 
 permissions:
