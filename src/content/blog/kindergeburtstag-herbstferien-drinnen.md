@@ -7,7 +7,7 @@ categories: ["Saisonal", "Ideen", "Kindergeburtstag"]
 tags: ["kindergeburtstag-herbst", "kindergeburtstag-drinnen", "herbstferien"]
 author: "Michaël Prescler"
 draft: true
-freigabe: nein
+freigabe: ja
 ---
 
 Die Herbstferien sind in NRW die Zeit der Wohnzimmer-Geburtstage. Der Park ist nass, der Zoo ist voll, der Indoor-Spielplatz kostet für acht Kinder mehr als die ganze Party sonst. Und trotzdem: Ich erlebe jeden Oktober Kindergeburtstage in Gladbeck, Bottrop oder Gelsenkirchen, bei denen die Kinder am Ende sagen, das sei der beste Geburtstag gewesen. Nicht wegen des Wetters, sondern weil das Programm drinnen richtig geplant war.
