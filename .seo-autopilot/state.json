@@ -47,16 +47,48 @@
     "nicht_indexiert": 322,
     "indexiert": 123,
     "gruende": {
-      "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "99->117 (+18). Per curl an 8 Redirect-Klassen geprueft: alle .htaccess-Regeln korrekt = BUCKET-WANDERUNG des Legacy-Re-Crawls. Erwartung: faellt nach dem Re-Crawl zurueck Richtung 100" },
-      "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
-      "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
-      "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden" },
-      "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-      "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-      "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet", "bewertung": "gewollte Ausschlussseite" },
-      "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-      "soft_404": { "wert": 0, "validierung": "Bestanden" },
-      "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+      "seite_mit_weiterleitung": {
+        "wert": 117,
+        "validierung": "Nicht gestartet",
+        "bewertung": "99->117 (+18). Per curl an 8 Redirect-Klassen geprueft: alle .htaccess-Regeln korrekt = BUCKET-WANDERUNG des Legacy-Re-Crawls. Erwartung: faellt nach dem Re-Crawl zurueck Richtung 100"
+      },
+      "nicht_gefunden_404": {
+        "wert": 109,
+        "validierung": "Fehlgeschlagen"
+      },
+      "gecrawlt_nicht_indexiert": {
+        "wert": 59,
+        "validierung": "Fehlgeschlagen"
+      },
+      "gefunden_zurzeit_nicht_indexiert": {
+        "wert": 16,
+        "validierung": "Bestanden"
+      },
+      "durch_robots_blockiert": {
+        "wert": 10,
+        "validierung": "Nicht gestartet"
+      },
+      "umleitungsfehler": {
+        "wert": 9,
+        "validierung": "Gestartet"
+      },
+      "noindex_tag": {
+        "wert": 1,
+        "validierung": "Nicht gestartet",
+        "bewertung": "gewollte Ausschlussseite"
+      },
+      "alternative_seite_mit_canonical": {
+        "wert": 1,
+        "validierung": "Nicht gestartet"
+      },
+      "soft_404": {
+        "wert": 0,
+        "validierung": "Bestanden"
+      },
+      "wegen_4xx_blockiert": {
+        "wert": 0,
+        "validierung": "Nicht zutreffend"
+      }
     },
     "vergleich_12_06_ausgang": "Nicht indexiert 885->322 (-563). Bestwert des gesamten Verlaufs."
   },
@@ -89,16 +121,48 @@
     "nicht_indexiert": 322,
     "indexiert": 123,
     "gruende": {
-      "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "unveraendert - die Rueckgangs-Erwartung aus #9 ist mangels neuem Datenstand noch nicht pruefbar" },
-      "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
-      "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
-      "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden" },
-      "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-      "umleitungsfehler": { "wert": 9, "validierung": "BESTANDEN", "bewertung": "EINZIGE Veraenderung dieses Laufs: 'Gestartet' -> 'Bestanden'. Der seit Wochen laufende Validierungsdurchlauf ist erfolgreich abgeschlossen, die 9 Umleitungsfehler sind aus Google-Sicht behoben. Positiv, kein Handlungsbedarf, NICHT erneut anstossen." },
-      "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet" },
-      "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-      "soft_404": { "wert": 0, "validierung": "Bestanden" },
-      "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+      "seite_mit_weiterleitung": {
+        "wert": 117,
+        "validierung": "Nicht gestartet",
+        "bewertung": "unveraendert - die Rueckgangs-Erwartung aus #9 ist mangels neuem Datenstand noch nicht pruefbar"
+      },
+      "nicht_gefunden_404": {
+        "wert": 109,
+        "validierung": "Fehlgeschlagen"
+      },
+      "gecrawlt_nicht_indexiert": {
+        "wert": 59,
+        "validierung": "Fehlgeschlagen"
+      },
+      "gefunden_zurzeit_nicht_indexiert": {
+        "wert": 16,
+        "validierung": "Bestanden"
+      },
+      "durch_robots_blockiert": {
+        "wert": 10,
+        "validierung": "Nicht gestartet"
+      },
+      "umleitungsfehler": {
+        "wert": 9,
+        "validierung": "BESTANDEN",
+        "bewertung": "EINZIGE Veraenderung dieses Laufs: 'Gestartet' -> 'Bestanden'. Der seit Wochen laufende Validierungsdurchlauf ist erfolgreich abgeschlossen, die 9 Umleitungsfehler sind aus Google-Sicht behoben. Positiv, kein Handlungsbedarf, NICHT erneut anstossen."
+      },
+      "noindex_tag": {
+        "wert": 1,
+        "validierung": "Nicht gestartet"
+      },
+      "alternative_seite_mit_canonical": {
+        "wert": 1,
+        "validierung": "Nicht gestartet"
+      },
+      "soft_404": {
+        "wert": 0,
+        "validierung": "Bestanden"
+      },
+      "wegen_4xx_blockiert": {
+        "wert": 0,
+        "validierung": "Nicht zutreffend"
+      }
     },
     "summen_check": "117+109+59+16+10+9+1+1 = 322 stimmig",
     "fazit": "Kein neues Indexierungssignal. Keine Fehlerklasse gestiegen. Ein Validierungslauf erfolgreich abgeschlossen. Kein Eingriff."
@@ -112,7 +176,7 @@
     "repo_guard_fremdcommit_minuten": 90
   },
   "commits_today": 2,
-  "last_run_date": "2026-09-03",
+  "last_run_date": "2026-09-18",
   "completed_steps": [
     "Setup 2026-06-12; Welle 1-3 erledigt; Welle-5 robots.txt-Fix (1376073).",
     "2026-06-27 bis 2026-07-02: KI-Antwort-Lead + Schema-Ausbau Add-on-Hubs live.",
@@ -201,6 +265,36 @@
     "2026-08-15 Wochen-Check #8 (nachgeholt): Indexierung (~09.08.): Nicht indexiert 409->349, Indexiert 121->122. Leistung (~13.08.): 1970/83500/2,4%/11,4 = Fensterrotation. clown kindergeburtstag 9,1. Site-Health 10 URLs alle 200. KEIN Code-Commit. Wochenverlauf (2dd02b5) + State (244b5e2).",
     "2026-08-20 und 2026-08-27: kein Wochen-Check-Lauf (beide Donnerstage ausgefallen, Umgebung offline).",
     "2026-09-01 Wochen-Check #9 (Di, holt 20.08.+27.08. nach): Indexierung (~26.08.): Nicht indexiert 349->322 (seit Ausgang 885 = -563 Bestwert), Indexiert 122->123, 404 128->109, Gecrawlt-nicht-indexiert 79->59, Gefunden-zurzeit-nicht-indexiert 23->16, Weiterleitung 99->117 (per curl an 8 Live-Redirect-Klassen als planmaessige Bucket-Wanderung verifiziert). Leistung (~29.08.): 1930/86800/2,2%/11,2. clown kindergeburtstag 9,1->6,4, zauberer kindergeburtstag 17,3->16,3. KEIN Code-Commit. Wochenverlauf (b2b9c3b) + State (5519695) + Nachtrag (5f6620d): Inhaber-Commit dafcf11 kam um 09:45 UTC mitten in den Lauf, kein Konflikt.",
-    "2026-09-03 Wochen-Check #10 (regulaerer Do-Lauf, 2 Tage nach #9): Repo-Guard OK (5f6620d vom 01.09., eigener Commit; keine neue Inhaber-Aktivitaet). Indexierung UNVERAENDERT 123/322, alle 10 Grund-Zeilen bitgleich - GSC-Datenstand in 2 Tagen nicht gewandert (bei ~6-Tage-Lag erwartbar, KEIN Trendstillstand). EINZIGE Veraenderung: Umleitungsfehler-Validierung 'Gestartet' -> 'BESTANDEN' (9 Seiten), Validierungsdurchlauf erfolgreich abgeschlossen. Leistung (~31.08., Fenster 01.06.-31.08.): 1920 Klicks / 87500 Impr (ERNEUT Hoechstwert, +700) / CTR 2,2% / Pos 11,2 - Fenster 2 Tage weitergerueckt und Impressionen steigen trotzdem. NEU in den Top-10-Queries: 'zauberer fuer kindergeburtstag' 705 Impr / 9 Klicks / CTR 1,3%; Zauberer-Kindergeburtstag-Cluster gesamt 2060 Impr / 25 Klicks = groesste ungenutzte Flaeche -> als offene Verifikation fuer #11 dokumentiert (Positionsspalte erzwingen). Positionsspalte liess sich in diesem Lauf per find->ref-Klick NICHT zuschalten -> Workaround in self_improvements notiert. Offene Verifikation dafcf11 ABGEARBEITET: 3 Pantomime-Links live direkt auf www.pantomime-la-france.eu, HTTP 200 num_redirects=0, rel='noopener' ohne noreferrer, alte Subdomain 0x im HTML. Site-Health 10 URLs alle 200. KEIN Code-Commit (kein neues Datensignal, Trend positiv, Inhaber wieder aktiv). Wochenverlauf (c41c645, Rotation #7 -> archiv_kompakt) + State. commits_today=2, davon 0 Code-Commits."
-  ]
+    "2026-09-03 Wochen-Check #10 (regulaerer Do-Lauf, 2 Tage nach #9): Repo-Guard OK (5f6620d vom 01.09., eigener Commit; keine neue Inhaber-Aktivitaet). Indexierung UNVERAENDERT 123/322, alle 10 Grund-Zeilen bitgleich - GSC-Datenstand in 2 Tagen nicht gewandert (bei ~6-Tage-Lag erwartbar, KEIN Trendstillstand). EINZIGE Veraenderung: Umleitungsfehler-Validierung 'Gestartet' -> 'BESTANDEN' (9 Seiten), Validierungsdurchlauf erfolgreich abgeschlossen. Leistung (~31.08., Fenster 01.06.-31.08.): 1920 Klicks / 87500 Impr (ERNEUT Hoechstwert, +700) / CTR 2,2% / Pos 11,2 - Fenster 2 Tage weitergerueckt und Impressionen steigen trotzdem. NEU in den Top-10-Queries: 'zauberer fuer kindergeburtstag' 705 Impr / 9 Klicks / CTR 1,3%; Zauberer-Kindergeburtstag-Cluster gesamt 2060 Impr / 25 Klicks = groesste ungenutzte Flaeche -> als offene Verifikation fuer #11 dokumentiert (Positionsspalte erzwingen). Positionsspalte liess sich in diesem Lauf per find->ref-Klick NICHT zuschalten -> Workaround in self_improvements notiert. Offene Verifikation dafcf11 ABGEARBEITET: 3 Pantomime-Links live direkt auf www.pantomime-la-france.eu, HTTP 200 num_redirects=0, rel='noopener' ohne noreferrer, alte Subdomain 0x im HTML. Site-Health 10 URLs alle 200. KEIN Code-Commit (kein neues Datensignal, Trend positiv, Inhaber wieder aktiv). Wochenverlauf (c41c645, Rotation #7 -> archiv_kompakt) + State. commits_today=2, davon 0 Code-Commits.",
+    "2026-09-18 Wochen-Check #11, zweiter Teil (interaktiv mit Inhaber, Chrome verbunden): GSC frisch (Stand 14.09.): indexiert 124, nicht indexiert 292 (322->292, -30; seit Ausgang 885: -593). Weiterleitung 114, 404 98, Gecrawlt-nicht-indexiert 43, Gefunden-nicht-indexiert 17, robots 10, Umleitungsfehler 9 (bestanden), noindex 1, alt-canonical 0. 34+10+10 Beispiel-URLs live per curl geprueft: Legacy-Buckets arbeiten planmaessig (410/301), strukturelle Untergrenze dokumentiert. URSACHE 'Gefunden - nicht indexiert' gefunden: 4 Clown-Stadtseiten ohne interne Verlinkung -> behoben. MASSNAHMEN: /walk-act/ 301, Hub-Verlinkung 23/23, Herbstferien-Blog freigegeben, Weihnachtsfeier-Entwurf (1274 W) neu. Build 168 Seiten, 45/45, 10/10. Rezensions-Snippets als Altbestand identifiziert (Markup seit 08.07. entfernt)."
+  ],
+  "gsc_indexierung_2026_09_18": {
+    "datenstand": "2026-09-14 (frisch per Browser)",
+    "indexiert": 124,
+    "nicht_indexiert": 292,
+    "gruende": {
+      "seite_mit_weiterleitung": 114,
+      "nicht_gefunden_404": 98,
+      "gecrawlt_nicht_indexiert": 43,
+      "gefunden_zurzeit_nicht_indexiert": 17,
+      "durch_robots_blockiert": 10,
+      "umleitungsfehler": 9,
+      "noindex_tag": 1,
+      "alternative_seite_mit_canonical": 0
+    },
+    "vergleich_10": "322->292 (-30), indexiert 123->124. Weiterleitung 117->114 (Rueckgangs-Erwartung aus #9 BESTAETIGT), 404 109->98, Gecrawlt-nicht-indexiert 59->43.",
+    "strukturelle_untergrenze": "404- und Weiterleitungs-Bucket koennen nicht auf 0: GSC zaehlt dort gewollte 410 Gone und gewollte 301 (http/www-Kanonisierung). Echte Arbeitsflaeche = 'Gefunden - zurzeit nicht indexiert' (17) + 2 echte Blogartikel aus dem Gecrawlt-Bucket.",
+    "ursache_gefunden_nicht_indexiert": "4 von 23 Clown-Stadtseiten (castrop-rauxel, waltrop, wesel, xanten) waren im Hub nicht intern verlinkt. Am 18.09. behoben."
+  },
+  "gsc_leistung_2026_09_18": {
+    "datenstand": "~2026-09-14",
+    "woche": "142 Klicks / 7394 Impr / CTR 1,9% / Pos 10,8 (VW 132/7233/1,8%/11,3)",
+    "drei_monate": "1910 / 90300 / 2,1% / 11,0 - Impressionen und Position je Bestwert",
+    "kern_keywords": "zauberer fuer kindergeburtstag 12,0->3,8; zauberer kindergeburtstag 14,6->10,7; clown fuer kindergeburtstag 4,8->2,6; clown 10,8->8,6; zauberer nrw 12,9->8,8; zauberer buchen 13,1->16,9 (einziger Rueckgang)"
+  },
+  "rezensions_snippets": {
+    "stand_17_09": "6 gueltig / 0 ungueltig, alle auf /datenschutzerklaerung-2/, zuletzt erkannt 11.06.2026",
+    "befund": "Altbestand vor Commit 862f8a8 (08.07.2026), mit dem Review-/aggregateRating-Markup bewusst entfernt wurde. Live 18.09. kein Review-Markup mehr. Zaehler laeuft auf 0 - richtig so.",
+    "regel": "Kein Review-/aggregateRating-Schema wieder einbauen. Self-serving Reviews sind nicht sterne-berechtigt. Sterne kommen ueber das GBP."
+  }
 }

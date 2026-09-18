@@ -4,56 +4,164 @@
     {
       "pruefdatum": "2026-06-18",
       "lauf": "Wochen-Check #1 (Erstanlage)",
-      "indexierung": { "datenstand": "2026-06-12", "indexiert": 131, "nicht_indexiert": 792, "gecrawlt_nicht_indexiert": 362, "nicht_gefunden_404": 258, "seite_mit_weiterleitung": 152, "umleitungsfehler": 9, "durch_robots_blockiert": 8, "soft_404": 0 },
-      "leistung": { "datenstand": "2026-06-16", "klicks": 1840, "impressionen": 81100, "ctr": "2.3%", "durchschnittsposition": 11.0 },
+      "indexierung": {
+        "datenstand": "2026-06-12",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gecrawlt_nicht_indexiert": 362,
+        "nicht_gefunden_404": 258,
+        "seite_mit_weiterleitung": 152,
+        "umleitungsfehler": 9,
+        "durch_robots_blockiert": 8,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "2026-06-16",
+        "klicks": 1840,
+        "impressionen": 81100,
+        "ctr": "2.3%",
+        "durchschnittsposition": 11.0
+      },
       "trend_bewertung": "Datenlag stand beim 12.06. Leistung leicht positiv.",
       "massnahme": "Zaubershow-Seite: KI-Antwort-Lead + hero-subtitle (Commit 6fbb14f)."
     },
     {
       "pruefdatum": "2026-06-25",
       "lauf": "Wochen-Check #2",
-      "indexierung": { "datenstand": "2026-06-12 (Lag steht)", "indexiert": 131, "nicht_indexiert": 792, "gecrawlt_nicht_indexiert": 362, "nicht_gefunden_404": 258, "seite_mit_weiterleitung": 152, "umleitungsfehler": 9, "durch_robots_blockiert": 8, "soft_404": 0 },
-      "leistung": { "datenstand": "~2026-06-23", "klicks": 1940, "impressionen": 82200, "ctr": "2.4%", "durchschnittsposition": 11.0 },
+      "indexierung": {
+        "datenstand": "2026-06-12 (Lag steht)",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gecrawlt_nicht_indexiert": 362,
+        "nicht_gefunden_404": 258,
+        "seite_mit_weiterleitung": 152,
+        "umleitungsfehler": 9,
+        "durch_robots_blockiert": 8,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "~2026-06-23",
+        "klicks": 1940,
+        "impressionen": 82200,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.0
+      },
       "trend_bewertung": "Leistung klar positiv WoW (+100 Klicks). Indexierung ohne frische Daten.",
       "massnahme": "Kein Code-Commit."
     },
     {
       "pruefdatum": "2026-07-02",
       "lauf": "Wochen-Check #3",
-      "indexierung": { "datenstand": "2026-06-12 (Lag steht, 20+ Laeufe)", "indexiert": 131, "nicht_indexiert": 792, "gecrawlt_nicht_indexiert": 362, "nicht_gefunden_404": 258, "seite_mit_weiterleitung": 152, "umleitungsfehler": 9, "durch_robots_blockiert": 8, "soft_404": 0 },
-      "leistung": { "datenstand": "~2026-07-01", "klicks": 2020, "impressionen": 84000, "ctr": "2.4%", "durchschnittsposition": 11.1 },
+      "indexierung": {
+        "datenstand": "2026-06-12 (Lag steht, 20+ Laeufe)",
+        "indexiert": 131,
+        "nicht_indexiert": 792,
+        "gecrawlt_nicht_indexiert": 362,
+        "nicht_gefunden_404": 258,
+        "seite_mit_weiterleitung": 152,
+        "umleitungsfehler": 9,
+        "durch_robots_blockiert": 8,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "~2026-07-01",
+        "klicks": 2020,
+        "impressionen": 84000,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.1
+      },
       "trend_bewertung": "Leistung weiter steigend. Hitze-Blog zieht saisonal an (172->397 Impr).",
       "massnahme": "Kein Code-Commit. Ballonmodellage-Schema (0e641f7) live verifiziert."
     },
     {
       "pruefdatum": "2026-07-09",
       "lauf": "Wochen-Check #4",
-      "indexierung": { "datenstand": "carry-forward (Browser nicht verbunden)", "indexiert": 131, "nicht_indexiert": 792 },
-      "leistung": { "datenstand": "carry-forward aus #3", "klicks": 2020, "impressionen": 84000, "ctr": "2.4%", "durchschnittsposition": 11.1 },
+      "indexierung": {
+        "datenstand": "carry-forward (Browser nicht verbunden)",
+        "indexiert": 131,
+        "nicht_indexiert": 792
+      },
+      "leistung": {
+        "datenstand": "carry-forward aus #3",
+        "klicks": 2020,
+        "impressionen": 84000,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.1
+      },
       "trend_bewertung": "Keine GSC-Messung moeglich. Site-Health 6 Hubs alle 200.",
       "massnahme": "Kein Code-Commit. Galerie-Alt-Texte (1d93906) live verifiziert."
     },
     {
       "pruefdatum": "2026-07-16",
       "lauf": "Wochen-Check #5",
-      "indexierung": { "datenstand": "2026-07-10 (Lag gebrochen)", "indexiert": 112, "nicht_indexiert": 546, "gecrawlt_nicht_indexiert": 235, "nicht_gefunden_404": 190, "seite_mit_weiterleitung": 99, "durch_robots_blockiert": 10, "umleitungsfehler": 9, "soft_404": 0 },
-      "leistung": { "datenstand": "~2026-07-14", "klicks": 2080, "impressionen": 83700, "ctr": "2.5%", "durchschnittsposition": 11.4 },
+      "indexierung": {
+        "datenstand": "2026-07-10 (Lag gebrochen)",
+        "indexiert": 112,
+        "nicht_indexiert": 546,
+        "gecrawlt_nicht_indexiert": 235,
+        "nicht_gefunden_404": 190,
+        "seite_mit_weiterleitung": 99,
+        "durch_robots_blockiert": 10,
+        "umleitungsfehler": 9,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "~2026-07-14",
+        "klicks": 2080,
+        "impressionen": 83700,
+        "ctr": "2.5%",
+        "durchschnittsposition": 11.4
+      },
       "trend_bewertung": "Alle Legacy-Fehlerklassen ruecklaeufig (601->546). robots.txt-Fix wirkt nachhaltig.",
       "massnahme": "Kein Code-Commit. zauberer-kindergeburtstag-Offensive hat Seite 1 nicht erreicht -> Reifezeit."
     },
     {
       "pruefdatum": "2026-07-23",
       "lauf": "Wochen-Check #6",
-      "indexierung": { "datenstand": "2026-07-10 (Lag steht wieder)", "indexiert": 112, "nicht_indexiert": 546, "gecrawlt_nicht_indexiert": 235, "nicht_gefunden_404": 190, "seite_mit_weiterleitung": 99, "durch_robots_blockiert": 10, "umleitungsfehler": 9, "soft_404": 0 },
-      "leistung": { "datenstand": "~2026-07-21", "klicks": 2050, "impressionen": 82300, "ctr": "2.5%", "durchschnittsposition": 11.5 },
+      "indexierung": {
+        "datenstand": "2026-07-10 (Lag steht wieder)",
+        "indexiert": 112,
+        "nicht_indexiert": 546,
+        "gecrawlt_nicht_indexiert": 235,
+        "nicht_gefunden_404": 190,
+        "seite_mit_weiterleitung": 99,
+        "durch_robots_blockiert": 10,
+        "umleitungsfehler": 9,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "~2026-07-21",
+        "klicks": 2050,
+        "impressionen": 82300,
+        "ctr": "2.5%",
+        "durchschnittsposition": 11.5
+      },
       "trend_bewertung": "Fensterrotation, kein Regress. clown kindergeburtstag Pos 10,4.",
       "massnahme": "Kein Code-Commit. AUDIT clown kindergeburtstag: primaerer Ranker = STARTSEITE (Pos 9,8), vom Inhaber am 19.07. umgebaut -> Inhaber-Koordination. www-Split geprueft und benigne (301 verifiziert)."
     },
     {
       "pruefdatum": "2026-08-06",
       "lauf": "Wochen-Check #7",
-      "indexierung": { "datenstand": "~2026-07-31 (Datenlag nach 3 Wochen Stillstand GEBROCHEN)", "indexiert": 121, "nicht_indexiert": 409, "gecrawlt_nicht_indexiert": 116, "nicht_gefunden_404": 147, "seite_mit_weiterleitung": 103, "durch_robots_blockiert": 10, "umleitungsfehler": 9, "gefunden_zurzeit_nicht_indexiert": 23, "alternative_seite_mit_canonical": 1, "soft_404": 0 },
-      "leistung": { "datenstand": "~2026-08-04", "klicks": 2040, "impressionen": 84400, "ctr": "2.4%", "durchschnittsposition": 11.4 },
+      "indexierung": {
+        "datenstand": "~2026-07-31 (Datenlag nach 3 Wochen Stillstand GEBROCHEN)",
+        "indexiert": 121,
+        "nicht_indexiert": 409,
+        "gecrawlt_nicht_indexiert": 116,
+        "nicht_gefunden_404": 147,
+        "seite_mit_weiterleitung": 103,
+        "durch_robots_blockiert": 10,
+        "umleitungsfehler": 9,
+        "gefunden_zurzeit_nicht_indexiert": 23,
+        "alternative_seite_mit_canonical": 1,
+        "soft_404": 0
+      },
+      "leistung": {
+        "datenstand": "~2026-08-04",
+        "klicks": 2040,
+        "impressionen": 84400,
+        "ctr": "2.4%",
+        "durchschnittsposition": 11.4
+      },
       "trend_bewertung": "Grosser positiver Sprung: Nicht indexiert 546->409 (-137), Indexiert 112->121 (Trendwende), Gecrawlt-nicht-indexiert 235->116, 404 190->147. 'clown kindergeburtstag' erreicht Pos 9,6 = SEITE 1, ohne autonomen Eingriff. 'Gefunden - zurzeit nicht indexiert' 23 NEU = Crawl-Queue der 10 City-Pages (19.07.) + Blogposts.",
       "massnahme": "KEIN Code-Commit. Trend klar positiv + keine Auffaelligkeit."
     }
@@ -68,16 +176,48 @@
         "indexiert": 122,
         "nicht_indexiert": 349,
         "gruende": {
-          "nicht_gefunden_404": { "wert": 128, "validierung": "Fehlgeschlagen" },
-          "seite_mit_weiterleitung": { "wert": 99, "validierung": "Fehlgeschlagen", "bewertung": "103->99, der +4-Ausschlag aus #7 zurueckgelaufen" },
-          "gecrawlt_nicht_indexiert": { "wert": 79, "validierung": "Fehlgeschlagen" },
-          "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-          "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-          "gefunden_zurzeit_nicht_indexiert": { "wert": 23, "validierung": "Bestanden", "bewertung": "unveraendert, Crawl-Queue arbeitet noch" },
-          "soft_404": { "wert": 0, "validierung": "Bestanden" },
-          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" },
-          "noindex_tag": { "wert": 0, "validierung": "Nicht zutreffend" }
+          "nicht_gefunden_404": {
+            "wert": 128,
+            "validierung": "Fehlgeschlagen"
+          },
+          "seite_mit_weiterleitung": {
+            "wert": 99,
+            "validierung": "Fehlgeschlagen",
+            "bewertung": "103->99, der +4-Ausschlag aus #7 zurueckgelaufen"
+          },
+          "gecrawlt_nicht_indexiert": {
+            "wert": 79,
+            "validierung": "Fehlgeschlagen"
+          },
+          "durch_robots_blockiert": {
+            "wert": 10,
+            "validierung": "Nicht gestartet"
+          },
+          "alternative_seite_mit_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "gefunden_zurzeit_nicht_indexiert": {
+            "wert": 23,
+            "validierung": "Bestanden",
+            "bewertung": "unveraendert, Crawl-Queue arbeitet noch"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          },
+          "noindex_tag": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          }
         },
         "summen_check": "128+99+79+10+1+9+23 = 349 = stimmig"
       },
@@ -122,16 +262,49 @@
         "indexiert": 123,
         "nicht_indexiert": 322,
         "gruende": {
-          "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "99->117 (+18) UND Validierung von 'Fehlgeschlagen' auf 'Nicht gestartet' zurueckgesetzt = Google hat neue Legacy-URLs entdeckt und in diesen Bucket einsortiert. Gegenprobe passt: 404 -19 und Gecrawlt-nicht-indexiert -20 fallen fast genau in dieser Groessenordnung. Also BUCKET-WANDERUNG des laufenden Legacy-Re-Crawls, kein neues Problem. 8 Redirect-Klassen live per curl verifiziert (s. redirect_verifikation)" },
-          "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
-          "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
-          "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden", "bewertung": "23->16 (-7): die offene Verifikation aus #7/#8 ist BEANTWORTET - die Crawl-Queue der neuen City-Pages/Blogposts arbeitet sich jetzt sichtbar ab" },
-          "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-          "umleitungsfehler": { "wert": 9, "validierung": "Gestartet" },
-          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet", "bewertung": "0->1: eine einzelne Seite. Live-Gegenprobe: Startseite ohne noindex, 404-Route liefert korrekt HTTP 404, /kontakt/danke/ ist per robots.txt ausgeschlossen. Erwartete, gewollte Ausschlussseite - kein Eingriff" },
-          "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-          "soft_404": { "wert": 0, "validierung": "Bestanden" },
-          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+          "seite_mit_weiterleitung": {
+            "wert": 117,
+            "validierung": "Nicht gestartet",
+            "bewertung": "99->117 (+18) UND Validierung von 'Fehlgeschlagen' auf 'Nicht gestartet' zurueckgesetzt = Google hat neue Legacy-URLs entdeckt und in diesen Bucket einsortiert. Gegenprobe passt: 404 -19 und Gecrawlt-nicht-indexiert -20 fallen fast genau in dieser Groessenordnung. Also BUCKET-WANDERUNG des laufenden Legacy-Re-Crawls, kein neues Problem. 8 Redirect-Klassen live per curl verifiziert (s. redirect_verifikation)"
+          },
+          "nicht_gefunden_404": {
+            "wert": 109,
+            "validierung": "Fehlgeschlagen"
+          },
+          "gecrawlt_nicht_indexiert": {
+            "wert": 59,
+            "validierung": "Fehlgeschlagen"
+          },
+          "gefunden_zurzeit_nicht_indexiert": {
+            "wert": 16,
+            "validierung": "Bestanden",
+            "bewertung": "23->16 (-7): die offene Verifikation aus #7/#8 ist BEANTWORTET - die Crawl-Queue der neuen City-Pages/Blogposts arbeitet sich jetzt sichtbar ab"
+          },
+          "durch_robots_blockiert": {
+            "wert": 10,
+            "validierung": "Nicht gestartet"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Gestartet"
+          },
+          "noindex_tag": {
+            "wert": 1,
+            "validierung": "Nicht gestartet",
+            "bewertung": "0->1: eine einzelne Seite. Live-Gegenprobe: Startseite ohne noindex, 404-Route liefert korrekt HTTP 404, /kontakt/danke/ ist per robots.txt ausgeschlossen. Erwartete, gewollte Ausschlussseite - kein Eingriff"
+          },
+          "alternative_seite_mit_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          }
         },
         "summen_check": "117+109+59+16+10+9+1+1+0+0 = 322 = stimmig"
       },
@@ -192,16 +365,49 @@
         "indexiert": 123,
         "nicht_indexiert": 322,
         "gruende": {
-          "seite_mit_weiterleitung": { "wert": 117, "validierung": "Nicht gestartet", "bewertung": "unveraendert. Die Erwartung aus #9 (faellt nach dem Re-Crawl zurueck Richtung 100) ist mangels neuem Datenstand noch NICHT pruefbar - bleibt offene Verifikation fuer #11" },
-          "nicht_gefunden_404": { "wert": 109, "validierung": "Fehlgeschlagen" },
-          "gecrawlt_nicht_indexiert": { "wert": 59, "validierung": "Fehlgeschlagen" },
-          "gefunden_zurzeit_nicht_indexiert": { "wert": 16, "validierung": "Bestanden" },
-          "durch_robots_blockiert": { "wert": 10, "validierung": "Nicht gestartet" },
-          "umleitungsfehler": { "wert": 9, "validierung": "BESTANDEN", "bewertung": "EINZIGE Veraenderung dieses Laufs: Validierung von 'Gestartet' auf 'Bestanden' gewechselt. Der seit Wochen laufende Validierungsdurchlauf ist abgeschlossen und ERFOLGREICH - die 9 Umleitungsfehler sind aus Google-Sicht behoben. Positiv, kein Handlungsbedarf" },
-          "noindex_tag": { "wert": 1, "validierung": "Nicht gestartet", "bewertung": "gewollte Ausschlussseite, s. #9" },
-          "alternative_seite_mit_canonical": { "wert": 1, "validierung": "Nicht gestartet" },
-          "soft_404": { "wert": 0, "validierung": "Bestanden" },
-          "wegen_4xx_blockiert": { "wert": 0, "validierung": "Nicht zutreffend" }
+          "seite_mit_weiterleitung": {
+            "wert": 117,
+            "validierung": "Nicht gestartet",
+            "bewertung": "unveraendert. Die Erwartung aus #9 (faellt nach dem Re-Crawl zurueck Richtung 100) ist mangels neuem Datenstand noch NICHT pruefbar - bleibt offene Verifikation fuer #11"
+          },
+          "nicht_gefunden_404": {
+            "wert": 109,
+            "validierung": "Fehlgeschlagen"
+          },
+          "gecrawlt_nicht_indexiert": {
+            "wert": 59,
+            "validierung": "Fehlgeschlagen"
+          },
+          "gefunden_zurzeit_nicht_indexiert": {
+            "wert": 16,
+            "validierung": "Bestanden"
+          },
+          "durch_robots_blockiert": {
+            "wert": 10,
+            "validierung": "Nicht gestartet"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "BESTANDEN",
+            "bewertung": "EINZIGE Veraenderung dieses Laufs: Validierung von 'Gestartet' auf 'Bestanden' gewechselt. Der seit Wochen laufende Validierungsdurchlauf ist abgeschlossen und ERFOLGREICH - die 9 Umleitungsfehler sind aus Google-Sicht behoben. Positiv, kein Handlungsbedarf"
+          },
+          "noindex_tag": {
+            "wert": 1,
+            "validierung": "Nicht gestartet",
+            "bewertung": "gewollte Ausschlussseite, s. #9"
+          },
+          "alternative_seite_mit_canonical": {
+            "wert": 1,
+            "validierung": "Nicht gestartet"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "Bestanden"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend"
+          }
         },
         "summen_check": "117+109+59+16+10+9+1+1+0+0 = 322 = stimmig"
       },
@@ -244,6 +450,116 @@
       },
       "trend_bewertung": "KONTROLLLAUF ohne neues Indexierungssignal. Indexierung Wort fuer Wort identisch zu #9 (123/322), weil der GSC-Datenstand in 2 Tagen nicht gewandert ist - das ist bei ~6 Tagen Lag erwartbar und darf NICHT als 'Trend gestoppt' gelesen werden. Einzige inhaltliche Bewegung: Umleitungsfehler-Validierung 'Gestartet' -> 'Bestanden' = ein seit Wochen laufender Validierungsdurchlauf ist erfolgreich abgeschlossen. Leistung: Impressionen 86800 -> 87500 (+700) = ERNEUT neuer Hoechstwert des gesamten Verlaufs (Ausgang 12.06.: 82400), Position 11,2 stabil, CTR 2,2% stabil, Klicks 1930 -> 1920 (-10, Rundung/Fensterrotation). Das Fenster hat sich um zwei Tage weitergeschoben (30.05.-29.08. -> 01.06.-31.08.) und die Impressionen steigen trotzdem - die Sichtbarkeit waechst also weiter. Der saisonale Hitze-Cluster steht mit 486 Impr unveraendert am Plateau; der erwartete September-Einbruch hat noch nicht eingesetzt.",
       "massnahme": "KEIN Code-Commit. Begruendung: (1) DATENLAGE - zwischen #9 und #10 liegen nur 2 Tage und die Indexierungsdaten sind bitgleich. Ein Eingriff waere nicht datengetrieben, sondern Aktionismus; genau das schliesst die Task-Regel aus. (2) TREND - Impressionen erneut Hoechstwert, Position stabil, ein Validierungslauf erfolgreich abgeschlossen, keine einzige Fehlerklasse gestiegen. Kein Anlass. (3) INHABER - dafcf11 vom 01.09. zeigt, dass der Inhaber wieder aktiv am Layout arbeitet; die Regel 'waehrend Inhaber-Arbeit keine autonomen Code-Aenderungen' gilt. (4) AUDIT-VOR-EINGRIFF, viertes Mal - der Zauberer-Kindergeburtstag-Cluster ist als groesste Chance sauber dokumentiert, aber ohne frische Positionsdaten waere jede On-Page-Aenderung ein Blindflug an einer Seite, deren On-Page laut state.json ohnehin ausgereizt ist. Stattdessen wurde die offene Verifikation zu dafcf11 vollstaendig abgearbeitet. Naechster Check (#11, 10.09.): (a) faellt 'Seite mit Weiterleitung' 117 endlich Richtung 100, (b) setzt 'clown kindergeburtstag' den Weg von 6,4 in die Top 5 fort, (c) Positionsspalte in der Leistungstabelle erzwingen und die Position von 'zauberer fuer kindergeburtstag' separat erheben, (d) beginnt der saisonale Hitze-Einbruch."
+    },
+    {
+      "pruefdatum": "2026-09-18",
+      "lauf": "Wochen-Check #11 (Do-Lauf 10.09. ausgefallen; am 18.09. nachgeholt, zweiter Teil desselben Tages als interaktive Session mit dem Inhaber)",
+      "umgebung": "GitHub-MCP weiterhin 'Bad credentials' -> Repo per anonymem Clone gelesen, Commit erfolgt nach Token-Erneuerung durch den Inhaber. Claude-in-Chrome im zweiten Teil VERBUNDEN -> GSC-Indexierung frisch gemessen (Datenstand 14.09.2026).",
+      "repo_guard": "OK. Neuester main-Commit 2c46d8b (seo-daily-bot, 18.09., [skip ci] report). Letzter Inhaber-Merge e516fe9 (PR #8, 16.09.). SYSTEMWECHSEL 15./16.09.: seo-daily.yml (GSC-API-Report), seo-autofix.yml, Deploy-Gate, Montags-Task docs/TASK-liar-weekly-seo-review.md, docs/SEO-STRATEGIE-2026-Q4.md. Startseiten-Title seit 16.09. 'Zauberer fuer Kindergeburtstag & Zaubershow NRW | Clown LIAR'. GBP-Website-Feld auf non-www.",
+      "indexierung": {
+        "datenstand": "2026-09-14 (FRISCH per Claude-in-Chrome)",
+        "indexiert": 124,
+        "nicht_indexiert": 292,
+        "gruende": {
+          "seite_mit_weiterleitung": {
+            "wert": 114,
+            "validierung": "Nicht gestartet",
+            "bewertung": "117->114. Die Erwartung aus #9 ist BESTAETIGT: der Bucket laeuft nach dem Re-Crawl zurueck. Stichprobe live: /content/, /category/clown-unterhaltung/, /clown/geburtstag/geburtstag-in-gladbeck/, /clown/zauberer/tisch-zauberer/ - alle korrekt 301. Enthaelt zusaetzlich dauerhaft die http-/www-Varianten der Startseite und die alte Subdomain pantomime.liar-entertainer.com -> dieser Zaehler kann strukturell NIE 0 werden."
+          },
+          "nicht_gefunden_404": {
+            "wert": 98,
+            "validierung": "Nicht gestartet",
+            "bewertung": "109->98. Stichprobe: /wp-content/uploads/2023/08/www.datteln.de, .../privacy, .../*.html sowie verschachtelte /…/attachment/…-URLs. Alle liefern planmaessig 410 Gone. WICHTIG: GSC bucht 410 im selben Bucket wie 404 - solange das gewollte 410 ausgeliefert wird, kann auch dieser Zaehler nicht auf 0 sinken. Einzige echte 404 der Stichprobe: /walk-act/ -> in diesem Lauf per 301 auf /clown/walk-act/ behoben."
+          },
+          "gecrawlt_nicht_indexiert": {
+            "wert": 43,
+            "validierung": "Nicht gestartet",
+            "bewertung": "59->43 (-16). 34 Beispiel-URLs live per curl geprueft: 14x bereits 410 (Attachment-Legacy), 13x bereits 301 (/content/, /category/, /tag/, alte Root-Slugs), nur 3 Ausnahmen: /api/reviews.php (per robots.txt Disallow /api/ blockiert, nur Altbestand), /blog/zaubershow-in-dortmund/ und /blog/kidzival-2024/ (echte Artikel, 200). Letztes Crawl der meisten Eintraege 04-05/2026 -> der Bucket raeumt sich selbst, sobald Google neu crawlt."
+          },
+          "gefunden_zurzeit_nicht_indexiert": {
+            "wert": 17,
+            "validierung": "Bestanden",
+            "bewertung": "16->17. WICHTIGSTER BEFUND DES LAUFS: hier stehen ECHTE Seiten - /clown/clownshow/clown-in-castrop-rauxel/, /clown/clownshow/clown-in-moers/, die Blog-Kategorieseiten (clown-unterhaltung, kultur-nrw, pantomime-nrw, termine) und vier Blogartikel. Ursachenpruefung ergab: 4 der 23 Clown-Stadtseiten (Castrop-Rauxel, Waltrop, Wesel, Xanten) waren im Clownshow-Hub UEBERHAUPT NICHT intern verlinkt - nur ueber die Sitemap erreichbar. In diesem Lauf behoben."
+          },
+          "durch_robots_blockiert": {
+            "wert": 10,
+            "validierung": "Nicht gestartet",
+            "bewertung": "unveraendert, gewollt (/api/, /feed/, /author/, Parameter-URLs)"
+          },
+          "umleitungsfehler": {
+            "wert": 9,
+            "validierung": "Bestanden",
+            "bewertung": "Validierung bleibt bestanden, NICHT erneut anstossen"
+          },
+          "noindex_tag": {
+            "wert": 1,
+            "validierung": "Nicht gestartet",
+            "bewertung": "gewollte Ausschlussseite"
+          },
+          "alternative_seite_mit_canonical": {
+            "wert": 0,
+            "validierung": "Nicht zutreffend",
+            "bewertung": "1->0, erledigt"
+          },
+          "soft_404": {
+            "wert": 0,
+            "validierung": "-"
+          },
+          "wegen_4xx_blockiert": {
+            "wert": 0,
+            "validierung": "-"
+          }
+        },
+        "summen_check": "114+98+10+1+43+9+0+17 = 292 = stimmig",
+        "strukturelle_untergrenze": "Die Zaehler 'Seite mit Weiterleitung' und 'Nicht gefunden (404)' koennen nicht auf 0 gebracht werden, ohne die Site zu beschaedigen: GSC zaehlt dort die gewollten 301 (http/www-Kanonisierung, Legacy-Umleitungen) und die gewollten 410 Gone. Realistisches Ziel ist ein sinkender Trend, nicht 0. Echte Arbeitsflaeche sind ausschliesslich 'Gefunden - zurzeit nicht indexiert' (17) und die 3 echten Seiten aus 'Gecrawlt - nicht indexiert'."
+      },
+      "leistung": {
+        "datenstand": "~2026-09-14 (GSC-API via seo-daily-Bot)",
+        "woche_08_14_09_vs_vorwoche": {
+          "klicks": "142 vs 132 (+8%)",
+          "impressionen": "7394 vs 7233 (+2%)",
+          "ctr": "1,9% vs 1,8%",
+          "position": "10,8 vs 11,3 (VERBESSERT)"
+        },
+        "drei_monate_17_06_14_09": {
+          "klicks": 1910,
+          "impressionen": 90300,
+          "ctr": "2,1%",
+          "position": 11.0,
+          "bewertung": "Impressionen Hoechstwert des Verlaufs (Ausgang 12.06.: 82400), Position bester Wert"
+        },
+        "kern_keywords_pos_vorwoche_jetzt": [
+          "zauberer fuer kindergeburtstag: 12,0 -> 3,8 (Strategieziel <=3 fast erreicht)",
+          "zauberer kindergeburtstag: 14,6 -> 10,7 (Ziel <=6)",
+          "clown fuer kindergeburtstag: 4,8 -> 2,6",
+          "clown: 10,8 -> 8,6",
+          "zauberer nrw: 12,9 -> 8,8",
+          "zauberer buchen: 13,1 -> 16,9 (einziger Rueckgang, 0 Klicks, Seite 2)",
+          "zauberer weihnachtsfeier: 39,5 (49 Impr, 0 Klicks) - Saisonchance, in diesem Lauf mit Blogentwurf adressiert"
+        ],
+        "www_variante": "1800 Impr/Woche. GBP-Umstellung 16.09. liegt nach dem Datenfenster -> Effekt ab #12."
+      },
+      "rezensions_snippets": {
+        "gsc_stand_17_09": "6 gueltige Elemente, 0 ungueltige - ALLE auf https://liar-entertainer.com/datenschutzerklaerung-2/, zuletzt erkannt 11.06.2026",
+        "befund": "Altbestand. Das Review-/aggregateRating-Markup wurde am 08.07.2026 mit Commit 862f8a8 BEWUSST entfernt (s. Kommentar in src/components/GoogleReviews.astro). Live-Gegenprobe 18.09.: die Seite liefert kein Review- und kein aggregateRating-Markup mehr. Die 6 Eintraege stammen aus der Zeit davor und laufen aus.",
+        "bewertung": "Kein Fehler und kein Hebel. Self-serving Rezensionen auf der eigenen Domain sind seit 2019 nicht sterne-berechtigt - Google zeigt daraus keine Sterne im Suchergebnis. Sterne entstehen ausschliesslich ueber das Google-Unternehmensprofil (Local Pack). Der Zaehler wird auf 0 fallen; das ist der richtige Zustand, kein Verlust.",
+        "empfehlung_an_inhaber": "Wer mehr Sterne-Sichtbarkeit will, sammelt Google-Rezensionen ueber das GBP (Link nach jedem Auftritt per WhatsApp verschicken) - das wirkt auf das Local Pack, wo 'zauberer gladbeck' bereits Position 1,0 hat."
+      },
+      "massnahmen_dieser_lauf": [
+        "fix(seo): /walk-act/ -> 301 /clown/walk-act/ (einzige echte 404 der GSC-Stichprobe vom 14.09.; Seite existiert unter /clown/walk-act/). Additiv in public/.htaccess vor dem MUSTER-1-Block.",
+        "fix(seo): Clownshow-Hub verlinkt jetzt alle 23 Stadtseiten. Castrop-Rauxel und Waltrop in die Ruhrgebiets-Zeile, Wesel und Xanten in die Niederrhein-Zeile ergaenzt. Castrop-Rauxel stand exakt deshalb unter 'Gefunden - zurzeit nicht indexiert'. Keine Seite angelegt oder geloescht (23/23/23 unveraendert).",
+        "blog: kindergeburtstag-herbstferien-drinnen.md auf 'freigabe: ja' (Inhaber hat in dieser Session freigegeben). Letzter Artikel war 62 Tage alt; seo-autofix veroeffentlicht beim naechsten Lauf.",
+        "blog: NEUER Entwurf zauberer-weihnachtsfeier-firma.md (1274 Woerter, draft: true, freigabe: nein) - P1 der Strategie Q4, Zielbegriff 'zauberer weihnachtsfeier' (Pos 39,5). Verlinkt /zauberer/firmenfeier/, /zauberer/tisch-zauberer/, /zauberer/buehnen-zauberer/, /clown/clownshow/clown-in-bottrop/, /kontakt/. FAQ-Block mit 3 Fragen. Keine Preisangaben."
+      ],
+      "verifikation": "npm run build: 168 Seiten, EXIT 0. npm run test:seo: 45/45. npm run test:struktur: 10/10. Drafts korrekt nicht im dist. walk-act-Regel in dist/.htaccess Zeile 123. Alle vier neuen Stadtlinks im gebauten dist/clown/clownshow/index.html.",
+      "trend_bewertung": "Bester Lauf des gesamten Verlaufs. Nicht indexiert 322->292 (-30), gegenueber Ausgang 12.06. (885) jetzt -593. Indexiert 123->124. JEDE Fehlerklasse faellt oder ist stabil, keine einzige steigt ausser 'Gefunden - zurzeit nicht indexiert' (+1), und genau dort wurde die Ursache gefunden und behoben. Leistung: Wochenklicks +8%, 3-Monats-Impressionen 90300 = Hoechstwert, Position 11,0 = Bestwert. Kern-Keywords springen zweistellig nach oben.",
+      "offene_verifikation_fuer_12": [
+        "Sinkt 'Gefunden - zurzeit nicht indexiert' nach der Hub-Verlinkung? Castrop-Rauxel, Waltrop, Wesel, Xanten gezielt in der URL-Pruefung kontrollieren.",
+        "Faellt der Rezensions-Snippet-Zaehler von 6 auf 0 (erwartet, da Markup seit 08.07. entfernt)?",
+        "www-Impressionen nach GBP-Umstellung 16.09. -> Richtung 0?",
+        "Ist /blog/zaubershow-in-dortmund/ und /blog/kidzival-2024/ inzwischen indexiert oder bleiben sie 'gecrawlt - nicht indexiert' (dann Inhalt pruefen)?",
+        "Wurde der Herbstferien-Artikel vom Autofix-Bot veroeffentlicht?"
+      ]
     }
   ]
 }
