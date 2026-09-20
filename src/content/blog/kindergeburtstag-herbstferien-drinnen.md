@@ -1,13 +1,12 @@
 ---
 title: "Kindergeburtstag in den Herbstferien: Programm für drinnen, das ohne Wetter funktioniert"
-seoTitle: "Kindergeburtstag Herbstferien drinnen: Ideen vom Zauberer | LIAR"
-description: "Herbstferien in NRW, Regen vor dem Fenster, acht Kinder im Wohnzimmer – so wird der Kindergeburtstag drinnen trotzdem ein voller Erfolg. Ideen, Ablauf und ehrliche Tipps vom Kinderzauberer aus Gladbeck."
+seoTitle: "Kindergeburtstag Herbstferien drinnen: Ideen | LIAR"
+description: "Kindergeburtstag drinnen in den Herbstferien: Ablauf, 5 Ideen und ehrliche Tipps vom Kinderzauberer aus Gladbeck – auch bei Regen ein Erfolg."
 publishDate: 2026-09-21
 categories: ["Saisonal", "Ideen", "Kindergeburtstag"]
 tags: ["kindergeburtstag-herbst", "kindergeburtstag-drinnen", "herbstferien"]
 author: "Michaël Prescler"
-draft: true
-freigabe: ja
+draft: false
 ---
 
 Die Herbstferien sind in NRW die Zeit der Wohnzimmer-Geburtstage. Der Park ist nass, der Zoo ist voll, der Indoor-Spielplatz kostet für acht Kinder mehr als die ganze Party sonst. Und trotzdem: Ich erlebe jeden Oktober Kindergeburtstage in Gladbeck, Bottrop oder Gelsenkirchen, bei denen die Kinder am Ende sagen, das sei der beste Geburtstag gewesen. Nicht wegen des Wetters, sondern weil das Programm drinnen richtig geplant war.
